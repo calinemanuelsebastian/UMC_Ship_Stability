@@ -1,0 +1,5048 @@
+{
+  "source": "004_STABILITY_LOADING_MANUAL.pdf",
+  "sha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+  "method": "Every numeric table token independently matched between pypdf and pdfplumber. Existing mass, LCB and LCF preserved exactly. KMt measured above baseline per manual PDF 12.",
+  "corrections": [],
+  "records": [
+    {
+      "trimMetres": -2.0,
+      "draft": 2.5,
+      "kmTransverse": 11.277,
+      "sourceToken": "11.277",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 2.55,
+      "kmTransverse": 11.114,
+      "sourceToken": "11.114",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 2.6,
+      "kmTransverse": 10.959,
+      "sourceToken": "10.959",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 2.65,
+      "kmTransverse": 10.815,
+      "sourceToken": "10.815",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 2.7,
+      "kmTransverse": 10.676,
+      "sourceToken": "10.676",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 2.75,
+      "kmTransverse": 10.54,
+      "sourceToken": "10.540",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 2.8,
+      "kmTransverse": 10.415,
+      "sourceToken": "10.415",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 2.85,
+      "kmTransverse": 10.303,
+      "sourceToken": "10.303",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 2.9,
+      "kmTransverse": 10.205,
+      "sourceToken": "10.205",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 2.95,
+      "kmTransverse": 10.119,
+      "sourceToken": "10.119",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.0,
+      "kmTransverse": 10.048,
+      "sourceToken": "10.048",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.05,
+      "kmTransverse": 9.984,
+      "sourceToken": "9.984",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.1,
+      "kmTransverse": 9.896,
+      "sourceToken": "9.896",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.15,
+      "kmTransverse": 9.798,
+      "sourceToken": "9.798",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.2,
+      "kmTransverse": 9.703,
+      "sourceToken": "9.703",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.25,
+      "kmTransverse": 9.612,
+      "sourceToken": "9.612",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.3,
+      "kmTransverse": 9.526,
+      "sourceToken": "9.526",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.35,
+      "kmTransverse": 9.441,
+      "sourceToken": "9.441",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.4,
+      "kmTransverse": 9.36,
+      "sourceToken": "9.360",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.45,
+      "kmTransverse": 9.284,
+      "sourceToken": "9.284",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.5,
+      "kmTransverse": 9.209,
+      "sourceToken": "9.209",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.55,
+      "kmTransverse": 9.138,
+      "sourceToken": "9.138",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.6,
+      "kmTransverse": 9.07,
+      "sourceToken": "9.070",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.65,
+      "kmTransverse": 9.004,
+      "sourceToken": "9.004",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.7,
+      "kmTransverse": 8.941,
+      "sourceToken": "8.941",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.75,
+      "kmTransverse": 8.88,
+      "sourceToken": "8.880",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.8,
+      "kmTransverse": 8.823,
+      "sourceToken": "8.823",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.85,
+      "kmTransverse": 8.766,
+      "sourceToken": "8.766",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.9,
+      "kmTransverse": 8.712,
+      "sourceToken": "8.712",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 3.95,
+      "kmTransverse": 8.66,
+      "sourceToken": "8.660",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.0,
+      "kmTransverse": 8.611,
+      "sourceToken": "8.611",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.05,
+      "kmTransverse": 8.562,
+      "sourceToken": "8.562",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.1,
+      "kmTransverse": 8.516,
+      "sourceToken": "8.516",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.15,
+      "kmTransverse": 8.472,
+      "sourceToken": "8.472",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.2,
+      "kmTransverse": 8.43,
+      "sourceToken": "8.430",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.25,
+      "kmTransverse": 8.388,
+      "sourceToken": "8.388",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.3,
+      "kmTransverse": 8.35,
+      "sourceToken": "8.350",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.35,
+      "kmTransverse": 8.312,
+      "sourceToken": "8.312",
+      "pdfPage": 35
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.4,
+      "kmTransverse": 8.274,
+      "sourceToken": "8.274",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.45,
+      "kmTransverse": 8.241,
+      "sourceToken": "8.241",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.5,
+      "kmTransverse": 8.207,
+      "sourceToken": "8.207",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.55,
+      "kmTransverse": 8.175,
+      "sourceToken": "8.175",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.6,
+      "kmTransverse": 8.145,
+      "sourceToken": "8.145",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.65,
+      "kmTransverse": 8.116,
+      "sourceToken": "8.116",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.7,
+      "kmTransverse": 8.087,
+      "sourceToken": "8.087",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.75,
+      "kmTransverse": 8.062,
+      "sourceToken": "8.062",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.8,
+      "kmTransverse": 8.036,
+      "sourceToken": "8.036",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.85,
+      "kmTransverse": 8.012,
+      "sourceToken": "8.012",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.9,
+      "kmTransverse": 7.989,
+      "sourceToken": "7.989",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 4.95,
+      "kmTransverse": 7.967,
+      "sourceToken": "7.967",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.0,
+      "kmTransverse": 7.947,
+      "sourceToken": "7.947",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.05,
+      "kmTransverse": 7.927,
+      "sourceToken": "7.927",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.1,
+      "kmTransverse": 7.908,
+      "sourceToken": "7.908",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.15,
+      "kmTransverse": 7.891,
+      "sourceToken": "7.891",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.2,
+      "kmTransverse": 7.874,
+      "sourceToken": "7.874",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.25,
+      "kmTransverse": 7.858,
+      "sourceToken": "7.858",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.3,
+      "kmTransverse": 7.843,
+      "sourceToken": "7.843",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.35,
+      "kmTransverse": 7.829,
+      "sourceToken": "7.829",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.4,
+      "kmTransverse": 7.816,
+      "sourceToken": "7.816",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.45,
+      "kmTransverse": 7.804,
+      "sourceToken": "7.804",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.5,
+      "kmTransverse": 7.793,
+      "sourceToken": "7.793",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.55,
+      "kmTransverse": 7.782,
+      "sourceToken": "7.782",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.6,
+      "kmTransverse": 7.772,
+      "sourceToken": "7.772",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.65,
+      "kmTransverse": 7.763,
+      "sourceToken": "7.763",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.7,
+      "kmTransverse": 7.754,
+      "sourceToken": "7.754",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.75,
+      "kmTransverse": 7.746,
+      "sourceToken": "7.746",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.8,
+      "kmTransverse": 7.738,
+      "sourceToken": "7.738",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.85,
+      "kmTransverse": 7.732,
+      "sourceToken": "7.732",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.9,
+      "kmTransverse": 7.725,
+      "sourceToken": "7.725",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 5.95,
+      "kmTransverse": 7.72,
+      "sourceToken": "7.720",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.0,
+      "kmTransverse": 7.715,
+      "sourceToken": "7.715",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.05,
+      "kmTransverse": 7.711,
+      "sourceToken": "7.711",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.1,
+      "kmTransverse": 7.707,
+      "sourceToken": "7.707",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.15,
+      "kmTransverse": 7.704,
+      "sourceToken": "7.704",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.2,
+      "kmTransverse": 7.702,
+      "sourceToken": "7.702",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.25,
+      "kmTransverse": 7.699,
+      "sourceToken": "7.699",
+      "pdfPage": 36
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.3,
+      "kmTransverse": 7.698,
+      "sourceToken": "7.698",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.35,
+      "kmTransverse": 7.697,
+      "sourceToken": "7.697",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.4,
+      "kmTransverse": 7.695,
+      "sourceToken": "7.695",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.45,
+      "kmTransverse": 7.693,
+      "sourceToken": "7.693",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.5,
+      "kmTransverse": 7.69,
+      "sourceToken": "7.690",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.55,
+      "kmTransverse": 7.689,
+      "sourceToken": "7.689",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.6,
+      "kmTransverse": 7.687,
+      "sourceToken": "7.687",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.65,
+      "kmTransverse": 7.685,
+      "sourceToken": "7.685",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.7,
+      "kmTransverse": 7.683,
+      "sourceToken": "7.683",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.75,
+      "kmTransverse": 7.682,
+      "sourceToken": "7.682",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.8,
+      "kmTransverse": 7.681,
+      "sourceToken": "7.681",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.85,
+      "kmTransverse": 7.68,
+      "sourceToken": "7.680",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.9,
+      "kmTransverse": 7.679,
+      "sourceToken": "7.679",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 6.95,
+      "kmTransverse": 7.678,
+      "sourceToken": "7.678",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.0,
+      "kmTransverse": 7.678,
+      "sourceToken": "7.678",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.05,
+      "kmTransverse": 7.678,
+      "sourceToken": "7.678",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.1,
+      "kmTransverse": 7.678,
+      "sourceToken": "7.678",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.15,
+      "kmTransverse": 7.678,
+      "sourceToken": "7.678",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.2,
+      "kmTransverse": 7.679,
+      "sourceToken": "7.679",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.25,
+      "kmTransverse": 7.68,
+      "sourceToken": "7.680",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.3,
+      "kmTransverse": 7.681,
+      "sourceToken": "7.681",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.35,
+      "kmTransverse": 7.682,
+      "sourceToken": "7.682",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.4,
+      "kmTransverse": 7.683,
+      "sourceToken": "7.683",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.45,
+      "kmTransverse": 7.685,
+      "sourceToken": "7.685",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.5,
+      "kmTransverse": 7.687,
+      "sourceToken": "7.687",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.55,
+      "kmTransverse": 7.689,
+      "sourceToken": "7.689",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.6,
+      "kmTransverse": 7.691,
+      "sourceToken": "7.691",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.65,
+      "kmTransverse": 7.694,
+      "sourceToken": "7.694",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.7,
+      "kmTransverse": 7.697,
+      "sourceToken": "7.697",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.75,
+      "kmTransverse": 7.7,
+      "sourceToken": "7.700",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.8,
+      "kmTransverse": 7.704,
+      "sourceToken": "7.704",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.85,
+      "kmTransverse": 7.707,
+      "sourceToken": "7.707",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.9,
+      "kmTransverse": 7.711,
+      "sourceToken": "7.711",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 7.95,
+      "kmTransverse": 7.715,
+      "sourceToken": "7.715",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 8.0,
+      "kmTransverse": 7.719,
+      "sourceToken": "7.719",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 8.011,
+      "kmTransverse": 7.72,
+      "sourceToken": "7.720",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 8.05,
+      "kmTransverse": 7.724,
+      "sourceToken": "7.724",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 8.1,
+      "kmTransverse": 7.728,
+      "sourceToken": "7.728",
+      "pdfPage": 37
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 8.15,
+      "kmTransverse": 7.734,
+      "sourceToken": "7.734",
+      "pdfPage": 38
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 8.2,
+      "kmTransverse": 7.738,
+      "sourceToken": "7.738",
+      "pdfPage": 38
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 8.25,
+      "kmTransverse": 7.744,
+      "sourceToken": "7.744",
+      "pdfPage": 38
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 8.3,
+      "kmTransverse": 7.749,
+      "sourceToken": "7.749",
+      "pdfPage": 38
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 8.35,
+      "kmTransverse": 7.755,
+      "sourceToken": "7.755",
+      "pdfPage": 38
+    },
+    {
+      "trimMetres": -2.0,
+      "draft": 8.4,
+      "kmTransverse": 7.762,
+      "sourceToken": "7.762",
+      "pdfPage": 38
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 2.5,
+      "kmTransverse": 11.241,
+      "sourceToken": "11.241",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 2.55,
+      "kmTransverse": 11.077,
+      "sourceToken": "11.077",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 2.6,
+      "kmTransverse": 10.921,
+      "sourceToken": "10.921",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 2.65,
+      "kmTransverse": 10.772,
+      "sourceToken": "10.772",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 2.7,
+      "kmTransverse": 10.629,
+      "sourceToken": "10.629",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 2.75,
+      "kmTransverse": 10.492,
+      "sourceToken": "10.492",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 2.8,
+      "kmTransverse": 10.363,
+      "sourceToken": "10.363",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 2.85,
+      "kmTransverse": 10.239,
+      "sourceToken": "10.239",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 2.9,
+      "kmTransverse": 10.119,
+      "sourceToken": "10.119",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 2.95,
+      "kmTransverse": 10.006,
+      "sourceToken": "10.006",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.0,
+      "kmTransverse": 9.905,
+      "sourceToken": "9.905",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.05,
+      "kmTransverse": 9.814,
+      "sourceToken": "9.814",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.1,
+      "kmTransverse": 9.735,
+      "sourceToken": "9.735",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.15,
+      "kmTransverse": 9.67,
+      "sourceToken": "9.670",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.2,
+      "kmTransverse": 9.615,
+      "sourceToken": "9.615",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.25,
+      "kmTransverse": 9.56,
+      "sourceToken": "9.560",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.3,
+      "kmTransverse": 9.478,
+      "sourceToken": "9.478",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.35,
+      "kmTransverse": 9.396,
+      "sourceToken": "9.396",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.4,
+      "kmTransverse": 9.315,
+      "sourceToken": "9.315",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.45,
+      "kmTransverse": 9.239,
+      "sourceToken": "9.239",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.5,
+      "kmTransverse": 9.165,
+      "sourceToken": "9.165",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.55,
+      "kmTransverse": 9.093,
+      "sourceToken": "9.093",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.6,
+      "kmTransverse": 9.025,
+      "sourceToken": "9.025",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.65,
+      "kmTransverse": 8.959,
+      "sourceToken": "8.959",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.7,
+      "kmTransverse": 8.897,
+      "sourceToken": "8.897",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.75,
+      "kmTransverse": 8.836,
+      "sourceToken": "8.836",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.8,
+      "kmTransverse": 8.778,
+      "sourceToken": "8.778",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.85,
+      "kmTransverse": 8.722,
+      "sourceToken": "8.722",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.9,
+      "kmTransverse": 8.669,
+      "sourceToken": "8.669",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 3.95,
+      "kmTransverse": 8.616,
+      "sourceToken": "8.616",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.0,
+      "kmTransverse": 8.568,
+      "sourceToken": "8.568",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.05,
+      "kmTransverse": 8.52,
+      "sourceToken": "8.520",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.1,
+      "kmTransverse": 8.474,
+      "sourceToken": "8.474",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.15,
+      "kmTransverse": 8.43,
+      "sourceToken": "8.430",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.2,
+      "kmTransverse": 8.388,
+      "sourceToken": "8.388",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.25,
+      "kmTransverse": 8.347,
+      "sourceToken": "8.347",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.3,
+      "kmTransverse": 8.307,
+      "sourceToken": "8.307",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.35,
+      "kmTransverse": 8.27,
+      "sourceToken": "8.270",
+      "pdfPage": 39
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.4,
+      "kmTransverse": 8.235,
+      "sourceToken": "8.235",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.45,
+      "kmTransverse": 8.199,
+      "sourceToken": "8.199",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.5,
+      "kmTransverse": 8.167,
+      "sourceToken": "8.167",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.55,
+      "kmTransverse": 8.135,
+      "sourceToken": "8.135",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.6,
+      "kmTransverse": 8.103,
+      "sourceToken": "8.103",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.65,
+      "kmTransverse": 8.074,
+      "sourceToken": "8.074",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.7,
+      "kmTransverse": 8.047,
+      "sourceToken": "8.047",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.75,
+      "kmTransverse": 8.02,
+      "sourceToken": "8.020",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.8,
+      "kmTransverse": 7.994,
+      "sourceToken": "7.994",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.85,
+      "kmTransverse": 7.97,
+      "sourceToken": "7.970",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.9,
+      "kmTransverse": 7.946,
+      "sourceToken": "7.946",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 4.95,
+      "kmTransverse": 7.924,
+      "sourceToken": "7.924",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.0,
+      "kmTransverse": 7.904,
+      "sourceToken": "7.904",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.05,
+      "kmTransverse": 7.884,
+      "sourceToken": "7.884",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.1,
+      "kmTransverse": 7.865,
+      "sourceToken": "7.865",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.15,
+      "kmTransverse": 7.848,
+      "sourceToken": "7.848",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.2,
+      "kmTransverse": 7.83,
+      "sourceToken": "7.830",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.25,
+      "kmTransverse": 7.814,
+      "sourceToken": "7.814",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.3,
+      "kmTransverse": 7.8,
+      "sourceToken": "7.800",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.35,
+      "kmTransverse": 7.785,
+      "sourceToken": "7.785",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.4,
+      "kmTransverse": 7.772,
+      "sourceToken": "7.772",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.45,
+      "kmTransverse": 7.759,
+      "sourceToken": "7.759",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.5,
+      "kmTransverse": 7.747,
+      "sourceToken": "7.747",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.55,
+      "kmTransverse": 7.737,
+      "sourceToken": "7.737",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.6,
+      "kmTransverse": 7.726,
+      "sourceToken": "7.726",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.65,
+      "kmTransverse": 7.717,
+      "sourceToken": "7.717",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.7,
+      "kmTransverse": 7.709,
+      "sourceToken": "7.709",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.75,
+      "kmTransverse": 7.7,
+      "sourceToken": "7.700",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.8,
+      "kmTransverse": 7.693,
+      "sourceToken": "7.693",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.85,
+      "kmTransverse": 7.687,
+      "sourceToken": "7.687",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.9,
+      "kmTransverse": 7.68,
+      "sourceToken": "7.680",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 5.95,
+      "kmTransverse": 7.675,
+      "sourceToken": "7.675",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.0,
+      "kmTransverse": 7.669,
+      "sourceToken": "7.669",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.05,
+      "kmTransverse": 7.665,
+      "sourceToken": "7.665",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.1,
+      "kmTransverse": 7.661,
+      "sourceToken": "7.661",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.15,
+      "kmTransverse": 7.658,
+      "sourceToken": "7.658",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.2,
+      "kmTransverse": 7.655,
+      "sourceToken": "7.655",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.25,
+      "kmTransverse": 7.653,
+      "sourceToken": "7.653",
+      "pdfPage": 40
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.3,
+      "kmTransverse": 7.651,
+      "sourceToken": "7.651",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.35,
+      "kmTransverse": 7.65,
+      "sourceToken": "7.650",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.4,
+      "kmTransverse": 7.649,
+      "sourceToken": "7.649",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.45,
+      "kmTransverse": 7.649,
+      "sourceToken": "7.649",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.5,
+      "kmTransverse": 7.65,
+      "sourceToken": "7.650",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.55,
+      "kmTransverse": 7.65,
+      "sourceToken": "7.650",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.6,
+      "kmTransverse": 7.651,
+      "sourceToken": "7.651",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.65,
+      "kmTransverse": 7.651,
+      "sourceToken": "7.651",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.7,
+      "kmTransverse": 7.652,
+      "sourceToken": "7.652",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.75,
+      "kmTransverse": 7.652,
+      "sourceToken": "7.652",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.8,
+      "kmTransverse": 7.652,
+      "sourceToken": "7.652",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.85,
+      "kmTransverse": 7.652,
+      "sourceToken": "7.652",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.9,
+      "kmTransverse": 7.653,
+      "sourceToken": "7.653",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 6.95,
+      "kmTransverse": 7.654,
+      "sourceToken": "7.654",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.0,
+      "kmTransverse": 7.654,
+      "sourceToken": "7.654",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.05,
+      "kmTransverse": 7.655,
+      "sourceToken": "7.655",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.1,
+      "kmTransverse": 7.656,
+      "sourceToken": "7.656",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.15,
+      "kmTransverse": 7.657,
+      "sourceToken": "7.657",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.2,
+      "kmTransverse": 7.658,
+      "sourceToken": "7.658",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.25,
+      "kmTransverse": 7.66,
+      "sourceToken": "7.660",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.3,
+      "kmTransverse": 7.662,
+      "sourceToken": "7.662",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.35,
+      "kmTransverse": 7.663,
+      "sourceToken": "7.663",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.4,
+      "kmTransverse": 7.665,
+      "sourceToken": "7.665",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.45,
+      "kmTransverse": 7.668,
+      "sourceToken": "7.668",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.5,
+      "kmTransverse": 7.67,
+      "sourceToken": "7.670",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.55,
+      "kmTransverse": 7.673,
+      "sourceToken": "7.673",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.6,
+      "kmTransverse": 7.676,
+      "sourceToken": "7.676",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.65,
+      "kmTransverse": 7.679,
+      "sourceToken": "7.679",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.7,
+      "kmTransverse": 7.682,
+      "sourceToken": "7.682",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.75,
+      "kmTransverse": 7.686,
+      "sourceToken": "7.686",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.8,
+      "kmTransverse": 7.69,
+      "sourceToken": "7.690",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.85,
+      "kmTransverse": 7.693,
+      "sourceToken": "7.693",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.9,
+      "kmTransverse": 7.698,
+      "sourceToken": "7.698",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 7.95,
+      "kmTransverse": 7.702,
+      "sourceToken": "7.702",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 8.0,
+      "kmTransverse": 7.706,
+      "sourceToken": "7.706",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 8.011,
+      "kmTransverse": 7.708,
+      "sourceToken": "7.708",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 8.05,
+      "kmTransverse": 7.711,
+      "sourceToken": "7.711",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 8.1,
+      "kmTransverse": 7.716,
+      "sourceToken": "7.716",
+      "pdfPage": 41
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 8.15,
+      "kmTransverse": 7.721,
+      "sourceToken": "7.721",
+      "pdfPage": 42
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 8.2,
+      "kmTransverse": 7.727,
+      "sourceToken": "7.727",
+      "pdfPage": 42
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 8.25,
+      "kmTransverse": 7.732,
+      "sourceToken": "7.732",
+      "pdfPage": 42
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 8.3,
+      "kmTransverse": 7.739,
+      "sourceToken": "7.739",
+      "pdfPage": 42
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 8.35,
+      "kmTransverse": 7.745,
+      "sourceToken": "7.745",
+      "pdfPage": 42
+    },
+    {
+      "trimMetres": -1.5,
+      "draft": 8.4,
+      "kmTransverse": 7.751,
+      "sourceToken": "7.751",
+      "pdfPage": 42
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 2.5,
+      "kmTransverse": 11.2,
+      "sourceToken": "11.200",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 2.55,
+      "kmTransverse": 11.035,
+      "sourceToken": "11.035",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 2.6,
+      "kmTransverse": 10.878,
+      "sourceToken": "10.878",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 2.65,
+      "kmTransverse": 10.728,
+      "sourceToken": "10.728",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 2.7,
+      "kmTransverse": 10.586,
+      "sourceToken": "10.586",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 2.75,
+      "kmTransverse": 10.45,
+      "sourceToken": "10.450",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 2.8,
+      "kmTransverse": 10.32,
+      "sourceToken": "10.320",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 2.85,
+      "kmTransverse": 10.195,
+      "sourceToken": "10.195",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 2.9,
+      "kmTransverse": 10.076,
+      "sourceToken": "10.076",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 2.95,
+      "kmTransverse": 9.961,
+      "sourceToken": "9.961",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.0,
+      "kmTransverse": 9.853,
+      "sourceToken": "9.853",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.05,
+      "kmTransverse": 9.75,
+      "sourceToken": "9.750",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.1,
+      "kmTransverse": 9.649,
+      "sourceToken": "9.649",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.15,
+      "kmTransverse": 9.555,
+      "sourceToken": "9.555",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.2,
+      "kmTransverse": 9.473,
+      "sourceToken": "9.473",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.25,
+      "kmTransverse": 9.399,
+      "sourceToken": "9.399",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.3,
+      "kmTransverse": 9.337,
+      "sourceToken": "9.337",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.35,
+      "kmTransverse": 9.287,
+      "sourceToken": "9.287",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.4,
+      "kmTransverse": 9.248,
+      "sourceToken": "9.248",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.45,
+      "kmTransverse": 9.194,
+      "sourceToken": "9.194",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.5,
+      "kmTransverse": 9.122,
+      "sourceToken": "9.122",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.55,
+      "kmTransverse": 9.052,
+      "sourceToken": "9.052",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.6,
+      "kmTransverse": 8.984,
+      "sourceToken": "8.984",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.65,
+      "kmTransverse": 8.918,
+      "sourceToken": "8.918",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.7,
+      "kmTransverse": 8.857,
+      "sourceToken": "8.857",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.75,
+      "kmTransverse": 8.796,
+      "sourceToken": "8.796",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.8,
+      "kmTransverse": 8.737,
+      "sourceToken": "8.737",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.85,
+      "kmTransverse": 8.682,
+      "sourceToken": "8.682",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.9,
+      "kmTransverse": 8.629,
+      "sourceToken": "8.629",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 3.95,
+      "kmTransverse": 8.577,
+      "sourceToken": "8.577",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.0,
+      "kmTransverse": 8.527,
+      "sourceToken": "8.527",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.05,
+      "kmTransverse": 8.48,
+      "sourceToken": "8.480",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.1,
+      "kmTransverse": 8.435,
+      "sourceToken": "8.435",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.15,
+      "kmTransverse": 8.391,
+      "sourceToken": "8.391",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.2,
+      "kmTransverse": 8.349,
+      "sourceToken": "8.349",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.25,
+      "kmTransverse": 8.309,
+      "sourceToken": "8.309",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.3,
+      "kmTransverse": 8.27,
+      "sourceToken": "8.270",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.35,
+      "kmTransverse": 8.232,
+      "sourceToken": "8.232",
+      "pdfPage": 43
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.4,
+      "kmTransverse": 8.197,
+      "sourceToken": "8.197",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.45,
+      "kmTransverse": 8.162,
+      "sourceToken": "8.162",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.5,
+      "kmTransverse": 8.129,
+      "sourceToken": "8.129",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.55,
+      "kmTransverse": 8.097,
+      "sourceToken": "8.097",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.6,
+      "kmTransverse": 8.068,
+      "sourceToken": "8.068",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.65,
+      "kmTransverse": 8.038,
+      "sourceToken": "8.038",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.7,
+      "kmTransverse": 8.009,
+      "sourceToken": "8.009",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.75,
+      "kmTransverse": 7.984,
+      "sourceToken": "7.984",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.8,
+      "kmTransverse": 7.958,
+      "sourceToken": "7.958",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.85,
+      "kmTransverse": 7.933,
+      "sourceToken": "7.933",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.9,
+      "kmTransverse": 7.911,
+      "sourceToken": "7.911",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 4.95,
+      "kmTransverse": 7.888,
+      "sourceToken": "7.888",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.0,
+      "kmTransverse": 7.866,
+      "sourceToken": "7.866",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.05,
+      "kmTransverse": 7.846,
+      "sourceToken": "7.846",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.1,
+      "kmTransverse": 7.827,
+      "sourceToken": "7.827",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.15,
+      "kmTransverse": 7.809,
+      "sourceToken": "7.809",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.2,
+      "kmTransverse": 7.792,
+      "sourceToken": "7.792",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.25,
+      "kmTransverse": 7.776,
+      "sourceToken": "7.776",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.3,
+      "kmTransverse": 7.76,
+      "sourceToken": "7.760",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.35,
+      "kmTransverse": 7.746,
+      "sourceToken": "7.746",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.4,
+      "kmTransverse": 7.733,
+      "sourceToken": "7.733",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.45,
+      "kmTransverse": 7.72,
+      "sourceToken": "7.720",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.5,
+      "kmTransverse": 7.708,
+      "sourceToken": "7.708",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.55,
+      "kmTransverse": 7.697,
+      "sourceToken": "7.697",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.6,
+      "kmTransverse": 7.686,
+      "sourceToken": "7.686",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.65,
+      "kmTransverse": 7.677,
+      "sourceToken": "7.677",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.7,
+      "kmTransverse": 7.667,
+      "sourceToken": "7.667",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.75,
+      "kmTransverse": 7.659,
+      "sourceToken": "7.659",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.8,
+      "kmTransverse": 7.652,
+      "sourceToken": "7.652",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.85,
+      "kmTransverse": 7.645,
+      "sourceToken": "7.645",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.9,
+      "kmTransverse": 7.639,
+      "sourceToken": "7.639",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 5.95,
+      "kmTransverse": 7.634,
+      "sourceToken": "7.634",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.0,
+      "kmTransverse": 7.629,
+      "sourceToken": "7.629",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.05,
+      "kmTransverse": 7.624,
+      "sourceToken": "7.624",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.1,
+      "kmTransverse": 7.621,
+      "sourceToken": "7.621",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.15,
+      "kmTransverse": 7.617,
+      "sourceToken": "7.617",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.2,
+      "kmTransverse": 7.614,
+      "sourceToken": "7.614",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.25,
+      "kmTransverse": 7.611,
+      "sourceToken": "7.611",
+      "pdfPage": 44
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.3,
+      "kmTransverse": 7.609,
+      "sourceToken": "7.609",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.35,
+      "kmTransverse": 7.608,
+      "sourceToken": "7.608",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.4,
+      "kmTransverse": 7.607,
+      "sourceToken": "7.607",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.45,
+      "kmTransverse": 7.607,
+      "sourceToken": "7.607",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.5,
+      "kmTransverse": 7.607,
+      "sourceToken": "7.607",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.55,
+      "kmTransverse": 7.607,
+      "sourceToken": "7.607",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.6,
+      "kmTransverse": 7.609,
+      "sourceToken": "7.609",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.65,
+      "kmTransverse": 7.611,
+      "sourceToken": "7.611",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.7,
+      "kmTransverse": 7.612,
+      "sourceToken": "7.612",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.75,
+      "kmTransverse": 7.615,
+      "sourceToken": "7.615",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.8,
+      "kmTransverse": 7.617,
+      "sourceToken": "7.617",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.85,
+      "kmTransverse": 7.62,
+      "sourceToken": "7.620",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.9,
+      "kmTransverse": 7.623,
+      "sourceToken": "7.623",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 6.95,
+      "kmTransverse": 7.625,
+      "sourceToken": "7.625",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.0,
+      "kmTransverse": 7.627,
+      "sourceToken": "7.627",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.05,
+      "kmTransverse": 7.629,
+      "sourceToken": "7.629",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.1,
+      "kmTransverse": 7.632,
+      "sourceToken": "7.632",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.15,
+      "kmTransverse": 7.634,
+      "sourceToken": "7.634",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.2,
+      "kmTransverse": 7.636,
+      "sourceToken": "7.636",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.25,
+      "kmTransverse": 7.639,
+      "sourceToken": "7.639",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.3,
+      "kmTransverse": 7.642,
+      "sourceToken": "7.642",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.35,
+      "kmTransverse": 7.644,
+      "sourceToken": "7.644",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.4,
+      "kmTransverse": 7.647,
+      "sourceToken": "7.647",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.45,
+      "kmTransverse": 7.65,
+      "sourceToken": "7.650",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.5,
+      "kmTransverse": 7.653,
+      "sourceToken": "7.653",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.55,
+      "kmTransverse": 7.657,
+      "sourceToken": "7.657",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.6,
+      "kmTransverse": 7.66,
+      "sourceToken": "7.660",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.65,
+      "kmTransverse": 7.664,
+      "sourceToken": "7.664",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.7,
+      "kmTransverse": 7.668,
+      "sourceToken": "7.668",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.75,
+      "kmTransverse": 7.672,
+      "sourceToken": "7.672",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.8,
+      "kmTransverse": 7.676,
+      "sourceToken": "7.676",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.85,
+      "kmTransverse": 7.68,
+      "sourceToken": "7.680",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.9,
+      "kmTransverse": 7.685,
+      "sourceToken": "7.685",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 7.95,
+      "kmTransverse": 7.69,
+      "sourceToken": "7.690",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 8.0,
+      "kmTransverse": 7.695,
+      "sourceToken": "7.695",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 8.011,
+      "kmTransverse": 7.696,
+      "sourceToken": "7.696",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 8.05,
+      "kmTransverse": 7.7,
+      "sourceToken": "7.700",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 8.1,
+      "kmTransverse": 7.705,
+      "sourceToken": "7.705",
+      "pdfPage": 45
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 8.15,
+      "kmTransverse": 7.711,
+      "sourceToken": "7.711",
+      "pdfPage": 46
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 8.2,
+      "kmTransverse": 7.717,
+      "sourceToken": "7.717",
+      "pdfPage": 46
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 8.25,
+      "kmTransverse": 7.723,
+      "sourceToken": "7.723",
+      "pdfPage": 46
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 8.3,
+      "kmTransverse": 7.729,
+      "sourceToken": "7.729",
+      "pdfPage": 46
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 8.35,
+      "kmTransverse": 7.735,
+      "sourceToken": "7.735",
+      "pdfPage": 46
+    },
+    {
+      "trimMetres": -1.0,
+      "draft": 8.4,
+      "kmTransverse": 7.742,
+      "sourceToken": "7.742",
+      "pdfPage": 46
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 2.5,
+      "kmTransverse": 11.164,
+      "sourceToken": "11.164",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 2.55,
+      "kmTransverse": 10.998,
+      "sourceToken": "10.998",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 2.6,
+      "kmTransverse": 10.841,
+      "sourceToken": "10.841",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 2.65,
+      "kmTransverse": 10.691,
+      "sourceToken": "10.691",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 2.7,
+      "kmTransverse": 10.547,
+      "sourceToken": "10.547",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 2.75,
+      "kmTransverse": 10.41,
+      "sourceToken": "10.410",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 2.8,
+      "kmTransverse": 10.28,
+      "sourceToken": "10.280",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 2.85,
+      "kmTransverse": 10.156,
+      "sourceToken": "10.156",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 2.9,
+      "kmTransverse": 10.036,
+      "sourceToken": "10.036",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 2.95,
+      "kmTransverse": 9.923,
+      "sourceToken": "9.923",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.0,
+      "kmTransverse": 9.814,
+      "sourceToken": "9.814",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.05,
+      "kmTransverse": 9.71,
+      "sourceToken": "9.710",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.1,
+      "kmTransverse": 9.61,
+      "sourceToken": "9.610",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.15,
+      "kmTransverse": 9.514,
+      "sourceToken": "9.514",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.2,
+      "kmTransverse": 9.423,
+      "sourceToken": "9.423",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.25,
+      "kmTransverse": 9.335,
+      "sourceToken": "9.335",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.3,
+      "kmTransverse": 9.25,
+      "sourceToken": "9.250",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.35,
+      "kmTransverse": 9.173,
+      "sourceToken": "9.173",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.4,
+      "kmTransverse": 9.107,
+      "sourceToken": "9.107",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.45,
+      "kmTransverse": 9.048,
+      "sourceToken": "9.048",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.5,
+      "kmTransverse": 9.0,
+      "sourceToken": "9.000",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.55,
+      "kmTransverse": 8.963,
+      "sourceToken": "8.963",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.6,
+      "kmTransverse": 8.933,
+      "sourceToken": "8.933",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.65,
+      "kmTransverse": 8.88,
+      "sourceToken": "8.880",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.7,
+      "kmTransverse": 8.817,
+      "sourceToken": "8.817",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.75,
+      "kmTransverse": 8.759,
+      "sourceToken": "8.759",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.8,
+      "kmTransverse": 8.7,
+      "sourceToken": "8.700",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.85,
+      "kmTransverse": 8.645,
+      "sourceToken": "8.645",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.9,
+      "kmTransverse": 8.593,
+      "sourceToken": "8.593",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 3.95,
+      "kmTransverse": 8.542,
+      "sourceToken": "8.542",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.0,
+      "kmTransverse": 8.491,
+      "sourceToken": "8.491",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.05,
+      "kmTransverse": 8.444,
+      "sourceToken": "8.444",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.1,
+      "kmTransverse": 8.399,
+      "sourceToken": "8.399",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.15,
+      "kmTransverse": 8.355,
+      "sourceToken": "8.355",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.2,
+      "kmTransverse": 8.313,
+      "sourceToken": "8.313",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.25,
+      "kmTransverse": 8.273,
+      "sourceToken": "8.273",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.3,
+      "kmTransverse": 8.235,
+      "sourceToken": "8.235",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.35,
+      "kmTransverse": 8.198,
+      "sourceToken": "8.198",
+      "pdfPage": 47
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.4,
+      "kmTransverse": 8.161,
+      "sourceToken": "8.161",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.45,
+      "kmTransverse": 8.128,
+      "sourceToken": "8.128",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.5,
+      "kmTransverse": 8.095,
+      "sourceToken": "8.095",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.55,
+      "kmTransverse": 8.063,
+      "sourceToken": "8.063",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.6,
+      "kmTransverse": 8.033,
+      "sourceToken": "8.033",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.65,
+      "kmTransverse": 8.005,
+      "sourceToken": "8.005",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.7,
+      "kmTransverse": 7.977,
+      "sourceToken": "7.977",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.75,
+      "kmTransverse": 7.95,
+      "sourceToken": "7.950",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.8,
+      "kmTransverse": 7.925,
+      "sourceToken": "7.925",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.85,
+      "kmTransverse": 7.901,
+      "sourceToken": "7.901",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.9,
+      "kmTransverse": 7.877,
+      "sourceToken": "7.877",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 4.95,
+      "kmTransverse": 7.855,
+      "sourceToken": "7.855",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.0,
+      "kmTransverse": 7.835,
+      "sourceToken": "7.835",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.05,
+      "kmTransverse": 7.814,
+      "sourceToken": "7.814",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.1,
+      "kmTransverse": 7.794,
+      "sourceToken": "7.794",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.15,
+      "kmTransverse": 7.777,
+      "sourceToken": "7.777",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.2,
+      "kmTransverse": 7.759,
+      "sourceToken": "7.759",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.25,
+      "kmTransverse": 7.742,
+      "sourceToken": "7.742",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.3,
+      "kmTransverse": 7.728,
+      "sourceToken": "7.728",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.35,
+      "kmTransverse": 7.712,
+      "sourceToken": "7.712",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.4,
+      "kmTransverse": 7.698,
+      "sourceToken": "7.698",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.45,
+      "kmTransverse": 7.687,
+      "sourceToken": "7.687",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.5,
+      "kmTransverse": 7.674,
+      "sourceToken": "7.674",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.55,
+      "kmTransverse": 7.662,
+      "sourceToken": "7.662",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.6,
+      "kmTransverse": 7.652,
+      "sourceToken": "7.652",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.65,
+      "kmTransverse": 7.642,
+      "sourceToken": "7.642",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.7,
+      "kmTransverse": 7.633,
+      "sourceToken": "7.633",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.75,
+      "kmTransverse": 7.624,
+      "sourceToken": "7.624",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.8,
+      "kmTransverse": 7.616,
+      "sourceToken": "7.616",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.85,
+      "kmTransverse": 7.61,
+      "sourceToken": "7.610",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.9,
+      "kmTransverse": 7.603,
+      "sourceToken": "7.603",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 5.95,
+      "kmTransverse": 7.597,
+      "sourceToken": "7.597",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.0,
+      "kmTransverse": 7.592,
+      "sourceToken": "7.592",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.05,
+      "kmTransverse": 7.588,
+      "sourceToken": "7.588",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.1,
+      "kmTransverse": 7.583,
+      "sourceToken": "7.583",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.15,
+      "kmTransverse": 7.581,
+      "sourceToken": "7.581",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.2,
+      "kmTransverse": 7.577,
+      "sourceToken": "7.577",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.25,
+      "kmTransverse": 7.575,
+      "sourceToken": "7.575",
+      "pdfPage": 48
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.3,
+      "kmTransverse": 7.573,
+      "sourceToken": "7.573",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.35,
+      "kmTransverse": 7.571,
+      "sourceToken": "7.571",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.4,
+      "kmTransverse": 7.571,
+      "sourceToken": "7.571",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.45,
+      "kmTransverse": 7.57,
+      "sourceToken": "7.570",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.5,
+      "kmTransverse": 7.569,
+      "sourceToken": "7.569",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.55,
+      "kmTransverse": 7.57,
+      "sourceToken": "7.570",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.6,
+      "kmTransverse": 7.571,
+      "sourceToken": "7.571",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.65,
+      "kmTransverse": 7.572,
+      "sourceToken": "7.572",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.7,
+      "kmTransverse": 7.574,
+      "sourceToken": "7.574",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.75,
+      "kmTransverse": 7.576,
+      "sourceToken": "7.576",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.8,
+      "kmTransverse": 7.579,
+      "sourceToken": "7.579",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.85,
+      "kmTransverse": 7.582,
+      "sourceToken": "7.582",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.9,
+      "kmTransverse": 7.585,
+      "sourceToken": "7.585",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 6.95,
+      "kmTransverse": 7.589,
+      "sourceToken": "7.589",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.0,
+      "kmTransverse": 7.592,
+      "sourceToken": "7.592",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.05,
+      "kmTransverse": 7.597,
+      "sourceToken": "7.597",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.1,
+      "kmTransverse": 7.602,
+      "sourceToken": "7.602",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.15,
+      "kmTransverse": 7.606,
+      "sourceToken": "7.606",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.2,
+      "kmTransverse": 7.611,
+      "sourceToken": "7.611",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.25,
+      "kmTransverse": 7.615,
+      "sourceToken": "7.615",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.3,
+      "kmTransverse": 7.619,
+      "sourceToken": "7.619",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.35,
+      "kmTransverse": 7.623,
+      "sourceToken": "7.623",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.4,
+      "kmTransverse": 7.626,
+      "sourceToken": "7.626",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.45,
+      "kmTransverse": 7.631,
+      "sourceToken": "7.631",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.5,
+      "kmTransverse": 7.635,
+      "sourceToken": "7.635",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.55,
+      "kmTransverse": 7.639,
+      "sourceToken": "7.639",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.6,
+      "kmTransverse": 7.643,
+      "sourceToken": "7.643",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.65,
+      "kmTransverse": 7.648,
+      "sourceToken": "7.648",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.7,
+      "kmTransverse": 7.652,
+      "sourceToken": "7.652",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.75,
+      "kmTransverse": 7.658,
+      "sourceToken": "7.658",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.8,
+      "kmTransverse": 7.662,
+      "sourceToken": "7.662",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.85,
+      "kmTransverse": 7.667,
+      "sourceToken": "7.667",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.9,
+      "kmTransverse": 7.673,
+      "sourceToken": "7.673",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 7.95,
+      "kmTransverse": 7.678,
+      "sourceToken": "7.678",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 8.0,
+      "kmTransverse": 7.683,
+      "sourceToken": "7.683",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 8.011,
+      "kmTransverse": 7.685,
+      "sourceToken": "7.685",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 8.05,
+      "kmTransverse": 7.69,
+      "sourceToken": "7.690",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 8.1,
+      "kmTransverse": 7.695,
+      "sourceToken": "7.695",
+      "pdfPage": 49
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 8.15,
+      "kmTransverse": 7.701,
+      "sourceToken": "7.701",
+      "pdfPage": 50
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 8.2,
+      "kmTransverse": 7.707,
+      "sourceToken": "7.707",
+      "pdfPage": 50
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 8.25,
+      "kmTransverse": 7.714,
+      "sourceToken": "7.714",
+      "pdfPage": 50
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 8.3,
+      "kmTransverse": 7.721,
+      "sourceToken": "7.721",
+      "pdfPage": 50
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 8.35,
+      "kmTransverse": 7.727,
+      "sourceToken": "7.727",
+      "pdfPage": 50
+    },
+    {
+      "trimMetres": -0.5,
+      "draft": 8.4,
+      "kmTransverse": 7.735,
+      "sourceToken": "7.735",
+      "pdfPage": 50
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 2.5,
+      "kmTransverse": 11.134,
+      "sourceToken": "11.134",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 2.55,
+      "kmTransverse": 10.969,
+      "sourceToken": "10.969",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 2.6,
+      "kmTransverse": 10.81,
+      "sourceToken": "10.810",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 2.65,
+      "kmTransverse": 10.659,
+      "sourceToken": "10.659",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 2.7,
+      "kmTransverse": 10.514,
+      "sourceToken": "10.514",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 2.75,
+      "kmTransverse": 10.378,
+      "sourceToken": "10.378",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 2.8,
+      "kmTransverse": 10.247,
+      "sourceToken": "10.247",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 2.85,
+      "kmTransverse": 10.123,
+      "sourceToken": "10.123",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 2.9,
+      "kmTransverse": 10.003,
+      "sourceToken": "10.003",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 2.95,
+      "kmTransverse": 9.888,
+      "sourceToken": "9.888",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.0,
+      "kmTransverse": 9.779,
+      "sourceToken": "9.779",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.05,
+      "kmTransverse": 9.675,
+      "sourceToken": "9.675",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.1,
+      "kmTransverse": 9.575,
+      "sourceToken": "9.575",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.15,
+      "kmTransverse": 9.48,
+      "sourceToken": "9.480",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.2,
+      "kmTransverse": 9.387,
+      "sourceToken": "9.387",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.25,
+      "kmTransverse": 9.3,
+      "sourceToken": "9.300",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.3,
+      "kmTransverse": 9.216,
+      "sourceToken": "9.216",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.35,
+      "kmTransverse": 9.134,
+      "sourceToken": "9.134",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.4,
+      "kmTransverse": 9.057,
+      "sourceToken": "9.057",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.45,
+      "kmTransverse": 8.985,
+      "sourceToken": "8.985",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.5,
+      "kmTransverse": 8.912,
+      "sourceToken": "8.912",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.55,
+      "kmTransverse": 8.85,
+      "sourceToken": "8.850",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.6,
+      "kmTransverse": 8.796,
+      "sourceToken": "8.796",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.65,
+      "kmTransverse": 8.75,
+      "sourceToken": "8.750",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.7,
+      "kmTransverse": 8.714,
+      "sourceToken": "8.714",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.75,
+      "kmTransverse": 8.688,
+      "sourceToken": "8.688",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.8,
+      "kmTransverse": 8.663,
+      "sourceToken": "8.663",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.85,
+      "kmTransverse": 8.611,
+      "sourceToken": "8.611",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.9,
+      "kmTransverse": 8.558,
+      "sourceToken": "8.558",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 3.95,
+      "kmTransverse": 8.508,
+      "sourceToken": "8.508",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.0,
+      "kmTransverse": 8.46,
+      "sourceToken": "8.460",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.05,
+      "kmTransverse": 8.412,
+      "sourceToken": "8.412",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.1,
+      "kmTransverse": 8.366,
+      "sourceToken": "8.366",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.15,
+      "kmTransverse": 8.324,
+      "sourceToken": "8.324",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.2,
+      "kmTransverse": 8.281,
+      "sourceToken": "8.281",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.25,
+      "kmTransverse": 8.241,
+      "sourceToken": "8.241",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.3,
+      "kmTransverse": 8.204,
+      "sourceToken": "8.204",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.35,
+      "kmTransverse": 8.166,
+      "sourceToken": "8.166",
+      "pdfPage": 51
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.4,
+      "kmTransverse": 8.131,
+      "sourceToken": "8.131",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.45,
+      "kmTransverse": 8.097,
+      "sourceToken": "8.097",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.5,
+      "kmTransverse": 8.064,
+      "sourceToken": "8.064",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.55,
+      "kmTransverse": 8.033,
+      "sourceToken": "8.033",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.6,
+      "kmTransverse": 8.003,
+      "sourceToken": "8.003",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.65,
+      "kmTransverse": 7.975,
+      "sourceToken": "7.975",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.7,
+      "kmTransverse": 7.947,
+      "sourceToken": "7.947",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.75,
+      "kmTransverse": 7.921,
+      "sourceToken": "7.921",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.8,
+      "kmTransverse": 7.895,
+      "sourceToken": "7.895",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.85,
+      "kmTransverse": 7.872,
+      "sourceToken": "7.872",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.9,
+      "kmTransverse": 7.848,
+      "sourceToken": "7.848",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 4.95,
+      "kmTransverse": 7.826,
+      "sourceToken": "7.826",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.0,
+      "kmTransverse": 7.806,
+      "sourceToken": "7.806",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.05,
+      "kmTransverse": 7.786,
+      "sourceToken": "7.786",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.1,
+      "kmTransverse": 7.766,
+      "sourceToken": "7.766",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.15,
+      "kmTransverse": 7.749,
+      "sourceToken": "7.749",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.2,
+      "kmTransverse": 7.731,
+      "sourceToken": "7.731",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.25,
+      "kmTransverse": 7.714,
+      "sourceToken": "7.714",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.3,
+      "kmTransverse": 7.699,
+      "sourceToken": "7.699",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.35,
+      "kmTransverse": 7.684,
+      "sourceToken": "7.684",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.4,
+      "kmTransverse": 7.67,
+      "sourceToken": "7.670",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.45,
+      "kmTransverse": 7.657,
+      "sourceToken": "7.657",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.5,
+      "kmTransverse": 7.645,
+      "sourceToken": "7.645",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.55,
+      "kmTransverse": 7.633,
+      "sourceToken": "7.633",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.6,
+      "kmTransverse": 7.622,
+      "sourceToken": "7.622",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.65,
+      "kmTransverse": 7.611,
+      "sourceToken": "7.611",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.7,
+      "kmTransverse": 7.604,
+      "sourceToken": "7.604",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.75,
+      "kmTransverse": 7.594,
+      "sourceToken": "7.594",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.8,
+      "kmTransverse": 7.586,
+      "sourceToken": "7.586",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.85,
+      "kmTransverse": 7.579,
+      "sourceToken": "7.579",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.9,
+      "kmTransverse": 7.572,
+      "sourceToken": "7.572",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 5.95,
+      "kmTransverse": 7.566,
+      "sourceToken": "7.566",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.0,
+      "kmTransverse": 7.561,
+      "sourceToken": "7.561",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.05,
+      "kmTransverse": 7.555,
+      "sourceToken": "7.555",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.1,
+      "kmTransverse": 7.552,
+      "sourceToken": "7.552",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.15,
+      "kmTransverse": 7.549,
+      "sourceToken": "7.549",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.2,
+      "kmTransverse": 7.544,
+      "sourceToken": "7.544",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.25,
+      "kmTransverse": 7.543,
+      "sourceToken": "7.543",
+      "pdfPage": 52
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.3,
+      "kmTransverse": 7.54,
+      "sourceToken": "7.540",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.35,
+      "kmTransverse": 7.538,
+      "sourceToken": "7.538",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.4,
+      "kmTransverse": 7.538,
+      "sourceToken": "7.538",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.45,
+      "kmTransverse": 7.537,
+      "sourceToken": "7.537",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.5,
+      "kmTransverse": 7.536,
+      "sourceToken": "7.536",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.55,
+      "kmTransverse": 7.538,
+      "sourceToken": "7.538",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.6,
+      "kmTransverse": 7.538,
+      "sourceToken": "7.538",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.65,
+      "kmTransverse": 7.539,
+      "sourceToken": "7.539",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.7,
+      "kmTransverse": 7.541,
+      "sourceToken": "7.541",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.75,
+      "kmTransverse": 7.542,
+      "sourceToken": "7.542",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.8,
+      "kmTransverse": 7.545,
+      "sourceToken": "7.545",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.85,
+      "kmTransverse": 7.548,
+      "sourceToken": "7.548",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.9,
+      "kmTransverse": 7.55,
+      "sourceToken": "7.550",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 6.95,
+      "kmTransverse": 7.555,
+      "sourceToken": "7.555",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.0,
+      "kmTransverse": 7.558,
+      "sourceToken": "7.558",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.05,
+      "kmTransverse": 7.562,
+      "sourceToken": "7.562",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.1,
+      "kmTransverse": 7.568,
+      "sourceToken": "7.568",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.15,
+      "kmTransverse": 7.572,
+      "sourceToken": "7.572",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.2,
+      "kmTransverse": 7.578,
+      "sourceToken": "7.578",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.25,
+      "kmTransverse": 7.584,
+      "sourceToken": "7.584",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.3,
+      "kmTransverse": 7.589,
+      "sourceToken": "7.589",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.35,
+      "kmTransverse": 7.596,
+      "sourceToken": "7.596",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.4,
+      "kmTransverse": 7.602,
+      "sourceToken": "7.602",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.45,
+      "kmTransverse": 7.608,
+      "sourceToken": "7.608",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.5,
+      "kmTransverse": 7.614,
+      "sourceToken": "7.614",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.55,
+      "kmTransverse": 7.619,
+      "sourceToken": "7.619",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.6,
+      "kmTransverse": 7.624,
+      "sourceToken": "7.624",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.65,
+      "kmTransverse": 7.631,
+      "sourceToken": "7.631",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.7,
+      "kmTransverse": 7.636,
+      "sourceToken": "7.636",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.75,
+      "kmTransverse": 7.642,
+      "sourceToken": "7.642",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.8,
+      "kmTransverse": 7.648,
+      "sourceToken": "7.648",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.85,
+      "kmTransverse": 7.653,
+      "sourceToken": "7.653",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.9,
+      "kmTransverse": 7.66,
+      "sourceToken": "7.660",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 7.95,
+      "kmTransverse": 7.666,
+      "sourceToken": "7.666",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 8.0,
+      "kmTransverse": 7.673,
+      "sourceToken": "7.673",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 8.011,
+      "kmTransverse": 7.674,
+      "sourceToken": "7.674",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 8.05,
+      "kmTransverse": 7.679,
+      "sourceToken": "7.679",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 8.1,
+      "kmTransverse": 7.685,
+      "sourceToken": "7.685",
+      "pdfPage": 53
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 8.15,
+      "kmTransverse": 7.692,
+      "sourceToken": "7.692",
+      "pdfPage": 54
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 8.2,
+      "kmTransverse": 7.699,
+      "sourceToken": "7.699",
+      "pdfPage": 54
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 8.25,
+      "kmTransverse": 7.706,
+      "sourceToken": "7.706",
+      "pdfPage": 54
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 8.3,
+      "kmTransverse": 7.714,
+      "sourceToken": "7.714",
+      "pdfPage": 54
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 8.35,
+      "kmTransverse": 7.721,
+      "sourceToken": "7.721",
+      "pdfPage": 54
+    },
+    {
+      "trimMetres": 0.0,
+      "draft": 8.4,
+      "kmTransverse": 7.728,
+      "sourceToken": "7.728",
+      "pdfPage": 54
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 2.5,
+      "kmTransverse": 11.099,
+      "sourceToken": "11.099",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 2.55,
+      "kmTransverse": 10.934,
+      "sourceToken": "10.934",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 2.6,
+      "kmTransverse": 10.778,
+      "sourceToken": "10.778",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 2.65,
+      "kmTransverse": 10.626,
+      "sourceToken": "10.626",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 2.7,
+      "kmTransverse": 10.484,
+      "sourceToken": "10.484",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 2.75,
+      "kmTransverse": 10.347,
+      "sourceToken": "10.347",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 2.8,
+      "kmTransverse": 10.215,
+      "sourceToken": "10.215",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 2.85,
+      "kmTransverse": 10.09,
+      "sourceToken": "10.090",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 2.9,
+      "kmTransverse": 9.97,
+      "sourceToken": "9.970",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 2.95,
+      "kmTransverse": 9.855,
+      "sourceToken": "9.855",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.0,
+      "kmTransverse": 9.745,
+      "sourceToken": "9.745",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.05,
+      "kmTransverse": 9.641,
+      "sourceToken": "9.641",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.1,
+      "kmTransverse": 9.54,
+      "sourceToken": "9.540",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.15,
+      "kmTransverse": 9.444,
+      "sourceToken": "9.444",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.2,
+      "kmTransverse": 9.352,
+      "sourceToken": "9.352",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.25,
+      "kmTransverse": 9.263,
+      "sourceToken": "9.263",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.3,
+      "kmTransverse": 9.18,
+      "sourceToken": "9.180",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.35,
+      "kmTransverse": 9.099,
+      "sourceToken": "9.099",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.4,
+      "kmTransverse": 9.021,
+      "sourceToken": "9.021",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.45,
+      "kmTransverse": 8.948,
+      "sourceToken": "8.948",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.5,
+      "kmTransverse": 8.877,
+      "sourceToken": "8.877",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.55,
+      "kmTransverse": 8.808,
+      "sourceToken": "8.808",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.6,
+      "kmTransverse": 8.742,
+      "sourceToken": "8.742",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.65,
+      "kmTransverse": 8.68,
+      "sourceToken": "8.680",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.7,
+      "kmTransverse": 8.62,
+      "sourceToken": "8.620",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.75,
+      "kmTransverse": 8.562,
+      "sourceToken": "8.562",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.8,
+      "kmTransverse": 8.515,
+      "sourceToken": "8.515",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.85,
+      "kmTransverse": 8.476,
+      "sourceToken": "8.476",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.9,
+      "kmTransverse": 8.442,
+      "sourceToken": "8.442",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 3.95,
+      "kmTransverse": 8.419,
+      "sourceToken": "8.419",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.0,
+      "kmTransverse": 8.406,
+      "sourceToken": "8.406",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.05,
+      "kmTransverse": 8.376,
+      "sourceToken": "8.376",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.1,
+      "kmTransverse": 8.331,
+      "sourceToken": "8.331",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.15,
+      "kmTransverse": 8.288,
+      "sourceToken": "8.288",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.2,
+      "kmTransverse": 8.247,
+      "sourceToken": "8.247",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.25,
+      "kmTransverse": 8.208,
+      "sourceToken": "8.208",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.3,
+      "kmTransverse": 8.169,
+      "sourceToken": "8.169",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.35,
+      "kmTransverse": 8.133,
+      "sourceToken": "8.133",
+      "pdfPage": 55
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.4,
+      "kmTransverse": 8.099,
+      "sourceToken": "8.099",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.45,
+      "kmTransverse": 8.064,
+      "sourceToken": "8.064",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.5,
+      "kmTransverse": 8.031,
+      "sourceToken": "8.031",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.55,
+      "kmTransverse": 8.0,
+      "sourceToken": "8.000",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.6,
+      "kmTransverse": 7.971,
+      "sourceToken": "7.971",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.65,
+      "kmTransverse": 7.942,
+      "sourceToken": "7.942",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.7,
+      "kmTransverse": 7.915,
+      "sourceToken": "7.915",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.75,
+      "kmTransverse": 7.889,
+      "sourceToken": "7.889",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.8,
+      "kmTransverse": 7.864,
+      "sourceToken": "7.864",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.85,
+      "kmTransverse": 7.84,
+      "sourceToken": "7.840",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.9,
+      "kmTransverse": 7.817,
+      "sourceToken": "7.817",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 4.95,
+      "kmTransverse": 7.796,
+      "sourceToken": "7.796",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.0,
+      "kmTransverse": 7.775,
+      "sourceToken": "7.775",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.05,
+      "kmTransverse": 7.754,
+      "sourceToken": "7.754",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.1,
+      "kmTransverse": 7.736,
+      "sourceToken": "7.736",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.15,
+      "kmTransverse": 7.718,
+      "sourceToken": "7.718",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.2,
+      "kmTransverse": 7.701,
+      "sourceToken": "7.701",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.25,
+      "kmTransverse": 7.684,
+      "sourceToken": "7.684",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.3,
+      "kmTransverse": 7.669,
+      "sourceToken": "7.669",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.35,
+      "kmTransverse": 7.654,
+      "sourceToken": "7.654",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.4,
+      "kmTransverse": 7.64,
+      "sourceToken": "7.640",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.45,
+      "kmTransverse": 7.627,
+      "sourceToken": "7.627",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.5,
+      "kmTransverse": 7.615,
+      "sourceToken": "7.615",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.55,
+      "kmTransverse": 7.603,
+      "sourceToken": "7.603",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.6,
+      "kmTransverse": 7.592,
+      "sourceToken": "7.592",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.65,
+      "kmTransverse": 7.582,
+      "sourceToken": "7.582",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.7,
+      "kmTransverse": 7.572,
+      "sourceToken": "7.572",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.75,
+      "kmTransverse": 7.563,
+      "sourceToken": "7.563",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.8,
+      "kmTransverse": 7.555,
+      "sourceToken": "7.555",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.85,
+      "kmTransverse": 7.548,
+      "sourceToken": "7.548",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.9,
+      "kmTransverse": 7.539,
+      "sourceToken": "7.539",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 5.95,
+      "kmTransverse": 7.534,
+      "sourceToken": "7.534",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.0,
+      "kmTransverse": 7.529,
+      "sourceToken": "7.529",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.05,
+      "kmTransverse": 7.523,
+      "sourceToken": "7.523",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.1,
+      "kmTransverse": 7.519,
+      "sourceToken": "7.519",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.15,
+      "kmTransverse": 7.515,
+      "sourceToken": "7.515",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.2,
+      "kmTransverse": 7.511,
+      "sourceToken": "7.511",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.25,
+      "kmTransverse": 7.508,
+      "sourceToken": "7.508",
+      "pdfPage": 56
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.3,
+      "kmTransverse": 7.506,
+      "sourceToken": "7.506",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.35,
+      "kmTransverse": 7.504,
+      "sourceToken": "7.504",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.4,
+      "kmTransverse": 7.503,
+      "sourceToken": "7.503",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.45,
+      "kmTransverse": 7.502,
+      "sourceToken": "7.502",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.5,
+      "kmTransverse": 7.502,
+      "sourceToken": "7.502",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.55,
+      "kmTransverse": 7.502,
+      "sourceToken": "7.502",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.6,
+      "kmTransverse": 7.503,
+      "sourceToken": "7.503",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.65,
+      "kmTransverse": 7.504,
+      "sourceToken": "7.504",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.7,
+      "kmTransverse": 7.506,
+      "sourceToken": "7.506",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.75,
+      "kmTransverse": 7.507,
+      "sourceToken": "7.507",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.8,
+      "kmTransverse": 7.51,
+      "sourceToken": "7.510",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.85,
+      "kmTransverse": 7.513,
+      "sourceToken": "7.513",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.9,
+      "kmTransverse": 7.516,
+      "sourceToken": "7.516",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 6.95,
+      "kmTransverse": 7.519,
+      "sourceToken": "7.519",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.0,
+      "kmTransverse": 7.523,
+      "sourceToken": "7.523",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.05,
+      "kmTransverse": 7.527,
+      "sourceToken": "7.527",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.1,
+      "kmTransverse": 7.531,
+      "sourceToken": "7.531",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.15,
+      "kmTransverse": 7.536,
+      "sourceToken": "7.536",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.2,
+      "kmTransverse": 7.541,
+      "sourceToken": "7.541",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.25,
+      "kmTransverse": 7.547,
+      "sourceToken": "7.547",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.3,
+      "kmTransverse": 7.553,
+      "sourceToken": "7.553",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.35,
+      "kmTransverse": 7.559,
+      "sourceToken": "7.559",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.4,
+      "kmTransverse": 7.565,
+      "sourceToken": "7.565",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.45,
+      "kmTransverse": 7.572,
+      "sourceToken": "7.572",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.5,
+      "kmTransverse": 7.58,
+      "sourceToken": "7.580",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.55,
+      "kmTransverse": 7.587,
+      "sourceToken": "7.587",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.6,
+      "kmTransverse": 7.595,
+      "sourceToken": "7.595",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.65,
+      "kmTransverse": 7.603,
+      "sourceToken": "7.603",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.7,
+      "kmTransverse": 7.611,
+      "sourceToken": "7.611",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.75,
+      "kmTransverse": 7.619,
+      "sourceToken": "7.619",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.8,
+      "kmTransverse": 7.627,
+      "sourceToken": "7.627",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.85,
+      "kmTransverse": 7.634,
+      "sourceToken": "7.634",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.9,
+      "kmTransverse": 7.642,
+      "sourceToken": "7.642",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 7.95,
+      "kmTransverse": 7.65,
+      "sourceToken": "7.650",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 8.0,
+      "kmTransverse": 7.657,
+      "sourceToken": "7.657",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 8.011,
+      "kmTransverse": 7.659,
+      "sourceToken": "7.659",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 8.05,
+      "kmTransverse": 7.665,
+      "sourceToken": "7.665",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 8.1,
+      "kmTransverse": 7.673,
+      "sourceToken": "7.673",
+      "pdfPage": 57
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 8.15,
+      "kmTransverse": 7.681,
+      "sourceToken": "7.681",
+      "pdfPage": 58
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 8.2,
+      "kmTransverse": 7.689,
+      "sourceToken": "7.689",
+      "pdfPage": 58
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 8.25,
+      "kmTransverse": 7.697,
+      "sourceToken": "7.697",
+      "pdfPage": 58
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 8.3,
+      "kmTransverse": 7.705,
+      "sourceToken": "7.705",
+      "pdfPage": 58
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 8.35,
+      "kmTransverse": 7.713,
+      "sourceToken": "7.713",
+      "pdfPage": 58
+    },
+    {
+      "trimMetres": 0.62,
+      "draft": 8.4,
+      "kmTransverse": 7.721,
+      "sourceToken": "7.721",
+      "pdfPage": 58
+    }
+  ]
+}

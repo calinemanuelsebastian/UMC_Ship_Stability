@@ -1,0 +1,18 @@
+[
+  {
+    "id": "lightship",
+    "name": "Synthetic lightship",
+    "massTonnes": 4000,
+    "lcg": 50,
+    "vcg": 4,
+    "tcg": 0
+  },
+  {
+    "id": "cargo",
+    "name": "Synthetic cargo",
+    "massTonnes": 2150,
+    "lcg": 50,
+    "vcg": 6.8604651162790695,
+    "tcg": 0
+  }
+]

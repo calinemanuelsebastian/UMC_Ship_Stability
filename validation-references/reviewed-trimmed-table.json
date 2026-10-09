@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "modelId": "reviewed-apples-vessel",
+  "source": "Reviewed Excel Calc_Trim B69:D71, B75:F77, B84:D86, B90:F92. Draft datum unconfirmed.",
+  "waterDensity": 1.025,
+  "xPositive": "forward",
+  "longitudinalOriginFromAP": 0,
+  "trimPositive": "bow",
+  "tables": [
+    {
+      "trimMetres": -1.5,
+      "rows": [
+        {
+          "displacementTonnes": 9626.15,
+          "draft": 5.75,
+          "lcb": 58.693,
+          "lcf": 56.492
+        },
+        {
+          "displacementTonnes": 9722.62,
+          "draft": 5.8,
+          "lcb": 58.67,
+          "lcf": 56.428
+        }
+      ]
+    },
+    {
+      "trimMetres": -1,
+      "rows": [
+        {
+          "displacementTonnes": 9593.59,
+          "draft": 5.75,
+          "lcb": 59.516,
+          "lcf": 56.916
+        },
+        {
+          "displacementTonnes": 9689.37,
+          "draft": 5.8,
+          "lcb": 59.49,
+          "lcf": 56.848
+        }
+      ]
+    }
+  ]
+}

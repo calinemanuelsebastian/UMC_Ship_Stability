@@ -1,0 +1,97 @@
+sheet,cell,old,new,reason
+Calc_G_Cargo,H66,"= ROUND(SUM(H48:H65), 2)",=SUM(H48:H65)*D66/SUM(D48:D65),Scale allowance moments with final allowance mass; assumes unchanged dunnage distribution.
+Calc_G_Cargo,I66,"= ROUND(SUM(I48:I65), 2)",=SUM(I48:I65)*D66/SUM(D48:D65),Scale allowance moments with final allowance mass; assumes unchanged dunnage distribution.
+Calc_G_Cargo,J66,0,=SUM(J48:J65)*D66/SUM(D48:D65),Scale allowance moments with final allowance mass; assumes unchanged dunnage distribution.
+Calc_G_Cargo,G66,"=ROUND(J66/C66, 2)",=J66/D66,"TCG = transverse mass moment / mass, not volume."
+Calc_Trim,B14,8458.77,=B4,Use live displacement rather than stale manually copied target.
+Calc_Trim,J95,= ((D46 - B61) * C46) / (100 * D61),=((D46-B106)*C46)/(100*D106),"Use the -2 m hydrostatic block, not zero-trim values."
+Calc_Trim,B114,1.402,=B113+(D46-F113)*(B115-B113)/(F115-F113),"Interpolate trim magnitude at LCB=LCG; fixed displacement, linear table approximation."
+Calc_Trim,N110,= -1.402 + L110,=-B114+L110,Use selected trim magnitude instead of fixed -1.402.
+Calc_Trim,B120,= L110,=N110,"Display total trim, not just residual correction."
+Calc_Trim,D119,= B119 + (B120 * J114) / Calc_G_Cargo!C23,REVIEW DATUM,Withheld: original table draft datum and endpoint reconstruction must be confirmed.
+Calc_Trim,D120,=  D119 - B120,REVIEW DATUM,Withheld: original table draft datum and endpoint reconstruction must be confirmed.
+Calc_Trim,A110,Hydro Trim = -1.402 m,Interpolated trim: see B114 (magnitude),Remove stale hard-coded trim label.
+Calc_Trim,K110,Trim [m] (-1.402 m),Residual trim correction [m],Clarify residual vs total trim.
+Calc_Trim,M110,Eq. Trim (0.000 m),Total trim [m],Clarify total trim.
+Calc_Trim,A117,Aft and fore draughts (using Hydro Trim = -1.402 m values),Aft/fore drafts withheld pending hydrostatic draft datum,Prevent invalid endpoint drafts being used.
+Calc_Stability,B41,"= ROUND(C4, 0)",=C4,Do not round displacement before KN interpolation.
+Calc_Stability,B49,-1.4,=-Calc_Trim!B114,"Use same selected trim for KN, KM and limiting VCG."
+Calc_Stability,C41,0,=C40+($B41-$B40)*(C42-C40)/($B42-$B40),Weighted displacement interpolation.
+Calc_Stability,C45,0,=C44+($B45-$B44)*(C46-C44)/($B46-$B44),Weighted displacement interpolation.
+Calc_Stability,C49,=(C48+C50)/2,=C48+($B49-$B48)*(C50-C48)/($B50-$B48),Weighted trim interpolation.
+Calc_Stability,D41,=(D40+D42)/2,=D40+($B41-$B40)*(D42-D40)/($B42-$B40),Weighted displacement interpolation.
+Calc_Stability,D45,=(D44+D46)/2,=D44+($B45-$B44)*(D46-D44)/($B46-$B44),Weighted displacement interpolation.
+Calc_Stability,D49,=(D48+D50)/2,=D48+($B49-$B48)*(D50-D48)/($B50-$B48),Weighted trim interpolation.
+Calc_Stability,E41,=(E40+E42)/2,=E40+($B41-$B40)*(E42-E40)/($B42-$B40),Weighted displacement interpolation.
+Calc_Stability,E45,=(E44+E46)/2,=E44+($B45-$B44)*(E46-E44)/($B46-$B44),Weighted displacement interpolation.
+Calc_Stability,E49,=(E48+E50)/2,=E48+($B49-$B48)*(E50-E48)/($B50-$B48),Weighted trim interpolation.
+Calc_Stability,F41,=(F40+F42)/2,=F40+($B41-$B40)*(F42-F40)/($B42-$B40),Weighted displacement interpolation.
+Calc_Stability,F45,=(F44+F46)/2,=F44+($B45-$B44)*(F46-F44)/($B46-$B44),Weighted displacement interpolation.
+Calc_Stability,F49,=(F48+F50)/2,=F48+($B49-$B48)*(F50-F48)/($B50-$B48),Weighted trim interpolation.
+Calc_Stability,G41,=(G40+G42)/2,=G40+($B41-$B40)*(G42-G40)/($B42-$B40),Weighted displacement interpolation.
+Calc_Stability,G45,=(G44+G46)/2,=G44+($B45-$B44)*(G46-G44)/($B46-$B44),Weighted displacement interpolation.
+Calc_Stability,G49,=(G48+G50)/2,=G48+($B49-$B48)*(G50-G48)/($B50-$B48),Weighted trim interpolation.
+Calc_Stability,H41,=(H40+H42)/2,=H40+($B41-$B40)*(H42-H40)/($B42-$B40),Weighted displacement interpolation.
+Calc_Stability,H45,=(H44+H46)/2,=H44+($B45-$B44)*(H46-H44)/($B46-$B44),Weighted displacement interpolation.
+Calc_Stability,H49,=(H48+H50)/2,=H48+($B49-$B48)*(H50-H48)/($B50-$B48),Weighted trim interpolation.
+Calc_Stability,I41,=(I40+I42)/2,=I40+($B41-$B40)*(I42-I40)/($B42-$B40),Weighted displacement interpolation.
+Calc_Stability,I45,=(I44+I46)/2,=I44+($B45-$B44)*(I46-I44)/($B46-$B44),Weighted displacement interpolation.
+Calc_Stability,I49,=(I48+I50)/2,=I48+($B49-$B48)*(I50-I48)/($B50-$B48),Weighted trim interpolation.
+Calc_Stability,J41,=(J40+J42)/2,=J40+($B41-$B40)*(J42-J40)/($B42-$B40),Weighted displacement interpolation.
+Calc_Stability,J45,=(J44+J46)/2,=J44+($B45-$B44)*(J46-J44)/($B46-$B44),Weighted displacement interpolation.
+Calc_Stability,J49,=(J48+J50)/2,=J48+($B49-$B48)*(J50-J48)/($B50-$B48),Weighted trim interpolation.
+Calc_Stability,K41,=(K40+K42)/2,=K40+($B41-$B40)*(K42-K40)/($B42-$B40),Weighted displacement interpolation.
+Calc_Stability,K45,=(K44+K46)/2,=K44+($B45-$B44)*(K46-K44)/($B46-$B44),Weighted displacement interpolation.
+Calc_Stability,K49,=(K48+K50)/2,=K48+($B49-$B48)*(K50-K48)/($B50-$B48),Weighted trim interpolation.
+Calc_Stability,L41,=(L40+L42)/2,=L40+($B41-$B40)*(L42-L40)/($B42-$B40),Weighted displacement interpolation.
+Calc_Stability,L45,=(L44+L46)/2,=L44+($B45-$B44)*(L46-L44)/($B46-$B44),Weighted displacement interpolation.
+Calc_Stability,L49,=(L48+L50)/2,=L48+($B49-$B48)*(L50-L48)/($B50-$B48),Weighted trim interpolation.
+Calc_Stability,M41,=(M40+M42)/2,=M40+($B41-$B40)*(M42-M40)/($B42-$B40),Weighted displacement interpolation.
+Calc_Stability,M45,=(M44+M46)/2,=M44+($B45-$B44)*(M46-M44)/($B46-$B44),Weighted displacement interpolation.
+Calc_Stability,M49,=(M48+M50)/2,=M48+($B49-$B48)*(M50-M48)/($B50-$B48),Weighted trim interpolation.
+Calc_Stability,N41,=(N40+N42)/2,=N40+($B41-$B40)*(N42-N40)/($B42-$B40),Weighted displacement interpolation.
+Calc_Stability,N45,=(N44+N46)/2,=N44+($B45-$B44)*(N46-N44)/($B46-$B44),Weighted displacement interpolation.
+Calc_Stability,N49,=(N48+N50)/2,=N48+($B49-$B48)*(N50-N48)/($B50-$B48),Weighted trim interpolation.
+Calc_Stability,O41,=(O40+O42)/2,=O40+($B41-$B40)*(O42-O40)/($B42-$B40),Weighted displacement interpolation.
+Calc_Stability,O45,=(O44+O46)/2,=O44+($B45-$B44)*(O46-O44)/($B46-$B44),Weighted displacement interpolation.
+Calc_Stability,O49,=(O48+O50)/2,=O48+($B49-$B48)*(O50-O48)/($B50-$B48),Weighted trim interpolation.
+Calc_Stability,B55,= C5,=$C$8,Virtual KG approximation applies the existing FSM/displacement correction consistently to the centreline GZ curve.
+Calc_Stability,C55,=C5,=$C$8,Virtual KG approximation applies the existing FSM/displacement correction consistently to the centreline GZ curve.
+Calc_Stability,D55,= C5,=$C$8,Virtual KG approximation applies the existing FSM/displacement correction consistently to the centreline GZ curve.
+Calc_Stability,E55,= C5,=$C$8,Virtual KG approximation applies the existing FSM/displacement correction consistently to the centreline GZ curve.
+Calc_Stability,F55,=C5,=$C$8,Virtual KG approximation applies the existing FSM/displacement correction consistently to the centreline GZ curve.
+Calc_Stability,G55,= C5,=$C$8,Virtual KG approximation applies the existing FSM/displacement correction consistently to the centreline GZ curve.
+Calc_Stability,H55,= C5,=$C$8,Virtual KG approximation applies the existing FSM/displacement correction consistently to the centreline GZ curve.
+Calc_Stability,I55,=C5,=$C$8,Virtual KG approximation applies the existing FSM/displacement correction consistently to the centreline GZ curve.
+Calc_Stability,J55,= C5,=$C$8,Virtual KG approximation applies the existing FSM/displacement correction consistently to the centreline GZ curve.
+Calc_Stability,K55,= C5,=$C$8,Virtual KG approximation applies the existing FSM/displacement correction consistently to the centreline GZ curve.
+Calc_Stability,L55,=C5,=$C$8,Virtual KG approximation applies the existing FSM/displacement correction consistently to the centreline GZ curve.
+Calc_Stability,M55,= C5,=$C$8,Virtual KG approximation applies the existing FSM/displacement correction consistently to the centreline GZ curve.
+Calc_Stability,N55,= C5,=$C$8,Virtual KG approximation applies the existing FSM/displacement correction consistently to the centreline GZ curve.
+Calc_Stability,A55,KG (= VCG) [m],KG virtual = VCG + FSM / displacement [m],Label free-surface correction.
+Calc_Stability,A58,GZ (= KN - KG · sin θ) [m],"GZ, TCG=0 reference [m]",Curve remains a centreline reference; actual corrected TCG is nonzero.
+Calc_Stability,A1,Stability calculation,Stability calculation — centreline reference; see Review_Notes,Visible scope label.
+Calc_Stability,B4,Displacement [m],Displacement [t],Correct unit.
+Calc_Stability,E16,Trim = 1.4 m,Selected trim magnitude (B114),Remove stale trim label.
+Calc_Stability,N14,"=IF(O13 < O12, ""Actual VCG' is GOOD"", ""Actual VCG' is BAD"")","=IF(ABS(Calc_Trim!F46)>0.000001,""REVIEW TCG"",IF(O13 < O12, ""Actual VCG' is GOOD"", ""Actual VCG' is BAD""))",Do not report centreline criteria as an actual-condition pass when TCG is nonzero.
+Calc_Stability,C26,"=IF(C25 > 0.15, ""GOOD"", ""BAD"")","=IF(ABS(Calc_Trim!F46)>0.000001,""REVIEW TCG"",IF(C25 > 0.15, ""GOOD"", ""BAD""))",Do not report centreline criteria as an actual-condition pass when TCG is nonzero.
+Calc_Stability,L62,"= IF(L61 > 0.055, ""GOOD"", ""BAD"")","=IF(ABS(Calc_Trim!F46)>0.000001,""REVIEW TCG"", IF(L61 > 0.055, ""GOOD"", ""BAD""))",Do not report centreline criteria as an actual-condition pass when TCG is nonzero.
+Calc_Stability,L64,"= IF(L63 > 0.09, ""GOOD"", ""BAD"")","=IF(ABS(Calc_Trim!F46)>0.000001,""REVIEW TCG"", IF(L63 > 0.09, ""GOOD"", ""BAD""))",Do not report centreline criteria as an actual-condition pass when TCG is nonzero.
+Calc_Stability,L66,"= IF(L65 > 0.03, ""GOOD"", ""BAD"")","=IF(ABS(Calc_Trim!F46)>0.000001,""REVIEW TCG"", IF(L65 > 0.03, ""GOOD"", ""BAD""))",Do not report centreline criteria as an actual-condition pass when TCG is nonzero.
+Calc_Stability,L69,"=IF(AND((J58 >= 0.2),(K58 >=  0.2), (L58 >=  0.2), (M58 >=  0.2), (N58 >= 0.2)), ""GOOD"", ""BAD"")","=IF(ABS(Calc_Trim!F46)>0.000001,""REVIEW TCG"",IF(AND((J58 >= 0.2),(K58 >=  0.2), (L58 >=  0.2), (M58 >=  0.2), (N58 >= 0.2)), ""GOOD"", ""BAD""))",Do not report centreline criteria as an actual-condition pass when TCG is nonzero.
+Calc_Stability,L71,"= IF(L70 > 25, ""GOOD"", ""BAD"")","=IF(ABS(Calc_Trim!F46)>0.000001,""REVIEW TCG"", IF(L70 > 25, ""GOOD"", ""BAD""))",Do not report centreline criteria as an actual-condition pass when TCG is nonzero.
+Calc_Wind,A1,Severe wind and rolling criterion calculation,Wind/rolling — centreline reference; actual condition requires review,"GZ is a centreline approximation, weather area comparison not implemented."
+Calc_Wind,C16,"= IF(C15 < 16, ""GOOD"", ""BAD"")","=IF(ABS(Calc_Trim!F46)>0.000001,""REVIEW TCG"", IF(C15 < 16, ""GOOD"", ""BAD""))",Actual-condition weather result not established.
+Calc_Lashing,C30,"=IF(C23 < (C9 * C3 * Calc_Wind!C13 * (8 * (C28 * 0.5) *C31)), ""GOOD"", ""BAD"")","=IF(C23<=(C9*C3*Calc_Wind!C13+8*0.5*C28*C31),""GOOD"",""BAD"")",CSS Annex 13 transverse sliding: friction force plus securing-force contributions; retain original effective lashing count and factor.
+Calc_Lashing,C38,"= IF(C22 <= (C9 * (C3 * Calc_Lashing!C13 - Calc_Lashing!C24) + (10 * 0.5 * C28 * C31)), ""GOOD"", ""BAD"")","=IF(C22<=(C9*(C3*Calc_Wind!C13-C24)+10*0.5*C28*C31),""GOOD"",""BAD"")",Use gravitational acceleration. Retain conservative full vertical-force subtraction; no unverified reduction factor added.
+Calc_Lashing,C35,= C4 / 2,=C5/2,"Transverse tipping uses half cargo breadth for a centred rectangular cargo block, not half length."
+Calc_Lashing,C24,= 0,=C18*C3,Vertical inertial force = mass times entered vertical acceleration.
+Calc_G_Cargo,B87,"= IF(C85 > C86, ""SHIP FLOATS"", ""SHIP SINKS"" )","=IF(C86<=C85,""WITHIN DISPLACEMENT LIMIT"",""DISPLACEMENT LIMIT EXCEEDED"")",Limit comparison is not a flotation or stability test.
+Calc_List,A25,"= IF(B23 > B24, ""SHIP FLOATS"", ""SHIP SINKS"" )","=IF(B24<=B23,""WITHIN DISPLACEMENT LIMIT"",""DISPLACEMENT LIMIT EXCEEDED"")",Limit comparison is not a flotation or stability test.
+Calc_Trim,M35,"= IF(N33 > N34, ""SHIP FLOATS"", ""SHIP SINKS"" )","=IF(N34<=N33,""WITHIN DISPLACEMENT LIMIT"",""DISPLACEMENT LIMIT EXCEEDED"")",Limit comparison is not a flotation or stability test.
+Calc_Trim,G19,MCT [t/cm],MCT [t·m/cm],"Moment per centimetre, not tonnes per centimetre."
+Calc_Trim,C104,MCT [t/cm],MCT [t·m/cm],"Moment per centimetre, not tonnes per centimetre."
+Calc_Trim,G112,MCT [t/cm],MCT [t·m/cm],"Moment per centimetre, not tonnes per centimetre."
+Calc_Trim,C59,MCT [t/cm],MCT [t·m/cm],"Moment per centimetre, not tonnes per centimetre."
+Calc_Trim,C74,MCT [t/cm],MCT [t·m/cm],"Moment per centimetre, not tonnes per centimetre."
+Calc_Trim,C89,MCT [t/cm],MCT [t·m/cm],"Moment per centimetre, not tonnes per centimetre."

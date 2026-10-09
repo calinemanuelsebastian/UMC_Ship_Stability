@@ -1,0 +1,155 @@
+{
+  "source": "004_STABILITY_LOADING_MANUAL.pdf, PDF pp12–14 / printed 4.1–4.3",
+  "condition": {
+    "displacementTonnes": 13201.307,
+    "waterDensity": 1.025,
+    "vcg": 4.647,
+    "lcg": 58.731,
+    "tcg": 0.004,
+    "freeSurfaceMomentTransverse": 0
+  },
+  "inputNote": "VCG is already the printed corrected KG of 4.647 m; FSM is zero to avoid correcting twice. Initial trim is explicitly the worked-example value, not a new LCG balance.",
+  "initialTrimMetres": -0.774,
+  "referenceDensityNote": "Restricted to 1.025 t/m3 seawater convention; no mass/volume rescaling applied to source curves.",
+  "maxKNError": 0.0009197223599999305,
+  "maxGZError": 0.000773242630274007,
+  "calculatedHeelDeg": 0.07631805416307165,
+  "printedHeelDeg": 0.074,
+  "sourceIssues": [
+    "Page 14 prints trim -0.792 m, whereas pages 12–13 use -0.774 m. This report uses the detailed curve on pages 12–13.",
+    "Page 14 labels its 0.076-degree approximation to port despite positive starboard TCG and the detailed page-13 starboard result. The source text is preserved; no source PDF is modified.",
+    "Page 14 explicitly notes sensitivity to TCG/TCB rounding at such small angles."
+  ],
+  "rows": [
+    {
+      "heelDeg": 0,
+      "kn": 0,
+      "gz": -0.004,
+      "gzCorrected": -0.004,
+      "sourceKN": 0,
+      "sourceGZ": -0.004,
+      "knDifference": 0,
+      "gzDifference": 0
+    },
+    {
+      "heelDeg": 2,
+      "kn": 0.267,
+      "gz": 0.10082447551540163,
+      "gzCorrected": 0.10082447551540163,
+      "sourceKN": 0.267,
+      "sourceGZ": 0.101,
+      "knDifference": 0,
+      "gzDifference": -0.00017552448459837167
+    },
+    {
+      "heelDeg": 5,
+      "kn": 0.667548,
+      "gz": 0.25855048465926556,
+      "gzCorrected": 0.25855048465926556,
+      "sourceKN": 0.668,
+      "sourceGZ": 0.259,
+      "knDifference": -0.00045200000000000795,
+      "gzDifference": -0.0004495153407344521
+    },
+    {
+      "heelDeg": 10,
+      "kn": 1.3351090700000001,
+      "gz": 0.524226757369726,
+      "gzCorrected": 0.524226757369726,
+      "sourceKN": 1.335,
+      "sourceGZ": 0.525,
+      "knDifference": 0.00010907000000015543,
+      "gzDifference": -0.000773242630274007
+    },
+    {
+      "heelDeg": 12,
+      "kn": 1.60265707,
+      "gz": 0.6325788523669372,
+      "gzCorrected": 0.6325788523669372,
+      "sourceKN": 1.603,
+      "sourceGZ": 0.633,
+      "knDifference": -0.00034292999999996354,
+      "gzDifference": -0.00042114763306277947
+    },
+    {
+      "heelDeg": 15,
+      "kn": 2.00420507,
+      "gz": 0.7976092641034296,
+      "gzCorrected": 0.7976092641034296,
+      "sourceKN": 2.004,
+      "sourceGZ": 0.798,
+      "knDifference": 0.00020506999999980735,
+      "gzDifference": -0.00039073589657045993
+    },
+    {
+      "heelDeg": 20,
+      "kn": 2.67830697764,
+      "gz": 1.0851806011224738,
+      "gzCorrected": 1.0851806011224738,
+      "sourceKN": 2.678,
+      "sourceGZ": 1.085,
+      "knDifference": 0.00030697764000020555,
+      "gzDifference": 0.00018060112247386684
+    },
+    {
+      "heelDeg": 25,
+      "kn": 3.35929390764,
+      "gz": 1.391761614182823,
+      "gzCorrected": 1.391761614182823,
+      "sourceKN": 3.359,
+      "sourceGZ": 1.392,
+      "knDifference": 0.00029390764000014613,
+      "gzDifference": -0.00023838581717683383
+    },
+    {
+      "heelDeg": 30,
+      "kn": 4.00623572,
+      "gz": 1.6792716183848628,
+      "gzCorrected": 1.6792716183848628,
+      "sourceKN": 4.006,
+      "sourceGZ": 1.68,
+      "knDifference": 0.00023572000000005033,
+      "gzDifference": -0.0007283816151371081
+    },
+    {
+      "heelDeg": 35,
+      "kn": 4.623667487640001,
+      "gz": 1.9549811797395333,
+      "gzCorrected": 1.9549811797395333,
+      "sourceKN": 4.623,
+      "sourceGZ": 1.955,
+      "knDifference": 0.0006674876400003527,
+      "gzDifference": -0.00001882026046673424
+    },
+    {
+      "heelDeg": 40,
+      "kn": 5.22866158,
+      "gz": 2.2385633800141758,
+      "gzCorrected": 2.2385633800141758,
+      "sourceKN": 5.229,
+      "sourceGZ": 2.239,
+      "knDifference": -0.0003384200000002835,
+      "gzDifference": -0.000436619985824116
+    },
+    {
+      "heelDeg": 50,
+      "kn": 6.20308027764,
+      "gz": 2.6407006000273627,
+      "gzCorrected": 2.6407006000273627,
+      "sourceKN": 6.204,
+      "sourceGZ": 2.641,
+      "knDifference": -0.0009197223599999305,
+      "gzDifference": -0.000299399972637282
+    },
+    {
+      "heelDeg": 60,
+      "kn": 6.79799144,
+      "gz": 2.7715713886137134,
+      "gzCorrected": 2.7715713886137134,
+      "sourceKN": 6.798,
+      "sourceGZ": 2.772,
+      "knDifference": -0.000008560000000379375,
+      "gzDifference": -0.0004286113862863594
+    }
+  ]
+}

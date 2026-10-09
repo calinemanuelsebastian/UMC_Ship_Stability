@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "source": "Synthetic training assumptions: four independent 40 \u00d7 8 \u00d7 2 m rectangular ballast compartments. No real ship tank data.",
+  "arrangement": {
+    "source": "Declared rectangular compartment geometry.",
+    "note": "Synthetic training arrangement. Fill colour indicates volume fraction, not a measured liquid surface.",
+    "outline": [
+      [
+        0,
+        -20
+      ],
+      [
+        180,
+        -20
+      ],
+      [
+        180,
+        20
+      ],
+      [
+        0,
+        20
+      ]
+    ],
+    "layers": [
+      "Ballast compartments"
+    ]
+  },
+  "tanks": [
+    {
+      "id": "AP",
+      "name": "Aft port",
+      "group": "ballast",
+      "capacityM3": 640,
+      "defaultDensity": 1.025,
+      "fullCentre": [
+        25,
+        -5,
+        1
+      ],
+      "sourcePage": 0,
+      "tableEnd": 640,
+      "box": {
+        "length": 40,
+        "width": 8,
+        "height": 2,
+        "bottomZ": 0
+      },
+      "rows": [
+        [
+          0,
+          25,
+          -5,
+          1,
+          1706.6666666666667
+        ],
+        [
+          640,
+          25,
+          -5,
+          1,
+          1706.6666666666667
+        ]
+      ],
+      "plan": {
+        "layer": "Ballast compartments",
+        "polygon": [
+          [
+            9.0,
+            -18
+          ],
+          [
+            81.0,
+            -18
+          ],
+          [
+            81.0,
+            -2
+          ],
+          [
+            9.0,
+            -2
+          ]
+        ],
+        "label": [
+          45.0,
+          -10
+        ]
+      }
+    },
+    {
+      "id": "AS",
+      "name": "Aft starboard",
+      "group": "ballast",
+      "capacityM3": 640,
+      "defaultDensity": 1.025,
+      "fullCentre": [
+        25,
+        5,
+        1
+      ],
+      "sourcePage": 0,
+      "tableEnd": 640,
+      "box": {
+        "length": 40,
+        "width": 8,
+        "height": 2,
+        "bottomZ": 0
+      },
+      "rows": [
+        [
+          0,
+          25,
+          5,
+          1,
+          1706.6666666666667
+        ],
+        [
+          640,
+          25,
+          5,
+          1,
+          1706.6666666666667
+        ]
+      ],
+      "plan": {
+        "layer": "Ballast compartments",
+        "polygon": [
+          [
+            9.0,
+            2
+          ],
+          [
+            81.0,
+            2
+          ],
+          [
+            81.0,
+            18
+          ],
+          [
+            9.0,
+            18
+          ]
+        ],
+        "label": [
+          45.0,
+          10
+        ]
+      }
+    },
+    {
+      "id": "FP",
+      "name": "Forward port",
+      "group": "ballast",
+      "capacityM3": 640,
+      "defaultDensity": 1.025,
+      "fullCentre": [
+        75,
+        -5,
+        1
+      ],
+      "sourcePage": 0,
+      "tableEnd": 640,
+      "box": {
+        "length": 40,
+        "width": 8,
+        "height": 2,
+        "bottomZ": 0
+      },
+      "rows": [
+        [
+          0,
+          75,
+          -5,
+          1,
+          1706.6666666666667
+        ],
+        [
+          640,
+          75,
+          -5,
+          1,
+          1706.6666666666667
+        ]
+      ],
+      "plan": {
+        "layer": "Ballast compartments",
+        "polygon": [
+          [
+            99.0,
+            -18
+          ],
+          [
+            171.0,
+            -18
+          ],
+          [
+            171.0,
+            -2
+          ],
+          [
+            99.0,
+            -2
+          ]
+        ],
+        "label": [
+          135.0,
+          -10
+        ]
+      }
+    },
+    {
+      "id": "FS",
+      "name": "Forward starboard",
+      "group": "ballast",
+      "capacityM3": 640,
+      "defaultDensity": 1.025,
+      "fullCentre": [
+        75,
+        5,
+        1
+      ],
+      "sourcePage": 0,
+      "tableEnd": 640,
+      "box": {
+        "length": 40,
+        "width": 8,
+        "height": 2,
+        "bottomZ": 0
+      },
+      "rows": [
+        [
+          0,
+          75,
+          5,
+          1,
+          1706.6666666666667
+        ],
+        [
+          640,
+          75,
+          5,
+          1,
+          1706.6666666666667
+        ]
+      ],
+      "plan": {
+        "layer": "Ballast compartments",
+        "polygon": [
+          [
+            99.0,
+            2
+          ],
+          [
+            171.0,
+            2
+          ],
+          [
+            171.0,
+            18
+          ],
+          [
+            99.0,
+            18
+          ]
+        ],
+        "label": [
+          135.0,
+          10
+        ]
+      }
+    }
+  ]
+}

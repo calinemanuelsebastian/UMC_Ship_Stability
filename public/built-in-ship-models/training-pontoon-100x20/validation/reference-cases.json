@@ -1,0 +1,990 @@
+{
+  "schemaVersion": "1.0.0",
+  "cases": [
+    {
+      "id": "upright-design",
+      "name": "Upright hydrostatics at 3 m",
+      "description": "Verify the table against the ideal rectangular training hull at a tabulated draft.",
+      "source": "Ideal prism: volume=L×B×T; KB=T/2; KMt=KB+B²/(12T); KMl=KB+L²/(12T). L=100 m, B=20 m, density=1.025 t/m³.",
+      "kind": "hydrostatics",
+      "expected": [
+        {
+          "quantity": "draft",
+          "value": 3,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "volume",
+          "value": 6000,
+          "tolerance": 1e-07,
+          "unit": "m³"
+        },
+        {
+          "quantity": "displacementTonnes",
+          "value": 6150,
+          "tolerance": 1e-07,
+          "unit": "t"
+        },
+        {
+          "quantity": "kb",
+          "value": 1.5,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "lcb",
+          "value": 50,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "tcb",
+          "value": 0,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "kmTransverse",
+          "value": 12.61111111111111,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "kmLongitudinal",
+          "value": 279.27777777777777,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "gmTransverse",
+          "value": 7.611111111111111,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "waterplaneArea",
+          "value": 2000,
+          "tolerance": 1e-07,
+          "unit": "m²"
+        },
+        {
+          "quantity": "tonnesPerCentimetre",
+          "value": 20.5,
+          "tolerance": 1e-07,
+          "unit": "t/cm"
+        }
+      ],
+      "condition": {
+        "draft": 3,
+        "vcg": 5,
+        "lcg": 50,
+        "tcg": 0,
+        "waterDensity": 1.025,
+        "heelDeg": 0,
+        "trimDeg": 0
+      }
+    },
+    {
+      "id": "intermediate-draft",
+      "name": "Interpolation between table rows",
+      "description": "At 3.125 m the solver should linearly interpolate the adjacent 3.0 and 3.25 m samples.",
+      "source": "Arithmetic midpoint of the analytical endpoint values. Nonlinear KM is compared with table interpolation, not the exact formula at intermediate draft.",
+      "kind": "hydrostatics",
+      "expected": [
+        {
+          "quantity": "draft",
+          "value": 3.125,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "displacementTonnes",
+          "value": 6406.25,
+          "tolerance": 1e-07,
+          "unit": "t"
+        },
+        {
+          "quantity": "kb",
+          "value": 1.5625,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "kmTransverse",
+          "value": 12.246260683760685,
+          "tolerance": 1e-07,
+          "unit": "m"
+        }
+      ],
+      "condition": {
+        "draft": 3.125,
+        "vcg": 5,
+        "lcg": 50,
+        "tcg": 0,
+        "waterDensity": 1.025,
+        "heelDeg": 0,
+        "trimDeg": 0
+      }
+    },
+    {
+      "id": "inverse-draft",
+      "name": "Displacement-to-draft lookup",
+      "description": "Recover the upright draft from 6406.25 tonnes.",
+      "source": "Inverse of displacement=density×L×B×draft, with the same synthetic hull.",
+      "kind": "hydrostatics",
+      "expected": [
+        {
+          "quantity": "draft",
+          "value": 3.125,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "displacementTonnes",
+          "value": 6406.25,
+          "tolerance": 1e-07,
+          "unit": "t"
+        }
+      ],
+      "condition": {
+        "vcg": 5,
+        "lcg": 50,
+        "tcg": 0,
+        "waterDensity": 1.025,
+        "heelDeg": 0,
+        "trimDeg": 0,
+        "displacementTonnes": 6406.25
+      }
+    },
+    {
+      "id": "fresh-water",
+      "name": "Water density change",
+      "description": "Hold draft fixed and change ambient density to 1.0 t/m³.",
+      "source": "Volume is unchanged; displacement=density×volume and TPC=density×waterplaneArea/100.",
+      "kind": "hydrostatics",
+      "expected": [
+        {
+          "quantity": "draft",
+          "value": 3,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "volume",
+          "value": 6000,
+          "tolerance": 1e-07,
+          "unit": "m³"
+        },
+        {
+          "quantity": "displacementTonnes",
+          "value": 6000,
+          "tolerance": 1e-07,
+          "unit": "t"
+        },
+        {
+          "quantity": "tonnesPerCentimetre",
+          "value": 20,
+          "tolerance": 1e-07,
+          "unit": "t/cm"
+        }
+      ],
+      "condition": {
+        "draft": 3,
+        "vcg": 5,
+        "lcg": 50,
+        "tcg": 0,
+        "waterDensity": 1,
+        "heelDeg": 0,
+        "trimDeg": 0
+      }
+    },
+    {
+      "id": "loading-moments",
+      "name": "Weight and free-surface aggregation",
+      "description": "Unequal weights test weighted centres and cancellation of opposite transverse moments.",
+      "source": "Hand calculation: mass=6000 t; moments=(300000,36000,0) t·m; FSM=600 t·m; FSC=0.1 m.",
+      "kind": "loading",
+      "expected": [
+        {
+          "quantity": "displacementTonnes",
+          "value": 6000,
+          "tolerance": 1e-07,
+          "unit": "t"
+        },
+        {
+          "quantity": "lcg",
+          "value": 50,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "vcg",
+          "value": 6,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "tcg",
+          "value": 0,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "longitudinalMoment",
+          "value": 300000,
+          "tolerance": 1e-07,
+          "unit": "t·m"
+        },
+        {
+          "quantity": "verticalMoment",
+          "value": 36000,
+          "tolerance": 1e-07,
+          "unit": "t·m"
+        },
+        {
+          "quantity": "transverseMoment",
+          "value": 0,
+          "tolerance": 1e-07,
+          "unit": "t·m"
+        },
+        {
+          "quantity": "freeSurfaceMomentTransverse",
+          "value": 600,
+          "tolerance": 1e-07,
+          "unit": "t·m"
+        },
+        {
+          "quantity": "freeSurfaceCorrectionTransverse",
+          "value": 0.1,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "virtualVcgTransverse",
+          "value": 6.1,
+          "tolerance": 1e-07,
+          "unit": "m"
+        }
+      ],
+      "weights": [
+        {
+          "id": "aft",
+          "name": "Synthetic aft weight",
+          "massTonnes": 2000,
+          "lcg": 40,
+          "vcg": 4,
+          "tcg": -1,
+          "freeSurfaceMomentTransverse": 200
+        },
+        {
+          "id": "forward",
+          "name": "Synthetic forward weight",
+          "massTonnes": 4000,
+          "lcg": 55,
+          "vcg": 7,
+          "tcg": 0.5,
+          "freeSurfaceMomentTransverse": 400
+        }
+      ]
+    },
+    {
+      "id": "loading-chain",
+      "name": "Loading → draft → corrected GM",
+      "description": "Run the complete supported chain while preserving physical VCG.",
+      "source": "At density=1.0, 6000 t gives draft=3 m; GMt=12.61111111111111−6; corrected GMt subtracts 600/6000 once.",
+      "kind": "loading-hydrostatics",
+      "expected": [
+        {
+          "quantity": "draft",
+          "value": 3,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "displacementTonnes",
+          "value": 6000,
+          "tolerance": 1e-07,
+          "unit": "t"
+        },
+        {
+          "quantity": "vcg",
+          "value": 6,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "gmTransverse",
+          "value": 6.611111111111111,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "freeSurfaceCorrectionTransverse",
+          "value": 0.1,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "virtualVcgTransverse",
+          "value": 6.1,
+          "tolerance": 1e-07,
+          "unit": "m"
+        },
+        {
+          "quantity": "gmTransverseCorrected",
+          "value": 6.511111111111111,
+          "tolerance": 1e-07,
+          "unit": "m"
+        }
+      ],
+      "weights": [
+        {
+          "id": "aft",
+          "name": "Synthetic aft weight",
+          "massTonnes": 2000,
+          "lcg": 40,
+          "vcg": 4,
+          "tcg": -1,
+          "freeSurfaceMomentTransverse": 200
+        },
+        {
+          "id": "forward",
+          "name": "Synthetic forward weight",
+          "massTonnes": 4000,
+          "lcg": 55,
+          "vcg": 7,
+          "tcg": 0.5,
+          "freeSurfaceMomentTransverse": 400
+        }
+      ],
+      "waterDensity": 1
+    },
+    {
+      "id": "gz-small-angle",
+      "name": "GZ: independent small-angle reference",
+      "description": "Compare signed KN and GZ at ±1° against a wall-sided analytical reference.",
+      "source": "Ideal prism at draft 3 m: BM=B²/(12T), KM=T/2+BM; KN=(KM+BM tan²θ/2) sinθ. Applicable here before chine emergence or deck immersion. Expected values are independent of the cross-curve CSV generator.",
+      "kind": "stability",
+      "condition": {
+        "displacementTonnes": 6150,
+        "vcg": 5,
+        "lcg": 50,
+        "tcg": 0,
+        "waterDensity": 1.025,
+        "heelDeg": 0,
+        "trimDeg": 0,
+        "freeSurfaceMomentTransverse": 0
+      },
+      "expected": [
+        {
+          "quantity": "kn",
+          "value": -0.22012377777480244,
+          "tolerance": 1e-08,
+          "unit": "m",
+          "heelDeg": -1
+        },
+        {
+          "quantity": "gz",
+          "value": -0.13286174558838487,
+          "tolerance": 1e-08,
+          "unit": "m",
+          "heelDeg": -1
+        },
+        {
+          "quantity": "kn",
+          "value": 0.22012377777480244,
+          "tolerance": 1e-08,
+          "unit": "m",
+          "heelDeg": 1
+        },
+        {
+          "quantity": "gz",
+          "value": 0.13286174558838487,
+          "tolerance": 1e-08,
+          "unit": "m",
+          "heelDeg": 1
+        }
+      ]
+    },
+    {
+      "id": "gz-offset-fsm",
+      "name": "GZ: signed TCG and free surface",
+      "description": "Check a starboard offset and constant FSM on both sides and at zero heel.",
+      "source": "Same independent wall-sided reference; TCG=0.2 m, FSC=615/6150=0.1 m. GZ=KN−5 sinθ−0.2 cosθ; corrected GZ subtracts 0.1 sinθ.",
+      "kind": "stability",
+      "condition": {
+        "displacementTonnes": 6150,
+        "vcg": 5,
+        "lcg": 50,
+        "tcg": 0.2,
+        "waterDensity": 1.025,
+        "heelDeg": 0,
+        "trimDeg": 0,
+        "freeSurfaceMomentTransverse": 615
+      },
+      "expected": [
+        {
+          "quantity": "freeSurfaceCorrectionTransverse",
+          "value": 0.1,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "gz",
+          "value": -0.33283128461966316,
+          "tolerance": 1e-08,
+          "unit": "m",
+          "heelDeg": -1
+        },
+        {
+          "quantity": "gzCorrected",
+          "value": -0.3310860439759348,
+          "tolerance": 1e-08,
+          "unit": "m",
+          "heelDeg": -1
+        },
+        {
+          "quantity": "gz",
+          "value": -0.2,
+          "tolerance": 1e-08,
+          "unit": "m",
+          "heelDeg": 0
+        },
+        {
+          "quantity": "gzCorrected",
+          "value": -0.2,
+          "tolerance": 1e-08,
+          "unit": "m",
+          "heelDeg": 0
+        },
+        {
+          "quantity": "gz",
+          "value": -0.06710779344289339,
+          "tolerance": 1e-08,
+          "unit": "m",
+          "heelDeg": 1
+        },
+        {
+          "quantity": "gzCorrected",
+          "value": -0.06885303408662172,
+          "tolerance": 1e-08,
+          "unit": "m",
+          "heelDeg": 1
+        }
+      ]
+    },
+    {
+      "id": "gz-sealed-quarter-turn",
+      "name": "GZ: sealed hull at 90°",
+      "description": "Check the geometry of the closed training prism at a quarter turn.",
+      "source": "At ±90°, the buoyancy centroid transverse lever from the baseline is ±depth/2 = ±4 m for this sealed prism; KG=5 m gives signed GZ=∓1 m. This is not a downflooding or seaworthiness check.",
+      "kind": "stability",
+      "condition": {
+        "displacementTonnes": 6150,
+        "vcg": 5,
+        "lcg": 50,
+        "tcg": 0,
+        "waterDensity": 1.025,
+        "heelDeg": 0,
+        "trimDeg": 0,
+        "freeSurfaceMomentTransverse": 0
+      },
+      "expected": [
+        {
+          "quantity": "kn",
+          "value": -4,
+          "tolerance": 1e-08,
+          "unit": "m",
+          "heelDeg": -90
+        },
+        {
+          "quantity": "kn",
+          "value": 4,
+          "tolerance": 1e-08,
+          "unit": "m",
+          "heelDeg": 90
+        },
+        {
+          "quantity": "gz",
+          "value": 1,
+          "tolerance": 1e-08,
+          "unit": "m",
+          "heelDeg": -90
+        },
+        {
+          "quantity": "gz",
+          "value": -1,
+          "tolerance": 1e-08,
+          "unit": "m",
+          "heelDeg": 90
+        }
+      ]
+    },
+    {
+      "id": "roll-undamped",
+      "name": "Roll: undamped return",
+      "description": "Check periods, release from rest and return after one damped cycle.",
+      "source": "Independent closed form: GM=1.5+400/36−5−FSM/6150; Tn=2π×7/√(9.80665 GM); Td=Tn/√(1−ζ²). At Td, heel=3 exp(−ζωn Td), angular velocity=0. Inertia and damping are synthetic assumptions.",
+      "kind": "roll",
+      "condition": {
+        "displacementTonnes": 6150,
+        "vcg": 5,
+        "lcg": 50,
+        "tcg": 0,
+        "waterDensity": 1.025,
+        "heelDeg": 0,
+        "trimDeg": 0,
+        "freeSurfaceMomentTransverse": 0
+      },
+      "expected": [
+        {
+          "quantity": "gmTransverseCorrected",
+          "value": 7.611111111111111,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "naturalPeriodSeconds",
+          "value": 5.090887964047244,
+          "tolerance": 1e-08,
+          "unit": "s"
+        },
+        {
+          "quantity": "dampedPeriodSeconds",
+          "value": 5.090887964047244,
+          "tolerance": 1e-08,
+          "unit": "s"
+        },
+        {
+          "quantity": "heelDeg",
+          "value": 3,
+          "tolerance": 1e-08,
+          "unit": "°",
+          "timeSeconds": 0
+        },
+        {
+          "quantity": "angularVelocityDegPerSecond",
+          "value": 0,
+          "tolerance": 1e-08,
+          "unit": "°/s",
+          "timeSeconds": 0
+        },
+        {
+          "quantity": "heelDeg",
+          "value": 3.0,
+          "tolerance": 1e-08,
+          "unit": "°",
+          "timeSeconds": 5.090887964047244
+        },
+        {
+          "quantity": "angularVelocityDegPerSecond",
+          "value": 0,
+          "tolerance": 1e-08,
+          "unit": "°/s",
+          "timeSeconds": 5.090887964047244
+        }
+      ],
+      "inputs": {
+        "effectiveRadiusOfGyration": 7,
+        "dampingRatio": 0,
+        "initialHeelDeg": 3,
+        "durationSeconds": 5.090887964047244
+      }
+    },
+    {
+      "id": "roll-damped",
+      "name": "Roll: damped peak decay",
+      "description": "Check periods, release from rest and return after one damped cycle.",
+      "source": "Independent closed form: GM=1.5+400/36−5−FSM/6150; Tn=2π×7/√(9.80665 GM); Td=Tn/√(1−ζ²). At Td, heel=3 exp(−ζωn Td), angular velocity=0. Inertia and damping are synthetic assumptions.",
+      "kind": "roll",
+      "condition": {
+        "displacementTonnes": 6150,
+        "vcg": 5,
+        "lcg": 50,
+        "tcg": 0,
+        "waterDensity": 1.025,
+        "heelDeg": 0,
+        "trimDeg": 0,
+        "freeSurfaceMomentTransverse": 0
+      },
+      "expected": [
+        {
+          "quantity": "gmTransverseCorrected",
+          "value": 7.611111111111111,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "naturalPeriodSeconds",
+          "value": 5.090887964047244,
+          "tolerance": 1e-08,
+          "unit": "s"
+        },
+        {
+          "quantity": "dampedPeriodSeconds",
+          "value": 5.195865770663359,
+          "tolerance": 1e-08,
+          "unit": "s"
+        },
+        {
+          "quantity": "heelDeg",
+          "value": 3,
+          "tolerance": 1e-08,
+          "unit": "°",
+          "timeSeconds": 0
+        },
+        {
+          "quantity": "angularVelocityDegPerSecond",
+          "value": 0,
+          "tolerance": 1e-08,
+          "unit": "°/s",
+          "timeSeconds": 0
+        },
+        {
+          "quantity": "heelDeg",
+          "value": 0.8319877669170226,
+          "tolerance": 1e-08,
+          "unit": "°",
+          "timeSeconds": 5.195865770663359
+        },
+        {
+          "quantity": "angularVelocityDegPerSecond",
+          "value": 0,
+          "tolerance": 1e-08,
+          "unit": "°/s",
+          "timeSeconds": 5.195865770663359
+        }
+      ],
+      "inputs": {
+        "effectiveRadiusOfGyration": 7,
+        "dampingRatio": 0.2,
+        "initialHeelDeg": 3,
+        "durationSeconds": 5.195865770663359
+      }
+    },
+    {
+      "id": "roll-fsm",
+      "name": "Roll: free-surface effect on period",
+      "description": "Check periods, release from rest and return after one damped cycle.",
+      "source": "Independent closed form: GM=1.5+400/36−5−FSM/6150; Tn=2π×7/√(9.80665 GM); Td=Tn/√(1−ζ²). At Td, heel=3 exp(−ζωn Td), angular velocity=0. Inertia and damping are synthetic assumptions.",
+      "kind": "roll",
+      "condition": {
+        "displacementTonnes": 6150,
+        "vcg": 5,
+        "lcg": 50,
+        "tcg": 0,
+        "waterDensity": 1.025,
+        "heelDeg": 0,
+        "trimDeg": 0,
+        "freeSurfaceMomentTransverse": 615
+      },
+      "expected": [
+        {
+          "quantity": "gmTransverseCorrected",
+          "value": 7.511111111111111,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "naturalPeriodSeconds",
+          "value": 5.124664959433839,
+          "tolerance": 1e-08,
+          "unit": "s"
+        },
+        {
+          "quantity": "dampedPeriodSeconds",
+          "value": 5.230339272222317,
+          "tolerance": 1e-08,
+          "unit": "s"
+        },
+        {
+          "quantity": "heelDeg",
+          "value": 3,
+          "tolerance": 1e-08,
+          "unit": "°",
+          "timeSeconds": 0
+        },
+        {
+          "quantity": "angularVelocityDegPerSecond",
+          "value": 0,
+          "tolerance": 1e-08,
+          "unit": "°/s",
+          "timeSeconds": 0
+        },
+        {
+          "quantity": "heelDeg",
+          "value": 0.8319877669170226,
+          "tolerance": 1e-08,
+          "unit": "°",
+          "timeSeconds": 5.230339272222317
+        },
+        {
+          "quantity": "angularVelocityDegPerSecond",
+          "value": 0,
+          "tolerance": 1e-08,
+          "unit": "°/s",
+          "timeSeconds": 5.230339272222317
+        }
+      ],
+      "inputs": {
+        "effectiveRadiusOfGyration": 7,
+        "dampingRatio": 0.2,
+        "initialHeelDeg": 3,
+        "durationSeconds": 5.230339272222317
+      }
+    },
+    {
+      "id": "even-keel-trim-reference",
+      "name": "Even-keel trim reference",
+      "description": "Synthetic 100 m pontoon at 3 m even-keel draft; independent first-order longitudinal balance.",
+      "source": "Rectangular waterplane: I_L = B L³ / 12, volume = B L T, KB = T/2, so GM_L = 10000/36 + 1.5 - 5 - FSM_L/6150. Slope = (LCG - 50)/GM_L; end drafts = 3 ± 50 slope. MCT1cm = 6150 GM_L / 10000. Bow-positive trim. Method: Barrass & Derrett (2006), ch. 16, pp. 146–149; synthetic values, not vessel approval.",
+      "kind": "trim",
+      "condition": {
+        "displacementTonnes": 6150,
+        "vcg": 5,
+        "lcg": 50,
+        "tcg": 0,
+        "waterDensity": 1.025,
+        "heelDeg": 0,
+        "trimDeg": 0
+      },
+      "inputs": {
+        "freeSurfaceMomentLongitudinal": 0
+      },
+      "expected": [
+        {
+          "quantity": "draft",
+          "value": 3,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "draftForward",
+          "value": 3.0,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "draftAft",
+          "value": 3.0,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "trimMetres",
+          "value": 0.0,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "mct1cm",
+          "value": 168.68083333333334,
+          "tolerance": 1e-08,
+          "unit": "t·m/cm"
+        },
+        {
+          "quantity": "gmLongitudinalCorrected",
+          "value": 274.27777777777777,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "lcf",
+          "value": 50,
+          "tolerance": 1e-08,
+          "unit": "m"
+        }
+      ]
+    },
+    {
+      "id": "bow-trim-reference",
+      "name": "Bow trim reference",
+      "description": "Synthetic 100 m pontoon at 3 m even-keel draft; independent first-order longitudinal balance.",
+      "source": "Rectangular waterplane: I_L = B L³ / 12, volume = B L T, KB = T/2, so GM_L = 10000/36 + 1.5 - 5 - FSM_L/6150. Slope = (LCG - 50)/GM_L; end drafts = 3 ± 50 slope. MCT1cm = 6150 GM_L / 10000. Bow-positive trim. Method: Barrass & Derrett (2006), ch. 16, pp. 146–149; synthetic values, not vessel approval.",
+      "kind": "trim",
+      "condition": {
+        "displacementTonnes": 6150,
+        "vcg": 5,
+        "lcg": 51,
+        "tcg": 0,
+        "waterDensity": 1.025,
+        "heelDeg": 0,
+        "trimDeg": 0
+      },
+      "inputs": {
+        "freeSurfaceMomentLongitudinal": 0
+      },
+      "expected": [
+        {
+          "quantity": "draft",
+          "value": 3,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "draftForward",
+          "value": 3.1822969414624267,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "draftAft",
+          "value": 2.8177030585375733,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "trimMetres",
+          "value": 0.3645938829248531,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "mct1cm",
+          "value": 168.68083333333334,
+          "tolerance": 1e-08,
+          "unit": "t·m/cm"
+        },
+        {
+          "quantity": "gmLongitudinalCorrected",
+          "value": 274.27777777777777,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "lcf",
+          "value": 50,
+          "tolerance": 1e-08,
+          "unit": "m"
+        }
+      ]
+    },
+    {
+      "id": "stern-trim-reference",
+      "name": "Stern trim reference",
+      "description": "Synthetic 100 m pontoon at 3 m even-keel draft; independent first-order longitudinal balance.",
+      "source": "Rectangular waterplane: I_L = B L³ / 12, volume = B L T, KB = T/2, so GM_L = 10000/36 + 1.5 - 5 - FSM_L/6150. Slope = (LCG - 50)/GM_L; end drafts = 3 ± 50 slope. MCT1cm = 6150 GM_L / 10000. Bow-positive trim. Method: Barrass & Derrett (2006), ch. 16, pp. 146–149; synthetic values, not vessel approval.",
+      "kind": "trim",
+      "condition": {
+        "displacementTonnes": 6150,
+        "vcg": 5,
+        "lcg": 49,
+        "tcg": 0,
+        "waterDensity": 1.025,
+        "heelDeg": 0,
+        "trimDeg": 0
+      },
+      "inputs": {
+        "freeSurfaceMomentLongitudinal": 0
+      },
+      "expected": [
+        {
+          "quantity": "draft",
+          "value": 3,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "draftForward",
+          "value": 2.8177030585375733,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "draftAft",
+          "value": 3.1822969414624267,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "trimMetres",
+          "value": -0.3645938829248531,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "mct1cm",
+          "value": 168.68083333333334,
+          "tolerance": 1e-08,
+          "unit": "t·m/cm"
+        },
+        {
+          "quantity": "gmLongitudinalCorrected",
+          "value": 274.27777777777777,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "lcf",
+          "value": 50,
+          "tolerance": 1e-08,
+          "unit": "m"
+        }
+      ]
+    },
+    {
+      "id": "longitudinal-free-surface-trim-reference",
+      "name": "Longitudinal free-surface trim reference",
+      "description": "Synthetic 100 m pontoon at 3 m even-keel draft; independent first-order longitudinal balance.",
+      "source": "Rectangular waterplane: I_L = B L³ / 12, volume = B L T, KB = T/2, so GM_L = 10000/36 + 1.5 - 5 - FSM_L/6150. Slope = (LCG - 50)/GM_L; end drafts = 3 ± 50 slope. MCT1cm = 6150 GM_L / 10000. Bow-positive trim. Method: Barrass & Derrett (2006), ch. 16, pp. 146–149; synthetic values, not vessel approval.",
+      "kind": "trim",
+      "condition": {
+        "displacementTonnes": 6150,
+        "vcg": 5,
+        "lcg": 51,
+        "tcg": 0,
+        "waterDensity": 1.025,
+        "heelDeg": 0,
+        "trimDeg": 0
+      },
+      "inputs": {
+        "freeSurfaceMomentLongitudinal": 6150
+      },
+      "expected": [
+        {
+          "quantity": "draft",
+          "value": 3,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "draftForward",
+          "value": 3.1829640170766416,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "draftAft",
+          "value": 2.8170359829233584,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "trimMetres",
+          "value": 0.3659280341532832,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "mct1cm",
+          "value": 168.06583333333333,
+          "tolerance": 1e-08,
+          "unit": "t·m/cm"
+        },
+        {
+          "quantity": "gmLongitudinalCorrected",
+          "value": 273.27777777777777,
+          "tolerance": 1e-08,
+          "unit": "m"
+        },
+        {
+          "quantity": "lcf",
+          "value": 50,
+          "tolerance": 1e-08,
+          "unit": "m"
+        }
+      ]
+    }
+  ]
+}

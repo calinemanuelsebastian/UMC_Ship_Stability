@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "training-pontoon-100x20",
+  "name": "Rectangular Pontoon",
+  "version": "1.1.0",
+  "category": "Synthetic training model",
+  "description": "Synthetic rectangular pontoon for teaching. Table range: 1\u20135 m; linear interpolation between 0.25 m samples. No real vessel data. Operational loading starts with lightship and empty synthetic ballast tanks; deck cargo is placed in the planner.",
+  "units": {
+    "length": "m",
+    "mass": "t",
+    "density": "t/m3",
+    "angle": "deg"
+  },
+  "coordinateSystem": {
+    "origin": "Aft perpendicular, centreline, baseline",
+    "longitudinalOriginFromAP": 0,
+    "amidshipsX": 50,
+    "xPositive": "forward",
+    "yPositive": "starboard",
+    "zPositive": "up"
+  },
+  "principalDimensions": {
+    "lbp": 100,
+    "loa": 100,
+    "beam": 20,
+    "mouldedDepth": 8,
+    "designDraft": 3
+  },
+  "defaultCondition": {
+    "draft": 3,
+    "vcg": 5,
+    "lcg": 50,
+    "tcg": 0,
+    "waterDensity": 1.025,
+    "heelDeg": 0,
+    "trimDeg": 0
+  },
+  "resources": [
+    {
+      "id": "upright-hydrostatics",
+      "kind": "hydrostatics.upright-table",
+      "path": "hydrostatics/upright-hydrostatics.csv",
+      "label": "Synthetic upright hydrostatic table"
+    },
+    {
+      "id": "training-loading",
+      "kind": "loading.weights",
+      "path": "loading/weights.json",
+      "label": "Synthetic training loading condition",
+      "config": {
+        "fixedWeightIds": [
+          "lightship"
+        ]
+      }
+    },
+    {
+      "id": "reference-checks",
+      "kind": "validation.reference-cases",
+      "path": "validation/reference-cases.json",
+      "label": "Synthetic numerical reference cases"
+    },
+    {
+      "id": "synthetic-cross-curves",
+      "kind": "stability.cross-curves",
+      "path": "stability/cross-curves.csv",
+      "label": "Sealed rectangular training hull \u2014 signed KN cross curves",
+      "description": "Offline polygon-clipping reference: watertight rectangular 100 \u00d7 20 \u00d7 8 m prism, constant immersed volume; no deck openings or downflooding. Angles -90 to +90 degrees; volumes 2000 to 10000 m\u00b3.",
+      "config": {
+        "trimDeg": 0,
+        "heelPositive": "starboard",
+        "knReference": "baseline"
+      }
+    },
+    {
+      "id": "training-roll-parameters",
+      "kind": "roll.linear-parameters",
+      "label": "Assumed training roll parameters",
+      "description": "Synthetic teaching assumptions: effective radius 7 m and damping ratio 0.05. These are not measured hull properties and are not recalculated when weights change.",
+      "config": {
+        "effectiveRadiusOfGyration": 7,
+        "dampingRatio": 0.05
+      }
+    },
+    {
+      "id": "training-trim",
+      "kind": "trim.linear-equilibrium",
+      "label": "Small-trim equilibrium",
+      "description": "Synthetic teaching model. Linear trim limited to 1 degree; both perpendicular drafts must remain within the upright table range.",
+      "config": {
+        "maxTrimDeg": 1
+      }
+    },
+    {
+      "id": "pontoon-3d-hull",
+      "kind": "visualization.box-hull",
+      "label": "Rectangular pontoon display geometry",
+      "description": "Explicit rectangular hull: length LBP from AP to FP, full beam about centreline, baseline to moulded depth. Display geometry only; calculations use their declared resources."
+    },
+    {
+      "id": "pontoon-ballast",
+      "kind": "loading.tank-catalog",
+      "path": "loading/tanks.json",
+      "label": "Synthetic rectangular ballast compartments"
+    },
+    {
+      "id": "pontoon-deck",
+      "kind": "loading.cargo-surfaces",
+      "label": "Pontoon weather deck",
+      "config": {
+        "surfaces": [
+          {
+            "id": "pontoon-deck",
+            "name": "Pontoon deck",
+            "xMin": 0,
+            "xMax": 100,
+            "yMin": -10,
+            "yMax": 10,
+            "deckZ": 8,
+            "clearHeight": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "pontoon-operational-loading",
+      "kind": "loading.operational-weights",
+      "path": "loading/operational-weights.json",
+      "label": "Empty deck training condition"
+    }
+  ]
+}

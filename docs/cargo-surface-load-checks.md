@@ -1,0 +1,13 @@
+# Step 5: local cargo-load screening
+
+Loading → Cargo layout → Cargo surface loads now offers surface totals and floor-contact estimates. Calculations are lazy (only while expanded) and memoized by committed cargo and current surface configuration; no rendering or physics loop is involved. Source limits travel in `CargoArea.uniformLoad`, which is validated and retained in ship packages. Ships without limits display that absence rather than inheriting Vectis values.
+
+Source: supplied `006_STRENGHT_LOADING_MANUAL.pdf`, PDF 12 / printed 4.1, visually inspected including overlays. Uniform limits: hold floor 18 t/m²; tween-deck 3.5 t/m²; hatches 2.5 t/m². Manifest metadata preserves source page and SHA-256. These are uniform-load limits, not general contact-pressure capacities. The same page has separate container, forklift, coil and special hatch-spot rules. They are not automatically applied to generic cargo units without corresponding bay/support identification.
+
+The annotated page replaces the original bending/shear/torsional tables and says the permissible values were not correctly taken over. This implementation does not use the superseded tables or claim longitudinal strength assessment. Longitudinal strength and securing require a separate model and validation.
+
+Area is the exact union of the rectangular supporting regions: overlaps are counted once, gaps excluded. Cargo and dunnage masses are counted once in the surface average. Invalid positions, overlaps, unsupported items, aggregate/unlocated cargo and unresolved stored-panel bearing loads qualify the result as incomplete. A known average exceedance is retained even when other data are incomplete. An average below the uniform limit never signifies local adequacy.
+
+The contact graph traces upper items to floor-supported bases. Each reachable mass contributes once per base. Shared-support reactions are not invented: the complete upper mass is assigned as a conservative upper bound to each possible base, explicitly separate from the surface total. Screening pressure divides that bound by the modelled base footprint, assuming full contact; actual runners, feet, stiffness, eccentricity and load spreading are not resolved. Dunnage does not imply automatic pressure distribution. Hatch panel IDs identify touched panels, not panel reactions or special-load permissions. Existing stackability/top-load enforcement remains in the planner.
+
+Stored tween-deck floor reactions are not supplied by the current storage geometry. These cases remain incomplete rather than treating stored panel weight as zero bearing load. An exported JSON report preserves limits, source fingerprints, contact bounds and qualifications. Original ship documents are unchanged.

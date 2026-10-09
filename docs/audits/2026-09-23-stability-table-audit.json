@@ -1,0 +1,92 @@
+{
+  "date": "2026-09-23",
+  "scope": "Read-only source/calculation audit; browser-local inputs unavailable",
+  "sha256": {
+    "validation-references/apples-calculations-reviewed.xlsx": "a5d9c6bd7c30d3519929bcceadfe6507dc6abe31341f983193b7a13395ef3250",
+    "validation-references/reviewed-apples-vessel/trimmed-table.json": "736970cdf4400dacaf1c438f8186b27443984a35c4f395d609760a7fd11450b0",
+    "validation-references/reviewed-apples-vessel/upright.csv": "8f56fc7d275898adca7dcbe4edf627d3b2a687b5cbc5149749271981fbb7f6cc",
+    "validation-references/reviewed-apples-vessel/tanks.json": "adc0eb001cbf2fd44434fbc4161eeb4a90156625bc04ae17cabc51049e1b276b",
+    "validation-references/reviewed-apples-vessel/cross-curves-constant-lcb.json": "e237a984eb5fe96e2c14e1ad8c5e270004c77ccef21af0ee27f47d34180faf5d"
+  },
+  "trimRows": 720,
+  "uprightRows": 120,
+  "crossCurveOrdinates": 8892,
+  "tankAudit": {
+    "checked": 5782,
+    "endpoints": 136,
+    "differences": []
+  },
+  "kgRows": 71,
+  "floodingSamples": 156,
+  "windRows": 375,
+  "regressionTests": 299,
+  "applesCalculation": {
+    "load": {
+      "freeSurfaceCorrectionTransverse": 0.032103000019700824,
+      "virtualVcgTransverse": 6.664376425169618,
+      "freeSurfaceMomentTransverse": 309.61,
+      "displacementTonnes": 9644.269999999999,
+      "longitudinalMoment": 569759.5944037949,
+      "verticalMoment": 63963.43562597058,
+      "transverseMoment": -1424.4196000000002,
+      "lcg": 59.07752420906869,
+      "vcg": 6.632273425149917,
+      "tcg": -0.14769594795666238
+    },
+    "trim": {
+      "trimMetres": -1.2610237723584992,
+      "draft": 5.767547751630667,
+      "lcb": 59.07752420906869,
+      "lcf": 56.67117912444726,
+      "bracket": [
+        -1.5,
+        -1
+      ],
+      "fraction": 0.4779524552830016,
+      "mouldedDraft": 5.7565477516306665,
+      "kmTransverse": 7.677947264105104,
+      "trimDeg": -0.59366273145008,
+      "draftAft": 6.398059637809916,
+      "draftForward": 5.137035865451416,
+      "samples": [
+        {
+          "trimMetres": -2,
+          "draft": 5.740503915910963,
+          "lcb": 57.85841859027205,
+          "lcf": 55.99489138499588
+        },
+        {
+          "trimMetres": -1.5,
+          "draft": 5.759391520680003,
+          "lcb": 58.688679900487195,
+          "lcf": 56.479978853529595
+        },
+        {
+          "trimMetres": -1,
+          "draft": 5.776456462727082,
+          "lcb": 59.50224263938192,
+          "lcf": 56.88001921069117
+        },
+        {
+          "trimMetres": -0.5,
+          "draft": 5.7918366274179975,
+          "lcb": 60.299898023549204,
+          "lcf": 57.320020500420526
+        },
+        {
+          "trimMetres": 0,
+          "draft": 5.805664062499998,
+          "lcb": 61.0851484375,
+          "lcf": 57.65827734375
+        },
+        {
+          "trimMetres": 0.62,
+          "draft": 5.820840863186988,
+          "lcb": 62.04116094397789,
+          "lcf": 58.05023780163708
+        }
+      ],
+      "residualLever": 0
+    }
+  }
+}

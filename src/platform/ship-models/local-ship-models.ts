@@ -1,0 +1,7 @@
+import {mountShipBundle,parseShipBundle,type ShipBundle} from '../../app/ship-package';
+export type LocalShipRecord={id:string;name:string;savedAt:string;bundle:ShipBundle};
+function openDatabase():Promise<IDBDatabase>{return new Promise((resolve,reject)=>{const req=indexedDB.open('umc-ship-library',1);req.onupgradeneeded=()=>req.result.createObjectStore('ships',{keyPath:'id'});req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(new Error('Local ship storage is unavailable.'));req.onblocked=()=>reject(new Error('Close other simulator tabs to update ship storage.'));});}
+export async function shipLibrary(action:'list'|'add'|'remove',record?:LocalShipRecord,id?:string):Promise<LocalShipRecord[]>{
+ const db=await openDatabase();try{return await new Promise((resolve,reject)=>{const tx=db.transaction('ships',action==='list'?'readonly':'readwrite'),store=tx.objectStore('ships');const request=action==='list'?store.getAll():action==='add'?store.add(record!):store.delete(id!);tx.oncomplete=()=>resolve(action==='list'?request.result as LocalShipRecord[]:[]);tx.onerror=tx.onabort=()=>reject(new Error('Could not save the ship locally. Storage may be full or unavailable.'));});}finally{db.close();}
+}
+export async function loadLocalShip(id:string){const records=await shipLibrary('list');const record=records.find(r=>r.id===id);if(!record)throw new Error('This local ship is no longer in the library. Import its package again.');return mountShipBundle(parseShipBundle(record.bundle));}

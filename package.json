@@ -1,0 +1,40 @@
+{
+  "name": "umcsshipstabilityapp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "test:loading": "node --test src/core/loading/compute-loading-condition.test.mjs",
+    "test:hydrostatics": "node --test src/core/hydrostatics/displacement-lookup.test.mjs",
+    "test:free-surface": "node --test src/core/loading/free-surface-correction.test.mjs",
+    "test:validation": "node --test src/core/hydrostatics/reference/run-validation-case.test.mjs",
+    "test:stability": "node --test src/core/stability/stability-curves.test.mjs",
+    "test:roll": "node --test src/core/roll/compute-roll-simulation.test.mjs",
+    "test:language": "node --test src/app/language.test.mjs",
+    "test:reference": "node --test src/core/reference/reference-system.test.mjs",
+    "test:trim": "node --test src/core/trim/compute-trim-equilibrium.test.mjs",
+    "test:3d": "node --test src/visualization/ship-scene-data.test.mjs",
+    "test": "node --test src/core/loading/*.test.mjs src/core/hydrostatics/*.test.mjs src/core/hydrostatics/reference/*.test.mjs src/core/stability/*.test.mjs src/core/roll/*.test.mjs src/core/reference/*.test.mjs src/core/trim/*.test.mjs src/app/*.test.mjs src/visualization/*.test.mjs",
+    "compare:excel": "node scripts/compare-excel.mjs"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.185.4",
+    "@vitejs/plugin-react": "^6.0.4",
+    "oxlint": "^1.75.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0"
+  },
+  "license": "GPL-3.0-only"
+}

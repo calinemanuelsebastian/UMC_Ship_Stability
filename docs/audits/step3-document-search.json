@@ -1,0 +1,1354 @@
+[
+  {
+    "file": "GHID PROIECT-20260910/PLAN DE STIVUIRE.pdf",
+    "sha256": "1dce77df1f8fb7d6663c870ca649f2870e76c73efd0c5c068cc4587a6b11f181",
+    "pages": 1,
+    "hits": []
+  },
+  {
+    "file": "GHID PROIECT-20260910/EXEMPLU EVALUARE PROIECT.pdf",
+    "sha256": "294eb46eeef952ba4600b1074499817c9614d616fa47b9fc1e3f64f5d34d27d6",
+    "pages": 8,
+    "hits": []
+  },
+  {
+    "file": "GHID PROIECT-20260910/Cargo Info Case Study.pdf",
+    "sha256": "4fec1636e0b690627021318c3b5d7ea69d1dd03034f63fa66600c6aa168b941f",
+    "pages": 30,
+    "hits": []
+  },
+  {
+    "file": "GHID PROIECT-20260910/GHID PROIECT.pdf",
+    "sha256": "428398acc030d1e69b362649410d6b9e8c38a4cd22a29367d204a9f016e73210",
+    "pages": 16,
+    "hits": []
+  },
+  {
+    "file": "GHID PROIECT-20260910/exemplu proiect 2.pdf",
+    "sha256": "15171f14484df1820c8f376f971bba51036e54b94669cf2ea10392f9d39ce4ad",
+    "pages": 32,
+    "hits": [
+      {
+        "page": 29,
+        "excerpts": [
+          "(j0) should not exceed 16\u00b0 or 80% of the angle of deck edge immersion, whichever is less.\r"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "GHID PROIECT-20260910/Introducere Proiect TTM.pdf",
+    "sha256": "0fb9ed986509cd9f184c7ca7f8abda6645814bfce18cadb02637de95415ac6e8",
+    "pages": 37,
+    "hits": []
+  },
+  {
+    "file": "GHID PROIECT-20260910/Prj Explanations.pdf",
+    "sha256": "f2ed73b07617ac2452463f59588165393435feffc7396f538cdaf52da919f420",
+    "pages": 9,
+    "hits": []
+  },
+  {
+    "file": "DOCUMENTATIE NAVA-20260910/005_TANKS_CAPACITY_TABLE.pdf",
+    "sha256": "68c181198d77c73cd2308f726461e47d7011f8e2ffd514c8ce0e6a56b99a5348",
+    "pages": 179,
+    "hits": []
+  },
+  {
+    "file": "DOCUMENTATIE NAVA-20260910/001_GENERAL_ARRANGEMENT.pdf",
+    "sha256": "cf9c9e924e6e2e2cd56c38b21d532a21c692b2cfe4d008d02e81c7c558a80057",
+    "pages": 1,
+    "hits": []
+  },
+  {
+    "file": "DOCUMENTATIE NAVA-20260910/003_CARGO_SECURING_MANUAL.pdf",
+    "sha256": "75a28666ba4c42dc4268ab080bd8a2510d1b001044c78a544b52311128bc1850",
+    "pages": 111,
+    "hits": [
+      {
+        "page": 22,
+        "excerpts": [
+          "In the case of symmetrical securing arrangements, one appropriate calculation is sufficient. "
+        ]
+      }
+    ]
+  },
+  {
+    "file": "DOCUMENTATIE NAVA-20260910/007_BALLAST_MANAGEMENT.pdf",
+    "sha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+    "pages": 628,
+    "hits": [
+      {
+        "page": 13,
+        "excerpts": [
+          "Remark for asymmetrical exchange procedures: \r"
+        ]
+      },
+      {
+        "page": 17,
+        "excerpts": [
+          "\u2022 In case an unsymmetrical exchange of ballast tanks will be performed, heeling angles can occur. \r"
+        ]
+      },
+      {
+        "page": 31,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.352 3.244 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 30.330 3.545 degrees \r"
+        ]
+      },
+      {
+        "page": 32,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.414 5.185 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 30.447 4.673 degrees \r"
+        ]
+      },
+      {
+        "page": 33,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.555 5.421 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 30.577 5.388 degrees \r"
+        ]
+      },
+      {
+        "page": 34,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.696 5.394 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 30.713 5.427 degrees \r"
+        ]
+      },
+      {
+        "page": 35,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.735 5.332 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 30.725 5.309 degrees \r"
+        ]
+      },
+      {
+        "page": 36,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.761 4.918 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 30.746 4.827 degrees \r"
+        ]
+      },
+      {
+        "page": 37,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.904 3.353 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 31.565 3.242 degrees \r"
+        ]
+      },
+      {
+        "page": 38,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 31.633 3.223 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 31.580 3.223 degrees \r"
+        ]
+      },
+      {
+        "page": 39,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 31.952 3.253 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 31.823 3.303 degrees \r"
+        ]
+      },
+      {
+        "page": 40,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 31.710 3.356 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 31.169 3.414 degrees \r"
+        ]
+      },
+      {
+        "page": 41,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.747 5.168 degrees \r"
+        ]
+      },
+      {
+        "page": 45,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.352 3.244 degrees \r"
+        ]
+      },
+      {
+        "page": 49,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.330 3.545 degrees \r"
+        ]
+      },
+      {
+        "page": 52,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r"
+        ]
+      },
+      {
+        "page": 53,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.414 5.185 degrees \r"
+        ]
+      },
+      {
+        "page": 57,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.447 4.673 degrees \r"
+        ]
+      },
+      {
+        "page": 60,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r"
+        ]
+      },
+      {
+        "page": 61,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.555 5.421 degrees \r"
+        ]
+      },
+      {
+        "page": 65,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.577 5.388 degrees \r"
+        ]
+      },
+      {
+        "page": 68,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r"
+        ]
+      },
+      {
+        "page": 69,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.696 5.394 degrees \r"
+        ]
+      },
+      {
+        "page": 73,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.713 5.427 degrees \r"
+        ]
+      },
+      {
+        "page": 76,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r"
+        ]
+      },
+      {
+        "page": 77,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.735 5.332 degrees \r"
+        ]
+      },
+      {
+        "page": 81,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.725 5.309 degrees \r"
+        ]
+      },
+      {
+        "page": 84,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r"
+        ]
+      },
+      {
+        "page": 85,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.761 4.918 degrees \r"
+        ]
+      },
+      {
+        "page": 89,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.746 4.827 degrees \r"
+        ]
+      },
+      {
+        "page": 93,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.904 3.353 degrees \r"
+        ]
+      },
+      {
+        "page": 97,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 31.565 3.242 degrees \r"
+        ]
+      },
+      {
+        "page": 100,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r"
+        ]
+      },
+      {
+        "page": 101,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 31.633 3.223 degrees \r"
+        ]
+      },
+      {
+        "page": 104,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r"
+        ]
+      },
+      {
+        "page": 105,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 31.580 3.223 degrees \r"
+        ]
+      },
+      {
+        "page": 108,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r"
+        ]
+      },
+      {
+        "page": 109,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 31.952 3.253 degrees \r"
+        ]
+      },
+      {
+        "page": 112,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r"
+        ]
+      },
+      {
+        "page": 113,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 31.823 3.303 degrees \r"
+        ]
+      },
+      {
+        "page": 116,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r"
+        ]
+      },
+      {
+        "page": 117,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 31.710 3.356 degrees \r"
+        ]
+      },
+      {
+        "page": 120,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r"
+        ]
+      },
+      {
+        "page": 121,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 31.169 3.414 degrees \r"
+        ]
+      },
+      {
+        "page": 125,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.747 5.168 degrees \r"
+        ]
+      },
+      {
+        "page": 258,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 19.799 8.694 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 19.794 11.054 degrees \r"
+        ]
+      },
+      {
+        "page": 259,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 19.845 11.560 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 19.917 12.117 degrees \r"
+        ]
+      },
+      {
+        "page": 260,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 19.972 11.575 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 20.059 12.107 degrees \r"
+        ]
+      },
+      {
+        "page": 261,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.105 11.501 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 20.183 12.356 degrees \r"
+        ]
+      },
+      {
+        "page": 262,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.142 11.242 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 20.188 11.749 degrees \r"
+        ]
+      },
+      {
+        "page": 263,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.408 11.219 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 20.327 9.771 degrees \r"
+        ]
+      },
+      {
+        "page": 264,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.076 9.640 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 20.112 9.042 degrees \r"
+        ]
+      },
+      {
+        "page": 265,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.074 9.445 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 20.340 9.453 degrees \r"
+        ]
+      },
+      {
+        "page": 266,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.603 9.965 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 20.780 10.517 degrees \r"
+        ]
+      },
+      {
+        "page": 267,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.408 10.749 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 20.158 11.502 degrees \r"
+        ]
+      },
+      {
+        "page": 268,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 19.767 10.976 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 20.118 9.225 degrees \r"
+        ]
+      },
+      {
+        "page": 272,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 19.799 8.694 degrees \r"
+        ]
+      },
+      {
+        "page": 277,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 19.794 11.054 degrees \r"
+        ]
+      },
+      {
+        "page": 282,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 19.845 11.560 degrees \r"
+        ]
+      },
+      {
+        "page": 287,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 19.917 12.117 degrees \r"
+        ]
+      },
+      {
+        "page": 292,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 19.972 11.575 degrees \r"
+        ]
+      },
+      {
+        "page": 297,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.059 12.107 degrees \r"
+        ]
+      },
+      {
+        "page": 302,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 20.105 11.501 degrees \r"
+        ]
+      },
+      {
+        "page": 307,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.183 12.356 degrees \r"
+        ]
+      },
+      {
+        "page": 312,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 20.142 11.242 degrees \r"
+        ]
+      },
+      {
+        "page": 317,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.188 11.749 degrees \r"
+        ]
+      },
+      {
+        "page": 322,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.408 11.219 degrees \r"
+        ]
+      },
+      {
+        "page": 327,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.327 9.771 degrees \r"
+        ]
+      },
+      {
+        "page": 332,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 20.076 9.640 degrees \r"
+        ]
+      },
+      {
+        "page": 337,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.111 9.042 degrees \r"
+        ]
+      },
+      {
+        "page": 342,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.074 9.445 degrees \r"
+        ]
+      },
+      {
+        "page": 347,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.342 9.453 degrees \r"
+        ]
+      },
+      {
+        "page": 352,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.605 9.965 degrees \r"
+        ]
+      },
+      {
+        "page": 357,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.780 10.517 degrees \r"
+        ]
+      },
+      {
+        "page": 362,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.408 10.749 degrees \r"
+        ]
+      },
+      {
+        "page": 367,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.157 11.502 degrees \r"
+        ]
+      },
+      {
+        "page": 372,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 19.766 10.976 degrees \r"
+        ]
+      },
+      {
+        "page": 377,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.118 9.225 degrees \r"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "DOCUMENTATIE NAVA-20260910/006_STRENGHT_LOADING_MANUAL.pdf",
+    "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601",
+    "pages": 225,
+    "hits": [
+      {
+        "page": 4,
+        "excerpts": [
+          "Block Coefficient : 0.8026 \r"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "DOCUMENTATIE NAVA-20260910/004_STABILITY_LOADING_MANUAL.pdf",
+    "sha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+    "pages": 504,
+    "hits": [
+      {
+        "page": 3,
+        "excerpts": [
+          " 6.4. Downflooding angles .......................................................................................................... 6.4 \r"
+        ]
+      },
+      {
+        "page": 5,
+        "excerpts": [
+          "Block Coefficient : 0.8026 \r"
+        ]
+      },
+      {
+        "page": 9,
+        "excerpts": [
+          "by a symmetrical distribution of masses. A steady angle of heel may cause a reduction of the \r"
+        ]
+      },
+      {
+        "page": 17,
+        "excerpts": [
+          " ( 0) should not exceed 16\u00b0 or 80% of the angle of deck edge immersion, whichever is less. \r",
+          "2 = angle of downflooding ( F) or 50\u00b0 or C, whichever is less (dynamical angle of heel). \r"
+        ]
+      },
+      {
+        "page": 19,
+        "excerpts": [
+          "6.4 Downflooding angles \r"
+        ]
+      },
+      {
+        "page": 34,
+        "excerpts": [
+          "Waterline length : 123.950 m \r"
+        ]
+      },
+      {
+        "page": 62,
+        "excerpts": [
+          " DOWNFLOODING THROUGH NON-WATERTIGHT OPENINGS\r"
+        ]
+      },
+      {
+        "page": 65,
+        "excerpts": [
+          " DOWNFLOODING THROUGH NON-WATERTIGHT OPENINGS\r"
+        ]
+      },
+      {
+        "page": 68,
+        "excerpts": [
+          " DOWNFLOODING THROUGH NON-WATERTIGHT OPENINGS\r"
+        ]
+      },
+      {
+        "page": 71,
+        "excerpts": [
+          " DOWNFLOODING THROUGH NON-WATERTIGHT OPENINGS\r"
+        ]
+      },
+      {
+        "page": 74,
+        "excerpts": [
+          " DOWNFLOODING THROUGH NON-WATERTIGHT OPENINGS\r"
+        ]
+      },
+      {
+        "page": 77,
+        "excerpts": [
+          " DOWNFLOODING THROUGH NON-WATERTIGHT OPENINGS\r"
+        ]
+      },
+      {
+        "page": 97,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 101,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 105,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 109,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 113,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 117,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 121,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 125,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 129,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 133,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 137,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 141,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 145,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 149,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 153,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 157,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 161,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 165,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 169,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 173,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 177,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 181,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 185,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 189,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 193,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 197,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 201,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 205,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 209,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 213,
+        "excerpts": [
+          " 9 Maximum statical angle 80% of angle of deck immersion \r"
+        ]
+      },
+      {
+        "page": 219,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 41.724 4.941 degrees \r"
+        ]
+      },
+      {
+        "page": 224,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 37.387 5.319 degrees \r"
+        ]
+      },
+      {
+        "page": 229,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r"
+        ]
+      },
+      {
+        "page": 230,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.325 3.064 degrees \r"
+        ]
+      },
+      {
+        "page": 234,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r"
+        ]
+      },
+      {
+        "page": 235,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.213 3.260 degrees \r"
+        ]
+      },
+      {
+        "page": 239,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 14.865 6.192 degrees \r"
+        ]
+      },
+      {
+        "page": 244,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 16.023 6.566 degrees \r"
+        ]
+      },
+      {
+        "page": 249,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 15.336 5.767 degrees \r"
+        ]
+      },
+      {
+        "page": 254,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 16.634 6.580 degrees \r"
+        ]
+      },
+      {
+        "page": 259,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 17.083 2.712 degrees \r"
+        ]
+      },
+      {
+        "page": 264,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 19.211 3.195 degrees \r"
+        ]
+      },
+      {
+        "page": 270,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 18.355 0.919 degrees \r"
+        ]
+      },
+      {
+        "page": 274,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r"
+        ]
+      },
+      {
+        "page": 275,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 19.252 0.885 degrees \r"
+        ]
+      },
+      {
+        "page": 279,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 15.619 6.906 degrees \r"
+        ]
+      },
+      {
+        "page": 284,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r"
+        ]
+      },
+      {
+        "page": 285,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 16.852 8.484 degrees \r"
+        ]
+      },
+      {
+        "page": 289,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 16.586 0.790 degrees \r"
+        ]
+      },
+      {
+        "page": 294,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 17.959 0.775 degrees \r"
+        ]
+      },
+      {
+        "page": 300,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 19.976 10.098 degrees \r"
+        ]
+      },
+      {
+        "page": 306,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 19.656 10.839 degrees \r"
+        ]
+      },
+      {
+        "page": 312,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 27.592 6.988 degrees \r"
+        ]
+      },
+      {
+        "page": 318,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 27.637 7.782 degrees \r"
+        ]
+      },
+      {
+        "page": 321,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 41.724 4.941 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 37.387 5.319 degrees \r"
+        ]
+      },
+      {
+        "page": 322,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 30.325 3.064 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 30.213 3.260 degrees \r"
+        ]
+      },
+      {
+        "page": 323,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 14.865 6.192 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 16.023 6.566 degrees \r"
+        ]
+      },
+      {
+        "page": 324,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 15.336 5.767 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 16.634 6.580 degrees \r"
+        ]
+      },
+      {
+        "page": 325,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 17.083 2.712 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 19.211 3.195 degrees \r"
+        ]
+      },
+      {
+        "page": 326,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 18.355 0.919 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 19.252 0.885 degrees \r"
+        ]
+      },
+      {
+        "page": 327,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 15.619 6.906 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 16.852 8.484 degrees \r"
+        ]
+      },
+      {
+        "page": 328,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 16.586 0.790 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 17.959 0.775 degrees \r"
+        ]
+      },
+      {
+        "page": 329,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 19.976 10.098 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 19.656 10.839 degrees \r"
+        ]
+      },
+      {
+        "page": 330,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 27.592 6.988 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 27.637 7.782 degrees \r"
+        ]
+      },
+      {
+        "page": 338,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.218 11.860 degrees \r"
+        ]
+      },
+      {
+        "page": 344,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.439 11.339 degrees \r"
+        ]
+      },
+      {
+        "page": 349,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 16.034 5.790 degrees \r"
+        ]
+      },
+      {
+        "page": 354,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 17.355 6.986 degrees \r"
+        ]
+      },
+      {
+        "page": 357,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 20.218 11.860 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 20.439 11.339 degrees \r"
+        ]
+      },
+      {
+        "page": 358,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 16.034 5.790 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 17.355 6.986 degrees \r"
+        ]
+      },
+      {
+        "page": 441,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 15.198 4.962 degrees \r"
+        ]
+      },
+      {
+        "page": 446,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 16.563 5.758 degrees \r"
+        ]
+      },
+      {
+        "page": 451,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 15.495 6.229 degrees \r"
+        ]
+      },
+      {
+        "page": 456,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 16.945 7.276 degrees \r"
+        ]
+      },
+      {
+        "page": 461,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 17.337 7.196 degrees \r"
+        ]
+      },
+      {
+        "page": 466,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 18.875 7.915 degrees \r"
+        ]
+      },
+      {
+        "page": 471,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 19.104 5.570 degrees \r"
+        ]
+      },
+      {
+        "page": 476,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 20.330 7.799 degrees \r"
+        ]
+      },
+      {
+        "page": 481,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 21.490 5.991 degrees \r"
+        ]
+      },
+      {
+        "page": 486,
+        "excerpts": [
+          "Angle(PS) Draft mld. Trim KNsin\u03c6 VCG'sin\u03c6 TCGcos\u03c6 G'Nsin\u03c6 Area \r",
+          "Maximum statical angle 80% of angle of deck immersion 22.333 8.312 degrees \r"
+        ]
+      },
+      {
+        "page": 489,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 15.198 4.962 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 16.563 5.758 degrees \r"
+        ]
+      },
+      {
+        "page": 490,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 15.495 6.229 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 16.945 7.276 degrees \r"
+        ]
+      },
+      {
+        "page": 491,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 17.337 7.196 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 18.875 7.915 degrees \r"
+        ]
+      },
+      {
+        "page": 492,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 19.104 5.570 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 20.330 7.799 degrees \r"
+        ]
+      },
+      {
+        "page": 493,
+        "excerpts": [
+          "Maximum statical angle 80% of angle of deck immersion 21.490 5.991 degrees \r",
+          "Maximum statical angle 80% of angle of deck immersion 22.333 8.312 degrees \r"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "DOCUMENTATIE NAVA-20260910/002_TANK_ARRANGEMENT.pdf",
+    "sha256": "38067eccc648934f95f333f9b3379574be3da58f205c36a7edaf62ba7bdf4230",
+    "pages": 1,
+    "hits": []
+  },
+  {
+    "file": "Prezentari CURS-20260910/Timber Deck Code - 2011.pdf",
+    "sha256": "0d457aa56ea74965fbc1a3ad9a3fbddc959c265d628a0b59873118f5cea8fe09",
+    "pages": 71,
+    "hits": []
+  },
+  {
+    "file": "Prezentari CURS-20260910/CARGO_SURVEY_L6.pdf",
+    "sha256": "590e83e090958b2bd3415811d7b568f50e05ab5a346e4c7f5be3a189643ca31b",
+    "pages": 87,
+    "hits": []
+  },
+  {
+    "file": "Prezentari CURS-20260910/4102020 1505 lecture 8 Prj Explanations.pdf",
+    "sha256": "f2ed73b07617ac2452463f59588165393435feffc7396f538cdaf52da919f420",
+    "pages": 9,
+    "hits": []
+  },
+  {
+    "file": "Prezentari CURS-20260910/CARGO_STOWAGE_AND_SECURING_L5.pdf",
+    "sha256": "ccdb7f494b224b95355e1abc20f48395c9e3d94248577ecae9377d8181679b4d",
+    "pages": 84,
+    "hits": []
+  },
+  {
+    "file": "Prezentari CURS-20260910/Lect 11 Timber.pdf",
+    "sha256": "04f60a6050233fd265a6c23780e9162d59efb6ff3486ade7aa01d77024d6dc84",
+    "pages": 8,
+    "hits": []
+  },
+  {
+    "file": "Prezentari CURS-20260910/lecture 7 IMDG.pdf",
+    "sha256": "1ea0ab0d7740b89c0f719cb20b228c2f8dba52ca1f89858c3de7be5c5e6278a1",
+    "pages": 27,
+    "hits": []
+  },
+  {
+    "file": "Prezentari CURS-20260910/Convention.for.Safe.Containers.pdf",
+    "sha256": "d9f45231c02f0f026b3675404e69949c55909bea5b2e319cf37ad7c4dcb05fc3",
+    "pages": 56,
+    "hits": []
+  },
+  {
+    "file": "Prezentari CURS-20260910/PRE STOWAGE PLANNING.pdf",
+    "sha256": "b8fba929f1d119497131724758c8c4e43decdfbcdae66e616ab5b9e845031c3d",
+    "pages": 36,
+    "hits": []
+  },
+  {
+    "file": "Prezentari CURS-20260910/Lect 11 addendum Timber Deck Cargoes.pdf",
+    "sha256": "b45a6037867aaf4ad0ba4d5d270926c48ea5552ef6f498cd8831aebb01c2105c",
+    "pages": 6,
+    "hits": []
+  },
+  {
+    "file": "Prezentari CURS-20260910/Lect 11 addendum Safe-practice-for-ships-carrying-timber-deck-cargoes.pdf",
+    "sha256": "128bbeaee6bbe37d1057e88dea4ec92477590aac8c88d423b953834642631bcf",
+    "pages": 2,
+    "hits": []
+  },
+  {
+    "file": "Prezentari CURS-20260910/Holds  Hatch Covers LECTURE 10.pdf",
+    "sha256": "e193c76ddcd27cd109fff8d6ea2754db552d009ba7131c6a11aef716b4193413",
+    "pages": 32,
+    "hits": []
+  },
+  {
+    "file": "Prezentari CURS-20260910/L 12 UK PI Club - Issue 7 - January 2004.pdf",
+    "sha256": "69ed88d5735c7c6f417361dfdcf9a41717691572792c31e224462feef29825f9",
+    "pages": 46,
+    "hits": []
+  },
+  {
+    "file": "Prezentari CURS-20260910/L 12 A Master Guide to Container Securing.pdf",
+    "sha256": "ca5b1043b4c6b9d251c4f82cba0f6af1e444e03a4bfc75b0a250fe493ee07390",
+    "pages": 38,
+    "hits": []
+  },
+  {
+    "file": "Prezentari CURS-20260910/lecture 8-9.pdf",
+    "sha256": "cf3bee64444b2e7e41aaec1038f7b8cc0f84e001001b6d9e4a8e964e5d94e9a1",
+    "pages": 52,
+    "hits": [
+      {
+        "page": 48,
+        "excerpts": [
+          "Single-layer stowage with two symmetrically placed locking coils for light sheet \r",
+          "Single-layer stowage with two symmetrically placed locking coils \r"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Prezentari CURS-20260910/Lecture 7  IMDG ro.pdf",
+    "sha256": "e13fc317e0a9abcccc7fc7f3efabf176794431598a0cdb259cecf9ccdd5369d0",
+    "pages": 41,
+    "hits": []
+  },
+  {
+    "file": "Prezentari CURS-20260910/ContainerDamageReport.pdf",
+    "sha256": "3f033a6ba944e1cacdfc54dfd96dd2829c4dcab3250579cd1e836faa54f83a58",
+    "pages": 1,
+    "hits": []
+  },
+  {
+    "file": "CURS-20260910/IFR-TTM1 Unit 3 - Inspectare.pdf",
+    "sha256": "0d78451ba983ed44d01d23a9bdb72cafb63037a3cc374d6a8e6bad90d8a7c31b",
+    "pages": 76,
+    "hits": []
+  },
+  {
+    "file": "CURS-20260910/TTM-OBIECTIVE-COMPETENTE-EVALUARE.pdf",
+    "sha256": "9fa7bb347e26ce95e34a38167c625f84c6b5de9c4b3eb30a5994f25a5836b659",
+    "pages": 17,
+    "hits": []
+  },
+  {
+    "file": "CURS-20260910/IFR-TTM1 Unit 2 - Manipulare si Stivuire.pdf",
+    "sha256": "af43cfac30468d1a756ffc679c7de09639b7a9a5bd29a6d06271213c00b85e04",
+    "pages": 166,
+    "hits": []
+  },
+  {
+    "file": "CURS-20260910/IFR-TTM1 Unit 1 - Efectul marfii.pdf",
+    "sha256": "a5c77441cc0f077c49b0d95817611efea46515c840302c09402b343594b529b3",
+    "pages": 62,
+    "hits": []
+  },
+  {
+    "file": "CURS-20260910/Introducere Curs TTM.pdf",
+    "sha256": "0fb9ed986509cd9f184c7ca7f8abda6645814bfce18cadb02637de95415ac6e8",
+    "pages": 37,
+    "hits": []
+  }
+]

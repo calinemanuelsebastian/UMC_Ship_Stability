@@ -1,0 +1,6 @@
+import {test,after} from 'node:test';import assert from 'node:assert/strict';import {createServer} from '../../scripts/test-server.mjs';
+const server=await createServer({server:{middlewareMode:true},appType:'custom'});after(()=>server.close());const {stackLayer}=await server.ssrLoadModule('/src/app/stack-layer.ts');
+const area={id:'hold',name:'Hold',xMin:0,xMax:20,yMin:0,yMax:10,deckZ:0,clearHeight:3};
+const box=(id,x)=>({id,name:id,lcg:String(x),tcg:'2',vcg:'.5',massTonnes:'2',footprint:{length:1,width:1,height:1,rotation:0,deckZ:0,bottomZ:0,areaId:'hold'}});
+test('repeat layers preserve spacing, mass and CG offsets',()=>{const base=[box('a',2),box('b',4)];let i=0;const first=stackLayer(base,[area],base,()=>`n${i++}`),second=stackLayer(first,[area],[...base,...first],()=>`n${i++}`);assert.deepEqual(second.map(w=>[w.lcg,w.massTonnes,+w.vcg,w.footprint.bottomZ]),[['2','2',2.5,2],['4','2',2.5,2]]);assert.throws(()=>stackLayer(second,[area],[...base,...first,...second],()=>`n${i++}`));assert.equal(base[0].footprint.bottomZ,0);});
+test('blocked member rejects the whole layer',()=>{const base=[box('a',2),box('b',4)],obstacle={...box('c',4),footprint:{...box('c',4).footprint,bottomZ:1}};assert.throws(()=>stackLayer(base,[area],[...base,obstacle],()=>crypto.randomUUID()));});

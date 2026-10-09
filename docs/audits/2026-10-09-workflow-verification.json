@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-09",
+  "target": "Production build at http://127.0.0.1:4173/; isolated origin, existing 5173 data untouched",
+  "automated": {
+    "testsPassed": 381,
+    "failures": 0,
+    "productionBuild": "passed after UI fix",
+    "lint": "passed after UI fix"
+  },
+  "browserPassed": [
+    "Rectangular Pontoon startup and Vectis Castle selection",
+    "Ballast diagram selection: tank 004 filled with 20 m3 at 1.0 t/m3; seawater remained 1.025",
+    "50 m3 over-capacity entry rejected for 42.447 m3 tank",
+    "Departure liquids preset applied",
+    "Two 2 t stackable cargo units placed with one placement activation",
+    "Build next layer creates upper cargo; Undo restores mass",
+    "Auto dunnage preview and add: four pieces, 4.7 kg; removal and Undo restore geometry and mass",
+    "Window selection of two cargo and four support members; group drag",
+    "Toolbar copy/paste of six-item structure, rotation and deletion",
+    "Zoom from 100% to 125% with two clicks; explicit pan shifts drawing",
+    "Top, Side, End and 3D planner render",
+    "Named plan save and preview/application; survives reload",
+    "JSON backup download and import: 77 items, 4494.436 t",
+    "Settled recovery draft restored after reload: same 77 items and mass",
+    "Full 3D upright and imposed attitude; Heel/Bow and Trim/Side camera defaults",
+    "Light test condition reports unavailable trim, does not invent equilibrium",
+    "Homogeneous departure: 14136.219 t; trim -1.626806 m; corrected GM 0.375977 m; GZ displayed with explicit data limitations",
+    "Assessment JSON exported successfully",
+    "390x844 portrait: 390 px document width, Back to drawing works",
+    "No captured browser console errors in final session"
+  ],
+  "fixed": [
+    "Undo/Redo now clears stale automatic dunnage action messages and previous spacer preview"
+  ],
+  "remainingVerification": [
+    "Real touchscreen pinch/multitouch and physical trackpad gestures",
+    "Cross-browser/device matrix and large-plan performance",
+    "Keyboard clipboard shortcuts were not verified because browser automation virtual clipboard intercepted them; toolbar copy/paste passed",
+    "Not every cargo surface, ship import variant or assessment input combination was exercised"
+  ],
+  "scope": "Core educational demo workflow verified; not a certification of stability or securing compliance."
+}

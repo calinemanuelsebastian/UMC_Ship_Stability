@@ -1,0 +1,15 @@
+# Loading condition starters
+
+Loading and 3D View now offer the same collapsed condition picker. It provides ten source-based editable conditions: departure and arrival for ballast, homogeneous cargo without tween-decks, homogeneous cargo with decks stored, heavy cargo, and steel coils. The empty editor and original reference remain separate choices. Existing plans are not replaced automatically.
+
+Select, inspect the preview, then apply. Replacement updates weights, tanks, deck configuration, surrounding-water density and longitudinal FSM (zero for this table method). It clears old movement/selection history. Undo condition replacement restores the previous complete input state. Existing local Save condition and cargo-plan export functions accept these inputs; preset-derived results are never persisted as solver outputs.
+
+Inputs are carried inside the vessel tank catalogue, so imported vessels do not inherit Vectis conditions. `scripts/extract-loading-presets.py` reads manual PDF pp227–273 for these ten cases and records source pages, source rows, source deck weights, totals and SHA-256. It parses weight rows by named columns, ignores subtotals, maps tank codes including letter suffixes, and retains winch oil as an editable reference weight because no filling table is available. Grain-heeling moments marked # are retained in source rows and are not used as liquid FSM.
+
+These are adapted starters, not exact replays. Tank fill percentages/densities are applied to the current catalogue, with capacity-bounded volumes and freshly calculated mass, CG and FSM. Missing tank allocations mean empty tanks. Current fixed ship/deck definitions remain authoritative. Stored-panel source positions differ between cases and from the currently modelled storage arrangement; source deck details remain in the catalogue, and the UI explicitly describes this difference. No source compliance statement is copied to the live condition.
+
+Cargo items retain source aggregate mass and CG with hold grouping. They have no invented footprint or individual unit dimensions. The UI warns that these weights must be replaced when building a detailed cargo layout to prevent double counting. General 3D inspection can display their CG markers; the cargo planner cannot show individual blocks until a layout is supplied.
+
+All ten adapted cases bracket trim in the installed tables. Regression tests cover finite loading totals, tank bounds and normalization, independent copies, fixed-weight uniqueness, liquid/grain moment distinction, saved-scenario round trips and invalid allocation rejection. Calculated heel remains subject to the available signed cross curves; a supported trim does not guarantee a supported heel root or compliance.
+
+Special timber, grain, container/ice and docking cases are not presented as operating starters here: their additional criteria or arrangements require separate handling. Existing source-reference views retain historical evidence. The default blank editor remains blank; the user chooses a starter explicitly.

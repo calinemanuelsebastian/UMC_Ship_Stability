@@ -1,0 +1,235 @@
+import {ConditionSummary} from './components/condition-summary';
+import {AssessmentContext,type AssessmentSettings} from './app/assessment-settings';
+import {AssessmentReportExport} from './components/assessment-report-export';
+import {LoadingConditionPresets} from './components/loading-condition-presets';
+import {ShipLibrary} from './components/ship-library';
+import {shipLibrary,loadLocalShip,type LocalShipRecord} from './platform/ship-models/local-ship-models';
+import {shipResourceUrl} from './core/domain/ship-resource';
+import { Home } from './features/home';
+import {readNavigation,writeNavigation,type LoadingSection} from './app/navigation';
+import {panelWeight,parseDeckMode,type TweenDeckMode} from './app/tween-deck';
+import { TankControls } from './components/tank-controls';
+import { cleanLoadingPlan, loadTankCatalog, normalizeTankWeights, isFixedWeight, type TankCatalog } from './app/tank-operations';
+import { cargoSurfaces } from './app/cargo-surfaces';
+import { CargoPlanner } from './components/cargo-planner';
+import type { CargoArea } from './app/cargo-layout';
+import { CargoPlans } from './components/cargo-plans';
+import type { ScenarioState } from './app/saved-scenarios';
+import type { ReactNode, SetStateAction } from 'react';
+import { SavedScenarios } from './components/saved-scenarios';
+import { MovementHistory } from './app/movement-history';
+import { TrimEquilibrium } from './features/trim-equilibrium';
+import { createPortal } from 'react-dom';
+import { ReferenceProvider, ReferenceSettings } from './components/reference-settings';
+import { LanguageSwitch } from './app/language';
+import { useLanguage } from './app/language-context';
+import { lazy, Suspense, useEffect, useState, useRef, useCallback, useMemo } from 'react';
+import { FeatureBoundary } from './components/feature-boundary';
+const loadViewer = () => lazy(() => import('./features/ship-3d-view'));
+import { type TabId } from './app/tabs';
+import { TabBar } from './components/tab-bar';
+import { SelectInput } from './components/select-input';
+import { HydrostaticSandbox } from './features/hydrostatic-sandbox';
+import { LoadingCondition } from './features/loading-condition';
+import { RollSimulation } from './features/roll-simulation';
+import { StabilityCurves } from './features/stability-curves';
+import { computeUprightHydrostatics } from './core/hydrostatics/compute-upright-hydrostatics';
+import { Validation } from './features/validation';
+import { Theory } from './features/theory';
+import { loadBuiltInShipModel, loadBuiltInShipModelRegistry, type BuiltInShipModelRegistryEntry } from './platform/ship-models/built-in-ship-model-source';
+import { draftWeights, evaluateWeights, type WeightDraft } from './app/loading-state';
+import { loadLoadingWeights } from './platform/ship-models/load-loading-weights';
+import { NumberInput } from './components/number-input';
+import type { ShipModelPackage } from './core/domain/ship-model';
+function App() {
+    const { t } = useLanguage();
+    const [referenceTarget, setReferenceTarget] = useState<HTMLDivElement | null>(null);
+    const [activeTab, setActiveTab] = useState<TabId>(()=>readNavigation(new URL(window.location.href),[]).page);
+    const [models, setModels] = useState<BuiltInShipModelRegistryEntry[]>([]);
+    const [modelId, setModelId] = useState('');
+    const [error, setError] = useState('');
+    const [libraryOpen,setLibraryOpen]=useState(false);
+    const [localShips,setLocalShips]=useState<LocalShipRecord[]>([]);
+    const refreshLibrary=async()=>{const records=await shipLibrary('list');setLocalShips(records);setModels(previous=>[...previous.filter(m=>!m.id.startsWith('local-')),...records.map(r=>({id:r.id,name:r.name+' (Local)',path:''}))]);};
+    useEffect(() => {
+        let active = true;
+        Promise.all([loadBuiltInShipModelRegistry(),shipLibrary('list').catch(()=>{if(active)setError('Local ship storage is unavailable. Built-in ships remain available.');return [] as LocalShipRecord[];})]).then(([registry,records]) => {
+            registry={...registry,models:[...registry.models,...records.map(r=>({id:r.id,name:r.name+' (Local)',path:''}))]};
+            if(active)setLocalShips(records);
+            if (active) {
+                setModels(registry.models);
+                const route=readNavigation(new URL(window.location.href),registry.models.map(m=>m.id));
+                setModelId(route.vessel);setActiveTab(route.page);writeNavigation({page:route.page,vessel:route.vessel},true);
+            }
+        }).catch(reason => { if (active)
+            setError(reason instanceof Error ? reason.message : 'Could not load registry.'); });
+        return () => { active = false; };
+    }, []);
+    useEffect(()=>{
+      if(!models.length)return;
+      const restore=()=>{const route=readNavigation(new URL(window.location.href),models.map(m=>m.id));setActiveTab(route.page);setModelId(route.vessel);};
+      window.addEventListener('popstate',restore);window.addEventListener('hashchange',restore);
+      return ()=>{window.removeEventListener('popstate',restore);window.removeEventListener('hashchange',restore);};
+    },[models]);
+    const changeTab=(page:TabId)=>{writeNavigation({page,vessel:modelId});setActiveTab(page);};
+    const changeModel=(vessel:string)=>{writeNavigation({page:activeTab,vessel});setModelId(vessel);};
+    return <><header className="app-header"><span className="brand">{t("UMC")}<span>{t(" / Ship Stability")}</span></span><span className="version">{t("Teaching simulator \u00B7 Ship stability")}</span><div className="header-controls"><div ref={setReferenceTarget}/><button onClick={()=>setLibraryOpen(v=>!v)}>{t("Ship library")}</button><LanguageSwitch /></div></header><TabBar activeTab={activeTab} onChange={changeTab}/><main data-page={activeTab}>
+    {t(error && <p role="alert" className="error">{t(error)}</p>)}
+    {libraryOpen&&<ShipLibrary records={localShips} activeId={modelId} onRefresh={refreshLibrary} onUse={changeModel} onClose={()=>setLibraryOpen(false)}/>}
+    {t(modelId && <ModelWorkspace modelPicker={<SelectInput label={t("Ship model")} value={modelId} options={models.map(model => ({ value: model.id, label: model.name }))} onChange={changeModel}/>} referenceTarget={referenceTarget} key={modelId} modelId={modelId} activeTab={activeTab} onTabChange={changeTab}/>)}
+  </main><footer>{t("UMCsShipStabilityApp \u00B7 Hydrostatics learning workspace")}</footer></>;
+}
+function ModelWorkspace({ modelPicker, modelId, activeTab, onTabChange, referenceTarget }: {
+    modelPicker: ReactNode;
+    referenceTarget: HTMLDivElement | null;
+    modelId: string;
+    activeTab: TabId;
+    onTabChange: (tab: TabId) => void;
+}) {
+    const { t } = useLanguage();
+    const [ship, setShip] = useState<ShipModelPackage>();
+    const [error, setError] = useState('');
+    useEffect(() => {
+        let active = true;
+        let mounted:ShipModelPackage|undefined;
+        (modelId.startsWith('local-')?loadLocalShip(modelId):loadBuiltInShipModel(modelId)).then(value => { if (active){
+            mounted=value;setShip(value); }else value.release?.(); }).catch(reason => { if (active)
+            setError(reason instanceof Error ? reason.message : 'Could not load model.'); });
+        return () => { active = false; mounted?.release?.(); };
+    }, [modelId]);
+    if (error)
+        return <p role="alert" className="error">{t(error)}</p>;
+    if (!ship)
+        return <p role="status">{t("Loading ship model\u2026")}</p>;
+    return <ReferenceProvider ship={ship}>{referenceTarget && createPortal(<ReferenceSettings ship={ship}/>, referenceTarget)}<Simulator modelPicker={modelPicker} ship={ship} activeTab={activeTab} onTabChange={onTabChange}/></ReferenceProvider>;
+}
+function Simulator({ modelPicker, ship, activeTab, onTabChange }: {
+    modelPicker: ReactNode;
+    ship: ShipModelPackage;
+    activeTab: TabId;
+    onTabChange: (tab: TabId) => void;
+}) {
+    const { t } = useLanguage();
+    const defaults = ship.manifest.defaultCondition;
+    const [assessment,setAssessment]=useState<AssessmentSettings>({});
+    const [Ship3DView, setViewer] = useState(loadViewer);
+    const [saveRequest,setSaveRequest]=useState<{name:string;id:number}>();
+    const [loadingSection, setLoadingSection] = useState<LoadingSection>(()=>readNavigation(new URL(window.location.href),[]).section);
+    useEffect(()=>{const restore=()=>setLoadingSection(readNavigation(new URL(window.location.href),[]).section);window.addEventListener('popstate',restore);return ()=>window.removeEventListener('popstate',restore);},[]);
+    const [cargoArea,setCargoArea] = useState<CargoArea|undefined>(() => {
+      const documented=cargoSurfaces(ship);if(documented.length)return documented[0];
+      const d=ship.manifest.principalDimensions, c=ship.manifest.coordinateSystem;
+      if(!ship.manifest.resources.some(r=>r.kind==='visualization.box-hull') || d.mouldedDepth===undefined || c.longitudinalOriginFromAP===undefined) return undefined;
+      const sign=c.xPositive==='forward'?1:-1, a=-c.longitudinalOriginFromAP*sign,b=(d.lbp-c.longitudinalOriginFromAP)*sign;
+      return {name:'Pontoon deck',xMin:Math.min(a,b),xMax:Math.max(a,b),yMin:-d.beam/2,yMax:d.beam/2,deckZ:d.mouldedDepth};
+    });
+    const [scenario, setScenario] = useState<'loading' | 'manual'>('loading');
+    const movementHistory = useRef(new MovementHistory()).current;
+    const [weights, rawSetWeights] = useState<WeightDraft[]>([]);
+    const [tweenDeck,setTweenDeck]=useState<TweenDeckMode>('installed');
+    const deckModeRef=useRef<TweenDeckMode>('installed');
+    const fixedWeights = useRef<WeightDraft[]>([]);
+    const referenceWeights = useRef<WeightDraft[]>([]);
+    const [previousPlan,setPreviousPlan]=useState<ScenarioState>();
+    const [tankCatalog,setTankCatalog]=useState<TankCatalog>();
+    const tankCatalogRef=useRef<TankCatalog|undefined>(undefined);
+    const setWeights = useCallback((value: SetStateAction<WeightDraft[]>) => rawSetWeights(previous => {
+      const next = normalizeTankWeights(ship,typeof value === 'function' ? value(previous) : value,tankCatalogRef.current);
+      return [...next.map(w => fixedWeights.current.some(f=>f.id===w.id)?panelWeight(fixedWeights.current.find(f=>f.id===w.id)!,deckModeRef.current,ship):w), ...fixedWeights.current.filter(f => !next.some(w => w.id === f.id)).map(f=>panelWeight(f,deckModeRef.current,ship))];
+    }), [ship]);
+    const [ready, setReady] = useState(false);
+    const [loadError, setLoadError] = useState('');
+    useEffect(() => {
+        let active = true;
+        Promise.all([loadLoadingWeights(ship),loadTankCatalog(ship)]).then(([items,catalog]) => { if (active) {
+          tankCatalogRef.current=catalog;setTankCatalog(catalog);
+          const drafts = draftWeights(items);referenceWeights.current=drafts;
+          fixedWeights.current = drafts.filter(w => isFixedWeight(ship,w.id));
+          setWeights(catalog?cleanLoadingPlan(ship,drafts,catalog):drafts);
+        } })
+          .catch(error => { if (active) setLoadError(error instanceof Error ? error.message : 'Unable to load weights.'); })
+          .finally(() => { if (active) setReady(true); });
+        return () => { active = false; };
+    }, [ship, setWeights]);
+    const [restoreVersion, setRestoreVersion] = useState(0);
+    const loading = useMemo(() => evaluateWeights(weights), [weights]);
+    const [manual, setManual] = useState<{ vcg?: number; lcg?: number; tcg?: number; displacementTonnes?: number; freeSurfaceMomentTransverse?: number }>({ vcg: defaults.vcg, lcg: defaults.lcg, tcg: defaults.tcg, displacementTonnes: defaults.displacementTonnes, freeSurfaceMomentTransverse: defaults.freeSurfaceMomentTransverse ?? 0 });
+    const [manualMode, setManualMode] = useState<'draft' | 'displacement'>(defaults.draft === undefined ? 'displacement' : 'draft');
+    const [draft, setDraft] = useState<number | undefined>(defaults.draft);
+    const [density, setDensity] = useState<number | undefined>(defaults.waterDensity);
+    const [longitudinalFsm, setLongitudinalFsm] = useState<number | undefined>(0);
+    const fromWeights = scenario === 'loading';
+    const values = fromWeights ? loading.result ?? {} : manual;
+    const { vcg, lcg, tcg, freeSurfaceMomentTransverse } = values;
+    const mode = fromWeights ? 'displacement' : manualMode;
+    const input = mode === 'draft' ? draft : values.displacementTonnes;
+    const key = JSON.stringify([scenario, mode, input, vcg, lcg, tcg, freeSurfaceMomentTransverse, density]);
+    const valid = (!fromWeights || ready && !!loading.result) && [input, vcg, lcg, tcg, freeSurfaceMomentTransverse, density].every(n => n !== undefined && Number.isFinite(n)) && density! > 0;
+    const [resolved, setResolved] = useState<{ ship:ShipModelPackage; key: string; mass?: number; error?: string }>();
+    useEffect(() => {
+        let active = true;
+        if (!valid) return;
+        const timer = setTimeout(() => {
+            computeUprightHydrostatics(ship, { draft: mode === 'draft' ? input : undefined, displacementTonnes: mode === 'displacement' ? input : undefined, vcg: vcg!, lcg: lcg!, tcg: tcg!, waterDensity: density!, freeSurfaceMomentTransverse, heelDeg: 0, trimDeg: 0 })
+              .then(result => { if (active) setResolved({ ship, key, mass: result.displacementTonnes, error: result.displacementTonnes === undefined ? 'Displacement is unavailable.' : undefined }); })
+              .catch(error => { if (active) setResolved({ ship, key, error: error instanceof Error ? error.message : 'Calculation failed.' }); });
+        }, 300);
+        return () => { active = false; clearTimeout(timer); };
+    }, [ship, valid, key, mode, input, vcg, lcg, tcg, density, freeSurfaceMomentTransverse]);
+    const current = resolved?.ship === ship && resolved.key === key ? resolved : undefined;
+    const pending = !valid || !current || !!current.error;
+    const displacementTonnes = mode === 'draft' ? !pending ? current?.mass : undefined : values.displacementTonnes;
+    const update = (field: keyof typeof manual) => (value: number | undefined) => setManual(previous => ({ ...previous, [field]: value }));
+    const shared = { ship, displacementTonnes, vcg, tcg, freeSurfaceMomentTransverse, pending };
+    const editable = { readOnly: fromWeights, onDisplacementChange: (value: number | undefined) => { setManualMode('displacement'); update('displacementTonnes')(value); }, onVcgChange: update('vcg'), onTcgChange: update('tcg'), onFreeSurfaceMomentChange: update('freeSurfaceMomentTransverse') };
+    const status = fromWeights && !ready ? 'Loading model weights…' : fromWeights && !loading.result ? loading.error : !valid ? 'Complete all shared inputs. Results are awaiting valid input.' : current?.error ?? (pending ? 'Updating all calculation tabs…' : 'All calculation tabs use the current condition.');
+    const planState: ScenarioState = {assessment,tweenDeck,scenario,weights,manual,manualMode,draft,density,longitudinalFsm,cargoArea};
+    const restoreState = (value: ScenarioState) => {
+      setAssessment(value.assessment??{});
+      value={...value,weights:normalizeTankWeights(ship,value.weights,tankCatalogRef.current)};
+      deckModeRef.current=parseDeckMode(value.tweenDeck);setTweenDeck(deckModeRef.current);
+      setCargoArea(value.cargoArea?.id?cargoSurfaces(ship,deckModeRef.current).find(a=>a.id===value.cargoArea?.id||a.sourceIds?.includes(value.cargoArea!.id!)||!!value.cargoArea?.id&&a.id?.startsWith(value.cargoArea.id+'-lower'))??cargoSurfaces(ship,deckModeRef.current)[0]:value.cargoArea);
+      setScenario(value.scenario); setWeights(value.weights); setManual(value.manual); setManualMode(value.manualMode); setDraft(value.draft); setDensity(value.density); setLongitudinalFsm(value.longitudinalFsm);
+      movementHistory.clear(); setRestoreVersion(version => version+1);
+    };
+    return <AssessmentContext.Provider value={{settings:assessment,setSettings:setAssessment}}>
+      <ConditionSummary name={ship.manifest.name} fromWeights={fromWeights} displacement={valid?displacementTonnes:undefined} kg={valid?vcg:undefined} density={density} fsm={valid?freeSurfaceMomentTransverse:undefined}/>
+      <div className="workspace-utilities">
+      <details className="shared-condition-drawer"><summary>{t('Condition settings')}</summary><section className="condition-bar" aria-label={t('Shared condition')}>
+        {modelPicker}
+        <SelectInput label={t('Condition source')} value={scenario} options={[{ value: 'loading', label: 'Weight-based loading' }, { value: 'manual', label: 'Manual scenario' }]} onChange={value => setScenario(value as 'loading' | 'manual')}/>
+        <div className="condition-settings-body"><div className="curve-inputs"><NumberInput label={t('Surrounding water density (t/m³)')} value={density} onChange={setDensity} min={0}/><NumberInput label={t('Longitudinal FSM (t·m)')} value={longitudinalFsm} onChange={setLongitudinalFsm} min={0}/></div><p className="muted">{t(fromWeights ? 'Edit cargo and tanks in Loading. Valid changes update every calculation tab automatically.' : 'Manual inputs are separate from the weight list. Change draft or displacement in Hydrostatic Sandbox; all tabs follow this manual scenario.')}</p></div>
+      </section></details>
+      <details className="shared-condition-drawer save-export-drawer" key={saveRequest?.id} open={saveRequest?true:undefined}><summary>{t('Save and export')}</summary><section className="condition-bar">
+        <AssessmentReportExport ship={ship} state={planState} inputs={{pending,displacementTonnes,lcg,vcg,tcg,freeSurfaceMomentTransverse,waterDensity:density,longitudinalFsm}}/>
+        <SavedScenarios saveRequest={saveRequest} ship={ship} ready={ready} state={planState} onRestore={restoreState}/>
+        
+      </section></details>
+      </div>
+      <p className={pending?'condition-status pending':'condition-status'} role="status">{t(status?.replace(/\d+\.\d{5,}/g,n=>Number(n).toFixed(3)))}</p>
+      {ship.manifest.reviewNotes&&<details className="hydro-audit"><summary>{t('Hydrostatic table corrections — calculation review required')}</summary>{ship.manifest.reviewNotes.messages.map(message=><p key={message}>{t(message)}</p>)}{ship.manifest.resources.filter(r=>r.path&&ship.manifest.reviewNotes?.resourceIds.includes(r.id)).map(r=><a key={r.id} href={shipResourceUrl(ship,r.path!)} download>{t(r.label??r.id)} </a>)}</details>}
+      {tankCatalog&&(activeTab==='loading'||activeTab==='view3d')&&<LoadingConditionPresets ship={ship} catalog={tankCatalog} reference={referenceWeights.current} canUndo={!!previousPlan} onUndo={()=>{if(previousPlan){restoreState(previousPlan);setPreviousPlan(undefined);}}} onApply={(next,deck,waterDensity)=>{setPreviousPlan(structuredClone(planState));deckModeRef.current=deck;setTweenDeck(deck);setScenario('loading');setDensity(waterDensity);setLongitudinalFsm(0);setWeights(next);setCargoArea(cargoSurfaces(ship,deck)[0]);movementHistory.clear();setRestoreVersion(version=>version+1);}}/>}
+      {activeTab === 'home' && <Home onTabChange={onTabChange} onLoadingSection={section=>{writeNavigation({page:'loading',section});setLoadingSection(section);onTabChange('loading');}}/>}
+      <div hidden={activeTab !== 'hydrostatics'}><HydrostaticSandbox {...shared} {...editable} waterDensity={density} draft={draft} onDraftChange={setDraft} mode={mode} onModeChange={value => { setManualMode(value); if (value === 'displacement' && manual.displacementTonnes === undefined) setManual(previous => ({ ...previous, displacementTonnes: current?.mass })); }} centres={{ lcg, tcg }}/></div>
+      <div hidden={activeTab !== 'loading'}>
+        <div className="page-heading compact-heading"><h1>{t('Loading')}</h1></div>
+
+        <nav className="workspace-nav" aria-label={t('Loading sections')}>
+          {([['layout','Cargo layout'],['ballast','Ballast'],['tanks','Tanks and liquids'],['weights','Weights and totals'],['plans','Saved cargo plans']] as const).map(([id,label])=><button key={id} aria-current={loadingSection===id?'page':undefined} onClick={()=>{writeNavigation({page:'loading',section:id});setLoadingSection(id);}}>{t(label)}</button>)}
+        </nav>
+        <div hidden={loadingSection!=='layout'}><CargoPlanner key={restoreVersion} tweenDeck={tweenDeck} onDeckChange={mode=>{deckModeRef.current=mode;setTweenDeck(mode);setWeights(ws=>ws);const surfaces=cargoSurfaces(ship,mode);setCargoArea(surfaces.find(a=>a.id===cargoArea?.id||a.sourceIds?.includes(cargoArea?.id??'')||!!cargoArea?.id&&a.id?.startsWith(cargoArea.id+'-lower'))??surfaces[0]);}} ship={ship} weights={weights} setWeights={setWeights} area={cargoArea} setArea={setCargoArea} ready={ready}/></div>
+        <div hidden={loadingSection!=='ballast'}>{tankCatalog?<TankControls ballastOnly onSaveCondition={name=>setSaveRequest({name:t(name),id:Date.now()})} ship={ship} catalog={tankCatalog} weights={weights} setWeights={setWeights}/>:<p role="status">{t('This model has no documented tank filling tables.')}</p>}</div>
+        <div hidden={loadingSection!=='tanks'}>{tankCatalog?<TankControls onSaveCondition={name=>setSaveRequest({name:t(name),id:Date.now()})} ship={ship} catalog={tankCatalog} weights={weights} setWeights={setWeights}/>:<p role="status">{t('This model has no documented tank filling tables.')}</p>}</div>
+        <div hidden={loadingSection!=='weights'}><LoadingCondition catalog={tankCatalog} ship={ship} weights={weights} setWeights={setWeights} ready={ready} loadError={loadError}/></div>
+        <div hidden={loadingSection!=='plans'}><CargoPlans ship={ship} ready={ready} fixed={fixedWeights.current} state={planState} onRestore={restoreState}/></div>
+      </div>
+      {(activeTab==='stability'||activeTab==='trim')&&<nav className="workspace-nav" aria-label={t('Assessment sections')}><button aria-current={activeTab==='stability'?'page':undefined} onClick={()=>onTabChange('stability')}>{t('Stability and weather')}</button><button aria-current={activeTab==='trim'?'page':undefined} onClick={()=>onTabChange('trim')}>{t('Trim & Drafts')}</button></nav>}
+      <div hidden={activeTab !== 'trim'}><TrimEquilibrium {...shared} pending={mode === 'displacement' ? !valid : pending} {...editable} density={density} setDensity={setDensity} fsm={longitudinalFsm} setFsm={setLongitudinalFsm} lcg={lcg} onLcgChange={update('lcg')}/></div>
+      {activeTab === 'stability' && <StabilityCurves onLcgChange={update('lcg')} lcg={lcg} longitudinalFsm={longitudinalFsm} {...shared} {...editable} waterDensity={density}/>}
+      <div hidden={activeTab !== 'roll'}><RollSimulation {...shared} waterDensity={density}/></div>
+      {activeTab === 'view3d' && <FeatureBoundary message={t('The 3D viewer could not load. Your loading condition is still available.')} retryLabel={t('Retry 3D')} detailsLabel={t('Error details')} onRetry={()=>setViewer(loadViewer)}><Suspense fallback={<p role="status">{t('Loading 3D viewer…')}</p>}><Ship3DView tweenDeck={tweenDeck} conditionMessage={status} key={restoreVersion} movementHistory={movementHistory} weights={weights} setWeights={setWeights} fromWeights={fromWeights} {...shared} lcg={lcg} trimDensity={density} longitudinalFsm={longitudinalFsm} onTabChange={onTabChange}/></Suspense></FeatureBoundary>}
+      {activeTab === 'validation' && <Validation ship={ship}/>}
+      {activeTab === 'theory' && <Theory ship={ship} onTabChange={onTabChange}/>}
+    </AssessmentContext.Provider>;
+}
+export default App;

@@ -1,0 +1,202 @@
+{
+  "previousBracketDifferences": [
+    {
+      "draft": 5.8,
+      "field": "lcb",
+      "previous": 61.122,
+      "manual": 61.089
+    },
+    {
+      "draft": 5.8,
+      "field": "lcf",
+      "previous": 57.72,
+      "manual": 57.667
+    },
+    {
+      "draft": 5.85,
+      "field": "lcb",
+      "previous": 61.089,
+      "manual": 61.055
+    },
+    {
+      "draft": 5.85,
+      "field": "lcf",
+      "previous": 57.667,
+      "manual": 57.59
+    }
+  ],
+  "source": "004_STABILITY_LOADING_MANUAL.pdf",
+  "pages": [
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "rows": 38,
+      "firstDraft": 2.5,
+      "lastDraft": 4.35
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "rows": 38,
+      "firstDraft": 4.4,
+      "lastDraft": 6.25
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "rows": 38,
+      "firstDraft": 6.3,
+      "lastDraft": 8.1
+    },
+    {
+      "pdfPage": 38,
+      "trimMetres": -2.0,
+      "rows": 6,
+      "firstDraft": 8.15,
+      "lastDraft": 8.4
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "rows": 38,
+      "firstDraft": 2.5,
+      "lastDraft": 4.35
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "rows": 38,
+      "firstDraft": 4.4,
+      "lastDraft": 6.25
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "rows": 38,
+      "firstDraft": 6.3,
+      "lastDraft": 8.1
+    },
+    {
+      "pdfPage": 42,
+      "trimMetres": -1.5,
+      "rows": 6,
+      "firstDraft": 8.15,
+      "lastDraft": 8.4
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "rows": 38,
+      "firstDraft": 2.5,
+      "lastDraft": 4.35
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "rows": 38,
+      "firstDraft": 4.4,
+      "lastDraft": 6.25
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "rows": 38,
+      "firstDraft": 6.3,
+      "lastDraft": 8.1
+    },
+    {
+      "pdfPage": 46,
+      "trimMetres": -1.0,
+      "rows": 6,
+      "firstDraft": 8.15,
+      "lastDraft": 8.4
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "rows": 38,
+      "firstDraft": 2.5,
+      "lastDraft": 4.35
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "rows": 38,
+      "firstDraft": 4.4,
+      "lastDraft": 6.25
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "rows": 38,
+      "firstDraft": 6.3,
+      "lastDraft": 8.1
+    },
+    {
+      "pdfPage": 50,
+      "trimMetres": -0.5,
+      "rows": 6,
+      "firstDraft": 8.15,
+      "lastDraft": 8.4
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "rows": 38,
+      "firstDraft": 2.5,
+      "lastDraft": 4.35
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "rows": 38,
+      "firstDraft": 4.4,
+      "lastDraft": 6.25
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "rows": 38,
+      "firstDraft": 6.3,
+      "lastDraft": 8.1
+    },
+    {
+      "pdfPage": 54,
+      "trimMetres": 0.0,
+      "rows": 6,
+      "firstDraft": 8.15,
+      "lastDraft": 8.4
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "rows": 38,
+      "firstDraft": 2.5,
+      "lastDraft": 4.35
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "rows": 38,
+      "firstDraft": 4.4,
+      "lastDraft": 6.25
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "rows": 38,
+      "firstDraft": 6.3,
+      "lastDraft": 8.1
+    },
+    {
+      "pdfPage": 58,
+      "trimMetres": 0.62,
+      "rows": 6,
+      "firstDraft": 8.15,
+      "lastDraft": 8.4
+    }
+  ],
+  "waterDensity": 1.025,
+  "draftDatum": "Underside of keel",
+  "notes": "TPC and KMt transcribed directly. MCT is not imported: manual specifies a 1.0028 appendage factor. KB and KMl are not supplied in these tables. Table range is not a load-line permission."
+}

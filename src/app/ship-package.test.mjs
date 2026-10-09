@@ -1,0 +1,15 @@
+import {test,after} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createServer} from '../../scripts/test-server.mjs';
+const server=await createServer({server:{middlewareMode:true},appType:'custom'});after(()=>server.close());
+const {parseShipBundle,mountShipBundle}=await server.ssrLoadModule('/src/app/ship-package.ts');
+const {inspectShipPackage}=await server.ssrLoadModule('/src/app/inspect-ship-package.ts');
+const {shipResourceUrl}=await server.ssrLoadModule('/src/core/domain/ship-resource.ts');
+async function fixture(root){const manifest=JSON.parse(await readFile(root+'/manifest.json','utf8'));const files={};for(const r of manifest.resources)if(r.path)files[r.path]={encoding:'utf8',data:await readFile(root+'/'+r.path,'utf8')};return {format:'umc-ship-package',version:1,manifest,files};}
+const pontoon=await fixture('public/built-in-ship-models/training-pontoon-100x20');
+test('training package validates and calculates through local resource URLs',async()=>{const report=await inspectShipPackage(pontoon);assert.ok(report.fixedCount>0);assert.ok(report.catalog.tanks.length>0);assert.deepEqual(report.draftRange,[1,5]);});
+test('Vectis package validates with documented tanks',async()=>{const report=await inspectShipPackage(await fixture('validation-references/reviewed-apples-vessel'));assert.equal(report.catalog.tanks.length,68);});
+test('mount preserves canonical manifest paths and releases URLs',async()=>{const b=parseShipBundle(pontoon),ship=mountShipBundle(b),path=b.manifest.resources[0].path,url=shipResourceUrl(ship,path);assert.ok(url.startsWith('blob:'));assert.equal(await (await fetch(url)).text(),b.files[path].data);assert.deepEqual(ship.manifest,pontoon.manifest);ship.release();await assert.rejects(fetch(url));assert.throws(()=>shipResourceUrl(ship,'absent.csv'));});
+test('rejects missing, unsafe and inconsistent resources',()=>{for(const mutate of [b=>delete b.files[b.manifest.resources[0].path],b=>b.files['../escape']={encoding:'utf8',data:''},b=>b.manifest.units.mass='kg',b=>b.manifest.resources.push(b.manifest.resources[0]),b=>b.manifest.defaultCondition.draft=NaN]){const b=structuredClone(pontoon);mutate(b);assert.throws(()=>parseShipBundle(b));}});
+test('rejects glTF network assets and rewrites local assets',async()=>{const b=structuredClone(pontoon);b.manifest.resources.push({id:'visual',kind:'visualization.gltf',path:'model.gltf'},{id:'schematic',kind:'visualization.schematic-cargo-hull'});b.files['model.gltf']={encoding:'utf8',data:JSON.stringify({asset:{version:'2.0'},nodes:[],buffers:[{uri:'https://example.com/a.bin'}]})};assert.throws(()=>parseShipBundle(b));b.files['model.gltf'].data=JSON.stringify({asset:{version:'2.0'},nodes:[],buffers:[{uri:'a.bin'}]});b.files['a.bin']={encoding:'base64',data:'AAAA'};const ship=mountShipBundle(parseShipBundle(b));try{const g=await (await fetch(shipResourceUrl(ship,'model.gltf'))).json();assert.equal(g.buffers[0].uri,shipResourceUrl(ship,'a.bin'));}finally{ship.release();}});

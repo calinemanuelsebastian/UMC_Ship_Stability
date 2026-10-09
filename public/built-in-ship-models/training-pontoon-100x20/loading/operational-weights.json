@@ -1,0 +1,10 @@
+[
+  {
+    "id": "lightship",
+    "name": "Synthetic lightship",
+    "massTonnes": 4000,
+    "lcg": 50,
+    "vcg": 4,
+    "tcg": 0
+  }
+]

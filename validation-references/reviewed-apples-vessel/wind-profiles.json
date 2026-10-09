@@ -1,0 +1,5669 @@
+{
+  "format": "umc-wind-profiles",
+  "version": 1,
+  "source": {
+    "file": "004_STABILITY_LOADING_MANUAL.pdf",
+    "sha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3"
+  },
+  "pressureKgPerM2": 51.4,
+  "reference": "Draught from baseline; moment about half draught; source pressure retained. Tables dated March 2011.",
+  "bilgeKeelAreaM2": 21.5,
+  "validation": "All numeric tokens agree between pypdf and pdfplumber. Moment/displacement agrees with printed lever within 0.00051 m.",
+  "profiles": [
+    {
+      "id": "0",
+      "label": "No deck cargo",
+      "rows": [
+        {
+          "draftMouldedMetres": 1.0,
+          "sourceDisplacementKg": 1381227.0,
+          "momentKgMetres": 926261.0,
+          "sourceLeverMetres": 0.671,
+          "areaM2": 1912.0,
+          "sourceTokens": [
+            "1.000",
+            "1381227",
+            "926261",
+            "0.671",
+            "1912"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 1.1,
+          "sourceDisplacementKg": 1534583.0,
+          "momentKgMetres": 921039.0,
+          "sourceLeverMetres": 0.6,
+          "areaM2": 1900.0,
+          "sourceTokens": [
+            "1.100",
+            "1534583",
+            "921039",
+            "0.600",
+            "1900"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 1.2,
+          "sourceDisplacementKg": 1689468.0,
+          "momentKgMetres": 915815.0,
+          "sourceLeverMetres": 0.542,
+          "areaM2": 1888.0,
+          "sourceTokens": [
+            "1.200",
+            "1689468",
+            "915815",
+            "0.542",
+            "1888"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 1.3,
+          "sourceDisplacementKg": 1845752.0,
+          "momentKgMetres": 910591.0,
+          "sourceLeverMetres": 0.493,
+          "areaM2": 1876.0,
+          "sourceTokens": [
+            "1.300",
+            "1845752",
+            "910591",
+            "0.493",
+            "1876"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 1.4,
+          "sourceDisplacementKg": 2003309.0,
+          "momentKgMetres": 905366.0,
+          "sourceLeverMetres": 0.452,
+          "areaM2": 1864.0,
+          "sourceTokens": [
+            "1.400",
+            "2003309",
+            "905366",
+            "0.452",
+            "1864"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 1.5,
+          "sourceDisplacementKg": 2162049.0,
+          "momentKgMetres": 900141.0,
+          "sourceLeverMetres": 0.416,
+          "areaM2": 1852.0,
+          "sourceTokens": [
+            "1.500",
+            "2162049",
+            "900141",
+            "0.416",
+            "1852"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 1.6,
+          "sourceDisplacementKg": 2321864.0,
+          "momentKgMetres": 894914.0,
+          "sourceLeverMetres": 0.385,
+          "areaM2": 1840.0,
+          "sourceTokens": [
+            "1.600",
+            "2321864",
+            "894914",
+            "0.385",
+            "1840"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 1.7,
+          "sourceDisplacementKg": 2482626.0,
+          "momentKgMetres": 889687.0,
+          "sourceLeverMetres": 0.358,
+          "areaM2": 1828.0,
+          "sourceTokens": [
+            "1.700",
+            "2482626",
+            "889687",
+            "0.358",
+            "1828"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 1.8,
+          "sourceDisplacementKg": 2644356.0,
+          "momentKgMetres": 884458.0,
+          "sourceLeverMetres": 0.334,
+          "areaM2": 1816.0,
+          "sourceTokens": [
+            "1.800",
+            "2644356",
+            "884458",
+            "0.334",
+            "1816"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 1.9,
+          "sourceDisplacementKg": 2807573.0,
+          "momentKgMetres": 879229.0,
+          "sourceLeverMetres": 0.313,
+          "areaM2": 1804.0,
+          "sourceTokens": [
+            "1.900",
+            "2807573",
+            "879229",
+            "0.313",
+            "1804"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 2.0,
+          "sourceDisplacementKg": 2971541.0,
+          "momentKgMetres": 873999.0,
+          "sourceLeverMetres": 0.294,
+          "areaM2": 1791.0,
+          "sourceTokens": [
+            "2.000",
+            "2971541",
+            "873999",
+            "0.294",
+            "1791"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 2.1,
+          "sourceDisplacementKg": 3136146.0,
+          "momentKgMetres": 868769.0,
+          "sourceLeverMetres": 0.277,
+          "areaM2": 1779.0,
+          "sourceTokens": [
+            "2.100",
+            "3136146",
+            "868769",
+            "0.277",
+            "1779"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 2.2,
+          "sourceDisplacementKg": 3301322.0,
+          "momentKgMetres": 863537.0,
+          "sourceLeverMetres": 0.262,
+          "areaM2": 1767.0,
+          "sourceTokens": [
+            "2.200",
+            "3301322",
+            "863537",
+            "0.262",
+            "1767"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 2.3,
+          "sourceDisplacementKg": 3466992.0,
+          "momentKgMetres": 858304.0,
+          "sourceLeverMetres": 0.248,
+          "areaM2": 1755.0,
+          "sourceTokens": [
+            "2.300",
+            "3466992",
+            "858304",
+            "0.248",
+            "1755"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 2.4,
+          "sourceDisplacementKg": 3633075.0,
+          "momentKgMetres": 853070.0,
+          "sourceLeverMetres": 0.235,
+          "areaM2": 1743.0,
+          "sourceTokens": [
+            "2.400",
+            "3633075",
+            "853070",
+            "0.235",
+            "1743"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 2.5,
+          "sourceDisplacementKg": 3799604.0,
+          "momentKgMetres": 847835.0,
+          "sourceLeverMetres": 0.223,
+          "areaM2": 1730.0,
+          "sourceTokens": [
+            "2.500",
+            "3799604",
+            "847835",
+            "0.223",
+            "1730"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 2.6,
+          "sourceDisplacementKg": 3966611.0,
+          "momentKgMetres": 842599.0,
+          "sourceLeverMetres": 0.212,
+          "areaM2": 1718.0,
+          "sourceTokens": [
+            "2.600",
+            "3966611",
+            "842599",
+            "0.212",
+            "1718"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 2.7,
+          "sourceDisplacementKg": 4134091.0,
+          "momentKgMetres": 837362.0,
+          "sourceLeverMetres": 0.203,
+          "areaM2": 1706.0,
+          "sourceTokens": [
+            "2.700",
+            "4134091",
+            "837362",
+            "0.203",
+            "1706"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 2.8,
+          "sourceDisplacementKg": 4302072.0,
+          "momentKgMetres": 832125.0,
+          "sourceLeverMetres": 0.193,
+          "areaM2": 1693.0,
+          "sourceTokens": [
+            "2.800",
+            "4302072",
+            "832125",
+            "0.193",
+            "1693"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 2.9,
+          "sourceDisplacementKg": 4470565.0,
+          "momentKgMetres": 826888.0,
+          "sourceLeverMetres": 0.185,
+          "areaM2": 1681.0,
+          "sourceTokens": [
+            "2.900",
+            "4470565",
+            "826888",
+            "0.185",
+            "1681"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 3.0,
+          "sourceDisplacementKg": 4639574.0,
+          "momentKgMetres": 821651.0,
+          "sourceLeverMetres": 0.177,
+          "areaM2": 1669.0,
+          "sourceTokens": [
+            "3.000",
+            "4639574",
+            "821651",
+            "0.177",
+            "1669"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 3.1,
+          "sourceDisplacementKg": 4809095.0,
+          "momentKgMetres": 816414.0,
+          "sourceLeverMetres": 0.17,
+          "areaM2": 1656.0,
+          "sourceTokens": [
+            "3.100",
+            "4809095",
+            "816414",
+            "0.170",
+            "1656"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 3.2,
+          "sourceDisplacementKg": 4979139.0,
+          "momentKgMetres": 811178.0,
+          "sourceLeverMetres": 0.163,
+          "areaM2": 1644.0,
+          "sourceTokens": [
+            "3.200",
+            "4979139",
+            "811178",
+            "0.163",
+            "1644"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 3.3,
+          "sourceDisplacementKg": 5149688.0,
+          "momentKgMetres": 805945.0,
+          "sourceLeverMetres": 0.157,
+          "areaM2": 1632.0,
+          "sourceTokens": [
+            "3.300",
+            "5149688",
+            "805945",
+            "0.157",
+            "1632"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 3.4,
+          "sourceDisplacementKg": 5320764.0,
+          "momentKgMetres": 800714.0,
+          "sourceLeverMetres": 0.15,
+          "areaM2": 1620.0,
+          "sourceTokens": [
+            "3.400",
+            "5320764",
+            "800714",
+            "0.150",
+            "1620"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 3.5,
+          "sourceDisplacementKg": 5492368.0,
+          "momentKgMetres": 795484.0,
+          "sourceLeverMetres": 0.145,
+          "areaM2": 1608.0,
+          "sourceTokens": [
+            "3.500",
+            "5492368",
+            "795484",
+            "0.145",
+            "1608"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 3.6,
+          "sourceDisplacementKg": 5664866.0,
+          "momentKgMetres": 790257.0,
+          "sourceLeverMetres": 0.14,
+          "areaM2": 1595.0,
+          "sourceTokens": [
+            "3.600",
+            "5664866",
+            "790257",
+            "0.140",
+            "1595"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 3.7,
+          "sourceDisplacementKg": 5838589.0,
+          "momentKgMetres": 785031.0,
+          "sourceLeverMetres": 0.134,
+          "areaM2": 1583.0,
+          "sourceTokens": [
+            "3.700",
+            "5838589",
+            "785031",
+            "0.134",
+            "1583"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 3.8,
+          "sourceDisplacementKg": 6013575.0,
+          "momentKgMetres": 779807.0,
+          "sourceLeverMetres": 0.13,
+          "areaM2": 1571.0,
+          "sourceTokens": [
+            "3.800",
+            "6013575",
+            "779807",
+            "0.130",
+            "1571"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 3.9,
+          "sourceDisplacementKg": 6189342.0,
+          "momentKgMetres": 774584.0,
+          "sourceLeverMetres": 0.125,
+          "areaM2": 1559.0,
+          "sourceTokens": [
+            "3.900",
+            "6189342",
+            "774584",
+            "0.125",
+            "1559"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 4.0,
+          "sourceDisplacementKg": 6365682.0,
+          "momentKgMetres": 769362.0,
+          "sourceLeverMetres": 0.121,
+          "areaM2": 1547.0,
+          "sourceTokens": [
+            "4.000",
+            "6365682",
+            "769362",
+            "0.121",
+            "1547"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 4.1,
+          "sourceDisplacementKg": 6542601.0,
+          "momentKgMetres": 764141.0,
+          "sourceLeverMetres": 0.117,
+          "areaM2": 1535.0,
+          "sourceTokens": [
+            "4.100",
+            "6542601",
+            "764141",
+            "0.117",
+            "1535"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 4.2,
+          "sourceDisplacementKg": 6720112.0,
+          "momentKgMetres": 758922.0,
+          "sourceLeverMetres": 0.113,
+          "areaM2": 1523.0,
+          "sourceTokens": [
+            "4.200",
+            "6720112",
+            "758922",
+            "0.113",
+            "1523"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 4.3,
+          "sourceDisplacementKg": 6898227.0,
+          "momentKgMetres": 753703.0,
+          "sourceLeverMetres": 0.109,
+          "areaM2": 1510.0,
+          "sourceTokens": [
+            "4.300",
+            "6898227",
+            "753703",
+            "0.109",
+            "1510"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 4.4,
+          "sourceDisplacementKg": 7076941.0,
+          "momentKgMetres": 748484.0,
+          "sourceLeverMetres": 0.106,
+          "areaM2": 1498.0,
+          "sourceTokens": [
+            "4.400",
+            "7076941",
+            "748484",
+            "0.106",
+            "1498"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 4.5,
+          "sourceDisplacementKg": 7256292.0,
+          "momentKgMetres": 743265.0,
+          "sourceLeverMetres": 0.102,
+          "areaM2": 1486.0,
+          "sourceTokens": [
+            "4.500",
+            "7256292",
+            "743265",
+            "0.102",
+            "1486"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 4.6,
+          "sourceDisplacementKg": 7436299.0,
+          "momentKgMetres": 738047.0,
+          "sourceLeverMetres": 0.099,
+          "areaM2": 1474.0,
+          "sourceTokens": [
+            "4.600",
+            "7436299",
+            "738047",
+            "0.099",
+            "1474"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 4.7,
+          "sourceDisplacementKg": 7617038.0,
+          "momentKgMetres": 732828.0,
+          "sourceLeverMetres": 0.096,
+          "areaM2": 1462.0,
+          "sourceTokens": [
+            "4.700",
+            "7617038",
+            "732828",
+            "0.096",
+            "1462"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 4.8,
+          "sourceDisplacementKg": 7798517.0,
+          "momentKgMetres": 727608.0,
+          "sourceLeverMetres": 0.093,
+          "areaM2": 1450.0,
+          "sourceTokens": [
+            "4.800",
+            "7798517",
+            "727608",
+            "0.093",
+            "1450"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 4.9,
+          "sourceDisplacementKg": 7980815.0,
+          "momentKgMetres": 722388.0,
+          "sourceLeverMetres": 0.091,
+          "areaM2": 1438.0,
+          "sourceTokens": [
+            "4.900",
+            "7980815",
+            "722388",
+            "0.091",
+            "1438"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 5.0,
+          "sourceDisplacementKg": 8163968.0,
+          "momentKgMetres": 717167.0,
+          "sourceLeverMetres": 0.088,
+          "areaM2": 1426.0,
+          "sourceTokens": [
+            "5.000",
+            "8163968",
+            "717167",
+            "0.088",
+            "1426"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 5.1,
+          "sourceDisplacementKg": 8347895.0,
+          "momentKgMetres": 711946.0,
+          "sourceLeverMetres": 0.085,
+          "areaM2": 1414.0,
+          "sourceTokens": [
+            "5.100",
+            "8347895",
+            "711946",
+            "0.085",
+            "1414"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 5.2,
+          "sourceDisplacementKg": 8533063.0,
+          "momentKgMetres": 706721.0,
+          "sourceLeverMetres": 0.083,
+          "areaM2": 1401.0,
+          "sourceTokens": [
+            "5.200",
+            "8533063",
+            "706721",
+            "0.083",
+            "1401"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 5.3,
+          "sourceDisplacementKg": 8719113.0,
+          "momentKgMetres": 701484.0,
+          "sourceLeverMetres": 0.08,
+          "areaM2": 1389.0,
+          "sourceTokens": [
+            "5.300",
+            "8719113",
+            "701484",
+            "0.080",
+            "1389"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 5.4,
+          "sourceDisplacementKg": 8905888.0,
+          "momentKgMetres": 696225.0,
+          "sourceLeverMetres": 0.078,
+          "areaM2": 1377.0,
+          "sourceTokens": [
+            "5.400",
+            "8905888",
+            "696225",
+            "0.078",
+            "1377"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 5.5,
+          "sourceDisplacementKg": 9093166.0,
+          "momentKgMetres": 690967.0,
+          "sourceLeverMetres": 0.076,
+          "areaM2": 1364.0,
+          "sourceTokens": [
+            "5.500",
+            "9093166",
+            "690967",
+            "0.076",
+            "1364"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 5.6,
+          "sourceDisplacementKg": 9281039.0,
+          "momentKgMetres": 685708.0,
+          "sourceLeverMetres": 0.074,
+          "areaM2": 1352.0,
+          "sourceTokens": [
+            "5.600",
+            "9281039",
+            "685708",
+            "0.074",
+            "1352"
+          ],
+          "pdfPage": 79
+        },
+        {
+          "draftMouldedMetres": 5.7,
+          "sourceDisplacementKg": 9469485.0,
+          "momentKgMetres": 680449.0,
+          "sourceLeverMetres": 0.072,
+          "areaM2": 1340.0,
+          "sourceTokens": [
+            "5.700",
+            "9469485",
+            "680449",
+            "0.072",
+            "1340"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 5.8,
+          "sourceDisplacementKg": 9658514.0,
+          "momentKgMetres": 675191.0,
+          "sourceLeverMetres": 0.07,
+          "areaM2": 1327.0,
+          "sourceTokens": [
+            "5.800",
+            "9658514",
+            "675191",
+            "0.070",
+            "1327"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 5.9,
+          "sourceDisplacementKg": 9848147.0,
+          "momentKgMetres": 669932.0,
+          "sourceLeverMetres": 0.068,
+          "areaM2": 1315.0,
+          "sourceTokens": [
+            "5.900",
+            "9848147",
+            "669932",
+            "0.068",
+            "1315"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 6.0,
+          "sourceDisplacementKg": 10038392.0,
+          "momentKgMetres": 664673.0,
+          "sourceLeverMetres": 0.066,
+          "areaM2": 1302.0,
+          "sourceTokens": [
+            "6.000",
+            "10038392",
+            "664673",
+            "0.066",
+            "1302"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 6.1,
+          "sourceDisplacementKg": 10229251.0,
+          "momentKgMetres": 659415.0,
+          "sourceLeverMetres": 0.064,
+          "areaM2": 1290.0,
+          "sourceTokens": [
+            "6.100",
+            "10229251",
+            "659415",
+            "0.064",
+            "1290"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 6.2,
+          "sourceDisplacementKg": 10420760.0,
+          "momentKgMetres": 654156.0,
+          "sourceLeverMetres": 0.063,
+          "areaM2": 1278.0,
+          "sourceTokens": [
+            "6.200",
+            "10420760",
+            "654156",
+            "0.063",
+            "1278"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 6.3,
+          "sourceDisplacementKg": 10612936.0,
+          "momentKgMetres": 648898.0,
+          "sourceLeverMetres": 0.061,
+          "areaM2": 1265.0,
+          "sourceTokens": [
+            "6.300",
+            "10612936",
+            "648898",
+            "0.061",
+            "1265"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 6.4,
+          "sourceDisplacementKg": 10805788.0,
+          "momentKgMetres": 643639.0,
+          "sourceLeverMetres": 0.06,
+          "areaM2": 1253.0,
+          "sourceTokens": [
+            "6.400",
+            "10805788",
+            "643639",
+            "0.060",
+            "1253"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 6.5,
+          "sourceDisplacementKg": 10999290.0,
+          "momentKgMetres": 638380.0,
+          "sourceLeverMetres": 0.058,
+          "areaM2": 1240.0,
+          "sourceTokens": [
+            "6.500",
+            "10999290",
+            "638380",
+            "0.058",
+            "1240"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 6.6,
+          "sourceDisplacementKg": 11193498.0,
+          "momentKgMetres": 633122.0,
+          "sourceLeverMetres": 0.057,
+          "areaM2": 1228.0,
+          "sourceTokens": [
+            "6.600",
+            "11193498",
+            "633122",
+            "0.057",
+            "1228"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 6.7,
+          "sourceDisplacementKg": 11388402.0,
+          "momentKgMetres": 627863.0,
+          "sourceLeverMetres": 0.055,
+          "areaM2": 1216.0,
+          "sourceTokens": [
+            "6.700",
+            "11388402",
+            "627863",
+            "0.055",
+            "1216"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 6.8,
+          "sourceDisplacementKg": 11584039.0,
+          "momentKgMetres": 622604.0,
+          "sourceLeverMetres": 0.054,
+          "areaM2": 1203.0,
+          "sourceTokens": [
+            "6.800",
+            "11584039",
+            "622604",
+            "0.054",
+            "1203"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 6.9,
+          "sourceDisplacementKg": 11780376.0,
+          "momentKgMetres": 617346.0,
+          "sourceLeverMetres": 0.052,
+          "areaM2": 1191.0,
+          "sourceTokens": [
+            "6.900",
+            "11780376",
+            "617346",
+            "0.052",
+            "1191"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 7.0,
+          "sourceDisplacementKg": 11977502.0,
+          "momentKgMetres": 612087.0,
+          "sourceLeverMetres": 0.051,
+          "areaM2": 1179.0,
+          "sourceTokens": [
+            "7.000",
+            "11977502",
+            "612087",
+            "0.051",
+            "1179"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 7.1,
+          "sourceDisplacementKg": 12175375.0,
+          "momentKgMetres": 606829.0,
+          "sourceLeverMetres": 0.05,
+          "areaM2": 1166.0,
+          "sourceTokens": [
+            "7.100",
+            "12175375",
+            "606829",
+            "0.050",
+            "1166"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 7.2,
+          "sourceDisplacementKg": 12374049.0,
+          "momentKgMetres": 601570.0,
+          "sourceLeverMetres": 0.049,
+          "areaM2": 1154.0,
+          "sourceTokens": [
+            "7.200",
+            "12374049",
+            "601570",
+            "0.049",
+            "1154"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 7.3,
+          "sourceDisplacementKg": 12573468.0,
+          "momentKgMetres": 596311.0,
+          "sourceLeverMetres": 0.047,
+          "areaM2": 1141.0,
+          "sourceTokens": [
+            "7.300",
+            "12573468",
+            "596311",
+            "0.047",
+            "1141"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 7.4,
+          "sourceDisplacementKg": 12773489.0,
+          "momentKgMetres": 591053.0,
+          "sourceLeverMetres": 0.046,
+          "areaM2": 1129.0,
+          "sourceTokens": [
+            "7.400",
+            "12773489",
+            "591053",
+            "0.046",
+            "1129"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 7.5,
+          "sourceDisplacementKg": 12973958.0,
+          "momentKgMetres": 585794.0,
+          "sourceLeverMetres": 0.045,
+          "areaM2": 1117.0,
+          "sourceTokens": [
+            "7.500",
+            "12973958",
+            "585794",
+            "0.045",
+            "1117"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 7.6,
+          "sourceDisplacementKg": 13174746.0,
+          "momentKgMetres": 580536.0,
+          "sourceLeverMetres": 0.044,
+          "areaM2": 1104.0,
+          "sourceTokens": [
+            "7.600",
+            "13174746",
+            "580536",
+            "0.044",
+            "1104"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 7.7,
+          "sourceDisplacementKg": 13375827.0,
+          "momentKgMetres": 575277.0,
+          "sourceLeverMetres": 0.043,
+          "areaM2": 1092.0,
+          "sourceTokens": [
+            "7.700",
+            "13375827",
+            "575277",
+            "0.043",
+            "1092"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 7.8,
+          "sourceDisplacementKg": 13577158.0,
+          "momentKgMetres": 570018.0,
+          "sourceLeverMetres": 0.042,
+          "areaM2": 1079.0,
+          "sourceTokens": [
+            "7.800",
+            "13577158",
+            "570018",
+            "0.042",
+            "1079"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 7.9,
+          "sourceDisplacementKg": 13778740.0,
+          "momentKgMetres": 564760.0,
+          "sourceLeverMetres": 0.041,
+          "areaM2": 1067.0,
+          "sourceTokens": [
+            "7.900",
+            "13778740",
+            "564760",
+            "0.041",
+            "1067"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 8.0,
+          "sourceDisplacementKg": 13980540.0,
+          "momentKgMetres": 559501.0,
+          "sourceLeverMetres": 0.04,
+          "areaM2": 1055.0,
+          "sourceTokens": [
+            "8.000",
+            "13980540",
+            "559501",
+            "0.040",
+            "1055"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 8.1,
+          "sourceDisplacementKg": 14182563.0,
+          "momentKgMetres": 554243.0,
+          "sourceLeverMetres": 0.039,
+          "areaM2": 1042.0,
+          "sourceTokens": [
+            "8.100",
+            "14182563",
+            "554243",
+            "0.039",
+            "1042"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 8.2,
+          "sourceDisplacementKg": 14384779.0,
+          "momentKgMetres": 548984.0,
+          "sourceLeverMetres": 0.038,
+          "areaM2": 1030.0,
+          "sourceTokens": [
+            "8.200",
+            "14384779",
+            "548984",
+            "0.038",
+            "1030"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 8.3,
+          "sourceDisplacementKg": 14587219.0,
+          "momentKgMetres": 543725.0,
+          "sourceLeverMetres": 0.037,
+          "areaM2": 1017.0,
+          "sourceTokens": [
+            "8.300",
+            "14587219",
+            "543725",
+            "0.037",
+            "1017"
+          ],
+          "pdfPage": 80
+        },
+        {
+          "draftMouldedMetres": 8.4,
+          "sourceDisplacementKg": 14785682.0,
+          "momentKgMetres": 538467.0,
+          "sourceLeverMetres": 0.036,
+          "areaM2": 1005.0,
+          "sourceTokens": [
+            "8.400",
+            "14785682",
+            "538467",
+            "0.036",
+            "1005"
+          ],
+          "pdfPage": 80
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "label": "Containers: 1 tier",
+      "rows": [
+        {
+          "draftMouldedMetres": 1.0,
+          "sourceDisplacementKg": 1381227.0,
+          "momentKgMetres": 1065004.0,
+          "sourceLeverMetres": 0.771,
+          "areaM2": 2104.0,
+          "sourceTokens": [
+            "1.000",
+            "1381227",
+            "1065004",
+            "0.771",
+            "2104"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 1.1,
+          "sourceDisplacementKg": 1534583.0,
+          "momentKgMetres": 1059289.0,
+          "sourceLeverMetres": 0.69,
+          "areaM2": 2092.0,
+          "sourceTokens": [
+            "1.100",
+            "1534583",
+            "1059289",
+            "0.690",
+            "2092"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 1.2,
+          "sourceDisplacementKg": 1689468.0,
+          "momentKgMetres": 1053573.0,
+          "sourceLeverMetres": 0.624,
+          "areaM2": 2080.0,
+          "sourceTokens": [
+            "1.200",
+            "1689468",
+            "1053573",
+            "0.624",
+            "2080"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 1.3,
+          "sourceDisplacementKg": 1845752.0,
+          "momentKgMetres": 1047857.0,
+          "sourceLeverMetres": 0.568,
+          "areaM2": 2068.0,
+          "sourceTokens": [
+            "1.300",
+            "1845752",
+            "1047857",
+            "0.568",
+            "2068"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 1.4,
+          "sourceDisplacementKg": 2003309.0,
+          "momentKgMetres": 1042139.0,
+          "sourceLeverMetres": 0.52,
+          "areaM2": 2056.0,
+          "sourceTokens": [
+            "1.400",
+            "2003309",
+            "1042139",
+            "0.520",
+            "2056"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 1.5,
+          "sourceDisplacementKg": 2162049.0,
+          "momentKgMetres": 1036421.0,
+          "sourceLeverMetres": 0.479,
+          "areaM2": 2044.0,
+          "sourceTokens": [
+            "1.500",
+            "2162049",
+            "1036421",
+            "0.479",
+            "2044"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 1.6,
+          "sourceDisplacementKg": 2321864.0,
+          "momentKgMetres": 1030702.0,
+          "sourceLeverMetres": 0.444,
+          "areaM2": 2032.0,
+          "sourceTokens": [
+            "1.600",
+            "2321864",
+            "1030702",
+            "0.444",
+            "2032"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 1.7,
+          "sourceDisplacementKg": 2482626.0,
+          "momentKgMetres": 1024982.0,
+          "sourceLeverMetres": 0.413,
+          "areaM2": 2020.0,
+          "sourceTokens": [
+            "1.700",
+            "2482626",
+            "1024982",
+            "0.413",
+            "2020"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 1.8,
+          "sourceDisplacementKg": 2644356.0,
+          "momentKgMetres": 1019262.0,
+          "sourceLeverMetres": 0.385,
+          "areaM2": 2007.0,
+          "sourceTokens": [
+            "1.800",
+            "2644356",
+            "1019262",
+            "0.385",
+            "2007"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 1.9,
+          "sourceDisplacementKg": 2807573.0,
+          "momentKgMetres": 1013540.0,
+          "sourceLeverMetres": 0.361,
+          "areaM2": 1995.0,
+          "sourceTokens": [
+            "1.900",
+            "2807573",
+            "1013540",
+            "0.361",
+            "1995"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 2.0,
+          "sourceDisplacementKg": 2971541.0,
+          "momentKgMetres": 1007818.0,
+          "sourceLeverMetres": 0.339,
+          "areaM2": 1983.0,
+          "sourceTokens": [
+            "2.000",
+            "2971541",
+            "1007818",
+            "0.339",
+            "1983"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 2.1,
+          "sourceDisplacementKg": 3136146.0,
+          "momentKgMetres": 1002095.0,
+          "sourceLeverMetres": 0.32,
+          "areaM2": 1971.0,
+          "sourceTokens": [
+            "2.100",
+            "3136146",
+            "1002095",
+            "0.320",
+            "1971"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 2.2,
+          "sourceDisplacementKg": 3301322.0,
+          "momentKgMetres": 996370.0,
+          "sourceLeverMetres": 0.302,
+          "areaM2": 1959.0,
+          "sourceTokens": [
+            "2.200",
+            "3301322",
+            "996370",
+            "0.302",
+            "1959"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 2.3,
+          "sourceDisplacementKg": 3466992.0,
+          "momentKgMetres": 990645.0,
+          "sourceLeverMetres": 0.286,
+          "areaM2": 1946.0,
+          "sourceTokens": [
+            "2.300",
+            "3466992",
+            "990645",
+            "0.286",
+            "1946"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 2.4,
+          "sourceDisplacementKg": 3633075.0,
+          "momentKgMetres": 984919.0,
+          "sourceLeverMetres": 0.271,
+          "areaM2": 1934.0,
+          "sourceTokens": [
+            "2.400",
+            "3633075",
+            "984919",
+            "0.271",
+            "1934"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 2.5,
+          "sourceDisplacementKg": 3799604.0,
+          "momentKgMetres": 979192.0,
+          "sourceLeverMetres": 0.258,
+          "areaM2": 1922.0,
+          "sourceTokens": [
+            "2.500",
+            "3799604",
+            "979192",
+            "0.258",
+            "1922"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 2.6,
+          "sourceDisplacementKg": 3966611.0,
+          "momentKgMetres": 973463.0,
+          "sourceLeverMetres": 0.245,
+          "areaM2": 1910.0,
+          "sourceTokens": [
+            "2.600",
+            "3966611",
+            "973463",
+            "0.245",
+            "1910"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 2.7,
+          "sourceDisplacementKg": 4134091.0,
+          "momentKgMetres": 967734.0,
+          "sourceLeverMetres": 0.234,
+          "areaM2": 1897.0,
+          "sourceTokens": [
+            "2.700",
+            "4134091",
+            "967734",
+            "0.234",
+            "1897"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 2.8,
+          "sourceDisplacementKg": 4302072.0,
+          "momentKgMetres": 962004.0,
+          "sourceLeverMetres": 0.224,
+          "areaM2": 1885.0,
+          "sourceTokens": [
+            "2.800",
+            "4302072",
+            "962004",
+            "0.224",
+            "1885"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 2.9,
+          "sourceDisplacementKg": 4470565.0,
+          "momentKgMetres": 956275.0,
+          "sourceLeverMetres": 0.214,
+          "areaM2": 1873.0,
+          "sourceTokens": [
+            "2.900",
+            "4470565",
+            "956275",
+            "0.214",
+            "1873"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 3.0,
+          "sourceDisplacementKg": 4639574.0,
+          "momentKgMetres": 950545.0,
+          "sourceLeverMetres": 0.205,
+          "areaM2": 1860.0,
+          "sourceTokens": [
+            "3.000",
+            "4639574",
+            "950545",
+            "0.205",
+            "1860"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 3.1,
+          "sourceDisplacementKg": 4809095.0,
+          "momentKgMetres": 944815.0,
+          "sourceLeverMetres": 0.196,
+          "areaM2": 1848.0,
+          "sourceTokens": [
+            "3.100",
+            "4809095",
+            "944815",
+            "0.196",
+            "1848"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 3.2,
+          "sourceDisplacementKg": 4979139.0,
+          "momentKgMetres": 939087.0,
+          "sourceLeverMetres": 0.189,
+          "areaM2": 1836.0,
+          "sourceTokens": [
+            "3.200",
+            "4979139",
+            "939087",
+            "0.189",
+            "1836"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 3.3,
+          "sourceDisplacementKg": 5149688.0,
+          "momentKgMetres": 933362.0,
+          "sourceLeverMetres": 0.181,
+          "areaM2": 1824.0,
+          "sourceTokens": [
+            "3.300",
+            "5149688",
+            "933362",
+            "0.181",
+            "1824"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 3.4,
+          "sourceDisplacementKg": 5320764.0,
+          "momentKgMetres": 927638.0,
+          "sourceLeverMetres": 0.174,
+          "areaM2": 1811.0,
+          "sourceTokens": [
+            "3.400",
+            "5320764",
+            "927638",
+            "0.174",
+            "1811"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 3.5,
+          "sourceDisplacementKg": 5492368.0,
+          "momentKgMetres": 921916.0,
+          "sourceLeverMetres": 0.168,
+          "areaM2": 1799.0,
+          "sourceTokens": [
+            "3.500",
+            "5492368",
+            "921916",
+            "0.168",
+            "1799"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 3.6,
+          "sourceDisplacementKg": 5664866.0,
+          "momentKgMetres": 916196.0,
+          "sourceLeverMetres": 0.162,
+          "areaM2": 1787.0,
+          "sourceTokens": [
+            "3.600",
+            "5664866",
+            "916196",
+            "0.162",
+            "1787"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 3.7,
+          "sourceDisplacementKg": 5838589.0,
+          "momentKgMetres": 910478.0,
+          "sourceLeverMetres": 0.156,
+          "areaM2": 1775.0,
+          "sourceTokens": [
+            "3.700",
+            "5838589",
+            "910478",
+            "0.156",
+            "1775"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 3.8,
+          "sourceDisplacementKg": 6013575.0,
+          "momentKgMetres": 904761.0,
+          "sourceLeverMetres": 0.15,
+          "areaM2": 1763.0,
+          "sourceTokens": [
+            "3.800",
+            "6013575",
+            "904761",
+            "0.150",
+            "1763"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 3.9,
+          "sourceDisplacementKg": 6189342.0,
+          "momentKgMetres": 899046.0,
+          "sourceLeverMetres": 0.145,
+          "areaM2": 1750.0,
+          "sourceTokens": [
+            "3.900",
+            "6189342",
+            "899046",
+            "0.145",
+            "1750"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 4.0,
+          "sourceDisplacementKg": 6365682.0,
+          "momentKgMetres": 893332.0,
+          "sourceLeverMetres": 0.14,
+          "areaM2": 1738.0,
+          "sourceTokens": [
+            "4.000",
+            "6365682",
+            "893332",
+            "0.140",
+            "1738"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 4.1,
+          "sourceDisplacementKg": 6542601.0,
+          "momentKgMetres": 887619.0,
+          "sourceLeverMetres": 0.136,
+          "areaM2": 1726.0,
+          "sourceTokens": [
+            "4.100",
+            "6542601",
+            "887619",
+            "0.136",
+            "1726"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 4.2,
+          "sourceDisplacementKg": 6720112.0,
+          "momentKgMetres": 881907.0,
+          "sourceLeverMetres": 0.131,
+          "areaM2": 1714.0,
+          "sourceTokens": [
+            "4.200",
+            "6720112",
+            "881907",
+            "0.131",
+            "1714"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 4.3,
+          "sourceDisplacementKg": 6898227.0,
+          "momentKgMetres": 876195.0,
+          "sourceLeverMetres": 0.127,
+          "areaM2": 1702.0,
+          "sourceTokens": [
+            "4.300",
+            "6898227",
+            "876195",
+            "0.127",
+            "1702"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 4.4,
+          "sourceDisplacementKg": 7076941.0,
+          "momentKgMetres": 870484.0,
+          "sourceLeverMetres": 0.123,
+          "areaM2": 1690.0,
+          "sourceTokens": [
+            "4.400",
+            "7076941",
+            "870484",
+            "0.123",
+            "1690"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 4.5,
+          "sourceDisplacementKg": 7256292.0,
+          "momentKgMetres": 864773.0,
+          "sourceLeverMetres": 0.119,
+          "areaM2": 1678.0,
+          "sourceTokens": [
+            "4.500",
+            "7256292",
+            "864773",
+            "0.119",
+            "1678"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 4.6,
+          "sourceDisplacementKg": 7436299.0,
+          "momentKgMetres": 859062.0,
+          "sourceLeverMetres": 0.116,
+          "areaM2": 1666.0,
+          "sourceTokens": [
+            "4.600",
+            "7436299",
+            "859062",
+            "0.116",
+            "1666"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 4.7,
+          "sourceDisplacementKg": 7617038.0,
+          "momentKgMetres": 853351.0,
+          "sourceLeverMetres": 0.112,
+          "areaM2": 1654.0,
+          "sourceTokens": [
+            "4.700",
+            "7617038",
+            "853351",
+            "0.112",
+            "1654"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 4.8,
+          "sourceDisplacementKg": 7798517.0,
+          "momentKgMetres": 847639.0,
+          "sourceLeverMetres": 0.109,
+          "areaM2": 1642.0,
+          "sourceTokens": [
+            "4.800",
+            "7798517",
+            "847639",
+            "0.109",
+            "1642"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 4.9,
+          "sourceDisplacementKg": 7980815.0,
+          "momentKgMetres": 841926.0,
+          "sourceLeverMetres": 0.105,
+          "areaM2": 1629.0,
+          "sourceTokens": [
+            "4.900",
+            "7980815",
+            "841926",
+            "0.105",
+            "1629"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 5.0,
+          "sourceDisplacementKg": 8163968.0,
+          "momentKgMetres": 836213.0,
+          "sourceLeverMetres": 0.102,
+          "areaM2": 1617.0,
+          "sourceTokens": [
+            "5.000",
+            "8163968",
+            "836213",
+            "0.102",
+            "1617"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 5.1,
+          "sourceDisplacementKg": 8347895.0,
+          "momentKgMetres": 830499.0,
+          "sourceLeverMetres": 0.099,
+          "areaM2": 1605.0,
+          "sourceTokens": [
+            "5.100",
+            "8347895",
+            "830499",
+            "0.099",
+            "1605"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 5.2,
+          "sourceDisplacementKg": 8533063.0,
+          "momentKgMetres": 824782.0,
+          "sourceLeverMetres": 0.097,
+          "areaM2": 1593.0,
+          "sourceTokens": [
+            "5.200",
+            "8533063",
+            "824782",
+            "0.097",
+            "1593"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 5.3,
+          "sourceDisplacementKg": 8719113.0,
+          "momentKgMetres": 819052.0,
+          "sourceLeverMetres": 0.094,
+          "areaM2": 1581.0,
+          "sourceTokens": [
+            "5.300",
+            "8719113",
+            "819052",
+            "0.094",
+            "1581"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 5.4,
+          "sourceDisplacementKg": 8905888.0,
+          "momentKgMetres": 813301.0,
+          "sourceLeverMetres": 0.091,
+          "areaM2": 1568.0,
+          "sourceTokens": [
+            "5.400",
+            "8905888",
+            "813301",
+            "0.091",
+            "1568"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 5.5,
+          "sourceDisplacementKg": 9093166.0,
+          "momentKgMetres": 807550.0,
+          "sourceLeverMetres": 0.089,
+          "areaM2": 1556.0,
+          "sourceTokens": [
+            "5.500",
+            "9093166",
+            "807550",
+            "0.089",
+            "1556"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 5.6,
+          "sourceDisplacementKg": 9281039.0,
+          "momentKgMetres": 801799.0,
+          "sourceLeverMetres": 0.086,
+          "areaM2": 1544.0,
+          "sourceTokens": [
+            "5.600",
+            "9281039",
+            "801799",
+            "0.086",
+            "1544"
+          ],
+          "pdfPage": 82
+        },
+        {
+          "draftMouldedMetres": 5.7,
+          "sourceDisplacementKg": 9469485.0,
+          "momentKgMetres": 796048.0,
+          "sourceLeverMetres": 0.084,
+          "areaM2": 1531.0,
+          "sourceTokens": [
+            "5.700",
+            "9469485",
+            "796048",
+            "0.084",
+            "1531"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 5.8,
+          "sourceDisplacementKg": 9658514.0,
+          "momentKgMetres": 790297.0,
+          "sourceLeverMetres": 0.082,
+          "areaM2": 1519.0,
+          "sourceTokens": [
+            "5.800",
+            "9658514",
+            "790297",
+            "0.082",
+            "1519"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 5.9,
+          "sourceDisplacementKg": 9848147.0,
+          "momentKgMetres": 784546.0,
+          "sourceLeverMetres": 0.08,
+          "areaM2": 1506.0,
+          "sourceTokens": [
+            "5.900",
+            "9848147",
+            "784546",
+            "0.080",
+            "1506"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 6.0,
+          "sourceDisplacementKg": 10038392.0,
+          "momentKgMetres": 778795.0,
+          "sourceLeverMetres": 0.078,
+          "areaM2": 1494.0,
+          "sourceTokens": [
+            "6.000",
+            "10038392",
+            "778795",
+            "0.078",
+            "1494"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 6.1,
+          "sourceDisplacementKg": 10229251.0,
+          "momentKgMetres": 773044.0,
+          "sourceLeverMetres": 0.076,
+          "areaM2": 1482.0,
+          "sourceTokens": [
+            "6.100",
+            "10229251",
+            "773044",
+            "0.076",
+            "1482"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 6.2,
+          "sourceDisplacementKg": 10420760.0,
+          "momentKgMetres": 767292.0,
+          "sourceLeverMetres": 0.074,
+          "areaM2": 1469.0,
+          "sourceTokens": [
+            "6.200",
+            "10420760",
+            "767292",
+            "0.074",
+            "1469"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 6.3,
+          "sourceDisplacementKg": 10612936.0,
+          "momentKgMetres": 761542.0,
+          "sourceLeverMetres": 0.072,
+          "areaM2": 1457.0,
+          "sourceTokens": [
+            "6.300",
+            "10612936",
+            "761542",
+            "0.072",
+            "1457"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 6.4,
+          "sourceDisplacementKg": 10805788.0,
+          "momentKgMetres": 755790.0,
+          "sourceLeverMetres": 0.07,
+          "areaM2": 1444.0,
+          "sourceTokens": [
+            "6.400",
+            "10805788",
+            "755790",
+            "0.070",
+            "1444"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 6.5,
+          "sourceDisplacementKg": 10999290.0,
+          "momentKgMetres": 750039.0,
+          "sourceLeverMetres": 0.068,
+          "areaM2": 1432.0,
+          "sourceTokens": [
+            "6.500",
+            "10999290",
+            "750039",
+            "0.068",
+            "1432"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 6.6,
+          "sourceDisplacementKg": 11193498.0,
+          "momentKgMetres": 744288.0,
+          "sourceLeverMetres": 0.066,
+          "areaM2": 1420.0,
+          "sourceTokens": [
+            "6.600",
+            "11193498",
+            "744288",
+            "0.066",
+            "1420"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 6.7,
+          "sourceDisplacementKg": 11388402.0,
+          "momentKgMetres": 738537.0,
+          "sourceLeverMetres": 0.065,
+          "areaM2": 1407.0,
+          "sourceTokens": [
+            "6.700",
+            "11388402",
+            "738537",
+            "0.065",
+            "1407"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 6.8,
+          "sourceDisplacementKg": 11584039.0,
+          "momentKgMetres": 732786.0,
+          "sourceLeverMetres": 0.063,
+          "areaM2": 1395.0,
+          "sourceTokens": [
+            "6.800",
+            "11584039",
+            "732786",
+            "0.063",
+            "1395"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 6.9,
+          "sourceDisplacementKg": 11780376.0,
+          "momentKgMetres": 727035.0,
+          "sourceLeverMetres": 0.062,
+          "areaM2": 1383.0,
+          "sourceTokens": [
+            "6.900",
+            "11780376",
+            "727035",
+            "0.062",
+            "1383"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 7.0,
+          "sourceDisplacementKg": 11977502.0,
+          "momentKgMetres": 721284.0,
+          "sourceLeverMetres": 0.06,
+          "areaM2": 1370.0,
+          "sourceTokens": [
+            "7.000",
+            "11977502",
+            "721284",
+            "0.060",
+            "1370"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 7.1,
+          "sourceDisplacementKg": 12175375.0,
+          "momentKgMetres": 715533.0,
+          "sourceLeverMetres": 0.059,
+          "areaM2": 1358.0,
+          "sourceTokens": [
+            "7.100",
+            "12175375",
+            "715533",
+            "0.059",
+            "1358"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 7.2,
+          "sourceDisplacementKg": 12374049.0,
+          "momentKgMetres": 709782.0,
+          "sourceLeverMetres": 0.057,
+          "areaM2": 1345.0,
+          "sourceTokens": [
+            "7.200",
+            "12374049",
+            "709782",
+            "0.057",
+            "1345"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 7.3,
+          "sourceDisplacementKg": 12573468.0,
+          "momentKgMetres": 704031.0,
+          "sourceLeverMetres": 0.056,
+          "areaM2": 1333.0,
+          "sourceTokens": [
+            "7.300",
+            "12573468",
+            "704031",
+            "0.056",
+            "1333"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 7.4,
+          "sourceDisplacementKg": 12773489.0,
+          "momentKgMetres": 698280.0,
+          "sourceLeverMetres": 0.055,
+          "areaM2": 1321.0,
+          "sourceTokens": [
+            "7.400",
+            "12773489",
+            "698280",
+            "0.055",
+            "1321"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 7.5,
+          "sourceDisplacementKg": 12973958.0,
+          "momentKgMetres": 692529.0,
+          "sourceLeverMetres": 0.053,
+          "areaM2": 1308.0,
+          "sourceTokens": [
+            "7.500",
+            "12973958",
+            "692529",
+            "0.053",
+            "1308"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 7.6,
+          "sourceDisplacementKg": 13174746.0,
+          "momentKgMetres": 686778.0,
+          "sourceLeverMetres": 0.052,
+          "areaM2": 1296.0,
+          "sourceTokens": [
+            "7.600",
+            "13174746",
+            "686778",
+            "0.052",
+            "1296"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 7.7,
+          "sourceDisplacementKg": 13375827.0,
+          "momentKgMetres": 681027.0,
+          "sourceLeverMetres": 0.051,
+          "areaM2": 1283.0,
+          "sourceTokens": [
+            "7.700",
+            "13375827",
+            "681027",
+            "0.051",
+            "1283"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 7.8,
+          "sourceDisplacementKg": 13577158.0,
+          "momentKgMetres": 675276.0,
+          "sourceLeverMetres": 0.05,
+          "areaM2": 1271.0,
+          "sourceTokens": [
+            "7.800",
+            "13577158",
+            "675276",
+            "0.050",
+            "1271"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 7.9,
+          "sourceDisplacementKg": 13778740.0,
+          "momentKgMetres": 669525.0,
+          "sourceLeverMetres": 0.049,
+          "areaM2": 1259.0,
+          "sourceTokens": [
+            "7.900",
+            "13778740",
+            "669525",
+            "0.049",
+            "1259"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 8.0,
+          "sourceDisplacementKg": 13980540.0,
+          "momentKgMetres": 663774.0,
+          "sourceLeverMetres": 0.047,
+          "areaM2": 1246.0,
+          "sourceTokens": [
+            "8.000",
+            "13980540",
+            "663774",
+            "0.047",
+            "1246"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 8.1,
+          "sourceDisplacementKg": 14182563.0,
+          "momentKgMetres": 658023.0,
+          "sourceLeverMetres": 0.046,
+          "areaM2": 1234.0,
+          "sourceTokens": [
+            "8.100",
+            "14182563",
+            "658023",
+            "0.046",
+            "1234"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 8.2,
+          "sourceDisplacementKg": 14384779.0,
+          "momentKgMetres": 652272.0,
+          "sourceLeverMetres": 0.045,
+          "areaM2": 1221.0,
+          "sourceTokens": [
+            "8.200",
+            "14384779",
+            "652272",
+            "0.045",
+            "1221"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 8.3,
+          "sourceDisplacementKg": 14587219.0,
+          "momentKgMetres": 646520.0,
+          "sourceLeverMetres": 0.044,
+          "areaM2": 1209.0,
+          "sourceTokens": [
+            "8.300",
+            "14587219",
+            "646520",
+            "0.044",
+            "1209"
+          ],
+          "pdfPage": 83
+        },
+        {
+          "draftMouldedMetres": 8.4,
+          "sourceDisplacementKg": 14785682.0,
+          "momentKgMetres": 640769.0,
+          "sourceLeverMetres": 0.043,
+          "areaM2": 1197.0,
+          "sourceTokens": [
+            "8.400",
+            "14785682",
+            "640769",
+            "0.043",
+            "1197"
+          ],
+          "pdfPage": 83
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "label": "Containers: 2 tiers",
+      "rows": [
+        {
+          "draftMouldedMetres": 1.0,
+          "sourceDisplacementKg": 1381227.0,
+          "momentKgMetres": 1255412.0,
+          "sourceLeverMetres": 0.909,
+          "areaM2": 2327.0,
+          "sourceTokens": [
+            "1.000",
+            "1381227",
+            "1255412",
+            "0.909",
+            "2327"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 1.1,
+          "sourceDisplacementKg": 1534583.0,
+          "momentKgMetres": 1249125.0,
+          "sourceLeverMetres": 0.814,
+          "areaM2": 2315.0,
+          "sourceTokens": [
+            "1.100",
+            "1534583",
+            "1249125",
+            "0.814",
+            "2315"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 1.2,
+          "sourceDisplacementKg": 1689468.0,
+          "momentKgMetres": 1242837.0,
+          "sourceLeverMetres": 0.736,
+          "areaM2": 2303.0,
+          "sourceTokens": [
+            "1.200",
+            "1689468",
+            "1242837",
+            "0.736",
+            "2303"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 1.3,
+          "sourceDisplacementKg": 1845752.0,
+          "momentKgMetres": 1236549.0,
+          "sourceLeverMetres": 0.67,
+          "areaM2": 2290.0,
+          "sourceTokens": [
+            "1.300",
+            "1845752",
+            "1236549",
+            "0.670",
+            "2290"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 1.4,
+          "sourceDisplacementKg": 2003309.0,
+          "momentKgMetres": 1230259.0,
+          "sourceLeverMetres": 0.614,
+          "areaM2": 2278.0,
+          "sourceTokens": [
+            "1.400",
+            "2003309",
+            "1230259",
+            "0.614",
+            "2278"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 1.5,
+          "sourceDisplacementKg": 2162049.0,
+          "momentKgMetres": 1223969.0,
+          "sourceLeverMetres": 0.566,
+          "areaM2": 2266.0,
+          "sourceTokens": [
+            "1.500",
+            "2162049",
+            "1223969",
+            "0.566",
+            "2266"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 1.6,
+          "sourceDisplacementKg": 2321864.0,
+          "momentKgMetres": 1217678.0,
+          "sourceLeverMetres": 0.524,
+          "areaM2": 2254.0,
+          "sourceTokens": [
+            "1.600",
+            "2321864",
+            "1217678",
+            "0.524",
+            "2254"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 1.7,
+          "sourceDisplacementKg": 2482626.0,
+          "momentKgMetres": 1211386.0,
+          "sourceLeverMetres": 0.488,
+          "areaM2": 2242.0,
+          "sourceTokens": [
+            "1.700",
+            "2482626",
+            "1211386",
+            "0.488",
+            "2242"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 1.8,
+          "sourceDisplacementKg": 2644356.0,
+          "momentKgMetres": 1205093.0,
+          "sourceLeverMetres": 0.456,
+          "areaM2": 2230.0,
+          "sourceTokens": [
+            "1.800",
+            "2644356",
+            "1205093",
+            "0.456",
+            "2230"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 1.9,
+          "sourceDisplacementKg": 2807573.0,
+          "momentKgMetres": 1198800.0,
+          "sourceLeverMetres": 0.427,
+          "areaM2": 2218.0,
+          "sourceTokens": [
+            "1.900",
+            "2807573",
+            "1198800",
+            "0.427",
+            "2218"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 2.0,
+          "sourceDisplacementKg": 2971541.0,
+          "momentKgMetres": 1192505.0,
+          "sourceLeverMetres": 0.401,
+          "areaM2": 2206.0,
+          "sourceTokens": [
+            "2.000",
+            "2971541",
+            "1192505",
+            "0.401",
+            "2206"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 2.1,
+          "sourceDisplacementKg": 3136146.0,
+          "momentKgMetres": 1186210.0,
+          "sourceLeverMetres": 0.378,
+          "areaM2": 2193.0,
+          "sourceTokens": [
+            "2.100",
+            "3136146",
+            "1186210",
+            "0.378",
+            "2193"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 2.2,
+          "sourceDisplacementKg": 3301322.0,
+          "momentKgMetres": 1179913.0,
+          "sourceLeverMetres": 0.357,
+          "areaM2": 2181.0,
+          "sourceTokens": [
+            "2.200",
+            "3301322",
+            "1179913",
+            "0.357",
+            "2181"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 2.3,
+          "sourceDisplacementKg": 3466992.0,
+          "momentKgMetres": 1173616.0,
+          "sourceLeverMetres": 0.339,
+          "areaM2": 2169.0,
+          "sourceTokens": [
+            "2.300",
+            "3466992",
+            "1173616",
+            "0.339",
+            "2169"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 2.4,
+          "sourceDisplacementKg": 3633075.0,
+          "momentKgMetres": 1167318.0,
+          "sourceLeverMetres": 0.321,
+          "areaM2": 2157.0,
+          "sourceTokens": [
+            "2.400",
+            "3633075",
+            "1167318",
+            "0.321",
+            "2157"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 2.5,
+          "sourceDisplacementKg": 3799604.0,
+          "momentKgMetres": 1161019.0,
+          "sourceLeverMetres": 0.306,
+          "areaM2": 2144.0,
+          "sourceTokens": [
+            "2.500",
+            "3799604",
+            "1161019",
+            "0.306",
+            "2144"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 2.6,
+          "sourceDisplacementKg": 3966611.0,
+          "momentKgMetres": 1154718.0,
+          "sourceLeverMetres": 0.291,
+          "areaM2": 2132.0,
+          "sourceTokens": [
+            "2.600",
+            "3966611",
+            "1154718",
+            "0.291",
+            "2132"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 2.7,
+          "sourceDisplacementKg": 4134091.0,
+          "momentKgMetres": 1148416.0,
+          "sourceLeverMetres": 0.278,
+          "areaM2": 2120.0,
+          "sourceTokens": [
+            "2.700",
+            "4134091",
+            "1148416",
+            "0.278",
+            "2120"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 2.8,
+          "sourceDisplacementKg": 4302072.0,
+          "momentKgMetres": 1142115.0,
+          "sourceLeverMetres": 0.265,
+          "areaM2": 2108.0,
+          "sourceTokens": [
+            "2.800",
+            "4302072",
+            "1142115",
+            "0.265",
+            "2108"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 2.9,
+          "sourceDisplacementKg": 4470565.0,
+          "momentKgMetres": 1135813.0,
+          "sourceLeverMetres": 0.254,
+          "areaM2": 2095.0,
+          "sourceTokens": [
+            "2.900",
+            "4470565",
+            "1135813",
+            "0.254",
+            "2095"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 3.0,
+          "sourceDisplacementKg": 4639574.0,
+          "momentKgMetres": 1129512.0,
+          "sourceLeverMetres": 0.243,
+          "areaM2": 2083.0,
+          "sourceTokens": [
+            "3.000",
+            "4639574",
+            "1129512",
+            "0.243",
+            "2083"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 3.1,
+          "sourceDisplacementKg": 4809095.0,
+          "momentKgMetres": 1123210.0,
+          "sourceLeverMetres": 0.234,
+          "areaM2": 2071.0,
+          "sourceTokens": [
+            "3.100",
+            "4809095",
+            "1123210",
+            "0.234",
+            "2071"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 3.2,
+          "sourceDisplacementKg": 4979139.0,
+          "momentKgMetres": 1116909.0,
+          "sourceLeverMetres": 0.224,
+          "areaM2": 2058.0,
+          "sourceTokens": [
+            "3.200",
+            "4979139",
+            "1116909",
+            "0.224",
+            "2058"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 3.3,
+          "sourceDisplacementKg": 5149688.0,
+          "momentKgMetres": 1110612.0,
+          "sourceLeverMetres": 0.216,
+          "areaM2": 2046.0,
+          "sourceTokens": [
+            "3.300",
+            "5149688",
+            "1110612",
+            "0.216",
+            "2046"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 3.4,
+          "sourceDisplacementKg": 5320764.0,
+          "momentKgMetres": 1104316.0,
+          "sourceLeverMetres": 0.208,
+          "areaM2": 2034.0,
+          "sourceTokens": [
+            "3.400",
+            "5320764",
+            "1104316",
+            "0.208",
+            "2034"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 3.5,
+          "sourceDisplacementKg": 5492368.0,
+          "momentKgMetres": 1098022.0,
+          "sourceLeverMetres": 0.2,
+          "areaM2": 2022.0,
+          "sourceTokens": [
+            "3.500",
+            "5492368",
+            "1098022",
+            "0.200",
+            "2022"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 3.6,
+          "sourceDisplacementKg": 5664866.0,
+          "momentKgMetres": 1091730.0,
+          "sourceLeverMetres": 0.193,
+          "areaM2": 2010.0,
+          "sourceTokens": [
+            "3.600",
+            "5664866",
+            "1091730",
+            "0.193",
+            "2010"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 3.7,
+          "sourceDisplacementKg": 5838589.0,
+          "momentKgMetres": 1085440.0,
+          "sourceLeverMetres": 0.186,
+          "areaM2": 1997.0,
+          "sourceTokens": [
+            "3.700",
+            "5838589",
+            "1085440",
+            "0.186",
+            "1997"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 3.8,
+          "sourceDisplacementKg": 6013575.0,
+          "momentKgMetres": 1079151.0,
+          "sourceLeverMetres": 0.179,
+          "areaM2": 1985.0,
+          "sourceTokens": [
+            "3.800",
+            "6013575",
+            "1079151",
+            "0.179",
+            "1985"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 3.9,
+          "sourceDisplacementKg": 6189342.0,
+          "momentKgMetres": 1072864.0,
+          "sourceLeverMetres": 0.173,
+          "areaM2": 1973.0,
+          "sourceTokens": [
+            "3.900",
+            "6189342",
+            "1072864",
+            "0.173",
+            "1973"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 4.0,
+          "sourceDisplacementKg": 6365682.0,
+          "momentKgMetres": 1066577.0,
+          "sourceLeverMetres": 0.168,
+          "areaM2": 1961.0,
+          "sourceTokens": [
+            "4.000",
+            "6365682",
+            "1066577",
+            "0.168",
+            "1961"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 4.1,
+          "sourceDisplacementKg": 6542601.0,
+          "momentKgMetres": 1060292.0,
+          "sourceLeverMetres": 0.162,
+          "areaM2": 1949.0,
+          "sourceTokens": [
+            "4.100",
+            "6542601",
+            "1060292",
+            "0.162",
+            "1949"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 4.2,
+          "sourceDisplacementKg": 6720112.0,
+          "momentKgMetres": 1054008.0,
+          "sourceLeverMetres": 0.157,
+          "areaM2": 1937.0,
+          "sourceTokens": [
+            "4.200",
+            "6720112",
+            "1054008",
+            "0.157",
+            "1937"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 4.3,
+          "sourceDisplacementKg": 6898227.0,
+          "momentKgMetres": 1047724.0,
+          "sourceLeverMetres": 0.152,
+          "areaM2": 1925.0,
+          "sourceTokens": [
+            "4.300",
+            "6898227",
+            "1047724",
+            "0.152",
+            "1925"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 4.4,
+          "sourceDisplacementKg": 7076941.0,
+          "momentKgMetres": 1041441.0,
+          "sourceLeverMetres": 0.147,
+          "areaM2": 1913.0,
+          "sourceTokens": [
+            "4.400",
+            "7076941",
+            "1041441",
+            "0.147",
+            "1913"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 4.5,
+          "sourceDisplacementKg": 7256292.0,
+          "momentKgMetres": 1035158.0,
+          "sourceLeverMetres": 0.143,
+          "areaM2": 1900.0,
+          "sourceTokens": [
+            "4.500",
+            "7256292",
+            "1035158",
+            "0.143",
+            "1900"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 4.6,
+          "sourceDisplacementKg": 7436299.0,
+          "momentKgMetres": 1028875.0,
+          "sourceLeverMetres": 0.138,
+          "areaM2": 1888.0,
+          "sourceTokens": [
+            "4.600",
+            "7436299",
+            "1028875",
+            "0.138",
+            "1888"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 4.7,
+          "sourceDisplacementKg": 7617038.0,
+          "momentKgMetres": 1022592.0,
+          "sourceLeverMetres": 0.134,
+          "areaM2": 1876.0,
+          "sourceTokens": [
+            "4.700",
+            "7617038",
+            "1022592",
+            "0.134",
+            "1876"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 4.8,
+          "sourceDisplacementKg": 7798517.0,
+          "momentKgMetres": 1016308.0,
+          "sourceLeverMetres": 0.13,
+          "areaM2": 1864.0,
+          "sourceTokens": [
+            "4.800",
+            "7798517",
+            "1016308",
+            "0.130",
+            "1864"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 4.9,
+          "sourceDisplacementKg": 7980815.0,
+          "momentKgMetres": 1010023.0,
+          "sourceLeverMetres": 0.127,
+          "areaM2": 1852.0,
+          "sourceTokens": [
+            "4.900",
+            "7980815",
+            "1010023",
+            "0.127",
+            "1852"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 5.0,
+          "sourceDisplacementKg": 8163968.0,
+          "momentKgMetres": 1003737.0,
+          "sourceLeverMetres": 0.123,
+          "areaM2": 1840.0,
+          "sourceTokens": [
+            "5.000",
+            "8163968",
+            "1003737",
+            "0.123",
+            "1840"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 5.1,
+          "sourceDisplacementKg": 8347895.0,
+          "momentKgMetres": 997452.0,
+          "sourceLeverMetres": 0.119,
+          "areaM2": 1828.0,
+          "sourceTokens": [
+            "5.100",
+            "8347895",
+            "997452",
+            "0.119",
+            "1828"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 5.2,
+          "sourceDisplacementKg": 8533063.0,
+          "momentKgMetres": 991163.0,
+          "sourceLeverMetres": 0.116,
+          "areaM2": 1816.0,
+          "sourceTokens": [
+            "5.200",
+            "8533063",
+            "991163",
+            "0.116",
+            "1816"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 5.3,
+          "sourceDisplacementKg": 8719113.0,
+          "momentKgMetres": 984860.0,
+          "sourceLeverMetres": 0.113,
+          "areaM2": 1803.0,
+          "sourceTokens": [
+            "5.300",
+            "8719113",
+            "984860",
+            "0.113",
+            "1803"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 5.4,
+          "sourceDisplacementKg": 8905888.0,
+          "momentKgMetres": 978537.0,
+          "sourceLeverMetres": 0.11,
+          "areaM2": 1791.0,
+          "sourceTokens": [
+            "5.400",
+            "8905888",
+            "978537",
+            "0.110",
+            "1791"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 5.5,
+          "sourceDisplacementKg": 9093166.0,
+          "momentKgMetres": 972214.0,
+          "sourceLeverMetres": 0.107,
+          "areaM2": 1779.0,
+          "sourceTokens": [
+            "5.500",
+            "9093166",
+            "972214",
+            "0.107",
+            "1779"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 5.6,
+          "sourceDisplacementKg": 9281039.0,
+          "momentKgMetres": 965891.0,
+          "sourceLeverMetres": 0.104,
+          "areaM2": 1766.0,
+          "sourceTokens": [
+            "5.600",
+            "9281039",
+            "965891",
+            "0.104",
+            "1766"
+          ],
+          "pdfPage": 85
+        },
+        {
+          "draftMouldedMetres": 5.7,
+          "sourceDisplacementKg": 9469485.0,
+          "momentKgMetres": 959568.0,
+          "sourceLeverMetres": 0.101,
+          "areaM2": 1754.0,
+          "sourceTokens": [
+            "5.700",
+            "9469485",
+            "959568",
+            "0.101",
+            "1754"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 5.8,
+          "sourceDisplacementKg": 9658514.0,
+          "momentKgMetres": 953245.0,
+          "sourceLeverMetres": 0.099,
+          "areaM2": 1741.0,
+          "sourceTokens": [
+            "5.800",
+            "9658514",
+            "953245",
+            "0.099",
+            "1741"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 5.9,
+          "sourceDisplacementKg": 9848147.0,
+          "momentKgMetres": 946922.0,
+          "sourceLeverMetres": 0.096,
+          "areaM2": 1729.0,
+          "sourceTokens": [
+            "5.900",
+            "9848147",
+            "946922",
+            "0.096",
+            "1729"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 6.0,
+          "sourceDisplacementKg": 10038392.0,
+          "momentKgMetres": 940598.0,
+          "sourceLeverMetres": 0.094,
+          "areaM2": 1717.0,
+          "sourceTokens": [
+            "6.000",
+            "10038392",
+            "940598",
+            "0.094",
+            "1717"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 6.1,
+          "sourceDisplacementKg": 10229251.0,
+          "momentKgMetres": 934275.0,
+          "sourceLeverMetres": 0.091,
+          "areaM2": 1704.0,
+          "sourceTokens": [
+            "6.100",
+            "10229251",
+            "934275",
+            "0.091",
+            "1704"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 6.2,
+          "sourceDisplacementKg": 10420760.0,
+          "momentKgMetres": 927952.0,
+          "sourceLeverMetres": 0.089,
+          "areaM2": 1692.0,
+          "sourceTokens": [
+            "6.200",
+            "10420760",
+            "927952",
+            "0.089",
+            "1692"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 6.3,
+          "sourceDisplacementKg": 10612936.0,
+          "momentKgMetres": 921629.0,
+          "sourceLeverMetres": 0.087,
+          "areaM2": 1679.0,
+          "sourceTokens": [
+            "6.300",
+            "10612936",
+            "921629",
+            "0.087",
+            "1679"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 6.4,
+          "sourceDisplacementKg": 10805788.0,
+          "momentKgMetres": 915306.0,
+          "sourceLeverMetres": 0.085,
+          "areaM2": 1667.0,
+          "sourceTokens": [
+            "6.400",
+            "10805788",
+            "915306",
+            "0.085",
+            "1667"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 6.5,
+          "sourceDisplacementKg": 10999290.0,
+          "momentKgMetres": 908983.0,
+          "sourceLeverMetres": 0.083,
+          "areaM2": 1655.0,
+          "sourceTokens": [
+            "6.500",
+            "10999290",
+            "908983",
+            "0.083",
+            "1655"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 6.6,
+          "sourceDisplacementKg": 11193498.0,
+          "momentKgMetres": 902660.0,
+          "sourceLeverMetres": 0.081,
+          "areaM2": 1642.0,
+          "sourceTokens": [
+            "6.600",
+            "11193498",
+            "902660",
+            "0.081",
+            "1642"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 6.7,
+          "sourceDisplacementKg": 11388402.0,
+          "momentKgMetres": 896336.0,
+          "sourceLeverMetres": 0.079,
+          "areaM2": 1630.0,
+          "sourceTokens": [
+            "6.700",
+            "11388402",
+            "896336",
+            "0.079",
+            "1630"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 6.8,
+          "sourceDisplacementKg": 11584039.0,
+          "momentKgMetres": 890013.0,
+          "sourceLeverMetres": 0.077,
+          "areaM2": 1618.0,
+          "sourceTokens": [
+            "6.800",
+            "11584039",
+            "890013",
+            "0.077",
+            "1618"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 6.9,
+          "sourceDisplacementKg": 11780376.0,
+          "momentKgMetres": 883690.0,
+          "sourceLeverMetres": 0.075,
+          "areaM2": 1605.0,
+          "sourceTokens": [
+            "6.900",
+            "11780376",
+            "883690",
+            "0.075",
+            "1605"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 7.0,
+          "sourceDisplacementKg": 11977502.0,
+          "momentKgMetres": 877367.0,
+          "sourceLeverMetres": 0.073,
+          "areaM2": 1593.0,
+          "sourceTokens": [
+            "7.000",
+            "11977502",
+            "877367",
+            "0.073",
+            "1593"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 7.1,
+          "sourceDisplacementKg": 12175375.0,
+          "momentKgMetres": 871044.0,
+          "sourceLeverMetres": 0.072,
+          "areaM2": 1580.0,
+          "sourceTokens": [
+            "7.100",
+            "12175375",
+            "871044",
+            "0.072",
+            "1580"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 7.2,
+          "sourceDisplacementKg": 12374049.0,
+          "momentKgMetres": 864721.0,
+          "sourceLeverMetres": 0.07,
+          "areaM2": 1568.0,
+          "sourceTokens": [
+            "7.200",
+            "12374049",
+            "864721",
+            "0.070",
+            "1568"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 7.3,
+          "sourceDisplacementKg": 12573468.0,
+          "momentKgMetres": 858398.0,
+          "sourceLeverMetres": 0.068,
+          "areaM2": 1556.0,
+          "sourceTokens": [
+            "7.300",
+            "12573468",
+            "858398",
+            "0.068",
+            "1556"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 7.4,
+          "sourceDisplacementKg": 12773489.0,
+          "momentKgMetres": 852074.0,
+          "sourceLeverMetres": 0.067,
+          "areaM2": 1543.0,
+          "sourceTokens": [
+            "7.400",
+            "12773489",
+            "852074",
+            "0.067",
+            "1543"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 7.5,
+          "sourceDisplacementKg": 12973958.0,
+          "momentKgMetres": 845751.0,
+          "sourceLeverMetres": 0.065,
+          "areaM2": 1531.0,
+          "sourceTokens": [
+            "7.500",
+            "12973958",
+            "845751",
+            "0.065",
+            "1531"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 7.6,
+          "sourceDisplacementKg": 13174746.0,
+          "momentKgMetres": 839428.0,
+          "sourceLeverMetres": 0.064,
+          "areaM2": 1518.0,
+          "sourceTokens": [
+            "7.600",
+            "13174746",
+            "839428",
+            "0.064",
+            "1518"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 7.7,
+          "sourceDisplacementKg": 13375827.0,
+          "momentKgMetres": 833105.0,
+          "sourceLeverMetres": 0.062,
+          "areaM2": 1506.0,
+          "sourceTokens": [
+            "7.700",
+            "13375827",
+            "833105",
+            "0.062",
+            "1506"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 7.8,
+          "sourceDisplacementKg": 13577158.0,
+          "momentKgMetres": 826782.0,
+          "sourceLeverMetres": 0.061,
+          "areaM2": 1494.0,
+          "sourceTokens": [
+            "7.800",
+            "13577158",
+            "826782",
+            "0.061",
+            "1494"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 7.9,
+          "sourceDisplacementKg": 13778740.0,
+          "momentKgMetres": 820459.0,
+          "sourceLeverMetres": 0.06,
+          "areaM2": 1481.0,
+          "sourceTokens": [
+            "7.900",
+            "13778740",
+            "820459",
+            "0.060",
+            "1481"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 8.0,
+          "sourceDisplacementKg": 13980540.0,
+          "momentKgMetres": 814136.0,
+          "sourceLeverMetres": 0.058,
+          "areaM2": 1469.0,
+          "sourceTokens": [
+            "8.000",
+            "13980540",
+            "814136",
+            "0.058",
+            "1469"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 8.1,
+          "sourceDisplacementKg": 14182563.0,
+          "momentKgMetres": 807813.0,
+          "sourceLeverMetres": 0.057,
+          "areaM2": 1456.0,
+          "sourceTokens": [
+            "8.100",
+            "14182563",
+            "807813",
+            "0.057",
+            "1456"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 8.2,
+          "sourceDisplacementKg": 14384779.0,
+          "momentKgMetres": 801489.0,
+          "sourceLeverMetres": 0.056,
+          "areaM2": 1444.0,
+          "sourceTokens": [
+            "8.200",
+            "14384779",
+            "801489",
+            "0.056",
+            "1444"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 8.3,
+          "sourceDisplacementKg": 14587219.0,
+          "momentKgMetres": 795166.0,
+          "sourceLeverMetres": 0.055,
+          "areaM2": 1432.0,
+          "sourceTokens": [
+            "8.300",
+            "14587219",
+            "795166",
+            "0.055",
+            "1432"
+          ],
+          "pdfPage": 86
+        },
+        {
+          "draftMouldedMetres": 8.4,
+          "sourceDisplacementKg": 14785682.0,
+          "momentKgMetres": 788843.0,
+          "sourceLeverMetres": 0.053,
+          "areaM2": 1419.0,
+          "sourceTokens": [
+            "8.400",
+            "14785682",
+            "788843",
+            "0.053",
+            "1419"
+          ],
+          "pdfPage": 86
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "label": "Containers: 3 tiers",
+      "rows": [
+        {
+          "draftMouldedMetres": 1.0,
+          "sourceDisplacementKg": 1381227.0,
+          "momentKgMetres": 1482875.0,
+          "sourceLeverMetres": 1.074,
+          "areaM2": 2556.0,
+          "sourceTokens": [
+            "1.000",
+            "1381227",
+            "1482875",
+            "1.074",
+            "2556"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 1.1,
+          "sourceDisplacementKg": 1534583.0,
+          "momentKgMetres": 1475997.0,
+          "sourceLeverMetres": 0.962,
+          "areaM2": 2544.0,
+          "sourceTokens": [
+            "1.100",
+            "1534583",
+            "1475997",
+            "0.962",
+            "2544"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 1.2,
+          "sourceDisplacementKg": 1689468.0,
+          "momentKgMetres": 1469118.0,
+          "sourceLeverMetres": 0.87,
+          "areaM2": 2532.0,
+          "sourceTokens": [
+            "1.200",
+            "1689468",
+            "1469118",
+            "0.870",
+            "2532"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 1.3,
+          "sourceDisplacementKg": 1845752.0,
+          "momentKgMetres": 1462238.0,
+          "sourceLeverMetres": 0.792,
+          "areaM2": 2520.0,
+          "sourceTokens": [
+            "1.300",
+            "1845752",
+            "1462238",
+            "0.792",
+            "2520"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 1.4,
+          "sourceDisplacementKg": 2003309.0,
+          "momentKgMetres": 1455358.0,
+          "sourceLeverMetres": 0.726,
+          "areaM2": 2508.0,
+          "sourceTokens": [
+            "1.400",
+            "2003309",
+            "1455358",
+            "0.726",
+            "2508"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 1.5,
+          "sourceDisplacementKg": 2162049.0,
+          "momentKgMetres": 1448477.0,
+          "sourceLeverMetres": 0.67,
+          "areaM2": 2496.0,
+          "sourceTokens": [
+            "1.500",
+            "2162049",
+            "1448477",
+            "0.670",
+            "2496"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 1.6,
+          "sourceDisplacementKg": 2321864.0,
+          "momentKgMetres": 1441595.0,
+          "sourceLeverMetres": 0.621,
+          "areaM2": 2484.0,
+          "sourceTokens": [
+            "1.600",
+            "2321864",
+            "1441595",
+            "0.621",
+            "2484"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 1.7,
+          "sourceDisplacementKg": 2482626.0,
+          "momentKgMetres": 1434712.0,
+          "sourceLeverMetres": 0.578,
+          "areaM2": 2472.0,
+          "sourceTokens": [
+            "1.700",
+            "2482626",
+            "1434712",
+            "0.578",
+            "2472"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 1.8,
+          "sourceDisplacementKg": 2644356.0,
+          "momentKgMetres": 1427829.0,
+          "sourceLeverMetres": 0.54,
+          "areaM2": 2460.0,
+          "sourceTokens": [
+            "1.800",
+            "2644356",
+            "1427829",
+            "0.540",
+            "2460"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 1.9,
+          "sourceDisplacementKg": 2807573.0,
+          "momentKgMetres": 1420944.0,
+          "sourceLeverMetres": 0.506,
+          "areaM2": 2448.0,
+          "sourceTokens": [
+            "1.900",
+            "2807573",
+            "1420944",
+            "0.506",
+            "2448"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 2.0,
+          "sourceDisplacementKg": 2971541.0,
+          "momentKgMetres": 1414059.0,
+          "sourceLeverMetres": 0.476,
+          "areaM2": 2436.0,
+          "sourceTokens": [
+            "2.000",
+            "2971541",
+            "1414059",
+            "0.476",
+            "2436"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 2.1,
+          "sourceDisplacementKg": 3136146.0,
+          "momentKgMetres": 1407173.0,
+          "sourceLeverMetres": 0.449,
+          "areaM2": 2423.0,
+          "sourceTokens": [
+            "2.100",
+            "3136146",
+            "1407173",
+            "0.449",
+            "2423"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 2.2,
+          "sourceDisplacementKg": 3301322.0,
+          "momentKgMetres": 1400286.0,
+          "sourceLeverMetres": 0.424,
+          "areaM2": 2411.0,
+          "sourceTokens": [
+            "2.200",
+            "3301322",
+            "1400286",
+            "0.424",
+            "2411"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 2.3,
+          "sourceDisplacementKg": 3466992.0,
+          "momentKgMetres": 1393398.0,
+          "sourceLeverMetres": 0.402,
+          "areaM2": 2399.0,
+          "sourceTokens": [
+            "2.300",
+            "3466992",
+            "1393398",
+            "0.402",
+            "2399"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 2.4,
+          "sourceDisplacementKg": 3633075.0,
+          "momentKgMetres": 1386509.0,
+          "sourceLeverMetres": 0.382,
+          "areaM2": 2387.0,
+          "sourceTokens": [
+            "2.400",
+            "3633075",
+            "1386509",
+            "0.382",
+            "2387"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 2.5,
+          "sourceDisplacementKg": 3799604.0,
+          "momentKgMetres": 1379618.0,
+          "sourceLeverMetres": 0.363,
+          "areaM2": 2374.0,
+          "sourceTokens": [
+            "2.500",
+            "3799604",
+            "1379618",
+            "0.363",
+            "2374"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 2.6,
+          "sourceDisplacementKg": 3966611.0,
+          "momentKgMetres": 1372726.0,
+          "sourceLeverMetres": 0.346,
+          "areaM2": 2362.0,
+          "sourceTokens": [
+            "2.600",
+            "3966611",
+            "1372726",
+            "0.346",
+            "2362"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 2.7,
+          "sourceDisplacementKg": 4134091.0,
+          "momentKgMetres": 1365834.0,
+          "sourceLeverMetres": 0.33,
+          "areaM2": 2350.0,
+          "sourceTokens": [
+            "2.700",
+            "4134091",
+            "1365834",
+            "0.330",
+            "2350"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 2.8,
+          "sourceDisplacementKg": 4302072.0,
+          "momentKgMetres": 1358942.0,
+          "sourceLeverMetres": 0.316,
+          "areaM2": 2338.0,
+          "sourceTokens": [
+            "2.800",
+            "4302072",
+            "1358942",
+            "0.316",
+            "2338"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 2.9,
+          "sourceDisplacementKg": 4470565.0,
+          "momentKgMetres": 1352050.0,
+          "sourceLeverMetres": 0.302,
+          "areaM2": 2325.0,
+          "sourceTokens": [
+            "2.900",
+            "4470565",
+            "1352050",
+            "0.302",
+            "2325"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 3.0,
+          "sourceDisplacementKg": 4639574.0,
+          "momentKgMetres": 1345157.0,
+          "sourceLeverMetres": 0.29,
+          "areaM2": 2313.0,
+          "sourceTokens": [
+            "3.000",
+            "4639574",
+            "1345157",
+            "0.290",
+            "2313"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 3.1,
+          "sourceDisplacementKg": 4809095.0,
+          "momentKgMetres": 1338264.0,
+          "sourceLeverMetres": 0.278,
+          "areaM2": 2301.0,
+          "sourceTokens": [
+            "3.100",
+            "4809095",
+            "1338264",
+            "0.278",
+            "2301"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 3.2,
+          "sourceDisplacementKg": 4979139.0,
+          "momentKgMetres": 1331373.0,
+          "sourceLeverMetres": 0.267,
+          "areaM2": 2288.0,
+          "sourceTokens": [
+            "3.200",
+            "4979139",
+            "1331373",
+            "0.267",
+            "2288"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 3.3,
+          "sourceDisplacementKg": 5149688.0,
+          "momentKgMetres": 1324485.0,
+          "sourceLeverMetres": 0.257,
+          "areaM2": 2276.0,
+          "sourceTokens": [
+            "3.300",
+            "5149688",
+            "1324485",
+            "0.257",
+            "2276"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 3.4,
+          "sourceDisplacementKg": 5320764.0,
+          "momentKgMetres": 1317599.0,
+          "sourceLeverMetres": 0.248,
+          "areaM2": 2264.0,
+          "sourceTokens": [
+            "3.400",
+            "5320764",
+            "1317599",
+            "0.248",
+            "2264"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 3.5,
+          "sourceDisplacementKg": 5492368.0,
+          "momentKgMetres": 1310714.0,
+          "sourceLeverMetres": 0.239,
+          "areaM2": 2252.0,
+          "sourceTokens": [
+            "3.500",
+            "5492368",
+            "1310714",
+            "0.239",
+            "2252"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 3.6,
+          "sourceDisplacementKg": 5664866.0,
+          "momentKgMetres": 1303831.0,
+          "sourceLeverMetres": 0.23,
+          "areaM2": 2239.0,
+          "sourceTokens": [
+            "3.600",
+            "5664866",
+            "1303831",
+            "0.230",
+            "2239"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 3.7,
+          "sourceDisplacementKg": 5838589.0,
+          "momentKgMetres": 1296949.0,
+          "sourceLeverMetres": 0.222,
+          "areaM2": 2227.0,
+          "sourceTokens": [
+            "3.700",
+            "5838589",
+            "1296949",
+            "0.222",
+            "2227"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 3.8,
+          "sourceDisplacementKg": 6013575.0,
+          "momentKgMetres": 1290070.0,
+          "sourceLeverMetres": 0.215,
+          "areaM2": 2215.0,
+          "sourceTokens": [
+            "3.800",
+            "6013575",
+            "1290070",
+            "0.215",
+            "2215"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 3.9,
+          "sourceDisplacementKg": 6189342.0,
+          "momentKgMetres": 1283192.0,
+          "sourceLeverMetres": 0.207,
+          "areaM2": 2203.0,
+          "sourceTokens": [
+            "3.900",
+            "6189342",
+            "1283192",
+            "0.207",
+            "2203"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 4.0,
+          "sourceDisplacementKg": 6365682.0,
+          "momentKgMetres": 1276315.0,
+          "sourceLeverMetres": 0.2,
+          "areaM2": 2191.0,
+          "sourceTokens": [
+            "4.000",
+            "6365682",
+            "1276315",
+            "0.200",
+            "2191"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 4.1,
+          "sourceDisplacementKg": 6542601.0,
+          "momentKgMetres": 1269439.0,
+          "sourceLeverMetres": 0.194,
+          "areaM2": 2179.0,
+          "sourceTokens": [
+            "4.100",
+            "6542601",
+            "1269439",
+            "0.194",
+            "2179"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 4.2,
+          "sourceDisplacementKg": 6720112.0,
+          "momentKgMetres": 1262564.0,
+          "sourceLeverMetres": 0.188,
+          "areaM2": 2167.0,
+          "sourceTokens": [
+            "4.200",
+            "6720112",
+            "1262564",
+            "0.188",
+            "2167"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 4.3,
+          "sourceDisplacementKg": 6898227.0,
+          "momentKgMetres": 1255689.0,
+          "sourceLeverMetres": 0.182,
+          "areaM2": 2155.0,
+          "sourceTokens": [
+            "4.300",
+            "6898227",
+            "1255689",
+            "0.182",
+            "2155"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 4.4,
+          "sourceDisplacementKg": 7076941.0,
+          "momentKgMetres": 1248815.0,
+          "sourceLeverMetres": 0.176,
+          "areaM2": 2142.0,
+          "sourceTokens": [
+            "4.400",
+            "7076941",
+            "1248815",
+            "0.176",
+            "2142"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 4.5,
+          "sourceDisplacementKg": 7256292.0,
+          "momentKgMetres": 1241941.0,
+          "sourceLeverMetres": 0.171,
+          "areaM2": 2130.0,
+          "sourceTokens": [
+            "4.500",
+            "7256292",
+            "1241941",
+            "0.171",
+            "2130"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 4.6,
+          "sourceDisplacementKg": 7436299.0,
+          "momentKgMetres": 1235067.0,
+          "sourceLeverMetres": 0.166,
+          "areaM2": 2118.0,
+          "sourceTokens": [
+            "4.600",
+            "7436299",
+            "1235067",
+            "0.166",
+            "2118"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 4.7,
+          "sourceDisplacementKg": 7617038.0,
+          "momentKgMetres": 1228193.0,
+          "sourceLeverMetres": 0.161,
+          "areaM2": 2106.0,
+          "sourceTokens": [
+            "4.700",
+            "7617038",
+            "1228193",
+            "0.161",
+            "2106"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 4.8,
+          "sourceDisplacementKg": 7798517.0,
+          "momentKgMetres": 1221318.0,
+          "sourceLeverMetres": 0.157,
+          "areaM2": 2094.0,
+          "sourceTokens": [
+            "4.800",
+            "7798517",
+            "1221318",
+            "0.157",
+            "2094"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 4.9,
+          "sourceDisplacementKg": 7980815.0,
+          "momentKgMetres": 1214443.0,
+          "sourceLeverMetres": 0.152,
+          "areaM2": 2082.0,
+          "sourceTokens": [
+            "4.900",
+            "7980815",
+            "1214443",
+            "0.152",
+            "2082"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 5.0,
+          "sourceDisplacementKg": 8163968.0,
+          "momentKgMetres": 1207566.0,
+          "sourceLeverMetres": 0.148,
+          "areaM2": 2070.0,
+          "sourceTokens": [
+            "5.000",
+            "8163968",
+            "1207566",
+            "0.148",
+            "2070"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 5.1,
+          "sourceDisplacementKg": 8347895.0,
+          "momentKgMetres": 1200690.0,
+          "sourceLeverMetres": 0.144,
+          "areaM2": 2058.0,
+          "sourceTokens": [
+            "5.100",
+            "8347895",
+            "1200690",
+            "0.144",
+            "2058"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 5.2,
+          "sourceDisplacementKg": 8533063.0,
+          "momentKgMetres": 1193810.0,
+          "sourceLeverMetres": 0.14,
+          "areaM2": 2046.0,
+          "sourceTokens": [
+            "5.200",
+            "8533063",
+            "1193810",
+            "0.140",
+            "2046"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 5.3,
+          "sourceDisplacementKg": 8719113.0,
+          "momentKgMetres": 1186917.0,
+          "sourceLeverMetres": 0.136,
+          "areaM2": 2033.0,
+          "sourceTokens": [
+            "5.300",
+            "8719113",
+            "1186917",
+            "0.136",
+            "2033"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 5.4,
+          "sourceDisplacementKg": 8905888.0,
+          "momentKgMetres": 1180003.0,
+          "sourceLeverMetres": 0.132,
+          "areaM2": 2021.0,
+          "sourceTokens": [
+            "5.400",
+            "8905888",
+            "1180003",
+            "0.132",
+            "2021"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 5.5,
+          "sourceDisplacementKg": 9093166.0,
+          "momentKgMetres": 1173089.0,
+          "sourceLeverMetres": 0.129,
+          "areaM2": 2009.0,
+          "sourceTokens": [
+            "5.500",
+            "9093166",
+            "1173089",
+            "0.129",
+            "2009"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 5.6,
+          "sourceDisplacementKg": 9281039.0,
+          "momentKgMetres": 1166175.0,
+          "sourceLeverMetres": 0.126,
+          "areaM2": 1996.0,
+          "sourceTokens": [
+            "5.600",
+            "9281039",
+            "1166175",
+            "0.126",
+            "1996"
+          ],
+          "pdfPage": 88
+        },
+        {
+          "draftMouldedMetres": 5.7,
+          "sourceDisplacementKg": 9469485.0,
+          "momentKgMetres": 1159261.0,
+          "sourceLeverMetres": 0.122,
+          "areaM2": 1984.0,
+          "sourceTokens": [
+            "5.700",
+            "9469485",
+            "1159261",
+            "0.122",
+            "1984"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 5.8,
+          "sourceDisplacementKg": 9658514.0,
+          "momentKgMetres": 1152347.0,
+          "sourceLeverMetres": 0.119,
+          "areaM2": 1971.0,
+          "sourceTokens": [
+            "5.800",
+            "9658514",
+            "1152347",
+            "0.119",
+            "1971"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 5.9,
+          "sourceDisplacementKg": 9848147.0,
+          "momentKgMetres": 1145433.0,
+          "sourceLeverMetres": 0.116,
+          "areaM2": 1959.0,
+          "sourceTokens": [
+            "5.900",
+            "9848147",
+            "1145433",
+            "0.116",
+            "1959"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 6.0,
+          "sourceDisplacementKg": 10038392.0,
+          "momentKgMetres": 1138519.0,
+          "sourceLeverMetres": 0.113,
+          "areaM2": 1947.0,
+          "sourceTokens": [
+            "6.000",
+            "10038392",
+            "1138519",
+            "0.113",
+            "1947"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 6.1,
+          "sourceDisplacementKg": 10229251.0,
+          "momentKgMetres": 1131605.0,
+          "sourceLeverMetres": 0.111,
+          "areaM2": 1934.0,
+          "sourceTokens": [
+            "6.100",
+            "10229251",
+            "1131605",
+            "0.111",
+            "1934"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 6.2,
+          "sourceDisplacementKg": 10420760.0,
+          "momentKgMetres": 1124691.0,
+          "sourceLeverMetres": 0.108,
+          "areaM2": 1922.0,
+          "sourceTokens": [
+            "6.200",
+            "10420760",
+            "1124691",
+            "0.108",
+            "1922"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 6.3,
+          "sourceDisplacementKg": 10612936.0,
+          "momentKgMetres": 1117777.0,
+          "sourceLeverMetres": 0.105,
+          "areaM2": 1909.0,
+          "sourceTokens": [
+            "6.300",
+            "10612936",
+            "1117777",
+            "0.105",
+            "1909"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 6.4,
+          "sourceDisplacementKg": 10805788.0,
+          "momentKgMetres": 1110863.0,
+          "sourceLeverMetres": 0.103,
+          "areaM2": 1897.0,
+          "sourceTokens": [
+            "6.400",
+            "10805788",
+            "1110863",
+            "0.103",
+            "1897"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 6.5,
+          "sourceDisplacementKg": 10999290.0,
+          "momentKgMetres": 1103949.0,
+          "sourceLeverMetres": 0.1,
+          "areaM2": 1885.0,
+          "sourceTokens": [
+            "6.500",
+            "10999290",
+            "1103949",
+            "0.100",
+            "1885"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 6.6,
+          "sourceDisplacementKg": 11193498.0,
+          "momentKgMetres": 1097035.0,
+          "sourceLeverMetres": 0.098,
+          "areaM2": 1872.0,
+          "sourceTokens": [
+            "6.600",
+            "11193498",
+            "1097035",
+            "0.098",
+            "1872"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 6.7,
+          "sourceDisplacementKg": 11388402.0,
+          "momentKgMetres": 1090121.0,
+          "sourceLeverMetres": 0.096,
+          "areaM2": 1860.0,
+          "sourceTokens": [
+            "6.700",
+            "11388402",
+            "1090121",
+            "0.096",
+            "1860"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 6.8,
+          "sourceDisplacementKg": 11584039.0,
+          "momentKgMetres": 1083207.0,
+          "sourceLeverMetres": 0.094,
+          "areaM2": 1847.0,
+          "sourceTokens": [
+            "6.800",
+            "11584039",
+            "1083207",
+            "0.094",
+            "1847"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 6.9,
+          "sourceDisplacementKg": 11780376.0,
+          "momentKgMetres": 1076293.0,
+          "sourceLeverMetres": 0.091,
+          "areaM2": 1835.0,
+          "sourceTokens": [
+            "6.900",
+            "11780376",
+            "1076293",
+            "0.091",
+            "1835"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 7.0,
+          "sourceDisplacementKg": 11977502.0,
+          "momentKgMetres": 1069379.0,
+          "sourceLeverMetres": 0.089,
+          "areaM2": 1823.0,
+          "sourceTokens": [
+            "7.000",
+            "11977502",
+            "1069379",
+            "0.089",
+            "1823"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 7.1,
+          "sourceDisplacementKg": 12175375.0,
+          "momentKgMetres": 1062465.0,
+          "sourceLeverMetres": 0.087,
+          "areaM2": 1810.0,
+          "sourceTokens": [
+            "7.100",
+            "12175375",
+            "1062465",
+            "0.087",
+            "1810"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 7.2,
+          "sourceDisplacementKg": 12374049.0,
+          "momentKgMetres": 1055551.0,
+          "sourceLeverMetres": 0.085,
+          "areaM2": 1798.0,
+          "sourceTokens": [
+            "7.200",
+            "12374049",
+            "1055551",
+            "0.085",
+            "1798"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 7.3,
+          "sourceDisplacementKg": 12573468.0,
+          "momentKgMetres": 1048637.0,
+          "sourceLeverMetres": 0.083,
+          "areaM2": 1785.0,
+          "sourceTokens": [
+            "7.300",
+            "12573468",
+            "1048637",
+            "0.083",
+            "1785"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 7.4,
+          "sourceDisplacementKg": 12773489.0,
+          "momentKgMetres": 1041723.0,
+          "sourceLeverMetres": 0.082,
+          "areaM2": 1773.0,
+          "sourceTokens": [
+            "7.400",
+            "12773489",
+            "1041723",
+            "0.082",
+            "1773"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 7.5,
+          "sourceDisplacementKg": 12973958.0,
+          "momentKgMetres": 1034809.0,
+          "sourceLeverMetres": 0.08,
+          "areaM2": 1761.0,
+          "sourceTokens": [
+            "7.500",
+            "12973958",
+            "1034809",
+            "0.080",
+            "1761"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 7.6,
+          "sourceDisplacementKg": 13174746.0,
+          "momentKgMetres": 1027895.0,
+          "sourceLeverMetres": 0.078,
+          "areaM2": 1748.0,
+          "sourceTokens": [
+            "7.600",
+            "13174746",
+            "1027895",
+            "0.078",
+            "1748"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 7.7,
+          "sourceDisplacementKg": 13375827.0,
+          "momentKgMetres": 1020981.0,
+          "sourceLeverMetres": 0.076,
+          "areaM2": 1736.0,
+          "sourceTokens": [
+            "7.700",
+            "13375827",
+            "1020981",
+            "0.076",
+            "1736"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 7.8,
+          "sourceDisplacementKg": 13577158.0,
+          "momentKgMetres": 1014067.0,
+          "sourceLeverMetres": 0.075,
+          "areaM2": 1723.0,
+          "sourceTokens": [
+            "7.800",
+            "13577158",
+            "1014067",
+            "0.075",
+            "1723"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 7.9,
+          "sourceDisplacementKg": 13778740.0,
+          "momentKgMetres": 1007153.0,
+          "sourceLeverMetres": 0.073,
+          "areaM2": 1711.0,
+          "sourceTokens": [
+            "7.900",
+            "13778740",
+            "1007153",
+            "0.073",
+            "1711"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 8.0,
+          "sourceDisplacementKg": 13980540.0,
+          "momentKgMetres": 1000239.0,
+          "sourceLeverMetres": 0.072,
+          "areaM2": 1699.0,
+          "sourceTokens": [
+            "8.000",
+            "13980540",
+            "1000239",
+            "0.072",
+            "1699"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 8.1,
+          "sourceDisplacementKg": 14182563.0,
+          "momentKgMetres": 993325.0,
+          "sourceLeverMetres": 0.07,
+          "areaM2": 1686.0,
+          "sourceTokens": [
+            "8.100",
+            "14182563",
+            "993325",
+            "0.070",
+            "1686"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 8.2,
+          "sourceDisplacementKg": 14384779.0,
+          "momentKgMetres": 986411.0,
+          "sourceLeverMetres": 0.069,
+          "areaM2": 1674.0,
+          "sourceTokens": [
+            "8.200",
+            "14384779",
+            "986411",
+            "0.069",
+            "1674"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 8.3,
+          "sourceDisplacementKg": 14587219.0,
+          "momentKgMetres": 979497.0,
+          "sourceLeverMetres": 0.067,
+          "areaM2": 1661.0,
+          "sourceTokens": [
+            "8.300",
+            "14587219",
+            "979497",
+            "0.067",
+            "1661"
+          ],
+          "pdfPage": 89
+        },
+        {
+          "draftMouldedMetres": 8.4,
+          "sourceDisplacementKg": 14785682.0,
+          "momentKgMetres": 972583.0,
+          "sourceLeverMetres": 0.066,
+          "areaM2": 1649.0,
+          "sourceTokens": [
+            "8.400",
+            "14785682",
+            "972583",
+            "0.066",
+            "1649"
+          ],
+          "pdfPage": 89
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "label": "Containers: 4 tiers",
+      "rows": [
+        {
+          "draftMouldedMetres": 1.0,
+          "sourceDisplacementKg": 1381227.0,
+          "momentKgMetres": 1583834.0,
+          "sourceLeverMetres": 1.147,
+          "areaM2": 2647.0,
+          "sourceTokens": [
+            "1.000",
+            "1381227",
+            "1583834",
+            "1.147",
+            "2647"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 1.1,
+          "sourceDisplacementKg": 1534583.0,
+          "momentKgMetres": 1576723.0,
+          "sourceLeverMetres": 1.027,
+          "areaM2": 2635.0,
+          "sourceTokens": [
+            "1.100",
+            "1534583",
+            "1576723",
+            "1.027",
+            "2635"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 1.2,
+          "sourceDisplacementKg": 1689468.0,
+          "momentKgMetres": 1569611.0,
+          "sourceLeverMetres": 0.929,
+          "areaM2": 2623.0,
+          "sourceTokens": [
+            "1.200",
+            "1689468",
+            "1569611",
+            "0.929",
+            "2623"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 1.3,
+          "sourceDisplacementKg": 1845752.0,
+          "momentKgMetres": 1562499.0,
+          "sourceLeverMetres": 0.847,
+          "areaM2": 2611.0,
+          "sourceTokens": [
+            "1.300",
+            "1845752",
+            "1562499",
+            "0.847",
+            "2611"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 1.4,
+          "sourceDisplacementKg": 2003309.0,
+          "momentKgMetres": 1555386.0,
+          "sourceLeverMetres": 0.776,
+          "areaM2": 2599.0,
+          "sourceTokens": [
+            "1.400",
+            "2003309",
+            "1555386",
+            "0.776",
+            "2599"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 1.5,
+          "sourceDisplacementKg": 2162049.0,
+          "momentKgMetres": 1548272.0,
+          "sourceLeverMetres": 0.716,
+          "areaM2": 2587.0,
+          "sourceTokens": [
+            "1.500",
+            "2162049",
+            "1548272",
+            "0.716",
+            "2587"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 1.6,
+          "sourceDisplacementKg": 2321864.0,
+          "momentKgMetres": 1541157.0,
+          "sourceLeverMetres": 0.664,
+          "areaM2": 2575.0,
+          "sourceTokens": [
+            "1.600",
+            "2321864",
+            "1541157",
+            "0.664",
+            "2575"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 1.7,
+          "sourceDisplacementKg": 2482626.0,
+          "momentKgMetres": 1534042.0,
+          "sourceLeverMetres": 0.618,
+          "areaM2": 2563.0,
+          "sourceTokens": [
+            "1.700",
+            "2482626",
+            "1534042",
+            "0.618",
+            "2563"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 1.8,
+          "sourceDisplacementKg": 2644356.0,
+          "momentKgMetres": 1526925.0,
+          "sourceLeverMetres": 0.577,
+          "areaM2": 2550.0,
+          "sourceTokens": [
+            "1.800",
+            "2644356",
+            "1526925",
+            "0.577",
+            "2550"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 1.9,
+          "sourceDisplacementKg": 2807573.0,
+          "momentKgMetres": 1519808.0,
+          "sourceLeverMetres": 0.541,
+          "areaM2": 2538.0,
+          "sourceTokens": [
+            "1.900",
+            "2807573",
+            "1519808",
+            "0.541",
+            "2538"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 2.0,
+          "sourceDisplacementKg": 2971541.0,
+          "momentKgMetres": 1512690.0,
+          "sourceLeverMetres": 0.509,
+          "areaM2": 2526.0,
+          "sourceTokens": [
+            "2.000",
+            "2971541",
+            "1512690",
+            "0.509",
+            "2526"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 2.1,
+          "sourceDisplacementKg": 3136146.0,
+          "momentKgMetres": 1505571.0,
+          "sourceLeverMetres": 0.48,
+          "areaM2": 2514.0,
+          "sourceTokens": [
+            "2.100",
+            "3136146",
+            "1505571",
+            "0.480",
+            "2514"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 2.2,
+          "sourceDisplacementKg": 3301322.0,
+          "momentKgMetres": 1498450.0,
+          "sourceLeverMetres": 0.454,
+          "areaM2": 2502.0,
+          "sourceTokens": [
+            "2.200",
+            "3301322",
+            "1498450",
+            "0.454",
+            "2502"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 2.3,
+          "sourceDisplacementKg": 3466992.0,
+          "momentKgMetres": 1491330.0,
+          "sourceLeverMetres": 0.43,
+          "areaM2": 2490.0,
+          "sourceTokens": [
+            "2.300",
+            "3466992",
+            "1491330",
+            "0.430",
+            "2490"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 2.4,
+          "sourceDisplacementKg": 3633075.0,
+          "momentKgMetres": 1484208.0,
+          "sourceLeverMetres": 0.409,
+          "areaM2": 2477.0,
+          "sourceTokens": [
+            "2.400",
+            "3633075",
+            "1484208",
+            "0.409",
+            "2477"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 2.5,
+          "sourceDisplacementKg": 3799604.0,
+          "momentKgMetres": 1477084.0,
+          "sourceLeverMetres": 0.389,
+          "areaM2": 2465.0,
+          "sourceTokens": [
+            "2.500",
+            "3799604",
+            "1477084",
+            "0.389",
+            "2465"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 2.6,
+          "sourceDisplacementKg": 3966611.0,
+          "momentKgMetres": 1469960.0,
+          "sourceLeverMetres": 0.371,
+          "areaM2": 2453.0,
+          "sourceTokens": [
+            "2.600",
+            "3966611",
+            "1469960",
+            "0.371",
+            "2453"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 2.7,
+          "sourceDisplacementKg": 4134091.0,
+          "momentKgMetres": 1462835.0,
+          "sourceLeverMetres": 0.354,
+          "areaM2": 2440.0,
+          "sourceTokens": [
+            "2.700",
+            "4134091",
+            "1462835",
+            "0.354",
+            "2440"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 2.8,
+          "sourceDisplacementKg": 4302072.0,
+          "momentKgMetres": 1455710.0,
+          "sourceLeverMetres": 0.338,
+          "areaM2": 2428.0,
+          "sourceTokens": [
+            "2.800",
+            "4302072",
+            "1455710",
+            "0.338",
+            "2428"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 2.9,
+          "sourceDisplacementKg": 4470565.0,
+          "momentKgMetres": 1448584.0,
+          "sourceLeverMetres": 0.324,
+          "areaM2": 2416.0,
+          "sourceTokens": [
+            "2.900",
+            "4470565",
+            "1448584",
+            "0.324",
+            "2416"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 3.0,
+          "sourceDisplacementKg": 4639574.0,
+          "momentKgMetres": 1441459.0,
+          "sourceLeverMetres": 0.311,
+          "areaM2": 2404.0,
+          "sourceTokens": [
+            "3.000",
+            "4639574",
+            "1441459",
+            "0.311",
+            "2404"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 3.1,
+          "sourceDisplacementKg": 4809095.0,
+          "momentKgMetres": 1434333.0,
+          "sourceLeverMetres": 0.298,
+          "areaM2": 2391.0,
+          "sourceTokens": [
+            "3.100",
+            "4809095",
+            "1434333",
+            "0.298",
+            "2391"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 3.2,
+          "sourceDisplacementKg": 4979139.0,
+          "momentKgMetres": 1427209.0,
+          "sourceLeverMetres": 0.287,
+          "areaM2": 2379.0,
+          "sourceTokens": [
+            "3.200",
+            "4979139",
+            "1427209",
+            "0.287",
+            "2379"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 3.3,
+          "sourceDisplacementKg": 5149688.0,
+          "momentKgMetres": 1420088.0,
+          "sourceLeverMetres": 0.276,
+          "areaM2": 2367.0,
+          "sourceTokens": [
+            "3.300",
+            "5149688",
+            "1420088",
+            "0.276",
+            "2367"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 3.4,
+          "sourceDisplacementKg": 5320764.0,
+          "momentKgMetres": 1412969.0,
+          "sourceLeverMetres": 0.266,
+          "areaM2": 2354.0,
+          "sourceTokens": [
+            "3.400",
+            "5320764",
+            "1412969",
+            "0.266",
+            "2354"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 3.5,
+          "sourceDisplacementKg": 5492368.0,
+          "momentKgMetres": 1405851.0,
+          "sourceLeverMetres": 0.256,
+          "areaM2": 2342.0,
+          "sourceTokens": [
+            "3.500",
+            "5492368",
+            "1405851",
+            "0.256",
+            "2342"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 3.6,
+          "sourceDisplacementKg": 5664866.0,
+          "momentKgMetres": 1398735.0,
+          "sourceLeverMetres": 0.247,
+          "areaM2": 2330.0,
+          "sourceTokens": [
+            "3.600",
+            "5664866",
+            "1398735",
+            "0.247",
+            "2330"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 3.7,
+          "sourceDisplacementKg": 5838589.0,
+          "momentKgMetres": 1391621.0,
+          "sourceLeverMetres": 0.238,
+          "areaM2": 2318.0,
+          "sourceTokens": [
+            "3.700",
+            "5838589",
+            "1391621",
+            "0.238",
+            "2318"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 3.8,
+          "sourceDisplacementKg": 6013575.0,
+          "momentKgMetres": 1384508.0,
+          "sourceLeverMetres": 0.23,
+          "areaM2": 2306.0,
+          "sourceTokens": [
+            "3.800",
+            "6013575",
+            "1384508",
+            "0.230",
+            "2306"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 3.9,
+          "sourceDisplacementKg": 6189342.0,
+          "momentKgMetres": 1377397.0,
+          "sourceLeverMetres": 0.223,
+          "areaM2": 2294.0,
+          "sourceTokens": [
+            "3.900",
+            "6189342",
+            "1377397",
+            "0.223",
+            "2294"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 4.0,
+          "sourceDisplacementKg": 6365682.0,
+          "momentKgMetres": 1370287.0,
+          "sourceLeverMetres": 0.215,
+          "areaM2": 2281.0,
+          "sourceTokens": [
+            "4.000",
+            "6365682",
+            "1370287",
+            "0.215",
+            "2281"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 4.1,
+          "sourceDisplacementKg": 6542601.0,
+          "momentKgMetres": 1363178.0,
+          "sourceLeverMetres": 0.208,
+          "areaM2": 2269.0,
+          "sourceTokens": [
+            "4.100",
+            "6542601",
+            "1363178",
+            "0.208",
+            "2269"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 4.2,
+          "sourceDisplacementKg": 6720112.0,
+          "momentKgMetres": 1356071.0,
+          "sourceLeverMetres": 0.202,
+          "areaM2": 2257.0,
+          "sourceTokens": [
+            "4.200",
+            "6720112",
+            "1356071",
+            "0.202",
+            "2257"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 4.3,
+          "sourceDisplacementKg": 6898227.0,
+          "momentKgMetres": 1348963.0,
+          "sourceLeverMetres": 0.196,
+          "areaM2": 2245.0,
+          "sourceTokens": [
+            "4.300",
+            "6898227",
+            "1348963",
+            "0.196",
+            "2245"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 4.4,
+          "sourceDisplacementKg": 7076941.0,
+          "momentKgMetres": 1341856.0,
+          "sourceLeverMetres": 0.19,
+          "areaM2": 2233.0,
+          "sourceTokens": [
+            "4.400",
+            "7076941",
+            "1341856",
+            "0.190",
+            "2233"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 4.5,
+          "sourceDisplacementKg": 7256292.0,
+          "momentKgMetres": 1334749.0,
+          "sourceLeverMetres": 0.184,
+          "areaM2": 2221.0,
+          "sourceTokens": [
+            "4.500",
+            "7256292",
+            "1334749",
+            "0.184",
+            "2221"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 4.6,
+          "sourceDisplacementKg": 7436299.0,
+          "momentKgMetres": 1327643.0,
+          "sourceLeverMetres": 0.179,
+          "areaM2": 2209.0,
+          "sourceTokens": [
+            "4.600",
+            "7436299",
+            "1327643",
+            "0.179",
+            "2209"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 4.7,
+          "sourceDisplacementKg": 7617038.0,
+          "momentKgMetres": 1320536.0,
+          "sourceLeverMetres": 0.173,
+          "areaM2": 2197.0,
+          "sourceTokens": [
+            "4.700",
+            "7617038",
+            "1320536",
+            "0.173",
+            "2197"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 4.8,
+          "sourceDisplacementKg": 7798517.0,
+          "momentKgMetres": 1313428.0,
+          "sourceLeverMetres": 0.168,
+          "areaM2": 2185.0,
+          "sourceTokens": [
+            "4.800",
+            "7798517",
+            "1313428",
+            "0.168",
+            "2185"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 4.9,
+          "sourceDisplacementKg": 7980815.0,
+          "momentKgMetres": 1306319.0,
+          "sourceLeverMetres": 0.164,
+          "areaM2": 2173.0,
+          "sourceTokens": [
+            "4.900",
+            "7980815",
+            "1306319",
+            "0.164",
+            "2173"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 5.0,
+          "sourceDisplacementKg": 8163968.0,
+          "momentKgMetres": 1299210.0,
+          "sourceLeverMetres": 0.159,
+          "areaM2": 2160.0,
+          "sourceTokens": [
+            "5.000",
+            "8163968",
+            "1299210",
+            "0.159",
+            "2160"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 5.1,
+          "sourceDisplacementKg": 8347895.0,
+          "momentKgMetres": 1292101.0,
+          "sourceLeverMetres": 0.155,
+          "areaM2": 2148.0,
+          "sourceTokens": [
+            "5.100",
+            "8347895",
+            "1292101",
+            "0.155",
+            "2148"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 5.2,
+          "sourceDisplacementKg": 8533063.0,
+          "momentKgMetres": 1284988.0,
+          "sourceLeverMetres": 0.151,
+          "areaM2": 2136.0,
+          "sourceTokens": [
+            "5.200",
+            "8533063",
+            "1284988",
+            "0.151",
+            "2136"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 5.3,
+          "sourceDisplacementKg": 8719113.0,
+          "momentKgMetres": 1277862.0,
+          "sourceLeverMetres": 0.147,
+          "areaM2": 2124.0,
+          "sourceTokens": [
+            "5.300",
+            "8719113",
+            "1277862",
+            "0.147",
+            "2124"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 5.4,
+          "sourceDisplacementKg": 8905888.0,
+          "momentKgMetres": 1270715.0,
+          "sourceLeverMetres": 0.143,
+          "areaM2": 2112.0,
+          "sourceTokens": [
+            "5.400",
+            "8905888",
+            "1270715",
+            "0.143",
+            "2112"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 5.5,
+          "sourceDisplacementKg": 9093166.0,
+          "momentKgMetres": 1263568.0,
+          "sourceLeverMetres": 0.139,
+          "areaM2": 2099.0,
+          "sourceTokens": [
+            "5.500",
+            "9093166",
+            "1263568",
+            "0.139",
+            "2099"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 5.6,
+          "sourceDisplacementKg": 9281039.0,
+          "momentKgMetres": 1256422.0,
+          "sourceLeverMetres": 0.135,
+          "areaM2": 2087.0,
+          "sourceTokens": [
+            "5.600",
+            "9281039",
+            "1256422",
+            "0.135",
+            "2087"
+          ],
+          "pdfPage": 91
+        },
+        {
+          "draftMouldedMetres": 5.7,
+          "sourceDisplacementKg": 9469485.0,
+          "momentKgMetres": 1249275.0,
+          "sourceLeverMetres": 0.132,
+          "areaM2": 2074.0,
+          "sourceTokens": [
+            "5.700",
+            "9469485",
+            "1249275",
+            "0.132",
+            "2074"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 5.8,
+          "sourceDisplacementKg": 9658514.0,
+          "momentKgMetres": 1242128.0,
+          "sourceLeverMetres": 0.129,
+          "areaM2": 2062.0,
+          "sourceTokens": [
+            "5.800",
+            "9658514",
+            "1242128",
+            "0.129",
+            "2062"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 5.9,
+          "sourceDisplacementKg": 9848147.0,
+          "momentKgMetres": 1234981.0,
+          "sourceLeverMetres": 0.125,
+          "areaM2": 2050.0,
+          "sourceTokens": [
+            "5.900",
+            "9848147",
+            "1234981",
+            "0.125",
+            "2050"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 6.0,
+          "sourceDisplacementKg": 10038392.0,
+          "momentKgMetres": 1227834.0,
+          "sourceLeverMetres": 0.122,
+          "areaM2": 2037.0,
+          "sourceTokens": [
+            "6.000",
+            "10038392",
+            "1227834",
+            "0.122",
+            "2037"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 6.1,
+          "sourceDisplacementKg": 10229251.0,
+          "momentKgMetres": 1220687.0,
+          "sourceLeverMetres": 0.119,
+          "areaM2": 2025.0,
+          "sourceTokens": [
+            "6.100",
+            "10229251",
+            "1220687",
+            "0.119",
+            "2025"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 6.2,
+          "sourceDisplacementKg": 10420760.0,
+          "momentKgMetres": 1213540.0,
+          "sourceLeverMetres": 0.116,
+          "areaM2": 2012.0,
+          "sourceTokens": [
+            "6.200",
+            "10420760",
+            "1213540",
+            "0.116",
+            "2012"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 6.3,
+          "sourceDisplacementKg": 10612936.0,
+          "momentKgMetres": 1206393.0,
+          "sourceLeverMetres": 0.114,
+          "areaM2": 2000.0,
+          "sourceTokens": [
+            "6.300",
+            "10612936",
+            "1206393",
+            "0.114",
+            "2000"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 6.4,
+          "sourceDisplacementKg": 10805788.0,
+          "momentKgMetres": 1199247.0,
+          "sourceLeverMetres": 0.111,
+          "areaM2": 1988.0,
+          "sourceTokens": [
+            "6.400",
+            "10805788",
+            "1199247",
+            "0.111",
+            "1988"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 6.5,
+          "sourceDisplacementKg": 10999290.0,
+          "momentKgMetres": 1192100.0,
+          "sourceLeverMetres": 0.108,
+          "areaM2": 1975.0,
+          "sourceTokens": [
+            "6.500",
+            "10999290",
+            "1192100",
+            "0.108",
+            "1975"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 6.6,
+          "sourceDisplacementKg": 11193498.0,
+          "momentKgMetres": 1184953.0,
+          "sourceLeverMetres": 0.106,
+          "areaM2": 1963.0,
+          "sourceTokens": [
+            "6.600",
+            "11193498",
+            "1184953",
+            "0.106",
+            "1963"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 6.7,
+          "sourceDisplacementKg": 11388402.0,
+          "momentKgMetres": 1177806.0,
+          "sourceLeverMetres": 0.103,
+          "areaM2": 1950.0,
+          "sourceTokens": [
+            "6.700",
+            "11388402",
+            "1177806",
+            "0.103",
+            "1950"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 6.8,
+          "sourceDisplacementKg": 11584039.0,
+          "momentKgMetres": 1170659.0,
+          "sourceLeverMetres": 0.101,
+          "areaM2": 1938.0,
+          "sourceTokens": [
+            "6.800",
+            "11584039",
+            "1170659",
+            "0.101",
+            "1938"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 6.9,
+          "sourceDisplacementKg": 11780376.0,
+          "momentKgMetres": 1163512.0,
+          "sourceLeverMetres": 0.099,
+          "areaM2": 1926.0,
+          "sourceTokens": [
+            "6.900",
+            "11780376",
+            "1163512",
+            "0.099",
+            "1926"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 7.0,
+          "sourceDisplacementKg": 11977502.0,
+          "momentKgMetres": 1156365.0,
+          "sourceLeverMetres": 0.097,
+          "areaM2": 1913.0,
+          "sourceTokens": [
+            "7.000",
+            "11977502",
+            "1156365",
+            "0.097",
+            "1913"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 7.1,
+          "sourceDisplacementKg": 12175375.0,
+          "momentKgMetres": 1149219.0,
+          "sourceLeverMetres": 0.094,
+          "areaM2": 1901.0,
+          "sourceTokens": [
+            "7.100",
+            "12175375",
+            "1149219",
+            "0.094",
+            "1901"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 7.2,
+          "sourceDisplacementKg": 12374049.0,
+          "momentKgMetres": 1142072.0,
+          "sourceLeverMetres": 0.092,
+          "areaM2": 1888.0,
+          "sourceTokens": [
+            "7.200",
+            "12374049",
+            "1142072",
+            "0.092",
+            "1888"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 7.3,
+          "sourceDisplacementKg": 12573468.0,
+          "momentKgMetres": 1134925.0,
+          "sourceLeverMetres": 0.09,
+          "areaM2": 1876.0,
+          "sourceTokens": [
+            "7.300",
+            "12573468",
+            "1134925",
+            "0.090",
+            "1876"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 7.4,
+          "sourceDisplacementKg": 12773489.0,
+          "momentKgMetres": 1127778.0,
+          "sourceLeverMetres": 0.088,
+          "areaM2": 1864.0,
+          "sourceTokens": [
+            "7.400",
+            "12773489",
+            "1127778",
+            "0.088",
+            "1864"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 7.5,
+          "sourceDisplacementKg": 12973958.0,
+          "momentKgMetres": 1120631.0,
+          "sourceLeverMetres": 0.086,
+          "areaM2": 1851.0,
+          "sourceTokens": [
+            "7.500",
+            "12973958",
+            "1120631",
+            "0.086",
+            "1851"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 7.6,
+          "sourceDisplacementKg": 13174746.0,
+          "momentKgMetres": 1113484.0,
+          "sourceLeverMetres": 0.085,
+          "areaM2": 1839.0,
+          "sourceTokens": [
+            "7.600",
+            "13174746",
+            "1113484",
+            "0.085",
+            "1839"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 7.7,
+          "sourceDisplacementKg": 13375827.0,
+          "momentKgMetres": 1106337.0,
+          "sourceLeverMetres": 0.083,
+          "areaM2": 1826.0,
+          "sourceTokens": [
+            "7.700",
+            "13375827",
+            "1106337",
+            "0.083",
+            "1826"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 7.8,
+          "sourceDisplacementKg": 13577158.0,
+          "momentKgMetres": 1099191.0,
+          "sourceLeverMetres": 0.081,
+          "areaM2": 1814.0,
+          "sourceTokens": [
+            "7.800",
+            "13577158",
+            "1099191",
+            "0.081",
+            "1814"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 7.9,
+          "sourceDisplacementKg": 13778740.0,
+          "momentKgMetres": 1092044.0,
+          "sourceLeverMetres": 0.079,
+          "areaM2": 1802.0,
+          "sourceTokens": [
+            "7.900",
+            "13778740",
+            "1092044",
+            "0.079",
+            "1802"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 8.0,
+          "sourceDisplacementKg": 13980540.0,
+          "momentKgMetres": 1084897.0,
+          "sourceLeverMetres": 0.078,
+          "areaM2": 1789.0,
+          "sourceTokens": [
+            "8.000",
+            "13980540",
+            "1084897",
+            "0.078",
+            "1789"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 8.1,
+          "sourceDisplacementKg": 14182563.0,
+          "momentKgMetres": 1077750.0,
+          "sourceLeverMetres": 0.076,
+          "areaM2": 1777.0,
+          "sourceTokens": [
+            "8.100",
+            "14182563",
+            "1077750",
+            "0.076",
+            "1777"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 8.2,
+          "sourceDisplacementKg": 14384779.0,
+          "momentKgMetres": 1070603.0,
+          "sourceLeverMetres": 0.074,
+          "areaM2": 1764.0,
+          "sourceTokens": [
+            "8.200",
+            "14384779",
+            "1070603",
+            "0.074",
+            "1764"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 8.3,
+          "sourceDisplacementKg": 14587219.0,
+          "momentKgMetres": 1063456.0,
+          "sourceLeverMetres": 0.073,
+          "areaM2": 1752.0,
+          "sourceTokens": [
+            "8.300",
+            "14587219",
+            "1063456",
+            "0.073",
+            "1752"
+          ],
+          "pdfPage": 92
+        },
+        {
+          "draftMouldedMetres": 8.4,
+          "sourceDisplacementKg": 14785682.0,
+          "momentKgMetres": 1056309.0,
+          "sourceLeverMetres": 0.071,
+          "areaM2": 1740.0,
+          "sourceTokens": [
+            "8.400",
+            "14785682",
+            "1056309",
+            "0.071",
+            "1740"
+          ],
+          "pdfPage": 92
+        }
+      ]
+    }
+  ]
+}

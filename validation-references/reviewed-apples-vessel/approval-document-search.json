@@ -1,0 +1,196 @@
+{
+  "scope": "35 supplied PDFs, 2736 pages: text and annotation contents searched; seven vessel-document cover pages visually reviewed. Embedded image-only letters are not excluded by text search.",
+  "finding": "No final approval letter or separately identified final Damage Control Plan located. Current approval remains unconfirmed.",
+  "documents": [
+    {
+      "file": "GHID PROIECT-20260910/PLAN DE STIVUIRE.pdf",
+      "pages": 1,
+      "hits": []
+    },
+    {
+      "file": "GHID PROIECT-20260910/EXEMPLU EVALUARE PROIECT.pdf",
+      "pages": 8,
+      "hits": []
+    },
+    {
+      "file": "GHID PROIECT-20260910/Cargo Info Case Study.pdf",
+      "pages": 30,
+      "hits": []
+    },
+    {
+      "file": "GHID PROIECT-20260910/GHID PROIECT.pdf",
+      "pages": 16,
+      "hits": []
+    },
+    {
+      "file": "GHID PROIECT-20260910/exemplu proiect 2.pdf",
+      "pages": 32,
+      "hits": []
+    },
+    {
+      "file": "GHID PROIECT-20260910/Introducere Proiect TTM.pdf",
+      "pages": 37,
+      "hits": []
+    },
+    {
+      "file": "GHID PROIECT-20260910/Prj Explanations.pdf",
+      "pages": 9,
+      "hits": []
+    },
+    {
+      "file": "DOCUMENTATIE NAVA-20260910/005_TANKS_CAPACITY_TABLE.pdf",
+      "pages": 179,
+      "hits": []
+    },
+    {
+      "file": "DOCUMENTATIE NAVA-20260910/001_GENERAL_ARRANGEMENT.pdf",
+      "pages": 1,
+      "hits": []
+    },
+    {
+      "file": "DOCUMENTATIE NAVA-20260910/003_CARGO_SECURING_MANUAL.pdf",
+      "pages": 111,
+      "hits": []
+    },
+    {
+      "file": "DOCUMENTATIE NAVA-20260910/007_BALLAST_MANAGEMENT.pdf",
+      "pages": 628,
+      "hits": []
+    },
+    {
+      "file": "DOCUMENTATIE NAVA-20260910/006_STRENGHT_LOADING_MANUAL.pdf",
+      "pages": 225,
+      "hits": []
+    },
+    {
+      "file": "DOCUMENTATIE NAVA-20260910/004_STABILITY_LOADING_MANUAL.pdf",
+      "pages": 504,
+      "hits": [
+        {
+          "page": 1,
+          "matches": [
+            "document number : P10046-076-130"
+          ]
+        },
+        {
+          "page": 2,
+          "matches": [
+            "Damage Control Manual, document number 076-125",
+            "Damage Control Plan, document number 100-075"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "DOCUMENTATIE NAVA-20260910/002_TANK_ARRANGEMENT.pdf",
+      "pages": 1,
+      "hits": []
+    },
+    {
+      "file": "Prezentari CURS-20260910/Timber Deck Code - 2011.pdf",
+      "pages": 71,
+      "hits": []
+    },
+    {
+      "file": "Prezentari CURS-20260910/CARGO_SURVEY_L6.pdf",
+      "pages": 87,
+      "hits": []
+    },
+    {
+      "file": "Prezentari CURS-20260910/4102020 1505 lecture 8 Prj Explanations.pdf",
+      "pages": 9,
+      "hits": []
+    },
+    {
+      "file": "Prezentari CURS-20260910/CARGO_STOWAGE_AND_SECURING_L5.pdf",
+      "pages": 84,
+      "hits": []
+    },
+    {
+      "file": "Prezentari CURS-20260910/Lect 11 Timber.pdf",
+      "pages": 8,
+      "hits": []
+    },
+    {
+      "file": "Prezentari CURS-20260910/lecture 7 IMDG.pdf",
+      "pages": 27,
+      "hits": []
+    },
+    {
+      "file": "Prezentari CURS-20260910/Convention.for.Safe.Containers.pdf",
+      "pages": 56,
+      "hits": []
+    },
+    {
+      "file": "Prezentari CURS-20260910/PRE STOWAGE PLANNING.pdf",
+      "pages": 36,
+      "hits": []
+    },
+    {
+      "file": "Prezentari CURS-20260910/Lect 11 addendum Timber Deck Cargoes.pdf",
+      "pages": 6,
+      "hits": []
+    },
+    {
+      "file": "Prezentari CURS-20260910/Lect 11 addendum Safe-practice-for-ships-carrying-timber-deck-cargoes.pdf",
+      "pages": 2,
+      "hits": []
+    },
+    {
+      "file": "Prezentari CURS-20260910/Holds  Hatch Covers LECTURE 10.pdf",
+      "pages": 32,
+      "hits": []
+    },
+    {
+      "file": "Prezentari CURS-20260910/L 12 UK PI Club - Issue 7 - January 2004.pdf",
+      "pages": 46,
+      "hits": []
+    },
+    {
+      "file": "Prezentari CURS-20260910/L 12 A Master Guide to Container Securing.pdf",
+      "pages": 38,
+      "hits": [],
+      "fallback": "PDFium text extraction"
+    },
+    {
+      "file": "Prezentari CURS-20260910/lecture 8-9.pdf",
+      "pages": 52,
+      "hits": []
+    },
+    {
+      "file": "Prezentari CURS-20260910/Lecture 7  IMDG ro.pdf",
+      "pages": 41,
+      "hits": []
+    },
+    {
+      "file": "Prezentari CURS-20260910/ContainerDamageReport.pdf",
+      "pages": 1,
+      "hits": []
+    },
+    {
+      "file": "CURS-20260910/IFR-TTM1 Unit 3 - Inspectare.pdf",
+      "pages": 76,
+      "hits": []
+    },
+    {
+      "file": "CURS-20260910/TTM-OBIECTIVE-COMPETENTE-EVALUARE.pdf",
+      "pages": 17,
+      "hits": []
+    },
+    {
+      "file": "CURS-20260910/IFR-TTM1 Unit 2 - Manipulare si Stivuire.pdf",
+      "pages": 166,
+      "hits": []
+    },
+    {
+      "file": "CURS-20260910/IFR-TTM1 Unit 1 - Efectul marfii.pdf",
+      "pages": 62,
+      "hits": []
+    },
+    {
+      "file": "CURS-20260910/Introducere Curs TTM.pdf",
+      "pages": 37,
+      "hits": []
+    }
+  ]
+}

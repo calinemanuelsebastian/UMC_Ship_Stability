@@ -1,0 +1,2179 @@
+{
+  "format": "umc-downflooding-samples",
+  "version": 1,
+  "source": {
+    "file": "004_STABILITY_LOADING_MANUAL.pdf",
+    "sha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3"
+  },
+  "heelDirection": "starboard",
+  "referenceDensity": 1.025,
+  "massRangeTonnes": [
+    3500,
+    14800
+  ],
+  "coordinateNote": "Frame 0, centreline, baseline; source coordinates retained. No geometry-based immersion calculation.",
+  "unknownToken": "- means no numeric threshold supplied; not zero, infinity or proof of safety.",
+  "validation": "Every threshold token agrees between pypdf and pdfplumber.",
+  "corrections": [],
+  "openings": [
+    {
+      "name": "entr.fcle",
+      "x": 109.8,
+      "y": -4.93,
+      "z": 13.1,
+      "type": "Weathertight opening",
+      "compartment": "Sling store fore",
+      "pdfPage": 18
+    },
+    {
+      "name": "entr.mooringd.store",
+      "x": 114.6,
+      "y": 0.0,
+      "z": 13.1,
+      "type": "Weathertight opening",
+      "compartment": "Mooring deck store",
+      "pdfPage": 18
+    },
+    {
+      "name": "entr.paintstore",
+      "x": 109.8,
+      "y": 4.93,
+      "z": 13.1,
+      "type": "Weathertight opening",
+      "compartment": "Paintstore",
+      "pdfPage": 18
+    },
+    {
+      "name": "entr.CO2",
+      "x": 109.6,
+      "y": -6.0,
+      "z": 13.1,
+      "type": "Watertight",
+      "compartment": "CO2 Room",
+      "pdfPage": 18
+    },
+    {
+      "name": "entr.Em.gen.set",
+      "x": 1.5,
+      "y": -7.9,
+      "z": 13.1,
+      "type": "Weathertight opening",
+      "compartment": "Accomodation",
+      "pdfPage": 18
+    },
+    {
+      "name": "entr.hold1_f",
+      "x": 108.5,
+      "y": 2.01,
+      "z": 13.1,
+      "type": "Weathertight opening",
+      "compartment": "Hold fwd (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "entr.hold1_a",
+      "x": 81.5,
+      "y": 6.36,
+      "z": 13.1,
+      "type": "Weathertight opening",
+      "compartment": "Hold fwd (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "entr.hold2_a",
+      "x": 27.6,
+      "y": 8.0,
+      "z": 12.0,
+      "type": "Weathertight opening",
+      "compartment": "Hold aft (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "entr.hold2_a",
+      "x": 22.0,
+      "y": -8.0,
+      "z": 12.0,
+      "type": "Weathertight opening",
+      "compartment": "Hold aft (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "entr.hold2_f",
+      "x": 81.5,
+      "y": -6.36,
+      "z": 13.1,
+      "type": "Weathertight opening",
+      "compartment": "Hold aft (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "entr.acc",
+      "x": 2.4,
+      "y": -2.85,
+      "z": 12.9,
+      "type": "Weathertight opening",
+      "compartment": "Accomodation",
+      "pdfPage": 18
+    },
+    {
+      "name": "entr.cargo office",
+      "x": 6.0,
+      "y": -5.52,
+      "z": 12.9,
+      "type": "Weathertight opening",
+      "compartment": "Accomodation",
+      "pdfPage": 18
+    },
+    {
+      "name": "hatch ER",
+      "x": 13.2,
+      "y": 1.35,
+      "z": 13.1,
+      "type": "Watertight",
+      "compartment": "ENGINE ROOM",
+      "pdfPage": 18
+    },
+    {
+      "name": "hold1_vent_p_f",
+      "x": 109.8,
+      "y": -4.1,
+      "z": 17.2,
+      "type": "Weathertight opening",
+      "compartment": "Hold fwd (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "hold2_vent_p_a",
+      "x": 9.6,
+      "y": -6.9,
+      "z": 17.0,
+      "type": "Weathertight opening",
+      "compartment": "Hold aft (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "hold1_vent_sb_f",
+      "x": 109.8,
+      "y": 4.1,
+      "z": 17.2,
+      "type": "Weathertight opening",
+      "compartment": "Hold fwd (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "hold2_vent_sb_a",
+      "x": 9.6,
+      "y": 6.9,
+      "z": 17.0,
+      "type": "Weathertight opening",
+      "compartment": "Hold aft (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "hold1_vent sb a",
+      "x": 81.5,
+      "y": 5.31,
+      "z": 13.4,
+      "type": "Weathertight opening",
+      "compartment": "Hold fwd (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "hold1_vent p a",
+      "x": 81.5,
+      "y": -5.31,
+      "z": 13.4,
+      "type": "Weathertight opening",
+      "compartment": "Hold fwd (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "hold2_vent sb f",
+      "x": 81.5,
+      "y": 4.1,
+      "z": 13.4,
+      "type": "Weathertight opening",
+      "compartment": "Hold aft (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "hold2_vent p f",
+      "x": 81.5,
+      "y": -4.1,
+      "z": 13.4,
+      "type": "Weathertight opening",
+      "compartment": "Hold aft (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "supply vent ER PS",
+      "x": 1.5,
+      "y": -5.515,
+      "z": 17.0,
+      "type": "Open opening",
+      "compartment": "ENGINE ROOM",
+      "pdfPage": 18
+    },
+    {
+      "name": "supply vent ER SB",
+      "x": 1.5,
+      "y": 5.515,
+      "z": 17.0,
+      "type": "Open opening",
+      "compartment": "ENGINE ROOM",
+      "pdfPage": 18
+    },
+    {
+      "name": "vent CO2 ???",
+      "x": 96.2,
+      "y": -8.5,
+      "z": 13.3,
+      "type": "Weathertight opening",
+      "compartment": "CO2 Room",
+      "pdfPage": 18
+    },
+    {
+      "name": "vent DECKSTORE ???",
+      "x": 96.2,
+      "y": 8.5,
+      "z": 13.3,
+      "type": "Weathertight opening",
+      "compartment": "Deck store fore",
+      "pdfPage": 18
+    },
+    {
+      "name": "Hatch deckstore",
+      "x": 101.8,
+      "y": 5.27,
+      "z": 13.1,
+      "type": "Weathertight opening",
+      "compartment": "Deck store fore",
+      "pdfPage": 18
+    },
+    {
+      "name": "vent paintstore",
+      "x": 109.8,
+      "y": 6.6,
+      "z": 15.7,
+      "type": "Weathertight opening",
+      "compartment": "Paintstore",
+      "pdfPage": 18
+    },
+    {
+      "name": "esc.acc.+ER",
+      "x": 8.64,
+      "y": 6.42,
+      "z": 13.1,
+      "type": "Weathertight opening",
+      "compartment": "Accomodation",
+      "pdfPage": 18
+    },
+    {
+      "name": "esc.acc.+ER",
+      "x": 8.64,
+      "y": 6.42,
+      "z": 13.1,
+      "type": "Weathertight opening",
+      "compartment": "ENGINE ROOM",
+      "pdfPage": 18
+    },
+    {
+      "name": "esc.St gear room",
+      "x": 1.5,
+      "y": 1.38,
+      "z": 13.1,
+      "type": "Weathertight opening",
+      "compartment": "STEERING GEAR ROOM",
+      "pdfPage": 18
+    },
+    {
+      "name": "esc.St ER",
+      "x": 1.5,
+      "y": 1.38,
+      "z": 13.1,
+      "type": "Weathertight opening",
+      "compartment": "ENGINE ROOM",
+      "pdfPage": 18
+    },
+    {
+      "name": "hatch prov.store",
+      "x": 1.1,
+      "y": 7.9,
+      "z": 13.1,
+      "type": "Weathertight opening",
+      "compartment": "Provision store",
+      "pdfPage": 18
+    },
+    {
+      "name": "hatch prov.store",
+      "x": 1.1,
+      "y": 7.9,
+      "z": 13.1,
+      "type": "Weathertight opening",
+      "compartment": "Accomodation",
+      "pdfPage": 18
+    },
+    {
+      "name": "Hold1_p_f",
+      "x": 107.4,
+      "y": -4.14,
+      "z": 12.53,
+      "type": "Weathertight opening",
+      "compartment": "Hold fwd (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "Hold1_p_k",
+      "x": 96.2,
+      "y": -6.9,
+      "z": 12.53,
+      "type": "Weathertight opening",
+      "compartment": "Hold fwd (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "Hold1 p a",
+      "x": 82.2,
+      "y": -6.9,
+      "z": 12.53,
+      "type": "Weathertight opening",
+      "compartment": "Hold fwd (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "Hold2 p f",
+      "x": 80.8,
+      "y": -6.9,
+      "z": 12.53,
+      "type": "Weathertight opening",
+      "compartment": "Hold aft (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "hold2_p_a",
+      "x": 17.1,
+      "y": -6.9,
+      "z": 12.53,
+      "type": "Weathertight opening",
+      "compartment": "Hold aft (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "hold1_sb_f",
+      "x": 107.4,
+      "y": 4.14,
+      "z": 12.53,
+      "type": "Weathertight opening",
+      "compartment": "Hold fwd (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "hold1_sb_k",
+      "x": 96.2,
+      "y": 6.9,
+      "z": 12.53,
+      "type": "Weathertight opening",
+      "compartment": "Hold fwd (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "Hold1 sb a",
+      "x": 82.2,
+      "y": 6.9,
+      "z": 12.53,
+      "type": "Weathertight opening",
+      "compartment": "Hold fwd (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "Hold2 sb f",
+      "x": 80.8,
+      "y": 6.9,
+      "z": 12.53,
+      "type": "Weathertight opening",
+      "compartment": "Hold aft (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "hold2_sb_a",
+      "x": 17.1,
+      "y": 6.9,
+      "z": 12.53,
+      "type": "Weathertight opening",
+      "compartment": "Hold aft (damage)",
+      "pdfPage": 18
+    },
+    {
+      "name": "01_forepeak_f",
+      "x": 113.98,
+      "y": -2.5,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "01 Forepeak",
+      "pdfPage": 18
+    },
+    {
+      "name": "01_forepeak_p_a",
+      "x": 113.98,
+      "y": -2.5,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "01 Forepeak",
+      "pdfPage": 18
+    },
+    {
+      "name": "01_forepeak_sb_a",
+      "x": 113.98,
+      "y": 2.5,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "01 Forepeak",
+      "pdfPage": 18
+    },
+    {
+      "name": "02_deeptank_p f",
+      "x": 110.4,
+      "y": -6.0,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "02 Deeptank PS",
+      "pdfPage": 18
+    },
+    {
+      "name": "02_deeptank_sb a",
+      "x": 108.0,
+      "y": -6.5,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "02 Deeptank PS",
+      "pdfPage": 18
+    },
+    {
+      "name": "02 deeptank sb f",
+      "x": 110.4,
+      "y": 6.0,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "03 Deeptank SB",
+      "pdfPage": 18
+    },
+    {
+      "name": "02 deeptank p a",
+      "x": 108.0,
+      "y": 6.5,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "03 Deeptank SB",
+      "pdfPage": 18
+    },
+    {
+      "name": "03_db_p_f ??",
+      "x": 107.0,
+      "y": -8.0,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "04 DB PS",
+      "pdfPage": 18
+    },
+    {
+      "name": "03_db_p_a",
+      "x": 97.0,
+      "y": -7.15,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "04 DB PS",
+      "pdfPage": 18
+    },
+    {
+      "name": "03_db_sb_f ??",
+      "x": 107.0,
+      "y": 8.0,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "05 DB SB",
+      "pdfPage": 18
+    },
+    {
+      "name": "03_db_sb_a",
+      "x": 97.0,
+      "y": 7.15,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "05 DB SB",
+      "pdfPage": 18
+    },
+    {
+      "name": "03_wt_p_f ??",
+      "x": 107.0,
+      "y": -8.0,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "06 WT PS",
+      "pdfPage": 18
+    },
+    {
+      "name": "03_wt_p_f ??",
+      "x": 102.5,
+      "y": -8.0,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "06 WT PS",
+      "pdfPage": 18
+    },
+    {
+      "name": "03_wt_p_a",
+      "x": 101.5,
+      "y": -7.15,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "08 WT PS",
+      "pdfPage": 18
+    },
+    {
+      "name": "03_wt_p_a",
+      "x": 97.0,
+      "y": -7.15,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "08 WT PS",
+      "pdfPage": 18
+    },
+    {
+      "name": "03_wt_sb_f ??",
+      "x": 107.0,
+      "y": 8.0,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "07 WT SB",
+      "pdfPage": 18
+    },
+    {
+      "name": "03_wt_sb_f ??",
+      "x": 102.5,
+      "y": 8.0,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "07 WT SB",
+      "pdfPage": 18
+    },
+    {
+      "name": "03_wt_sb_a",
+      "x": 101.5,
+      "y": 7.15,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "09 WT SB",
+      "pdfPage": 18
+    },
+    {
+      "name": "03_wt_sb_a",
+      "x": 97.0,
+      "y": 7.15,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "09 WT SB",
+      "pdfPage": 18
+    },
+    {
+      "name": "04_db_p_f",
+      "x": 96.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "10 DB PS",
+      "pdfPage": 18
+    },
+    {
+      "name": "04_db_p_a",
+      "x": 86.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "10 DB PS",
+      "pdfPage": 18
+    },
+    {
+      "name": "04_db_sb_f",
+      "x": 96.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "11 DB SB",
+      "pdfPage": 18
+    },
+    {
+      "name": "04_db_sb_a",
+      "x": 86.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "11 DB SB",
+      "pdfPage": 18
+    },
+    {
+      "name": "04_wt_p_f",
+      "x": 96.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "12 WT PS",
+      "pdfPage": 18
+    },
+    {
+      "name": "04_wt_p_a",
+      "x": 86.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "12 WT PS",
+      "pdfPage": 18
+    },
+    {
+      "name": "04_wt_sb_f",
+      "x": 96.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "13 WT SB",
+      "pdfPage": 18
+    },
+    {
+      "name": "04_wt_sb_a",
+      "x": 86.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "13 WT SB",
+      "pdfPage": 18
+    },
+    {
+      "name": "04a db p f",
+      "x": 84.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "14 DB PS",
+      "pdfPage": 18
+    },
+    {
+      "name": "04a db p a",
+      "x": 74.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "14 DB PS",
+      "pdfPage": 18
+    },
+    {
+      "name": "04a db sb f",
+      "x": 84.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "15 DB SB",
+      "pdfPage": 18
+    },
+    {
+      "name": "04a db sb a",
+      "x": 74.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "15 DB SB",
+      "pdfPage": 18
+    },
+    {
+      "name": "04a wt p f",
+      "x": 84.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "16 WT PS",
+      "pdfPage": 18
+    },
+    {
+      "name": "04a wt p a",
+      "x": 74.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "16 WT PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "04a wt sb f",
+      "x": 84.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "17 WT SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "04a wt sb a",
+      "x": 74.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "17 WT SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "04b db p f",
+      "x": 70.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "14A DB PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "04b db p a",
+      "x": 60.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "14A DB PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "04b db sb f",
+      "x": 70.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "15A DB SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "04b db sb a",
+      "x": 60.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "15A DB SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "04b wt p f",
+      "x": 70.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "16A WT PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "04a wt p a",
+      "x": 60.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "16A WT PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "04b wt sb f",
+      "x": 70.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "17A WT SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "04a wt sb a",
+      "x": 60.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "17A WT SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "05_db_p_f",
+      "x": 59.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "18 DB PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "05_db_p_a",
+      "x": 46.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "18 DB PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "05_db_sb_f",
+      "x": 59.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "19 DB SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "05_db_sb_a",
+      "x": 46.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "19 DB SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "05_wt_p_f",
+      "x": 59.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "20 WT PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "05_wt_p_a",
+      "x": 46.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "20 WT PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "05_wt_sb_f",
+      "x": 59.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "21 WT SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "05_wt_sb_a",
+      "x": 46.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "21 WT SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "06_db_p_f",
+      "x": 45.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "22 DB PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "06_db_p_a",
+      "x": 35.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "22 DB PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "06_db_sb_f",
+      "x": 45.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "23 DB SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "06_db_sb_a",
+      "x": 35.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "23 DB SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "06_wt_p_f",
+      "x": 45.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "24 WT PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "06_wt_p_a",
+      "x": 35.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "24 WT PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "06_wt_sb_f",
+      "x": 45.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "25 WT SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "06_wt_sb_a",
+      "x": 35.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "25 WT SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "07_db_p_f",
+      "x": 34.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "26 DB PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "07_db_p_a",
+      "x": 24.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "26 DB PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "07_db_sb_f",
+      "x": 34.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "27 DB SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "07_db_sb_a",
+      "x": 24.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "27 DB SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "07_wt_p_f",
+      "x": 34.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "28 WT PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "07_wt_p_a",
+      "x": 24.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "28 WT PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "07_wt_sb_f",
+      "x": 34.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "29 WT SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "07_wt_sb_a",
+      "x": 24.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "29 WT SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "09_ap_p ???",
+      "x": 7.5,
+      "y": -8.5,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "30 AP PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "09_ap_p",
+      "x": -1.8,
+      "y": -0.5,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "30 AP PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "09_ap_sb ???",
+      "x": 7.5,
+      "y": 8.5,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "31 AP SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "09_ap_sb",
+      "x": -1.8,
+      "y": 0.5,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "31 AP SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "bunker HFO 1",
+      "x": 22.0,
+      "y": -7.6,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "40 HFO bunker 1",
+      "pdfPage": 19
+    },
+    {
+      "name": "bunker HFO 2",
+      "x": 22.0,
+      "y": -7.6,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "41 HFO bunker 2",
+      "pdfPage": 19
+    },
+    {
+      "name": "hfo st1",
+      "x": 22.0,
+      "y": -7.6,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "46 HFO Settling 1",
+      "pdfPage": 19
+    },
+    {
+      "name": "overflow HFO",
+      "x": 22.0,
+      "y": -7.6,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "48 HFO Overflow",
+      "pdfPage": 19
+    },
+    {
+      "name": "bunker GO",
+      "x": 22.0,
+      "y": -7.6,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "50 MDO Bunker PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "bunker GO",
+      "x": 22.0,
+      "y": -7.6,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "98 MDO bunker 5",
+      "pdfPage": 19
+    },
+    {
+      "name": "bunker GO",
+      "x": 22.0,
+      "y": -7.6,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "99 MDO bunker 6",
+      "pdfPage": 19
+    },
+    {
+      "name": "overflow GO",
+      "x": 22.0,
+      "y": -7.6,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "100 MDO Overflow",
+      "pdfPage": 19
+    },
+    {
+      "name": "hfo st2",
+      "x": 22.0,
+      "y": 7.6,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "47 HFO Settling 2",
+      "pdfPage": 19
+    },
+    {
+      "name": "bunker HFO 3",
+      "x": 22.0,
+      "y": 7.6,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "42 HFO bunker 3",
+      "pdfPage": 19
+    },
+    {
+      "name": "bunker HFO 4",
+      "x": 22.0,
+      "y": 7.6,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "43 HFO bunker 4",
+      "pdfPage": 19
+    },
+    {
+      "name": "FW ps",
+      "x": 8.51,
+      "y": -8.5,
+      "z": 13.36,
+      "type": "Weathertight opening",
+      "compartment": "38 Fresh water PS",
+      "pdfPage": 19
+    },
+    {
+      "name": "FW sb",
+      "x": 8.51,
+      "y": 8.5,
+      "z": 13.36,
+      "type": "Weathertight opening",
+      "compartment": "39 Fresh water SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "Sludge",
+      "x": 9.0,
+      "y": -8.5,
+      "z": 13.36,
+      "type": "Weathertight opening",
+      "compartment": "70 Sludge",
+      "pdfPage": 19
+    },
+    {
+      "name": "Sewage",
+      "x": 9.0,
+      "y": 8.5,
+      "z": 13.36,
+      "type": "Weathertight opening",
+      "compartment": "71 Sewage",
+      "pdfPage": 19
+    },
+    {
+      "name": "BWC_ER???",
+      "x": 9.0,
+      "y": -8.5,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "76 Bilge water coll. ER",
+      "pdfPage": 19
+    },
+    {
+      "name": "BWC_H",
+      "x": 25.85,
+      "y": 7.6,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "73 Bilge water coll. Hold",
+      "pdfPage": 19
+    },
+    {
+      "name": "Dirty Oil",
+      "x": 22.0,
+      "y": 7.6,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "72 Dirty Oil",
+      "pdfPage": 19
+    },
+    {
+      "name": "void_ab._fcle",
+      "x": 113.98,
+      "y": 2.5,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "97 Void ab. FP",
+      "pdfPage": 19
+    },
+    {
+      "name": "03_void_p",
+      "x": 107.0,
+      "y": -7.15,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "80 Void P",
+      "pdfPage": 19
+    },
+    {
+      "name": "03_void_sb",
+      "x": 107.0,
+      "y": 7.15,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "81 Void SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "04_void_p",
+      "x": 96.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "82 Void P",
+      "pdfPage": 19
+    },
+    {
+      "name": "04_void_sb",
+      "x": 96.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "83 Void SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "05_void_p",
+      "x": 34.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "84 Void P",
+      "pdfPage": 19
+    },
+    {
+      "name": "05_void_sb",
+      "x": 34.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "85 Void SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "06_void_p",
+      "x": 23.0,
+      "y": -7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "86 Void P",
+      "pdfPage": 19
+    },
+    {
+      "name": "06_void_sb",
+      "x": 23.0,
+      "y": 7.15,
+      "z": 12.35,
+      "type": "Weathertight opening",
+      "compartment": "87 Void SB",
+      "pdfPage": 19
+    },
+    {
+      "name": "void #13-23",
+      "x": 13.2,
+      "y": 8.2,
+      "z": 13.26,
+      "type": "Weathertight opening",
+      "compartment": "-",
+      "pdfPage": 19
+    }
+  ],
+  "sets": [
+    {
+      "initialTrimMetres": -2,
+      "pdfPage": 62,
+      "openings": [
+        {
+          "name": "supply vent ER PS",
+          "samples": [
+            {
+              "heelDegrees": 0.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 2.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 5.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 10.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 12.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 15.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 20.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 25.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 30.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 35.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 40.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 50.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 60.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            }
+          ]
+        },
+        {
+          "name": "supply vent ER SB",
+          "samples": [
+            {
+              "heelDegrees": 0.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 2.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 5.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 10.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 12.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 15.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 20.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 25.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 30.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 35.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 40.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 50.0,
+              "floodingDisplacementTonnes": 14557.991,
+              "sourceToken": "14557.991"
+            },
+            {
+              "heelDegrees": 60.0,
+              "floodingDisplacementTonnes": 11821.368,
+              "sourceToken": "11821.368"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "initialTrimMetres": -1.5,
+      "pdfPage": 65,
+      "openings": [
+        {
+          "name": "supply vent ER PS",
+          "samples": [
+            {
+              "heelDegrees": 0.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 2.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 5.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 10.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 12.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 15.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 20.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 25.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 30.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 35.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 40.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 50.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 60.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            }
+          ]
+        },
+        {
+          "name": "supply vent ER SB",
+          "samples": [
+            {
+              "heelDegrees": 0.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 2.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 5.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 10.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 12.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 15.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 20.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 25.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 30.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 35.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 40.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 50.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 60.0,
+              "floodingDisplacementTonnes": 12179.644,
+              "sourceToken": "12179.644"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "initialTrimMetres": -1,
+      "pdfPage": 68,
+      "openings": [
+        {
+          "name": "supply vent ER PS",
+          "samples": [
+            {
+              "heelDegrees": 0.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 2.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 5.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 10.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 12.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 15.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 20.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 25.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 30.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 35.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 40.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 50.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 60.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            }
+          ]
+        },
+        {
+          "name": "supply vent ER SB",
+          "samples": [
+            {
+              "heelDegrees": 0.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 2.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 5.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 10.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 12.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 15.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 20.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 25.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 30.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 35.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 40.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 50.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 60.0,
+              "floodingDisplacementTonnes": 12539.543,
+              "sourceToken": "12539.543"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "initialTrimMetres": -0.5,
+      "pdfPage": 71,
+      "openings": [
+        {
+          "name": "supply vent ER PS",
+          "samples": [
+            {
+              "heelDegrees": 0.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 2.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 5.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 10.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 12.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 15.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 20.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 25.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 30.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 35.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 40.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 50.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 60.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            }
+          ]
+        },
+        {
+          "name": "supply vent ER SB",
+          "samples": [
+            {
+              "heelDegrees": 0.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 2.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 5.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 10.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 12.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 15.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 20.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 25.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 30.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 35.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 40.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 50.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 60.0,
+              "floodingDisplacementTonnes": 12902.288,
+              "sourceToken": "12902.288"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "initialTrimMetres": 0,
+      "pdfPage": 74,
+      "openings": [
+        {
+          "name": "supply vent ER PS",
+          "samples": [
+            {
+              "heelDegrees": 0.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 2.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 5.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 10.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 12.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 15.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 20.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 25.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 30.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 35.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 40.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 50.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 60.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            }
+          ]
+        },
+        {
+          "name": "supply vent ER SB",
+          "samples": [
+            {
+              "heelDegrees": 0.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 2.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 5.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 10.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 12.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 15.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 20.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 25.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 30.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 35.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 40.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 50.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 60.0,
+              "floodingDisplacementTonnes": 13270.581,
+              "sourceToken": "13270.581"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "initialTrimMetres": 0.62,
+      "pdfPage": 77,
+      "openings": [
+        {
+          "name": "supply vent ER PS",
+          "samples": [
+            {
+              "heelDegrees": 0.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 2.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 5.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 10.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 12.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 15.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 20.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 25.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 30.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 35.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 40.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 50.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 60.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            }
+          ]
+        },
+        {
+          "name": "supply vent ER SB",
+          "samples": [
+            {
+              "heelDegrees": 0.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 2.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 5.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 10.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 12.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 15.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 20.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 25.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 30.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 35.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 40.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 50.0,
+              "floodingDisplacementTonnes": null,
+              "sourceToken": "-"
+            },
+            {
+              "heelDegrees": 60.0,
+              "floodingDisplacementTonnes": 13739.468,
+              "sourceToken": "13739.468"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "reviewNotes": [
+    "PDF 18 red annotation requires both engine-room supply vent positions to be updated to the final Damage Control Plan. Thresholds remain preliminary."
+  ]
+}

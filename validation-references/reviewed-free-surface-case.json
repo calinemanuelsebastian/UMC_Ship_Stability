@@ -1,0 +1,11 @@
+{
+  "source": "apples-calculations-reviewed.xlsx Calc_Stability C4:C8, C21:C25. KM is from a trimmed table; used only to validate correction arithmetic, not upright hull equivalence.",
+  "displacementTonnes": 9644.269999999999,
+  "vcg": 6.632273279986,
+  "freeSurfaceMomentTransverse": 309.61,
+  "freeSurfaceCorrectionTransverse": 0.032103000019700824,
+  "virtualVcgTransverse": 6.664376280005701,
+  "kmTransverse": 7.7361484070346735,
+  "gmTransverse": 1.1038751270486733,
+  "gmTransverseCorrected": 1.0717721270289724
+}

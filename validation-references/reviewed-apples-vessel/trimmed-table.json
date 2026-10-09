@@ -1,0 +1,5099 @@
+{
+  "version": 1,
+  "modelId": "reviewed-apples-vessel",
+  "source": "004_STABILITY_LOADING_MANUAL.pdf, PDF pp35\u201358. Mean draught at half LPP (PDF 5\u20136), underside keel; moulded conversion subtracts 0.011 m (PDF 32\u201333 worked examples). No extrapolation.",
+  "waterDensity": 1.025,
+  "xPositive": "forward",
+  "longitudinalOriginFromAP": 0,
+  "trimPositive": "bow",
+  "tables": [
+    {
+      "trimMetres": -2.0,
+      "rows": [
+        {
+          "draft": 2.5,
+          "displacementTonnes": 3759.58,
+          "lcb": 56.823,
+          "lcf": 60.802,
+          "kmTransverse": 11.277
+        },
+        {
+          "draft": 2.55,
+          "displacementTonnes": 3842.91,
+          "lcb": 56.909,
+          "lcf": 60.776,
+          "kmTransverse": 11.114
+        },
+        {
+          "draft": 2.6,
+          "displacementTonnes": 3926.42,
+          "lcb": 56.991,
+          "lcf": 60.756,
+          "kmTransverse": 10.959
+        },
+        {
+          "draft": 2.65,
+          "displacementTonnes": 4010.11,
+          "lcb": 57.07,
+          "lcf": 60.897,
+          "kmTransverse": 10.815
+        },
+        {
+          "draft": 2.7,
+          "displacementTonnes": 4094.31,
+          "lcb": 57.149,
+          "lcf": 60.928,
+          "kmTransverse": 10.676
+        },
+        {
+          "draft": 2.75,
+          "displacementTonnes": 4178.73,
+          "lcb": 57.225,
+          "lcf": 60.903,
+          "kmTransverse": 10.54
+        },
+        {
+          "draft": 2.8,
+          "displacementTonnes": 4263.36,
+          "lcb": 57.298,
+          "lcf": 60.821,
+          "kmTransverse": 10.415
+        },
+        {
+          "draft": 2.85,
+          "displacementTonnes": 4348.33,
+          "lcb": 57.366,
+          "lcf": 60.672,
+          "kmTransverse": 10.303
+        },
+        {
+          "draft": 2.9,
+          "displacementTonnes": 4433.69,
+          "lcb": 57.428,
+          "lcf": 60.528,
+          "kmTransverse": 10.205
+        },
+        {
+          "draft": 2.95,
+          "displacementTonnes": 4519.45,
+          "lcb": 57.486,
+          "lcf": 60.375,
+          "kmTransverse": 10.119
+        },
+        {
+          "draft": 3.0,
+          "displacementTonnes": 4605.59,
+          "lcb": 57.539,
+          "lcf": 60.238,
+          "kmTransverse": 10.048
+        },
+        {
+          "draft": 3.05,
+          "displacementTonnes": 4692.1,
+          "lcb": 57.588,
+          "lcf": 60.112,
+          "kmTransverse": 9.984
+        },
+        {
+          "draft": 3.1,
+          "displacementTonnes": 4778.92,
+          "lcb": 57.633,
+          "lcf": 60.059,
+          "kmTransverse": 9.896
+        },
+        {
+          "draft": 3.15,
+          "displacementTonnes": 4865.92,
+          "lcb": 57.676,
+          "lcf": 60.01,
+          "kmTransverse": 9.798
+        },
+        {
+          "draft": 3.2,
+          "displacementTonnes": 4953.1,
+          "lcb": 57.717,
+          "lcf": 59.977,
+          "kmTransverse": 9.703
+        },
+        {
+          "draft": 3.25,
+          "displacementTonnes": 5040.46,
+          "lcb": 57.755,
+          "lcf": 59.926,
+          "kmTransverse": 9.612
+        },
+        {
+          "draft": 3.3,
+          "displacementTonnes": 5128.0,
+          "lcb": 57.792,
+          "lcf": 59.857,
+          "kmTransverse": 9.526
+        },
+        {
+          "draft": 3.35,
+          "displacementTonnes": 5215.73,
+          "lcb": 57.827,
+          "lcf": 59.813,
+          "kmTransverse": 9.441
+        },
+        {
+          "draft": 3.4,
+          "displacementTonnes": 5303.62,
+          "lcb": 57.859,
+          "lcf": 59.757,
+          "kmTransverse": 9.36
+        },
+        {
+          "draft": 3.45,
+          "displacementTonnes": 5391.7,
+          "lcb": 57.89,
+          "lcf": 59.702,
+          "kmTransverse": 9.284
+        },
+        {
+          "draft": 3.5,
+          "displacementTonnes": 5479.97,
+          "lcb": 57.919,
+          "lcf": 59.657,
+          "kmTransverse": 9.209
+        },
+        {
+          "draft": 3.55,
+          "displacementTonnes": 5568.41,
+          "lcb": 57.946,
+          "lcf": 59.602,
+          "kmTransverse": 9.138
+        },
+        {
+          "draft": 3.6,
+          "displacementTonnes": 5657.04,
+          "lcb": 57.972,
+          "lcf": 59.534,
+          "kmTransverse": 9.07
+        },
+        {
+          "draft": 3.65,
+          "displacementTonnes": 5745.87,
+          "lcb": 57.995,
+          "lcf": 59.462,
+          "kmTransverse": 9.004
+        },
+        {
+          "draft": 3.7,
+          "displacementTonnes": 5834.9,
+          "lcb": 58.017,
+          "lcf": 59.381,
+          "kmTransverse": 8.941
+        },
+        {
+          "draft": 3.75,
+          "displacementTonnes": 5924.13,
+          "lcb": 58.038,
+          "lcf": 59.321,
+          "kmTransverse": 8.88
+        },
+        {
+          "draft": 3.8,
+          "displacementTonnes": 6013.59,
+          "lcb": 58.056,
+          "lcf": 59.241,
+          "kmTransverse": 8.823
+        },
+        {
+          "draft": 3.85,
+          "displacementTonnes": 6103.26,
+          "lcb": 58.073,
+          "lcf": 59.124,
+          "kmTransverse": 8.766
+        },
+        {
+          "draft": 3.9,
+          "displacementTonnes": 6193.15,
+          "lcb": 58.088,
+          "lcf": 59.05,
+          "kmTransverse": 8.712
+        },
+        {
+          "draft": 3.95,
+          "displacementTonnes": 6283.25,
+          "lcb": 58.101,
+          "lcf": 58.95,
+          "kmTransverse": 8.66
+        },
+        {
+          "draft": 4.0,
+          "displacementTonnes": 6373.6,
+          "lcb": 58.112,
+          "lcf": 58.84,
+          "kmTransverse": 8.611
+        },
+        {
+          "draft": 4.05,
+          "displacementTonnes": 6464.21,
+          "lcb": 58.122,
+          "lcf": 58.769,
+          "kmTransverse": 8.562
+        },
+        {
+          "draft": 4.1,
+          "displacementTonnes": 6554.97,
+          "lcb": 58.131,
+          "lcf": 58.692,
+          "kmTransverse": 8.516
+        },
+        {
+          "draft": 4.15,
+          "displacementTonnes": 6646.05,
+          "lcb": 58.137,
+          "lcf": 58.411,
+          "kmTransverse": 8.472
+        },
+        {
+          "draft": 4.2,
+          "displacementTonnes": 6737.56,
+          "lcb": 58.14,
+          "lcf": 58.316,
+          "kmTransverse": 8.43
+        },
+        {
+          "draft": 4.25,
+          "displacementTonnes": 6829.28,
+          "lcb": 58.142,
+          "lcf": 58.223,
+          "kmTransverse": 8.388
+        },
+        {
+          "draft": 4.3,
+          "displacementTonnes": 6921.22,
+          "lcb": 58.143,
+          "lcf": 58.154,
+          "kmTransverse": 8.35
+        },
+        {
+          "draft": 4.35,
+          "displacementTonnes": 7013.38,
+          "lcb": 58.142,
+          "lcf": 58.043,
+          "kmTransverse": 8.312
+        },
+        {
+          "draft": 4.4,
+          "displacementTonnes": 7105.74,
+          "lcb": 58.14,
+          "lcf": 57.949,
+          "kmTransverse": 8.274
+        },
+        {
+          "draft": 4.45,
+          "displacementTonnes": 7198.3,
+          "lcb": 58.138,
+          "lcf": 57.903,
+          "kmTransverse": 8.241
+        },
+        {
+          "draft": 4.5,
+          "displacementTonnes": 7291.01,
+          "lcb": 58.135,
+          "lcf": 57.872,
+          "kmTransverse": 8.207
+        },
+        {
+          "draft": 4.55,
+          "displacementTonnes": 7383.84,
+          "lcb": 58.131,
+          "lcf": 57.806,
+          "kmTransverse": 8.175
+        },
+        {
+          "draft": 4.6,
+          "displacementTonnes": 7476.85,
+          "lcb": 58.126,
+          "lcf": 57.72,
+          "kmTransverse": 8.145
+        },
+        {
+          "draft": 4.65,
+          "displacementTonnes": 7570.03,
+          "lcb": 58.121,
+          "lcf": 57.677,
+          "kmTransverse": 8.116
+        },
+        {
+          "draft": 4.7,
+          "displacementTonnes": 7663.34,
+          "lcb": 58.116,
+          "lcf": 57.621,
+          "kmTransverse": 8.087
+        },
+        {
+          "draft": 4.75,
+          "displacementTonnes": 7756.83,
+          "lcb": 58.109,
+          "lcf": 57.562,
+          "kmTransverse": 8.062
+        },
+        {
+          "draft": 4.8,
+          "displacementTonnes": 7850.47,
+          "lcb": 58.102,
+          "lcf": 57.478,
+          "kmTransverse": 8.036
+        },
+        {
+          "draft": 4.85,
+          "displacementTonnes": 7944.28,
+          "lcb": 58.095,
+          "lcf": 57.412,
+          "kmTransverse": 8.012
+        },
+        {
+          "draft": 4.9,
+          "displacementTonnes": 8038.26,
+          "lcb": 58.086,
+          "lcf": 57.359,
+          "kmTransverse": 7.989
+        },
+        {
+          "draft": 4.95,
+          "displacementTonnes": 8132.39,
+          "lcb": 58.078,
+          "lcf": 57.271,
+          "kmTransverse": 7.967
+        },
+        {
+          "draft": 5.0,
+          "displacementTonnes": 8226.7,
+          "lcb": 58.068,
+          "lcf": 57.212,
+          "kmTransverse": 7.947
+        },
+        {
+          "draft": 5.05,
+          "displacementTonnes": 8321.18,
+          "lcb": 58.058,
+          "lcf": 57.138,
+          "kmTransverse": 7.927
+        },
+        {
+          "draft": 5.1,
+          "displacementTonnes": 8415.81,
+          "lcb": 58.047,
+          "lcf": 57.068,
+          "kmTransverse": 7.908
+        },
+        {
+          "draft": 5.15,
+          "displacementTonnes": 8510.63,
+          "lcb": 58.036,
+          "lcf": 56.996,
+          "kmTransverse": 7.891
+        },
+        {
+          "draft": 5.2,
+          "displacementTonnes": 8605.62,
+          "lcb": 58.024,
+          "lcf": 56.9,
+          "kmTransverse": 7.874
+        },
+        {
+          "draft": 5.25,
+          "displacementTonnes": 8700.81,
+          "lcb": 58.012,
+          "lcf": 56.842,
+          "kmTransverse": 7.858
+        },
+        {
+          "draft": 5.3,
+          "displacementTonnes": 8796.16,
+          "lcb": 57.999,
+          "lcf": 56.748,
+          "kmTransverse": 7.843
+        },
+        {
+          "draft": 5.35,
+          "displacementTonnes": 8891.7,
+          "lcb": 57.985,
+          "lcf": 56.681,
+          "kmTransverse": 7.829
+        },
+        {
+          "draft": 5.4,
+          "displacementTonnes": 8987.43,
+          "lcb": 57.971,
+          "lcf": 56.612,
+          "kmTransverse": 7.816
+        },
+        {
+          "draft": 5.45,
+          "displacementTonnes": 9083.32,
+          "lcb": 57.956,
+          "lcf": 56.524,
+          "kmTransverse": 7.804
+        },
+        {
+          "draft": 5.5,
+          "displacementTonnes": 9179.41,
+          "lcb": 57.941,
+          "lcf": 56.432,
+          "kmTransverse": 7.793
+        },
+        {
+          "draft": 5.55,
+          "displacementTonnes": 9275.68,
+          "lcb": 57.925,
+          "lcf": 56.345,
+          "kmTransverse": 7.782
+        },
+        {
+          "draft": 5.6,
+          "displacementTonnes": 9372.15,
+          "lcb": 57.908,
+          "lcf": 56.268,
+          "kmTransverse": 7.772
+        },
+        {
+          "draft": 5.65,
+          "displacementTonnes": 9468.81,
+          "lcb": 57.891,
+          "lcf": 56.17,
+          "kmTransverse": 7.763
+        },
+        {
+          "draft": 5.7,
+          "displacementTonnes": 9565.66,
+          "lcb": 57.873,
+          "lcf": 56.084,
+          "kmTransverse": 7.754
+        },
+        {
+          "draft": 5.75,
+          "displacementTonnes": 9662.7,
+          "lcb": 57.855,
+          "lcf": 55.974,
+          "kmTransverse": 7.746
+        },
+        {
+          "draft": 5.8,
+          "displacementTonnes": 9759.95,
+          "lcb": 57.836,
+          "lcf": 55.914,
+          "kmTransverse": 7.738
+        },
+        {
+          "draft": 5.85,
+          "displacementTonnes": 9857.38,
+          "lcb": 57.816,
+          "lcf": 55.783,
+          "kmTransverse": 7.732
+        },
+        {
+          "draft": 5.9,
+          "displacementTonnes": 9955.03,
+          "lcb": 57.796,
+          "lcf": 55.731,
+          "kmTransverse": 7.725
+        },
+        {
+          "draft": 5.95,
+          "displacementTonnes": 10052.87,
+          "lcb": 57.775,
+          "lcf": 55.647,
+          "kmTransverse": 7.72
+        },
+        {
+          "draft": 6.0,
+          "displacementTonnes": 10150.93,
+          "lcb": 57.754,
+          "lcf": 55.495,
+          "kmTransverse": 7.715
+        },
+        {
+          "draft": 6.05,
+          "displacementTonnes": 10249.19,
+          "lcb": 57.732,
+          "lcf": 55.425,
+          "kmTransverse": 7.711
+        },
+        {
+          "draft": 6.1,
+          "displacementTonnes": 10347.67,
+          "lcb": 57.71,
+          "lcf": 55.326,
+          "kmTransverse": 7.707
+        },
+        {
+          "draft": 6.15,
+          "displacementTonnes": 10446.36,
+          "lcb": 57.687,
+          "lcf": 55.2,
+          "kmTransverse": 7.704
+        },
+        {
+          "draft": 6.2,
+          "displacementTonnes": 10545.27,
+          "lcb": 57.663,
+          "lcf": 55.103,
+          "kmTransverse": 7.702
+        },
+        {
+          "draft": 6.25,
+          "displacementTonnes": 10644.38,
+          "lcb": 57.639,
+          "lcf": 55.039,
+          "kmTransverse": 7.699
+        },
+        {
+          "draft": 6.3,
+          "displacementTonnes": 10743.66,
+          "lcb": 57.615,
+          "lcf": 54.956,
+          "kmTransverse": 7.698
+        },
+        {
+          "draft": 6.35,
+          "displacementTonnes": 10843.09,
+          "lcb": 57.59,
+          "lcf": 54.902,
+          "kmTransverse": 7.697
+        },
+        {
+          "draft": 6.4,
+          "displacementTonnes": 10942.64,
+          "lcb": 57.565,
+          "lcf": 54.842,
+          "kmTransverse": 7.695
+        },
+        {
+          "draft": 6.45,
+          "displacementTonnes": 11042.31,
+          "lcb": 57.541,
+          "lcf": 54.828,
+          "kmTransverse": 7.693
+        },
+        {
+          "draft": 6.5,
+          "displacementTonnes": 11142.06,
+          "lcb": 57.516,
+          "lcf": 54.774,
+          "kmTransverse": 7.69
+        },
+        {
+          "draft": 6.55,
+          "displacementTonnes": 11241.91,
+          "lcb": 57.492,
+          "lcf": 54.778,
+          "kmTransverse": 7.689
+        },
+        {
+          "draft": 6.6,
+          "displacementTonnes": 11341.82,
+          "lcb": 57.468,
+          "lcf": 54.738,
+          "kmTransverse": 7.687
+        },
+        {
+          "draft": 6.65,
+          "displacementTonnes": 11441.8,
+          "lcb": 57.444,
+          "lcf": 54.696,
+          "kmTransverse": 7.685
+        },
+        {
+          "draft": 6.7,
+          "displacementTonnes": 11541.87,
+          "lcb": 57.42,
+          "lcf": 54.701,
+          "kmTransverse": 7.683
+        },
+        {
+          "draft": 6.75,
+          "displacementTonnes": 11641.99,
+          "lcb": 57.397,
+          "lcf": 54.659,
+          "kmTransverse": 7.682
+        },
+        {
+          "draft": 6.8,
+          "displacementTonnes": 11742.17,
+          "lcb": 57.373,
+          "lcf": 54.658,
+          "kmTransverse": 7.681
+        },
+        {
+          "draft": 6.85,
+          "displacementTonnes": 11842.41,
+          "lcb": 57.35,
+          "lcf": 54.647,
+          "kmTransverse": 7.68
+        },
+        {
+          "draft": 6.9,
+          "displacementTonnes": 11942.71,
+          "lcb": 57.327,
+          "lcf": 54.634,
+          "kmTransverse": 7.679
+        },
+        {
+          "draft": 6.95,
+          "displacementTonnes": 12043.06,
+          "lcb": 57.305,
+          "lcf": 54.614,
+          "kmTransverse": 7.678
+        },
+        {
+          "draft": 7.0,
+          "displacementTonnes": 12143.46,
+          "lcb": 57.283,
+          "lcf": 54.632,
+          "kmTransverse": 7.678
+        },
+        {
+          "draft": 7.05,
+          "displacementTonnes": 12243.91,
+          "lcb": 57.261,
+          "lcf": 54.595,
+          "kmTransverse": 7.678
+        },
+        {
+          "draft": 7.1,
+          "displacementTonnes": 12344.4,
+          "lcb": 57.239,
+          "lcf": 54.601,
+          "kmTransverse": 7.678
+        },
+        {
+          "draft": 7.15,
+          "displacementTonnes": 12444.94,
+          "lcb": 57.217,
+          "lcf": 54.572,
+          "kmTransverse": 7.678
+        },
+        {
+          "draft": 7.2,
+          "displacementTonnes": 12545.51,
+          "lcb": 57.196,
+          "lcf": 54.56,
+          "kmTransverse": 7.679
+        },
+        {
+          "draft": 7.25,
+          "displacementTonnes": 12646.14,
+          "lcb": 57.175,
+          "lcf": 54.561,
+          "kmTransverse": 7.68
+        },
+        {
+          "draft": 7.3,
+          "displacementTonnes": 12746.79,
+          "lcb": 57.155,
+          "lcf": 54.568,
+          "kmTransverse": 7.681
+        },
+        {
+          "draft": 7.35,
+          "displacementTonnes": 12847.47,
+          "lcb": 57.134,
+          "lcf": 54.523,
+          "kmTransverse": 7.682
+        },
+        {
+          "draft": 7.4,
+          "displacementTonnes": 12948.2,
+          "lcb": 57.114,
+          "lcf": 54.544,
+          "kmTransverse": 7.683
+        },
+        {
+          "draft": 7.45,
+          "displacementTonnes": 13048.96,
+          "lcb": 57.095,
+          "lcf": 54.568,
+          "kmTransverse": 7.685
+        },
+        {
+          "draft": 7.5,
+          "displacementTonnes": 13149.74,
+          "lcb": 57.075,
+          "lcf": 54.541,
+          "kmTransverse": 7.687
+        },
+        {
+          "draft": 7.55,
+          "displacementTonnes": 13250.57,
+          "lcb": 57.056,
+          "lcf": 54.576,
+          "kmTransverse": 7.689
+        },
+        {
+          "draft": 7.6,
+          "displacementTonnes": 13351.41,
+          "lcb": 57.037,
+          "lcf": 54.534,
+          "kmTransverse": 7.691
+        },
+        {
+          "draft": 7.65,
+          "displacementTonnes": 13452.29,
+          "lcb": 57.018,
+          "lcf": 54.547,
+          "kmTransverse": 7.694
+        },
+        {
+          "draft": 7.7,
+          "displacementTonnes": 13553.2,
+          "lcb": 57.0,
+          "lcf": 54.57,
+          "kmTransverse": 7.697
+        },
+        {
+          "draft": 7.75,
+          "displacementTonnes": 13654.13,
+          "lcb": 56.982,
+          "lcf": 54.528,
+          "kmTransverse": 7.7
+        },
+        {
+          "draft": 7.8,
+          "displacementTonnes": 13755.09,
+          "lcb": 56.964,
+          "lcf": 54.544,
+          "kmTransverse": 7.704
+        },
+        {
+          "draft": 7.85,
+          "displacementTonnes": 13856.07,
+          "lcb": 56.946,
+          "lcf": 54.556,
+          "kmTransverse": 7.707
+        },
+        {
+          "draft": 7.9,
+          "displacementTonnes": 13957.08,
+          "lcb": 56.929,
+          "lcf": 54.561,
+          "kmTransverse": 7.711
+        },
+        {
+          "draft": 7.95,
+          "displacementTonnes": 14058.1,
+          "lcb": 56.911,
+          "lcf": 54.562,
+          "kmTransverse": 7.715
+        },
+        {
+          "draft": 8.0,
+          "displacementTonnes": 14159.15,
+          "lcb": 56.895,
+          "lcf": 54.553,
+          "kmTransverse": 7.719
+        },
+        {
+          "draft": 8.011,
+          "displacementTonnes": 14181.38,
+          "lcb": 56.891,
+          "lcf": 54.562,
+          "kmTransverse": 7.72
+        },
+        {
+          "draft": 8.05,
+          "displacementTonnes": 14260.23,
+          "lcb": 56.878,
+          "lcf": 54.547,
+          "kmTransverse": 7.724
+        },
+        {
+          "draft": 8.1,
+          "displacementTonnes": 14361.32,
+          "lcb": 56.862,
+          "lcf": 54.542,
+          "kmTransverse": 7.728
+        },
+        {
+          "draft": 8.15,
+          "displacementTonnes": 14462.44,
+          "lcb": 56.845,
+          "lcf": 54.548,
+          "kmTransverse": 7.734
+        },
+        {
+          "draft": 8.2,
+          "displacementTonnes": 14563.57,
+          "lcb": 56.83,
+          "lcf": 54.552,
+          "kmTransverse": 7.738
+        },
+        {
+          "draft": 8.25,
+          "displacementTonnes": 14664.72,
+          "lcb": 56.814,
+          "lcf": 54.567,
+          "kmTransverse": 7.744
+        },
+        {
+          "draft": 8.3,
+          "displacementTonnes": 14765.9,
+          "lcb": 56.799,
+          "lcf": 54.566,
+          "kmTransverse": 7.749
+        },
+        {
+          "draft": 8.35,
+          "displacementTonnes": 14867.09,
+          "lcb": 56.783,
+          "lcf": 54.559,
+          "kmTransverse": 7.755
+        },
+        {
+          "draft": 8.4,
+          "displacementTonnes": 14968.3,
+          "lcb": 56.768,
+          "lcf": 54.574,
+          "kmTransverse": 7.762
+        }
+      ]
+    },
+    {
+      "trimMetres": -1.5,
+      "rows": [
+        {
+          "draft": 2.5,
+          "displacementTonnes": 3760.87,
+          "lcb": 58.229,
+          "lcf": 61.388,
+          "kmTransverse": 11.241
+        },
+        {
+          "draft": 2.55,
+          "displacementTonnes": 3844.45,
+          "lcb": 58.297,
+          "lcf": 61.349,
+          "kmTransverse": 11.077
+        },
+        {
+          "draft": 2.6,
+          "displacementTonnes": 3928.2,
+          "lcb": 58.362,
+          "lcf": 61.33,
+          "kmTransverse": 10.921
+        },
+        {
+          "draft": 2.65,
+          "displacementTonnes": 4012.11,
+          "lcb": 58.424,
+          "lcf": 61.313,
+          "kmTransverse": 10.772
+        },
+        {
+          "draft": 2.7,
+          "displacementTonnes": 4096.18,
+          "lcb": 58.483,
+          "lcf": 61.292,
+          "kmTransverse": 10.629
+        },
+        {
+          "draft": 2.75,
+          "displacementTonnes": 4180.41,
+          "lcb": 58.539,
+          "lcf": 61.271,
+          "kmTransverse": 10.492
+        },
+        {
+          "draft": 2.8,
+          "displacementTonnes": 4264.81,
+          "lcb": 58.593,
+          "lcf": 61.245,
+          "kmTransverse": 10.363
+        },
+        {
+          "draft": 2.85,
+          "displacementTonnes": 4349.36,
+          "lcb": 58.644,
+          "lcf": 61.213,
+          "kmTransverse": 10.239
+        },
+        {
+          "draft": 2.9,
+          "displacementTonnes": 4434.07,
+          "lcb": 58.693,
+          "lcf": 61.168,
+          "kmTransverse": 10.119
+        },
+        {
+          "draft": 2.95,
+          "displacementTonnes": 4518.96,
+          "lcb": 58.739,
+          "lcf": 61.139,
+          "kmTransverse": 10.006
+        },
+        {
+          "draft": 3.0,
+          "displacementTonnes": 4604.08,
+          "lcb": 58.783,
+          "lcf": 60.998,
+          "kmTransverse": 9.905
+        },
+        {
+          "draft": 3.05,
+          "displacementTonnes": 4689.55,
+          "lcb": 58.822,
+          "lcf": 60.855,
+          "kmTransverse": 9.814
+        },
+        {
+          "draft": 3.1,
+          "displacementTonnes": 4775.4,
+          "lcb": 58.858,
+          "lcf": 60.711,
+          "kmTransverse": 9.735
+        },
+        {
+          "draft": 3.15,
+          "displacementTonnes": 4861.63,
+          "lcb": 58.889,
+          "lcf": 60.55,
+          "kmTransverse": 9.67
+        },
+        {
+          "draft": 3.2,
+          "displacementTonnes": 4948.23,
+          "lcb": 58.917,
+          "lcf": 60.418,
+          "kmTransverse": 9.615
+        },
+        {
+          "draft": 3.25,
+          "displacementTonnes": 5035.17,
+          "lcb": 58.942,
+          "lcf": 60.294,
+          "kmTransverse": 9.56
+        },
+        {
+          "draft": 3.3,
+          "displacementTonnes": 5122.36,
+          "lcb": 58.965,
+          "lcf": 60.247,
+          "kmTransverse": 9.478
+        },
+        {
+          "draft": 3.35,
+          "displacementTonnes": 5209.72,
+          "lcb": 58.986,
+          "lcf": 60.2,
+          "kmTransverse": 9.396
+        },
+        {
+          "draft": 3.4,
+          "displacementTonnes": 5297.24,
+          "lcb": 59.006,
+          "lcf": 60.152,
+          "kmTransverse": 9.315
+        },
+        {
+          "draft": 3.45,
+          "displacementTonnes": 5384.92,
+          "lcb": 59.024,
+          "lcf": 60.072,
+          "kmTransverse": 9.239
+        },
+        {
+          "draft": 3.5,
+          "displacementTonnes": 5472.79,
+          "lcb": 59.041,
+          "lcf": 60.037,
+          "kmTransverse": 9.165
+        },
+        {
+          "draft": 3.55,
+          "displacementTonnes": 5560.82,
+          "lcb": 59.056,
+          "lcf": 60.0,
+          "kmTransverse": 9.093
+        },
+        {
+          "draft": 3.6,
+          "displacementTonnes": 5649.01,
+          "lcb": 59.071,
+          "lcf": 59.934,
+          "kmTransverse": 9.025
+        },
+        {
+          "draft": 3.65,
+          "displacementTonnes": 5737.37,
+          "lcb": 59.084,
+          "lcf": 59.876,
+          "kmTransverse": 8.959
+        },
+        {
+          "draft": 3.7,
+          "displacementTonnes": 5825.91,
+          "lcb": 59.095,
+          "lcf": 59.817,
+          "kmTransverse": 8.897
+        },
+        {
+          "draft": 3.75,
+          "displacementTonnes": 5914.62,
+          "lcb": 59.106,
+          "lcf": 59.743,
+          "kmTransverse": 8.836
+        },
+        {
+          "draft": 3.8,
+          "displacementTonnes": 6003.5,
+          "lcb": 59.115,
+          "lcf": 59.705,
+          "kmTransverse": 8.778
+        },
+        {
+          "draft": 3.85,
+          "displacementTonnes": 6092.56,
+          "lcb": 59.123,
+          "lcf": 59.627,
+          "kmTransverse": 8.722
+        },
+        {
+          "draft": 3.9,
+          "displacementTonnes": 6181.82,
+          "lcb": 59.13,
+          "lcf": 59.54,
+          "kmTransverse": 8.669
+        },
+        {
+          "draft": 3.95,
+          "displacementTonnes": 6271.26,
+          "lcb": 59.135,
+          "lcf": 59.473,
+          "kmTransverse": 8.616
+        },
+        {
+          "draft": 4.0,
+          "displacementTonnes": 6360.9,
+          "lcb": 59.14,
+          "lcf": 59.386,
+          "kmTransverse": 8.568
+        },
+        {
+          "draft": 4.05,
+          "displacementTonnes": 6450.76,
+          "lcb": 59.142,
+          "lcf": 59.299,
+          "kmTransverse": 8.52
+        },
+        {
+          "draft": 4.1,
+          "displacementTonnes": 6540.83,
+          "lcb": 59.144,
+          "lcf": 59.229,
+          "kmTransverse": 8.474
+        },
+        {
+          "draft": 4.15,
+          "displacementTonnes": 6631.08,
+          "lcb": 59.144,
+          "lcf": 59.116,
+          "kmTransverse": 8.43
+        },
+        {
+          "draft": 4.2,
+          "displacementTonnes": 6721.58,
+          "lcb": 59.143,
+          "lcf": 59.027,
+          "kmTransverse": 8.388
+        },
+        {
+          "draft": 4.25,
+          "displacementTonnes": 6812.32,
+          "lcb": 59.141,
+          "lcf": 58.904,
+          "kmTransverse": 8.347
+        },
+        {
+          "draft": 4.3,
+          "displacementTonnes": 6903.28,
+          "lcb": 59.137,
+          "lcf": 58.82,
+          "kmTransverse": 8.307
+        },
+        {
+          "draft": 4.35,
+          "displacementTonnes": 6994.41,
+          "lcb": 59.133,
+          "lcf": 58.748,
+          "kmTransverse": 8.27
+        },
+        {
+          "draft": 4.4,
+          "displacementTonnes": 7085.84,
+          "lcb": 59.127,
+          "lcf": 58.442,
+          "kmTransverse": 8.235
+        },
+        {
+          "draft": 4.45,
+          "displacementTonnes": 7177.69,
+          "lcb": 59.118,
+          "lcf": 58.378,
+          "kmTransverse": 8.199
+        },
+        {
+          "draft": 4.5,
+          "displacementTonnes": 7269.75,
+          "lcb": 59.108,
+          "lcf": 58.292,
+          "kmTransverse": 8.167
+        },
+        {
+          "draft": 4.55,
+          "displacementTonnes": 7362.02,
+          "lcb": 59.097,
+          "lcf": 58.189,
+          "kmTransverse": 8.135
+        },
+        {
+          "draft": 4.6,
+          "displacementTonnes": 7454.5,
+          "lcb": 59.085,
+          "lcf": 58.096,
+          "kmTransverse": 8.103
+        },
+        {
+          "draft": 4.65,
+          "displacementTonnes": 7547.18,
+          "lcb": 59.073,
+          "lcf": 58.023,
+          "kmTransverse": 8.074
+        },
+        {
+          "draft": 4.7,
+          "displacementTonnes": 7640.03,
+          "lcb": 59.06,
+          "lcf": 57.974,
+          "kmTransverse": 8.047
+        },
+        {
+          "draft": 4.75,
+          "displacementTonnes": 7733.0,
+          "lcb": 59.046,
+          "lcf": 57.925,
+          "kmTransverse": 8.02
+        },
+        {
+          "draft": 4.8,
+          "displacementTonnes": 7826.12,
+          "lcb": 59.033,
+          "lcf": 57.852,
+          "kmTransverse": 7.994
+        },
+        {
+          "draft": 4.85,
+          "displacementTonnes": 7919.41,
+          "lcb": 59.019,
+          "lcf": 57.793,
+          "kmTransverse": 7.97
+        },
+        {
+          "draft": 4.9,
+          "displacementTonnes": 8012.84,
+          "lcb": 59.004,
+          "lcf": 57.744,
+          "kmTransverse": 7.946
+        },
+        {
+          "draft": 4.95,
+          "displacementTonnes": 8106.42,
+          "lcb": 58.989,
+          "lcf": 57.662,
+          "kmTransverse": 7.924
+        },
+        {
+          "draft": 5.0,
+          "displacementTonnes": 8200.16,
+          "lcb": 58.974,
+          "lcf": 57.599,
+          "kmTransverse": 7.904
+        },
+        {
+          "draft": 5.05,
+          "displacementTonnes": 8294.07,
+          "lcb": 58.958,
+          "lcf": 57.534,
+          "kmTransverse": 7.884
+        },
+        {
+          "draft": 5.1,
+          "displacementTonnes": 8388.13,
+          "lcb": 58.942,
+          "lcf": 57.471,
+          "kmTransverse": 7.865
+        },
+        {
+          "draft": 5.15,
+          "displacementTonnes": 8482.35,
+          "lcb": 58.925,
+          "lcf": 57.403,
+          "kmTransverse": 7.848
+        },
+        {
+          "draft": 5.2,
+          "displacementTonnes": 8576.72,
+          "lcb": 58.908,
+          "lcf": 57.317,
+          "kmTransverse": 7.83
+        },
+        {
+          "draft": 5.25,
+          "displacementTonnes": 8671.28,
+          "lcb": 58.891,
+          "lcf": 57.262,
+          "kmTransverse": 7.814
+        },
+        {
+          "draft": 5.3,
+          "displacementTonnes": 8765.98,
+          "lcb": 58.873,
+          "lcf": 57.195,
+          "kmTransverse": 7.8
+        },
+        {
+          "draft": 5.35,
+          "displacementTonnes": 8860.85,
+          "lcb": 58.855,
+          "lcf": 57.143,
+          "kmTransverse": 7.785
+        },
+        {
+          "draft": 5.4,
+          "displacementTonnes": 8955.9,
+          "lcb": 58.836,
+          "lcf": 57.042,
+          "kmTransverse": 7.772
+        },
+        {
+          "draft": 5.45,
+          "displacementTonnes": 9051.11,
+          "lcb": 58.817,
+          "lcf": 56.962,
+          "kmTransverse": 7.759
+        },
+        {
+          "draft": 5.5,
+          "displacementTonnes": 9146.51,
+          "lcb": 58.797,
+          "lcf": 56.892,
+          "kmTransverse": 7.747
+        },
+        {
+          "draft": 5.55,
+          "displacementTonnes": 9242.09,
+          "lcb": 58.777,
+          "lcf": 56.832,
+          "kmTransverse": 7.737
+        },
+        {
+          "draft": 5.6,
+          "displacementTonnes": 9337.83,
+          "lcb": 58.757,
+          "lcf": 56.746,
+          "kmTransverse": 7.726
+        },
+        {
+          "draft": 5.65,
+          "displacementTonnes": 9433.76,
+          "lcb": 58.736,
+          "lcf": 56.652,
+          "kmTransverse": 7.717
+        },
+        {
+          "draft": 5.7,
+          "displacementTonnes": 9529.86,
+          "lcb": 58.714,
+          "lcf": 56.592,
+          "kmTransverse": 7.709
+        },
+        {
+          "draft": 5.75,
+          "displacementTonnes": 9626.15,
+          "lcb": 58.693,
+          "lcf": 56.492,
+          "kmTransverse": 7.7
+        },
+        {
+          "draft": 5.8,
+          "displacementTonnes": 9722.62,
+          "lcb": 58.67,
+          "lcf": 56.428,
+          "kmTransverse": 7.693
+        },
+        {
+          "draft": 5.85,
+          "displacementTonnes": 9819.27,
+          "lcb": 58.648,
+          "lcf": 56.321,
+          "kmTransverse": 7.687
+        },
+        {
+          "draft": 5.9,
+          "displacementTonnes": 9916.12,
+          "lcb": 58.625,
+          "lcf": 56.225,
+          "kmTransverse": 7.68
+        },
+        {
+          "draft": 5.95,
+          "displacementTonnes": 10013.15,
+          "lcb": 58.601,
+          "lcf": 56.15,
+          "kmTransverse": 7.675
+        },
+        {
+          "draft": 6.0,
+          "displacementTonnes": 10110.38,
+          "lcb": 58.577,
+          "lcf": 56.062,
+          "kmTransverse": 7.669
+        },
+        {
+          "draft": 6.05,
+          "displacementTonnes": 10207.79,
+          "lcb": 58.553,
+          "lcf": 55.962,
+          "kmTransverse": 7.665
+        },
+        {
+          "draft": 6.1,
+          "displacementTonnes": 10305.39,
+          "lcb": 58.528,
+          "lcf": 55.872,
+          "kmTransverse": 7.661
+        },
+        {
+          "draft": 6.15,
+          "displacementTonnes": 10403.19,
+          "lcb": 58.502,
+          "lcf": 55.776,
+          "kmTransverse": 7.658
+        },
+        {
+          "draft": 6.2,
+          "displacementTonnes": 10501.19,
+          "lcb": 58.477,
+          "lcf": 55.667,
+          "kmTransverse": 7.655
+        },
+        {
+          "draft": 6.25,
+          "displacementTonnes": 10599.41,
+          "lcb": 58.45,
+          "lcf": 55.609,
+          "kmTransverse": 7.653
+        },
+        {
+          "draft": 6.3,
+          "displacementTonnes": 10697.82,
+          "lcb": 58.424,
+          "lcf": 55.507,
+          "kmTransverse": 7.651
+        },
+        {
+          "draft": 6.35,
+          "displacementTonnes": 10796.44,
+          "lcb": 58.396,
+          "lcf": 55.39,
+          "kmTransverse": 7.65
+        },
+        {
+          "draft": 6.4,
+          "displacementTonnes": 10895.27,
+          "lcb": 58.369,
+          "lcf": 55.296,
+          "kmTransverse": 7.649
+        },
+        {
+          "draft": 6.45,
+          "displacementTonnes": 10994.31,
+          "lcb": 58.341,
+          "lcf": 55.186,
+          "kmTransverse": 7.649
+        },
+        {
+          "draft": 6.5,
+          "displacementTonnes": 11093.55,
+          "lcb": 58.312,
+          "lcf": 55.092,
+          "kmTransverse": 7.65
+        },
+        {
+          "draft": 6.55,
+          "displacementTonnes": 11192.96,
+          "lcb": 58.283,
+          "lcf": 55.023,
+          "kmTransverse": 7.65
+        },
+        {
+          "draft": 6.6,
+          "displacementTonnes": 11292.53,
+          "lcb": 58.254,
+          "lcf": 54.982,
+          "kmTransverse": 7.651
+        },
+        {
+          "draft": 6.65,
+          "displacementTonnes": 11392.22,
+          "lcb": 58.225,
+          "lcf": 54.932,
+          "kmTransverse": 7.651
+        },
+        {
+          "draft": 6.7,
+          "displacementTonnes": 11492.02,
+          "lcb": 58.196,
+          "lcf": 54.872,
+          "kmTransverse": 7.652
+        },
+        {
+          "draft": 6.75,
+          "displacementTonnes": 11591.9,
+          "lcb": 58.168,
+          "lcf": 54.842,
+          "kmTransverse": 7.652
+        },
+        {
+          "draft": 6.8,
+          "displacementTonnes": 11691.87,
+          "lcb": 58.139,
+          "lcf": 54.801,
+          "kmTransverse": 7.652
+        },
+        {
+          "draft": 6.85,
+          "displacementTonnes": 11791.93,
+          "lcb": 58.111,
+          "lcf": 54.812,
+          "kmTransverse": 7.652
+        },
+        {
+          "draft": 6.9,
+          "displacementTonnes": 11892.05,
+          "lcb": 58.083,
+          "lcf": 54.78,
+          "kmTransverse": 7.653
+        },
+        {
+          "draft": 6.95,
+          "displacementTonnes": 11992.23,
+          "lcb": 58.055,
+          "lcf": 54.752,
+          "kmTransverse": 7.654
+        },
+        {
+          "draft": 7.0,
+          "displacementTonnes": 12092.49,
+          "lcb": 58.028,
+          "lcf": 54.748,
+          "kmTransverse": 7.654
+        },
+        {
+          "draft": 7.05,
+          "displacementTonnes": 12192.8,
+          "lcb": 58.001,
+          "lcf": 54.698,
+          "kmTransverse": 7.655
+        },
+        {
+          "draft": 7.1,
+          "displacementTonnes": 12293.17,
+          "lcb": 57.974,
+          "lcf": 54.708,
+          "kmTransverse": 7.656
+        },
+        {
+          "draft": 7.15,
+          "displacementTonnes": 12393.58,
+          "lcb": 57.947,
+          "lcf": 54.66,
+          "kmTransverse": 7.657
+        },
+        {
+          "draft": 7.2,
+          "displacementTonnes": 12494.06,
+          "lcb": 57.921,
+          "lcf": 54.659,
+          "kmTransverse": 7.658
+        },
+        {
+          "draft": 7.25,
+          "displacementTonnes": 12594.59,
+          "lcb": 57.895,
+          "lcf": 54.683,
+          "kmTransverse": 7.66
+        },
+        {
+          "draft": 7.3,
+          "displacementTonnes": 12695.15,
+          "lcb": 57.869,
+          "lcf": 54.642,
+          "kmTransverse": 7.662
+        },
+        {
+          "draft": 7.35,
+          "displacementTonnes": 12795.77,
+          "lcb": 57.844,
+          "lcf": 54.641,
+          "kmTransverse": 7.663
+        },
+        {
+          "draft": 7.4,
+          "displacementTonnes": 12896.42,
+          "lcb": 57.819,
+          "lcf": 54.65,
+          "kmTransverse": 7.665
+        },
+        {
+          "draft": 7.45,
+          "displacementTonnes": 12997.12,
+          "lcb": 57.794,
+          "lcf": 54.613,
+          "kmTransverse": 7.668
+        },
+        {
+          "draft": 7.5,
+          "displacementTonnes": 13097.86,
+          "lcb": 57.77,
+          "lcf": 54.648,
+          "kmTransverse": 7.67
+        },
+        {
+          "draft": 7.55,
+          "displacementTonnes": 13198.63,
+          "lcb": 57.746,
+          "lcf": 54.621,
+          "kmTransverse": 7.673
+        },
+        {
+          "draft": 7.6,
+          "displacementTonnes": 13299.44,
+          "lcb": 57.722,
+          "lcf": 54.64,
+          "kmTransverse": 7.676
+        },
+        {
+          "draft": 7.65,
+          "displacementTonnes": 13400.28,
+          "lcb": 57.699,
+          "lcf": 54.635,
+          "kmTransverse": 7.679
+        },
+        {
+          "draft": 7.7,
+          "displacementTonnes": 13501.15,
+          "lcb": 57.676,
+          "lcf": 54.581,
+          "kmTransverse": 7.682
+        },
+        {
+          "draft": 7.75,
+          "displacementTonnes": 13602.06,
+          "lcb": 57.653,
+          "lcf": 54.613,
+          "kmTransverse": 7.686
+        },
+        {
+          "draft": 7.8,
+          "displacementTonnes": 13703.0,
+          "lcb": 57.631,
+          "lcf": 54.599,
+          "kmTransverse": 7.69
+        },
+        {
+          "draft": 7.85,
+          "displacementTonnes": 13803.96,
+          "lcb": 57.608,
+          "lcf": 54.603,
+          "kmTransverse": 7.693
+        },
+        {
+          "draft": 7.9,
+          "displacementTonnes": 13904.95,
+          "lcb": 57.587,
+          "lcf": 54.605,
+          "kmTransverse": 7.698
+        },
+        {
+          "draft": 7.95,
+          "displacementTonnes": 14005.98,
+          "lcb": 57.565,
+          "lcf": 54.615,
+          "kmTransverse": 7.702
+        },
+        {
+          "draft": 8.0,
+          "displacementTonnes": 14107.02,
+          "lcb": 57.544,
+          "lcf": 54.583,
+          "kmTransverse": 7.706
+        },
+        {
+          "draft": 8.011,
+          "displacementTonnes": 14129.26,
+          "lcb": 57.539,
+          "lcf": 54.597,
+          "kmTransverse": 7.708
+        },
+        {
+          "draft": 8.05,
+          "displacementTonnes": 14208.11,
+          "lcb": 57.523,
+          "lcf": 54.614,
+          "kmTransverse": 7.711
+        },
+        {
+          "draft": 8.1,
+          "displacementTonnes": 14309.2,
+          "lcb": 57.502,
+          "lcf": 54.584,
+          "kmTransverse": 7.716
+        },
+        {
+          "draft": 8.15,
+          "displacementTonnes": 14410.33,
+          "lcb": 57.482,
+          "lcf": 54.602,
+          "kmTransverse": 7.721
+        },
+        {
+          "draft": 8.2,
+          "displacementTonnes": 14511.47,
+          "lcb": 57.462,
+          "lcf": 54.599,
+          "kmTransverse": 7.727
+        },
+        {
+          "draft": 8.25,
+          "displacementTonnes": 14612.65,
+          "lcb": 57.442,
+          "lcf": 54.626,
+          "kmTransverse": 7.732
+        },
+        {
+          "draft": 8.3,
+          "displacementTonnes": 14713.84,
+          "lcb": 57.423,
+          "lcf": 54.631,
+          "kmTransverse": 7.739
+        },
+        {
+          "draft": 8.35,
+          "displacementTonnes": 14815.06,
+          "lcb": 57.403,
+          "lcf": 54.59,
+          "kmTransverse": 7.745
+        },
+        {
+          "draft": 8.4,
+          "displacementTonnes": 14916.31,
+          "lcb": 57.384,
+          "lcf": 54.66,
+          "kmTransverse": 7.751
+        }
+      ]
+    },
+    {
+      "trimMetres": -1.0,
+      "rows": [
+        {
+          "draft": 2.5,
+          "displacementTonnes": 3765.53,
+          "lcb": 59.646,
+          "lcf": 61.68,
+          "kmTransverse": 11.2
+        },
+        {
+          "draft": 2.55,
+          "displacementTonnes": 3849.01,
+          "lcb": 59.69,
+          "lcf": 61.658,
+          "kmTransverse": 11.035
+        },
+        {
+          "draft": 2.6,
+          "displacementTonnes": 3932.64,
+          "lcb": 59.731,
+          "lcf": 61.642,
+          "kmTransverse": 10.878
+        },
+        {
+          "draft": 2.65,
+          "displacementTonnes": 4016.42,
+          "lcb": 59.771,
+          "lcf": 61.638,
+          "kmTransverse": 10.728
+        },
+        {
+          "draft": 2.7,
+          "displacementTonnes": 4100.35,
+          "lcb": 59.809,
+          "lcf": 61.602,
+          "kmTransverse": 10.586
+        },
+        {
+          "draft": 2.75,
+          "displacementTonnes": 4184.41,
+          "lcb": 59.845,
+          "lcf": 61.575,
+          "kmTransverse": 10.45
+        },
+        {
+          "draft": 2.8,
+          "displacementTonnes": 4268.63,
+          "lcb": 59.879,
+          "lcf": 61.551,
+          "kmTransverse": 10.32
+        },
+        {
+          "draft": 2.85,
+          "displacementTonnes": 4352.99,
+          "lcb": 59.911,
+          "lcf": 61.527,
+          "kmTransverse": 10.195
+        },
+        {
+          "draft": 2.9,
+          "displacementTonnes": 4437.5,
+          "lcb": 59.942,
+          "lcf": 61.498,
+          "kmTransverse": 10.076
+        },
+        {
+          "draft": 2.95,
+          "displacementTonnes": 4522.15,
+          "lcb": 59.971,
+          "lcf": 61.475,
+          "kmTransverse": 9.961
+        },
+        {
+          "draft": 3.0,
+          "displacementTonnes": 4606.95,
+          "lcb": 59.998,
+          "lcf": 61.42,
+          "kmTransverse": 9.853
+        },
+        {
+          "draft": 3.05,
+          "displacementTonnes": 4691.9,
+          "lcb": 60.024,
+          "lcf": 61.393,
+          "kmTransverse": 9.75
+        },
+        {
+          "draft": 3.1,
+          "displacementTonnes": 4776.99,
+          "lcb": 60.048,
+          "lcf": 61.35,
+          "kmTransverse": 9.649
+        },
+        {
+          "draft": 3.15,
+          "displacementTonnes": 4862.25,
+          "lcb": 60.07,
+          "lcf": 61.304,
+          "kmTransverse": 9.555
+        },
+        {
+          "draft": 3.2,
+          "displacementTonnes": 4947.79,
+          "lcb": 60.09,
+          "lcf": 61.142,
+          "kmTransverse": 9.473
+        },
+        {
+          "draft": 3.25,
+          "displacementTonnes": 5033.67,
+          "lcb": 60.107,
+          "lcf": 61.007,
+          "kmTransverse": 9.399
+        },
+        {
+          "draft": 3.3,
+          "displacementTonnes": 5119.92,
+          "lcb": 60.121,
+          "lcf": 60.835,
+          "kmTransverse": 9.337
+        },
+        {
+          "draft": 3.35,
+          "displacementTonnes": 5206.54,
+          "lcb": 60.132,
+          "lcf": 60.679,
+          "kmTransverse": 9.287
+        },
+        {
+          "draft": 3.4,
+          "displacementTonnes": 5293.52,
+          "lcb": 60.14,
+          "lcf": 60.539,
+          "kmTransverse": 9.248
+        },
+        {
+          "draft": 3.45,
+          "displacementTonnes": 5380.81,
+          "lcb": 60.146,
+          "lcf": 60.445,
+          "kmTransverse": 9.194
+        },
+        {
+          "draft": 3.5,
+          "displacementTonnes": 5468.3,
+          "lcb": 60.15,
+          "lcf": 60.386,
+          "kmTransverse": 9.122
+        },
+        {
+          "draft": 3.55,
+          "displacementTonnes": 5555.94,
+          "lcb": 60.154,
+          "lcf": 60.348,
+          "kmTransverse": 9.052
+        },
+        {
+          "draft": 3.6,
+          "displacementTonnes": 5643.73,
+          "lcb": 60.156,
+          "lcf": 60.288,
+          "kmTransverse": 8.984
+        },
+        {
+          "draft": 3.65,
+          "displacementTonnes": 5731.67,
+          "lcb": 60.158,
+          "lcf": 60.224,
+          "kmTransverse": 8.918
+        },
+        {
+          "draft": 3.7,
+          "displacementTonnes": 5819.79,
+          "lcb": 60.159,
+          "lcf": 60.18,
+          "kmTransverse": 8.857
+        },
+        {
+          "draft": 3.75,
+          "displacementTonnes": 5908.07,
+          "lcb": 60.159,
+          "lcf": 60.118,
+          "kmTransverse": 8.796
+        },
+        {
+          "draft": 3.8,
+          "displacementTonnes": 5996.5,
+          "lcb": 60.158,
+          "lcf": 60.086,
+          "kmTransverse": 8.737
+        },
+        {
+          "draft": 3.85,
+          "displacementTonnes": 6085.09,
+          "lcb": 60.156,
+          "lcf": 59.996,
+          "kmTransverse": 8.682
+        },
+        {
+          "draft": 3.9,
+          "displacementTonnes": 6173.85,
+          "lcb": 60.154,
+          "lcf": 59.936,
+          "kmTransverse": 8.629
+        },
+        {
+          "draft": 3.95,
+          "displacementTonnes": 6262.77,
+          "lcb": 60.151,
+          "lcf": 59.882,
+          "kmTransverse": 8.577
+        },
+        {
+          "draft": 4.0,
+          "displacementTonnes": 6351.85,
+          "lcb": 60.147,
+          "lcf": 59.837,
+          "kmTransverse": 8.527
+        },
+        {
+          "draft": 4.05,
+          "displacementTonnes": 6441.11,
+          "lcb": 60.142,
+          "lcf": 59.746,
+          "kmTransverse": 8.48
+        },
+        {
+          "draft": 4.1,
+          "displacementTonnes": 6530.55,
+          "lcb": 60.136,
+          "lcf": 59.68,
+          "kmTransverse": 8.435
+        },
+        {
+          "draft": 4.15,
+          "displacementTonnes": 6620.16,
+          "lcb": 60.129,
+          "lcf": 59.603,
+          "kmTransverse": 8.391
+        },
+        {
+          "draft": 4.2,
+          "displacementTonnes": 6709.96,
+          "lcb": 60.122,
+          "lcf": 59.51,
+          "kmTransverse": 8.349
+        },
+        {
+          "draft": 4.25,
+          "displacementTonnes": 6799.96,
+          "lcb": 60.113,
+          "lcf": 59.418,
+          "kmTransverse": 8.309
+        },
+        {
+          "draft": 4.3,
+          "displacementTonnes": 6890.17,
+          "lcb": 60.104,
+          "lcf": 59.347,
+          "kmTransverse": 8.27
+        },
+        {
+          "draft": 4.35,
+          "displacementTonnes": 6980.56,
+          "lcb": 60.094,
+          "lcf": 59.264,
+          "kmTransverse": 8.232
+        },
+        {
+          "draft": 4.4,
+          "displacementTonnes": 7071.17,
+          "lcb": 60.083,
+          "lcf": 59.133,
+          "kmTransverse": 8.197
+        },
+        {
+          "draft": 4.45,
+          "displacementTonnes": 7162.01,
+          "lcb": 60.07,
+          "lcf": 59.044,
+          "kmTransverse": 8.162
+        },
+        {
+          "draft": 4.5,
+          "displacementTonnes": 7253.07,
+          "lcb": 60.057,
+          "lcf": 58.954,
+          "kmTransverse": 8.129
+        },
+        {
+          "draft": 4.55,
+          "displacementTonnes": 7344.36,
+          "lcb": 60.042,
+          "lcf": 58.843,
+          "kmTransverse": 8.097
+        },
+        {
+          "draft": 4.6,
+          "displacementTonnes": 7435.81,
+          "lcb": 60.028,
+          "lcf": 58.807,
+          "kmTransverse": 8.068
+        },
+        {
+          "draft": 4.65,
+          "displacementTonnes": 7527.55,
+          "lcb": 60.011,
+          "lcf": 58.497,
+          "kmTransverse": 8.038
+        },
+        {
+          "draft": 4.7,
+          "displacementTonnes": 7619.7,
+          "lcb": 59.993,
+          "lcf": 58.409,
+          "kmTransverse": 8.009
+        },
+        {
+          "draft": 4.75,
+          "displacementTonnes": 7712.07,
+          "lcb": 59.973,
+          "lcf": 58.329,
+          "kmTransverse": 7.984
+        },
+        {
+          "draft": 4.8,
+          "displacementTonnes": 7804.63,
+          "lcb": 59.953,
+          "lcf": 58.226,
+          "kmTransverse": 7.958
+        },
+        {
+          "draft": 4.85,
+          "displacementTonnes": 7897.39,
+          "lcb": 59.932,
+          "lcf": 58.127,
+          "kmTransverse": 7.933
+        },
+        {
+          "draft": 4.9,
+          "displacementTonnes": 7990.35,
+          "lcb": 59.911,
+          "lcf": 58.069,
+          "kmTransverse": 7.911
+        },
+        {
+          "draft": 4.95,
+          "displacementTonnes": 8083.45,
+          "lcb": 59.89,
+          "lcf": 58.038,
+          "kmTransverse": 7.888
+        },
+        {
+          "draft": 5.0,
+          "displacementTonnes": 8176.67,
+          "lcb": 59.868,
+          "lcf": 57.977,
+          "kmTransverse": 7.866
+        },
+        {
+          "draft": 5.05,
+          "displacementTonnes": 8270.04,
+          "lcb": 59.847,
+          "lcf": 57.9,
+          "kmTransverse": 7.846
+        },
+        {
+          "draft": 5.1,
+          "displacementTonnes": 8363.58,
+          "lcb": 59.825,
+          "lcf": 57.845,
+          "kmTransverse": 7.827
+        },
+        {
+          "draft": 5.15,
+          "displacementTonnes": 8457.25,
+          "lcb": 59.802,
+          "lcf": 57.79,
+          "kmTransverse": 7.809
+        },
+        {
+          "draft": 5.2,
+          "displacementTonnes": 8551.08,
+          "lcb": 59.78,
+          "lcf": 57.748,
+          "kmTransverse": 7.792
+        },
+        {
+          "draft": 5.25,
+          "displacementTonnes": 8645.06,
+          "lcb": 59.757,
+          "lcf": 57.656,
+          "kmTransverse": 7.776
+        },
+        {
+          "draft": 5.3,
+          "displacementTonnes": 8739.19,
+          "lcb": 59.734,
+          "lcf": 57.555,
+          "kmTransverse": 7.76
+        },
+        {
+          "draft": 5.35,
+          "displacementTonnes": 8833.49,
+          "lcb": 59.711,
+          "lcf": 57.511,
+          "kmTransverse": 7.746
+        },
+        {
+          "draft": 5.4,
+          "displacementTonnes": 8927.93,
+          "lcb": 59.688,
+          "lcf": 57.46,
+          "kmTransverse": 7.733
+        },
+        {
+          "draft": 5.45,
+          "displacementTonnes": 9022.54,
+          "lcb": 59.664,
+          "lcf": 57.377,
+          "kmTransverse": 7.72
+        },
+        {
+          "draft": 5.5,
+          "displacementTonnes": 9117.31,
+          "lcb": 59.64,
+          "lcf": 57.325,
+          "kmTransverse": 7.708
+        },
+        {
+          "draft": 5.55,
+          "displacementTonnes": 9212.22,
+          "lcb": 59.616,
+          "lcf": 57.271,
+          "kmTransverse": 7.697
+        },
+        {
+          "draft": 5.6,
+          "displacementTonnes": 9307.31,
+          "lcb": 59.591,
+          "lcf": 57.166,
+          "kmTransverse": 7.686
+        },
+        {
+          "draft": 5.65,
+          "displacementTonnes": 9402.57,
+          "lcb": 59.566,
+          "lcf": 57.084,
+          "kmTransverse": 7.677
+        },
+        {
+          "draft": 5.7,
+          "displacementTonnes": 9497.99,
+          "lcb": 59.541,
+          "lcf": 57.006,
+          "kmTransverse": 7.667
+        },
+        {
+          "draft": 5.75,
+          "displacementTonnes": 9593.59,
+          "lcb": 59.516,
+          "lcf": 56.916,
+          "kmTransverse": 7.659
+        },
+        {
+          "draft": 5.8,
+          "displacementTonnes": 9689.37,
+          "lcb": 59.49,
+          "lcf": 56.848,
+          "kmTransverse": 7.652
+        },
+        {
+          "draft": 5.85,
+          "displacementTonnes": 9785.32,
+          "lcb": 59.464,
+          "lcf": 56.756,
+          "kmTransverse": 7.645
+        },
+        {
+          "draft": 5.9,
+          "displacementTonnes": 9881.44,
+          "lcb": 59.437,
+          "lcf": 56.701,
+          "kmTransverse": 7.639
+        },
+        {
+          "draft": 5.95,
+          "displacementTonnes": 9977.72,
+          "lcb": 59.411,
+          "lcf": 56.61,
+          "kmTransverse": 7.634
+        },
+        {
+          "draft": 6.0,
+          "displacementTonnes": 10074.19,
+          "lcb": 59.384,
+          "lcf": 56.543,
+          "kmTransverse": 7.629
+        },
+        {
+          "draft": 6.05,
+          "displacementTonnes": 10170.85,
+          "lcb": 59.356,
+          "lcf": 56.465,
+          "kmTransverse": 7.624
+        },
+        {
+          "draft": 6.1,
+          "displacementTonnes": 10267.68,
+          "lcb": 59.329,
+          "lcf": 56.354,
+          "kmTransverse": 7.621
+        },
+        {
+          "draft": 6.15,
+          "displacementTonnes": 10364.7,
+          "lcb": 59.3,
+          "lcf": 56.284,
+          "kmTransverse": 7.617
+        },
+        {
+          "draft": 6.2,
+          "displacementTonnes": 10461.89,
+          "lcb": 59.272,
+          "lcf": 56.17,
+          "kmTransverse": 7.614
+        },
+        {
+          "draft": 6.25,
+          "displacementTonnes": 10559.28,
+          "lcb": 59.243,
+          "lcf": 56.107,
+          "kmTransverse": 7.611
+        },
+        {
+          "draft": 6.3,
+          "displacementTonnes": 10656.86,
+          "lcb": 59.214,
+          "lcf": 56.027,
+          "kmTransverse": 7.609
+        },
+        {
+          "draft": 6.35,
+          "displacementTonnes": 10754.61,
+          "lcb": 59.185,
+          "lcf": 55.914,
+          "kmTransverse": 7.608
+        },
+        {
+          "draft": 6.4,
+          "displacementTonnes": 10852.57,
+          "lcb": 59.155,
+          "lcf": 55.862,
+          "kmTransverse": 7.607
+        },
+        {
+          "draft": 6.45,
+          "displacementTonnes": 10950.72,
+          "lcb": 59.125,
+          "lcf": 55.729,
+          "kmTransverse": 7.607
+        },
+        {
+          "draft": 6.5,
+          "displacementTonnes": 11049.07,
+          "lcb": 59.095,
+          "lcf": 55.633,
+          "kmTransverse": 7.607
+        },
+        {
+          "draft": 6.55,
+          "displacementTonnes": 11147.62,
+          "lcb": 59.064,
+          "lcf": 55.533,
+          "kmTransverse": 7.607
+        },
+        {
+          "draft": 6.6,
+          "displacementTonnes": 11246.37,
+          "lcb": 59.033,
+          "lcf": 55.468,
+          "kmTransverse": 7.609
+        },
+        {
+          "draft": 6.65,
+          "displacementTonnes": 11345.33,
+          "lcb": 59.001,
+          "lcf": 55.343,
+          "kmTransverse": 7.611
+        },
+        {
+          "draft": 6.7,
+          "displacementTonnes": 11444.49,
+          "lcb": 58.969,
+          "lcf": 55.251,
+          "kmTransverse": 7.612
+        },
+        {
+          "draft": 6.75,
+          "displacementTonnes": 11543.85,
+          "lcb": 58.937,
+          "lcf": 55.163,
+          "kmTransverse": 7.615
+        },
+        {
+          "draft": 6.8,
+          "displacementTonnes": 11643.38,
+          "lcb": 58.904,
+          "lcf": 55.065,
+          "kmTransverse": 7.617
+        },
+        {
+          "draft": 6.85,
+          "displacementTonnes": 11743.07,
+          "lcb": 58.872,
+          "lcf": 55.011,
+          "kmTransverse": 7.62
+        },
+        {
+          "draft": 6.9,
+          "displacementTonnes": 11842.89,
+          "lcb": 58.839,
+          "lcf": 54.972,
+          "kmTransverse": 7.623
+        },
+        {
+          "draft": 6.95,
+          "displacementTonnes": 11942.82,
+          "lcb": 58.807,
+          "lcf": 54.956,
+          "kmTransverse": 7.625
+        },
+        {
+          "draft": 7.0,
+          "displacementTonnes": 12042.83,
+          "lcb": 58.774,
+          "lcf": 54.893,
+          "kmTransverse": 7.627
+        },
+        {
+          "draft": 7.05,
+          "displacementTonnes": 12142.93,
+          "lcb": 58.742,
+          "lcf": 54.884,
+          "kmTransverse": 7.629
+        },
+        {
+          "draft": 7.1,
+          "displacementTonnes": 12243.09,
+          "lcb": 58.711,
+          "lcf": 54.833,
+          "kmTransverse": 7.632
+        },
+        {
+          "draft": 7.15,
+          "displacementTonnes": 12343.34,
+          "lcb": 58.679,
+          "lcf": 54.817,
+          "kmTransverse": 7.634
+        },
+        {
+          "draft": 7.2,
+          "displacementTonnes": 12443.66,
+          "lcb": 58.648,
+          "lcf": 54.814,
+          "kmTransverse": 7.636
+        },
+        {
+          "draft": 7.25,
+          "displacementTonnes": 12544.03,
+          "lcb": 58.617,
+          "lcf": 54.791,
+          "kmTransverse": 7.639
+        },
+        {
+          "draft": 7.3,
+          "displacementTonnes": 12644.46,
+          "lcb": 58.587,
+          "lcf": 54.775,
+          "kmTransverse": 7.642
+        },
+        {
+          "draft": 7.35,
+          "displacementTonnes": 12744.95,
+          "lcb": 58.557,
+          "lcf": 54.782,
+          "kmTransverse": 7.644
+        },
+        {
+          "draft": 7.4,
+          "displacementTonnes": 12845.5,
+          "lcb": 58.527,
+          "lcf": 54.757,
+          "kmTransverse": 7.647
+        },
+        {
+          "draft": 7.45,
+          "displacementTonnes": 12946.08,
+          "lcb": 58.498,
+          "lcf": 54.735,
+          "kmTransverse": 7.65
+        },
+        {
+          "draft": 7.5,
+          "displacementTonnes": 13046.73,
+          "lcb": 58.469,
+          "lcf": 54.707,
+          "kmTransverse": 7.653
+        },
+        {
+          "draft": 7.55,
+          "displacementTonnes": 13147.42,
+          "lcb": 58.44,
+          "lcf": 54.719,
+          "kmTransverse": 7.657
+        },
+        {
+          "draft": 7.6,
+          "displacementTonnes": 13248.15,
+          "lcb": 58.412,
+          "lcf": 54.696,
+          "kmTransverse": 7.66
+        },
+        {
+          "draft": 7.65,
+          "displacementTonnes": 13348.92,
+          "lcb": 58.384,
+          "lcf": 54.693,
+          "kmTransverse": 7.664
+        },
+        {
+          "draft": 7.7,
+          "displacementTonnes": 13449.74,
+          "lcb": 58.356,
+          "lcf": 54.687,
+          "kmTransverse": 7.668
+        },
+        {
+          "draft": 7.75,
+          "displacementTonnes": 13550.59,
+          "lcb": 58.329,
+          "lcf": 54.665,
+          "kmTransverse": 7.672
+        },
+        {
+          "draft": 7.8,
+          "displacementTonnes": 13651.48,
+          "lcb": 58.302,
+          "lcf": 54.68,
+          "kmTransverse": 7.676
+        },
+        {
+          "draft": 7.85,
+          "displacementTonnes": 13752.4,
+          "lcb": 58.275,
+          "lcf": 54.699,
+          "kmTransverse": 7.68
+        },
+        {
+          "draft": 7.9,
+          "displacementTonnes": 13853.36,
+          "lcb": 58.249,
+          "lcf": 54.667,
+          "kmTransverse": 7.685
+        },
+        {
+          "draft": 7.95,
+          "displacementTonnes": 13954.35,
+          "lcb": 58.223,
+          "lcf": 54.677,
+          "kmTransverse": 7.69
+        },
+        {
+          "draft": 8.0,
+          "displacementTonnes": 14055.38,
+          "lcb": 58.197,
+          "lcf": 54.656,
+          "kmTransverse": 7.695
+        },
+        {
+          "draft": 8.011,
+          "displacementTonnes": 14077.62,
+          "lcb": 58.192,
+          "lcf": 54.663,
+          "kmTransverse": 7.696
+        },
+        {
+          "draft": 8.05,
+          "displacementTonnes": 14156.45,
+          "lcb": 58.172,
+          "lcf": 54.659,
+          "kmTransverse": 7.7
+        },
+        {
+          "draft": 8.1,
+          "displacementTonnes": 14257.54,
+          "lcb": 58.147,
+          "lcf": 54.68,
+          "kmTransverse": 7.705
+        },
+        {
+          "draft": 8.15,
+          "displacementTonnes": 14358.65,
+          "lcb": 58.123,
+          "lcf": 54.66,
+          "kmTransverse": 7.711
+        },
+        {
+          "draft": 8.2,
+          "displacementTonnes": 14459.81,
+          "lcb": 58.098,
+          "lcf": 54.651,
+          "kmTransverse": 7.717
+        },
+        {
+          "draft": 8.25,
+          "displacementTonnes": 14560.99,
+          "lcb": 58.074,
+          "lcf": 54.648,
+          "kmTransverse": 7.723
+        },
+        {
+          "draft": 8.3,
+          "displacementTonnes": 14662.2,
+          "lcb": 58.051,
+          "lcf": 54.624,
+          "kmTransverse": 7.729
+        },
+        {
+          "draft": 8.35,
+          "displacementTonnes": 14763.45,
+          "lcb": 58.028,
+          "lcf": 54.694,
+          "kmTransverse": 7.735
+        },
+        {
+          "draft": 8.4,
+          "displacementTonnes": 14864.71,
+          "lcb": 58.005,
+          "lcf": 54.7,
+          "kmTransverse": 7.742
+        }
+      ]
+    },
+    {
+      "trimMetres": -0.5,
+      "rows": [
+        {
+          "draft": 2.5,
+          "displacementTonnes": 3772.15,
+          "lcb": 61.056,
+          "lcf": 61.952,
+          "kmTransverse": 11.164
+        },
+        {
+          "draft": 2.55,
+          "displacementTonnes": 3855.55,
+          "lcb": 61.075,
+          "lcf": 61.933,
+          "kmTransverse": 10.998
+        },
+        {
+          "draft": 2.6,
+          "displacementTonnes": 3939.08,
+          "lcb": 61.093,
+          "lcf": 61.915,
+          "kmTransverse": 10.841
+        },
+        {
+          "draft": 2.65,
+          "displacementTonnes": 4022.74,
+          "lcb": 61.11,
+          "lcf": 61.893,
+          "kmTransverse": 10.691
+        },
+        {
+          "draft": 2.7,
+          "displacementTonnes": 4106.52,
+          "lcb": 61.126,
+          "lcf": 61.88,
+          "kmTransverse": 10.547
+        },
+        {
+          "draft": 2.75,
+          "displacementTonnes": 4190.44,
+          "lcb": 61.141,
+          "lcf": 61.863,
+          "kmTransverse": 10.41
+        },
+        {
+          "draft": 2.8,
+          "displacementTonnes": 4274.49,
+          "lcb": 61.155,
+          "lcf": 61.828,
+          "kmTransverse": 10.28
+        },
+        {
+          "draft": 2.85,
+          "displacementTonnes": 4358.68,
+          "lcb": 61.168,
+          "lcf": 61.798,
+          "kmTransverse": 10.156
+        },
+        {
+          "draft": 2.9,
+          "displacementTonnes": 4443.0,
+          "lcb": 61.18,
+          "lcf": 61.792,
+          "kmTransverse": 10.036
+        },
+        {
+          "draft": 2.95,
+          "displacementTonnes": 4527.45,
+          "lcb": 61.191,
+          "lcf": 61.76,
+          "kmTransverse": 9.923
+        },
+        {
+          "draft": 3.0,
+          "displacementTonnes": 4612.04,
+          "lcb": 61.201,
+          "lcf": 61.703,
+          "kmTransverse": 9.814
+        },
+        {
+          "draft": 3.05,
+          "displacementTonnes": 4696.77,
+          "lcb": 61.21,
+          "lcf": 61.691,
+          "kmTransverse": 9.71
+        },
+        {
+          "draft": 3.1,
+          "displacementTonnes": 4781.62,
+          "lcb": 61.218,
+          "lcf": 61.667,
+          "kmTransverse": 9.61
+        },
+        {
+          "draft": 3.15,
+          "displacementTonnes": 4866.61,
+          "lcb": 61.226,
+          "lcf": 61.621,
+          "kmTransverse": 9.514
+        },
+        {
+          "draft": 3.2,
+          "displacementTonnes": 4951.75,
+          "lcb": 61.232,
+          "lcf": 61.597,
+          "kmTransverse": 9.423
+        },
+        {
+          "draft": 3.25,
+          "displacementTonnes": 5037.01,
+          "lcb": 61.238,
+          "lcf": 61.547,
+          "kmTransverse": 9.335
+        },
+        {
+          "draft": 3.3,
+          "displacementTonnes": 5122.42,
+          "lcb": 61.243,
+          "lcf": 61.503,
+          "kmTransverse": 9.25
+        },
+        {
+          "draft": 3.35,
+          "displacementTonnes": 5207.99,
+          "lcb": 61.246,
+          "lcf": 61.394,
+          "kmTransverse": 9.173
+        },
+        {
+          "draft": 3.4,
+          "displacementTonnes": 5293.88,
+          "lcb": 61.248,
+          "lcf": 61.246,
+          "kmTransverse": 9.107
+        },
+        {
+          "draft": 3.45,
+          "displacementTonnes": 5380.11,
+          "lcb": 61.247,
+          "lcf": 61.087,
+          "kmTransverse": 9.048
+        },
+        {
+          "draft": 3.5,
+          "displacementTonnes": 5466.69,
+          "lcb": 61.243,
+          "lcf": 60.933,
+          "kmTransverse": 9.0
+        },
+        {
+          "draft": 3.55,
+          "displacementTonnes": 5553.64,
+          "lcb": 61.237,
+          "lcf": 60.774,
+          "kmTransverse": 8.963
+        },
+        {
+          "draft": 3.6,
+          "displacementTonnes": 5640.94,
+          "lcb": 61.229,
+          "lcf": 60.626,
+          "kmTransverse": 8.933
+        },
+        {
+          "draft": 3.65,
+          "displacementTonnes": 5728.51,
+          "lcb": 61.219,
+          "lcf": 60.564,
+          "kmTransverse": 8.88
+        },
+        {
+          "draft": 3.7,
+          "displacementTonnes": 5816.23,
+          "lcb": 61.209,
+          "lcf": 60.526,
+          "kmTransverse": 8.817
+        },
+        {
+          "draft": 3.75,
+          "displacementTonnes": 5904.11,
+          "lcb": 61.199,
+          "lcf": 60.473,
+          "kmTransverse": 8.759
+        },
+        {
+          "draft": 3.8,
+          "displacementTonnes": 5992.13,
+          "lcb": 61.188,
+          "lcf": 60.435,
+          "kmTransverse": 8.7
+        },
+        {
+          "draft": 3.85,
+          "displacementTonnes": 6080.28,
+          "lcb": 61.176,
+          "lcf": 60.356,
+          "kmTransverse": 8.645
+        },
+        {
+          "draft": 3.9,
+          "displacementTonnes": 6168.61,
+          "lcb": 61.164,
+          "lcf": 60.293,
+          "kmTransverse": 8.593
+        },
+        {
+          "draft": 3.95,
+          "displacementTonnes": 6257.1,
+          "lcb": 61.151,
+          "lcf": 60.247,
+          "kmTransverse": 8.542
+        },
+        {
+          "draft": 4.0,
+          "displacementTonnes": 6345.72,
+          "lcb": 61.138,
+          "lcf": 60.185,
+          "kmTransverse": 8.491
+        },
+        {
+          "draft": 4.05,
+          "displacementTonnes": 6434.5,
+          "lcb": 61.125,
+          "lcf": 60.108,
+          "kmTransverse": 8.444
+        },
+        {
+          "draft": 4.1,
+          "displacementTonnes": 6523.45,
+          "lcb": 61.111,
+          "lcf": 60.056,
+          "kmTransverse": 8.399
+        },
+        {
+          "draft": 4.15,
+          "displacementTonnes": 6612.55,
+          "lcb": 61.096,
+          "lcf": 59.999,
+          "kmTransverse": 8.355
+        },
+        {
+          "draft": 4.2,
+          "displacementTonnes": 6701.8,
+          "lcb": 61.081,
+          "lcf": 59.935,
+          "kmTransverse": 8.313
+        },
+        {
+          "draft": 4.25,
+          "displacementTonnes": 6791.21,
+          "lcb": 61.066,
+          "lcf": 59.866,
+          "kmTransverse": 8.273
+        },
+        {
+          "draft": 4.3,
+          "displacementTonnes": 6880.8,
+          "lcb": 61.05,
+          "lcf": 59.792,
+          "kmTransverse": 8.235
+        },
+        {
+          "draft": 4.35,
+          "displacementTonnes": 6970.56,
+          "lcb": 61.033,
+          "lcf": 59.717,
+          "kmTransverse": 8.198
+        },
+        {
+          "draft": 4.4,
+          "displacementTonnes": 7060.49,
+          "lcb": 61.016,
+          "lcf": 59.66,
+          "kmTransverse": 8.161
+        },
+        {
+          "draft": 4.45,
+          "displacementTonnes": 7150.62,
+          "lcb": 60.998,
+          "lcf": 59.536,
+          "kmTransverse": 8.128
+        },
+        {
+          "draft": 4.5,
+          "displacementTonnes": 7240.94,
+          "lcb": 60.98,
+          "lcf": 59.466,
+          "kmTransverse": 8.095
+        },
+        {
+          "draft": 4.55,
+          "displacementTonnes": 7331.45,
+          "lcb": 60.96,
+          "lcf": 59.393,
+          "kmTransverse": 8.063
+        },
+        {
+          "draft": 4.6,
+          "displacementTonnes": 7422.15,
+          "lcb": 60.941,
+          "lcf": 59.279,
+          "kmTransverse": 8.033
+        },
+        {
+          "draft": 4.65,
+          "displacementTonnes": 7513.07,
+          "lcb": 60.92,
+          "lcf": 59.18,
+          "kmTransverse": 8.005
+        },
+        {
+          "draft": 4.7,
+          "displacementTonnes": 7604.21,
+          "lcb": 60.899,
+          "lcf": 59.073,
+          "kmTransverse": 7.977
+        },
+        {
+          "draft": 4.75,
+          "displacementTonnes": 7695.56,
+          "lcb": 60.877,
+          "lcf": 58.959,
+          "kmTransverse": 7.95
+        },
+        {
+          "draft": 4.8,
+          "displacementTonnes": 7787.16,
+          "lcb": 60.854,
+          "lcf": 58.856,
+          "kmTransverse": 7.925
+        },
+        {
+          "draft": 4.85,
+          "displacementTonnes": 7878.9,
+          "lcb": 60.83,
+          "lcf": 58.848,
+          "kmTransverse": 7.901
+        },
+        {
+          "draft": 4.9,
+          "displacementTonnes": 7970.91,
+          "lcb": 60.806,
+          "lcf": 58.536,
+          "kmTransverse": 7.877
+        },
+        {
+          "draft": 4.95,
+          "displacementTonnes": 8063.35,
+          "lcb": 60.779,
+          "lcf": 58.428,
+          "kmTransverse": 7.855
+        },
+        {
+          "draft": 5.0,
+          "displacementTonnes": 8155.99,
+          "lcb": 60.752,
+          "lcf": 58.363,
+          "kmTransverse": 7.835
+        },
+        {
+          "draft": 5.05,
+          "displacementTonnes": 8248.82,
+          "lcb": 60.725,
+          "lcf": 58.235,
+          "kmTransverse": 7.814
+        },
+        {
+          "draft": 5.1,
+          "displacementTonnes": 8341.86,
+          "lcb": 60.697,
+          "lcf": 58.162,
+          "kmTransverse": 7.794
+        },
+        {
+          "draft": 5.15,
+          "displacementTonnes": 8435.06,
+          "lcb": 60.669,
+          "lcf": 58.113,
+          "kmTransverse": 7.777
+        },
+        {
+          "draft": 5.2,
+          "displacementTonnes": 8528.39,
+          "lcb": 60.641,
+          "lcf": 58.081,
+          "kmTransverse": 7.759
+        },
+        {
+          "draft": 5.25,
+          "displacementTonnes": 8621.84,
+          "lcb": 60.613,
+          "lcf": 58.01,
+          "kmTransverse": 7.742
+        },
+        {
+          "draft": 5.3,
+          "displacementTonnes": 8715.46,
+          "lcb": 60.584,
+          "lcf": 57.944,
+          "kmTransverse": 7.728
+        },
+        {
+          "draft": 5.35,
+          "displacementTonnes": 8809.22,
+          "lcb": 60.556,
+          "lcf": 57.879,
+          "kmTransverse": 7.712
+        },
+        {
+          "draft": 5.4,
+          "displacementTonnes": 8903.11,
+          "lcb": 60.528,
+          "lcf": 57.811,
+          "kmTransverse": 7.698
+        },
+        {
+          "draft": 5.45,
+          "displacementTonnes": 8997.17,
+          "lcb": 60.499,
+          "lcf": 57.743,
+          "kmTransverse": 7.687
+        },
+        {
+          "draft": 5.5,
+          "displacementTonnes": 9091.37,
+          "lcb": 60.47,
+          "lcf": 57.688,
+          "kmTransverse": 7.674
+        },
+        {
+          "draft": 5.55,
+          "displacementTonnes": 9185.72,
+          "lcb": 60.442,
+          "lcf": 57.617,
+          "kmTransverse": 7.662
+        },
+        {
+          "draft": 5.6,
+          "displacementTonnes": 9280.24,
+          "lcb": 60.413,
+          "lcf": 57.563,
+          "kmTransverse": 7.652
+        },
+        {
+          "draft": 5.65,
+          "displacementTonnes": 9374.88,
+          "lcb": 60.384,
+          "lcf": 57.491,
+          "kmTransverse": 7.642
+        },
+        {
+          "draft": 5.7,
+          "displacementTonnes": 9469.71,
+          "lcb": 60.354,
+          "lcf": 57.409,
+          "kmTransverse": 7.633
+        },
+        {
+          "draft": 5.75,
+          "displacementTonnes": 9564.68,
+          "lcb": 60.325,
+          "lcf": 57.356,
+          "kmTransverse": 7.624
+        },
+        {
+          "draft": 5.8,
+          "displacementTonnes": 9659.8,
+          "lcb": 60.295,
+          "lcf": 57.313,
+          "kmTransverse": 7.616
+        },
+        {
+          "draft": 5.85,
+          "displacementTonnes": 9755.09,
+          "lcb": 60.266,
+          "lcf": 57.211,
+          "kmTransverse": 7.61
+        },
+        {
+          "draft": 5.9,
+          "displacementTonnes": 9850.54,
+          "lcb": 60.236,
+          "lcf": 57.154,
+          "kmTransverse": 7.603
+        },
+        {
+          "draft": 5.95,
+          "displacementTonnes": 9946.16,
+          "lcb": 60.206,
+          "lcf": 57.051,
+          "kmTransverse": 7.597
+        },
+        {
+          "draft": 6.0,
+          "displacementTonnes": 10041.95,
+          "lcb": 60.175,
+          "lcf": 56.962,
+          "kmTransverse": 7.592
+        },
+        {
+          "draft": 6.05,
+          "displacementTonnes": 10137.91,
+          "lcb": 60.145,
+          "lcf": 56.89,
+          "kmTransverse": 7.588
+        },
+        {
+          "draft": 6.1,
+          "displacementTonnes": 10234.04,
+          "lcb": 60.114,
+          "lcf": 56.834,
+          "kmTransverse": 7.583
+        },
+        {
+          "draft": 6.15,
+          "displacementTonnes": 10330.35,
+          "lcb": 60.083,
+          "lcf": 56.765,
+          "kmTransverse": 7.581
+        },
+        {
+          "draft": 6.2,
+          "displacementTonnes": 10426.81,
+          "lcb": 60.052,
+          "lcf": 56.678,
+          "kmTransverse": 7.577
+        },
+        {
+          "draft": 6.25,
+          "displacementTonnes": 10523.45,
+          "lcb": 60.021,
+          "lcf": 56.599,
+          "kmTransverse": 7.575
+        },
+        {
+          "draft": 6.3,
+          "displacementTonnes": 10620.27,
+          "lcb": 59.989,
+          "lcf": 56.502,
+          "kmTransverse": 7.573
+        },
+        {
+          "draft": 6.35,
+          "displacementTonnes": 10717.26,
+          "lcb": 59.957,
+          "lcf": 56.39,
+          "kmTransverse": 7.571
+        },
+        {
+          "draft": 6.4,
+          "displacementTonnes": 10814.45,
+          "lcb": 59.925,
+          "lcf": 56.344,
+          "kmTransverse": 7.571
+        },
+        {
+          "draft": 6.45,
+          "displacementTonnes": 10911.8,
+          "lcb": 59.893,
+          "lcf": 56.239,
+          "kmTransverse": 7.57
+        },
+        {
+          "draft": 6.5,
+          "displacementTonnes": 11009.34,
+          "lcb": 59.86,
+          "lcf": 56.169,
+          "kmTransverse": 7.569
+        },
+        {
+          "draft": 6.55,
+          "displacementTonnes": 11107.07,
+          "lcb": 59.827,
+          "lcf": 56.1,
+          "kmTransverse": 7.57
+        },
+        {
+          "draft": 6.6,
+          "displacementTonnes": 11204.96,
+          "lcb": 59.794,
+          "lcf": 55.998,
+          "kmTransverse": 7.571
+        },
+        {
+          "draft": 6.65,
+          "displacementTonnes": 11303.06,
+          "lcb": 59.761,
+          "lcf": 55.889,
+          "kmTransverse": 7.572
+        },
+        {
+          "draft": 6.7,
+          "displacementTonnes": 11401.35,
+          "lcb": 59.727,
+          "lcf": 55.816,
+          "kmTransverse": 7.574
+        },
+        {
+          "draft": 6.75,
+          "displacementTonnes": 11499.83,
+          "lcb": 59.693,
+          "lcf": 55.678,
+          "kmTransverse": 7.576
+        },
+        {
+          "draft": 6.8,
+          "displacementTonnes": 11598.51,
+          "lcb": 59.659,
+          "lcf": 55.586,
+          "kmTransverse": 7.579
+        },
+        {
+          "draft": 6.85,
+          "displacementTonnes": 11697.38,
+          "lcb": 59.624,
+          "lcf": 55.485,
+          "kmTransverse": 7.582
+        },
+        {
+          "draft": 6.9,
+          "displacementTonnes": 11796.45,
+          "lcb": 59.589,
+          "lcf": 55.409,
+          "kmTransverse": 7.585
+        },
+        {
+          "draft": 6.95,
+          "displacementTonnes": 11895.74,
+          "lcb": 59.554,
+          "lcf": 55.343,
+          "kmTransverse": 7.589
+        },
+        {
+          "draft": 7.0,
+          "displacementTonnes": 11995.21,
+          "lcb": 59.519,
+          "lcf": 55.235,
+          "kmTransverse": 7.592
+        },
+        {
+          "draft": 7.05,
+          "displacementTonnes": 12094.85,
+          "lcb": 59.483,
+          "lcf": 55.13,
+          "kmTransverse": 7.597
+        },
+        {
+          "draft": 7.1,
+          "displacementTonnes": 12194.66,
+          "lcb": 59.447,
+          "lcf": 55.068,
+          "kmTransverse": 7.602
+        },
+        {
+          "draft": 7.15,
+          "displacementTonnes": 12294.6,
+          "lcb": 59.412,
+          "lcf": 55.009,
+          "kmTransverse": 7.606
+        },
+        {
+          "draft": 7.2,
+          "displacementTonnes": 12394.64,
+          "lcb": 59.376,
+          "lcf": 54.995,
+          "kmTransverse": 7.611
+        },
+        {
+          "draft": 7.25,
+          "displacementTonnes": 12494.78,
+          "lcb": 59.341,
+          "lcf": 54.965,
+          "kmTransverse": 7.615
+        },
+        {
+          "draft": 7.3,
+          "displacementTonnes": 12595.0,
+          "lcb": 59.306,
+          "lcf": 54.942,
+          "kmTransverse": 7.619
+        },
+        {
+          "draft": 7.35,
+          "displacementTonnes": 12695.29,
+          "lcb": 59.272,
+          "lcf": 54.908,
+          "kmTransverse": 7.623
+        },
+        {
+          "draft": 7.4,
+          "displacementTonnes": 12795.66,
+          "lcb": 59.237,
+          "lcf": 54.901,
+          "kmTransverse": 7.626
+        },
+        {
+          "draft": 7.45,
+          "displacementTonnes": 12896.09,
+          "lcb": 59.203,
+          "lcf": 54.874,
+          "kmTransverse": 7.631
+        },
+        {
+          "draft": 7.5,
+          "displacementTonnes": 12996.58,
+          "lcb": 59.17,
+          "lcf": 54.851,
+          "kmTransverse": 7.635
+        },
+        {
+          "draft": 7.55,
+          "displacementTonnes": 13097.13,
+          "lcb": 59.136,
+          "lcf": 54.831,
+          "kmTransverse": 7.639
+        },
+        {
+          "draft": 7.6,
+          "displacementTonnes": 13197.74,
+          "lcb": 59.104,
+          "lcf": 54.815,
+          "kmTransverse": 7.643
+        },
+        {
+          "draft": 7.65,
+          "displacementTonnes": 13298.4,
+          "lcb": 59.071,
+          "lcf": 54.811,
+          "kmTransverse": 7.648
+        },
+        {
+          "draft": 7.7,
+          "displacementTonnes": 13399.12,
+          "lcb": 59.039,
+          "lcf": 54.781,
+          "kmTransverse": 7.652
+        },
+        {
+          "draft": 7.75,
+          "displacementTonnes": 13499.88,
+          "lcb": 59.007,
+          "lcf": 54.773,
+          "kmTransverse": 7.658
+        },
+        {
+          "draft": 7.8,
+          "displacementTonnes": 13600.69,
+          "lcb": 58.976,
+          "lcf": 54.782,
+          "kmTransverse": 7.662
+        },
+        {
+          "draft": 7.85,
+          "displacementTonnes": 13701.55,
+          "lcb": 58.945,
+          "lcf": 54.767,
+          "kmTransverse": 7.667
+        },
+        {
+          "draft": 7.9,
+          "displacementTonnes": 13802.44,
+          "lcb": 58.914,
+          "lcf": 54.753,
+          "kmTransverse": 7.673
+        },
+        {
+          "draft": 7.95,
+          "displacementTonnes": 13903.38,
+          "lcb": 58.884,
+          "lcf": 54.74,
+          "kmTransverse": 7.678
+        },
+        {
+          "draft": 8.0,
+          "displacementTonnes": 14004.37,
+          "lcb": 58.854,
+          "lcf": 54.747,
+          "kmTransverse": 7.683
+        },
+        {
+          "draft": 8.011,
+          "displacementTonnes": 14026.59,
+          "lcb": 58.848,
+          "lcf": 54.76,
+          "kmTransverse": 7.685
+        },
+        {
+          "draft": 8.05,
+          "displacementTonnes": 14105.4,
+          "lcb": 58.825,
+          "lcf": 54.727,
+          "kmTransverse": 7.69
+        },
+        {
+          "draft": 8.1,
+          "displacementTonnes": 14206.46,
+          "lcb": 58.796,
+          "lcf": 54.738,
+          "kmTransverse": 7.695
+        },
+        {
+          "draft": 8.15,
+          "displacementTonnes": 14307.56,
+          "lcb": 58.767,
+          "lcf": 54.744,
+          "kmTransverse": 7.701
+        },
+        {
+          "draft": 8.2,
+          "displacementTonnes": 14408.71,
+          "lcb": 58.739,
+          "lcf": 54.749,
+          "kmTransverse": 7.707
+        },
+        {
+          "draft": 8.25,
+          "displacementTonnes": 14509.89,
+          "lcb": 58.711,
+          "lcf": 54.754,
+          "kmTransverse": 7.714
+        },
+        {
+          "draft": 8.3,
+          "displacementTonnes": 14611.11,
+          "lcb": 58.684,
+          "lcf": 54.722,
+          "kmTransverse": 7.721
+        },
+        {
+          "draft": 8.35,
+          "displacementTonnes": 14712.38,
+          "lcb": 58.657,
+          "lcf": 54.77,
+          "kmTransverse": 7.727
+        },
+        {
+          "draft": 8.4,
+          "displacementTonnes": 14813.68,
+          "lcb": 58.63,
+          "lcf": 54.755,
+          "kmTransverse": 7.735
+        }
+      ]
+    },
+    {
+      "trimMetres": 0.0,
+      "rows": [
+        {
+          "draft": 2.5,
+          "displacementTonnes": 3780.4,
+          "lcb": 62.459,
+          "lcf": 62.162,
+          "kmTransverse": 11.134
+        },
+        {
+          "draft": 2.55,
+          "displacementTonnes": 3863.76,
+          "lcb": 62.453,
+          "lcf": 62.15,
+          "kmTransverse": 10.969
+        },
+        {
+          "draft": 2.6,
+          "displacementTonnes": 3947.23,
+          "lcb": 62.446,
+          "lcf": 62.14,
+          "kmTransverse": 10.81
+        },
+        {
+          "draft": 2.65,
+          "displacementTonnes": 4030.79,
+          "lcb": 62.44,
+          "lcf": 62.129,
+          "kmTransverse": 10.659
+        },
+        {
+          "draft": 2.7,
+          "displacementTonnes": 4114.47,
+          "lcb": 62.434,
+          "lcf": 62.134,
+          "kmTransverse": 10.514
+        },
+        {
+          "draft": 2.75,
+          "displacementTonnes": 4198.26,
+          "lcb": 62.427,
+          "lcf": 62.099,
+          "kmTransverse": 10.378
+        },
+        {
+          "draft": 2.8,
+          "displacementTonnes": 4282.17,
+          "lcb": 62.421,
+          "lcf": 62.076,
+          "kmTransverse": 10.247
+        },
+        {
+          "draft": 2.85,
+          "displacementTonnes": 4366.19,
+          "lcb": 62.414,
+          "lcf": 62.052,
+          "kmTransverse": 10.123
+        },
+        {
+          "draft": 2.9,
+          "displacementTonnes": 4450.34,
+          "lcb": 62.407,
+          "lcf": 62.037,
+          "kmTransverse": 10.003
+        },
+        {
+          "draft": 2.95,
+          "displacementTonnes": 4534.61,
+          "lcb": 62.4,
+          "lcf": 61.991,
+          "kmTransverse": 9.888
+        },
+        {
+          "draft": 3.0,
+          "displacementTonnes": 4619.0,
+          "lcb": 62.392,
+          "lcf": 61.986,
+          "kmTransverse": 9.779
+        },
+        {
+          "draft": 3.05,
+          "displacementTonnes": 4703.52,
+          "lcb": 62.385,
+          "lcf": 61.954,
+          "kmTransverse": 9.675
+        },
+        {
+          "draft": 3.1,
+          "displacementTonnes": 4788.16,
+          "lcb": 62.377,
+          "lcf": 61.912,
+          "kmTransverse": 9.575
+        },
+        {
+          "draft": 3.15,
+          "displacementTonnes": 4872.93,
+          "lcb": 62.368,
+          "lcf": 61.902,
+          "kmTransverse": 9.48
+        },
+        {
+          "draft": 3.2,
+          "displacementTonnes": 4957.82,
+          "lcb": 62.36,
+          "lcf": 61.863,
+          "kmTransverse": 9.387
+        },
+        {
+          "draft": 3.25,
+          "displacementTonnes": 5042.85,
+          "lcb": 62.351,
+          "lcf": 61.813,
+          "kmTransverse": 9.3
+        },
+        {
+          "draft": 3.3,
+          "displacementTonnes": 5127.98,
+          "lcb": 62.342,
+          "lcf": 61.776,
+          "kmTransverse": 9.216
+        },
+        {
+          "draft": 3.35,
+          "displacementTonnes": 5213.25,
+          "lcb": 62.332,
+          "lcf": 61.742,
+          "kmTransverse": 9.134
+        },
+        {
+          "draft": 3.4,
+          "displacementTonnes": 5298.65,
+          "lcb": 62.323,
+          "lcf": 61.706,
+          "kmTransverse": 9.057
+        },
+        {
+          "draft": 3.45,
+          "displacementTonnes": 5384.19,
+          "lcb": 62.312,
+          "lcf": 61.67,
+          "kmTransverse": 8.985
+        },
+        {
+          "draft": 3.5,
+          "displacementTonnes": 5469.84,
+          "lcb": 62.302,
+          "lcf": 61.598,
+          "kmTransverse": 8.912
+        },
+        {
+          "draft": 3.55,
+          "displacementTonnes": 5555.7,
+          "lcb": 62.29,
+          "lcf": 61.466,
+          "kmTransverse": 8.85
+        },
+        {
+          "draft": 3.6,
+          "displacementTonnes": 5641.9,
+          "lcb": 62.277,
+          "lcf": 61.309,
+          "kmTransverse": 8.796
+        },
+        {
+          "draft": 3.65,
+          "displacementTonnes": 5728.43,
+          "lcb": 62.262,
+          "lcf": 61.165,
+          "kmTransverse": 8.75
+        },
+        {
+          "draft": 3.7,
+          "displacementTonnes": 5815.31,
+          "lcb": 62.244,
+          "lcf": 61.0,
+          "kmTransverse": 8.714
+        },
+        {
+          "draft": 3.75,
+          "displacementTonnes": 5902.54,
+          "lcb": 62.225,
+          "lcf": 60.85,
+          "kmTransverse": 8.688
+        },
+        {
+          "draft": 3.8,
+          "displacementTonnes": 5990.12,
+          "lcb": 62.204,
+          "lcf": 60.719,
+          "kmTransverse": 8.663
+        },
+        {
+          "draft": 3.85,
+          "displacementTonnes": 6077.9,
+          "lcb": 62.182,
+          "lcf": 60.666,
+          "kmTransverse": 8.611
+        },
+        {
+          "draft": 3.9,
+          "displacementTonnes": 6165.83,
+          "lcb": 62.16,
+          "lcf": 60.604,
+          "kmTransverse": 8.558
+        },
+        {
+          "draft": 3.95,
+          "displacementTonnes": 6253.9,
+          "lcb": 62.138,
+          "lcf": 60.549,
+          "kmTransverse": 8.508
+        },
+        {
+          "draft": 4.0,
+          "displacementTonnes": 6342.11,
+          "lcb": 62.116,
+          "lcf": 60.519,
+          "kmTransverse": 8.46
+        },
+        {
+          "draft": 4.05,
+          "displacementTonnes": 6430.45,
+          "lcb": 62.094,
+          "lcf": 60.454,
+          "kmTransverse": 8.412
+        },
+        {
+          "draft": 4.1,
+          "displacementTonnes": 6518.96,
+          "lcb": 62.071,
+          "lcf": 60.401,
+          "kmTransverse": 8.366
+        },
+        {
+          "draft": 4.15,
+          "displacementTonnes": 6607.61,
+          "lcb": 62.048,
+          "lcf": 60.341,
+          "kmTransverse": 8.324
+        },
+        {
+          "draft": 4.2,
+          "displacementTonnes": 6696.41,
+          "lcb": 62.025,
+          "lcf": 60.304,
+          "kmTransverse": 8.281
+        },
+        {
+          "draft": 4.25,
+          "displacementTonnes": 6785.35,
+          "lcb": 62.002,
+          "lcf": 60.213,
+          "kmTransverse": 8.241
+        },
+        {
+          "draft": 4.3,
+          "displacementTonnes": 6874.45,
+          "lcb": 61.979,
+          "lcf": 60.154,
+          "kmTransverse": 8.204
+        },
+        {
+          "draft": 4.35,
+          "displacementTonnes": 6963.7,
+          "lcb": 61.955,
+          "lcf": 60.091,
+          "kmTransverse": 8.166
+        },
+        {
+          "draft": 4.4,
+          "displacementTonnes": 7053.1,
+          "lcb": 61.931,
+          "lcf": 60.033,
+          "kmTransverse": 8.131
+        },
+        {
+          "draft": 4.45,
+          "displacementTonnes": 7142.65,
+          "lcb": 61.907,
+          "lcf": 59.957,
+          "kmTransverse": 8.097
+        },
+        {
+          "draft": 4.5,
+          "displacementTonnes": 7232.37,
+          "lcb": 61.882,
+          "lcf": 59.871,
+          "kmTransverse": 8.064
+        },
+        {
+          "draft": 4.55,
+          "displacementTonnes": 7322.27,
+          "lcb": 61.857,
+          "lcf": 59.815,
+          "kmTransverse": 8.033
+        },
+        {
+          "draft": 4.6,
+          "displacementTonnes": 7412.31,
+          "lcb": 61.832,
+          "lcf": 59.765,
+          "kmTransverse": 8.003
+        },
+        {
+          "draft": 4.65,
+          "displacementTonnes": 7502.54,
+          "lcb": 61.807,
+          "lcf": 59.66,
+          "kmTransverse": 7.975
+        },
+        {
+          "draft": 4.7,
+          "displacementTonnes": 7592.96,
+          "lcb": 61.781,
+          "lcf": 59.578,
+          "kmTransverse": 7.947
+        },
+        {
+          "draft": 4.75,
+          "displacementTonnes": 7683.58,
+          "lcb": 61.754,
+          "lcf": 59.481,
+          "kmTransverse": 7.921
+        },
+        {
+          "draft": 4.8,
+          "displacementTonnes": 7774.36,
+          "lcb": 61.728,
+          "lcf": 59.391,
+          "kmTransverse": 7.895
+        },
+        {
+          "draft": 4.85,
+          "displacementTonnes": 7865.36,
+          "lcb": 61.7,
+          "lcf": 59.324,
+          "kmTransverse": 7.872
+        },
+        {
+          "draft": 4.9,
+          "displacementTonnes": 7956.57,
+          "lcb": 61.672,
+          "lcf": 59.21,
+          "kmTransverse": 7.848
+        },
+        {
+          "draft": 4.95,
+          "displacementTonnes": 8047.98,
+          "lcb": 61.644,
+          "lcf": 59.112,
+          "kmTransverse": 7.826
+        },
+        {
+          "draft": 5.0,
+          "displacementTonnes": 8139.62,
+          "lcb": 61.614,
+          "lcf": 58.972,
+          "kmTransverse": 7.806
+        },
+        {
+          "draft": 5.05,
+          "displacementTonnes": 8231.49,
+          "lcb": 61.584,
+          "lcf": 58.895,
+          "kmTransverse": 7.786
+        },
+        {
+          "draft": 5.1,
+          "displacementTonnes": 8323.49,
+          "lcb": 61.555,
+          "lcf": 58.854,
+          "kmTransverse": 7.766
+        },
+        {
+          "draft": 5.15,
+          "displacementTonnes": 8415.76,
+          "lcb": 61.524,
+          "lcf": 58.524,
+          "kmTransverse": 7.749
+        },
+        {
+          "draft": 5.2,
+          "displacementTonnes": 8508.49,
+          "lcb": 61.491,
+          "lcf": 58.453,
+          "kmTransverse": 7.731
+        },
+        {
+          "draft": 5.25,
+          "displacementTonnes": 8601.37,
+          "lcb": 61.458,
+          "lcf": 58.371,
+          "kmTransverse": 7.714
+        },
+        {
+          "draft": 5.3,
+          "displacementTonnes": 8694.46,
+          "lcb": 61.424,
+          "lcf": 58.268,
+          "kmTransverse": 7.699
+        },
+        {
+          "draft": 5.35,
+          "displacementTonnes": 8787.75,
+          "lcb": 61.391,
+          "lcf": 58.22,
+          "kmTransverse": 7.684
+        },
+        {
+          "draft": 5.4,
+          "displacementTonnes": 8881.17,
+          "lcb": 61.357,
+          "lcf": 58.156,
+          "kmTransverse": 7.67
+        },
+        {
+          "draft": 5.45,
+          "displacementTonnes": 8974.7,
+          "lcb": 61.323,
+          "lcf": 58.09,
+          "kmTransverse": 7.657
+        },
+        {
+          "draft": 5.5,
+          "displacementTonnes": 9068.39,
+          "lcb": 61.29,
+          "lcf": 58.021,
+          "kmTransverse": 7.645
+        },
+        {
+          "draft": 5.55,
+          "displacementTonnes": 9162.22,
+          "lcb": 61.256,
+          "lcf": 57.968,
+          "kmTransverse": 7.633
+        },
+        {
+          "draft": 5.6,
+          "displacementTonnes": 9256.2,
+          "lcb": 61.223,
+          "lcf": 57.969,
+          "kmTransverse": 7.622
+        },
+        {
+          "draft": 5.65,
+          "displacementTonnes": 9350.31,
+          "lcb": 61.189,
+          "lcf": 57.859,
+          "kmTransverse": 7.611
+        },
+        {
+          "draft": 5.7,
+          "displacementTonnes": 9444.57,
+          "lcb": 61.156,
+          "lcf": 57.778,
+          "kmTransverse": 7.604
+        },
+        {
+          "draft": 5.75,
+          "displacementTonnes": 9538.98,
+          "lcb": 61.122,
+          "lcf": 57.72,
+          "kmTransverse": 7.594
+        },
+        {
+          "draft": 5.8,
+          "displacementTonnes": 9633.54,
+          "lcb": 61.089,
+          "lcf": 57.667,
+          "kmTransverse": 7.586
+        },
+        {
+          "draft": 5.85,
+          "displacementTonnes": 9728.26,
+          "lcb": 61.055,
+          "lcf": 57.59,
+          "kmTransverse": 7.579
+        },
+        {
+          "draft": 5.9,
+          "displacementTonnes": 9823.1,
+          "lcb": 61.021,
+          "lcf": 57.513,
+          "kmTransverse": 7.572
+        },
+        {
+          "draft": 5.95,
+          "displacementTonnes": 9918.13,
+          "lcb": 60.988,
+          "lcf": 57.443,
+          "kmTransverse": 7.566
+        },
+        {
+          "draft": 6.0,
+          "displacementTonnes": 10013.29,
+          "lcb": 60.954,
+          "lcf": 57.402,
+          "kmTransverse": 7.561
+        },
+        {
+          "draft": 6.05,
+          "displacementTonnes": 10108.59,
+          "lcb": 60.92,
+          "lcf": 57.319,
+          "kmTransverse": 7.555
+        },
+        {
+          "draft": 6.1,
+          "displacementTonnes": 10204.07,
+          "lcb": 60.886,
+          "lcf": 57.216,
+          "kmTransverse": 7.552
+        },
+        {
+          "draft": 6.15,
+          "displacementTonnes": 10299.71,
+          "lcb": 60.852,
+          "lcf": 57.187,
+          "kmTransverse": 7.549
+        },
+        {
+          "draft": 6.2,
+          "displacementTonnes": 10395.51,
+          "lcb": 60.818,
+          "lcf": 57.109,
+          "kmTransverse": 7.544
+        },
+        {
+          "draft": 6.25,
+          "displacementTonnes": 10491.49,
+          "lcb": 60.784,
+          "lcf": 57.049,
+          "kmTransverse": 7.543
+        },
+        {
+          "draft": 6.3,
+          "displacementTonnes": 10587.62,
+          "lcb": 60.749,
+          "lcf": 56.924,
+          "kmTransverse": 7.54
+        },
+        {
+          "draft": 6.35,
+          "displacementTonnes": 10683.91,
+          "lcb": 60.715,
+          "lcf": 56.833,
+          "kmTransverse": 7.538
+        },
+        {
+          "draft": 6.4,
+          "displacementTonnes": 10780.4,
+          "lcb": 60.68,
+          "lcf": 56.824,
+          "kmTransverse": 7.538
+        },
+        {
+          "draft": 6.45,
+          "displacementTonnes": 10877.02,
+          "lcb": 60.645,
+          "lcf": 56.714,
+          "kmTransverse": 7.537
+        },
+        {
+          "draft": 6.5,
+          "displacementTonnes": 10973.82,
+          "lcb": 60.61,
+          "lcf": 56.62,
+          "kmTransverse": 7.536
+        },
+        {
+          "draft": 6.55,
+          "displacementTonnes": 11070.79,
+          "lcb": 60.575,
+          "lcf": 56.477,
+          "kmTransverse": 7.538
+        },
+        {
+          "draft": 6.6,
+          "displacementTonnes": 11167.95,
+          "lcb": 60.539,
+          "lcf": 56.455,
+          "kmTransverse": 7.538
+        },
+        {
+          "draft": 6.65,
+          "displacementTonnes": 11265.29,
+          "lcb": 60.504,
+          "lcf": 56.412,
+          "kmTransverse": 7.539
+        },
+        {
+          "draft": 6.7,
+          "displacementTonnes": 11362.79,
+          "lcb": 60.468,
+          "lcf": 56.357,
+          "kmTransverse": 7.541
+        },
+        {
+          "draft": 6.75,
+          "displacementTonnes": 11460.46,
+          "lcb": 60.432,
+          "lcf": 56.168,
+          "kmTransverse": 7.542
+        },
+        {
+          "draft": 6.8,
+          "displacementTonnes": 11558.32,
+          "lcb": 60.396,
+          "lcf": 56.08,
+          "kmTransverse": 7.545
+        },
+        {
+          "draft": 6.85,
+          "displacementTonnes": 11656.37,
+          "lcb": 60.36,
+          "lcf": 56.083,
+          "kmTransverse": 7.548
+        },
+        {
+          "draft": 6.9,
+          "displacementTonnes": 11754.6,
+          "lcb": 60.324,
+          "lcf": 55.978,
+          "kmTransverse": 7.55
+        },
+        {
+          "draft": 6.95,
+          "displacementTonnes": 11853.01,
+          "lcb": 60.287,
+          "lcf": 55.813,
+          "kmTransverse": 7.555
+        },
+        {
+          "draft": 7.0,
+          "displacementTonnes": 11951.61,
+          "lcb": 60.25,
+          "lcf": 55.717,
+          "kmTransverse": 7.558
+        },
+        {
+          "draft": 7.05,
+          "displacementTonnes": 12050.44,
+          "lcb": 60.213,
+          "lcf": 55.682,
+          "kmTransverse": 7.562
+        },
+        {
+          "draft": 7.1,
+          "displacementTonnes": 12149.43,
+          "lcb": 60.176,
+          "lcf": 55.604,
+          "kmTransverse": 7.568
+        },
+        {
+          "draft": 7.15,
+          "displacementTonnes": 12248.61,
+          "lcb": 60.138,
+          "lcf": 55.51,
+          "kmTransverse": 7.572
+        },
+        {
+          "draft": 7.2,
+          "displacementTonnes": 12348.0,
+          "lcb": 60.1,
+          "lcf": 55.359,
+          "kmTransverse": 7.578
+        },
+        {
+          "draft": 7.25,
+          "displacementTonnes": 12447.58,
+          "lcb": 60.062,
+          "lcf": 55.248,
+          "kmTransverse": 7.584
+        },
+        {
+          "draft": 7.3,
+          "displacementTonnes": 12547.35,
+          "lcb": 60.024,
+          "lcf": 55.208,
+          "kmTransverse": 7.589
+        },
+        {
+          "draft": 7.35,
+          "displacementTonnes": 12647.27,
+          "lcb": 59.986,
+          "lcf": 55.164,
+          "kmTransverse": 7.596
+        },
+        {
+          "draft": 7.4,
+          "displacementTonnes": 12747.32,
+          "lcb": 59.947,
+          "lcf": 55.08,
+          "kmTransverse": 7.602
+        },
+        {
+          "draft": 7.45,
+          "displacementTonnes": 12847.48,
+          "lcb": 59.909,
+          "lcf": 55.016,
+          "kmTransverse": 7.608
+        },
+        {
+          "draft": 7.5,
+          "displacementTonnes": 12947.75,
+          "lcb": 59.872,
+          "lcf": 55.058,
+          "kmTransverse": 7.614
+        },
+        {
+          "draft": 7.55,
+          "displacementTonnes": 13048.09,
+          "lcb": 59.834,
+          "lcf": 54.995,
+          "kmTransverse": 7.619
+        },
+        {
+          "draft": 7.6,
+          "displacementTonnes": 13148.5,
+          "lcb": 59.797,
+          "lcf": 54.967,
+          "kmTransverse": 7.624
+        },
+        {
+          "draft": 7.65,
+          "displacementTonnes": 13248.99,
+          "lcb": 59.761,
+          "lcf": 54.937,
+          "kmTransverse": 7.631
+        },
+        {
+          "draft": 7.7,
+          "displacementTonnes": 13349.56,
+          "lcb": 59.724,
+          "lcf": 54.949,
+          "kmTransverse": 7.636
+        },
+        {
+          "draft": 7.75,
+          "displacementTonnes": 13450.17,
+          "lcb": 59.688,
+          "lcf": 54.931,
+          "kmTransverse": 7.642
+        },
+        {
+          "draft": 7.8,
+          "displacementTonnes": 13550.85,
+          "lcb": 59.653,
+          "lcf": 54.882,
+          "kmTransverse": 7.648
+        },
+        {
+          "draft": 7.85,
+          "displacementTonnes": 13651.6,
+          "lcb": 59.618,
+          "lcf": 54.841,
+          "kmTransverse": 7.653
+        },
+        {
+          "draft": 7.9,
+          "displacementTonnes": 13752.41,
+          "lcb": 59.583,
+          "lcf": 54.878,
+          "kmTransverse": 7.66
+        },
+        {
+          "draft": 7.95,
+          "displacementTonnes": 13853.27,
+          "lcb": 59.549,
+          "lcf": 54.887,
+          "kmTransverse": 7.666
+        },
+        {
+          "draft": 8.0,
+          "displacementTonnes": 13954.18,
+          "lcb": 59.515,
+          "lcf": 54.897,
+          "kmTransverse": 7.673
+        },
+        {
+          "draft": 8.011,
+          "displacementTonnes": 13976.39,
+          "lcb": 59.507,
+          "lcf": 54.854,
+          "kmTransverse": 7.674
+        },
+        {
+          "draft": 8.05,
+          "displacementTonnes": 14055.15,
+          "lcb": 59.481,
+          "lcf": 54.811,
+          "kmTransverse": 7.679
+        },
+        {
+          "draft": 8.1,
+          "displacementTonnes": 14156.18,
+          "lcb": 59.448,
+          "lcf": 54.841,
+          "kmTransverse": 7.685
+        },
+        {
+          "draft": 8.15,
+          "displacementTonnes": 14257.26,
+          "lcb": 59.416,
+          "lcf": 54.87,
+          "kmTransverse": 7.692
+        },
+        {
+          "draft": 8.2,
+          "displacementTonnes": 14358.39,
+          "lcb": 59.384,
+          "lcf": 54.852,
+          "kmTransverse": 7.699
+        },
+        {
+          "draft": 8.25,
+          "displacementTonnes": 14459.56,
+          "lcb": 59.352,
+          "lcf": 54.868,
+          "kmTransverse": 7.706
+        },
+        {
+          "draft": 8.3,
+          "displacementTonnes": 14560.79,
+          "lcb": 59.321,
+          "lcf": 54.818,
+          "kmTransverse": 7.714
+        },
+        {
+          "draft": 8.35,
+          "displacementTonnes": 14662.08,
+          "lcb": 59.29,
+          "lcf": 54.884,
+          "kmTransverse": 7.721
+        },
+        {
+          "draft": 8.4,
+          "displacementTonnes": 14763.39,
+          "lcb": 59.259,
+          "lcf": 54.869,
+          "kmTransverse": 7.728
+        }
+      ]
+    },
+    {
+      "trimMetres": 0.62,
+      "rows": [
+        {
+          "draft": 2.5,
+          "displacementTonnes": 3792.44,
+          "lcb": 64.189,
+          "lcf": 62.363,
+          "kmTransverse": 11.099
+        },
+        {
+          "draft": 2.55,
+          "displacementTonnes": 3875.79,
+          "lcb": 64.15,
+          "lcf": 62.366,
+          "kmTransverse": 10.934
+        },
+        {
+          "draft": 2.6,
+          "displacementTonnes": 3959.22,
+          "lcb": 64.112,
+          "lcf": 62.361,
+          "kmTransverse": 10.778
+        },
+        {
+          "draft": 2.65,
+          "displacementTonnes": 4042.74,
+          "lcb": 64.076,
+          "lcf": 62.368,
+          "kmTransverse": 10.626
+        },
+        {
+          "draft": 2.7,
+          "displacementTonnes": 4126.34,
+          "lcb": 64.041,
+          "lcf": 62.352,
+          "kmTransverse": 10.484
+        },
+        {
+          "draft": 2.75,
+          "displacementTonnes": 4210.03,
+          "lcb": 64.008,
+          "lcf": 62.344,
+          "kmTransverse": 10.347
+        },
+        {
+          "draft": 2.8,
+          "displacementTonnes": 4293.83,
+          "lcb": 63.975,
+          "lcf": 62.324,
+          "kmTransverse": 10.215
+        },
+        {
+          "draft": 2.85,
+          "displacementTonnes": 4377.71,
+          "lcb": 63.944,
+          "lcf": 62.319,
+          "kmTransverse": 10.09
+        },
+        {
+          "draft": 2.9,
+          "displacementTonnes": 4461.69,
+          "lcb": 63.913,
+          "lcf": 62.315,
+          "kmTransverse": 9.97
+        },
+        {
+          "draft": 2.95,
+          "displacementTonnes": 4545.76,
+          "lcb": 63.883,
+          "lcf": 62.284,
+          "kmTransverse": 9.855
+        },
+        {
+          "draft": 3.0,
+          "displacementTonnes": 4629.94,
+          "lcb": 63.854,
+          "lcf": 62.264,
+          "kmTransverse": 9.745
+        },
+        {
+          "draft": 3.05,
+          "displacementTonnes": 4714.23,
+          "lcb": 63.825,
+          "lcf": 62.216,
+          "kmTransverse": 9.641
+        },
+        {
+          "draft": 3.1,
+          "displacementTonnes": 4798.63,
+          "lcb": 63.797,
+          "lcf": 62.199,
+          "kmTransverse": 9.54
+        },
+        {
+          "draft": 3.15,
+          "displacementTonnes": 4883.14,
+          "lcb": 63.769,
+          "lcf": 62.181,
+          "kmTransverse": 9.444
+        },
+        {
+          "draft": 3.2,
+          "displacementTonnes": 4967.76,
+          "lcb": 63.742,
+          "lcf": 62.14,
+          "kmTransverse": 9.352
+        },
+        {
+          "draft": 3.25,
+          "displacementTonnes": 5052.5,
+          "lcb": 63.715,
+          "lcf": 62.101,
+          "kmTransverse": 9.263
+        },
+        {
+          "draft": 3.3,
+          "displacementTonnes": 5137.36,
+          "lcb": 63.688,
+          "lcf": 62.073,
+          "kmTransverse": 9.18
+        },
+        {
+          "draft": 3.35,
+          "displacementTonnes": 5222.33,
+          "lcb": 63.662,
+          "lcf": 62.045,
+          "kmTransverse": 9.099
+        },
+        {
+          "draft": 3.4,
+          "displacementTonnes": 5307.42,
+          "lcb": 63.635,
+          "lcf": 62.013,
+          "kmTransverse": 9.021
+        },
+        {
+          "draft": 3.45,
+          "displacementTonnes": 5392.64,
+          "lcb": 63.609,
+          "lcf": 61.97,
+          "kmTransverse": 8.948
+        },
+        {
+          "draft": 3.5,
+          "displacementTonnes": 5477.96,
+          "lcb": 63.584,
+          "lcf": 61.933,
+          "kmTransverse": 8.877
+        },
+        {
+          "draft": 3.55,
+          "displacementTonnes": 5563.4,
+          "lcb": 63.558,
+          "lcf": 61.906,
+          "kmTransverse": 8.808
+        },
+        {
+          "draft": 3.6,
+          "displacementTonnes": 5648.97,
+          "lcb": 63.533,
+          "lcf": 61.853,
+          "kmTransverse": 8.742
+        },
+        {
+          "draft": 3.65,
+          "displacementTonnes": 5734.65,
+          "lcb": 63.507,
+          "lcf": 61.819,
+          "kmTransverse": 8.68
+        },
+        {
+          "draft": 3.7,
+          "displacementTonnes": 5820.46,
+          "lcb": 63.482,
+          "lcf": 61.787,
+          "kmTransverse": 8.62
+        },
+        {
+          "draft": 3.75,
+          "displacementTonnes": 5906.39,
+          "lcb": 63.457,
+          "lcf": 61.698,
+          "kmTransverse": 8.562
+        },
+        {
+          "draft": 3.8,
+          "displacementTonnes": 5992.6,
+          "lcb": 63.431,
+          "lcf": 61.527,
+          "kmTransverse": 8.515
+        },
+        {
+          "draft": 3.85,
+          "displacementTonnes": 6079.14,
+          "lcb": 63.403,
+          "lcf": 61.373,
+          "kmTransverse": 8.476
+        },
+        {
+          "draft": 3.9,
+          "displacementTonnes": 6166.02,
+          "lcb": 63.373,
+          "lcf": 61.233,
+          "kmTransverse": 8.442
+        },
+        {
+          "draft": 3.95,
+          "displacementTonnes": 6253.22,
+          "lcb": 63.343,
+          "lcf": 61.078,
+          "kmTransverse": 8.419
+        },
+        {
+          "draft": 4.0,
+          "displacementTonnes": 6340.78,
+          "lcb": 63.31,
+          "lcf": 60.891,
+          "kmTransverse": 8.406
+        },
+        {
+          "draft": 4.05,
+          "displacementTonnes": 6428.65,
+          "lcb": 63.277,
+          "lcf": 60.82,
+          "kmTransverse": 8.376
+        },
+        {
+          "draft": 4.1,
+          "displacementTonnes": 6516.65,
+          "lcb": 63.243,
+          "lcf": 60.77,
+          "kmTransverse": 8.331
+        },
+        {
+          "draft": 4.15,
+          "displacementTonnes": 6604.8,
+          "lcb": 63.21,
+          "lcf": 60.722,
+          "kmTransverse": 8.288
+        },
+        {
+          "draft": 4.2,
+          "displacementTonnes": 6693.09,
+          "lcb": 63.177,
+          "lcf": 60.664,
+          "kmTransverse": 8.247
+        },
+        {
+          "draft": 4.25,
+          "displacementTonnes": 6781.5,
+          "lcb": 63.144,
+          "lcf": 60.625,
+          "kmTransverse": 8.208
+        },
+        {
+          "draft": 4.3,
+          "displacementTonnes": 6870.05,
+          "lcb": 63.111,
+          "lcf": 60.563,
+          "kmTransverse": 8.169
+        },
+        {
+          "draft": 4.35,
+          "displacementTonnes": 6958.75,
+          "lcb": 63.078,
+          "lcf": 60.504,
+          "kmTransverse": 8.133
+        },
+        {
+          "draft": 4.4,
+          "displacementTonnes": 7047.6,
+          "lcb": 63.045,
+          "lcf": 60.449,
+          "kmTransverse": 8.099
+        },
+        {
+          "draft": 4.45,
+          "displacementTonnes": 7136.58,
+          "lcb": 63.013,
+          "lcf": 60.395,
+          "kmTransverse": 8.064
+        },
+        {
+          "draft": 4.5,
+          "displacementTonnes": 7225.7,
+          "lcb": 62.98,
+          "lcf": 60.323,
+          "kmTransverse": 8.031
+        },
+        {
+          "draft": 4.55,
+          "displacementTonnes": 7314.98,
+          "lcb": 62.947,
+          "lcf": 60.256,
+          "kmTransverse": 8.0
+        },
+        {
+          "draft": 4.6,
+          "displacementTonnes": 7404.4,
+          "lcb": 62.914,
+          "lcf": 60.196,
+          "kmTransverse": 7.971
+        },
+        {
+          "draft": 4.65,
+          "displacementTonnes": 7493.97,
+          "lcb": 62.882,
+          "lcf": 60.124,
+          "kmTransverse": 7.942
+        },
+        {
+          "draft": 4.7,
+          "displacementTonnes": 7583.68,
+          "lcb": 62.849,
+          "lcf": 60.064,
+          "kmTransverse": 7.915
+        },
+        {
+          "draft": 4.75,
+          "displacementTonnes": 7673.56,
+          "lcb": 62.816,
+          "lcf": 59.994,
+          "kmTransverse": 7.889
+        },
+        {
+          "draft": 4.8,
+          "displacementTonnes": 7763.59,
+          "lcb": 62.783,
+          "lcf": 59.939,
+          "kmTransverse": 7.864
+        },
+        {
+          "draft": 4.85,
+          "displacementTonnes": 7853.79,
+          "lcb": 62.75,
+          "lcf": 59.871,
+          "kmTransverse": 7.84
+        },
+        {
+          "draft": 4.9,
+          "displacementTonnes": 7944.14,
+          "lcb": 62.717,
+          "lcf": 59.781,
+          "kmTransverse": 7.817
+        },
+        {
+          "draft": 4.95,
+          "displacementTonnes": 8034.68,
+          "lcb": 62.683,
+          "lcf": 59.684,
+          "kmTransverse": 7.796
+        },
+        {
+          "draft": 5.0,
+          "displacementTonnes": 8125.41,
+          "lcb": 62.649,
+          "lcf": 59.594,
+          "kmTransverse": 7.775
+        },
+        {
+          "draft": 5.05,
+          "displacementTonnes": 8216.3,
+          "lcb": 62.615,
+          "lcf": 59.528,
+          "kmTransverse": 7.754
+        },
+        {
+          "draft": 5.1,
+          "displacementTonnes": 8307.39,
+          "lcb": 62.581,
+          "lcf": 59.425,
+          "kmTransverse": 7.736
+        },
+        {
+          "draft": 5.15,
+          "displacementTonnes": 8398.69,
+          "lcb": 62.546,
+          "lcf": 59.34,
+          "kmTransverse": 7.718
+        },
+        {
+          "draft": 5.2,
+          "displacementTonnes": 8490.19,
+          "lcb": 62.511,
+          "lcf": 59.255,
+          "kmTransverse": 7.701
+        },
+        {
+          "draft": 5.25,
+          "displacementTonnes": 8581.87,
+          "lcb": 62.476,
+          "lcf": 59.136,
+          "kmTransverse": 7.684
+        },
+        {
+          "draft": 5.3,
+          "displacementTonnes": 8673.8,
+          "lcb": 62.44,
+          "lcf": 59.016,
+          "kmTransverse": 7.669
+        },
+        {
+          "draft": 5.35,
+          "displacementTonnes": 8765.96,
+          "lcb": 62.404,
+          "lcf": 58.931,
+          "kmTransverse": 7.654
+        },
+        {
+          "draft": 5.4,
+          "displacementTonnes": 8858.23,
+          "lcb": 62.367,
+          "lcf": 58.907,
+          "kmTransverse": 7.64
+        },
+        {
+          "draft": 5.45,
+          "displacementTonnes": 8950.74,
+          "lcb": 62.331,
+          "lcf": 58.589,
+          "kmTransverse": 7.627
+        },
+        {
+          "draft": 5.5,
+          "displacementTonnes": 9043.71,
+          "lcb": 62.292,
+          "lcf": 58.507,
+          "kmTransverse": 7.615
+        },
+        {
+          "draft": 5.55,
+          "displacementTonnes": 9136.86,
+          "lcb": 62.253,
+          "lcf": 58.383,
+          "kmTransverse": 7.603
+        },
+        {
+          "draft": 5.6,
+          "displacementTonnes": 9230.21,
+          "lcb": 62.213,
+          "lcf": 58.32,
+          "kmTransverse": 7.592
+        },
+        {
+          "draft": 5.65,
+          "displacementTonnes": 9323.74,
+          "lcb": 62.174,
+          "lcf": 58.253,
+          "kmTransverse": 7.582
+        },
+        {
+          "draft": 5.7,
+          "displacementTonnes": 9417.39,
+          "lcb": 62.135,
+          "lcf": 58.226,
+          "kmTransverse": 7.572
+        },
+        {
+          "draft": 5.75,
+          "displacementTonnes": 9511.14,
+          "lcb": 62.096,
+          "lcf": 58.149,
+          "kmTransverse": 7.563
+        },
+        {
+          "draft": 5.8,
+          "displacementTonnes": 9605.06,
+          "lcb": 62.057,
+          "lcf": 58.084,
+          "kmTransverse": 7.555
+        },
+        {
+          "draft": 5.85,
+          "displacementTonnes": 9699.13,
+          "lcb": 62.019,
+          "lcf": 58.003,
+          "kmTransverse": 7.548
+        },
+        {
+          "draft": 5.9,
+          "displacementTonnes": 9793.32,
+          "lcb": 61.98,
+          "lcf": 57.958,
+          "kmTransverse": 7.539
+        },
+        {
+          "draft": 5.95,
+          "displacementTonnes": 9887.65,
+          "lcb": 61.941,
+          "lcf": 57.888,
+          "kmTransverse": 7.534
+        },
+        {
+          "draft": 6.0,
+          "displacementTonnes": 9982.13,
+          "lcb": 61.903,
+          "lcf": 57.862,
+          "kmTransverse": 7.529
+        },
+        {
+          "draft": 6.05,
+          "displacementTonnes": 10076.74,
+          "lcb": 61.865,
+          "lcf": 57.759,
+          "kmTransverse": 7.523
+        },
+        {
+          "draft": 6.1,
+          "displacementTonnes": 10171.52,
+          "lcb": 61.826,
+          "lcf": 57.694,
+          "kmTransverse": 7.519
+        },
+        {
+          "draft": 6.15,
+          "displacementTonnes": 10266.43,
+          "lcb": 61.788,
+          "lcf": 57.658,
+          "kmTransverse": 7.515
+        },
+        {
+          "draft": 6.2,
+          "displacementTonnes": 10361.49,
+          "lcb": 61.75,
+          "lcf": 57.59,
+          "kmTransverse": 7.511
+        },
+        {
+          "draft": 6.25,
+          "displacementTonnes": 10456.7,
+          "lcb": 61.712,
+          "lcf": 57.52,
+          "kmTransverse": 7.508
+        },
+        {
+          "draft": 6.3,
+          "displacementTonnes": 10552.05,
+          "lcb": 61.673,
+          "lcf": 57.479,
+          "kmTransverse": 7.506
+        },
+        {
+          "draft": 6.35,
+          "displacementTonnes": 10647.55,
+          "lcb": 61.635,
+          "lcf": 57.382,
+          "kmTransverse": 7.504
+        },
+        {
+          "draft": 6.4,
+          "displacementTonnes": 10743.22,
+          "lcb": 61.597,
+          "lcf": 57.325,
+          "kmTransverse": 7.503
+        },
+        {
+          "draft": 6.45,
+          "displacementTonnes": 10839.04,
+          "lcb": 61.559,
+          "lcf": 57.222,
+          "kmTransverse": 7.502
+        },
+        {
+          "draft": 6.5,
+          "displacementTonnes": 10935.01,
+          "lcb": 61.521,
+          "lcf": 57.14,
+          "kmTransverse": 7.502
+        },
+        {
+          "draft": 6.55,
+          "displacementTonnes": 11031.17,
+          "lcb": 61.482,
+          "lcf": 57.065,
+          "kmTransverse": 7.502
+        },
+        {
+          "draft": 6.6,
+          "displacementTonnes": 11127.47,
+          "lcb": 61.444,
+          "lcf": 56.983,
+          "kmTransverse": 7.503
+        },
+        {
+          "draft": 6.65,
+          "displacementTonnes": 11223.94,
+          "lcb": 61.406,
+          "lcf": 56.916,
+          "kmTransverse": 7.504
+        },
+        {
+          "draft": 6.7,
+          "displacementTonnes": 11320.58,
+          "lcb": 61.367,
+          "lcf": 56.834,
+          "kmTransverse": 7.506
+        },
+        {
+          "draft": 6.75,
+          "displacementTonnes": 11417.36,
+          "lcb": 61.329,
+          "lcf": 56.768,
+          "kmTransverse": 7.507
+        },
+        {
+          "draft": 6.8,
+          "displacementTonnes": 11514.33,
+          "lcb": 61.29,
+          "lcf": 56.703,
+          "kmTransverse": 7.51
+        },
+        {
+          "draft": 6.85,
+          "displacementTonnes": 11611.46,
+          "lcb": 61.251,
+          "lcf": 56.628,
+          "kmTransverse": 7.513
+        },
+        {
+          "draft": 6.9,
+          "displacementTonnes": 11708.75,
+          "lcb": 61.212,
+          "lcf": 56.55,
+          "kmTransverse": 7.516
+        },
+        {
+          "draft": 6.95,
+          "displacementTonnes": 11806.24,
+          "lcb": 61.173,
+          "lcf": 56.452,
+          "kmTransverse": 7.519
+        },
+        {
+          "draft": 7.0,
+          "displacementTonnes": 11903.88,
+          "lcb": 61.134,
+          "lcf": 56.372,
+          "kmTransverse": 7.523
+        },
+        {
+          "draft": 7.05,
+          "displacementTonnes": 12001.7,
+          "lcb": 61.095,
+          "lcf": 56.286,
+          "kmTransverse": 7.527
+        },
+        {
+          "draft": 7.1,
+          "displacementTonnes": 12099.71,
+          "lcb": 61.056,
+          "lcf": 56.19,
+          "kmTransverse": 7.531
+        },
+        {
+          "draft": 7.15,
+          "displacementTonnes": 12197.87,
+          "lcb": 61.017,
+          "lcf": 56.093,
+          "kmTransverse": 7.536
+        },
+        {
+          "draft": 7.2,
+          "displacementTonnes": 12296.23,
+          "lcb": 60.977,
+          "lcf": 56.034,
+          "kmTransverse": 7.541
+        },
+        {
+          "draft": 7.25,
+          "displacementTonnes": 12394.77,
+          "lcb": 60.938,
+          "lcf": 55.938,
+          "kmTransverse": 7.547
+        },
+        {
+          "draft": 7.3,
+          "displacementTonnes": 12493.51,
+          "lcb": 60.898,
+          "lcf": 55.856,
+          "kmTransverse": 7.553
+        },
+        {
+          "draft": 7.35,
+          "displacementTonnes": 12592.42,
+          "lcb": 60.858,
+          "lcf": 55.757,
+          "kmTransverse": 7.559
+        },
+        {
+          "draft": 7.4,
+          "displacementTonnes": 12691.53,
+          "lcb": 60.818,
+          "lcf": 55.624,
+          "kmTransverse": 7.565
+        },
+        {
+          "draft": 7.45,
+          "displacementTonnes": 12790.84,
+          "lcb": 60.777,
+          "lcf": 55.619,
+          "kmTransverse": 7.572
+        },
+        {
+          "draft": 7.5,
+          "displacementTonnes": 12890.33,
+          "lcb": 60.737,
+          "lcf": 55.472,
+          "kmTransverse": 7.58
+        },
+        {
+          "draft": 7.55,
+          "displacementTonnes": 12990.03,
+          "lcb": 60.696,
+          "lcf": 55.393,
+          "kmTransverse": 7.587
+        },
+        {
+          "draft": 7.6,
+          "displacementTonnes": 13089.92,
+          "lcb": 60.656,
+          "lcf": 55.322,
+          "kmTransverse": 7.595
+        },
+        {
+          "draft": 7.65,
+          "displacementTonnes": 13189.98,
+          "lcb": 60.615,
+          "lcf": 55.265,
+          "kmTransverse": 7.603
+        },
+        {
+          "draft": 7.7,
+          "displacementTonnes": 13290.18,
+          "lcb": 60.574,
+          "lcf": 55.202,
+          "kmTransverse": 7.611
+        },
+        {
+          "draft": 7.75,
+          "displacementTonnes": 13390.5,
+          "lcb": 60.534,
+          "lcf": 55.156,
+          "kmTransverse": 7.619
+        },
+        {
+          "draft": 7.8,
+          "displacementTonnes": 13490.94,
+          "lcb": 60.494,
+          "lcf": 55.113,
+          "kmTransverse": 7.627
+        },
+        {
+          "draft": 7.85,
+          "displacementTonnes": 13591.46,
+          "lcb": 60.454,
+          "lcf": 55.105,
+          "kmTransverse": 7.634
+        },
+        {
+          "draft": 7.9,
+          "displacementTonnes": 13692.09,
+          "lcb": 60.414,
+          "lcf": 55.1,
+          "kmTransverse": 7.642
+        },
+        {
+          "draft": 7.95,
+          "displacementTonnes": 13792.78,
+          "lcb": 60.375,
+          "lcf": 55.077,
+          "kmTransverse": 7.65
+        },
+        {
+          "draft": 8.0,
+          "displacementTonnes": 13893.56,
+          "lcb": 60.337,
+          "lcf": 55.097,
+          "kmTransverse": 7.657
+        },
+        {
+          "draft": 8.011,
+          "displacementTonnes": 13915.75,
+          "lcb": 60.329,
+          "lcf": 55.075,
+          "kmTransverse": 7.659
+        },
+        {
+          "draft": 8.05,
+          "displacementTonnes": 13994.42,
+          "lcb": 60.299,
+          "lcf": 55.053,
+          "kmTransverse": 7.665
+        },
+        {
+          "draft": 8.1,
+          "displacementTonnes": 14095.35,
+          "lcb": 60.261,
+          "lcf": 55.048,
+          "kmTransverse": 7.673
+        },
+        {
+          "draft": 8.15,
+          "displacementTonnes": 14196.34,
+          "lcb": 60.224,
+          "lcf": 55.03,
+          "kmTransverse": 7.681
+        },
+        {
+          "draft": 8.2,
+          "displacementTonnes": 14297.42,
+          "lcb": 60.187,
+          "lcf": 55.044,
+          "kmTransverse": 7.689
+        },
+        {
+          "draft": 8.25,
+          "displacementTonnes": 14398.55,
+          "lcb": 60.151,
+          "lcf": 55.042,
+          "kmTransverse": 7.697
+        },
+        {
+          "draft": 8.3,
+          "displacementTonnes": 14499.75,
+          "lcb": 60.115,
+          "lcf": 54.987,
+          "kmTransverse": 7.705
+        },
+        {
+          "draft": 8.35,
+          "displacementTonnes": 14601.02,
+          "lcb": 60.08,
+          "lcf": 55.011,
+          "kmTransverse": 7.713
+        },
+        {
+          "draft": 8.4,
+          "displacementTonnes": 14702.34,
+          "lcb": 60.045,
+          "lcf": 55.019,
+          "kmTransverse": 7.721
+        }
+      ]
+    }
+  ],
+  "correctionLog": [],
+  "audit": {
+    "rowCount": 720,
+    "draftRange": [
+      2.5,
+      8.4
+    ],
+    "extraSummerDraft": 8.011,
+    "checks": [
+      "Six complete trim tables",
+      "Increasing draft and displacement",
+      "Fresh/salt density agreement within rounding",
+      "Source values transcribed without extrapolation"
+    ],
+    "reviewRequired": true
+  },
+  "draftDatumFromAP": 60.85,
+  "mouldedDraftOffset": 0.011
+}

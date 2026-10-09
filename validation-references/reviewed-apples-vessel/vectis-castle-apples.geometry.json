@@ -1,0 +1,902 @@
+{
+  "schemaVersion": 1,
+  "id": "vectis-castle-apples-geometry",
+  "name": "Vectis Castle - Apples",
+  "imo": "9626168",
+  "units": {
+    "length": "m",
+    "mass": "metric tonne"
+  },
+  "baseline": "Supplied preliminary Castle drawing package; not an as-built survey",
+  "coordinates": {
+    "source": "x forward from AP, y starboard from centreline, z above baseline",
+    "gltf": "X=x_AP-60.85, Y=z_baseline, Z=y_starboard; metres",
+    "origin": "Midships at baseline"
+  },
+  "dimensions": {
+    "lbp": 121.7,
+    "beam": 17.4,
+    "depth": 11.4,
+    "source": "007_BALLAST_MANAGEMENT.pdf p5; arrangement drawings"
+  },
+  "sources": {
+    "holds": {
+      "file": "004_STABILITY_LOADING_MANUAL.pdf",
+      "pdfPages": [
+        499,
+        500
+      ],
+      "drawing": "710-010",
+      "revision": "sheet 1/1 rev1; sheet 2/2 rev2",
+      "qualification": "Arrangement pending TD/HC design"
+    },
+    "panels": {
+      "file": "004_STABILITY_LOADING_MANUAL.pdf",
+      "pdfPages": [
+        28
+      ],
+      "printedPage": "8.3"
+    },
+    "frames": {
+      "file": "005_TANKS_CAPACITY_TABLE.pdf",
+      "pdfPages": [
+        3
+      ],
+      "qualification": "Series hulls 997/998/999/1000"
+    }
+  },
+  "framesAP": {
+    "28": 17.1,
+    "37": 23.4,
+    "119": 80.8,
+    "121": 82.2,
+    "141": 96.2,
+    "157": 107.4
+  },
+  "tweenDeckSurfaceZ": 7.23,
+  "panelGeometryRule": "Top at 7.23 m minus tabulated thickness. Geometric centre is distinct from tabulated mass VCG. Simplified rectangular solids; stiffeners omitted.",
+  "floorRegions": [
+    {
+      "id": "hold-2-lower",
+      "xAP": [
+        23.4,
+        80.8
+      ],
+      "width": 13.8,
+      "zBaseline": 1.2,
+      "polygonXY": [
+        [
+          23.4,
+          -6.9
+        ],
+        [
+          80.8,
+          -6.9
+        ],
+        [
+          80.8,
+          6.9
+        ],
+        [
+          23.4,
+          6.9
+        ]
+      ],
+      "source": "holds + frames",
+      "representation": "zero-thickness planning surface"
+    },
+    {
+      "id": "hold-1-lower-wide",
+      "xAP": [
+        82.2,
+        96.2
+      ],
+      "width": 13.8,
+      "zBaseline": 1.2,
+      "polygonXY": [
+        [
+          82.2,
+          -6.9
+        ],
+        [
+          96.2,
+          -6.9
+        ],
+        [
+          96.2,
+          6.9
+        ],
+        [
+          82.2,
+          6.9
+        ]
+      ],
+      "source": "holds + frames",
+      "representation": "zero-thickness planning surface"
+    },
+    {
+      "id": "hold-1-lower-forward",
+      "xAP": [
+        96.2,
+        107.4
+      ],
+      "width": 8.28,
+      "zBaseline": 1.2,
+      "polygonXY": [
+        [
+          96.2,
+          -4.14
+        ],
+        [
+          107.4,
+          -4.14
+        ],
+        [
+          107.4,
+          4.14
+        ],
+        [
+          96.2,
+          4.14
+        ]
+      ],
+      "source": "holds + frames",
+      "representation": "zero-thickness planning surface"
+    }
+  ],
+  "panelTypes": {
+    "A": {
+      "length": 6.115,
+      "width": 13.74,
+      "thickness": 0.67,
+      "massTonnes": 21,
+      "count": 6,
+      "source": "panels"
+    },
+    "B": {
+      "length": 5.05,
+      "width": 13.74,
+      "thickness": 0.67,
+      "massTonnes": 17.9,
+      "count": 6,
+      "source": "panels"
+    },
+    "C": {
+      "length": 5.565,
+      "width": 8.22,
+      "thickness": 0.67,
+      "massTonnes": 11.6,
+      "count": 2,
+      "source": "panels"
+    },
+    "D": {
+      "length": 3.73,
+      "width": 13.74,
+      "thickness": 0.67,
+      "massTonnes": 13,
+      "count": 1,
+      "source": "panels"
+    }
+  },
+  "panels": [
+    {
+      "id": "A-6",
+      "type": "A",
+      "hold": 2,
+      "xAP": [
+        23.453,
+        29.568
+      ],
+      "massCentreAP": [
+        26.51,
+        0,
+        6.97
+      ],
+      "source": "panels",
+      "configuration": "installed"
+    },
+    {
+      "id": "A-5",
+      "type": "A",
+      "hold": 2,
+      "xAP": [
+        29.613,
+        35.728
+      ],
+      "massCentreAP": [
+        32.67,
+        0,
+        6.97
+      ],
+      "source": "panels",
+      "configuration": "installed"
+    },
+    {
+      "id": "A-4",
+      "type": "A",
+      "hold": 2,
+      "xAP": [
+        35.773,
+        41.888
+      ],
+      "massCentreAP": [
+        38.83,
+        0,
+        6.97
+      ],
+      "source": "panels",
+      "configuration": "installed"
+    },
+    {
+      "id": "A-3",
+      "type": "A",
+      "hold": 2,
+      "xAP": [
+        41.933,
+        48.048
+      ],
+      "massCentreAP": [
+        44.99,
+        0,
+        6.97
+      ],
+      "source": "panels",
+      "configuration": "installed"
+    },
+    {
+      "id": "A-2",
+      "type": "A",
+      "hold": 2,
+      "xAP": [
+        48.093,
+        54.208
+      ],
+      "massCentreAP": [
+        51.15,
+        0,
+        6.97
+      ],
+      "source": "panels",
+      "configuration": "installed"
+    },
+    {
+      "id": "A-1",
+      "type": "A",
+      "hold": 2,
+      "xAP": [
+        54.253,
+        60.368
+      ],
+      "massCentreAP": [
+        57.31,
+        0,
+        6.97
+      ],
+      "source": "panels",
+      "configuration": "installed"
+    },
+    {
+      "id": "B-6",
+      "type": "B",
+      "hold": 2,
+      "xAP": [
+        60.413,
+        65.463
+      ],
+      "massCentreAP": [
+        62.938,
+        0,
+        6.97
+      ],
+      "source": "panels",
+      "configuration": "installed"
+    },
+    {
+      "id": "B-5",
+      "type": "B",
+      "hold": 2,
+      "xAP": [
+        65.508,
+        70.558
+      ],
+      "massCentreAP": [
+        68.033,
+        0,
+        6.97
+      ],
+      "source": "panels",
+      "configuration": "installed"
+    },
+    {
+      "id": "B-4",
+      "type": "B",
+      "hold": 2,
+      "xAP": [
+        70.603,
+        75.653
+      ],
+      "massCentreAP": [
+        73.128,
+        0,
+        6.97
+      ],
+      "source": "panels",
+      "configuration": "installed"
+    },
+    {
+      "id": "B-3",
+      "type": "B",
+      "hold": 2,
+      "xAP": [
+        75.698,
+        80.748
+      ],
+      "massCentreAP": [
+        78.223,
+        0,
+        6.97
+      ],
+      "source": "panels",
+      "configuration": "installed"
+    },
+    {
+      "id": "D",
+      "type": "D",
+      "hold": 1,
+      "xAP": [
+        82.238,
+        85.968
+      ],
+      "massCentreAP": [
+        84.103,
+        0,
+        6.97
+      ],
+      "source": "panels",
+      "configuration": "installed"
+    },
+    {
+      "id": "B-2",
+      "type": "B",
+      "hold": 1,
+      "xAP": [
+        86.013,
+        91.063
+      ],
+      "massCentreAP": [
+        88.538,
+        0,
+        6.97
+      ],
+      "source": "panels",
+      "configuration": "installed"
+    },
+    {
+      "id": "B-1",
+      "type": "B",
+      "hold": 1,
+      "xAP": [
+        91.108,
+        96.158
+      ],
+      "massCentreAP": [
+        93.633,
+        0,
+        6.97
+      ],
+      "source": "panels",
+      "configuration": "installed"
+    },
+    {
+      "id": "C-2",
+      "type": "C",
+      "hold": 1,
+      "xAP": [
+        96.187,
+        101.752
+      ],
+      "massCentreAP": [
+        98.969,
+        0,
+        6.97
+      ],
+      "source": "panels",
+      "configuration": "installed"
+    },
+    {
+      "id": "C-1",
+      "type": "C",
+      "hold": 1,
+      "xAP": [
+        101.797,
+        107.362
+      ],
+      "massCentreAP": [
+        104.579,
+        0,
+        6.97
+      ],
+      "source": "panels",
+      "configuration": "installed"
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "hold-2-raised-aft",
+      "xAP": [
+        17.1,
+        23.4
+      ],
+      "width": 13.8,
+      "zBaseline": null,
+      "reason": "Raised region known; elevation not resolved in this dataset. Not meshed."
+    }
+  ],
+  "limitations": [
+    "Not a watertight hull; unsuitable for displacement, buoyancy, GZ or wetted-surface calculations.",
+    "Floor polygons represent documented nominal planning regions, not surveyed clearances or structural plate solids.",
+    "Do not add panel masses automatically to the simulator: the existing loading condition may already include them.",
+    "Nominal 63.70/57.40 spans and drawing 63.68/57.30 clearances require endpoint/revision reconciliation.",
+    "No photographs or proprietary CAD assets are embedded.",
+    "Exterior shell, accommodation and cranes are approximate visual parts, excluded from all mass and hydrostatic computations. No stored-panel, tank or grain-bulkhead model is provided."
+  ],
+  "schematicContext": {
+    "status": "approximate, optional visual guide only",
+    "source": "Existing simulator generic outline, scaled to principal dimensions; not traced hull offsets",
+    "outlineNormalized": [
+      [
+        -0.5,
+        -0.28
+      ],
+      [
+        -0.38,
+        -0.5
+      ],
+      [
+        0.28,
+        -0.5
+      ],
+      [
+        0.43,
+        -0.3
+      ],
+      [
+        0.5,
+        0
+      ],
+      [
+        0.43,
+        0.3
+      ],
+      [
+        0.28,
+        0.5
+      ],
+      [
+        -0.38,
+        0.5
+      ],
+      [
+        -0.5,
+        0.28
+      ]
+    ]
+  },
+  "exterior": {
+    "status": "approximate visual reconstruction, not measured offsets",
+    "sources": [
+      {
+        "file": "001_GENERAL_ARRANGEMENT.pdf",
+        "page": 1,
+        "use": "profile, plan taper, deck levels and equipment arrangement"
+      },
+      {
+        "file": "004_STABILITY_LOADING_MANUAL.pdf",
+        "page": 499,
+        "use": "qualitative rounded-bilge sections and forward narrowing"
+      },
+      {
+        "url": "https://www.shipspotting.com/photos/2112054",
+        "credit": "B.Clark, Falmouth, 6 September 2014",
+        "use": "colours and exterior appearance; no photograph embedded"
+      }
+    ],
+    "method": "Monotone cubic interpolation of drawing-guided stations, shared by mesh and diagrams. Bow half-breadths approximately read from GA Deck 9800 plan; x calibrated to frame grid, beam to 17.4 m. Rounded stem foot guided by side view. Separate angular forecastle profile preserves cross-bow arrangement. Underwater section widths/flare remain inferred.",
+    "stationColumns": [
+      "xAP",
+      "halfBeamAtReferenceZ",
+      "bottomZ",
+      "flatBottomHalfBeam",
+      "shellTopZ",
+      "flareMetres"
+    ],
+    "stations": [
+      [
+        -1.25,
+        4.5,
+        5.0,
+        1.0,
+        11.4,
+        0
+      ],
+      [
+        0,
+        6.2,
+        4.8,
+        1.8,
+        11.4,
+        0
+      ],
+      [
+        5,
+        7.6,
+        3.2,
+        3.0,
+        11.4,
+        0
+      ],
+      [
+        10,
+        8.4,
+        1.2,
+        4.5,
+        11.4,
+        0
+      ],
+      [
+        17.1,
+        8.7,
+        0,
+        6.2,
+        11.4,
+        0
+      ],
+      [
+        23.4,
+        8.7,
+        0,
+        6.7,
+        11.4,
+        0
+      ],
+      [
+        40,
+        8.7,
+        0,
+        6.9,
+        11.4,
+        0
+      ],
+      [
+        60.85,
+        8.7,
+        0,
+        6.9,
+        11.4,
+        0
+      ],
+      [
+        80.8,
+        8.7,
+        0,
+        6.7,
+        11.4,
+        0
+      ],
+      [
+        89.9,
+        8.7,
+        0,
+        6.4,
+        11.4,
+        0.1
+      ],
+      [
+        96.2,
+        8.55,
+        0,
+        5.8,
+        11.4,
+        0.25
+      ],
+      [
+        100,
+        8.3,
+        0,
+        5.4,
+        11.4,
+        0.4
+      ],
+      [
+        103.9,
+        7.95,
+        0,
+        4.9,
+        11.4,
+        0.6
+      ],
+      [
+        107.4,
+        7.35,
+        0,
+        4.2,
+        11.4,
+        0.8
+      ],
+      [
+        109.2,
+        6.65,
+        0,
+        3.5,
+        11.4,
+        0.9
+      ],
+      [
+        112.2,
+        5.15,
+        0,
+        2.4,
+        11.4,
+        0.9
+      ],
+      [
+        115.2,
+        3.4,
+        0,
+        1.2,
+        11.4,
+        0.7
+      ],
+      [
+        118.2,
+        1.7,
+        0.15,
+        0.3,
+        11.4,
+        0.4
+      ],
+      [
+        119.4,
+        1.05,
+        0.5,
+        0.1,
+        11.4,
+        0.25
+      ],
+      [
+        120.3,
+        0.55,
+        1.2,
+        0.03,
+        11.4,
+        0.12
+      ],
+      [
+        121.0,
+        0.2,
+        2.3,
+        0,
+        11.4,
+        0.04
+      ],
+      [
+        121.7,
+        0,
+        4.0,
+        0,
+        11.4,
+        0
+      ]
+    ],
+    "bilgeRise": 1.8,
+    "paintBandsZ": [
+      6.8,
+      8.0
+    ],
+    "paintNote": "Fixed illustrative paint bands, not the simulated waterline.",
+    "details": "Simplified accommodation and stowed crane booms; positions and breadths estimated from GA. No rudder, propeller or bulb reconstruction.",
+    "boxes": [
+      {
+        "id": "Aft accommodation",
+        "xAP": [
+          1,
+          12
+        ],
+        "width": 11,
+        "z": [
+          12.5,
+          24.5
+        ],
+        "material": 3,
+        "y": 0,
+        "status": "estimated detail dimensions; deck heights guided by GA"
+      },
+      {
+        "id": "Wheelhouse",
+        "xAP": [
+          0.5,
+          13
+        ],
+        "width": 14.2,
+        "z": [
+          24.5,
+          27.2
+        ],
+        "material": 3,
+        "y": 0,
+        "status": "estimated detail dimensions; deck heights guided by GA"
+      },
+      {
+        "id": "Bridge glazing",
+        "xAP": [
+          0.4,
+          13.1
+        ],
+        "width": 14.3,
+        "z": [
+          25.2,
+          26.3
+        ],
+        "material": 6,
+        "y": 0,
+        "status": "estimated detail dimensions; deck heights guided by GA"
+      },
+      {
+        "id": "Roof",
+        "xAP": [
+          0,
+          13.5
+        ],
+        "width": 14.8,
+        "z": [
+          27.2,
+          27.45
+        ],
+        "material": 3,
+        "y": 0,
+        "status": "estimated detail dimensions; deck heights guided by GA"
+      },
+      {
+        "id": "Aft crane pedestal",
+        "xAP": [
+          38,
+          42
+        ],
+        "width": 2.8,
+        "z": [
+          11.4,
+          21
+        ],
+        "material": 5,
+        "y": 7.1,
+        "status": "estimated detail dimensions; deck heights guided by GA"
+      },
+      {
+        "id": "Forward crane pedestal",
+        "xAP": [
+          83.5,
+          87.5
+        ],
+        "width": 2.8,
+        "z": [
+          11.4,
+          21
+        ],
+        "material": 5,
+        "y": 7.1,
+        "status": "estimated detail dimensions; deck heights guided by GA"
+      }
+    ],
+    "rods": [
+      {
+        "id": "Aft crane stowed boom",
+        "from": [
+          40,
+          7.1,
+          29
+        ],
+        "to": [
+          13,
+          7.1,
+          21
+        ],
+        "radius": 0.55
+      },
+      {
+        "id": "Forward crane stowed boom",
+        "from": [
+          85.5,
+          7.1,
+          29
+        ],
+        "to": [
+          110,
+          7.1,
+          21
+        ],
+        "radius": 0.55
+      },
+      {
+        "id": "Aft crane tower",
+        "from": [
+          40,
+          7.1,
+          21
+        ],
+        "to": [
+          40,
+          7.1,
+          29
+        ],
+        "radius": 0.7
+      },
+      {
+        "id": "Forward crane tower",
+        "from": [
+          85.5,
+          7.1,
+          21
+        ],
+        "to": [
+          85.5,
+          7.1,
+          29
+        ],
+        "radius": 0.7
+      },
+      {
+        "id": "Mast",
+        "from": [
+          7,
+          0,
+          27.45
+        ],
+        "to": [
+          7,
+          0,
+          34
+        ],
+        "radius": 0.13
+      }
+    ],
+    "beamReferenceZ": 9.8,
+    "forecastle": {
+      "profileXZ": [
+        [
+          96.2,
+          11.4
+        ],
+        [
+          100,
+          12.5
+        ],
+        [
+          109.2,
+          12.5
+        ],
+        [
+          109.2,
+          16
+        ],
+        [
+          116.4,
+          16
+        ],
+        [
+          121.7,
+          11.4
+        ]
+      ],
+      "source": "GA side view: main deck 11.4, forward deck 12.5 and upper cross-bow 16.0 m. Longitudinal corners approximately read from frame grid. The angular forward rake is intentional.",
+      "status": "drawing-guided approximate profile; breadth inferred from shell"
+    },
+    "reconstructionRevision": 2,
+    "traceNotes": {
+      "drawing": "001_GENERAL_ARRANGEMENT.pdf, drawing 000-001F rev B, 09-11-2010",
+      "calibration": "Frame 157 = 107.4 m AP; frame 180 = 121.2 m; FP = 121.7 m. Plan centreline and 17.4 m maximum beam. Elevations from labelled 9.8, 11.4, 12.5 and 16 m levels.",
+      "planReadings": "Approximate half-breadths at fr157 7.35 m; fr165 5.15 m; fr170 3.4 m; fr175 1.7 m. Raster reading, not an offset table.",
+      "profileReadings": "Stem nearly vertical at FP above rounded foot. Do not raise bottom continuously from x107 m as previous reconstruction did.",
+      "qualification": "GA and later hold arrangement differ in some tween-deck elevations. The documented cargo geometry still uses later hold arrangement."
+    }
+  }
+}

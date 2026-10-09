@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "models": [
+    {
+      "id": "training-pontoon-100x20",
+      "name": "Rectangular Pontoon",
+      "description": "Synthetic rectangular pontoon for teaching. Table range: 1\u20135 m; linear interpolation between 0.25 m samples. No real vessel data.",
+      "path": "training-pontoon-100x20/manifest.json"
+    },
+    {
+      "id": "reviewed-apples-vessel",
+      "name": "Vectis Castle",
+      "description": "Documented vessel with reconstructed visual geometry.",
+      "path": "reviewed-apples-vessel/manifest.json"
+    }
+  ]
+}

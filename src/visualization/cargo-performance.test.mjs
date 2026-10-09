@@ -1,0 +1,13 @@
+import {test,after} from 'node:test';import assert from 'node:assert/strict';import {createServer} from '../../scripts/test-server.mjs';
+const server=await createServer({server:{middlewareMode:true},appType:'custom'});after(()=>server.close());
+const {syncCargoMeshes}=await server.ssrLoadModule('/src/visualization/cargo-meshes.ts');const {demandRender}=await server.ssrLoadModule('/src/visualization/demand-render.ts');const THREE=await import('three');
+const cargo=n=>Array.from({length:n},(_,i)=>({id:String(i),lcg:String(i%50*2),tcg:String(Math.floor(i/50)*2),massTonnes:'1',footprint:{length:1,width:1,height:1,rotation:0,deckZ:0}}));
+test('selection and movement retain meshes; resized and removed cargo dispose old geometry',()=>{
+ const group=new THREE.Group(),map=new Map(),ws=cargo(3);syncCargoMeshes(group,map,ws,new Set());const mesh=map.get('0'),geo=mesh.geometry;syncCargoMeshes(group,map,[{...ws[0],lcg:'5'},ws[1]],new Set(['0']));assert.equal(map.get('0'),mesh);assert.equal(mesh.geometry,geo);assert.equal(mesh.position.x,5);assert.equal(map.size,2);assert.equal(mesh.material.color.getHexString(),'be2961');let disposed=false;geo.addEventListener('dispose',()=>disposed=true);syncCargoMeshes(group,map,[{...ws[0],footprint:{...ws[0].footprint,length:2}}],new Set());assert.ok(disposed);assert.equal(mesh.geometry.parameters.width,2);syncCargoMeshes(group,map,[],new Set());assert.equal(group.children.length,0);
+});
+test('render scheduler coalesces updates, sleeps when idle or hidden and cancels on disposal',()=>{
+ let visible=true,animate=false,draws=0,id=0;const queued=new Map();const loop=demandRender(()=>{draws++;return animate;},()=>visible,fn=>{queued.set(++id,fn);return id;},id=>queued.delete(id));const tick=()=>{const f=[...queued.values()];queued.clear();f.forEach(fn=>fn());};loop.invalidate();loop.invalidate();assert.equal(queued.size,1);tick();assert.equal(draws,1);assert.equal(queued.size,0);animate=true;loop.invalidate();tick();assert.equal(queued.size,1);visible=false;tick();assert.equal(queued.size,0);assert.equal(draws,2);visible=true;animate=false;loop.invalidate();tick();assert.equal(draws,3);loop.invalidate();loop.dispose();assert.equal(queued.size,0);
+});
+for(const n of [100,500,2000])test(`selection sync benchmark: ${n} cargo units`,()=>{
+ const group=new THREE.Group(),map=new Map(),ws=cargo(n);syncCargoMeshes(group,map,ws,new Set());const geometries=ws.map(w=>map.get(w.id).geometry);const start=performance.now();for(let i=0;i<20;i++)syncCargoMeshes(group,map,ws,new Set([String(i)]));console.log(`${n} units: ${((performance.now()-start)/20).toFixed(2)} ms/selection sync (CPU only)`);assert.ok(ws.every((w,i)=>map.get(w.id).geometry===geometries[i]));syncCargoMeshes(group,map,[],new Set());
+});

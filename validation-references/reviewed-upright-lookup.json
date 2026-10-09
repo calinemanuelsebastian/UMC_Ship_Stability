@@ -1,0 +1,7 @@
+{
+  "source": "apples-calculations-reviewed.xlsx: Calc_Trim rows 54:56 and 60:62; zero-trim table only. Not the final trimmed draft.",
+  "csv": "draft,displacementTonnes,lcb\n5.8,9633.54,61.122\n5.85,9728.26,61.089\n",
+  "displacementTonnes": 9644.269999999999,
+  "draft": 5.805664062499998,
+  "lcb": 61.11826171875
+}

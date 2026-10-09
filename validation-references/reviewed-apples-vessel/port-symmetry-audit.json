@@ -1,0 +1,3301 @@
+{
+  "version": 1,
+  "method": "Compare source port-positive KN with interpolated starboard KN at identical printed displacement and initial trim. Residual = interpolated starboard minus source port KN. Not a regulatory tolerance.",
+  "crossCurveSha256": "e237a984eb5fe96e2c14e1ad8c5e270004c77ccef21af0ee27f47d34180faf5d",
+  "cases": [
+    {
+      "id": "004-224",
+      "maximum": 0.0011202499999998228,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.317,
+          "mirrored": 0.31646975,
+          "residual": -0.0005302500000000099
+        },
+        {
+          "angle": 5,
+          "source": 0.796,
+          "mirrored": 0.79510475,
+          "residual": -0.0008952500000000141
+        },
+        {
+          "angle": 10,
+          "source": 1.602,
+          "mirrored": 1.6014323795,
+          "residual": -0.0005676205000000323
+        },
+        {
+          "angle": 12,
+          "source": 1.928,
+          "mirrored": 1.9268797500000001,
+          "residual": -0.0011202499999998228
+        },
+        {
+          "angle": 15,
+          "source": 2.418,
+          "mirrored": 2.4183271205000003,
+          "residual": 0.00032712050000016646
+        },
+        {
+          "angle": 20,
+          "source": 3.226,
+          "mirrored": 3.22514975,
+          "residual": -0.0008502500000000524
+        },
+        {
+          "angle": 25,
+          "source": 3.976,
+          "mirrored": 3.9758396205,
+          "residual": -0.00016037950000002965
+        },
+        {
+          "angle": 30,
+          "source": 4.611,
+          "mirrored": 4.6100785,
+          "residual": -0.0009214999999995754
+        },
+        {
+          "angle": 35,
+          "source": 5.151,
+          "mirrored": 5.151217,
+          "residual": 0.00021700000000013375
+        },
+        {
+          "angle": 40,
+          "source": 5.628,
+          "mirrored": 5.6273815,
+          "residual": -0.0006184999999998553
+        },
+        {
+          "angle": 50,
+          "source": 6.45,
+          "mirrored": 6.450717741,
+          "residual": 0.0007177409999998829
+        },
+        {
+          "angle": 60,
+          "source": 6.963,
+          "mirrored": 6.964087370500001,
+          "residual": 0.0010873705000005174
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 224,
+      "displacementTonnes": 5286.075,
+      "initialTrimMetres": -0.013
+    },
+    {
+      "id": "004-229",
+      "maximum": 0.0004158800000000351,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.275,
+          "mirrored": 0.27492800106000004,
+          "residual": -7.19989399999843e-05
+        },
+        {
+          "angle": 5,
+          "source": 0.688,
+          "mirrored": 0.68788906,
+          "residual": -0.00011093999999989279
+        },
+        {
+          "angle": 10,
+          "source": 1.381,
+          "mirrored": 1.3809821199999999,
+          "residual": -1.7880000000136675e-05
+        },
+        {
+          "angle": 12,
+          "source": 1.661,
+          "mirrored": 1.66058412,
+          "residual": -0.0004158800000000351
+        },
+        {
+          "angle": 15,
+          "source": 2.083,
+          "mirrored": 2.08265565106,
+          "residual": -0.0003443489400001276
+        },
+        {
+          "angle": 20,
+          "source": 2.798,
+          "mirrored": 2.7979642399999998,
+          "residual": -3.576000000027335e-05
+        },
+        {
+          "angle": 25,
+          "source": 3.53,
+          "mirrored": 3.5302513,
+          "residual": 0.0002513000000003984
+        },
+        {
+          "angle": 30,
+          "source": 4.263,
+          "mirrored": 4.26263777106,
+          "residual": -0.0003622289400002643
+        },
+        {
+          "angle": 35,
+          "source": 4.959,
+          "mirrored": 4.95921718106,
+          "residual": 0.0002171810600000157
+        },
+        {
+          "angle": 40,
+          "source": 5.579,
+          "mirrored": 5.57880812,
+          "residual": -0.00019188000000003314
+        },
+        {
+          "angle": 50,
+          "source": 6.467,
+          "mirrored": 6.46679812,
+          "residual": -0.00020187999999965456
+        },
+        {
+          "angle": 60,
+          "source": 7.062,
+          "mirrored": 7.06209153106,
+          "residual": 9.153105999981648e-05
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 229,
+      "displacementTonnes": 8245.847,
+      "initialTrimMetres": -1.301
+    },
+    {
+      "id": "004-234",
+      "maximum": 0.0006881600000000487,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.274,
+          "mirrored": 0.27413992000000004,
+          "residual": 0.0001399200000000156
+        },
+        {
+          "angle": 5,
+          "source": 0.687,
+          "mirrored": 0.68631184,
+          "residual": -0.0006881600000000487
+        },
+        {
+          "angle": 10,
+          "source": 1.378,
+          "mirrored": 1.3775916799999999,
+          "residual": -0.00040832000000001756
+        },
+        {
+          "angle": 12,
+          "source": 1.656,
+          "mirrored": 1.65594562272,
+          "residual": -5.437727999990649e-05
+        },
+        {
+          "angle": 15,
+          "source": 2.077,
+          "mirrored": 2.0766015427199997,
+          "residual": -0.0003984572800002084
+        },
+        {
+          "angle": 20,
+          "source": 2.79,
+          "mirrored": 2.7897313599999998,
+          "residual": -0.0002686400000002642
+        },
+        {
+          "angle": 25,
+          "source": 3.521,
+          "mirrored": 3.5215272,
+          "residual": 0.000527200000000061
+        },
+        {
+          "angle": 30,
+          "source": 4.252,
+          "mirrored": 4.2520432,
+          "residual": 4.3200000000354066e-05
+        },
+        {
+          "angle": 35,
+          "source": 4.943,
+          "mirrored": 4.94338546272,
+          "residual": 0.00038546272000061776
+        },
+        {
+          "angle": 40,
+          "source": 5.56,
+          "mirrored": 5.55970776,
+          "residual": -0.00029223999999938854
+        },
+        {
+          "angle": 50,
+          "source": 6.453,
+          "mirrored": 6.4534497027199995,
+          "residual": 0.0004497027199992232
+        },
+        {
+          "angle": 60,
+          "source": 7.049,
+          "mirrored": 7.049331919999999,
+          "residual": 0.00033191999999893085
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 234,
+      "displacementTonnes": 8137.608,
+      "initialTrimMetres": -0.758
+    },
+    {
+      "id": "004-244",
+      "maximum": 0.0009340481599999784,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.269,
+          "mirrored": 0.26806595184000004,
+          "residual": -0.0009340481599999784
+        },
+        {
+          "angle": 5,
+          "source": 0.671,
+          "mirrored": 0.6710659518400001,
+          "residual": 6.595184000002252e-05
+        },
+        {
+          "angle": 10,
+          "source": 1.343,
+          "mirrored": 1.34306795184,
+          "residual": 6.795183999996901e-05
+        },
+        {
+          "angle": 12,
+          "source": 1.612,
+          "mirrored": 1.61206808,
+          "residual": 6.807999999991488e-05
+        },
+        {
+          "angle": 15,
+          "source": 2.016,
+          "mirrored": 2.01607008,
+          "residual": 7.007999999997239e-05
+        },
+        {
+          "angle": 20,
+          "source": 2.693,
+          "mirrored": 2.6921380318400003,
+          "residual": -0.0008619681599997264
+        },
+        {
+          "angle": 25,
+          "source": 3.359,
+          "mirrored": 3.3589439199999997,
+          "residual": -5.608000000023594e-05
+        },
+        {
+          "angle": 30,
+          "source": 3.982,
+          "mirrored": 3.9818117600000003,
+          "residual": -0.00018823999999995067
+        },
+        {
+          "angle": 35,
+          "source": 4.587,
+          "mirrored": 4.58674968,
+          "residual": -0.0002503200000001371
+        },
+        {
+          "angle": 40,
+          "source": 5.176,
+          "mirrored": 5.176487488159999,
+          "residual": 0.00048748815999921646
+        },
+        {
+          "angle": 50,
+          "source": 6.126,
+          "mirrored": 6.1253572,
+          "residual": -0.0006428000000004985
+        },
+        {
+          "angle": 60,
+          "source": 6.732,
+          "mirrored": 6.73242128,
+          "residual": 0.00042127999999941323
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 244,
+      "displacementTonnes": 14006.408,
+      "initialTrimMetres": -1.001
+    },
+    {
+      "id": "004-254",
+      "maximum": 0.0007813669199998596,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.268,
+          "mirrored": 0.268,
+          "residual": 0
+        },
+        {
+          "angle": 5,
+          "source": 0.671,
+          "mirrored": 0.670348,
+          "residual": -0.0006519999999999859
+        },
+        {
+          "angle": 10,
+          "source": 1.341,
+          "mirrored": 1.3410837100000002,
+          "residual": 8.371000000018114e-05
+        },
+        {
+          "angle": 12,
+          "source": 1.61,
+          "mirrored": 1.6092186330800002,
+          "residual": -0.0007813669199998596
+        },
+        {
+          "angle": 15,
+          "source": 2.013,
+          "mirrored": 2.01281942,
+          "residual": -0.00018057999999987473
+        },
+        {
+          "angle": 20,
+          "source": 2.689,
+          "mirrored": 2.68877971,
+          "residual": -0.0002202900000001229
+        },
+        {
+          "angle": 25,
+          "source": 3.357,
+          "mirrored": 3.35635229,
+          "residual": -0.0006477100000004121
+        },
+        {
+          "angle": 30,
+          "source": 3.982,
+          "mirrored": 3.98188087,
+          "residual": -0.00011913000000030038
+        },
+        {
+          "angle": 35,
+          "source": 4.588,
+          "mirrored": 4.58770623692,
+          "residual": -0.0002937630800001756
+        },
+        {
+          "angle": 40,
+          "source": 5.18,
+          "mirrored": 5.17998203,
+          "residual": -1.7970000000033792e-05
+        },
+        {
+          "angle": 50,
+          "source": 6.132,
+          "mirrored": 6.1321229,
+          "residual": 0.00012290000000003687
+        },
+        {
+          "angle": 60,
+          "source": 6.738,
+          "mirrored": 6.73785861,
+          "residual": -0.0001413900000004631
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 254,
+      "displacementTonnes": 13938.771,
+      "initialTrimMetres": -0.674
+    },
+    {
+      "id": "004-259",
+      "maximum": 0.0005963000000006602,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.268,
+          "mirrored": 0.267828,
+          "residual": -0.00017200000000000548
+        },
+        {
+          "angle": 5,
+          "source": 0.67,
+          "mirrored": 0.6697562588,
+          "residual": -0.00024374120000003607
+        },
+        {
+          "angle": 10,
+          "source": 1.34,
+          "mirrored": 1.3395842588,
+          "residual": -0.00041574120000009707
+        },
+        {
+          "angle": 12,
+          "source": 1.608,
+          "mirrored": 1.6080669,
+          "residual": 6.689999999998086e-05
+        },
+        {
+          "angle": 15,
+          "source": 2.011,
+          "mirrored": 2.0108949000000003,
+          "residual": -0.00010509999999985808
+        },
+        {
+          "angle": 20,
+          "source": 2.687,
+          "mirrored": 2.6867229000000004,
+          "residual": -0.000277099999999475
+        },
+        {
+          "angle": 25,
+          "source": 3.367,
+          "mirrored": 3.3664853588,
+          "residual": -0.0005146412000001099
+        },
+        {
+          "angle": 30,
+          "source": 4.008,
+          "mirrored": 4.0077366588,
+          "residual": -0.0002633412000001556
+        },
+        {
+          "angle": 35,
+          "source": 4.621,
+          "mirrored": 4.6207428588,
+          "residual": -0.0002571412000005324
+        },
+        {
+          "angle": 40,
+          "source": 5.224,
+          "mirrored": 5.2234036999999995,
+          "residual": -0.0005963000000006602
+        },
+        {
+          "angle": 50,
+          "source": 6.192,
+          "mirrored": 6.191827,
+          "residual": -0.00017300000000020077
+        },
+        {
+          "angle": 60,
+          "source": 6.787,
+          "mirrored": 6.787164799999999,
+          "residual": 0.00016479999999940986
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 259,
+      "displacementTonnes": 13358.29,
+      "initialTrimMetres": -1.414
+    },
+    {
+      "id": "004-264",
+      "maximum": 0.0008927400000002805,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.267,
+          "mirrored": 0.26614240044,
+          "residual": -0.000857599560000033
+        },
+        {
+          "angle": 5,
+          "source": 0.666,
+          "mirrored": 0.6659888595600001,
+          "residual": -1.1140439999945961e-05
+        },
+        {
+          "angle": 10,
+          "source": 1.333,
+          "mirrored": 1.33212526,
+          "residual": -0.000874739999999985
+        },
+        {
+          "angle": 12,
+          "source": 1.599,
+          "mirrored": 1.5991252599999999,
+          "residual": 0.0001252599999999049
+        },
+        {
+          "angle": 15,
+          "source": 2,
+          "mirrored": 2.00011926,
+          "residual": 0.0001192599999999544
+        },
+        {
+          "angle": 20,
+          "source": 2.673,
+          "mirrored": 2.6731132599999996,
+          "residual": 0.00011325999999955982
+        },
+        {
+          "angle": 25,
+          "source": 3.356,
+          "mirrored": 3.3551072599999996,
+          "residual": -0.0008927400000002805
+        },
+        {
+          "angle": 30,
+          "source": 4.009,
+          "mirrored": 4.008522220000001,
+          "residual": -0.0004777799999997612
+        },
+        {
+          "angle": 35,
+          "source": 4.631,
+          "mirrored": 4.630247700000001,
+          "residual": -0.0007522999999993729
+        },
+        {
+          "angle": 40,
+          "source": 5.237,
+          "mirrored": 5.2370984400000005,
+          "residual": 9.844000000036601e-05
+        },
+        {
+          "angle": 50,
+          "source": 6.218,
+          "mirrored": 6.217681519560001,
+          "residual": -0.00031848043999893605
+        },
+        {
+          "angle": 60,
+          "source": 6.811,
+          "mirrored": 6.810830779560001,
+          "residual": -0.0001692204399992292
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 264,
+      "displacementTonnes": 13014.326,
+      "initialTrimMetres": -0.497
+    },
+    {
+      "id": "004-274",
+      "maximum": 0.0008090021799995739,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.267,
+          "mirrored": 0.26657583218,
+          "residual": -0.00042416781999998765
+        },
+        {
+          "angle": 5,
+          "source": 0.666,
+          "mirrored": 0.66562947782,
+          "residual": -0.00037052217999999915
+        },
+        {
+          "angle": 10,
+          "source": 1.332,
+          "mirrored": 1.33188331,
+          "residual": -0.00011669000000003038
+        },
+        {
+          "angle": 12,
+          "source": 1.599,
+          "mirrored": 1.59888331,
+          "residual": -0.00011669000000003038
+        },
+        {
+          "angle": 15,
+          "source": 2,
+          "mirrored": 1.99956131,
+          "residual": -0.00043868999999996383
+        },
+        {
+          "angle": 20,
+          "source": 2.672,
+          "mirrored": 2.67223931,
+          "residual": 0.00023930999999999258
+        },
+        {
+          "angle": 25,
+          "source": 3.354,
+          "mirrored": 3.35391731,
+          "residual": -8.269000000016291e-05
+        },
+        {
+          "angle": 30,
+          "source": 4.004,
+          "mirrored": 4.0038760700000005,
+          "residual": -0.00012392999999910614
+        },
+        {
+          "angle": 35,
+          "source": 4.625,
+          "mirrored": 4.624821450000001,
+          "residual": -0.0001785499999993334
+        },
+        {
+          "angle": 40,
+          "source": 5.231,
+          "mirrored": 5.230650140000001,
+          "residual": -0.00034985999999914696
+        },
+        {
+          "angle": 50,
+          "source": 6.21,
+          "mirrored": 6.21001968782,
+          "residual": 1.968782000005831e-05
+        },
+        {
+          "angle": 60,
+          "source": 6.805,
+          "mirrored": 6.80419099782,
+          "residual": -0.0008090021799995739
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 274,
+      "displacementTonnes": 13084.931,
+      "initialTrimMetres": -0.339
+    },
+    {
+      "id": "004-284",
+      "maximum": 0.0008859599999999634,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.268,
+          "mirrored": 0.268,
+          "residual": 0
+        },
+        {
+          "angle": 5,
+          "source": 0.67,
+          "mirrored": 0.66962004,
+          "residual": -0.000379960000000068
+        },
+        {
+          "angle": 10,
+          "source": 1.34,
+          "mirrored": 1.34011404,
+          "residual": 0.00011403999999992642
+        },
+        {
+          "angle": 12,
+          "source": 1.609,
+          "mirrored": 1.60811404,
+          "residual": -0.0008859599999999634
+        },
+        {
+          "angle": 15,
+          "source": 2.012,
+          "mirrored": 2.01160804,
+          "residual": -0.000391959999999969
+        },
+        {
+          "angle": 20,
+          "source": 2.687,
+          "mirrored": 2.68722808,
+          "residual": 0.00022808000000029693
+        },
+        {
+          "angle": 25,
+          "source": 3.358,
+          "mirrored": 3.3579122237599996,
+          "residual": -8.777624000044781e-05
+        },
+        {
+          "angle": 30,
+          "source": 3.986,
+          "mirrored": 3.98610388,
+          "residual": 0.00010387999999972308
+        },
+        {
+          "angle": 35,
+          "source": 4.594,
+          "mirrored": 4.593471839999999,
+          "residual": -0.0005281600000008879
+        },
+        {
+          "angle": 40,
+          "source": 5.189,
+          "mirrored": 5.188663496239999,
+          "residual": -0.000336503760000717
+        },
+        {
+          "angle": 50,
+          "source": 6.145,
+          "mirrored": 6.14517133624,
+          "residual": 0.0001713362400002083
+        },
+        {
+          "angle": 60,
+          "source": 6.749,
+          "mirrored": 6.74848568,
+          "residual": -0.000514319999999735
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 284,
+      "displacementTonnes": 13812.604,
+      "initialTrimMetres": -0.747
+    },
+    {
+      "id": "004-300",
+      "maximum": 0.0007818400000001446,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.266,
+          "mirrored": 0.26566798280000004,
+          "residual": -0.0003320171999999788
+        },
+        {
+          "angle": 5,
+          "source": 0.665,
+          "mirrored": 0.6646897472000001,
+          "residual": -0.000310252799999966
+        },
+        {
+          "angle": 10,
+          "source": 1.33,
+          "mirrored": 1.3295879828,
+          "residual": -0.00041201720000016984
+        },
+        {
+          "angle": 12,
+          "source": 1.596,
+          "mirrored": 1.5959977300000001,
+          "residual": -2.2699999999709064e-06
+        },
+        {
+          "angle": 15,
+          "source": 1.997,
+          "mirrored": 1.99663773,
+          "residual": -0.0003622700000001089
+        },
+        {
+          "angle": 20,
+          "source": 2.669,
+          "mirrored": 2.66891773,
+          "residual": -8.227000000005091e-05
+        },
+        {
+          "angle": 25,
+          "source": 3.352,
+          "mirrored": 3.35155773,
+          "residual": -0.0004422699999997448
+        },
+        {
+          "angle": 30,
+          "source": 4.013,
+          "mirrored": 4.012809079999999,
+          "residual": -0.00019092000000053844
+        },
+        {
+          "angle": 35,
+          "source": 4.64,
+          "mirrored": 4.6396816028,
+          "residual": -0.00031839720000004235
+        },
+        {
+          "angle": 40,
+          "source": 5.246,
+          "mirrored": 5.24601362,
+          "residual": 1.3619999999825438e-05
+        },
+        {
+          "angle": 50,
+          "source": 6.234,
+          "mirrored": 6.23321816,
+          "residual": -0.0007818400000001446
+        },
+        {
+          "angle": 60,
+          "source": 6.825,
+          "mirrored": 6.82437589,
+          "residual": -0.0006241100000003996
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 300,
+      "displacementTonnes": 12807.773,
+      "initialTrimMetres": -0.32
+    },
+    {
+      "id": "004-306",
+      "maximum": 0.0005370278709673215,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.265,
+          "mirrored": 0.2648258064516129,
+          "residual": -0.00017419354838710266
+        },
+        {
+          "angle": 5,
+          "source": 0.663,
+          "mirrored": 0.6627290593548387,
+          "residual": -0.00027094064516131056
+        },
+        {
+          "angle": 10,
+          "source": 1.326,
+          "mirrored": 1.3261728663225807,
+          "residual": 0.00017286632258062262
+        },
+        {
+          "angle": 12,
+          "source": 1.592,
+          "mirrored": 1.5923806722580647,
+          "residual": 0.00038067225806459604
+        },
+        {
+          "angle": 15,
+          "source": 1.992,
+          "mirrored": 1.9922064787096774,
+          "residual": 0.00020647870967738235
+        },
+        {
+          "angle": 20,
+          "source": 2.663,
+          "mirrored": 2.6632064787096774,
+          "residual": 0.0002064787096776044
+        },
+        {
+          "angle": 25,
+          "source": 3.345,
+          "mirrored": 3.3450322851612904,
+          "residual": 3.2285161290168674e-05
+        },
+        {
+          "angle": 30,
+          "source": 4.008,
+          "mirrored": 4.008503144516129,
+          "residual": 0.0005031445161289838
+        },
+        {
+          "angle": 35,
+          "source": 4.638,
+          "mirrored": 4.637792058580645,
+          "residual": -0.00020794141935454036
+        },
+        {
+          "angle": 40,
+          "source": 5.245,
+          "mirrored": 5.244792058580646,
+          "residual": -0.00020794141935454036
+        },
+        {
+          "angle": 50,
+          "source": 6.235,
+          "mirrored": 6.234462972129033,
+          "residual": -0.0005370278709673215
+        },
+        {
+          "angle": 60,
+          "source": 6.827,
+          "mirrored": 6.827062999225807,
+          "residual": 6.29992258067702e-05
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 306,
+      "displacementTonnes": 12725.164,
+      "initialTrimMetres": 0.108
+    },
+    {
+      "id": "004-318",
+      "maximum": 0.0007006199999999296,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.268,
+          "mirrored": 0.26757569,
+          "residual": -0.0004243100000000388
+        },
+        {
+          "angle": 5,
+          "source": 0.669,
+          "mirrored": 0.66900769,
+          "residual": 7.690000000004638e-06
+        },
+        {
+          "angle": 10,
+          "source": 1.343,
+          "mirrored": 1.34229938,
+          "residual": -0.0007006199999999296
+        },
+        {
+          "angle": 12,
+          "source": 1.614,
+          "mirrored": 1.61373138,
+          "residual": -0.00026862000000016373
+        },
+        {
+          "angle": 15,
+          "source": 2.024,
+          "mirrored": 2.02392260804,
+          "residual": -7.739196000011717e-05
+        },
+        {
+          "angle": 20,
+          "source": 2.717,
+          "mirrored": 2.71703076,
+          "residual": 3.076000000001855e-05
+        },
+        {
+          "angle": 25,
+          "source": 3.429,
+          "mirrored": 3.42918214,
+          "residual": 0.00018214000000016384
+        },
+        {
+          "angle": 30,
+          "source": 4.156,
+          "mirrored": 4.15575783,
+          "residual": -0.0002421699999999305
+        },
+        {
+          "angle": 35,
+          "source": 4.872,
+          "mirrored": 4.87147045,
+          "residual": -0.0005295499999995457
+        },
+        {
+          "angle": 40,
+          "source": 5.501,
+          "mirrored": 5.50080198804,
+          "residual": -0.0001980119600002439
+        },
+        {
+          "angle": 50,
+          "source": 6.411,
+          "mirrored": 6.41074338,
+          "residual": -0.0002566199999991525
+        },
+        {
+          "angle": 60,
+          "source": 7.02,
+          "mirrored": 7.01945507,
+          "residual": -0.0005449299999993329
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 318,
+      "displacementTonnes": 9114.031,
+      "initialTrimMetres": -0.358
+    },
+    {
+      "id": "004-354",
+      "maximum": 0.0008051499999999212,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.268,
+          "mirrored": 0.2676537281,
+          "residual": -0.00034627190000002805
+        },
+        {
+          "angle": 5,
+          "source": 0.669,
+          "mirrored": 0.6690277281,
+          "residual": 2.77280999999574e-05
+        },
+        {
+          "angle": 10,
+          "source": 1.339,
+          "mirrored": 1.33819485,
+          "residual": -0.0008051499999999212
+        },
+        {
+          "angle": 12,
+          "source": 1.606,
+          "mirrored": 1.60619485,
+          "residual": 0.00019484999999996866
+        },
+        {
+          "angle": 15,
+          "source": 2.009,
+          "mirrored": 2.0087359719,
+          "residual": -0.00026402809999970245
+        },
+        {
+          "angle": 20,
+          "source": 2.684,
+          "mirrored": 2.6835965781,
+          "residual": -0.0004034219000002004
+        },
+        {
+          "angle": 25,
+          "source": 3.358,
+          "mirrored": 3.3580768781,
+          "residual": 7.687809999978867e-05
+        },
+        {
+          "angle": 30,
+          "source": 3.991,
+          "mirrored": 3.99052945,
+          "residual": -0.00047055000000018055
+        },
+        {
+          "angle": 35,
+          "source": 4.601,
+          "mirrored": 4.6007086,
+          "residual": -0.00029140000000005273
+        },
+        {
+          "angle": 40,
+          "source": 5.2,
+          "mirrored": 5.1996477781,
+          "residual": -0.00035222190000006037
+        },
+        {
+          "angle": 50,
+          "source": 6.161,
+          "mirrored": 6.1612795,
+          "residual": 0.0002795000000004322
+        },
+        {
+          "angle": 60,
+          "source": 6.762,
+          "mirrored": 6.7620060781,
+          "residual": 6.078100000195263e-06
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 354,
+      "displacementTonnes": 13644.685,
+      "initialTrimMetres": -0.687
+    },
+    {
+      "id": "004-441",
+      "maximum": 0.0009382599999998575,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.269,
+          "mirrored": 0.269,
+          "residual": 0
+        },
+        {
+          "angle": 5,
+          "source": 0.673,
+          "mirrored": 0.67215812764,
+          "residual": -0.0008418723599999955
+        },
+        {
+          "angle": 10,
+          "source": 1.345,
+          "mirrored": 1.34500826,
+          "residual": 8.25999999998217e-06
+        },
+        {
+          "angle": 12,
+          "source": 1.615,
+          "mirrored": 1.61482226,
+          "residual": -0.0001777400000000373
+        },
+        {
+          "angle": 15,
+          "source": 2.02,
+          "mirrored": 2.01963626,
+          "residual": -0.0003637400000000568
+        },
+        {
+          "angle": 20,
+          "source": 2.698,
+          "mirrored": 2.69764452,
+          "residual": -0.0003554800000000746
+        },
+        {
+          "angle": 25,
+          "source": 3.362,
+          "mirrored": 3.3610617400000002,
+          "residual": -0.0009382599999998575
+        },
+        {
+          "angle": 30,
+          "source": 3.98,
+          "mirrored": 3.97988709236,
+          "residual": -0.0001129076400001594
+        },
+        {
+          "angle": 35,
+          "source": 4.585,
+          "mirrored": 4.5847010923600005,
+          "residual": -0.00029890763999951275
+        },
+        {
+          "angle": 40,
+          "source": 5.168,
+          "mirrored": 5.16829605236,
+          "residual": 0.0002960523599995213
+        },
+        {
+          "angle": 50,
+          "source": 6.113,
+          "mirrored": 6.11304914,
+          "residual": 4.9139999999781026e-05
+        },
+        {
+          "angle": 60,
+          "source": 6.722,
+          "mirrored": 6.72143766,
+          "residual": -0.0005623400000001055
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 441,
+      "displacementTonnes": 14119.426,
+      "initialTrimMetres": -1.407
+    },
+    {
+      "id": "004-446",
+      "maximum": 0.00083129000000004,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.268,
+          "mirrored": 0.268,
+          "residual": 0
+        },
+        {
+          "angle": 5,
+          "source": 0.671,
+          "mirrored": 0.67054071,
+          "residual": -0.0004592900000000011
+        },
+        {
+          "angle": 10,
+          "source": 1.341,
+          "mirrored": 1.34116871,
+          "residual": 0.00016871000000007186
+        },
+        {
+          "angle": 12,
+          "source": 1.61,
+          "mirrored": 1.60916871,
+          "residual": -0.00083129000000004
+        },
+        {
+          "angle": 15,
+          "source": 2.013,
+          "mirrored": 2.01279671,
+          "residual": -0.0002032899999999671
+        },
+        {
+          "angle": 20,
+          "source": 2.689,
+          "mirrored": 2.6893374199999998,
+          "residual": 0.0003374199999996996
+        },
+        {
+          "angle": 25,
+          "source": 3.358,
+          "mirrored": 3.35817247188,
+          "residual": 0.00017247188000002467
+        },
+        {
+          "angle": 30,
+          "source": 3.984,
+          "mirrored": 3.9841458700000003,
+          "residual": 0.00014587000000032546
+        },
+        {
+          "angle": 35,
+          "source": 4.591,
+          "mirrored": 4.590861159999999,
+          "residual": -0.0001388400000008616
+        },
+        {
+          "angle": 40,
+          "source": 5.184,
+          "mirrored": 5.18383455812,
+          "residual": -0.00016544188000011673
+        },
+        {
+          "angle": 50,
+          "source": 6.137,
+          "mirrored": 6.13692771812,
+          "residual": -7.228187999963609e-05
+        },
+        {
+          "angle": 60,
+          "source": 6.742,
+          "mirrored": 6.742326319999999,
+          "residual": 0.0003263199999992139
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 446,
+      "displacementTonnes": 13891.271,
+      "initialTrimMetres": -0.814
+    },
+    {
+      "id": "004-461",
+      "maximum": 0.0008967200000005171,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.268,
+          "mirrored": 0.268,
+          "residual": 0
+        },
+        {
+          "angle": 5,
+          "source": 0.67,
+          "mirrored": 0.6691032800000001,
+          "residual": -0.000896719999999962
+        },
+        {
+          "angle": 10,
+          "source": 1.34,
+          "mirrored": 1.33910328,
+          "residual": -0.000896720000000073
+        },
+        {
+          "angle": 12,
+          "source": 1.608,
+          "mirrored": 1.60710328,
+          "residual": -0.000896720000000073
+        },
+        {
+          "angle": 15,
+          "source": 2.011,
+          "mirrored": 2.0101032799999996,
+          "residual": -0.0008967200000005171
+        },
+        {
+          "angle": 20,
+          "source": 2.687,
+          "mirrored": 2.6861032799999998,
+          "residual": -0.000896720000000073
+        },
+        {
+          "angle": 25,
+          "source": 3.368,
+          "mirrored": 3.368,
+          "residual": 0
+        },
+        {
+          "angle": 30,
+          "source": 4.015,
+          "mirrored": 4.0145868799999995,
+          "residual": -0.0004131200000001556
+        },
+        {
+          "angle": 35,
+          "source": 4.63,
+          "mirrored": 4.6294836,
+          "residual": -0.0005163999999995283
+        },
+        {
+          "angle": 40,
+          "source": 5.234,
+          "mirrored": 5.23427704,
+          "residual": 0.0002770400000002837
+        },
+        {
+          "angle": 50,
+          "source": 6.207,
+          "mirrored": 6.2069672,
+          "residual": -3.279999999961092e-05
+        },
+        {
+          "angle": 60,
+          "source": 6.799,
+          "mirrored": 6.7991737599999995,
+          "residual": 0.0001737599999991346
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 461,
+      "displacementTonnes": 13210.328,
+      "initialTrimMetres": -1.5
+    },
+    {
+      "id": "004-466",
+      "maximum": 0.0008901199999993281,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.267,
+          "mirrored": 0.267,
+          "residual": 0
+        },
+        {
+          "angle": 5,
+          "source": 0.667,
+          "mirrored": 0.66638159496,
+          "residual": -0.0006184050399999919
+        },
+        {
+          "angle": 10,
+          "source": 1.334,
+          "mirrored": 1.3334595949599999,
+          "residual": -0.0005404050400001914
+        },
+        {
+          "angle": 12,
+          "source": 1.601,
+          "mirrored": 1.6004786800000002,
+          "residual": -0.0005213199999998253
+        },
+        {
+          "angle": 15,
+          "source": 2.002,
+          "mirrored": 2.0015566799999998,
+          "residual": -0.0004433200000000248
+        },
+        {
+          "angle": 20,
+          "source": 2.675,
+          "mirrored": 2.6746537650399995,
+          "residual": -0.0003462349600003023
+        },
+        {
+          "angle": 25,
+          "source": 3.357,
+          "mirrored": 3.356468,
+          "residual": -0.000532000000000199
+        },
+        {
+          "angle": 30,
+          "source": 4.006,
+          "mirrored": 4.00579287496,
+          "residual": -0.00020712504000020004
+        },
+        {
+          "angle": 35,
+          "source": 4.625,
+          "mirrored": 4.625166600000001,
+          "residual": 0.0001666000000009049
+        },
+        {
+          "angle": 40,
+          "source": 5.231,
+          "mirrored": 5.23092192,
+          "residual": -7.807999999975834e-05
+        },
+        {
+          "angle": 50,
+          "source": 6.209,
+          "mirrored": 6.20810988,
+          "residual": -0.0008901199999993281
+        },
+        {
+          "angle": 60,
+          "source": 6.803,
+          "mirrored": 6.80250215496,
+          "residual": -0.0004978450399999446
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 466,
+      "displacementTonnes": 13124.468,
+      "initialTrimMetres": -0.539
+    },
+    {
+      "id": "004-476",
+      "maximum": 0.0004329799999993611,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.265,
+          "mirrored": 0.26501800000000003,
+          "residual": 1.8000000000018e-05
+        },
+        {
+          "angle": 5,
+          "source": 0.662,
+          "mirrored": 0.6620360000000001,
+          "residual": 3.6000000000036e-05
+        },
+        {
+          "angle": 10,
+          "source": 1.325,
+          "mirrored": 1.32485417,
+          "residual": -0.00014582999999990243
+        },
+        {
+          "angle": 12,
+          "source": 1.591,
+          "mirrored": 1.59085809094,
+          "residual": -0.00014190905999988956
+        },
+        {
+          "angle": 15,
+          "source": 1.991,
+          "mirrored": 1.99087217,
+          "residual": -0.00012783000000005096
+        },
+        {
+          "angle": 20,
+          "source": 2.662,
+          "mirrored": 2.66189017,
+          "residual": -0.00010982999999997745
+        },
+        {
+          "angle": 25,
+          "source": 3.344,
+          "mirrored": 3.34391209094,
+          "residual": -8.790905999989107e-05
+        },
+        {
+          "angle": 30,
+          "source": 4.018,
+          "mirrored": 4.01781549,
+          "residual": -0.000184509999999527
+        },
+        {
+          "angle": 35,
+          "source": 4.653,
+          "mirrored": 4.65323707094,
+          "residual": 0.0002370709400008053
+        },
+        {
+          "angle": 40,
+          "source": 5.261,
+          "mirrored": 5.2614329799999995,
+          "residual": 0.0004329799999993611
+        },
+        {
+          "angle": 50,
+          "source": 6.255,
+          "mirrored": 6.25488271906,
+          "residual": -0.00011728093999963107
+        },
+        {
+          "angle": 60,
+          "source": 6.845,
+          "mirrored": 6.84461088906,
+          "residual": -0.000389110939999604
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 476,
+      "displacementTonnes": 12478.217,
+      "initialTrimMetres": -0.009
+    },
+    {
+      "id": "004-486",
+      "maximum": 0.0008920000000000039,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.264,
+          "mirrored": 0.263108,
+          "residual": -0.0008920000000000039
+        },
+        {
+          "angle": 5,
+          "source": 0.659,
+          "mirrored": 0.65926163,
+          "residual": 0.0002616300000000127
+        },
+        {
+          "angle": 10,
+          "source": 1.321,
+          "mirrored": 1.32054,
+          "residual": -0.00045999999999990493
+        },
+        {
+          "angle": 12,
+          "source": 1.586,
+          "mirrored": 1.585648,
+          "residual": -0.00035200000000013
+        },
+        {
+          "angle": 15,
+          "source": 1.986,
+          "mirrored": 1.985756,
+          "residual": -0.00024399999999991095
+        },
+        {
+          "angle": 20,
+          "source": 2.659,
+          "mirrored": 2.65881837,
+          "residual": -0.00018162999999971063
+        },
+        {
+          "angle": 25,
+          "source": 3.344,
+          "mirrored": 3.3435495,
+          "residual": -0.0004504999999999093
+        },
+        {
+          "angle": 30,
+          "source": 4.046,
+          "mirrored": 4.0458125,
+          "residual": -0.0001875000000000071
+        },
+        {
+          "angle": 35,
+          "source": 4.712,
+          "mirrored": 4.71171537,
+          "residual": -0.0002846299999994528
+        },
+        {
+          "angle": 40,
+          "source": 5.323,
+          "mirrored": 5.3231225,
+          "residual": 0.00012249999999980332
+        },
+        {
+          "angle": 50,
+          "source": 6.318,
+          "mirrored": 6.317653,
+          "residual": -0.00034699999999965314
+        },
+        {
+          "angle": 60,
+          "source": 6.903,
+          "mirrored": 6.90259787,
+          "residual": -0.00040212999999944543
+        }
+      ],
+      "sourceFile": "004_STABILITY_LOADING_MANUAL.pdf",
+      "sourceSha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+      "curvePage": 486,
+      "displacementTonnes": 11542.25,
+      "initialTrimMetres": -0.054
+    },
+    {
+      "id": "007-52",
+      "maximum": 0.0056808092000002475,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.276,
+          "mirrored": 0.2750828092,
+          "residual": -0.0009171908000000228
+        },
+        {
+          "angle": 5,
+          "source": 0.69,
+          "mirrored": 0.6895477908000001,
+          "residual": -0.00045220919999988674
+        },
+        {
+          "angle": 10,
+          "source": 1.384,
+          "mirrored": 1.3835136092,
+          "residual": -0.00048639079999990287
+        },
+        {
+          "angle": 12,
+          "source": 1.663,
+          "mirrored": 1.662415,
+          "residual": -0.0005850000000000577
+        },
+        {
+          "angle": 15,
+          "source": 2.085,
+          "mirrored": 2.0851074,
+          "residual": 0.00010740000000009076
+        },
+        {
+          "angle": 20,
+          "source": 2.802,
+          "mirrored": 2.8018549908,
+          "residual": -0.00014500920000015682
+        },
+        {
+          "angle": 25,
+          "source": 3.536,
+          "mirrored": 3.5356302,
+          "residual": -0.0003698000000000867
+        },
+        {
+          "angle": 30,
+          "source": 4.265,
+          "mirrored": 4.264922,
+          "residual": -7.799999999935636e-05
+        },
+        {
+          "angle": 35,
+          "source": 4.948,
+          "mirrored": 4.9475674000000005,
+          "residual": -0.0004325999999998942
+        },
+        {
+          "angle": 40,
+          "source": 5.556,
+          "mirrored": 5.5556032092,
+          "residual": -0.0003967907999999909
+        },
+        {
+          "angle": 50,
+          "source": 6.449,
+          "mirrored": 6.4539827999999995,
+          "residual": 0.004982799999999621
+        },
+        {
+          "angle": 60,
+          "source": 7.038,
+          "mirrored": 7.0436808092000005,
+          "residual": 0.0056808092000002475
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 52,
+      "displacementTonnes": 7919.98,
+      "initialTrimMetres": -0.523
+    },
+    {
+      "id": "007-60",
+      "maximum": 0.005547066320000127,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.276,
+          "mirrored": 0.27545306632,
+          "residual": -0.000546933680000028
+        },
+        {
+          "angle": 5,
+          "source": 0.691,
+          "mirrored": 0.69044785368,
+          "residual": -0.0005521463200000021
+        },
+        {
+          "angle": 10,
+          "source": 1.386,
+          "mirrored": 1.3852576263199998,
+          "residual": -0.0007423736800000746
+        },
+        {
+          "angle": 12,
+          "source": 1.665,
+          "mirrored": 1.6646602,
+          "residual": -0.00033980000000011223
+        },
+        {
+          "angle": 15,
+          "source": 2.088,
+          "mirrored": 2.08794348,
+          "residual": -5.652000000022639e-05
+        },
+        {
+          "angle": 20,
+          "source": 2.806,
+          "mirrored": 2.80548769368,
+          "residual": -0.0005123063200000999
+        },
+        {
+          "angle": 25,
+          "source": 3.54,
+          "mirrored": 3.54022404,
+          "residual": 0.00022403999999998092
+        },
+        {
+          "angle": 30,
+          "source": 4.27,
+          "mirrored": 4.2697964,
+          "residual": -0.00020359999999985945
+        },
+        {
+          "angle": 35,
+          "source": 4.952,
+          "mirrored": 4.9523234799999996,
+          "residual": 0.00032347999999959853
+        },
+        {
+          "angle": 40,
+          "source": 5.56,
+          "mirrored": 5.56002034632,
+          "residual": 2.034632000036396e-05
+        },
+        {
+          "angle": 50,
+          "source": 6.453,
+          "mirrored": 6.45766056,
+          "residual": 0.004660559999999592
+        },
+        {
+          "angle": 60,
+          "source": 7.041,
+          "mirrored": 7.0465470663200005,
+          "residual": 0.005547066320000127
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 60,
+      "displacementTonnes": 7909.636,
+      "initialTrimMetres": -0.619
+    },
+    {
+      "id": "007-68",
+      "maximum": 0.0059749035200002965,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.276,
+          "mirrored": 0.27589090352,
+          "residual": -0.00010909648000001493
+        },
+        {
+          "angle": 5,
+          "source": 0.691,
+          "mirrored": 0.6911600164799999,
+          "residual": 0.00016001647999996926
+        },
+        {
+          "angle": 10,
+          "source": 1.387,
+          "mirrored": 1.3868454635199998,
+          "residual": -0.00015453648000018916
+        },
+        {
+          "angle": 12,
+          "source": 1.667,
+          "mirrored": 1.6667302,
+          "residual": -0.00026980000000009774
+        },
+        {
+          "angle": 15,
+          "source": 2.091,
+          "mirrored": 2.09047348,
+          "residual": -0.0005265200000001968
+        },
+        {
+          "angle": 20,
+          "source": 2.809,
+          "mirrored": 2.8087298564800003,
+          "residual": -0.00027014351999987696
+        },
+        {
+          "angle": 25,
+          "source": 3.544,
+          "mirrored": 3.54436404,
+          "residual": 0.0003640400000000099
+        },
+        {
+          "angle": 30,
+          "source": 4.275,
+          "mirrored": 4.2743964,
+          "residual": -0.0006036000000007036
+        },
+        {
+          "angle": 35,
+          "source": 4.957,
+          "mirrored": 4.95715348,
+          "residual": 0.0001534799999998171
+        },
+        {
+          "angle": 40,
+          "source": 5.565,
+          "mirrored": 5.56505818352,
+          "residual": 5.818351999931082e-05
+        },
+        {
+          "angle": 50,
+          "source": 6.457,
+          "mirrored": 6.46157056,
+          "residual": 0.004570560000000334
+        },
+        {
+          "angle": 60,
+          "source": 7.044,
+          "mirrored": 7.04997490352,
+          "residual": 0.0059749035200002965
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 68,
+      "displacementTonnes": 7909.636,
+      "initialTrimMetres": -0.734
+    },
+    {
+      "id": "007-76",
+      "maximum": 0.006389506699999714,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.276,
+          "mirrored": 0.2760315067,
+          "residual": 3.150669999996136e-05
+        },
+        {
+          "angle": 5,
+          "source": 0.691,
+          "mirrored": 0.6912658433,
+          "residual": 0.00026584330000001266
+        },
+        {
+          "angle": 10,
+          "source": 1.387,
+          "mirrored": 1.3871513066999999,
+          "residual": 0.00015130669999985358
+        },
+        {
+          "angle": 12,
+          "source": 1.668,
+          "mirrored": 1.66720625,
+          "residual": -0.0007937499999999265
+        },
+        {
+          "angle": 15,
+          "source": 2.091,
+          "mirrored": 2.09098315,
+          "residual": -1.685000000017922e-05
+        },
+        {
+          "angle": 20,
+          "source": 2.81,
+          "mirrored": 2.8094265433,
+          "residual": -0.0005734567000001967
+        },
+        {
+          "angle": 25,
+          "source": 3.545,
+          "mirrored": 3.54523495,
+          "residual": 0.0002349500000002891
+        },
+        {
+          "angle": 30,
+          "source": 4.276,
+          "mirrored": 4.2755445,
+          "residual": -0.0004555000000001641
+        },
+        {
+          "angle": 35,
+          "source": 4.959,
+          "mirrored": 4.95864315,
+          "residual": -0.000356849999999298
+        },
+        {
+          "angle": 40,
+          "source": 5.567,
+          "mirrored": 5.5669964066999995,
+          "residual": -3.593300000659383e-06
+        },
+        {
+          "angle": 50,
+          "source": 6.458,
+          "mirrored": 6.4629118,
+          "residual": 0.004911799999999467
+        },
+        {
+          "angle": 60,
+          "source": 7.045,
+          "mirrored": 7.0513895067,
+          "residual": 0.006389506699999714
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 76,
+      "displacementTonnes": 7917.755,
+      "initialTrimMetres": -0.783
+    },
+    {
+      "id": "007-84",
+      "maximum": 0.005538145280000073,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.276,
+          "mirrored": 0.27611414528,
+          "residual": 0.00011414527999997759
+        },
+        {
+          "angle": 5,
+          "source": 0.691,
+          "mirrored": 0.6912839347199999,
+          "residual": 0.00028393471999998976
+        },
+        {
+          "angle": 10,
+          "source": 1.387,
+          "mirrored": 1.3872315852800001,
+          "residual": 0.0002315852800001128
+        },
+        {
+          "angle": 12,
+          "source": 1.668,
+          "mirrored": 1.6674288,
+          "residual": -0.0005711999999999939
+        },
+        {
+          "angle": 15,
+          "source": 2.091,
+          "mirrored": 2.09116352,
+          "residual": 0.0001635199999996395
+        },
+        {
+          "angle": 20,
+          "source": 2.81,
+          "mirrored": 2.80972809472,
+          "residual": -0.00027190527999998437
+        },
+        {
+          "angle": 25,
+          "source": 3.546,
+          "mirrored": 3.54557696,
+          "residual": -0.0004230399999998191
+        },
+        {
+          "angle": 30,
+          "source": 4.276,
+          "mirrored": 4.2761536,
+          "residual": 0.00015359999999997598
+        },
+        {
+          "angle": 35,
+          "source": 4.96,
+          "mirrored": 4.95964352,
+          "residual": -0.0003564799999997703
+        },
+        {
+          "angle": 40,
+          "source": 5.569,
+          "mirrored": 5.56851286528,
+          "residual": -0.0004871347200001708
+        },
+        {
+          "angle": 50,
+          "source": 6.459,
+          "mirrored": 6.4638934400000005,
+          "residual": 0.004893440000000915
+        },
+        {
+          "angle": 60,
+          "source": 7.047,
+          "mirrored": 7.05253814528,
+          "residual": 0.005538145280000073
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 84,
+      "displacementTonnes": 7928.064,
+      "initialTrimMetres": -0.824
+    },
+    {
+      "id": "007-100",
+      "maximum": 0.006611999999999618,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.279,
+          "mirrored": 0.27900701,
+          "residual": 7.0099999999739815e-06
+        },
+        {
+          "angle": 5,
+          "source": 0.699,
+          "mirrored": 0.6985902804199999,
+          "residual": -0.00040971958000002306
+        },
+        {
+          "angle": 10,
+          "source": 1.403,
+          "mirrored": 1.40230905,
+          "residual": -0.000690950000000079
+        },
+        {
+          "angle": 12,
+          "source": 1.686,
+          "mirrored": 1.68625579958,
+          "residual": 0.0002557995800001045
+        },
+        {
+          "angle": 15,
+          "source": 2.115,
+          "mirrored": 2.11483907,
+          "residual": -0.00016093000000028113
+        },
+        {
+          "angle": 20,
+          "source": 2.842,
+          "mirrored": 2.8416181000000003,
+          "residual": -0.00038189999999982405
+        },
+        {
+          "angle": 25,
+          "source": 3.584,
+          "mirrored": 3.58339012,
+          "residual": -0.0006098800000002846
+        },
+        {
+          "angle": 30,
+          "source": 4.316,
+          "mirrored": 4.3158458595799996,
+          "residual": -0.0001541404200002816
+        },
+        {
+          "angle": 35,
+          "source": 4.995,
+          "mirrored": 4.99441907,
+          "residual": -0.000580929999999924
+        },
+        {
+          "angle": 40,
+          "source": 5.597,
+          "mirrored": 5.59699228042,
+          "residual": -7.71958000012063e-06
+        },
+        {
+          "angle": 50,
+          "source": 6.484,
+          "mirrored": 6.48888204,
+          "residual": 0.004882040000000032
+        },
+        {
+          "angle": 60,
+          "source": 7.062,
+          "mirrored": 7.068612,
+          "residual": 0.006611999999999618
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 100,
+      "displacementTonnes": 7775.099,
+      "initialTrimMetres": -1.379
+    },
+    {
+      "id": "007-104",
+      "maximum": 0.006692000000000142,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.281,
+          "mirrored": 0.28104265,
+          "residual": 4.264999999997743e-05
+        },
+        {
+          "angle": 5,
+          "source": 0.704,
+          "mirrored": 0.7037091494,
+          "residual": -0.0002908506000000033
+        },
+        {
+          "angle": 10,
+          "source": 1.413,
+          "mirrored": 1.4127800506,
+          "residual": -0.00021994940000014118
+        },
+        {
+          "angle": 12,
+          "source": 1.699,
+          "mirrored": 1.6986879,
+          "residual": -0.00031210000000014837
+        },
+        {
+          "angle": 15,
+          "source": 2.131,
+          "mirrored": 2.1304892,
+          "residual": -0.0005107999999998114
+        },
+        {
+          "angle": 20,
+          "source": 2.863,
+          "mirrored": 2.8628585,
+          "residual": -0.00014149999999979457
+        },
+        {
+          "angle": 25,
+          "source": 3.609,
+          "mirrored": 3.6085106006,
+          "residual": -0.0004893994000001456
+        },
+        {
+          "angle": 30,
+          "source": 4.342,
+          "mirrored": 4.3416039506,
+          "residual": -0.0003960493999999315
+        },
+        {
+          "angle": 35,
+          "source": 5.016,
+          "mirrored": 5.0156132,
+          "residual": -0.0003868000000002425
+        },
+        {
+          "angle": 40,
+          "source": 5.612,
+          "mirrored": 5.6121051494000005,
+          "residual": 0.00010514940000039275
+        },
+        {
+          "angle": 50,
+          "source": 6.498,
+          "mirrored": 6.50348525,
+          "residual": 0.005485249999999553
+        },
+        {
+          "angle": 60,
+          "source": 7.069,
+          "mirrored": 7.075692,
+          "residual": 0.006692000000000142
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 104,
+      "displacementTonnes": 7652.535,
+      "initialTrimMetres": -1.642
+    },
+    {
+      "id": "007-108",
+      "maximum": 0.0058200330400000055,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.28,
+          "mirrored": 0.27982551,
+          "residual": -0.00017449000000002712
+        },
+        {
+          "angle": 5,
+          "source": 0.701,
+          "mirrored": 0.70044056304,
+          "residual": -0.0005594369599999371
+        },
+        {
+          "angle": 10,
+          "source": 1.407,
+          "mirrored": 1.40623955,
+          "residual": -0.0007604500000000236
+        },
+        {
+          "angle": 12,
+          "source": 1.691,
+          "mirrored": 1.69076906,
+          "residual": -0.0002309400000000128
+        },
+        {
+          "angle": 15,
+          "source": 2.121,
+          "mirrored": 2.12038411304,
+          "residual": -0.0006158869599999228
+        },
+        {
+          "angle": 20,
+          "source": 2.85,
+          "mirrored": 2.8494791000000004,
+          "residual": -0.0005208999999997133
+        },
+        {
+          "angle": 25,
+          "source": 3.593,
+          "mirrored": 3.59283412,
+          "residual": -0.00016587999999995162
+        },
+        {
+          "angle": 30,
+          "source": 4.325,
+          "mirrored": 4.32486057696,
+          "residual": -0.00013942304000025274
+        },
+        {
+          "angle": 35,
+          "source": 5,
+          "mirrored": 4.99942411304,
+          "residual": -0.0005758869600001049
+        },
+        {
+          "angle": 40,
+          "source": 5.598,
+          "mirrored": 5.597816563039999,
+          "residual": -0.0001834369600004493
+        },
+        {
+          "angle": 50,
+          "source": 6.487,
+          "mirrored": 6.491539583040001,
+          "residual": 0.004539583040000572
+        },
+        {
+          "angle": 60,
+          "source": 7.062,
+          "mirrored": 7.06782003304,
+          "residual": 0.0058200330400000055
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 108,
+      "displacementTonnes": 7687.849,
+      "initialTrimMetres": -1.352
+    },
+    {
+      "id": "007-112",
+      "maximum": 0.006068582400000189,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.28,
+          "mirrored": 0.27974720000000003,
+          "residual": -0.00025279999999999747
+        },
+        {
+          "angle": 5,
+          "source": 0.7,
+          "mirrored": 0.6999421824,
+          "residual": -5.7817600000009683e-05
+        },
+        {
+          "angle": 10,
+          "source": 1.405,
+          "mirrored": 1.4046720000000001,
+          "residual": -0.00032799999999988394
+        },
+        {
+          "angle": 12,
+          "source": 1.689,
+          "mirrored": 1.6887312,
+          "residual": -0.00026879999999995796
+        },
+        {
+          "angle": 15,
+          "source": 2.118,
+          "mirrored": 2.1179261823999997,
+          "residual": -7.381760000013671e-05
+        },
+        {
+          "angle": 20,
+          "source": 2.846,
+          "mirrored": 2.846344,
+          "residual": 0.000344000000000122
+        },
+        {
+          "angle": 25,
+          "source": 3.589,
+          "mirrored": 3.5891504,
+          "residual": 0.00015039999999988396
+        },
+        {
+          "angle": 30,
+          "source": 4.32,
+          "mirrored": 4.3199506176,
+          "residual": -4.9382400000297366e-05
+        },
+        {
+          "angle": 35,
+          "source": 4.993,
+          "mirrored": 4.9930461824,
+          "residual": 4.618239999931717e-05
+        },
+        {
+          "angle": 40,
+          "source": 5.59,
+          "mirrored": 5.5898701824,
+          "residual": -0.00012981759999952658
+        },
+        {
+          "angle": 50,
+          "source": 6.482,
+          "mirrored": 6.4861805824,
+          "residual": 0.004180582400000077
+        },
+        {
+          "angle": 60,
+          "source": 7.056,
+          "mirrored": 7.0620685824,
+          "residual": 0.006068582400000189
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 112,
+      "displacementTonnes": 7656.48,
+      "initialTrimMetres": -1.156
+    },
+    {
+      "id": "007-116",
+      "maximum": 0.005511529999999709,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.28,
+          "mirrored": 0.27988447000000005,
+          "residual": -0.00011552999999997482
+        },
+        {
+          "angle": 5,
+          "source": 0.701,
+          "mirrored": 0.70028941,
+          "residual": -0.0007105899999999554
+        },
+        {
+          "angle": 10,
+          "source": 1.406,
+          "mirrored": 1.40530142436,
+          "residual": -0.0006985756399999765
+        },
+        {
+          "angle": 12,
+          "source": 1.69,
+          "mirrored": 1.68925129,
+          "residual": -0.0007487099999998748
+        },
+        {
+          "angle": 15,
+          "source": 2.119,
+          "mirrored": 2.11813576,
+          "residual": -0.0008642400000002937
+        },
+        {
+          "angle": 20,
+          "source": 2.847,
+          "mirrored": 2.84721317,
+          "residual": 0.00021316999999987374
+        },
+        {
+          "angle": 25,
+          "source": 3.59,
+          "mirrored": 3.58973903564,
+          "residual": -0.0002609643599997824
+        },
+        {
+          "angle": 30,
+          "source": 4.319,
+          "mirrored": 4.3190065656400005,
+          "residual": 6.565640000566475e-06
+        },
+        {
+          "angle": 35,
+          "source": 4.987,
+          "mirrored": 4.98749529,
+          "residual": 0.0004952899999999261
+        },
+        {
+          "angle": 40,
+          "source": 5.58,
+          "mirrored": 5.57995294,
+          "residual": -4.705999999998767e-05
+        },
+        {
+          "angle": 50,
+          "source": 6.476,
+          "mirrored": 6.48066095436,
+          "residual": 0.004660954360000247
+        },
+        {
+          "angle": 60,
+          "source": 7.048,
+          "mirrored": 7.05351153,
+          "residual": 0.005511529999999709
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 116,
+      "displacementTonnes": 7569.153,
+      "initialTrimMetres": -0.894
+    },
+    {
+      "id": "007-120",
+      "maximum": 0.006101529999999578,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.279,
+          "mirrored": 0.27820247000000004,
+          "residual": -0.0007975299999999907
+        },
+        {
+          "angle": 5,
+          "source": 0.698,
+          "mirrored": 0.6976074099999999,
+          "residual": -0.000392590000000026
+        },
+        {
+          "angle": 10,
+          "source": 1.399,
+          "mirrored": 1.39883304782,
+          "residual": -0.0001669521800000684
+        },
+        {
+          "angle": 12,
+          "source": 1.682,
+          "mirrored": 1.68127859218,
+          "residual": -0.0007214078199999641
+        },
+        {
+          "angle": 15,
+          "source": 2.109,
+          "mirrored": 2.1084077600000004,
+          "residual": -0.0005922399999995775
+        },
+        {
+          "angle": 20,
+          "source": 2.834,
+          "mirrored": 2.83401517,
+          "residual": 1.5169999999731232e-05
+        },
+        {
+          "angle": 25,
+          "source": 3.574,
+          "mirrored": 3.57328141218,
+          "residual": -0.000718587819999783
+        },
+        {
+          "angle": 30,
+          "source": 4.301,
+          "mirrored": 4.30065494218,
+          "residual": -0.00034505781999971674
+        },
+        {
+          "angle": 35,
+          "source": 4.968,
+          "mirrored": 4.9679332899999995,
+          "residual": -6.671000000046945e-05
+        },
+        {
+          "angle": 40,
+          "source": 5.561,
+          "mirrored": 5.56052963782,
+          "residual": -0.0004703621799997393
+        },
+        {
+          "angle": 50,
+          "source": 6.46,
+          "mirrored": 6.46429318218,
+          "residual": 0.004293182179999633
+        },
+        {
+          "angle": 60,
+          "source": 7.034,
+          "mirrored": 7.040101529999999,
+          "residual": 0.006101529999999578
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 120,
+      "displacementTonnes": 7569.153,
+      "initialTrimMetres": -0.447
+    },
+    {
+      "id": "007-272",
+      "maximum": 0.004263564799999564,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.266,
+          "mirrored": 0.265112,
+          "residual": -0.0008879999999999999
+        },
+        {
+          "angle": 5,
+          "source": 0.664,
+          "mirrored": 0.6637549352000001,
+          "residual": -0.0002450647999999722
+        },
+        {
+          "angle": 10,
+          "source": 1.328,
+          "mirrored": 1.3274029648,
+          "residual": -0.0005970351999999846
+        },
+        {
+          "angle": 12,
+          "source": 1.594,
+          "mirrored": 1.5939789352,
+          "residual": -2.1064800000081263e-05
+        },
+        {
+          "angle": 15,
+          "source": 1.994,
+          "mirrored": 1.9940459000000001,
+          "residual": 4.590000000015415e-05
+        },
+        {
+          "angle": 20,
+          "source": 2.665,
+          "mirrored": 2.6652698999999997,
+          "residual": 0.00026989999999971204
+        },
+        {
+          "angle": 25,
+          "source": 3.348,
+          "mirrored": 3.3473819,
+          "residual": -0.0006181000000000658
+        },
+        {
+          "angle": 30,
+          "source": 4.008,
+          "mirrored": 4.0101023,
+          "residual": 0.0021022999999997793
+        },
+        {
+          "angle": 35,
+          "source": 4.634,
+          "mirrored": 4.6382635648,
+          "residual": 0.004263564799999564
+        },
+        {
+          "angle": 40,
+          "source": 5.241,
+          "mirrored": 5.245196600000001,
+          "residual": 0.004196600000001105
+        },
+        {
+          "angle": 50,
+          "source": 6.23,
+          "mirrored": 6.2338888,
+          "residual": 0.0038887999999994705
+        },
+        {
+          "angle": 60,
+          "source": 6.822,
+          "mirrored": 6.826195735200001,
+          "residual": 0.004195735200000605
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 272,
+      "displacementTonnes": 12759.79,
+      "initialTrimMetres": -0.056
+    },
+    {
+      "id": "007-277",
+      "maximum": 0.0046331678387101505,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.265,
+          "mirrored": 0.2648161290322581,
+          "residual": -0.00018387096774191702
+        },
+        {
+          "angle": 5,
+          "source": 0.663,
+          "mirrored": 0.6624483870967742,
+          "residual": -0.0005516129032258066
+        },
+        {
+          "angle": 10,
+          "source": 1.326,
+          "mirrored": 1.3255320351612905,
+          "residual": -0.00046796483870958916
+        },
+        {
+          "angle": 12,
+          "source": 1.591,
+          "mirrored": 1.5915320351612905,
+          "residual": 0.0005320351612905228
+        },
+        {
+          "angle": 15,
+          "source": 1.991,
+          "mirrored": 1.9913481641935484,
+          "residual": 0.00034816419354832817
+        },
+        {
+          "angle": 20,
+          "source": 2.662,
+          "mirrored": 2.6622472907419357,
+          "residual": 0.0002472907419357462
+        },
+        {
+          "angle": 25,
+          "source": 3.344,
+          "mirrored": 3.3441642932258064,
+          "residual": 0.00016429322580657768
+        },
+        {
+          "angle": 30,
+          "source": 4.009,
+          "mirrored": 4.010807120322581,
+          "residual": 0.0018071203225806798
+        },
+        {
+          "angle": 35,
+          "source": 4.638,
+          "mirrored": 4.641904340322581,
+          "residual": 0.0039043403225811346
+        },
+        {
+          "angle": 40,
+          "source": 5.245,
+          "mirrored": 5.24945295032258,
+          "residual": 0.004452950322580307
+        },
+        {
+          "angle": 50,
+          "source": 6.236,
+          "mirrored": 6.24063316783871,
+          "residual": 0.0046331678387101505
+        },
+        {
+          "angle": 60,
+          "source": 6.828,
+          "mirrored": 6.832553173225806,
+          "residual": 0.004553173225805729
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 277,
+      "displacementTonnes": 12645.139,
+      "initialTrimMetres": 0.114
+    },
+    {
+      "id": "007-282",
+      "maximum": 0.004912400000000261,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.265,
+          "mirrored": 0.265012,
+          "residual": 1.2000000000012001e-05
+        },
+        {
+          "angle": 5,
+          "source": 0.663,
+          "mirrored": 0.6630522568000001,
+          "residual": 5.225680000009447e-05
+        },
+        {
+          "angle": 10,
+          "source": 1.327,
+          "mirrored": 1.3270363431999999,
+          "residual": 3.634319999989977e-05
+        },
+        {
+          "angle": 12,
+          "source": 1.593,
+          "mirrored": 1.5930762568,
+          "residual": 7.625680000011847e-05
+        },
+        {
+          "angle": 15,
+          "source": 1.993,
+          "mirrored": 1.9930766000000002,
+          "residual": 7.660000000009326e-05
+        },
+        {
+          "angle": 20,
+          "source": 2.664,
+          "mirrored": 2.6641006,
+          "residual": 0.00010059999999967317
+        },
+        {
+          "angle": 25,
+          "source": 3.346,
+          "mirrored": 3.3461126,
+          "residual": 0.00011260000000001824
+        },
+        {
+          "angle": 30,
+          "source": 4.009,
+          "mirrored": 4.0110102,
+          "residual": 0.002010199999999962
+        },
+        {
+          "angle": 35,
+          "source": 4.637,
+          "mirrored": 4.6409127432,
+          "residual": 0.00391274320000079
+        },
+        {
+          "angle": 40,
+          "source": 5.243,
+          "mirrored": 5.247912400000001,
+          "residual": 0.004912400000000261
+        },
+        {
+          "angle": 50,
+          "source": 6.234,
+          "mirrored": 6.2378432,
+          "residual": 0.0038432000000003796
+        },
+        {
+          "angle": 60,
+          "source": 6.826,
+          "mirrored": 6.8298474568,
+          "residual": 0.003847456799999982
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 282,
+      "displacementTonnes": 12702.86,
+      "initialTrimMetres": -0.006
+    },
+    {
+      "id": "007-292",
+      "maximum": 0.004703078460000398,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.266,
+          "mirrored": 0.26518200000000003,
+          "residual": -0.0008179999999999854
+        },
+        {
+          "angle": 5,
+          "source": 0.664,
+          "mirrored": 0.66336683846,
+          "residual": -0.0006331615400000379
+        },
+        {
+          "angle": 10,
+          "source": 1.328,
+          "mirrored": 1.32754663154,
+          "residual": -0.0004533684600001031
+        },
+        {
+          "angle": 12,
+          "source": 1.594,
+          "mirrored": 1.59373083846,
+          "residual": -0.00026916154000011794
+        },
+        {
+          "angle": 15,
+          "source": 1.994,
+          "mirrored": 1.9937314700000002,
+          "residual": -0.0002685299999998225
+        },
+        {
+          "angle": 20,
+          "source": 2.665,
+          "mirrored": 2.66509547,
+          "residual": 9.546999999976435e-05
+        },
+        {
+          "angle": 25,
+          "source": 3.347,
+          "mirrored": 3.34727747,
+          "residual": 0.00027746999999989086
+        },
+        {
+          "angle": 30,
+          "source": 4.011,
+          "mirrored": 4.0124455900000005,
+          "residual": 0.0014455900000003297
+        },
+        {
+          "angle": 35,
+          "source": 4.638,
+          "mirrored": 4.64225381154,
+          "residual": 0.00425381153999993
+        },
+        {
+          "angle": 40,
+          "source": 5.245,
+          "mirrored": 5.24925318,
+          "residual": 0.0042531800000000786
+        },
+        {
+          "angle": 50,
+          "source": 6.235,
+          "mirrored": 6.23906424,
+          "residual": 0.004064239999999941
+        },
+        {
+          "angle": 60,
+          "source": 6.826,
+          "mirrored": 6.83070307846,
+          "residual": 0.004703078460000398
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 292,
+      "displacementTonnes": 12700.347,
+      "initialTrimMetres": -0.091
+    },
+    {
+      "id": "007-302",
+      "maximum": 0.004542450019999755,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.266,
+          "mirrored": 0.265366,
+          "residual": -0.0006340000000000234
+        },
+        {
+          "angle": 5,
+          "source": 0.664,
+          "mirrored": 0.66373419998,
+          "residual": -0.00026580001999998437
+        },
+        {
+          "angle": 10,
+          "source": 1.328,
+          "mirrored": 1.32809927002,
+          "residual": 9.92700199999863e-05
+        },
+        {
+          "angle": 12,
+          "source": 1.594,
+          "mirrored": 1.59446619998,
+          "residual": 0.00046619997999997054
+        },
+        {
+          "angle": 15,
+          "source": 1.994,
+          "mirrored": 1.99446747,
+          "residual": 0.00046747000000002537
+        },
+        {
+          "angle": 20,
+          "source": 2.666,
+          "mirrored": 2.66619947,
+          "residual": 0.0001994700000000904
+        },
+        {
+          "angle": 25,
+          "source": 3.349,
+          "mirrored": 3.34856547,
+          "residual": -0.00043453000000015507
+        },
+        {
+          "angle": 30,
+          "source": 4.012,
+          "mirrored": 4.01391759,
+          "residual": 0.0019175900000005797
+        },
+        {
+          "angle": 35,
+          "source": 4.639,
+          "mirrored": 4.64354245002,
+          "residual": 0.004542450019999755
+        },
+        {
+          "angle": 40,
+          "source": 5.246,
+          "mirrored": 5.250541180000001,
+          "residual": 0.004541180000000367
+        },
+        {
+          "angle": 50,
+          "source": 6.236,
+          "mirrored": 6.24016824,
+          "residual": 0.004168240000000267
+        },
+        {
+          "angle": 60,
+          "source": 6.827,
+          "mirrored": 6.83143843998,
+          "residual": 0.004438439980000375
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 302,
+      "displacementTonnes": 12700.347,
+      "initialTrimMetres": -0.183
+    },
+    {
+      "id": "007-312",
+      "maximum": 0.004661519999999975,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.266,
+          "mirrored": 0.265436,
+          "residual": -0.0005640000000000089
+        },
+        {
+          "angle": 5,
+          "source": 0.664,
+          "mirrored": 0.6639087051200001,
+          "residual": -9.12948799999258e-05
+        },
+        {
+          "angle": 10,
+          "source": 1.328,
+          "mirrored": 1.32833637488,
+          "residual": 0.0003363748799998234
+        },
+        {
+          "angle": 12,
+          "source": 1.595,
+          "mirrored": 1.59478070512,
+          "residual": -0.0002192948799999428
+        },
+        {
+          "angle": 15,
+          "source": 1.995,
+          "mirrored": 1.99480908,
+          "residual": -0.00019092000000009435
+        },
+        {
+          "angle": 20,
+          "source": 2.667,
+          "mirrored": 2.66668108,
+          "residual": -0.00031891999999977827
+        },
+        {
+          "angle": 25,
+          "source": 3.349,
+          "mirrored": 3.34911708,
+          "residual": 0.00011707999999988061
+        },
+        {
+          "angle": 30,
+          "source": 4.013,
+          "mirrored": 4.01429276,
+          "residual": 0.001292760000000115
+        },
+        {
+          "angle": 35,
+          "source": 4.64,
+          "mirrored": 4.64368989488,
+          "residual": 0.003689894879999933
+        },
+        {
+          "angle": 40,
+          "source": 5.246,
+          "mirrored": 5.25066152,
+          "residual": 0.004661519999999975
+        },
+        {
+          "angle": 50,
+          "source": 6.236,
+          "mirrored": 6.24009536,
+          "residual": 0.004095359999999992
+        },
+        {
+          "angle": 60,
+          "source": 6.827,
+          "mirrored": 6.8312600651199995,
+          "residual": 0.004260065119999545
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 312,
+      "displacementTonnes": 12706.508,
+      "initialTrimMetres": -0.218
+    },
+    {
+      "id": "007-332",
+      "maximum": 0.004591940000000072,
+      "rows": [
+        {
+          "angle": 0,
+          "source": 0,
+          "mirrored": 0,
+          "residual": 0
+        },
+        {
+          "angle": 2,
+          "source": 0.266,
+          "mirrored": 0.26619240578000003,
+          "residual": 0.00019240578000001562
+        },
+        {
+          "angle": 5,
+          "source": 0.665,
+          "mirrored": 0.66526501,
+          "residual": 0.00026501000000000996
+        },
+        {
+          "angle": 10,
+          "source": 1.331,
+          "mirrored": 1.33082860422,
+          "residual": -0.00017139578000002764
+        },
+        {
+          "angle": 12,
+          "source": 1.597,
+          "mirrored": 1.59720660422,
+          "residual": 0.0002066042199999618
+        },
+        {
+          "angle": 15,
+          "source": 1.998,
+          "mirrored": 1.99789,
+          "residual": -0.0001100000000000545
+        },
+        {
+          "angle": 20,
+          "source": 2.671,
+          "mirrored": 2.67077701,
+          "residual": -0.00022298999999970093
+        },
+        {
+          "angle": 25,
+          "source": 3.355,
+          "mirrored": 3.35453301,
+          "residual": -0.00046699000000005597
+        },
+        {
+          "angle": 30,
+          "source": 4.026,
+          "mirrored": 4.02736596,
+          "residual": 0.0013659600000002214
+        },
+        {
+          "angle": 35,
+          "source": 4.655,
+          "mirrored": 4.659591939999999,
+          "residual": 0.004591939999999184
+        },
+        {
+          "angle": 40,
+          "source": 5.262,
+          "mirrored": 5.26659194,
+          "residual": 0.004591940000000072
+        },
+        {
+          "angle": 50,
+          "source": 6.255,
+          "mirrored": 6.25919592,
+          "residual": 0.004195919999999909
+        },
+        {
+          "angle": 60,
+          "source": 6.841,
+          "mirrored": 6.84557093,
+          "residual": 0.004570929999999862
+        }
+      ],
+      "sourceFile": "007_BALLAST_MANAGEMENT.pdf",
+      "sourceSha256": "013fca762474526507515796566dca77a5fea67bd7874b4ddd0da49ad47967ce",
+      "curvePage": 332,
+      "displacementTonnes": 12550.901,
+      "initialTrimMetres": -0.689
+    }
+  ],
+  "scope": "Symmetric buoyancy estimate only. Reference cases do not establish geometry or flooding symmetry. Ballast-plan residuals remain separate from stability-manual residuals."
+}

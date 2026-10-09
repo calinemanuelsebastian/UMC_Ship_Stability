@@ -1,0 +1,1728 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "reviewed-apples-vessel",
+  "name": "Vectis Castle",
+  "version": "1.0.0",
+  "category": "Local reviewed workbook reference",
+  "description": "Documented hydrostatics from 2.50 to 8.40 m draft and six trim tables, with documented cargo floors and panels and an approximate reconstructed exterior. Upright-only 3D reference; geometry does not supply hydrostatics.",
+  "units": {
+    "length": "m",
+    "mass": "t",
+    "density": "t/m3",
+    "angle": "deg"
+  },
+  "coordinateSystem": {
+    "origin": "Aft perpendicular, centreline, baseline",
+    "longitudinalOriginFromAP": 0,
+    "amidshipsX": 60.85,
+    "xPositive": "forward",
+    "yPositive": "starboard",
+    "zPositive": "up"
+  },
+  "principalDimensions": {
+    "lbp": 121.7,
+    "beam": 17.4,
+    "mouldedDepth": 11.4
+  },
+  "defaultCondition": {
+    "displacementTonnes": 9644.269999999999,
+    "vcg": 6.632273279986,
+    "lcg": 59.07752396021627,
+    "tcg": -0.14769543988295644,
+    "waterDensity": 1.025,
+    "freeSurfaceMomentTransverse": 309.61,
+    "heelDeg": 0,
+    "trimDeg": 0
+  },
+  "resources": [
+    {
+      "id": "reviewed-loading",
+      "kind": "loading.weights",
+      "path": "weights.json",
+      "config": {
+        "fixedWeightIds": [
+          "Calc_G_Cargo-68"
+        ]
+      }
+    },
+    {
+      "id": "reviewed-upright",
+      "kind": "hydrostatics.upright-table",
+      "path": "upright.csv"
+    },
+    {
+      "id": "reviewed-trim",
+      "kind": "hydrostatics.trimmed-table",
+      "path": "trimmed-table.json"
+    },
+    {
+      "id": "reviewed-validation",
+      "kind": "validation.reference-cases",
+      "path": "validation.json"
+    },
+    {
+      "id": "schematic-hull",
+      "kind": "visualization.schematic-cargo-hull",
+      "config": {
+        "source": "001_GENERAL_ARRANGEMENT.pdf principal dimensions; outline is illustrative, not traced or validated"
+      }
+    },
+    {
+      "id": "documented-cargo-visual",
+      "kind": "visualization.gltf",
+      "path": "vectis-castle-apples.gltf",
+      "config": {
+        "displayOnly": true,
+        "exteriorGroup": "Approximate exterior - display only",
+        "panelGroup": "Installed removable tween-deck panels",
+        "waterlineMeshes": [
+          "Approximate hull - Antifouling",
+          "Approximate hull - Green paint band",
+          "Approximate hull - Grey topsides"
+        ],
+        "hatchSurfaces": [
+          {
+            "id": "hatch-tops",
+            "name": "Hatch tops",
+            "xMin": 17.1,
+            "xMax": 107.4,
+            "yMin": -6.9,
+            "yMax": 6.9,
+            "deckZ": 12.53,
+            "regions": [
+              {
+                "xMin": 17.1,
+                "xMax": 82.2,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "xMin": 82.2,
+                "xMax": 96.2,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "xMin": 96.2,
+                "xMax": 107.4,
+                "yMin": -4.14,
+                "yMax": 4.14
+              }
+            ],
+            "supportRegions": [
+              {
+                "xMin": 82.2,
+                "xMax": 96.2,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "xMin": 96.2,
+                "xMax": 107.4,
+                "yMin": -4.14,
+                "yMax": 4.14
+              },
+              {
+                "xMin": 17.1,
+                "xMax": 80.8,
+                "yMin": -6.9,
+                "yMax": 6.9
+              }
+            ],
+            "panels": [
+              {
+                "id": "hatch-1-P1",
+                "xMin": 82.2,
+                "xMax": 88.5,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-1-P2",
+                "xMin": 88.5,
+                "xMax": 94.80000000000001,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-1-P3",
+                "xMin": 94.80000000000001,
+                "xMax": 96.2,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-1-P3",
+                "xMin": 96.2,
+                "xMax": 101.10000000000001,
+                "yMin": -4.14,
+                "yMax": 4.14
+              },
+              {
+                "id": "hatch-1-P4",
+                "xMin": 101.10000000000001,
+                "xMax": 107.4,
+                "yMin": -4.14,
+                "yMax": 4.14
+              },
+              {
+                "id": "hatch-2-P1",
+                "xMin": 17.1,
+                "xMax": 23.47,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P2",
+                "xMin": 23.47,
+                "xMax": 29.84,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P3",
+                "xMin": 29.84,
+                "xMax": 36.21,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P4",
+                "xMin": 36.21,
+                "xMax": 42.58,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P5",
+                "xMin": 42.58,
+                "xMax": 48.949999999999996,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P6",
+                "xMin": 48.949999999999996,
+                "xMax": 55.32,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P7",
+                "xMin": 55.32,
+                "xMax": 61.69,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P8",
+                "xMin": 61.69,
+                "xMax": 68.06,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P9",
+                "xMin": 68.06,
+                "xMax": 74.42999999999999,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P10",
+                "xMin": 74.42999999999999,
+                "xMax": 80.79999999999998,
+                "yMin": -6.9,
+                "yMax": 6.9
+              }
+            ],
+            "sourceIds": [
+              "hatch-1",
+              "hatch-2"
+            ]
+          }
+        ],
+        "hatchSurfaceSource": {
+          "documents": [
+            "001_GENERAL_ARRANGEMENT.pdf",
+            "004_STABILITY_LOADING_MANUAL.pdf, PDF page 18 (opening coordinates)"
+          ],
+          "qualification": "Conservative planning footprints within hatch openings. 12.53 m is the documented opening elevation, used provisionally for cover-top placement; cover thickness and load limits are unverified. Forward taper represented conservatively by two rectangles. Stored tween-deck panels exclude x=17.1–23.4 m from Hatch 2. No approved exterior cargo height inferred.",
+          "panelSeams": "Schematic only: ten equal divisions of Hatch 2 and four of Hatch 1, following the apparent arrangement. Not dimensioned panel boundaries, manufacturer IDs, or a basis for allowable panel reactions."
+        }
+      }
+    },
+    {
+      "id": "documented-tanks",
+      "kind": "loading.tank-catalog",
+      "path": "tanks.json",
+      "config": {
+        "roles": {
+          "Calc_G_Cargo-40": "cargo",
+          "Calc_G_Cargo-41": "cargo",
+          "Calc_G_Cargo-42": "cargo",
+          "Calc_G_Cargo-43": "cargo",
+          "Calc_G_Cargo-44": "cargo",
+          "Calc_G_Cargo-45": "cargo",
+          "Calc_G_Cargo-48": "cargo",
+          "Calc_G_Cargo-49": "cargo",
+          "Calc_G_Cargo-50": "cargo",
+          "Calc_G_Cargo-51": "cargo",
+          "Calc_G_Cargo-52": "cargo",
+          "Calc_G_Cargo-53": "cargo",
+          "Calc_G_Cargo-54": "cargo",
+          "Calc_G_Cargo-55": "cargo",
+          "Calc_G_Cargo-56": "cargo",
+          "Calc_G_Cargo-57": "cargo",
+          "Calc_G_Cargo-58": "cargo",
+          "Calc_G_Cargo-59": "cargo",
+          "Calc_G_Cargo-60": "cargo",
+          "Calc_G_Cargo-61": "cargo",
+          "Calc_G_Cargo-62": "cargo",
+          "Calc_G_Cargo-63": "cargo",
+          "Calc_G_Cargo-64": "cargo",
+          "Calc_G_Cargo-65": "cargo",
+          "Calc_G_Cargo-68": "fixed",
+          "Calc_G_Cargo-69": "hfo",
+          "Calc_G_Cargo-70": "mdo",
+          "Calc_G_Cargo-71": "freshwater",
+          "Calc_G_Cargo-72": "lube",
+          "Calc_G_Cargo-73": "misc",
+          "Calc_G_Cargo-74": "fixed",
+          "Calc_G_Cargo-75": "stores",
+          "Calc_G_Cargo-76": "stores",
+          "Calc_Trim-30": "ballast",
+          "Calc_Trim-31": "ballast",
+          "Calc_Trim-32": "ballast",
+          "Calc_Trim-33": "ballast",
+          "Calc_Trim-34": "ballast",
+          "Calc_Trim-35": "ballast",
+          "Calc_Trim-36": "ballast",
+          "Calc_Trim-37": "ballast",
+          "Calc_Trim-38": "ballast",
+          "Calc_Trim-39": "ballast",
+          "Calc_Trim-40": "ballast",
+          "Calc_Trim-41": "ballast",
+          "Calc_Trim-42": "ballast",
+          "Calc_Trim-43": "ballast"
+        },
+        "fixedWeightIds": [
+          "Calc_G_Cargo-68",
+          "Calc_G_Cargo-74"
+        ],
+        "fixedSource": "004_STABILITY_LOADING_MANUAL.pdf pp5,21,28. Lightship 3660 t (approximate); installed tween-deck panels 269.60 t. Machinery and cranes are not added separately to lightship."
+      }
+    },
+    {
+      "id": "vessel-cargo-configuration",
+      "kind": "loading.cargo-surfaces",
+      "config": {
+        "surfaces": [
+          {
+            "id": "hold-1-lower",
+            "name": "Hold 1 Lower",
+            "deckZ": 1.2,
+            "clearHeight": 5.35,
+            "xMin": 82.2,
+            "xMax": 107.4,
+            "yMin": -6.9,
+            "yMax": 6.9,
+            "regions": [
+              {
+                "xMin": 82.2,
+                "xMax": 96.2,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "xMin": 96.2,
+                "xMax": 107.4,
+                "yMin": -4.14,
+                "yMax": 4.14
+              }
+            ],
+            "sourceIds": [
+              "hold-1-lower-wide",
+              "hold-1-lower-forward",
+              "hold-1-lower"
+            ],
+            "uniformLoad": {
+              "tonnesPerM2": 18,
+              "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+              "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
+            }
+          },
+          {
+            "id": "hold-1-upper",
+            "name": "Hold 1 Upper",
+            "deckZ": 7.23,
+            "clearHeight": 5.27,
+            "xMin": 82.238,
+            "xMax": 107.362,
+            "yMin": -6.87,
+            "yMax": 6.87,
+            "regions": [
+              {
+                "xMin": 82.238,
+                "xMax": 86.013,
+                "yMin": -6.87,
+                "yMax": 6.87
+              },
+              {
+                "xMin": 86.013,
+                "xMax": 91.108,
+                "yMin": -6.87,
+                "yMax": 6.87
+              },
+              {
+                "xMin": 91.108,
+                "xMax": 96.187,
+                "yMin": -6.87,
+                "yMax": 6.87
+              },
+              {
+                "xMin": 96.187,
+                "xMax": 101.797,
+                "yMin": -4.11,
+                "yMax": 4.11
+              },
+              {
+                "xMin": 101.797,
+                "xMax": 107.362,
+                "yMin": -4.11,
+                "yMax": 4.11
+              }
+            ],
+            "sourceIds": [
+              "panel-D",
+              "panel-B-2",
+              "panel-B-1",
+              "panel-C-2",
+              "panel-C-1"
+            ],
+            "uniformLoad": {
+              "tonnesPerM2": 3.5,
+              "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+              "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
+            }
+          },
+          {
+            "id": "hold-2-lower",
+            "name": "Hold 2 Lower",
+            "deckZ": 1.2,
+            "clearHeight": 5.35,
+            "xMin": 23.4,
+            "xMax": 80.8,
+            "yMin": -6.9,
+            "yMax": 6.9,
+            "regions": [
+              {
+                "xMin": 23.4,
+                "xMax": 80.8,
+                "yMin": -6.9,
+                "yMax": 6.9
+              }
+            ],
+            "sourceIds": [
+              "hold-2-lower"
+            ],
+            "uniformLoad": {
+              "tonnesPerM2": 18,
+              "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+              "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
+            }
+          },
+          {
+            "id": "hold-2-upper",
+            "name": "Hold 2 Upper",
+            "deckZ": 7.23,
+            "clearHeight": 5.27,
+            "xMin": 23.453,
+            "xMax": 80.748,
+            "yMin": -6.87,
+            "yMax": 6.87,
+            "regions": [
+              {
+                "xMin": 23.453,
+                "xMax": 29.613,
+                "yMin": -6.87,
+                "yMax": 6.87
+              },
+              {
+                "xMin": 29.613,
+                "xMax": 35.773,
+                "yMin": -6.87,
+                "yMax": 6.87
+              },
+              {
+                "xMin": 35.773,
+                "xMax": 41.933,
+                "yMin": -6.87,
+                "yMax": 6.87
+              },
+              {
+                "xMin": 41.933,
+                "xMax": 48.093,
+                "yMin": -6.87,
+                "yMax": 6.87
+              },
+              {
+                "xMin": 48.093,
+                "xMax": 54.253,
+                "yMin": -6.87,
+                "yMax": 6.87
+              },
+              {
+                "xMin": 54.253,
+                "xMax": 60.413,
+                "yMin": -6.87,
+                "yMax": 6.87
+              },
+              {
+                "xMin": 60.413,
+                "xMax": 65.508,
+                "yMin": -6.87,
+                "yMax": 6.87
+              },
+              {
+                "xMin": 65.508,
+                "xMax": 70.603,
+                "yMin": -6.87,
+                "yMax": 6.87
+              },
+              {
+                "xMin": 70.603,
+                "xMax": 75.698,
+                "yMin": -6.87,
+                "yMax": 6.87
+              },
+              {
+                "xMin": 75.698,
+                "xMax": 80.748,
+                "yMin": -6.87,
+                "yMax": 6.87
+              }
+            ],
+            "sourceIds": [
+              "panel-A-6",
+              "panel-A-5",
+              "panel-A-4",
+              "panel-A-3",
+              "panel-A-2",
+              "panel-A-1",
+              "panel-B-6",
+              "panel-B-5",
+              "panel-B-4",
+              "panel-B-3"
+            ],
+            "uniformLoad": {
+              "tonnesPerM2": 3.5,
+              "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+              "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
+            }
+          },
+          {
+            "id": "hatch-tops",
+            "name": "Hatch tops",
+            "xMin": 17.1,
+            "xMax": 107.4,
+            "yMin": -6.9,
+            "yMax": 6.9,
+            "deckZ": 12.53,
+            "regions": [
+              {
+                "xMin": 17.1,
+                "xMax": 82.2,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "xMin": 82.2,
+                "xMax": 96.2,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "xMin": 96.2,
+                "xMax": 107.4,
+                "yMin": -4.14,
+                "yMax": 4.14
+              }
+            ],
+            "supportRegions": [
+              {
+                "xMin": 82.2,
+                "xMax": 96.2,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "xMin": 96.2,
+                "xMax": 107.4,
+                "yMin": -4.14,
+                "yMax": 4.14
+              },
+              {
+                "xMin": 17.1,
+                "xMax": 80.8,
+                "yMin": -6.9,
+                "yMax": 6.9
+              }
+            ],
+            "panels": [
+              {
+                "id": "hatch-1-P1",
+                "xMin": 82.2,
+                "xMax": 88.5,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-1-P2",
+                "xMin": 88.5,
+                "xMax": 94.80000000000001,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-1-P3",
+                "xMin": 94.80000000000001,
+                "xMax": 96.2,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-1-P3",
+                "xMin": 96.2,
+                "xMax": 101.10000000000001,
+                "yMin": -4.14,
+                "yMax": 4.14
+              },
+              {
+                "id": "hatch-1-P4",
+                "xMin": 101.10000000000001,
+                "xMax": 107.4,
+                "yMin": -4.14,
+                "yMax": 4.14
+              },
+              {
+                "id": "hatch-2-P1",
+                "xMin": 17.1,
+                "xMax": 23.47,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P2",
+                "xMin": 23.47,
+                "xMax": 29.84,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P3",
+                "xMin": 29.84,
+                "xMax": 36.21,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P4",
+                "xMin": 36.21,
+                "xMax": 42.58,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P5",
+                "xMin": 42.58,
+                "xMax": 48.949999999999996,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P6",
+                "xMin": 48.949999999999996,
+                "xMax": 55.32,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P7",
+                "xMin": 55.32,
+                "xMax": 61.69,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P8",
+                "xMin": 61.69,
+                "xMax": 68.06,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P9",
+                "xMin": 68.06,
+                "xMax": 74.42999999999999,
+                "yMin": -6.9,
+                "yMax": 6.9
+              },
+              {
+                "id": "hatch-2-P10",
+                "xMin": 74.42999999999999,
+                "xMax": 80.79999999999998,
+                "yMin": -6.9,
+                "yMax": 6.9
+              }
+            ],
+            "sourceIds": [
+              "hatch-1",
+              "hatch-2"
+            ],
+            "uniformLoad": {
+              "tonnesPerM2": 2.5,
+              "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+              "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
+            }
+          }
+        ],
+        "byMode": {
+          "installed": [
+            {
+              "id": "hold-1-lower",
+              "name": "Hold 1 Lower",
+              "deckZ": 1.2,
+              "clearHeight": 5.35,
+              "xMin": 82.2,
+              "xMax": 107.4,
+              "yMin": -6.9,
+              "yMax": 6.9,
+              "regions": [
+                {
+                  "xMin": 82.2,
+                  "xMax": 96.2,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "xMin": 96.2,
+                  "xMax": 107.4,
+                  "yMin": -4.14,
+                  "yMax": 4.14
+                }
+              ],
+              "sourceIds": [
+                "hold-1-lower-wide",
+                "hold-1-lower-forward",
+                "hold-1-lower"
+              ],
+              "uniformLoad": {
+                "tonnesPerM2": 18,
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
+              }
+            },
+            {
+              "id": "hold-1-upper",
+              "name": "Hold 1 Upper",
+              "deckZ": 7.23,
+              "clearHeight": 5.27,
+              "xMin": 82.238,
+              "xMax": 107.362,
+              "yMin": -6.87,
+              "yMax": 6.87,
+              "regions": [
+                {
+                  "xMin": 82.238,
+                  "xMax": 86.013,
+                  "yMin": -6.87,
+                  "yMax": 6.87
+                },
+                {
+                  "xMin": 86.013,
+                  "xMax": 91.108,
+                  "yMin": -6.87,
+                  "yMax": 6.87
+                },
+                {
+                  "xMin": 91.108,
+                  "xMax": 96.187,
+                  "yMin": -6.87,
+                  "yMax": 6.87
+                },
+                {
+                  "xMin": 96.187,
+                  "xMax": 101.797,
+                  "yMin": -4.11,
+                  "yMax": 4.11
+                },
+                {
+                  "xMin": 101.797,
+                  "xMax": 107.362,
+                  "yMin": -4.11,
+                  "yMax": 4.11
+                }
+              ],
+              "sourceIds": [
+                "panel-D",
+                "panel-B-2",
+                "panel-B-1",
+                "panel-C-2",
+                "panel-C-1"
+              ],
+              "uniformLoad": {
+                "tonnesPerM2": 3.5,
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
+              }
+            },
+            {
+              "id": "hold-2-lower",
+              "name": "Hold 2 Lower",
+              "deckZ": 1.2,
+              "clearHeight": 5.35,
+              "xMin": 23.4,
+              "xMax": 80.8,
+              "yMin": -6.9,
+              "yMax": 6.9,
+              "regions": [
+                {
+                  "xMin": 23.4,
+                  "xMax": 80.8,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                }
+              ],
+              "sourceIds": [
+                "hold-2-lower"
+              ],
+              "uniformLoad": {
+                "tonnesPerM2": 18,
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
+              }
+            },
+            {
+              "id": "hold-2-upper",
+              "name": "Hold 2 Upper",
+              "deckZ": 7.23,
+              "clearHeight": 5.27,
+              "xMin": 23.453,
+              "xMax": 80.748,
+              "yMin": -6.87,
+              "yMax": 6.87,
+              "regions": [
+                {
+                  "xMin": 23.453,
+                  "xMax": 29.613,
+                  "yMin": -6.87,
+                  "yMax": 6.87
+                },
+                {
+                  "xMin": 29.613,
+                  "xMax": 35.773,
+                  "yMin": -6.87,
+                  "yMax": 6.87
+                },
+                {
+                  "xMin": 35.773,
+                  "xMax": 41.933,
+                  "yMin": -6.87,
+                  "yMax": 6.87
+                },
+                {
+                  "xMin": 41.933,
+                  "xMax": 48.093,
+                  "yMin": -6.87,
+                  "yMax": 6.87
+                },
+                {
+                  "xMin": 48.093,
+                  "xMax": 54.253,
+                  "yMin": -6.87,
+                  "yMax": 6.87
+                },
+                {
+                  "xMin": 54.253,
+                  "xMax": 60.413,
+                  "yMin": -6.87,
+                  "yMax": 6.87
+                },
+                {
+                  "xMin": 60.413,
+                  "xMax": 65.508,
+                  "yMin": -6.87,
+                  "yMax": 6.87
+                },
+                {
+                  "xMin": 65.508,
+                  "xMax": 70.603,
+                  "yMin": -6.87,
+                  "yMax": 6.87
+                },
+                {
+                  "xMin": 70.603,
+                  "xMax": 75.698,
+                  "yMin": -6.87,
+                  "yMax": 6.87
+                },
+                {
+                  "xMin": 75.698,
+                  "xMax": 80.748,
+                  "yMin": -6.87,
+                  "yMax": 6.87
+                }
+              ],
+              "sourceIds": [
+                "panel-A-6",
+                "panel-A-5",
+                "panel-A-4",
+                "panel-A-3",
+                "panel-A-2",
+                "panel-A-1",
+                "panel-B-6",
+                "panel-B-5",
+                "panel-B-4",
+                "panel-B-3"
+              ],
+              "uniformLoad": {
+                "tonnesPerM2": 3.5,
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
+              }
+            },
+            {
+              "id": "hatch-tops",
+              "name": "Hatch tops",
+              "xMin": 17.1,
+              "xMax": 107.4,
+              "yMin": -6.9,
+              "yMax": 6.9,
+              "deckZ": 12.53,
+              "regions": [
+                {
+                  "xMin": 17.1,
+                  "xMax": 82.2,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "xMin": 82.2,
+                  "xMax": 96.2,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "xMin": 96.2,
+                  "xMax": 107.4,
+                  "yMin": -4.14,
+                  "yMax": 4.14
+                }
+              ],
+              "supportRegions": [
+                {
+                  "xMin": 82.2,
+                  "xMax": 96.2,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "xMin": 96.2,
+                  "xMax": 107.4,
+                  "yMin": -4.14,
+                  "yMax": 4.14
+                },
+                {
+                  "xMin": 17.1,
+                  "xMax": 80.8,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                }
+              ],
+              "panels": [
+                {
+                  "id": "hatch-1-P1",
+                  "xMin": 82.2,
+                  "xMax": 88.5,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-1-P2",
+                  "xMin": 88.5,
+                  "xMax": 94.80000000000001,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-1-P3",
+                  "xMin": 94.80000000000001,
+                  "xMax": 96.2,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-1-P3",
+                  "xMin": 96.2,
+                  "xMax": 101.10000000000001,
+                  "yMin": -4.14,
+                  "yMax": 4.14
+                },
+                {
+                  "id": "hatch-1-P4",
+                  "xMin": 101.10000000000001,
+                  "xMax": 107.4,
+                  "yMin": -4.14,
+                  "yMax": 4.14
+                },
+                {
+                  "id": "hatch-2-P1",
+                  "xMin": 17.1,
+                  "xMax": 23.47,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P2",
+                  "xMin": 23.47,
+                  "xMax": 29.84,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P3",
+                  "xMin": 29.84,
+                  "xMax": 36.21,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P4",
+                  "xMin": 36.21,
+                  "xMax": 42.58,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P5",
+                  "xMin": 42.58,
+                  "xMax": 48.949999999999996,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P6",
+                  "xMin": 48.949999999999996,
+                  "xMax": 55.32,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P7",
+                  "xMin": 55.32,
+                  "xMax": 61.69,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P8",
+                  "xMin": 61.69,
+                  "xMax": 68.06,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P9",
+                  "xMin": 68.06,
+                  "xMax": 74.42999999999999,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P10",
+                  "xMin": 74.42999999999999,
+                  "xMax": 80.79999999999998,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                }
+              ],
+              "sourceIds": [
+                "hatch-1",
+                "hatch-2"
+              ],
+              "uniformLoad": {
+                "tonnesPerM2": 2.5,
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
+              }
+            }
+          ],
+          "stored": [
+            {
+              "id": "hold-1",
+              "name": "Hold 1",
+              "deckZ": 1.2,
+              "clearHeight": 11,
+              "xMin": 82.2,
+              "xMax": 107.4,
+              "yMin": -6.9,
+              "yMax": 6.9,
+              "regions": [
+                {
+                  "xMin": 82.2,
+                  "xMax": 96.2,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "xMin": 96.2,
+                  "xMax": 107.4,
+                  "yMin": -4.14,
+                  "yMax": 4.14
+                }
+              ],
+              "sourceIds": [
+                "hold-1-lower-wide",
+                "hold-1-lower-forward",
+                "hold-1-lower"
+              ],
+              "uniformLoad": {
+                "tonnesPerM2": 18,
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
+              }
+            },
+            {
+              "id": "hold-2",
+              "name": "Hold 2",
+              "deckZ": 1.2,
+              "clearHeight": 11,
+              "xMin": 23.4,
+              "xMax": 80.8,
+              "yMin": -6.9,
+              "yMax": 6.9,
+              "regions": [
+                {
+                  "xMin": 23.4,
+                  "xMax": 80.8,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                }
+              ],
+              "sourceIds": [
+                "hold-2-lower"
+              ],
+              "uniformLoad": {
+                "tonnesPerM2": 18,
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
+              }
+            },
+            {
+              "id": "hatch-tops",
+              "name": "Hatch tops",
+              "xMin": 23.4,
+              "xMax": 107.4,
+              "yMin": -6.9,
+              "yMax": 6.9,
+              "deckZ": 12.53,
+              "regions": [
+                {
+                  "xMin": 23.4,
+                  "xMax": 82.2,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "xMin": 82.2,
+                  "xMax": 96.2,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "xMin": 96.2,
+                  "xMax": 107.4,
+                  "yMin": -4.14,
+                  "yMax": 4.14
+                }
+              ],
+              "supportRegions": [
+                {
+                  "xMin": 82.2,
+                  "xMax": 96.2,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "xMin": 96.2,
+                  "xMax": 107.4,
+                  "yMin": -4.14,
+                  "yMax": 4.14
+                },
+                {
+                  "xMin": 23.4,
+                  "xMax": 80.8,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                }
+              ],
+              "panels": [
+                {
+                  "id": "hatch-1-P1",
+                  "xMin": 82.2,
+                  "xMax": 88.5,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-1-P2",
+                  "xMin": 88.5,
+                  "xMax": 94.80000000000001,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-1-P3",
+                  "xMin": 94.80000000000001,
+                  "xMax": 96.2,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-1-P3",
+                  "xMin": 96.2,
+                  "xMax": 101.10000000000001,
+                  "yMin": -4.14,
+                  "yMax": 4.14
+                },
+                {
+                  "id": "hatch-1-P4",
+                  "xMin": 101.10000000000001,
+                  "xMax": 107.4,
+                  "yMin": -4.14,
+                  "yMax": 4.14
+                },
+                {
+                  "id": "hatch-2-P1",
+                  "xMin": 23.4,
+                  "xMax": 23.47,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P2",
+                  "xMin": 23.47,
+                  "xMax": 29.84,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P3",
+                  "xMin": 29.84,
+                  "xMax": 36.21,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P4",
+                  "xMin": 36.21,
+                  "xMax": 42.58,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P5",
+                  "xMin": 42.58,
+                  "xMax": 48.949999999999996,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P6",
+                  "xMin": 48.949999999999996,
+                  "xMax": 55.32,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P7",
+                  "xMin": 55.32,
+                  "xMax": 61.69,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P8",
+                  "xMin": 61.69,
+                  "xMax": 68.06,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P9",
+                  "xMin": 68.06,
+                  "xMax": 74.42999999999999,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P10",
+                  "xMin": 74.42999999999999,
+                  "xMax": 80.79999999999998,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                }
+              ],
+              "sourceIds": [
+                "hatch-1",
+                "hatch-2"
+              ],
+              "uniformLoad": {
+                "tonnesPerM2": 2.5,
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
+              }
+            }
+          ],
+          "ashore": [
+            {
+              "id": "hold-1",
+              "name": "Hold 1",
+              "deckZ": 1.2,
+              "clearHeight": 11,
+              "xMin": 82.2,
+              "xMax": 107.4,
+              "yMin": -6.9,
+              "yMax": 6.9,
+              "regions": [
+                {
+                  "xMin": 82.2,
+                  "xMax": 96.2,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "xMin": 96.2,
+                  "xMax": 107.4,
+                  "yMin": -4.14,
+                  "yMax": 4.14
+                }
+              ],
+              "sourceIds": [
+                "hold-1-lower-wide",
+                "hold-1-lower-forward",
+                "hold-1-lower"
+              ],
+              "uniformLoad": {
+                "tonnesPerM2": 18,
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
+              }
+            },
+            {
+              "id": "hold-2",
+              "name": "Hold 2",
+              "deckZ": 1.2,
+              "clearHeight": 11,
+              "xMin": 23.4,
+              "xMax": 80.8,
+              "yMin": -6.9,
+              "yMax": 6.9,
+              "regions": [
+                {
+                  "xMin": 23.4,
+                  "xMax": 80.8,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                }
+              ],
+              "sourceIds": [
+                "hold-2-lower"
+              ],
+              "uniformLoad": {
+                "tonnesPerM2": 18,
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
+              }
+            },
+            {
+              "id": "hatch-tops",
+              "name": "Hatch tops",
+              "xMin": 23.4,
+              "xMax": 107.4,
+              "yMin": -6.9,
+              "yMax": 6.9,
+              "deckZ": 12.53,
+              "regions": [
+                {
+                  "xMin": 23.4,
+                  "xMax": 82.2,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "xMin": 82.2,
+                  "xMax": 96.2,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "xMin": 96.2,
+                  "xMax": 107.4,
+                  "yMin": -4.14,
+                  "yMax": 4.14
+                }
+              ],
+              "supportRegions": [
+                {
+                  "xMin": 82.2,
+                  "xMax": 96.2,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "xMin": 96.2,
+                  "xMax": 107.4,
+                  "yMin": -4.14,
+                  "yMax": 4.14
+                },
+                {
+                  "xMin": 23.4,
+                  "xMax": 80.8,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                }
+              ],
+              "panels": [
+                {
+                  "id": "hatch-1-P1",
+                  "xMin": 82.2,
+                  "xMax": 88.5,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-1-P2",
+                  "xMin": 88.5,
+                  "xMax": 94.80000000000001,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-1-P3",
+                  "xMin": 94.80000000000001,
+                  "xMax": 96.2,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-1-P3",
+                  "xMin": 96.2,
+                  "xMax": 101.10000000000001,
+                  "yMin": -4.14,
+                  "yMax": 4.14
+                },
+                {
+                  "id": "hatch-1-P4",
+                  "xMin": 101.10000000000001,
+                  "xMax": 107.4,
+                  "yMin": -4.14,
+                  "yMax": 4.14
+                },
+                {
+                  "id": "hatch-2-P1",
+                  "xMin": 23.4,
+                  "xMax": 23.47,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P2",
+                  "xMin": 23.47,
+                  "xMax": 29.84,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P3",
+                  "xMin": 29.84,
+                  "xMax": 36.21,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P4",
+                  "xMin": 36.21,
+                  "xMax": 42.58,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P5",
+                  "xMin": 42.58,
+                  "xMax": 48.949999999999996,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P6",
+                  "xMin": 48.949999999999996,
+                  "xMax": 55.32,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P7",
+                  "xMin": 55.32,
+                  "xMax": 61.69,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P8",
+                  "xMin": 61.69,
+                  "xMax": 68.06,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P9",
+                  "xMin": 68.06,
+                  "xMax": 74.42999999999999,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                },
+                {
+                  "id": "hatch-2-P10",
+                  "xMin": 74.42999999999999,
+                  "xMax": 80.79999999999998,
+                  "yMin": -6.9,
+                  "yMax": 6.9
+                }
+              ],
+              "sourceIds": [
+                "hatch-1",
+                "hatch-2"
+              ],
+              "uniformLoad": {
+                "tonnesPerM2": 2.5,
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
+              }
+            }
+          ]
+        },
+        "deck": {
+          "source": "004_STABILITY_LOADING_MANUAL.pdf PDF p30 (printed 8.5), Store Position 4; documented panel aggregate centres.",
+          "storedLabel": "Stored onboard — position 4",
+          "weights": [
+            {
+              "id": "Calc_G_Cargo-74",
+              "installed": {
+                "massTonnes": 269.6,
+                "lcg": 63.24,
+                "vcg": 6.97,
+                "tcg": 0
+              },
+              "stored": {
+                "massTonnes": 269.6,
+                "lcg": 16.93,
+                "vcg": 12.838,
+                "tcg": 0
+              },
+              "ashore": {
+                "massTonnes": 0,
+                "lcg": 63.24,
+                "vcg": 6.97,
+                "tcg": 0
+              }
+            }
+          ],
+          "storedPanels": [
+            {
+              "id": "A-6",
+              "x": 20.201,
+              "z": 7.576,
+              "stack": "aft",
+              "y": 0
+            },
+            {
+              "id": "A-5",
+              "x": 20.201,
+              "z": 8.256,
+              "stack": "aft",
+              "y": 0
+            },
+            {
+              "id": "A-4",
+              "x": 20.201,
+              "z": 8.936,
+              "stack": "aft",
+              "y": 0
+            },
+            {
+              "id": "A-3",
+              "x": 20.201,
+              "z": 9.616,
+              "stack": "aft",
+              "y": 0
+            },
+            {
+              "id": "A-2",
+              "x": 20.201,
+              "z": 10.296,
+              "stack": "aft",
+              "y": 0
+            },
+            {
+              "id": "C-2",
+              "x": 20.201,
+              "z": 10.976,
+              "stack": "aft",
+              "y": 0
+            },
+            {
+              "id": "C-1",
+              "x": 20.201,
+              "z": 11.656,
+              "stack": "aft",
+              "y": 0
+            },
+            {
+              "id": "B-6",
+              "x": 13.965,
+              "z": 13.725,
+              "stack": "deck",
+              "y": 0
+            },
+            {
+              "id": "A-1",
+              "x": 13.965,
+              "z": 14.405,
+              "stack": "deck",
+              "y": 0
+            },
+            {
+              "id": "B-5",
+              "x": 13.965,
+              "z": 15.085,
+              "stack": "deck",
+              "y": 0
+            },
+            {
+              "id": "B-4",
+              "x": 13.965,
+              "z": 15.765,
+              "stack": "deck",
+              "y": 0
+            },
+            {
+              "id": "B-3",
+              "x": 13.965,
+              "z": 16.445,
+              "stack": "deck",
+              "y": 0
+            },
+            {
+              "id": "B-2",
+              "x": 13.965,
+              "z": 17.125,
+              "stack": "deck",
+              "y": 0
+            },
+            {
+              "id": "B-1",
+              "x": 13.965,
+              "z": 17.805,
+              "stack": "deck",
+              "y": 0
+            },
+            {
+              "id": "D",
+              "x": 13.965,
+              "z": 18.485,
+              "stack": "deck",
+              "y": 0
+            }
+          ],
+          "notes": [
+            "Installed or stored onboard: panel mass stays 269.60 t. Storage position 4 changes panel LCG to 16.930 m and KG to 12.838 m. Existing cargo is not moved automatically.",
+            "Installed decks provide upper and lower areas for each hold. Stored decks provide two full-height holds. The stepped outlines and aft storage exclusion are retained."
+          ]
+        }
+      }
+    },
+    {
+      "id": "documented-cross-curves",
+      "kind": "stability.constant-lcb-cross-curves",
+      "path": "cross-curves-constant-lcb.json",
+      "label": "Constant-LCB cross curves",
+      "description": "Documented starboard ordinates; interpolate displacement and initial trim, allowing source constant-LCB trim changes during heel. No heeled draft or trim path is supplied.",
+      "config": {
+        "referenceWaterDensity": 1.025,
+        "referenceWaterDensitySource": "Manual seawater convention, PDF page 7; no density rescaling.",
+        "portSymmetryEvidence": "vectis-source-audit-v1"
+      }
+    },
+    {
+      "id": "documented-cross-curves-csv",
+      "kind": "documentation.cross-curves-csv",
+      "path": "cross-curves-constant-lcb.csv",
+      "label": "Cross-curve source ordinates (CSV)"
+    },
+    {
+      "id": "assessment-basis",
+      "kind": "stability.assessment-basis",
+      "path": "assessment-basis.json",
+      "label": "Documented stability assessment basis",
+      "description": "Vessel-specific criteria and class annotations; applicability review, no compliance result."
+    },
+    {
+      "id": "annotated-kg",
+      "kind": "documentation.annotated-kg",
+      "path": "annotated-kg-limits.json",
+      "label": "Annotated limiting KG tables"
+    },
+    {
+      "id": "annotated-kg-csv",
+      "kind": "documentation.annotated-kg-csv",
+      "path": "annotated-kg-limits.csv",
+      "label": "Annotated limiting KG CSV"
+    },
+    {
+      "id": "downflooding",
+      "kind": "stability.downflooding-samples",
+      "path": "downflooding-samples.json",
+      "label": "Preliminary downflooding samples"
+    },
+    {
+      "id": "downflooding-csv",
+      "kind": "documentation.downflooding-csv",
+      "path": "downflooding-samples.csv",
+      "label": "Downflooding CSV"
+    },
+    {
+      "id": "wind-profiles",
+      "kind": "stability.wind-profiles",
+      "path": "wind-profiles.json",
+      "label": "Documented wind profiles"
+    },
+    {
+      "id": "port-symmetry-audit",
+      "kind": "documentation.port-symmetry-audit",
+      "path": "port-symmetry-audit.json",
+      "label": "Port symmetry comparison — original source cases"
+    }
+  ],
+  "reviewNotes": {
+    "messages": [
+      "LCB and LCF at 5.80 m and 5.85 m were corrected to the manual, PDF page 52. Recheck calculations using these upright values, especially longitudinal balance and draft distribution. Original values and correction notes are retained in the table file.",
+      "The original trim reference rows agree with the manual. Expanded table coverage is not a permitted loading limit."
+    ],
+    "resourceIds": [
+      "reviewed-upright",
+      "reviewed-trim"
+    ]
+  }
+}

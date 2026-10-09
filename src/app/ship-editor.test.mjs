@@ -1,0 +1,12 @@
+import {test,after} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createServer} from '../../scripts/test-server.mjs';
+const server=await createServer({server:{middlewareMode:true},appType:'custom'});after(()=>server.close());
+const {buildEditorPackage}=await server.ssrLoadModule('/src/app/ship-editor.ts');
+const {inspectShipPackage}=await server.ssrLoadModule('/src/app/inspect-ship-package.ts');
+const details={name:'Test ship',id:'test-ship',lbp:'100',beam:'20',depth:'8',draft:'3',density:'1.025',mass:'4000',lcg:'50',vcg:'4',tcg:'0'};
+const attachments=[{kind:'hydrostatics.upright-table',path:'upright.csv',file:{encoding:'utf8',data:await readFile('public/built-in-ship-models/training-pontoon-100x20/hydrostatics/upright-hydrostatics.csv','utf8')}}];
+test('guided package produces one fixed lightship and explicit cargo surface',async()=>{const bundle=buildEditorPackage(details,[{name:'Hold 1',xMin:'20',xMax:'80',yMin:'-8',yMax:'8',deckZ:'2',clearHeight:'5'}],attachments);const result=await inspectShipPackage(bundle);assert.equal(result.fixedCount,1);assert.equal(bundle.manifest.resources.find(r=>r.kind==='loading.cargo-surfaces').config.surfaces[0].clearHeight,5);assert.equal(bundle.manifest.coordinateSystem.longitudinalOriginFromAP,0);assert.ok(!bundle.manifest.resources.some(r=>r.kind==='visualization.box-hull'));});
+test('missing tables and blank or negative mass cannot produce a package',()=>{assert.throws(()=>buildEditorPackage(details,[],[]));for(const mass of ['','-1','NaN'])assert.throws(()=>buildEditorPackage({...details,mass},[],attachments));});
+test('invalid hold geometry and colliding attachment names are rejected',()=>{assert.throws(()=>buildEditorPackage(details,[{name:'Hold',xMin:'20',xMax:'10',yMin:'-8',yMax:'8',deckZ:'2',clearHeight:'5'}],attachments));assert.throws(()=>buildEditorPackage(details,[],[...attachments,{kind:'',path:'editor-lightship.json',file:{encoding:'utf8',data:'[]'}}]));});
