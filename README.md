@@ -1,5 +1,7 @@
 # UMCsShipStabilityApp
 
+**Demo release: v0.1.0-beta.1.** [Open simulator](https://calinemanuelsebastian.github.io/UMC_Ship_Stability/) · [Release notes and demo walkthrough](docs/releases/v0.1.0-beta.1.md). Teaching software; numerical checks do not constitute an approved loading instrument or an overall IMO compliance certificate.
+
 Local React + TypeScript hydrostatics teaching simulator. Load a model package to explore upright hydrostatics, loading conditions, KN-based stability curves, small-angle free roll and reference-case validation. Solvers are selected by resource kind. The Theory tab explains the implemented calculations and their limits.
 
 ## Run locally
@@ -47,7 +49,7 @@ Select a model, open Loading Condition, and edit or add weights with mass (t) an
 
 The optional `loading.weights` manifest resource points to a JSON array of `{ id, name, massTonnes, lcg, vcg, tcg }`. IDs must be unique. With no resource, the editor starts empty. The training package supplies synthetic lightship/cargo data; the reviewed vessel source data stays in `validation-references/` and its declared package resources are included in production builds.
 
-All calculation tabs use the selected condition source. Weight-based loading updates mass, physical centres and transverse FSM automatically after valid edits. Manual scenarios retain separate inputs; changing draft resolves displacement for every calculation tab. Water density is shared throughout. Changes settle after 300 ms; incomplete or invalid shared inputs hide results. Validation retains its fixed reference cases. Weight edits survive tab changes but reset on reload or model changes.
+All calculation tabs use the selected condition source. Weight-based loading updates mass, physical centres and transverse FSM automatically after valid edits. Manual scenarios retain separate inputs; changing draft resolves displacement for every calculation tab. Water density is shared throughout. Changes settle after 300 ms; incomplete or invalid shared inputs hide results. Validation retains its fixed reference cases. Weight edits survive tab changes; after reload, use the recovery controls to restore a saved checkpoint.
 
 Run `npm run test:loading` for ten checks, including signed moments, zero/invalid masses, overflow and an independent constituent-weight reconstruction of the reviewed workbook's final condition. The workbook comparison permits 0.000001 m centre differences because the spreadsheet rounds subtotal moments whereas the solver retains precision.
 
@@ -71,7 +73,7 @@ Each loading weight may include `freeSurfaceMomentTransverse` in t·m. Omission 
 
 The generic hydrostatic entry point applies the correction after the selected solver returns its actual displacement. It exposes `gmTransverseCorrected = gmTransverse - correction`, preserving the existing uncorrected GM, physical centre of gravity, table values, and longitudinal GM. FSM already includes the **tank liquid** density: do not multiply it by sea-water density again. A corrected non-positive GM produces a warning. Missing positive displacement leaves the correction unavailable; missing KM leaves corrected GM unavailable.
 
-All calculation tabs use the selected condition source. Weight-based loading updates mass, physical centres and transverse FSM automatically after valid edits. Manual scenarios retain separate inputs; changing draft resolves displacement for every calculation tab. Water density is shared throughout. Changes settle after 300 ms; incomplete or invalid shared inputs hide results. Validation retains its fixed reference cases. Weight edits survive tab changes but reset on reload or model changes.
+All calculation tabs use the selected condition source. Weight-based loading updates mass, physical centres and transverse FSM automatically after valid edits. Manual scenarios retain separate inputs; changing draft resolves displacement for every calculation tab. Water density is shared throughout. Changes settle after 300 ms; incomplete or invalid shared inputs hide results. Validation retains its fixed reference cases. Weight edits survive tab changes; after reload, use the recovery controls to restore a saved checkpoint.
 
 This is an initial transverse-GM calculation, not a GZ, tank-fill, longitudinal free-surface or regulatory-compliance calculation. Formula reference: [US Coast Guard NVIC 3-69](https://www.dco.uscg.mil/Portals/9/DCO%20Documents/5p/5ps/NVIC/1960s/n3-69.pdf), which expresses the GM reduction as free-surface moment divided by total displacement.
 
@@ -89,7 +91,7 @@ Run `npm run test:validation` to check the sixteen package cases and failure han
 
 ## Stability Curves
 
-All calculation tabs use the selected condition source. Weight-based loading updates mass, physical centres and transverse FSM automatically after valid edits. Manual scenarios retain separate inputs; changing draft resolves displacement for every calculation tab. Water density is shared throughout. Changes settle after 300 ms; incomplete or invalid shared inputs hide results. Validation retains its fixed reference cases. Weight edits survive tab changes but reset on reload or model changes.
+All calculation tabs use the selected condition source. Weight-based loading updates mass, physical centres and transverse FSM automatically after valid edits. Manual scenarios retain separate inputs; changing draft resolves displacement for every calculation tab. Water density is shared throughout. Changes settle after 300 ms; incomplete or invalid shared inputs hide results. Validation retains its fixed reference cases. Weight edits survive tab changes; after reload, use the recovery controls to restore a saved checkpoint.
 
 Declare a `stability.cross-curves` CSV resource with `config: { "trimDeg": 0, "heelPositive": "starboard", "knReference": "baseline" }`. Its required long-format columns are `volume,heelDeg,kn`, in m³, degrees and metres. Supply the same complete angle grid for each positive volume, including zero heel and at least one other angle. Duplicate pairs, missing/invalid numbers, inconsistent grids and angles beyond ±180° are rejected. The current coordinate convention requires baseline-referenced KG, positive-up Z and starboard-positive TCG and heel. KN values must carry the sign for their supplied heel; the solver does not mirror data.
 
@@ -108,7 +110,7 @@ Run `npm run test:stability` for ten checks covering independent small-angle wal
 
 ## Roll Simulation
 
-All calculation tabs use the selected condition source. Weight-based loading updates mass, physical centres and transverse FSM automatically after valid edits. Manual scenarios retain separate inputs; changing draft resolves displacement for every calculation tab. Water density is shared throughout. Changes settle after 300 ms; incomplete or invalid shared inputs hide results. Validation retains its fixed reference cases. Weight edits survive tab changes but reset on reload or model changes.
+All calculation tabs use the selected condition source. Weight-based loading updates mass, physical centres and transverse FSM automatically after valid edits. Manual scenarios retain separate inputs; changing draft resolves displacement for every calculation tab. Water density is shared throughout. Changes settle after 300 ms; incomplete or invalid shared inputs hide results. Validation retains its fixed reference cases. Weight edits survive tab changes; after reload, use the recovery controls to restore a saved checkpoint.
 
 The generic `computeRollSimulation` entry point obtains corrected transverse GM through the existing resource-selected upright hydrostatic solver. Its pure `computeFreeRoll` calculation uses `φ″ + 2ζωₙφ′ + ωₙ²φ = 0`, with `ωₙ = sqrt(g × GMcorrected) / k`, standard gravity 9.80665 m/s² and `φ′(0) = 0`. Effective radius `k` satisfies `k² = (Ixx + A44) / mass` and includes added roll inertia. Natural period is `2π/ωₙ`; damped period is `2π / (ωₙ sqrt(1−ζ²))`. Displacement cancels from the normalized equation through the supplied effective radius; weight centres alone do not determine inertia.
 
@@ -210,11 +212,11 @@ Longitudinal FSM is validated by the trim calculation rather than blocking unrel
 
 ### Saved scenarios
 
-Expand **Saved scenarios** above the condition controls. Save a named snapshot, select and load it later, delete a saved snapshot, or export/import JSON. Each save creates a new entry; existing entries are not silently overwritten. The library persists in this browser's local storage for this model (up to 100 entries). Current unsaved edits are not automatically saved. Import loads inputs without automatically adding them to the library; use Save new scenario to retain an import. Undo scenario load restores the inputs immediately preceding the latest load/import.
+Expand **Saved scenarios** above the condition controls. Save a named snapshot, select and load it later, delete a saved snapshot, or export/import JSON. Each save creates a new entry; existing entries are not silently overwritten. The library persists in this browser's local storage for this model (up to 100 entries). Named snapshots require an explicit save; separate recovery drafts checkpoint current condition inputs. Import loads inputs without automatically adding them to the library; use Save new scenario to retain an import. Undo scenario load restores the inputs immediately preceding the latest load/import.
 
 Snapshots contain both weight-based and manual inputs, selected source and calculation basis, water density and longitudinal FSM. Coordinates remain in model-source conventions. Presentation settings and cached calculation results are excluded. Loading resets movement history and the 3D session and recalculates results. Incomplete drafts can be saved and restored for later editing; saving is not validation of an equilibrium.
 
-Versioned imports are bounded, schema-checked and matched against the model ID, units, coordinates, dimensions and declared resources. Changed resource file contents are not fingerprinted; calculations always use the current model data. Files over 1 MB are rejected. Storage access/quota failures are reported; exporting remains available. Clearing browser data removes local saves, so export files for durable backups.
+Versioned imports are bounded, schema-checked and matched against the model ID, units, coordinates, dimensions and declared resources. Changed resource file contents are not fingerprinted; calculations always use the current model data. Files over 25 MB are rejected. Storage access/quota failures are reported; exporting remains available. Clearing browser data removes local saves, so export files for durable backups.
 
 ### 3D workspace layout
 
@@ -251,13 +253,13 @@ LBP is 121.7 m and beam 17.4 m, traced to the workbook in the package README. Mo
 
 ## Cargo Plans
 
-The Cargo Plans tab combines the loading editor with a local named-plan library in IndexedDB (`umc-cargo-plans`). Users can create a plan containing only the vessel's fixed weights, save a new named plan, explicitly update a selected plan, preview/apply it, undo application, delete a named plan, and import/export JSON backups. Imported plans replace the current loading rather than appending weights. They require a matching model definition and unaltered fixed weights. Import is limited to 1 MB and 1,000 rows. Fixed items are declared by `loading.weights.config.fixedWeightIds`; the app preserves their package values during editor, scenario and 3D updates.
+The Cargo Plans tab combines the loading editor with a local named-plan library in IndexedDB (`umc-cargo-plans`). Users can create a plan containing only the vessel's fixed weights, save a new named plan, explicitly update a selected plan, preview/apply it, undo application, delete a named plan, and import/export JSON backups. Imported plans replace the current loading rather than appending weights. They require a matching model definition and unaltered fixed weights. Import is limited to 25 MB and 10,000 weight rows. Fixed items are declared by `loading.weights.config.fixedWeightIds`; the app preserves their package values during editor, scenario and 3D updates.
 
 Cargo rows have an optional category, hold/location and number of units. Mass remains the total row mass; quantity does not multiply it. Hold labels are descriptive and do not infer centres, check geometry or certify capacity. All coordinates stay in model-source conventions when saved. Existing scenario JSON retains these metadata fields too.
 
-A recovery draft is saved after 700 ms without edits once storage is available. On revisiting a vessel or reloading, users review/apply or discard that draft before it can be overwritten. Blank numeric fields can be preserved; malformed values are reported. Named plans are changed only by the save/update controls. Storage failures leave editing and JSON export available. Applying a cargo plan selects weight-based loading and resets manual inputs; Undo restores the preceding state.
+Recovery checkpoints the complete condition after 250 ms without edits: weights, manual inputs, assessment settings, density, longitudinal FSM, deck configuration, plan name and notes. A synchronous local-storage journal is written before the asynchronous IndexedDB save; a stalled older database write cannot block a newer checkpoint. On reload, review/apply a draft, discard it, or choose Keep current condition to resume saving. Named plans change only through explicit save/update controls. Ordinary cargo-plan application selects weight-based loading; full recovery restores the original mode. Undo restores the preceding condition. Abrupt termination before the first checkpoint, storage failure and device loss remain outside the recovery guarantee.
 
-Storage is per browser and origin, without an account or server. Backups are needed for transfer to another device or website address and before clearing browser data. Multiple tabs do not merge simultaneous edits; the last completed draft write wins. Vessel packages themselves are not embedded in cargo-plan backups. The reviewed Vectis Castle package is included in production builds.
+Storage is per browser and origin, without an account or server. Backups are needed for transfer to another device or website address and before clearing browser data. Each tab/session has a separate recovery draft. Named-plan updates reject stale revisions; saved-scenario mutations use Web Locks and fresh storage reads. Damaged records are retained and isolated from valid records. Historical drafts remain until explicitly discarded. Vessel packages themselves are not embedded in cargo-plan backups. The reviewed Vectis Castle package is included in production builds.
 
 CSV/Excel mapping, spatial hold planning, tank fill-volume conversion and capacity/deck-load checks remain later features.
 
