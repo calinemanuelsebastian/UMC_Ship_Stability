@@ -2,11 +2,11 @@ import {test,after} from 'node:test';
 import assert from 'node:assert/strict';
 import {createServer} from '../../scripts/test-server.mjs';
 const server=await createServer({server:{middlewareMode:true},appType:'custom'});after(()=>server.close());
-const {parseRecovery,readPlanRecords,readRecoveryJournals,writeRecoveryJournal,recoveryPrefix}=await server.ssrLoadModule('/src/app/recovery.ts');
+const {parseRecovery,readPlanRecords,readRecoveryJournals,writeRecoveryJournal,recoveryPrefix,queueRecoveryWrite}=await server.ssrLoadModule('/src/app/recovery.ts');
 const {readScenarioRecords,mutateScenarioLibrary,parseScenario}=await server.ssrLoadModule('/src/app/saved-scenarios.ts');
 const fixed={id:'light',name:'Lightship',massTonnes:'100',lcg:'50',vcg:'4',tcg:'0',freeSurfaceMomentTransverse:'0'};
 const fixture=()=>({kind:'recovery-plan',version:1,id:'tab-a',name:'Departure',voyage:'Test',model:'ship',savedAt:'2026-10-10T12:00:00Z',state:{scenario:'manual',manualMode:'draft',draft:3,density:1.025,longitudinalFsm:10,manual:{vcg:5,lcg:49,tcg:0,displacementTonnes:500},assessment:{draft:{conditionKey:'key',value:3}},weights:[{...fixed}]}});
-function storage(){const values=new Map();return {get length(){return values.size;},key:i=>[...values.keys()][i]??null,getItem:k=>values.get(k)??null,setItem:(k,v)=>values.set(k,v)};}
+function storage(){const values=new Map();return {get length(){return values.size;},key:i=>[...values.keys()][i]??null,getItem:k=>values.get(k)??null,setItem:(k,v)=>values.set(k,v),removeItem:k=>values.delete(k)};}
 test('recovery preserves full manual and assessment state through JSON round trip',()=>{
  const f=fixture(),p=parseRecovery(JSON.parse(JSON.stringify(f)),'ship',[fixed]);assert.deepEqual(JSON.parse(JSON.stringify(p)),f);
 });
@@ -48,4 +48,24 @@ test('a malformed journal cannot mask a valid database draft with the same key',
  assert.equal(result.drafts.length,1);assert.equal(result.damaged,1);
  const newer={...f,savedAt:'2026-10-10T12:01:00Z'};
  assert.equal(readPlanRecords([{key,model:'ship',plan:f},{key,model:'ship',plan:newer}],'ship',[fixed]).drafts[0].plan.savedAt,newer.savedAt);
+});
+
+test('pending database writes checkpoint latest edits without waiting for the older write',async()=>{
+ const s=storage(),key='draft:ship:queue',old={key,model:'ship',plan:fixture()};
+ let release;const stalled=new Promise(resolve=>{release=resolve});
+ const first=queueRecoveryWrite(Promise.resolve(),s,old,()=>stalled);
+ const newer={...old,plan:{...fixture(),name:'Latest pending input',savedAt:'2026-10-10T12:02:00Z'}};
+ const second=queueRecoveryWrite(first,s,newer,async()=>{});
+ // Simulate a restart before either database write has finished.
+ const recovered=readPlanRecords(readRecoveryJournals(s).records,'ship',[fixed]);
+ assert.equal(recovered.drafts[0].plan.name,'Latest pending input');
+ release();await first;
+ assert.equal(JSON.parse(s.getItem(recoveryPrefix+key)).plan.name,'Latest pending input');
+ await second;assert.equal(s.getItem(recoveryPrefix+key),null);
+});
+test('failed database write retains checkpoint and journal quota failure still permits database save',async()=>{
+ const s=storage(),record={key:'draft:ship:q',model:'ship',plan:fixture()};
+ await assert.rejects(queueRecoveryWrite(Promise.resolve(),s,record,async()=>{throw new Error('db failed')}),/db failed/);
+ assert.equal(readRecoveryJournals(s).records.length,1);
+ let saved=false;await queueRecoveryWrite(Promise.resolve(),{...s,setItem(){throw new Error('quota')}},record,async()=>{saved=true});assert.equal(saved,true);
 });

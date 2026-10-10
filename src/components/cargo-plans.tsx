@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import type { ShipModelPackage } from '../core/domain/ship-model';
 import { modelSignature, type ScenarioState } from '../app/saved-scenarios';
 import { parseCargoPlan, planStorage, type CargoPlan } from '../app/cargo-plans';
-import { parseRecovery, readPlanRecords, readRecoveryJournals, writeRecoveryJournal, recoveryPrefix, type RestorablePlan } from '../app/recovery';
+import { parseRecovery, queueRecoveryWrite, readPlanRecords, readRecoveryJournals, writeRecoveryJournal, recoveryPrefix, type RestorablePlan } from '../app/recovery';
 import { evaluateWeights, type WeightDraft } from '../app/loading-state';
 import { useLanguage } from '../app/language-context';
 
@@ -56,19 +56,11 @@ export function CargoPlans({ ship, state, fixed, ready, onRestore, onRecoveryAva
     const timer = setTimeout(() => {
       try {
         const plan = create();
-        sequence.current = sequence.current.catch(() => {}).then(async () => {
-          try {
-            await planStorage('put',{key:draftKey,model,plan});
-            // A newer render may have written a newer exit journal; leave it intact.
-            try {
-              const journal = localStorage.getItem(recoveryPrefix + draftKey);
-              if (journal && Date.parse(JSON.parse(journal).plan.savedAt) <= Date.parse(plan.savedAt)) localStorage.removeItem(recoveryPrefix + draftKey);
-            } catch { /* The database write succeeded; journal cleanup is best effort. */ }
-          } catch (error) {
+        sequence.current = queueRecoveryWrite(sequence.current,localStorage,{key:draftKey,model,plan},record=>planStorage('put',record)).catch(error => {
             const raw=localStorage.getItem(recoveryPrefix+draftKey);
             if(!raw || Date.parse(JSON.parse(raw).plan.savedAt)<=Date.parse(plan.savedAt)) writeRecoveryJournal(localStorage,draftKey,{key:draftKey,model,plan});
             if (pendingFlush.current === flushJournal) setMessage(error instanceof Error ? error.message : 'Local cargo storage failed. Export a backup instead.');
-          }
+        }).then(() => {
           flushed = true;
           if (pendingFlush.current === flushJournal) { pendingFlush.current = undefined; setDraftStatus('Recovery draft saved locally.'); }
         }).catch(e => { if (pendingFlush.current === flushJournal) { setMessage(e.message); setDraftStatus('Draft recovery could not be saved.'); } });

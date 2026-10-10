@@ -55,3 +55,17 @@ export function readRecoveryJournals(storage: Pick<Storage,'length'|'key'|'getIt
   }
   return { records, damaged };
 }
+
+// Checkpoint synchronously before joining the database queue. A blocked older
+// write must not prevent newer input from reaching the crash-recovery journal.
+export function queueRecoveryWrite(previous: Promise<void>, storage: Pick<Storage,'getItem'|'setItem'|'removeItem'>, record: PlanRecord, persist: (record:PlanRecord)=>Promise<unknown>): Promise<void> {
+  try { writeRecoveryJournal(storage,record.key,record); }
+  catch { /* Database saving remains available if localStorage is full/disabled. */ }
+  return previous.catch(()=>{}).then(async()=>{
+    await persist(record);
+    try {
+      const raw=storage.getItem(recoveryPrefix+record.key);
+      if(raw && Date.parse(JSON.parse(raw).plan.savedAt)<=Date.parse(record.plan.savedAt)) storage.removeItem(recoveryPrefix+record.key);
+    } catch { /* A committed database write remains successful if cleanup fails. */ }
+  });
+}
