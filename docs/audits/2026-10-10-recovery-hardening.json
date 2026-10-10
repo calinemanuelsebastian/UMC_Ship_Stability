@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-10",
+  "status": "Recovery release candidate validated locally",
+  "automated": {
+    "suite": "npm test",
+    "passed": 390,
+    "failed": 0,
+    "lint": "passed",
+    "production_build": "passed"
+  },
+  "changes": [
+    "Full-condition recovery includes manual inputs and assessment settings",
+    "Per-record corruption isolation, preserving unreadable data",
+    "Independent drafts for each tab/component session",
+    "250 ms autosave with synchronous pagehide/hidden fallback journal and pending-close warning",
+    "Transactional version checks reject stale named-plan update/delete",
+    "Web Locks plus fresh reads prevent scenario-library lost updates",
+    "Recovery notice across pages and non-destructive Keep current condition action",
+    "Up to 10000 weight rows with bounded import/library sizes",
+    "English and Romanian recovery messages"
+  ],
+  "browser_verified": [
+    "Local reload discovers and restores name, notes and 70-row condition",
+    "Named plan persists across reload",
+    "Two-tab stale update rejected after first tab saves newer version",
+    "Keep current condition resumes automatic recovery saving"
+  ],
+  "limitations": [
+    "Browser clearing/eviction or device loss still requires exported backup",
+    "Actual browser-process crash and real quota exhaustion were not induced; quota failure covered by tests",
+    "Historical drafts retained until explicitly discarded; no automatic deletion",
+    "No cross-browser/private-mode matrix in this pass"
+  ],
+  "reverification": {
+    "date": "2026-10-10",
+    "origin": "http://127.0.0.1:5189",
+    "targeted_tests": 18,
+    "passed": 18,
+    "browser_verified": [
+      "Closed tab and reopened website; recovery draft remained available",
+      "Recovery restored manual scenario, density 1.01, longitudinal FSM 17, name and notes",
+      "70 loading rows retained in recovery preview",
+      "Undo restored weight-based baseline: density 1.025, longitudinal FSM 0, displacement 3929.6 t",
+      "Previous independent drafts remained selectable",
+      "No browser console errors"
+    ],
+    "screenshot": "/tmp/umc-recovery-verification.png",
+    "scope": "Local code only; production has not been updated",
+    "not_exercised": [
+      "Abrupt OS/browser process crash",
+      "Real browser quota exhaustion",
+      "Cross-browser/private mode"
+    ]
+  },
+  "actual_crash_test": {
+    "result": "BLOCKED \u2014 not verified",
+    "attempts": [
+      "Isolated browser launch blocked by OS sandbox",
+      "Dedicated renderer crash rejected by browser URL security policy"
+    ],
+    "action": "No policy workaround attempted; manual process-termination test remains required",
+    "guarantee": "Last successfully persisted draft is the recovery boundary. Unsaved input cannot be guaranteed after abrupt process loss."
+  }
+}

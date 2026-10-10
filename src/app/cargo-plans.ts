@@ -1,3 +1,4 @@
+import type { RecoveryPlan } from './recovery';
 import type {ShipModelPackage} from '../core/domain/ship-model';
 import {panelWeight} from './tween-deck';
 import { parseScenario, type ScenarioState } from './saved-scenarios';
@@ -22,25 +23,31 @@ export function parseCargoPlan(value: unknown, model: string, fixed: WeightDraft
   return { ...scenario, kind: 'cargo-plan', voyage: raw.voyage };
 }
 
-export type PlanRecord = { key: string; model: string; plan: CargoPlan };
+export type PlanRecord = { key: string; model: string; plan: CargoPlan | RecoveryPlan };
 function openDatabase(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
     const req = indexedDB.open('umc-cargo-plans', 1);
     req.onupgradeneeded = () => req.result.createObjectStore('plans', { keyPath: 'key' });
-    req.onsuccess = () => resolve(req.result);
+    req.onsuccess = () => { req.result.onversionchange = () => req.result.close(); resolve(req.result); };
     req.onerror = () => reject(new Error('Local cargo storage is unavailable. Export a backup instead.'));
     req.onblocked = () => reject(new Error('Close other simulator tabs to open local cargo storage.'));
   });
 }
-export async function planStorage(action: 'read' | 'put' | 'delete', record?: PlanRecord, key?: string): Promise<PlanRecord[]> {
+export async function planStorage(action: 'read' | 'put' | 'delete', record?: PlanRecord, key?: string, expected?: string | null): Promise<PlanRecord[]> {
   const db = await openDatabase();
   try {
     return await new Promise((resolve, reject) => {
       const tx = db.transaction('plans', action === 'read' ? 'readonly' : 'readwrite');
       const store = tx.objectStore('plans');
-      const req = action === 'read' ? store.getAll() : action === 'put' ? store.put(record!) : store.delete(key!);
+      let conflict = false;
+      const req = action === 'read' ? store.getAll() : store.get(action === 'put' ? record!.key : key!);
+      if (action !== 'read') req.onsuccess = () => {
+        const current = req.result as PlanRecord | undefined;
+        if (expected !== undefined && (current?.plan?.savedAt ?? null) !== expected) { conflict = true; tx.abort(); return; }
+        if (action === 'put') store.put(record!); else store.delete(key!);
+      };
       tx.oncomplete = () => resolve(action === 'read' ? req.result as PlanRecord[] : []);
-      tx.onabort = tx.onerror = () => reject(new Error('Local cargo storage failed. Export a backup instead.'));
+      tx.onabort = tx.onerror = () => reject(new Error(conflict ? 'This plan changed in another tab. Reload the saved plans before updating it.' : 'Local cargo storage failed. Export a backup instead.'));
     });
   } finally { db.close(); }
 }

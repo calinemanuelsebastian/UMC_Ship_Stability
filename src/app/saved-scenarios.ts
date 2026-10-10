@@ -16,7 +16,7 @@ export function parseScenario(value:unknown,model:string):SavedScenario {
  if(!object(value)||value.version!==1||typeof value.id!=='string'||!value.id||typeof value.name!=='string'||!value.name.trim()||value.name.length>120||typeof value.savedAt!=='string'||!Number.isFinite(Date.parse(value.savedAt)))throw new Error('Invalid scenario file.');
  if(value.model!==model)throw new Error('This scenario belongs to a different model or model definition.');
  const s=value.state;
- if(!object(s)||!['loading','manual'].includes(String(s.scenario))||!['draft','displacement'].includes(String(s.manualMode))||!object(s.manual)||!Array.isArray(s.weights)||s.weights.length>1000)throw new Error('Invalid scenario inputs.');
+ if(!object(s)||!['loading','manual'].includes(String(s.scenario))||!['draft','displacement'].includes(String(s.manualMode))||!object(s.manual)||!Array.isArray(s.weights)||s.weights.length>10000)throw new Error('Invalid scenario inputs.');
  for(const key of ['draft','density','longitudinalFsm'])if(!optionalNumber(s[key]))throw new Error('Invalid scenario inputs.');
  for(const key of ['vcg','lcg','tcg','displacementTonnes','freeSurfaceMomentTransverse'])if(!optionalNumber(s.manual[key]))throw new Error('Invalid manual inputs.');
  const ids=new Set<string>();
@@ -41,4 +41,24 @@ export function readLibrary(storage:Pick<Storage,'getItem'>,key:string,model:str
  const entries=data.map(item=>parseScenario(item,model));
  if(new Set(entries.map(e=>e.id)).size!==entries.length)throw new Error('Duplicate scenario identifiers.');
  return entries;
+}
+
+// Preserve unreadable entries verbatim; one damaged record must not hide its siblings.
+export function readScenarioRecords(storage: Pick<Storage,'getItem'>, key: string, model: string) {
+ const raw=storage.getItem(key);
+ if(raw && raw.length>25_000_000)throw new Error('Saved scenario library is too large.');
+ const records: unknown=raw?JSON.parse(raw):[];
+ if(!Array.isArray(records)||records.length>100)throw new Error('Invalid saved scenario library.');
+ const items:SavedScenario[]=[];let damaged=0;
+ for(const value of records){try{const item=parseScenario(value,model);if(items.some(i=>i.id===item.id))throw new Error('Duplicate scenario');items.push(item);}catch{damaged++;}}
+ return {records,items,damaged};
+}
+export function mutateScenarioLibrary(storage:Pick<Storage,'getItem'|'setItem'>,key:string,model:string,change:{add:SavedScenario}|{remove:string}) {
+ const current=readScenarioRecords(storage,key,model);
+ const records='add' in change?[...current.records,parseScenario(change.add,model)]:current.records.filter(value=>!(value&&typeof value==='object'&&'id' in value&&value.id===change.remove));
+ if(records.length>100)throw new Error('The library can hold up to 100 scenarios.');
+ const json=JSON.stringify(records);
+ if(json.length>25_000_000)throw new Error('Saved scenario library is too large.');
+ storage.setItem(key,json);
+ return readScenarioRecords(storage,key,model);
 }

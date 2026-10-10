@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-10",
+  "commit": "d1ab852",
+  "site": "https://calinemanuelsebastian.github.io/UMC_Ship_Stability/",
+  "result": "Normal save/reload/import paths pass; recovery hardening required",
+  "automated": {
+    "tests": 19,
+    "passed": 19,
+    "log": "/tmp/umc-persistence-tests.log"
+  },
+  "browser_verified": [
+    "Named cargo plan persists across reload",
+    "Recovery draft preserves name, notes, water density 1.01 and longitudinal FSM 12",
+    "Recovery requires review and apply, does not silently overwrite current condition",
+    "Downloaded JSON contains 70 weights and exact recovery markers",
+    "Backup import previews and applies condition",
+    "Undo plan application restores pre-import density 1.02",
+    "Wrong model import rejected without changing current inputs",
+    "Malformed JSON rejected without changing current inputs",
+    "Named condition persists across reload and loads",
+    "Original baseline restored: displacement 3929.6 t, density 1.025, longitudinal FSM 0",
+    "No console errors observed"
+  ],
+  "code_review_findings": [
+    {
+      "priority": "high",
+      "finding": "One invalid IndexedDB plan rejects the whole cargo library hydration; named saving and autosaving stay disabled. No per-record isolation.",
+      "file": "src/components/cargo-plans.tsx",
+      "lines": "24-33"
+    },
+    {
+      "priority": "high",
+      "finding": "Cargo recovery snapshot omits assessment settings, manual inputs and manual mode. Applying it resets assessment via restoreState. Full named scenarios retain those settings.",
+      "file": "src/components/cargo-plans.tsx",
+      "lines": "18-20"
+    },
+    {
+      "priority": "medium",
+      "finding": "700 ms debounce has no pagehide/visibility flush; latest changes may not persist on immediate navigation or close. Recovery status is not cleared to Saving when inputs change.",
+      "file": "src/components/cargo-plans.tsx",
+      "lines": "34-48"
+    },
+    {
+      "priority": "medium",
+      "finding": "Both persistence parsers reject more than 1000 total weight rows, including tanks, fixed items and supports.",
+      "file": "src/app/saved-scenarios.ts",
+      "lines": "17"
+    },
+    {
+      "priority": "medium",
+      "finding": "No cross-tab locking or revision checks: same-vessel drafts use one key; scenario libraries are written from a tab-local snapshot.",
+      "file": "src/components/cargo-plans.tsx; src/components/saved-scenarios.tsx"
+    }
+  ],
+  "not_verified": [
+    "Actual browser process crash or OS termination",
+    "Storage quota exhaustion in a real browser",
+    "Cross-browser and private-mode persistence",
+    "Concurrent editing in multiple tabs",
+    "Clearing all browser data and external backup restoration after clearing"
+  ],
+  "retained_test_data": [
+    "QA persistence 2026-10-10",
+    "QA condition persistence 2026-10-10",
+    "/Users/ces/Downloads/cargo-plan (1).json"
+  ],
+  "production_code_changed": false
+}

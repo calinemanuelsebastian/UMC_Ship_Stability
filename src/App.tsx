@@ -111,6 +111,7 @@ function Simulator({ modelPicker, ship, activeTab, onTabChange }: {
 }) {
     const { t } = useLanguage();
     const defaults = ship.manifest.defaultCondition;
+    const [recoveryAvailable,setRecoveryAvailable]=useState(false);
     const [assessment,setAssessment]=useState<AssessmentSettings>({});
     const [Ship3DView, setViewer] = useState(loadViewer);
     const [saveRequest,setSaveRequest]=useState<{name:string;id:number}>();
@@ -194,6 +195,7 @@ function Simulator({ modelPicker, ship, activeTab, onTabChange }: {
     };
     return <AssessmentContext.Provider value={{settings:assessment,setSettings:setAssessment}}>
       <ConditionSummary name={ship.manifest.name} fromWeights={fromWeights} displacement={valid?displacementTonnes:undefined} kg={valid?vcg:undefined} density={density} fsm={valid?freeSurfaceMomentTransverse:undefined}/>
+      {recoveryAvailable&&<p role="status">{t('A recovery draft is available. Review it or keep the current condition to resume automatic saving.')} <button onClick={()=>{setLoadingSection('plans');writeNavigation({page:'loading',section:'plans'});onTabChange('loading');}}>{t('Review recovery draft')}</button></p>}
       <div className="workspace-utilities">
       <details className="shared-condition-drawer"><summary>{t('Condition settings')}</summary><section className="condition-bar" aria-label={t('Shared condition')}>
         {modelPicker}
@@ -221,7 +223,7 @@ function Simulator({ modelPicker, ship, activeTab, onTabChange }: {
         <div hidden={loadingSection!=='ballast'}>{tankCatalog?<TankControls ballastOnly onSaveCondition={name=>setSaveRequest({name:t(name),id:Date.now()})} ship={ship} catalog={tankCatalog} weights={weights} setWeights={setWeights}/>:<p role="status">{t('This model has no documented tank filling tables.')}</p>}</div>
         <div hidden={loadingSection!=='tanks'}>{tankCatalog?<TankControls onSaveCondition={name=>setSaveRequest({name:t(name),id:Date.now()})} ship={ship} catalog={tankCatalog} weights={weights} setWeights={setWeights}/>:<p role="status">{t('This model has no documented tank filling tables.')}</p>}</div>
         <div hidden={loadingSection!=='weights'}><LoadingCondition catalog={tankCatalog} ship={ship} weights={weights} setWeights={setWeights} ready={ready} loadError={loadError}/></div>
-        <div hidden={loadingSection!=='plans'}><CargoPlans ship={ship} ready={ready} fixed={fixedWeights.current} state={planState} onRestore={restoreState}/></div>
+        <div hidden={loadingSection!=='plans'}><CargoPlans onRecoveryAvailable={setRecoveryAvailable} ship={ship} ready={ready} fixed={fixedWeights.current} state={planState} onRestore={restoreState}/></div>
       </div>
       {(activeTab==='stability'||activeTab==='trim')&&<nav className="workspace-nav" aria-label={t('Assessment sections')}><button aria-current={activeTab==='stability'?'page':undefined} onClick={()=>onTabChange('stability')}>{t('Stability and weather')}</button><button aria-current={activeTab==='trim'?'page':undefined} onClick={()=>onTabChange('trim')}>{t('Trim & Drafts')}</button></nav>}
       <div hidden={activeTab !== 'trim'}><TrimEquilibrium {...shared} pending={mode === 'displacement' ? !valid : pending} {...editable} density={density} setDensity={setDensity} fsm={longitudinalFsm} setFsm={setLongitudinalFsm} lcg={lcg} onLcgChange={update('lcg')}/></div>

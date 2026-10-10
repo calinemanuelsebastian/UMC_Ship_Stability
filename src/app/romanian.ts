@@ -1603,4 +1603,16 @@ export const romanian: Record<string, string> = {
   "Winch oil 65 — departure reference": "Ulei vinci 65 — referință la plecare",
   "Crew and stores remain editable. This preset replaces only those documented entries; fixed machinery and tween-deck weights are not added again.": "Echipajul și proviziile rămân editabile. Presetul înlocuiește doar aceste înregistrări documentate; greutățile fixe ale mașinilor și punții intermediare nu sunt adăugate din nou.",
   "Departure fills use current capacity tables; review the resulting condition.": "Umplerile la plecare folosesc tabelele actuale de capacități; verifică starea de încărcare rezultată.",
+
+  "Saving recovery draft…": "Se salvează ciorna de recuperare…",
+  "Reload saved plans": "Reîncarcă planurile salvate",
+  "Recovery draft": "Ciornă de recuperare",
+  "Recovery restores the full condition, including assessment settings and manual inputs.": "Recuperarea restabilește întreaga stare, inclusiv setările evaluării și datele introduse manual.",
+  "Some saved records could not be read. They were retained; other plans and recovery remain available.": "Unele înregistrări salvate nu au putut fi citite. Au fost păstrate; celelalte planuri și recuperarea rămân disponibile.",
+  "One local storage service is unavailable. Download a backup of important changes.": "Un serviciu de stocare locală nu este disponibil. Descarcă o copie de siguranță a modificărilor importante.",
+  "This plan changed in another tab. Reload the saved plans before updating it.": "Acest plan a fost modificat în altă filă. Reîncarcă planurile salvate înainte de a-l actualiza.",
+  "Safe local saving is unavailable in this browser. Export a scenario file instead.": "Salvarea locală sigură nu este disponibilă în acest browser. Exportă un fișier de scenariu.",
+  "Recovery draft exceeds 25 MB. Download a backup.": "Ciorna de recuperare depășește 25 MB. Descarcă o copie de siguranță.",
+  "Keep current condition": "Păstrează starea curentă",
+  "A recovery draft is available. Review it or keep the current condition to resume automatic saving.": "Este disponibilă o ciornă de recuperare. Verific-o sau păstrează starea curentă pentru a relua salvarea automată.",
 };
