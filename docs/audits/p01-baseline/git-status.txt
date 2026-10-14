@@ -1,0 +1,36 @@
+ M public/built-in-ship-models/training-pontoon-100x20/manifest.json
+ M scripts/compare-excel.mjs
+ M src/App.tsx
+ M src/app/dunnage.ts
+ M src/app/navigation.ts
+ M src/app/romanian.ts
+ M src/app/saved-scenarios.ts
+ M src/app/support-frame.test.mjs
+ M src/app/support-frame.ts
+ M src/components/cargo-planner.tsx
+ M src/components/dunnage-controls.tsx
+ M src/index.css
+ M validation-references/excel-simulator-comparison.json
+ M validation-references/excel-simulator-comparison.md
+ M validation-references/reviewed-apples-vessel/manifest.json
+?? docs/apples-support-assembly.md
+?? docs/audits/2026-10-10-cargo-support-accounting.md
+?? docs/audits/2026-10-10-dxf-arrangement.md
+?? docs/audits/2026-10-10-workbook-inventory.json
+?? docs/audits/2026-10-10-workbook-replacement.json
+?? docs/audits/2026-10-10-workbook-replacement.md
+?? docs/audits/p01-baseline/
+?? docs/product-completion-roadmap.md
+?? docs/workflow-and-reference-case.md
+?? scripts/inventory-workbook.py
+?? scripts/reconcile-cargo-support.py
+?? scripts/verify-workbook-replacement.mjs
+?? src/app/capacity-limit.test.mjs
+?? src/app/capacity-limit.ts
+?? src/app/cargo-capacity.test.mjs
+?? src/app/cargo-capacity.ts
+?? src/components/cargo-capacity.tsx
+?? validation-references/apples-cargo-support-accounting.json
+?? validation-references/apples-dxf-arrangement.json
+?? validation-references/apples-reference-case-v2.json
+?? validation-references/apples-support-assembly-v1.json

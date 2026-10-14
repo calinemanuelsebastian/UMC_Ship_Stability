@@ -1,0 +1,135 @@
+- banner:
+  - generic: UMC / Ship Stability
+  - generic: Teaching simulator · Ship stability
+  - generic "Reference system · Model source"
+  - option "Model source" [selected]
+  - option "Custom"
+  - option "UK — AP / forward"
+  - option "Russian — amidships / forward"
+  - option "Nautical symbols" [selected]
+  - option "Coordinate symbols"
+  - button "Ship library"
+  - combobox "Interface language":
+    - option "EN" [selected]
+    - option "RO"
+- navigation "Simulator sections":
+  - button "Overview"
+  - button "Loading"
+  - button "3D inspection"
+  - button "Assessment"
+  - generic: Supporting tools
+  - combobox "Supporting tools":
+    - option "Supporting tools" [disabled] [selected]
+    - option "Hydrostatic Sandbox"
+    - option "Roll Simulation"
+    - option "Validation"
+    - option "Theory"
+- main:
+  - region "Current condition":
+    - strong: Vectis Castle
+    - generic: Weight-based loading
+    - term: Displacement
+    - definition: 4,061.16 t
+    - term: VCG / KG
+    - definition: 8.426 m
+    - term: Water density
+    - definition: 1.025 t/m³
+    - term: Total transverse FSM
+    - definition: 57.226 t·m
+  - generic "▸ Condition settings"
+  - option "Rectangular Pontoon"
+  - option "Vectis Castle" [selected]
+  - option "Weight-based loading" [selected]
+  - option "Manual scenario"
+  - generic "▾ Save and export"
+  - button "Export complete assessment report"
+  - generic "Saved scenarios"
+  - paragraph: Save named input snapshots in this browser. Export a JSON file for backup or sharing. Incomplete inputs may be saved; results are recalculated when loaded.
+  - text: Scenario name
+  - textbox "Scenario name":
+    - /placeholder: e.g. Departure condition or Arrival condition
+  - button "Save new scenario" [disabled]
+  - button "Export current inputs"
+  - text: Saved condition
+  - combobox "Saved condition":
+    - option "Choose a scenario" [selected]
+    - option "Recovery verification Vectis · 14/10/2026, 15:00:00"
+    - option "Recovery verification Vectis · 14/10/2026, 15:00:00"
+    - option "Legacy save during Vectis rollback · 14/10/2026, 14:49:10"
+  - button "Load selected scenario" [disabled]
+  - button "Delete saved scenario" [disabled]
+  - button "Undo scenario load" [disabled]
+  - text: Import scenario file
+  - button "Import scenario file"
+  - generic "Voyage backup and transfer"
+  - generic "Voyage conditions and final review"
+  - paragraph: Save explicit stages, branch from a saved condition, and review every stage. Unsaved working edits do not change snapshots. Intervals between stages are not simulated.
+  - text: Voyage name
+  - combobox "Voyage name": Synthetic voyage
+  - text: Condition name
+  - textbox "Condition name"
+  - text: Voyage stage
+  - combobox "Voyage stage":
+    - option "Departure" [selected]
+    - option "Arrival"
+    - option "Intermediate"
+    - option "Port loading"
+    - option "Port unloading"
+    - option "Ballast change"
+  - text: Parent snapshot / branch
+  - combobox "Parent snapshot / branch":
+    - option "New root condition" [selected]
+    - option "Recovery verification Vectis"
+    - option "Recovery verification Vectis"
+  - text: Operation notes and assumptions
+  - textbox "Operation notes and assumptions"
+  - button "Save working condition as voyage snapshot" [disabled]
+  - heading "Saved voyage stages" [level=4]
+  - generic "Recovery verification Vectis · Departure"
+  - generic "Recovery verification Vectis · Arrival" [active]
+  - paragraph: "Parent snapshot: Recovery verification Vectis · 14/10/2026, 15:00:00"
+  - paragraph: Consume fuel and unload top package
+  - button "Load / branch from this condition"
+  - paragraph: "Changes: +0 / −1 / 1 modified instances"
+  - list:
+    - listitem: "MDO Bunker PS(050) · tank-050: 16.541895999999998 → 14.178767999999998 t · 18.586399999999998 → 15.931199999999997 m³"
+    - listitem: − Synthetic upper package · check-top · 0.75 t
+  - generic "Working cargo and support reconciliation"
+  - button "Review every saved voyage stage"
+  - status
+  - status
+  - status: All calculation tabs use the current condition.
+  - generic "Hydrostatic table corrections — calculation review required"
+  - heading "Loading" [level=1]
+  - navigation "Loading sections":
+    - button "Onboard condition"
+    - button "Cargo capacity"
+    - button "Cargo layout"
+    - button "Ballast"
+    - button "Review totals"
+    - button "Saved cargo plans"
+  - text: ▸
+  - heading "Cargo Plans" [level=1]
+  - paragraph: Create a loading plan below. Save named plans in this browser or download a JSON backup to transfer them. Browser storage is local to this device and website address; clearing browser data removes it.
+  - text: Plan name
+  - textbox "Plan name": Recovery verification Vectis
+  - text: Voyage / notes
+  - textbox "Voyage / notes": Synthetic persistence test; not an approved loading condition
+  - button "New plan (fixed weights only)"
+  - button "Save as new plan"
+  - button "Update selected plan"
+  - button "Download backup"
+  - text: Saved cargo plans
+  - combobox "Saved cargo plans":
+    - option "Choose a plan"
+    - option "Recovery verification Vectis · 14/10/2026, 14:48:05" [selected]
+  - button "Preview selected plan"
+  - button "Delete named plan"
+  - button "Undo plan application"
+  - text: Import cargo plan (JSON)
+  - button "Import cargo plan (JSON)"
+  - button "Reload saved plans"
+  - paragraph: Incomplete plans can be saved. Coordinates must be entered explicitly; hold names do not supply positions. Quantity is descriptive; Mass (t) is the total mass of the row.
+  - status: Cargo plan applied.
+  - paragraph: Recovery draft saved locally.
+- contentinfo: UMCsShipStabilityApp · Hydrostatics learning workspace

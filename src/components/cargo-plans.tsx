@@ -1,3 +1,4 @@
+import {conditionRevision} from '../app/condition-transaction';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import type { ShipModelPackage } from '../core/domain/ship-model';
 import { modelSignature, type ScenarioState } from '../app/saved-scenarios';
@@ -13,16 +14,19 @@ export function CargoPlans({ ship, state, fixed, ready, onRestore, onRecoveryAva
   const [items, setItems] = useState<CargoPlan[]>([]), [selected, setSelected] = useState('');
   const [name, setName] = useState(''), [voyage, setVoyage] = useState('');
   const [draftStatus, setDraftStatus] = useState('');
+  const [backup,setBackup]=useState<{url:string;source:string}>();
+  useEffect(()=>()=>{if(backup)URL.revokeObjectURL(backup.url);},[backup]);
   const [message, setMessage] = useState(''), [hydrated, setHydrated] = useState(false), [busy, setBusy] = useState(false);
   const [recovery, setRecovery] = useState<RestorablePlan>(), [preview, setPreview] = useState<RestorablePlan>();
   const [previous, setPrevious] = useState<RestorablePlan>();
+  const [appliedRevision,setAppliedRevision]=useState<string>();
   const sequence = useRef(Promise.resolve());
   const [drafts, setDrafts] = useState<{key:string;plan:RestorablePlan}[]>([]);
   const [refresh, setRefresh] = useState(0);
   const pendingFlush = useRef<(() => void) | undefined>(undefined);
   const snapshot = (id: string = crypto.randomUUID()): CargoPlan => parseCargoPlan({ kind: 'cargo-plan', version: 1, id,
     name: name.trim() || 'Untitled cargo plan', voyage, model, savedAt: new Date().toISOString(),
-    state: { assessment:state.assessment, tweenDeck:state.tweenDeck, scenario: 'loading', cargoArea:state.cargoArea, weights: state.weights, density: state.density, longitudinalFsm: state.longitudinalFsm, manual: {}, manualMode: 'displacement' } }, model, fixed, ship);
+    state: { capacity:state.capacity, assessment:state.assessment, tweenDeck:state.tweenDeck, scenario: 'loading', cargoArea:state.cargoArea, weights: state.weights, density: state.density, longitudinalFsm: state.longitudinalFsm, manual: {}, manualMode: 'displacement' } }, model, fixed, ship);
   useEffect(() => {
     if (!ready) return;
     let active = true;
@@ -58,7 +62,7 @@ export function CargoPlans({ ship, state, fixed, ready, onRestore, onRecoveryAva
         const plan = create();
         sequence.current = queueRecoveryWrite(sequence.current,localStorage,{key:draftKey,model,plan},record=>planStorage('put',record)).catch(error => {
             const raw=localStorage.getItem(recoveryPrefix+draftKey);
-            if(!raw || Date.parse(JSON.parse(raw).plan.savedAt)<=Date.parse(plan.savedAt)) writeRecoveryJournal(localStorage,draftKey,{key:draftKey,model,plan});
+            if(!raw || Date.parse(JSON.parse(raw).plan.savedAt)<Date.parse(plan.savedAt)) writeRecoveryJournal(localStorage,draftKey,{key:draftKey,model,plan});
             if (pendingFlush.current === flushJournal) setMessage(error instanceof Error ? error.message : 'Local cargo storage failed. Export a backup instead.');
         }).then(() => {
           flushed = true;
@@ -84,7 +88,7 @@ export function CargoPlans({ ship, state, fixed, ready, onRestore, onRecoveryAva
   }
   function apply(plan: RestorablePlan) {
     try {
-    setPrevious({ ...plan, name: name || 'Untitled cargo plan', voyage, state: structuredClone(state) }); onRestore(structuredClone(plan.state)); setName(plan.name); setVoyage(plan.voyage);
+    setPrevious({ ...plan, name: name || 'Untitled cargo plan', voyage, state: structuredClone(state) }); onRestore(structuredClone(plan.state)); setAppliedRevision(conditionRevision(plan.state)); setName(plan.name); setVoyage(plan.voyage);
     setPreview(undefined); setRecovery(undefined); setSelected(items.some(p => p.id === plan.id) ? plan.id : '');
     setMessage('Cargo plan applied.');
     } catch(e){setMessage(e instanceof Error?e.message:'Cargo plan operation failed.');}
@@ -105,14 +109,15 @@ export function CargoPlans({ ship, state, fixed, ready, onRestore, onRecoveryAva
       })}>{t('Update selected plan')}</button>
       <button disabled={!ready || busy} onClick={() => action(async () => {
         const plan = snapshot(); const url = URL.createObjectURL(new Blob([JSON.stringify(plan, null, 2)], { type: 'application/json' }));
-        const link = document.createElement('a'); link.href = url; link.download = 'cargo-plan.json'; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+        const link = document.createElement('a'); link.href = url; link.download = 'cargo-plan.json'; document.body.appendChild(link); link.click(); link.remove(); setBackup({url,source:encoded});
         setMessage('Cargo plan exported.');
       })}>{t('Download backup')}</button>
+      {backup?.source===encoded&&<a href={backup.url} download="cargo-plan.json">{t('Download prepared backup')}</a>}
     </div>
     <label>{t('Saved cargo plans')} <select value={selected} onChange={e => setSelected(e.target.value)}><option value="">{t('Choose a plan')}</option>{items.map(p => <option key={p.id} value={p.id}>{p.name} · {new Date(p.savedAt).toLocaleString()}</option>)}</select></label>
     <div className="scene-toolbar"><button disabled={!selected || !ready || busy} onClick={() => setPreview(items.find(p => p.id === selected))}>{t('Preview selected plan')}</button>
       <button disabled={!selected || busy} onClick={() => action(async () => { await planStorage('delete', undefined, `plan:${selected}`, items.find(p=>p.id===selected)?.savedAt ?? null); setItems(items.filter(p => p.id !== selected)); setSelected(''); setMessage('Named plan deleted. Current loading is unchanged.'); })}>{t('Delete named plan')}</button>
-      <button disabled={!previous || busy} onClick={() => { if (previous) { onRestore(previous.state); setName(previous.name); setVoyage(previous.voyage); setPrevious(undefined); setSelected(''); } }}>{t('Undo plan application')}</button></div>
+      <button disabled={!previous || busy || appliedRevision!==conditionRevision(state)} onClick={() => { if (previous && appliedRevision===conditionRevision(state)) { onRestore(previous.state); setName(previous.name); setVoyage(previous.voyage); setPrevious(undefined); setSelected(''); } }}>{t('Undo plan application')}</button></div>
     <label>{t('Import cargo plan (JSON)')} <input type="file" accept=".json,application/json" disabled={!ready || busy} onChange={e => {
       const file = e.target.files?.[0]; e.target.value = ''; if (!file) return;
       void action(async () => { setPreview(undefined); if (file.size > 25_000_000) throw new Error('Cargo plan file exceeds 25 MB.'); setPreview(parseCargoPlan(JSON.parse(await file.text()), model, fixed, ship)); });

@@ -82,3 +82,10 @@ test('local reviewed vessel package loads weights, hydrostatics, trim and valida
     assert.ok(!manifest.resources.some(r => r.kind === 'visualization.box-hull'));
   } finally { globalThis.fetch = original; }
 });
+
+test('exact mass and trim knots retain optional LCF without requiring unused neighbours',()=>{
+ const d=base();delete d.tables[0].rows[1].lcf;delete d.tables[1].rows[0].lcf;
+ assert.equal(compute(d,{...input,displacementTonnes:2000,lcg:50},100).lcf,50);
+ assert.equal(compute(d,{...input,displacementTonnes:1500,lcg:50},100).lcf,undefined);
+ assert.equal(compute(d,{...input,displacementTonnes:2000,lcg:49.5},100).lcf,undefined);
+});

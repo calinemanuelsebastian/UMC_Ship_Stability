@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "acceptedRevision": null,
+  "tag": null,
+  "acceptance": {"status": "pending", "reviewer": "", "evidence": "docs/audits/p16-acceptance/assessment.md"},
+  "redistribution": {"status": "pending", "reviewer": "", "evidence": "docs/releases/redistribution.md"},
+  "rollback": {"status": "pending", "reviewer": "", "evidence": "docs/releases/release-runbook.md"}
+}

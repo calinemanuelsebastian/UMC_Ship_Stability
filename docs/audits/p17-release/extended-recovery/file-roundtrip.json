@@ -1,0 +1,183 @@
+{
+  "scope": "Disk-file and production-module verification; not browser download or clean-profile verification",
+  "passed": true,
+  "hashes": {
+    "ship.json": "24df29166e548c3fc953b841816e1019a34c02304b7182c69408d3e82741c707",
+    "plan.json": "1d90948db987144fbf5853d7db271c574012ca08738c6079696a900effd31f87",
+    "voyage.json": "f2009b851ecf5c577369a2e86d3403cedfc45f77ae6f84b9b9ac0b21f35fe7ce"
+  },
+  "tanks": {
+    "ballast": "001",
+    "fuel": "050"
+  },
+  "results": [
+    {
+      "phase": "departure",
+      "inputs": {
+        "pending": false,
+        "freeSurfaceCorrectionTransverse": 0.01409113128450718,
+        "virtualVcgTransverse": 8.44032703584482,
+        "freeSurfaceMomentTransverse": 57.22634106651698,
+        "displacementTonnes": 4061.1601660000006,
+        "longitudinalMoment": 217858.36829001777,
+        "verticalMoment": 34220.29360491932,
+        "transverseMoment": 1377.5666706873635,
+        "lcg": 53.64436746768232,
+        "vcg": 8.426235904560313,
+        "tcg": 0.3392052059951588,
+        "waterDensity": 1.025,
+        "longitudinalFsm": 0
+      },
+      "hydrostatics": {
+        "shipModelId": "reviewed-apples-vessel",
+        "shipModelName": "Vectis Castle",
+        "calculationSource": {
+          "solverId": "hydrostatic-table-solver",
+          "solverLabel": "Hydrostatic Table Solver",
+          "resourceId": "reviewed-upright",
+          "resourceKind": "hydrostatics.upright-table",
+          "resourcePath": "upright.csv"
+        },
+        "condition": {
+          "displacementTonnes": 4061.1601660000006,
+          "vcg": 8.426235904560313,
+          "lcg": 53.64436746768232,
+          "tcg": 0.3392052059951588,
+          "waterDensity": 1.025,
+          "freeSurfaceMomentTransverse": 57.22634106651698,
+          "heelDeg": 0,
+          "trimDeg": 0
+        },
+        "draft": 2.668146609703633,
+        "draftRange": {
+          "min": 2.5,
+          "max": 8.4
+        },
+        "trimDeg": 0,
+        "heelDeg": 0,
+        "volume": 3962.107479024391,
+        "displacementTonnes": 4061.1601660000006,
+        "lcb": 62.437822406835565,
+        "lcf": 62.130814660970366,
+        "kmTransverse": 10.606374831859464,
+        "gmTransverse": 2.1801389272991507,
+        "tonnesPerCentimetre": 16.737258643881454,
+        "centreOfGravity": {
+          "x": 53.64436746768232,
+          "y": 0.3392052059951588,
+          "z": 8.426235904560313
+        },
+        "warnings": [
+          {
+            "code": "missing-kb",
+            "severity": "warning",
+            "message": "The hydrostatic table does not provide KB."
+          },
+          {
+            "code": "missing-tcb",
+            "severity": "warning",
+            "message": "The hydrostatic table does not provide TCB at this draft."
+          },
+          {
+            "code": "missing-km-longitudinal",
+            "severity": "warning",
+            "message": "The hydrostatic table does not provide KMl (GMl cannot be calculated) at this draft."
+          },
+          {
+            "code": "missing-waterplane-area",
+            "severity": "warning",
+            "message": "The hydrostatic table does not provide waterplane area at this draft."
+          }
+        ],
+        "freeSurfaceMomentTransverse": 57.22634106651698,
+        "freeSurfaceCorrectionTransverse": 0.01409113128450718,
+        "virtualVcgTransverse": 8.44032703584482,
+        "gmTransverseCorrected": 2.1660477960146434
+      }
+    },
+    {
+      "phase": "arrival",
+      "inputs": {
+        "pending": false,
+        "freeSurfaceCorrectionTransverse": 0.013776908657762226,
+        "virtualVcgTransverse": 8.442505977555715,
+        "freeSurfaceMomentTransverse": 55.90734337142857,
+        "displacementTonnes": 4058.0470380000006,
+        "longitudinalMoment": 217761.03267425206,
+        "verticalMoment": 34204.17903214584,
+        "transverseMoment": 1390.836720752468,
+        "lcg": 53.66153487998382,
+        "vcg": 8.428729068897953,
+        "tcg": 0.34273548525399516,
+        "waterDensity": 1.025,
+        "longitudinalFsm": 0
+      },
+      "hydrostatics": {
+        "shipModelId": "reviewed-apples-vessel",
+        "shipModelName": "Vectis Castle",
+        "calculationSource": {
+          "solverId": "hydrostatic-table-solver",
+          "solverLabel": "Hydrostatic Table Solver",
+          "resourceId": "reviewed-upright",
+          "resourceKind": "hydrostatics.upright-table",
+          "resourcePath": "upright.csv"
+        },
+        "condition": {
+          "displacementTonnes": 4058.0470380000006,
+          "vcg": 8.428729068897953,
+          "lcg": 53.66153487998382,
+          "tcg": 0.34273548525399516,
+          "waterDensity": 1.025,
+          "freeSurfaceMomentTransverse": 55.90734337142857,
+          "heelDeg": 0,
+          "trimDeg": 0
+        },
+        "draft": 2.6662864710803063,
+        "draftRange": {
+          "min": 2.5,
+          "max": 8.4
+        },
+        "trimDeg": 0,
+        "heelDeg": 0,
+        "volume": 3959.070280975611,
+        "displacementTonnes": 4058.0470380000006,
+        "lcb": 62.43804562347036,
+        "lcf": 62.13062864710803,
+        "kmTransverse": 10.611769233867111,
+        "gmTransverse": 2.1830401649691584,
+        "tonnesPerCentimetre": 16.736514588432122,
+        "centreOfGravity": {
+          "x": 53.66153487998382,
+          "y": 0.34273548525399516,
+          "z": 8.428729068897953
+        },
+        "warnings": [
+          {
+            "code": "missing-kb",
+            "severity": "warning",
+            "message": "The hydrostatic table does not provide KB."
+          },
+          {
+            "code": "missing-tcb",
+            "severity": "warning",
+            "message": "The hydrostatic table does not provide TCB at this draft."
+          },
+          {
+            "code": "missing-km-longitudinal",
+            "severity": "warning",
+            "message": "The hydrostatic table does not provide KMl (GMl cannot be calculated) at this draft."
+          },
+          {
+            "code": "missing-waterplane-area",
+            "severity": "warning",
+            "message": "The hydrostatic table does not provide waterplane area at this draft."
+          }
+        ],
+        "freeSurfaceMomentTransverse": 55.90734337142857,
+        "freeSurfaceCorrectionTransverse": 0.013776908657762226,
+        "virtualVcgTransverse": 8.442505977555715,
+        "gmTransverseCorrected": 2.169263256311396
+      }
+    }
+  ]
+}

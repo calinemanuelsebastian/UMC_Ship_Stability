@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createServer} from '../../scripts/test-server.mjs';
 const server=await createServer({server:{middlewareMode:true},appType:'custom'});after(()=>server.close());
-const {cargoSurfaces,cargoOnSurface}=await server.ssrLoadModule('/src/app/cargo-surfaces.ts');
+const {cargoSurfaces,cargoOnSurface,restoredCargoArea}=await server.ssrLoadModule('/src/app/cargo-surfaces.ts');
 const {modelSignature}=await server.ssrLoadModule('/src/app/saved-scenarios.ts');
 const {parseCargoPlan}=await server.ssrLoadModule('/src/app/cargo-plans.ts');
 const {placeCargo,layoutIssues}=await server.ssrLoadModule('/src/app/cargo-layout.ts');
@@ -16,10 +16,9 @@ test('four logical hold areas retain all documented floor and panel regions',()=
  for(const p of dataset.panels){const s=areas.find(s=>s.sourceIds.includes('panel-'+p.id));assert.ok(s);assert.ok(s.regions.some(r=>r.xMin<=p.xAP[0]&&r.xMax>=p.xAP[1]&&r.yMax*2===dataset.panelTypes[p.type].width));}
  assert.equal(cargoSurfaces({...ship,manifest:{...manifest,resources:[]}}).length,0);
 });
-test('display resource preserves pre-integration saved-plan signature',()=>{
- const oldResources=manifest.resources.filter(r=>!['stability.wind-profiles','documentation.annotated-kg','documentation.annotated-kg-csv','stability.downflooding-samples','documentation.downflooding-csv','stability.assessment-basis','stability.constant-lcb-cross-curves','documentation.cross-curves-constant-lcb','documentation.cross-curves-csv','visualization.gltf','loading.tank-catalog','loading.cargo-surfaces'].includes(r.kind));
- const old=JSON.stringify([manifest.id,manifest.units,manifest.coordinateSystem,manifest.principalDimensions,oldResources]);
- assert.equal(modelSignature(ship),old);
+test('display resource preserves pre-integration saved-plan signature',async()=>{
+ const old=JSON.parse(await readFile('src/app/fixtures/pre-capacity-plan.json','utf8'));
+ assert.equal(modelSignature(ship),old.model);
 });
 test('surface identity survives export/import and separates decks',()=>{
  const area=cargoSurfaces(ship)[0],upper=cargoSurfaces(ship).find(a=>a.id==='hold-2-upper');
@@ -42,4 +41,15 @@ test('hatches remain independent exterior surfaces in all tween deck modes',()=>
   assert.equal(layoutIssues([w],h).length,0);assert.equal(cargoOnSurface(w,h),true);assert.ok(areas.filter(a=>a.id.startsWith('hold-')).every(a=>!cargoOnSurface(w,a)));
   assert.equal(h.xMin,mode==='installed'?17.1:23.4);assert.ok(h.sourceIds.includes('hatch-1'));assert.ok(h.sourceIds.includes('hatch-2'));
  }
+});
+
+test('restoring a plan without an editor selection retains a usable documented surface',()=>{
+ const areas=cargoSurfaces(ship);
+ assert.deepEqual(restoredCargoArea(ship,'installed'),areas[0]);
+ assert.deepEqual(restoredCargoArea(ship,'installed',{...areas[1],xMin:-999}),areas[1]);
+ assert.deepEqual(restoredCargoArea(ship,'installed',{...areas[0],id:'unknown'}),areas[0]);
+ const custom={name:'Custom',xMin:0,xMax:2,yMin:0,yMax:2,deckZ:1};
+ assert.deepEqual(restoredCargoArea(ship,'installed',custom),custom);
+ assert.equal(restoredCargoArea({...ship,manifest:{...manifest,resources:[]}},'installed'),undefined);
+ assert.deepEqual(restoredCargoArea(ship,'stored'),cargoSurfaces(ship,'stored')[0]);
 });

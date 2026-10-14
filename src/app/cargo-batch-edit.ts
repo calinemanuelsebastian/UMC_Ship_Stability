@@ -3,7 +3,7 @@ import {parseFootprint,type CargoArea} from './cargo-layout';
 import {cargoBottom,placeSupportedCargo} from './cargo-placement';
 export function sameCargoType(a:WeightDraft,b:WeightDraft){
  const x=a.footprint,y=b.footprint;
- return !!x&&!!y&&x.kind!=='dunnage'&&y.kind!=='dunnage'&&a.name.trim().toLowerCase()===b.name.trim().toLowerCase()&&x.length===y.length&&x.width===y.width&&x.height===y.height;
+ return !!x&&!!y&&x.catalogue?.family===y.catalogue?.family&&x.kind!=='dunnage'&&y.kind!=='dunnage'&&a.name.trim().toLowerCase()===b.name.trim().toLowerCase()&&x.length===y.length&&x.width===y.width&&x.height===y.height;
 }
 export type CargoBatchPatch={name?:string;massTonnes?:number;length?:number;width?:number;height?:number;stackability?:'unknown'|'stackable'|'unstackable';maxTopLoadTonnes?:number|null};
 export function editCargoBatch(weights:WeightDraft[],ids:string[],patch:CargoBatchPatch,areas:CargoArea[]){
@@ -19,7 +19,8 @@ export function editCargoBatch(weights:WeightDraft[],ids:string[],patch:CargoBat
   if(!ids.includes(w.id))return w;
   const p=w.footprint!;
   const footprint=parseFootprint({...p,...(patch.stackability?{stackability:patch.stackability}:{}),...('maxTopLoadTonnes' in patch?{maxTopLoadTonnes:patch.maxTopLoadTonnes??undefined}:{}),length:patch.length??p.length,width:patch.width??p.width,height:patch.height??p.height});
-  return {...w,name:patch.name?.trim()??w.name,massTonnes:patch.massTonnes===undefined?w.massTonnes:String(patch.massTonnes),footprint,vcg:String(Number(w.vcg)+(footprint.height-p.height)/2)};
+  if(p.catalogue?.cgDeclared&&(Number(w.vcg)-cargoBottom(w)<0||Number(w.vcg)-cargoBottom(w)>footprint.height))throw new Error('Edited height excludes the declared cargo CG.');
+  return {...w,name:patch.name?.trim()??w.name,massTonnes:patch.massTonnes===undefined?w.massTonnes:String(patch.massTonnes),footprint,vcg:String(Number(w.vcg)+(p.catalogue?.cgDeclared?0:(footprint.height-p.height)/2))};
  });
  if(['length','width','height'].some(k=>k in patch)){
   for(const w of next.filter(w=>w.footprint)){

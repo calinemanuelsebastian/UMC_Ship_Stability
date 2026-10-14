@@ -50,3 +50,25 @@ test('cargo-only geometry excludes ballast, fuel and static lightship without re
  for(const w of source.filter(w=>['ballast','hfo','mdo','freshwater','fixed'].includes(roleOf(ship,w))))assert.equal(isCargo(ship,w),false);
  assert.equal(source.filter(w=>isFixedWeight(ship,w.id)).length,2);assert.equal(source.length,47);
 });
+
+test('every documented tank knot and intermediate volume conserves liquid moments',()=>{
+ const near=(actual,expected)=>assert.ok(Math.abs(actual-expected)<1e-8*Math.max(1,Math.abs(expected)),`${actual} vs ${expected}`);
+ for(const t of catalog.tanks){
+  for(let i=1;i<t.rows.length;i++){
+   const b=t.rows[i],a=t.rows[i-1];
+   for(const fraction of [0.5,1]){
+    const volume=a[0]+fraction*(b[0]-a[0]),w=tankWeight(t,{id:t.id,volumeM3:volume,density:.89});
+    near(Number(w.massTonnes),volume*.89);
+    for(const [j,key] of [[1,'lcg'],[2,'tcg'],[3,'vcg']])near(Number(w[key])*volume,a[0]*a[j]+fraction*(b[0]*b[j]-a[0]*a[j]));
+    near(Number(w.freeSurfaceMomentTransverse),volume===t.capacityM3?0:(a[4]+fraction*(b[4]-a[4]))*.89);
+   }
+  }
+ }
+});
+test('tank catalogue rejects duplicate volumes, missing capacity, nonfinite values and negative inertia',async()=>{
+ const original=globalThis.fetch;
+ try{for(const mutate of [t=>t.rows[1][0]=0,t=>t.rows.pop(),t=>t.rows[1][2]=null,t=>t.rows[1][4]=-1]){
+  const c=structuredClone(catalog);mutate(c.tanks[0]);globalThis.fetch=async()=>new Response(JSON.stringify(c));
+  await assert.rejects(()=>loadTankCatalog(ship));
+ }}finally{globalThis.fetch=original;}
+});

@@ -9,3 +9,7 @@ export class CargoNeighbours{
  add(w:WeightDraft){const b=cargoBounds(w);if(!b)return;this.all.push(w);const keys=this.keys(b);if(!keys){this.wide.add(w);return;}for(const k of keys){let cell=this.cells.get(k);if(!cell){cell=new Set();this.cells.set(k,cell);}cell.add(w);}}
  query(b:Bounds){const keys=this.keys(b);if(!keys)return this.all;const result=new Set(this.wide);for(const k of keys)for(const w of this.cells.get(k)??[])result.add(w);return [...result];}
 }
+
+// React loading arrays are immutable; WeakMap entries disappear with their snapshots.
+const indexes=new WeakMap<WeightDraft[],CargoNeighbours>();
+export function cargoNeighbours(weights:WeightDraft[]){let index=indexes.get(weights);if(!index){index=new CargoNeighbours(weights);indexes.set(weights,index);}return index;}

@@ -1,0 +1,26 @@
+Window: "Brave Browser (1277) (Terminated)", App: Activity Monitor.
+0 standard window Brave Browser (1277) (Terminated), Secondary Actions: Raise
+	1 text Help: Executable path of this process, Value: Executable Path:
+	2 scroll area
+		3 text entry area /Applications/Brave Browser.app/Contents/MacOS/Brave Browser
+	4 toggle button Help: Show in Finder., Value: off
+	5 text Help: The process ID and name of the parent process to this process, Value: Parent Process: launchd (1) Process Group: Brave Browser (1277) % CPU: 60,95 User: ces (501) Recent hangs: 0
+	6 tab group
+		7 tab Memory, Value: 0
+		8 tab Statistics, Value: 1
+		9 text Help: The number of process threads used in this process, Value: Threads: 44 Ports: 664 CPU Time: 35,52 Context Switches: 2799535 Faults: 135171 Assertions: 0 Page Ins: 8283 Mach Messages In: Mach Messages Out: Mach System Calls: 9645920 Unix System Calls: 3696683
+	10 button (disabled) Sample
+	11 button (disabled) Quit
+	12 close button
+	13 zoom button
+	14 minimise button
+	15 text Brave Browser (1277) (Terminated)
+16 menu bar
+	17 Activity Monitor
+	18 File
+	19 Edit
+	20 View
+	21 Window
+	22 Help
+
+The focused UI element is 3 text entry area /Applications/Brave Browser.app/Contents/MacOS/Brave Browser

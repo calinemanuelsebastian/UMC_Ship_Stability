@@ -1,0 +1,15 @@
+{
+  "status": "hold",
+  "applicationTests": 530,
+  "releaseToolTests": 2,
+  "lint": "pass",
+  "build": "pass",
+  "subpathResources": "pass",
+  "restorationFix": "browser verified",
+  "densePlanMassTonnes": 4033.76,
+  "densePlanCargoCount": 3376,
+  "densePlanResponsiveness": "unresolved; apply command timed out but operation completed",
+  "downloadRetrieval": "unverified; tool timed out",
+  "browserProcessCrash": "not performed",
+  "archiveSha256": "ee8b07ca0969f9303573748c448a524942237d95a252828e5ac3733d0ed7bd76"
+}

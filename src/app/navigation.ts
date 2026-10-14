@@ -1,12 +1,13 @@
 import {tabs,type TabId} from './tabs';
-export const loadingSections=['layout','ballast','tanks','weights','plans'] as const;
+export const loadingSections=['onboard','capacity','layout','ballast','tanks','weights','plans'] as const;
 export type LoadingSection=typeof loadingSections[number];
 export function readNavigation(url:URL,modelIds:string[]) {
  const requested=url.searchParams.get('page');
  const page:TabId=url.hash.startsWith('#theory-')?'theory':tabs.find(t=>t.id===requested)?.id??'home';
  const requestedModel=url.searchParams.get('vessel');
  const vessel=modelIds.includes(requestedModel??'')?requestedModel!:modelIds[0]??'';
- const section=loadingSections.find(s=>s===url.searchParams.get('section'))??'layout';
+ const requestedSection=url.searchParams.get('section');
+ const section=requestedSection==='tanks'?'onboard':loadingSections.find(s=>s===requestedSection)??'onboard';
  return {page,vessel,section};
 }
 export function navigationUrl(current:URL,change:{page?:TabId;vessel?:string;section?:LoadingSection}):URL {

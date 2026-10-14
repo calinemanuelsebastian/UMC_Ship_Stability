@@ -75,6 +75,11 @@ function validateHydrostaticTableRows(rows: HydrostaticTableRow[]): void {
       );
     }
 
+    for (const key of ["displacementTonnes", "volume", "waterplaneArea", "tonnesPerCentimetre", "transverseWaterplaneInertia", "longitudinalWaterplaneInertia", "bmTransverse", "bmLongitudinal"] as const) {
+      if (row[key] !== undefined && row[key]! < 0) {
+        throw new Error(`Negative ${key} in hydrostatic table row ${index + 1}.`);
+      }
+    }
     const previousRow = rows[index - 1];
 
     if (previousRow && previousRow.draft === row.draft) {

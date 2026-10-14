@@ -4,12 +4,12 @@ import {createServer} from '../../scripts/test-server.mjs';
 const server=await createServer({server:{middlewareMode:true},appType:'custom'});after(()=>server.close());
 const {readNavigation,navigationUrl}=await server.ssrLoadModule('/src/app/navigation.ts');
 test('page, vessel and loading section round-trip in links',()=>{
- const url=navigationUrl(new URL('https://example.com/simulator/'),{page:'loading',vessel:'castle',section:'tanks'});
- assert.deepEqual(readNavigation(url,['pontoon','castle']),{page:'loading',vessel:'castle',section:'tanks'});
+ const url=navigationUrl(new URL('https://example.com/simulator/'),{page:'loading',vessel:'castle',section:'onboard'});
+ assert.deepEqual(readNavigation(url,['pontoon','castle']),{page:'loading',vessel:'castle',section:'onboard'});
  assert.equal(url.pathname,'/simulator/');
 });
 test('unknown bookmarks fall back to available pages and models',()=>{
- assert.deepEqual(readNavigation(new URL('https://example.com/?page=bad&vessel=missing&section=bad'),['pontoon']),{page:'home',vessel:'pontoon',section:'layout'});
+ assert.deepEqual(readNavigation(new URL('https://example.com/?page=bad&vessel=missing&section=bad'),['pontoon']),{page:'home',vessel:'pontoon',section:'onboard'});
 });
 test('legacy theory anchors select theory and are removed when leaving it',()=>{
  const url=new URL('https://example.com/?page=loading#theory-hydrostatics');
@@ -25,3 +25,5 @@ test('new visits open Home while explicit simulator bookmarks remain valid',()=>
  assert.equal(readNavigation(new URL('https://example.com/'),['pontoon']).page,'home');
  assert.equal(readNavigation(new URL('https://example.com/?page=hydrostatics'),['pontoon']).page,'hydrostatics');
 });
+
+test('old tank bookmarks open the unified workplan',()=>{assert.equal(readNavigation(new URL('https://example.com/?page=loading&section=tanks'),['pontoon']).section,'onboard');});

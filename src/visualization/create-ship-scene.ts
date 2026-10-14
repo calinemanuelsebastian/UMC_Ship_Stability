@@ -10,7 +10,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { schematicOutline, heeledBox, hullPose, illustrativeAttitudePose, type BoxHull, type SceneCondition } from './ship-scene-data';
 export type CameraView = 'perspective' | 'side' | 'top' | 'bow';
-export type SceneWeight = { name?:string; footprint?: Footprint; cargoPoint?: {x:number;y:number;z:number}; id: string; label: string; point: { x: number; y: number; z: number } };
+export type SceneWeight = { markerColor?:string; tankBox?:{length:number;width:number;height:number;fill:number;point:{x:number;y:number;z:number}}; name?:string; footprint?: Footprint; cargoPoint?: {x:number;y:number;z:number}; id: string; label: string; point: { x: number; y: number; z: number } };
 export type SceneOptions = { panelMode?:'installed'|'stored'|'ashore'; exterior: boolean; panels: boolean; cargo: boolean; allWeightLabels: boolean; weights: SceneWeight[]; selectedWeight: string; axes: boolean; water: boolean; hullTransparency: number; panelTransparency: number; cargoTransparency: number; selected: boolean; axisLength: number; axisThickness: number; labelSize: number; waterlineWidth: number; measurements: boolean; draftLabels: { aft: string; forward: string } };
 export function createShipScene(host: HTMLElement, hull: BoxHull, onSelect: () => void, onError: () => void, onSelectWeight: (id: string) => void) {
   const scene = new THREE.Scene(); scene.background = new THREE.Color('#e9f1f6');
@@ -69,7 +69,10 @@ export function createShipScene(host: HTMLElement, hull: BoxHull, onSelect: () =
     paintLabel(sprite, text, color);
     sprite.renderOrder = 20; labels.push(sprite); return sprite;
   }
-  const weightMarkers = new Map<string, { marker: THREE.Mesh<THREE.BoxGeometry, THREE.MeshBasicMaterial>; text: THREE.Sprite }>();
+  const tanks = new Map<string,{shell:THREE.LineSegments<THREE.EdgesGeometry,THREE.LineBasicMaterial>;liquid:THREE.Mesh<THREE.BoxGeometry,THREE.MeshPhongMaterial>}>();
+  const referenceLabels={buoyancy:label('B · upright','#167e96'),metacentre:label('M · upright','#6756a8')};
+  Object.values(referenceLabels).forEach(l=>body.add(l));
+  const weightMarkers = new Map<string, { marker: THREE.Mesh<THREE.SphereGeometry, THREE.MeshBasicMaterial>; text: THREE.Sprite }>();
   const gLabel = label('G', '#9c4900'); body.add(gLabel);
   const oLabel = label('O', '#29465a'); axes.add(oLabel);
   // Mesh shafts stay visibly thick on WebGL implementations with one-pixel lines.
@@ -143,7 +146,7 @@ export function createShipScene(host: HTMLElement, hull: BoxHull, onSelect: () =
     start = undefined;
     const rect = canvas.getBoundingClientRect();
     const ray = new THREE.Raycaster(); ray.setFromCamera(new THREE.Vector2((event.clientX - rect.left) / rect.width * 2 - 1, -(event.clientY - rect.top) / rect.height * 2 + 1), camera);
-    const hits = ray.intersectObjects([...[...weightMarkers.values()].flatMap(w => [w.marker, w.text]), ...[...cargoMeshes.values()].filter(c=>c.visible)]);
+    const hits = ray.intersectObjects([...[...tanks.values()].map(t=>t.liquid).filter(o=>o.visible),...[...weightMarkers.values()].flatMap(w => [w.marker, w.text]).filter(o=>o.visible), ...[...cargoMeshes.values()].filter(c=>c.visible)]);
     if (hits.length) onSelectWeight(hits[0].object.userData.weightId);
     else if (ray.intersectObjects([gravity, gLabel]).length) onSelect();
   };
@@ -155,10 +158,19 @@ export function createShipScene(host: HTMLElement, hull: BoxHull, onSelect: () =
     zoom(factor: number) { const delta = camera.position.clone().sub(controls.target); delta.setLength(THREE.MathUtils.clamp(delta.length() * factor, controls.minDistance, controls.maxDistance)); camera.position.copy(controls.target).add(delta); controls.update(); render(); },
     update(data: SceneCondition, options: SceneOptions) {
       appearance = options;
+      for(const key of ['buoyancy','metacentre'] as const){const p=data[key];referenceLabels[key].visible=!!p;if(p)referenceLabels[key].position.set(p.x,p.y,p.z);}
 
       const cargoIds=new Set(options.weights.filter(w=>w.footprint).map(w=>w.id));
       const weightIds=new Set(options.weights.map(w=>w.id));
       for(const [id,cube] of cargoMeshes)if(!cargoIds.has(id)){body.remove(cube);disposeCargoOutline(cube);cube.geometry.dispose();cube.material.dispose();cargoMeshes.delete(id);}
+      const tankIds=new Set(options.weights.filter(w=>w.tankBox).map(w=>w.id));
+      for(const [id,tank] of tanks)if(!tankIds.has(id)){body.remove(tank.shell,tank.liquid);tank.shell.geometry.dispose();tank.shell.material.dispose();tank.liquid.geometry.dispose();tank.liquid.material.dispose();tanks.delete(id);}
+      for(const w of options.weights)if(w.tankBox){
+        const b=w.tankBox;let tank=tanks.get(w.id);
+        if(!tank){const g=new THREE.BoxGeometry(1,1,1);const shell=new THREE.LineSegments(new THREE.EdgesGeometry(g),new THREE.LineBasicMaterial({color:'#167e96'}));g.dispose();const liquid=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshPhongMaterial({color:'#32a9c2'}));liquid.userData.weightId=w.id;tank={shell,liquid};tanks.set(w.id,tank);body.add(shell,liquid);}
+        tank.shell.position.set(b.point.x,b.point.y,b.point.z);tank.shell.scale.set(b.length,b.height,b.width);tank.shell.visible=options.cargo;
+        tank.liquid.position.set(b.point.x,b.point.y-b.height*(1-b.fill)/2,b.point.z);tank.liquid.scale.set(b.length,b.height*b.fill,b.width);tank.liquid.visible=options.cargo&&b.fill>0;
+      }
       art.begin();
       for(const w of options.weights)if(w.footprint&&w.cargoPoint){
         let cube=cargoMeshes.get(w.id);
@@ -175,15 +187,16 @@ export function createShipScene(host: HTMLElement, hull: BoxHull, onSelect: () =
       options.weights.forEach((weight, index) => {
         let entry = weightMarkers.get(weight.id);
         if (!entry) {
-          const marker = new THREE.Mesh(new THREE.BoxGeometry(span*.024,span*.024,span*.024), new THREE.MeshBasicMaterial({color:'#6b3997',depthTest:false,depthWrite:false}));
+          const marker = new THREE.Mesh(new THREE.SphereGeometry(span*.008,12,8), new THREE.MeshBasicMaterial({color:'#6b3997',depthTest:false,depthWrite:false}));
           const text = label(weight.label, '#6b3997'); marker.renderOrder = 12;
           marker.userData.weightId = weight.id; text.userData.weightId = weight.id;
           body.add(marker,text); entry = {marker,text}; weightMarkers.set(weight.id,entry);
         }
         entry.marker.position.set(weight.point.x,weight.point.y,weight.point.z);
         entry.marker.scale.setScalar(1);
-        entry.marker.material.color.set(weight.id === options.selectedWeight ? '#bf1674' : '#6b3997');
-        entry.text.visible = !hull.schematic || options.allWeightLabels || weight.id === options.selectedWeight;
+        entry.marker.visible = options.cargo && (!weight.footprint || weight.id === options.selectedWeight);
+        entry.marker.material.color.set(weight.id === options.selectedWeight ? '#bf1674' : weight.markerColor??'#6b3997');
+        entry.text.visible = options.cargo && (options.allWeightLabels || weight.id === options.selectedWeight);
         entry.text.position.copy(entry.marker.position).add(new THREE.Vector3(0,span*(.055 + (index%3)*.03),0));
         paintLabel(entry.text,options.allWeightLabels || weight.id === options.selectedWeight ? weight.label : String(index+1),'#6b3997');
       });

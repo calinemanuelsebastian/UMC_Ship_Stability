@@ -1,0 +1,441 @@
+{
+  "kind": "cargo-plan",
+  "version": 1,
+  "id": "pre-capacity-regression",
+  "name": "Historical reference inputs",
+  "voyage": "Compatibility regression",
+  "model": "[\"reviewed-apples-vessel\",{\"length\":\"m\",\"mass\":\"t\",\"density\":\"t/m3\",\"angle\":\"deg\"},{\"origin\":\"Aft perpendicular, centreline, baseline\",\"longitudinalOriginFromAP\":0,\"amidshipsX\":60.85,\"xPositive\":\"forward\",\"yPositive\":\"starboard\",\"zPositive\":\"up\"},{\"lbp\":121.7,\"beam\":17.4,\"mouldedDepth\":11.4},[{\"id\":\"reviewed-loading\",\"kind\":\"loading.weights\",\"path\":\"weights.json\",\"config\":{\"fixedWeightIds\":[\"Calc_G_Cargo-68\"]}},{\"id\":\"reviewed-upright\",\"kind\":\"hydrostatics.upright-table\",\"path\":\"upright.csv\"},{\"id\":\"reviewed-trim\",\"kind\":\"hydrostatics.trimmed-table\",\"path\":\"trimmed-table.json\"},{\"id\":\"reviewed-validation\",\"kind\":\"validation.reference-cases\",\"path\":\"validation.json\"},{\"id\":\"schematic-hull\",\"kind\":\"visualization.schematic-cargo-hull\",\"config\":{\"source\":\"001_GENERAL_ARRANGEMENT.pdf principal dimensions; outline is illustrative, not traced or validated\"}},{\"id\":\"port-symmetry-audit\",\"kind\":\"documentation.port-symmetry-audit\",\"path\":\"port-symmetry-audit.json\",\"label\":\"Port symmetry comparison — original source cases\"}]]",
+  "savedAt": "2026-10-09T00:00:00.000Z",
+  "state": {
+    "scenario": "loading",
+    "weights": [
+      {
+        "id": "Calc_G_Cargo-40",
+        "name": "CH1LF",
+        "massTonnes": "136.0",
+        "lcg": "101.67",
+        "vcg": "3.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-41",
+        "name": "CH1LA",
+        "massTonnes": "278.0",
+        "lcg": "89.2",
+        "vcg": "3.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-42",
+        "name": "CH1UF",
+        "massTonnes": "136.0",
+        "lcg": "101.67",
+        "vcg": "9.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-43",
+        "name": "CH1UA",
+        "massTonnes": "278.0",
+        "lcg": "89.2",
+        "vcg": "9.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-44",
+        "name": "CH2L",
+        "massTonnes": "1274.0",
+        "lcg": "52.07",
+        "vcg": "3.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-45",
+        "name": "CH2U",
+        "massTonnes": "1274.0",
+        "lcg": "48.82",
+        "vcg": "9.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-48",
+        "name": "CH1LF Pillars",
+        "massTonnes": "3.9305945841328938",
+        "lcg": "101.67",
+        "vcg": "2.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-49",
+        "name": "CH1LF Interm. Deck",
+        "massTonnes": "3.0862080591495706",
+        "lcg": "101.67",
+        "vcg": "2.194",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-50",
+        "name": "CH1LF Fore",
+        "massTonnes": "3.3282635932005173",
+        "lcg": "105.1",
+        "vcg": "3.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-51",
+        "name": "CH1LA Pillars",
+        "massTonnes": "8.034597752859886",
+        "lcg": "89.2",
+        "vcg": "2.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-52",
+        "name": "CH1LA Interm. Deck",
+        "massTonnes": "6.308572356202799",
+        "lcg": "89.2",
+        "vcg": "2.194",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-53",
+        "name": "CH1LA Fore",
+        "massTonnes": "0.3025694175636834",
+        "lcg": "95.0",
+        "vcg": "3.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-54",
+        "name": "CH1UF Pillars",
+        "massTonnes": "3.9305945841328938",
+        "lcg": "101.67",
+        "vcg": "8.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-55",
+        "name": "CH1UF Interm. Deck",
+        "massTonnes": "3.0862080591495706",
+        "lcg": "101.67",
+        "vcg": "9.394000000000002",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-56",
+        "name": "CH1UF Fore",
+        "massTonnes": "3.3282635932005173",
+        "lcg": "105.1",
+        "vcg": "9.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-57",
+        "name": "CH1UA Pillars",
+        "massTonnes": "8.034597752859886",
+        "lcg": "89.2",
+        "vcg": "8.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-58",
+        "name": "CH1UA Interm. Deck",
+        "massTonnes": "6.308572356202799",
+        "lcg": "89.2",
+        "vcg": "9.394000000000002",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-59",
+        "name": "CH1UA Fore",
+        "massTonnes": "0.3025694175636834",
+        "lcg": "95.0",
+        "vcg": "9.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-60",
+        "name": "CH2L Pillars",
+        "massTonnes": "36.8204227954802",
+        "lcg": "52.07",
+        "vcg": "2.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-61",
+        "name": "CH2L Interm. Deck",
+        "massTonnes": "28.91050784820995",
+        "lcg": "52.07",
+        "vcg": "2.194",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-62",
+        "name": "CH2L Fore",
+        "massTonnes": "3.3282635932005173",
+        "lcg": "80.64999999999999",
+        "vcg": "3.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-63",
+        "name": "CH2U Pillars",
+        "massTonnes": "36.8204227954802",
+        "lcg": "48.82",
+        "vcg": "8.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-64",
+        "name": "CH2U Interm. Deck",
+        "massTonnes": "28.91050784820995",
+        "lcg": "48.82",
+        "vcg": "8.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-65",
+        "name": "CH2U Fore",
+        "massTonnes": "3.3282635932005173",
+        "lcg": "80.64999999999999",
+        "vcg": "9.394",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-68",
+        "name": "Lightship",
+        "massTonnes": "3660.0",
+        "lcg": "51.15",
+        "vcg": "8.7",
+        "tcg": "0.4",
+        "freeSurfaceMomentTransverse": "0"
+      },
+      {
+        "id": "Calc_G_Cargo-69",
+        "name": "HFO",
+        "massTonnes": "241.67",
+        "lcg": "19.59",
+        "vcg": "4.25",
+        "tcg": "-0.72",
+        "freeSurfaceMomentTransverse": "55.21"
+      },
+      {
+        "id": "Calc_G_Cargo-70",
+        "name": "MDO",
+        "massTonnes": "193.02",
+        "lcg": "18.34",
+        "vcg": "4.64",
+        "tcg": "-0.96",
+        "freeSurfaceMomentTransverse": "67.7"
+      },
+      {
+        "id": "Calc_G_Cargo-71",
+        "name": "Fresh Water",
+        "massTonnes": "69.59",
+        "lcg": "5.69",
+        "vcg": "5.98",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "87.93"
+      },
+      {
+        "id": "Calc_G_Cargo-72",
+        "name": "LO",
+        "massTonnes": "17.65",
+        "lcg": "13.76",
+        "vcg": "6.99",
+        "tcg": "2.86",
+        "freeSurfaceMomentTransverse": "2.27"
+      },
+      {
+        "id": "Calc_G_Cargo-73",
+        "name": "MISC",
+        "massTonnes": "18.33",
+        "lcg": "24.44",
+        "vcg": "4.78",
+        "tcg": "1.69",
+        "freeSurfaceMomentTransverse": "96.5"
+      },
+      {
+        "id": "Calc_G_Cargo-74",
+        "name": "TWDeck",
+        "massTonnes": "269.6",
+        "lcg": "63.24",
+        "vcg": "6.97",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0.0"
+      },
+      {
+        "id": "Calc_G_Cargo-75",
+        "name": "Crew ",
+        "massTonnes": "2.0",
+        "lcg": "5.5",
+        "vcg": "11.17",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0.0"
+      },
+      {
+        "id": "Calc_G_Cargo-76",
+        "name": "Provisions",
+        "massTonnes": "12.0",
+        "lcg": "4.2",
+        "vcg": "11.0",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0.0"
+      },
+      {
+        "id": "Calc_Trim-30",
+        "name": "16 WT PS",
+        "massTonnes": "173.92",
+        "lcg": "79.4",
+        "vcg": "5.51",
+        "tcg": "-7.8",
+        "freeSurfaceMomentTransverse": "0.0"
+      },
+      {
+        "id": "Calc_Trim-31",
+        "name": "12 WT PS",
+        "massTonnes": "158.24",
+        "lcg": "90.33",
+        "vcg": "5.73",
+        "tcg": "-7.74",
+        "freeSurfaceMomentTransverse": "0.0"
+      },
+      {
+        "id": "Calc_Trim-32",
+        "name": "10 DB PS",
+        "massTonnes": "76.68",
+        "lcg": "90.39",
+        "vcg": "0.63",
+        "tcg": "-4.5",
+        "freeSurfaceMomentTransverse": "0.0"
+      },
+      {
+        "id": "Calc_Trim-33",
+        "name": "01 Forepeak",
+        "massTonnes": "193.04",
+        "lcg": "116.95",
+        "vcg": "5.46",
+        "tcg": "0.0",
+        "freeSurfaceMomentTransverse": "0.0"
+      },
+      {
+        "id": "Calc_Trim-34",
+        "name": "02 Deeptank PS",
+        "massTonnes": "105.81",
+        "lcg": "109.15",
+        "vcg": "4.12",
+        "tcg": "-2.41",
+        "freeSurfaceMomentTransverse": "0.0"
+      },
+      {
+        "id": "Calc_Trim-35",
+        "name": "03 Deeptank SB",
+        "massTonnes": "96.07",
+        "lcg": "109.27",
+        "vcg": "4.11",
+        "tcg": "2.44",
+        "freeSurfaceMomentTransverse": "0.0"
+      },
+      {
+        "id": "Calc_Trim-36",
+        "name": "11 DB SB",
+        "massTonnes": "80.17",
+        "lcg": "90.32",
+        "vcg": "0.63",
+        "tcg": "4.4",
+        "freeSurfaceMomentTransverse": "0.0"
+      },
+      {
+        "id": "Calc_Trim-37",
+        "name": "05 DB SB",
+        "massTonnes": "47.43",
+        "lcg": "101.03",
+        "vcg": "0.667",
+        "tcg": "3.31",
+        "freeSurfaceMomentTransverse": "0.0"
+      },
+      {
+        "id": "Calc_Trim-38",
+        "name": "15 DB SB",
+        "massTonnes": "92.44",
+        "lcg": "79.38",
+        "vcg": "0.62",
+        "tcg": "4.81",
+        "freeSurfaceMomentTransverse": "0.0"
+      },
+      {
+        "id": "Calc_Trim-39",
+        "name": "14A DB PS",
+        "massTonnes": "112.73",
+        "lcg": "66.9",
+        "vcg": "0.62",
+        "tcg": "-4.99",
+        "freeSurfaceMomentTransverse": "0.0"
+      },
+      {
+        "id": "Calc_Trim-40",
+        "name": "15A DB SB",
+        "massTonnes": "116.22",
+        "lcg": "66.8",
+        "vcg": "0.62",
+        "tcg": "4.83",
+        "freeSurfaceMomentTransverse": "0.0"
+      },
+      {
+        "id": "Calc_Trim-41",
+        "name": "06 WT PS",
+        "massTonnes": "114.61",
+        "lcg": "104.28",
+        "vcg": "6.11",
+        "tcg": "-5.44",
+        "freeSurfaceMomentTransverse": "0.0"
+      },
+      {
+        "id": "Calc_Trim-42",
+        "name": "18 DB PS",
+        "massTonnes": "112.73",
+        "lcg": "52.9",
+        "vcg": "0.62",
+        "tcg": "-4.92",
+        "freeSurfaceMomentTransverse": "0.0"
+      },
+      {
+        "id": "Calc_Trim-43",
+        "name": "19 DB SB",
+        "massTonnes": "116.22",
+        "lcg": "52.8",
+        "vcg": "0.62",
+        "tcg": "4.83",
+        "freeSurfaceMomentTransverse": "0.0"
+      }
+    ],
+    "manual": {},
+    "manualMode": "displacement",
+    "density": 1.025,
+    "longitudinalFsm": 0
+  }
+}

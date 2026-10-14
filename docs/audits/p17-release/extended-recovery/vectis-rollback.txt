@@ -1,0 +1,111 @@
+- note:
+  - text: Rollback compatibility build · Older functionality. Newer plans may be refused to protect their inputs. Keep original backups and return to the current version for unsupported plans.
+  - text: Versiune de revenire · Funcții mai vechi. Planurile noi pot fi refuzate pentru a proteja datele. Păstrați copiile originale.
+- banner:
+  - generic: UMC / Ship Stability
+  - generic: Teaching simulator · Ship stability
+  - generic "Reference system · Model source"
+  - option "Model source" [selected]
+  - option "Custom"
+  - option "UK — AP / forward"
+  - option "Russian — amidships / forward"
+  - option "Nautical symbols" [selected]
+  - option "Coordinate symbols"
+  - button "Ship library"
+  - combobox "Interface language":
+    - option "EN" [selected]
+    - option "RO"
+- navigation "Simulator sections":
+  - button "Overview"
+  - button "Loading"
+  - button "3D inspection"
+  - button "Assessment"
+  - generic: Supporting tools
+  - combobox "Supporting tools":
+    - option "Supporting tools" [disabled] [selected]
+    - option "Hydrostatic Sandbox"
+    - option "Roll Simulation"
+    - option "Validation"
+    - option "Theory"
+- main:
+  - region "Current condition":
+    - strong: Vectis Castle
+    - generic: Weight-based loading
+    - term: Displacement
+    - definition: 3,929.6 t
+    - term: VCG / KG
+    - definition: 8.581 m
+    - term: Water density
+    - definition: 1.025 t/m³
+    - term: Total transverse FSM
+    - definition: 0 t·m
+  - generic "▸ Condition settings"
+  - option "Rectangular Pontoon"
+  - option "Vectis Castle" [selected]
+  - option "Weight-based loading" [selected]
+  - option "Manual scenario"
+  - generic "▾ Save and export"
+  - button "Export complete assessment report"
+  - generic "Saved scenarios" [active]
+  - paragraph: Save named input snapshots in this browser. Export a JSON file for backup or sharing. Incomplete inputs may be saved; results are recalculated when loaded.
+  - text: Scenario name
+  - textbox "Scenario name":
+    - /placeholder: e.g. Departure condition or Arrival condition
+  - button "Save new scenario" [disabled]
+  - button "Export current inputs"
+  - text: Saved condition
+  - combobox "Saved condition":
+    - option "Choose a scenario" [selected]
+  - button "Load selected scenario" [disabled]
+  - button "Delete saved scenario" [disabled]
+  - button "Undo scenario load" [disabled]
+  - text: Import scenario file
+  - button "Import scenario file"
+  - status: Some saved records require a newer simulator or could not be read. They remain unchanged in storage. Return to the current version to open them.
+  - status: All calculation tabs use the current condition.
+  - generic "Hydrostatic table corrections — calculation review required"
+  - generic "Start a loading condition"
+  - option "Choose a condition" [selected]
+  - option "Empty cargo plan — empty tanks"
+  - option "Ballast departure"
+  - option "Ballast arrival"
+  - option "Homogeneous cargo — departure"
+  - option "Homogeneous cargo — arrival"
+  - option "Homogeneous cargo, decks stored — departure"
+  - option "Homogeneous cargo, decks stored — arrival"
+  - option "Heavy cargo — departure"
+  - option "Heavy cargo — arrival"
+  - option "Steel coils — departure"
+  - option "Steel coils — arrival"
+  - option "Original loading reference"
+  - heading "Loading" [level=1]
+  - navigation "Loading sections":
+    - button "Cargo layout"
+    - button "Ballast"
+    - button "Tanks and liquids"
+    - button "Weights and totals"
+    - button "Saved cargo plans"
+  - text: ▾
+  - heading "Cargo Plans" [level=1]
+  - paragraph: Create a loading plan below. Save named plans in this browser or download a JSON backup to transfer them. Browser storage is local to this device and website address; clearing browser data removes it.
+  - text: Plan name
+  - textbox "Plan name"
+  - text: Voyage / notes
+  - textbox "Voyage / notes"
+  - button "New plan (fixed weights only)"
+  - button "Save as new plan" [disabled]
+  - button "Update selected plan" [disabled]
+  - button "Download backup"
+  - text: Saved cargo plans
+  - combobox "Saved cargo plans":
+    - option "Choose a plan" [selected]
+  - button "Preview selected plan" [disabled]
+  - button "Delete named plan" [disabled]
+  - button "Undo plan application" [disabled]
+  - text: Import cargo plan (JSON)
+  - button "Import cargo plan (JSON)"
+  - button "Reload saved plans"
+  - paragraph: Incomplete plans can be saved. Coordinates must be entered explicitly; hold names do not supply positions. Quantity is descriptive; Mass (t) is the total mass of the row.
+  - status: Some saved records require a newer simulator or could not be read. They remain unchanged in storage. Return to the current version to open them.
+  - paragraph: Recovery draft saved locally.
+- contentinfo: UMCsShipStabilityApp · Hydrostatics learning workspace

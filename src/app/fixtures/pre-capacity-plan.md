@@ -1,0 +1,1 @@
+Generated regression export using the manifest, signature exclusion contract and source weights at git revision 5f68b82103535ec09f97a381658eaa35e5ecf7b2. It is a historical-format test fixture, not a user-saved plan or approved operating condition. Values were not generated through the current modelSignature implementation.

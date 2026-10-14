@@ -4,7 +4,7 @@ import {parseArea,type CargoArea} from '../app/cargo-layout';
 import type { ShipModelPackage, Point3 } from '../core/domain/ship-model';
 import type { ReferenceSettings } from '../core/reference/reference-system';
 export type BoxHull = { length: number; beam: number; depth: number; schematic?: boolean; model?: { url: string; exteriorGroup: string; panelGroup: string; hatchSurfaces?:CargoArea[]; waterlineMeshes: string[]; storedPanels?:StoredPanel[] } };
-export type SceneCondition = { teachingTrimDeg?: number; didactic?: boolean; heelDeg?: number; draftAft: number; draftForward: number; gravity: Point3; origin: Point3; directions: { x: Point3; y: Point3; z: Point3 } };
+export type SceneCondition = { buoyancy?:Point3; metacentre?:Point3; teachingTrimDeg?: number; didactic?: boolean; heelDeg?: number; draftAft: number; draftForward: number; gravity: Point3; origin: Point3; directions: { x: Point3; y: Point3; z: Point3 } };
 /** Only an explicitly declared rectangular hull may be drawn as a box. */
 export function boxHullFor(ship: ShipModelPackage): BoxHull {
   if (!ship.manifest.resources.some(item => item.kind === 'visualization.box-hull')) throw new Error('This model does not yet provide supported 3D hull geometry.');

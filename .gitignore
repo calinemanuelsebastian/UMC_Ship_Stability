@@ -27,3 +27,6 @@ dist-ssr
 *.xlsx
 *.pdf
 work/
+
+# Local rollback snapshot; expanded reviewed sources are versioned instead
+/docs/audits/p01-baseline/untracked-baseline.zip

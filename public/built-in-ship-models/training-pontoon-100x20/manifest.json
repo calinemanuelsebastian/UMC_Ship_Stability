@@ -126,6 +126,20 @@
       "kind": "loading.operational-weights",
       "path": "loading/operational-weights.json",
       "label": "Empty deck training condition"
+    },
+    {
+      "id": "capacity-planning-reference",
+      "kind": "loading.capacity",
+      "config": {
+        "draftLimit": {
+          "label": "Design draught teaching reference",
+          "draft": 3,
+          "datum": "Baseline / underside of rectangular hull",
+          "source": "Synthetic pontoon principal dimensions: designDraft = 3 m; training hydrostatic table",
+          "applicability": "Teaching reference at design draught, not a certified maximum loading limit.",
+          "resourceId": "upright-hydrostatics"
+        }
+      }
     }
   ]
 }

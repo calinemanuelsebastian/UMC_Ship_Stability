@@ -24,6 +24,22 @@ export function ShipLibrary({records,activeId,onRefresh,onUse,onClose}:{records:
  {editing&&<ShipEditor onCancel={()=>setEditing(false)} onReview={result=>{setPreview(result);setName(result.bundle.manifest.name);setEditing(false);}}/>}
  {preview&&!editing&&<div className="ship-package-preview"><h3>{l('Review before saving','Verifică înainte de salvare')}</h3><p><strong>{preview.bundle.manifest.name}</strong> · {preview.bundle.manifest.principalDimensions.lbp} × {preview.bundle.manifest.principalDimensions.beam} × {preview.bundle.manifest.principalDimensions.mouldedDepth} m</p>
  <p>{l('Draft range','Interval pescaj')}: {preview.draftRange.join('–')} m · {l('Tanks','Tancuri')}: {preview.catalog?.tanks.length??0} · {l('Fixed weights','Mase fixe')}: {preview.fixedCount}</p>
+ <details><summary>{l('Numerical data coverage','Acoperirea datelor numerice')}</summary>
+ <p>{l('Available data still has range and condition restrictions. This is not a safety approval.','Datele disponibile au limite de interval și de aplicabilitate. Aceasta nu este o aprobare de siguranță.')}</p>
+ <dl className="vessel-data-coverage">{([
+ ['uprightDisplacement','Upright displacement','Deplasament la asietă dreaptă'],
+ ['transverseGM','Transverse GM','GM transversal'],
+ ['longitudinalTrim','Trim calculation','Calculul asietei'],
+ ['gzCurves','GZ curves','Curbe GZ'],
+ ['tankFilling','Tank filling tables','Tabele de umplere a tancurilor'],
+ ['kgLimitComparison','KG limit comparison','Compararea limitei KG'],
+ ['windProfiles','Wind profiles','Profiluri de vânt'],
+ ['downfloodingScreen','Downflooding screening','Verificarea inundării'],
+ ['movableDeck','Movable deck weights','Masele punții mobile'],
+ ['coupledHeeledDrafts','Coupled heeled draughts','Pescaje la înclinare cuplată'],
+ ] as const).map(([key,en,ro])=><div key={key}><dt>{l(en,ro)}</dt><dd>{preview.foundation.capabilities[key]?l('Available within source coverage','Disponibil în limitele sursei'):l('Unavailable','Indisponibil')}</dd></div>)}</dl>
+ {preview.foundation.upright.screening.findings.length>0&&<ul>{preview.foundation.upright.screening.findings.map((f,i)=><li key={i}>{l('Row','Rând')} {f.row}: {f.check} — {f.message}</li>)}</ul>}
+ </details>
  <ul>{preview.warnings.map(w=><li key={w}>{w}</li>)}</ul>
  <label>{l('Library name','Nume în bibliotecă')}<input value={name} maxLength={120} onChange={e=>setName(e.target.value)}/></label>
  <button disabled={busy||!name.trim()} onClick={()=>void run(async()=>{await shipLibrary('add',{id:`local-${crypto.randomUUID()}`,name:name.trim(),savedAt:new Date().toISOString(),bundle:preview.bundle});await onRefresh();setPreview(undefined);setMessage(l('Ship saved locally. Choose Use ship when you are ready.','Nava a fost salvată local. Alege Folosește nava când ești pregătit.'));})}>{l('Save locally','Salvează local')}</button></div>}

@@ -1,0 +1,20 @@
+{
+  "status": "local-supported-runtime-checks-passed-release-acceptance-open",
+  "node": "24.21.0",
+  "npm": "11.19.0",
+  "platform": "macOS arm64",
+  "applicationTests": 531,
+  "releaseTests": 6,
+  "dependencyVulnerabilities": 0,
+  "lockfileSha256": "173f5023ce2ab6efe918c5405b207cd7c2f565a569905da501176861b52857ea",
+  "archive": "/tmp/umc-node24-deployment-candidate-2026-10-14.zip",
+  "archiveSha256": "60a8b19d97c9930ff5e682351fd86e85fb17b7778ca2ff5c50f6f34de1ef1377",
+  "revision": "working-tree",
+  "tag": "node24-candidate",
+  "hostingBases": [
+    "/UMC_Ship_Stability/",
+    "/"
+  ],
+  "browserCrashVerified": false,
+  "githubActionsRun": false
+}

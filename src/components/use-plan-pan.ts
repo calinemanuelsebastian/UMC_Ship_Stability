@@ -1,3 +1,4 @@
+import {useCargoDragCancellation} from './use-cargo-drag-cancellation';
 import {useEffect,useRef,useState,type PointerEvent} from 'react';
 import {anchoredPlanOffset,clampPlanZoom} from '../app/plan-navigation';
 /** Editing remains single-pointer; touch navigation uses the explicit Pan tool. */
@@ -10,6 +11,7 @@ export function usePlanPan(enabled:boolean,zoom=1,onZoom?:(value:number)=>void){
  const svgRef=useRef<SVGSVGElement|null>(null);
  const gesture=useRef<{point:{x:number;y:number};distance:number;offset:{x:number;y:number};zoom:number;inverse:DOMMatrix;centre:{x:number;y:number}}|undefined>(undefined);
  const suppress=useRef(false);
+ useCargoDragCancellation(()=>{gesture.current=undefined;pointers.current.clear();},enabled,undefined);
  function measure(){const ps=[...pointers.current.values()];return {point:ps.length>1?{x:(ps[0].x+ps[1].x)/2,y:(ps[0].y+ps[1].y)/2}:ps[0],distance:ps.length>1?Math.hypot(ps[0].x-ps[1].x,ps[0].y-ps[1].y):0};}
  function begin(){const svg=svgRef.current,inverse=svg?.getScreenCTM()?.inverse(),m=measure();if(!svg||!inverse||!m.point)return;const b=svg.viewBox.baseVal;gesture.current={...m,offset:current.current.offset,zoom:current.current.zoom,inverse,centre:{x:b.x+b.width/2,y:b.y+b.height/2}};}
  useEffect(()=>{

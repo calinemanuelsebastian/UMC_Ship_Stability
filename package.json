@@ -1,7 +1,7 @@
 {
   "name": "umcsshipstabilityapp",
   "private": true,
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0-beta.2-rc.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -19,7 +19,12 @@
     "test:trim": "node --test src/core/trim/compute-trim-equilibrium.test.mjs",
     "test:3d": "node --test src/visualization/ship-scene-data.test.mjs",
     "test": "node --test src/core/loading/*.test.mjs src/core/hydrostatics/*.test.mjs src/core/hydrostatics/reference/*.test.mjs src/core/stability/*.test.mjs src/core/roll/*.test.mjs src/core/reference/*.test.mjs src/core/trim/*.test.mjs src/app/*.test.mjs src/visualization/*.test.mjs",
-    "compare:excel": "node scripts/compare-excel.mjs"
+    "compare:excel": "node scripts/compare-excel.mjs",
+    "test:acceptance": "node --test src/app/p16-workflow.test.mjs src/app/p15-handover.test.mjs src/app/recovery.test.mjs src/app/voyage-review.test.mjs",
+    "profile:acceptance": "node scripts/p16-profile.mjs",
+    "test:release": "node --test scripts/release-tools.test.mjs",
+    "acceptance:fixtures": "node scripts/p16-transfer-fixtures.mjs",
+    "preview:pages": "vite preview --base /UMC_Ship_Stability/"
   },
   "dependencies": {
     "react": "^19.2.8",

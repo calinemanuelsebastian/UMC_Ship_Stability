@@ -1,9 +1,11 @@
+import {parseMaterialProperties,type MaterialProperties} from './material-properties';
+import {CargoNeighbours} from './cargo-neighbours';
 import {dunnageProfiles,type DunnageProfile} from './dunnage-profile';
 import {parseCargoMarkings,type CargoMarkings} from './cargo-identification';
 import type { WeightDraft } from './loading-state';
 export type PlanRegion = {xMin:number;xMax:number;yMin:number;yMax:number};
 export type CargoArea = { uniformLoad?:{tonnesPerM2:number;source:string;sha256?:string}; supportRegions?:PlanRegion[]; panels?: (PlanRegion & {id:string})[]; regions?:PlanRegion[]; sourceIds?:string[]; clearHeight?: number; id?: string; name: string; xMin: number; xMax: number; yMin: number; yMax: number; deckZ: number };
-export type Footprint = { dunnageProfile?:DunnageProfile; markings?:CargoMarkings; stackability?:'unknown'|'stackable'|'unstackable'; maxTopLoadTonnes?:number; kind?:'dunnage'; dunnage?:{material:string;densityKgM3:number;massMode:'calculated'|'manual'}; bottomZ?:number; areaId?: string; length: number; width: number; height: number; rotation: 0 | 90; deckZ: number };
+export type Footprint = { keepGapsClear?:boolean; catalogue?:{family:string;contact:string;source:string;cgDeclared?:boolean}; dunnageProfile?:DunnageProfile; markings?:CargoMarkings; stackability?:'unknown'|'stackable'|'unstackable'; maxTopLoadTonnes?:number; kind?:'dunnage'; dunnage?:{properties?:MaterialProperties;material:string;densityKgM3:number;massMode:'calculated'|'manual'}; bottomZ?:number; areaId?: string; length: number; width: number; height: number; rotation: 0 | 90; deckZ: number };
 const finite = (v: unknown): v is number => typeof v === 'number' && Number.isFinite(v);
 export function parseArea(v: unknown): CargoArea {
   const a = v as CargoArea;
@@ -29,7 +31,9 @@ export function parseFootprint(v: unknown): Footprint {
   if(p.dunnageProfile!==undefined&&!dunnageProfiles.includes(p.dunnageProfile))throw new Error('Invalid dunnage profile.');
   if(p.stackability!==undefined&&!['unknown','stackable','unstackable'].includes(p.stackability))throw new Error('Invalid stackability setting.');
   if(p.maxTopLoadTonnes!==undefined&&(!finite(p.maxTopLoadTonnes)||p.maxTopLoadTonnes<0))throw new Error('Invalid top-load limit.');
-  return {...(p.dunnageProfile?{dunnageProfile:p.dunnageProfile}:{}),...(p.markings?{markings:parseCargoMarkings(p.markings)}:{}),...(p.stackability?{stackability:p.stackability}:{}),...(p.maxTopLoadTonnes===undefined?{}:{maxTopLoadTonnes:p.maxTopLoadTonnes}),...(p.dunnage?{dunnage:{material:p.dunnage.material,densityKgM3:p.dunnage.densityKgM3,massMode:p.dunnage.massMode}}:{}),...(p.kind?{kind:p.kind}:{}),...(p.bottomZ===undefined?{}:{bottomZ:p.bottomZ}),...(p.areaId?{areaId:p.areaId}:{}),length:p.length,width:p.width,height:p.height,rotation:p.rotation,deckZ:p.deckZ};
+  if(p.catalogue&&((p.catalogue.cgDeclared!==undefined&&typeof p.catalogue.cgDeclared!=='boolean')||!['boxed','perishable','crate','drum','bale','reel','coil','pipe','project','container'].includes(p.catalogue.family)||typeof p.catalogue.contact!=='string'||p.catalogue.contact.length>500||typeof p.catalogue.source!=='string'||p.catalogue.source.length>500))throw new Error('Invalid cargo catalogue details.');
+  if(p.keepGapsClear!==undefined&&typeof p.keepGapsClear!=='boolean')throw new Error('Invalid protected-gap setting.');
+  return {...(p.keepGapsClear===undefined?{}:{keepGapsClear:p.keepGapsClear}),...(p.catalogue?{catalogue:{family:p.catalogue.family,contact:p.catalogue.contact,source:p.catalogue.source,...(p.catalogue.cgDeclared===undefined?{}:{cgDeclared:p.catalogue.cgDeclared})}}:{}),...(p.dunnageProfile?{dunnageProfile:p.dunnageProfile}:{}),...(p.markings?{markings:parseCargoMarkings(p.markings)}:{}),...(p.stackability?{stackability:p.stackability}:{}),...(p.maxTopLoadTonnes===undefined?{}:{maxTopLoadTonnes:p.maxTopLoadTonnes}),...(p.dunnage?{dunnage:{...(p.dunnage.properties?{properties:parseMaterialProperties(p.dunnage.properties)}:{}),material:p.dunnage.material,densityKgM3:p.dunnage.densityKgM3,massMode:p.dunnage.massMode}}:{}),...(p.kind?{kind:p.kind}:{}),...(p.bottomZ===undefined?{}:{bottomZ:p.bottomZ}),...(p.areaId?{areaId:p.areaId}:{}),length:p.length,width:p.width,height:p.height,rotation:p.rotation,deckZ:p.deckZ};
 }
 export function cargoBounds(w: WeightDraft) {
   if (!w.footprint || !w.lcg.trim() || !w.tcg.trim() || ![Number(w.lcg),Number(w.tcg)].every(finite)) return undefined;
@@ -38,6 +42,7 @@ export function cargoBounds(w: WeightDraft) {
 }
 export function layoutIssues(weights: WeightDraft[], area: CargoArea) {
   const issues: {id:string; kind:'outside'|'overlap'|'position'|'deck'|'height'|'support'; other?:string}[]=[];
+  const neighbours=new CargoNeighbours([]);
   for(let i=0;i<weights.length;i++) {
     const w=weights[i]; if(!w.footprint) continue;
     if(area.clearHeight!==undefined&&(w.footprint.bottomZ??w.footprint.deckZ)+w.footprint.height>area.deckZ+area.clearHeight+1e-8)issues.push({id:w.id,kind:'height'});
@@ -45,12 +50,13 @@ export function layoutIssues(weights: WeightDraft[], area: CargoArea) {
     if(Math.abs((w.footprint.bottomZ??w.footprint.deckZ)-area.deckZ)<1e-8&&!fitsFloor(area,b))issues.push({id:w.id,kind:'support'});
     if(!fitsArea(area,b))issues.push({id:w.id,kind:'outside'});
     if(w.footprint.deckZ!==area.deckZ)issues.push({id:w.id,kind:'deck'});
-    for(let j=0;j<i;j++){
-      const v=weights[j],c=cargoBounds(v);if(!c || !v.footprint)continue;
+    for(const v of neighbours.query(b)){
+      const c=cargoBounds(v);if(!c || !v.footprint)continue;
       if(Math.min((v.footprint.bottomZ??v.footprint.deckZ)+v.footprint.height,(w.footprint.bottomZ??w.footprint.deckZ)+w.footprint.height)-Math.max(v.footprint.bottomZ??v.footprint.deckZ,w.footprint.bottomZ??w.footprint.deckZ)<=1e-8)continue;
       // This first planner is a single-deck footprint check; stacking is not inferred from KG.
       if(Math.min(b.xMax,c.xMax)-Math.max(b.xMin,c.xMin)>1e-8&&Math.min(b.yMax,c.yMax)-Math.max(b.yMin,c.yMin)>1e-8)issues.push({id:w.id,kind:'overlap',other:v.id});
     }
+    neighbours.add(w);
   }
   return issues;
 }

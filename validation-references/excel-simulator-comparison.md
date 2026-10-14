@@ -34,13 +34,13 @@ Existing regression fixture agrees with current workbook inputs: true. J78 retai
 
 ## Not yet comparable
 
-- Final trim: Excel uses interpolation between nonzero-trim hydrostatic tables; the current simulator uses a different, small-angle solver.
+- Final trim is not exercised by this legacy comparison. The application now has a trimmed-table solver; see the workbook replacement audit.
 - Aft and forward drafts: Excel D119:D120 still say REVIEW DATUM.
-- Actual heel and GZ: this load has nonzero TCG, while the workbook's GZ is explicitly a centreline reference; matching signed, trim-dependent vessel data is needed.
-- The public 3D ship is a synthetic pontoon. This case is retained privately as a repeatable calculation scenario, not imported as a pontoon scenario.
+- Actual heel and GZ: this load has nonzero TCG, while the workbook's GZ is explicitly a centreline reference. This script does not exercise the installed Vectis cross curves.
+- Vectis Castle is included in production. This script validates a numerical fixture, not placement of its aggregate weights in the cargo planner.
 
 ## Repeat the comparison
 
 Run `npm run compare:excel` from the project directory (requires Python 3 and installed project dependencies). It reads the reviewed workbook afresh, writes this report and a full-precision JSON report, and exits nonzero on a mismatch. Use `PYTHON=/path/to/python3` if needed.
 
-Workbook SHA-256: `a5d9c6bd7c30d3519929bcceadfe6507dc6abe31341f983193b7a13395ef3250`.
+Workbook SHA-256: `56ffd96aa635d761d41a56836e66bb42d0cb49b027918b1efa40a9f6d9cc510a`.

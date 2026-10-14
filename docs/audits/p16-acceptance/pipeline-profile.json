@@ -1,0 +1,38 @@
+{
+  "at": "2026-10-14T10:05:14.950Z",
+  "hardware": "Apple M2",
+  "node": "v26.7.0",
+  "note": "One sample per size, production calculation/persistence/report modules via SSR. Plain cargo only; not browser frame-rate, full-App scheduling, auto-dunnage or supported mobile limits.",
+  "results": [
+    {
+      "count": 100,
+      "bytes": 27507,
+      "reportHtmlBytes": 87558,
+      "serializeMs": 0.1453750000000582,
+      "parseMs": 11.969082999999955,
+      "loadingMs": 0.5472910000000866,
+      "reportMs": 18.743416000000025,
+      "printMs": 4.116375000000062
+    },
+    {
+      "count": 1000,
+      "bytes": 253155,
+      "reportHtmlBytes": 682133,
+      "serializeMs": 0.9894590000000107,
+      "parseMs": 6.7821669999999585,
+      "loadingMs": 2.933125000000018,
+      "reportMs": 25.637790999999993,
+      "printMs": 30.65979200000004
+    },
+    {
+      "count": 3376,
+      "bytes": 872171,
+      "reportHtmlBytes": 2280156,
+      "serializeMs": 4.210666999999944,
+      "parseMs": 21.191958999999997,
+      "loadingMs": 5.202958000000081,
+      "reportMs": 77.41579200000001,
+      "printMs": 87.92112499999996
+    }
+  ]
+}

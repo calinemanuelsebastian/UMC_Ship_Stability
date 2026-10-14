@@ -27,5 +27,5 @@ export function boundaryDunnageFits(w:WeightDraft,area:CargoArea,maxGap:number):
 /** Generic geometric spacers are the default; explicit specialist requirements stay protected. */
 export function permitsAutoDunnage(w:WeightDraft){
  const fp=w.footprint;
- return !!fp&&fp.kind!=='dunnage'&&(!fp.dunnageProfile||fp.dunnageProfile==='unspecified'||fp.dunnageProfile==='boxed')&&!fp.markings?.hazard&&!fp.markings?.unNumber;
+ return !!fp&&!fp.keepGapsClear&&(!fp.catalogue||['boxed','crate'].includes(fp.catalogue.family))&&fp.kind!=='dunnage'&&(!fp.dunnageProfile||fp.dunnageProfile==='unspecified'||fp.dunnageProfile==='boxed')&&!fp.markings?.hazard&&!fp.markings?.unNumber;
 }

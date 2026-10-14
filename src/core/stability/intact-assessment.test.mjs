@@ -13,7 +13,7 @@ test('six source criteria retain limits and provisional margins without approvin
  const rows=assessIntact({points:points([0,2,10,20,30,40,50,60],a=>a<=40?a/40:1-(a-40)/40)});
  assert.equal(rows.length,6);assert.deepEqual(rows.map(r=>r.limit),[.055,.09,.03,.2,25,.15]);
  assert.equal(rows.find(r=>r.id==='peak').value,40);
- assert.deepEqual(rows.map(r=>r.status),['Meets numerical minimum','Insufficient data','Insufficient data','Meets numerical minimum','Meets numerical minimum','Insufficient data']);assert.ok(rows[0].margin>0);
+ assert.deepEqual(rows.map(r=>r.status),['Meets numerical minimum','Insufficient data','Insufficient data','Meets numerical minimum','Insufficient data','Insufficient data']);assert.ok(rows[0].margin>0);
  assert.match(rows.find(r=>r.id==='areaX').reason,/X is unconfirmed/);
 });
 test('slope estimate uses corrected GZ only and refuses sparse initial coverage',()=>{
@@ -28,7 +28,7 @@ test('boundary maxima, plateaus and missing curves do not invent peak angles or 
 
 test('failed numerical minima remain separate from missing flood-dependent checks',()=>{
  const rows=assessIntact({points:points([0,2,10,20,30,40,50,60],a=>a<=20?a/1000:(60-a)/2000),gmAtTrim:{correctedGm:.1}});
- for(const id of ['area30','gz','peak','gm'])assert.equal(rows.find(r=>r.id===id).status,'Below numerical minimum');
+ for(const id of ['area30','gz','gm'])assert.equal(rows.find(r=>r.id===id).status,'Below numerical minimum');
  for(const id of ['areaX','area30X'])assert.equal(rows.find(r=>r.id===id).status,'Insufficient data');
 });
 test('sampled flooding blocks affected curve checks but leaves hydrostatic GM independent',()=>{

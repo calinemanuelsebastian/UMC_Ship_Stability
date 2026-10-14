@@ -29,7 +29,7 @@ test('exit journals are independent and corruption does not hide good journals',
 });
 test('large cargo plans no longer fail at 1000 weights but retain a bounded limit',()=>{
  const f=fixture();f.state.weights=Array.from({length:1500},(_,i)=>({...fixed,id:`w${i}`}));assert.equal(parseScenario(f,'ship').state.weights.length,1500);
- f.state.weights=Array.from({length:10001},(_,i)=>({...fixed,id:`w${i}`}));assert.throws(()=>parseScenario(f,'ship'));
+ f.state.weights=Array.from({length:40001},(_,i)=>({...fixed,id:`w${i}`}));assert.throws(()=>parseScenario(f,'ship'));
 });
 test('scenario mutations merge fresh storage and preserve damaged entries',()=>{
  const s=storage(),a=fixture(),b={...fixture(),id:'b'};s.setItem('library',JSON.stringify([{broken:true},a]));
@@ -68,4 +68,13 @@ test('failed database write retains checkpoint and journal quota failure still p
  await assert.rejects(queueRecoveryWrite(Promise.resolve(),s,record,async()=>{throw new Error('db failed')}),/db failed/);
  assert.equal(readRecoveryJournals(s).records.length,1);
  let saved=false;await queueRecoveryWrite(Promise.resolve(),{...s,setItem(){throw new Error('quota')}},record,async()=>{saved=true});assert.equal(saved,true);
+});
+
+test('older commit cannot erase a newer checkpoint sharing the same timestamp',async()=>{
+ const s=storage(),old={key:'draft:ship:same-time',model:'ship',plan:fixture()};
+ let release;const blocked=new Promise(resolve=>{release=resolve});
+ const first=queueRecoveryWrite(Promise.resolve(),s,old,()=>blocked);
+ const next={...old,plan:{...old.plan,name:'New payload, same timestamp'}};
+ writeRecoveryJournal(s,next.key,next);release();await first;
+ assert.equal(JSON.parse(s.getItem(recoveryPrefix+next.key)).plan.name,next.plan.name);
 });

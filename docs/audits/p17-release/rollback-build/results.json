@@ -1,0 +1,12 @@
+{
+  "baseRevision": "5f68b82103535ec09f97a381658eaa35e5ecf7b2",
+  "guardMode": "reject-unsupported-inputs",
+  "node": "24.21.0",
+  "legacyTestsPassed": 392,
+  "compatibilityChecks": "passed",
+  "archive": "/Users/ces/Documents/Codex/umc-release-candidates/rollback-2026-10-14/umc-rollback-candidate.zip",
+  "sha256": "0dcde3f72a72fb0462357816c4a81efae29a82dabac19ffaa0f9c3dbe828b8cf",
+  "browserCheck": "production startup and visible bilingual rollback banner",
+  "sameOriginRollbackRehearsal": "pending",
+  "deployment": "not performed"
+}

@@ -1,3 +1,4 @@
+import {vesselDataFoundation} from './vessel-data-foundation';
 import {deckDefinition} from './tween-deck';
 import {mountShipBundle,parseShipBundle,type ShipBundle} from './ship-package';
 import {loadTankCatalog,isFixedWeight,type TankCatalog} from './tank-operations';
@@ -6,7 +7,7 @@ import {loadValidationCases} from '../platform/ship-models/load-validation-cases
 import {computeUprightHydrostatics} from '../core/hydrostatics/compute-upright-hydrostatics';
 import {parseHydrostaticTableCsv} from '../core/hydrostatics/solvers/table/hydrostatic-table-parser';
 import {fileText} from './ship-package';
-export type ShipInspection={bundle:ShipBundle;catalog?:TankCatalog;warnings:string[];fixedCount:number;draftRange:number[];resourceCount:number};
+export type ShipInspection={bundle:ShipBundle;foundation:ReturnType<typeof vesselDataFoundation>;catalog?:TankCatalog;warnings:string[];fixedCount:number;draftRange:number[];resourceCount:number};
 export async function inspectShipPackage(raw:unknown):Promise<ShipInspection>{
  const bundle=parseShipBundle(raw),ship=mountShipBundle(bundle),warnings:string[]=[];
  try{
@@ -28,6 +29,8 @@ export async function inspectShipPackage(raw:unknown):Promise<ShipInspection>{
   const resource=ship.manifest.resources.find(r=>r.kind==='hydrostatics.upright-table')!;
   const table=parseHydrostaticTableCsv(fileText(bundle,resource.path!));
   warnings.push('Import checks file consistency and the default hydrostatic calculation. It does not certify source accuracy or vessel safety.');
-  return {bundle,catalog,warnings,fixedCount,resourceCount:ship.manifest.resources.length,draftRange:[table.rows[0].draft,table.rows.at(-1)!.draft]};
+  const foundation=vesselDataFoundation(bundle,catalog);
+  if(foundation.upright.screening.findings.length)warnings.push(`${foundation.upright.screening.findings.length} hydrostatic consistency findings require source review; values have not been changed.`);
+  return {bundle,foundation,catalog,warnings,fixedCount,resourceCount:ship.manifest.resources.length,draftRange:[table.rows[0].draft,table.rows.at(-1)!.draft]};
  }finally{ship.release?.();}
 }

@@ -1,3 +1,4 @@
+import {cargoNeighbours} from './cargo-neighbours';
 import {cargoBounds,sameLoadingSurface,type CargoArea} from './cargo-layout';
 import {cargoBottom,placeCargoGroup,translateCargoGroup} from './cargo-placement';
 import type {WeightDraft} from './loading-state';
@@ -11,7 +12,9 @@ export function placeWithCargoSnap(group:WeightDraft[],id:string,areas:CargoArea
  const shifted=translateCargoGroup(group,anchor,{...anchor,lcg:String(p.x),tcg:String(p.y),footprint:{...anchor.footprint!,bottomZ:p.z}});
  const candidates:{dx:number;dy:number}[]=[];
  const groupIds=new Set(group.map(w=>w.id));
- const targets=others.filter(other=>!groupIds.has(other.id)&&other.footprint&&other.footprint.kind!=='dunnage').map(other=>({other,b: cargoBounds(other),bottom:cargoBottom(other)})).filter(t=>t.b);
+ const boxes=shifted.map(w=>cargoBounds(w)).filter((b):b is NonNullable<typeof b>=>!!b),margin=options.gap+options.range;
+ const nearby=boxes.length?cargoNeighbours(others).query({xMin:Math.min(...boxes.map(b=>b.xMin))-margin,xMax:Math.max(...boxes.map(b=>b.xMax))+margin,yMin:Math.min(...boxes.map(b=>b.yMin))-margin,yMax:Math.max(...boxes.map(b=>b.yMax))+margin}):[];
+ const targets=nearby.filter(other=>!groupIds.has(other.id)&&other.footprint&&other.footprint.kind!=='dunnage').map(other=>({other,b: cargoBounds(other),bottom:cargoBottom(other)})).filter(t=>t.b);
  for(const w of shifted.filter(w=>w.footprint?.kind!=='dunnage')){
   const a=cargoBounds(w)!;
   for(const {other,b:bounds,bottom} of targets){

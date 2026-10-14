@@ -1,0 +1,2 @@
+There has been no change in the accessibility tree for Window: "UMC · Ship Stability".
+The focused UI element is 146 HTML content UMC · Ship Stability, URL: 127.0.0.1:4201/UMC_Ship_Stability/?page=loading&vessel=reviewed-apples-vessel&section=plans

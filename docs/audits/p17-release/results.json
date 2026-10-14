@@ -1,0 +1,16 @@
+{
+  "status": "candidate-not-released",
+  "node": "26.7.0",
+  "npm": "11.19.0",
+  "applicationTests": 529,
+  "releaseToolTests": 2,
+  "lint": "passed",
+  "hostingBases": [
+    "/",
+    "/UMC_Ship_Stability/"
+  ],
+  "pendingGate": "rejected as expected",
+  "browserSmoke": "not run in P17",
+  "deployment": "not performed",
+  "archiveSha256": "c64aaf6c0bf42e03a2e8df4e6e2b4b38df6f6a812dba365c81670e497d9556eb"
+}

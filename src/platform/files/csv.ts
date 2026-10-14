@@ -21,8 +21,14 @@ export function parseCsv(text: string, options: CsvParseOptions = {}): CsvRow[] 
     header.trim()
   );
 
-  return lines.slice(1).map((line) => {
+  if (headers.some(header => !header) || new Set(headers).size !== headers.length) {
+    throw new Error("CSV headers must be non-empty and unique.");
+  }
+  return lines.slice(1).map((line, index) => {
     const values = parseCsvLine(line, delimiter);
+    if (values.length !== headers.length) {
+      throw new Error(`CSV row ${index + 2} has ${values.length} cells; expected ${headers.length}. Use empty cells for missing values.`);
+    }
     const row: CsvRow = {};
 
     headers.forEach((header, index) => {

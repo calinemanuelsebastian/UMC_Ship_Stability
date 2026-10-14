@@ -1,0 +1,288 @@
+PDF PAGE 7
+ 
+ 
+ 
+ 
+2.2 
+ 
+2.2 Used software 
+Program for the Integral Approach of Shipdesign, PIAS
+Scheepsbouwkundig Advies en RekenCentrum SARC BV
+Brinklaan 109-I
+1404 GA  Bussum, The Netherlands
+www.sarc.nl
+Date of composition of this PIAS version : 04 June 2012
+PROJECT : P10046 GROOT SUPER GREEN 10.000
+Date : 08 Jun 2012
+ 
+ 
+
+PDF PAGE 12
+ 
+ 
+ 
+ 
+4.1 
+ 
+4 How to use cross curves 
+ 
+G’Nsinϕ KG’sinϕ 
+KNsinϕ 
+ϕ 
+ 
+The purpose of the Cross Curves is to be able to make static stability curves for the ship in any sailing 
+condition. 
+ 
+Example: Steel coils departure condition (see chapter 15):  
+Displacement : 13201.307 ton 
+Trim   :-0.774 m 
+GM’      :  3.005 m    
+VCG'    :  4.647 m (corrected for free surface moments). 
+ 
+The calculation of righting levers is as follows: 
+G'Nsinφ  =  KNsin φ - VCG'sinφ where: 
+G'Nsinφ  =  actual righting lever (GZ). 
+KNsinφ   =  cross curve ordinate for this displacement which can be found in the cross curve  
+  tables. 
+VCG' =  KG’ = centre of gravity corrected for free surface effects. 
+φ =  angle of inclination. 
+ 
+By using the G'Nsinφ values from the following data, the static stability curve can be made for the 
+ship at the assumed displacement: 
+
+PDF PAGE 13
+ 
+ 
+ 
+ 
+4.2 
+ 
+ 
+ 
+By erecting the G'M at 1 rad (57.3 deg) and connecting this point to the origin, the tangent of the 
+curve is obtained. 
+G'M  =  KM - VCG' where: 
+G'M  =  Metacentric height corrected for free surface effects. 
+KM   =  Vertical distance between metacentre and baseline, which can be found in the tables 
+  for hydrostatic particulars. 
+VCG' =  Centre of gravity corrected for free surface effects. 
+ 
+ 
+ 
+Statical and dynamical stability, calculated with constant LCB : 
+Angle(SB)Draft mld.     Trim   KNsin@ VCG'sin@  TCGcos@  G'Nsin@     Area 
+  degrees      m        m        m        m        m        m        mrad 
+ 0.00 7.577 -0.774 -0.000 0.000 0.004 -0.004 0.000 
+ 2.00 7.577 -0.773 0.267 0.162 0.004 0.101 0.002 
+ 5.00 7.575 -0.767 0.668 0.405 0.004 0.259 0.011 
+ 10.00 7.570 -0.744 1.335 0.807 0.004 0.525 0.045 
+ 12.00 7.566 -0.729 1.603 0.966 0.004 0.633 0.065 
+ 15.00 7.559 -0.703 2.004 1.203 0.004 0.798 0.103 
+ 20.00 7.542 -0.645 2.678 1.589 0.004 1.085 0.185 
+ 25.00 7.520 -0.570 3.359 1.964 0.003 1.392 0.293 
+ 30.00 7.528 -0.475 4.006 2.323 0.003 1.680 0.427 
+ 35.00 7.567 -0.401 4.623 2.665 0.003 1.955 0.586 
+ 40.00 7.619 -0.323 5.229 2.987 0.003 2.239 0.769 
+ 50.00 7.832 -0.175 6.204 3.560 0.002 2.641 1.199 
+ 60.00 8.188 -0.073 6.798 4.024 0.002 2.772 1.675 
+ 
+Statical angle of inclination is 0.074 degrees to starboard 
+Contour : No Deckcargo
+ 
+ 
+.... 
+Angle of inclination in degrees 1/10
+0.0 50.00.0
+Righting lever 1/50
+0.0 2.00.0
+ 
+ 
+
+PDF PAGE 18
+ 
+ 
+ 
+ 
+6.3 
+ 
+6.3 Openings 
+In the vessel’s calculation model, the following openings are defined. Only the open openings are 
+limiting the stability curves. 
+ 
+          Description    Length   Breadth    Height           Type of point    Connected with compartment 
+ 
+            entr.fcle   109.800    -4.930    13.100    Weathertight opening              Sling store fore 
+  entr.mooringd.store   114.600     0.000    13.100    Weathertight opening            Mooring deck store 
+      entr.paintstore   109.800     4.930    13.100    Weathertight opening                    Paintstore 
+             entr.CO2   109.600    -6.000    13.100              Watertight                      CO2 Room 
+      entr.Em.gen.set     1.500    -7.900    13.100    Weathertight opening                  Accomodation 
+         entr.hold1_f   108.500     2.010    13.100    Weathertight opening             Hold fwd (damage) 
+         entr.hold1_a    81.500     6.360    13.100    Weathertight opening             Hold fwd (damage) 
+         entr.hold2_a    27.600     8.000    12.000    Weathertight opening             Hold aft (damage) 
+         entr.hold2_a    22.000    -8.000    12.000    Weathertight opening             Hold aft (damage) 
+         entr.hold2_f    81.500    -6.360    13.100    Weathertight opening             Hold aft (damage) 
+             entr.acc     2.400    -2.850    12.900    Weathertight opening                  Accomodation 
+    entr.cargo office     6.000    -5.520    12.900    Weathertight opening                  Accomodation 
+             hatch ER    13.200     1.350    13.100              Watertight                   ENGINE ROOM 
+       hold1_vent_p_f   109.800    -4.100    17.200    Weathertight opening             Hold fwd (damage) 
+       hold2_vent_p_a     9.600    -6.900    17.000    Weathertight opening             Hold aft (damage) 
+      hold1_vent_sb_f   109.800     4.100    17.200    Weathertight opening             Hold fwd (damage) 
+      hold2_vent_sb_a     9.600     6.900    17.000    Weathertight opening             Hold aft (damage) 
+      hold1_vent sb a    81.500     5.310    13.400    Weathertight opening             Hold fwd (damage) 
+       hold1_vent p a    81.500    -5.310    13.400    Weathertight opening             Hold fwd (damage) 
+      hold2_vent sb f    81.500     4.100    13.400    Weathertight opening             Hold aft (damage) 
+       hold2_vent p f    81.500    -4.100    13.400    Weathertight opening             Hold aft (damage) 
+    supply vent ER PS     1.500    -5.515    17.000            Open opening                   ENGINE ROOM 
+    supply vent ER SB     1.500     5.515    17.000            Open opening                   ENGINE ROOM 
+         vent CO2 ???    96.200    -8.500    13.300    Weathertight opening                      CO2 Room 
+   vent DECKSTORE ???    96.200     8.500    13.300    Weathertight opening               Deck store fore 
+      Hatch deckstore   101.800     5.270    13.100    Weathertight opening               Deck store fore 
+      vent paintstore   109.800     6.600    15.700    Weathertight opening                    Paintstore 
+          esc.acc.+ER     8.640     6.420    13.100    Weathertight opening                  Accomodation 
+          esc.acc.+ER     8.640     6.420    13.100    Weathertight opening                   ENGINE ROOM 
+     esc.St gear room     1.500     1.380    13.100    Weathertight opening            STEERING GEAR ROOM 
+            esc.St ER     1.500     1.380    13.100    Weathertight opening                   ENGINE ROOM 
+     hatch prov.store     1.100     7.900    13.100    Weathertight opening               Provision store 
+     hatch prov.store     1.100     7.900    13.100    Weathertight opening                  Accomodation 
+            Hold1_p_f   107.400    -4.140    12.530    Weathertight opening             Hold fwd (damage) 
+            Hold1_p_k    96.200    -6.900    12.530    Weathertight opening             Hold fwd (damage) 
+            Hold1 p a    82.200    -6.900    12.530    Weathertight opening             Hold fwd (damage) 
+            Hold2 p f    80.800    -6.900    12.530    Weathertight opening             Hold aft (damage) 
+            hold2_p_a    17.100    -6.900    12.530    Weathertight opening             Hold aft (damage) 
+           hold1_sb_f   107.400     4.140    12.530    Weathertight opening             Hold fwd (damage) 
+           hold1_sb_k    96.200     6.900    12.530    Weathertight opening             Hold fwd (damage) 
+           Hold1 sb a    82.200     6.900    12.530    Weathertight opening             Hold fwd (damage) 
+           Hold2 sb f    80.800     6.900    12.530    Weathertight opening             Hold aft (damage) 
+           hold2_sb_a    17.100     6.900    12.530    Weathertight opening             Hold aft (damage) 
+        01_forepeak_f   113.980    -2.500    13.260    Weathertight opening                   01 Forepeak 
+      01_forepeak_p_a   113.980    -2.500    13.260    Weathertight opening                   01 Forepeak 
+     01_forepeak_sb_a   113.980     2.500    13.260    Weathertight opening                   01 Forepeak 
+      02_deeptank_p f   110.400    -6.000    13.260    Weathertight opening                02 Deeptank PS 
+     02_deeptank_sb a   108.000    -6.500    13.260    Weathertight opening                02 Deeptank PS 
+     02 deeptank sb f   110.400     6.000    13.260    Weathertight opening                03 Deeptank SB 
+      02 deeptank p a   108.000     6.500    13.260    Weathertight opening                03 Deeptank SB 
+         03_db_p_f ??   107.000    -8.000    13.260    Weathertight opening                      04 DB PS 
+            03_db_p_a    97.000    -7.150    13.260    Weathertight opening                      04 DB PS 
+        03_db_sb_f ??   107.000     8.000    13.260    Weathertight opening                      05 DB SB 
+           03_db_sb_a    97.000     7.150    13.260    Weathertight opening                      05 DB SB 
+         03_wt_p_f ??   107.000    -8.000    13.260    Weathertight opening                      06 WT PS 
+         03_wt_p_f ??   102.500    -8.000    13.260    Weathertight opening                      06 WT PS 
+            03_wt_p_a   101.500    -7.150    13.260    Weathertight opening                      08 WT PS 
+            03_wt_p_a    97.000    -7.150    13.260    Weathertight opening                      08 WT PS 
+        03_wt_sb_f ??   107.000     8.000    13.260    Weathertight opening                      07 WT SB 
+        03_wt_sb_f ??   102.500     8.000    13.260    Weathertight opening                      07 WT SB 
+           03_wt_sb_a   101.500     7.150    13.260    Weathertight opening                      09 WT SB 
+           03_wt_sb_a    97.000     7.150    13.260    Weathertight opening                      09 WT SB 
+            04_db_p_f    96.000    -7.150    12.350    Weathertight opening                      10 DB PS 
+            04_db_p_a    86.000    -7.150    12.350    Weathertight opening                      10 DB PS 
+           04_db_sb_f    96.000     7.150    12.350    Weathertight opening                      11 DB SB 
+           04_db_sb_a    86.000     7.150    12.350    Weathertight opening                      11 DB SB 
+            04_wt_p_f    96.000    -7.150    12.350    Weathertight opening                      12 WT PS 
+            04_wt_p_a    86.000    -7.150    12.350    Weathertight opening                      12 WT PS 
+           04_wt_sb_f    96.000     7.150    12.350    Weathertight opening                      13 WT SB 
+           04_wt_sb_a    86.000     7.150    12.350    Weathertight opening                      13 WT SB 
+           04a db p f    84.000    -7.150    12.350    Weathertight opening                      14 DB PS 
+           04a db p a    74.000    -7.150    12.350    Weathertight opening                      14 DB PS 
+          04a db sb f    84.000     7.150    12.350    Weathertight opening                      15 DB SB 
+          04a db sb a    74.000     7.150    12.350    Weathertight opening                      15 DB SB 
+           04a wt p f    84.000    -7.150    12.350    Weathertight opening                      16 WT PS 
+
+PDF PAGE 31
+ 
+ 
+ 
+ 
+9.1 
+ 
+9 Load line particulars and draught marks 
+9.1 Load lines 
+The following particulars are according to the International Convention on Load Lines, 1966. The 
+freeboard is assigned as a new ship of type B. 
+The deadweight at summer draught, as stated below, is for a light ship weight of 3660 ton. 
+ 
+ 
+ 
+ 
+Trim   0.000 m                           06 Jun 2012  14:06:39  
+ ----------------------------------------------------------------------------------------------------------------- 
+                         IN SALT WATER S.W. = 1.025            |   Draft |    IN FRESH WATER S.W. = 1.000 
+                 Frbrd Immersion       Mct     Displ  Deadwght | us keel |  Deadwght     Displ Immersion     Frbrd 
+                     m    ton/cm      tonm       ton       ton |       m |       ton       ton       ton         m 
+ ----------------------------------------------------------------------------------------------------------------- 
+ Trop.fresh    |                                               |   8.351 |  10646.43  14306.43     19.77     3.071 
+ Fresh         |                                               |   8.184 |  10316.60  13976.60     19.73     3.238 
+ Tropical      | 3.244     20.23    180.39  14313.88  10653.88 |   8.178 | 
+ Summer        | 3.411     20.20    179.46  13976.39  10316.39 |   8.011 | 
+ Winter        | 3.578     20.15    178.49  13639.52   9979.52 |   7.844 | 
+ Winter        | 3.578     20.15    178.49  13639.52   9979.52 |   7.844 | 
+ ----------------------------------------------------------------------------------------------------------------- 
+ Lightship     | 8.994     16.63    105.14   3660.01      0.01 |   2.428 | 
+ 
+ 
+ 
+
+PDF PAGE 53
+ 
+ 
+ 
+ 
+10.20 
+ 
+ 
+ 
+                        HYDROSTATIC PARTICULARS 
+                   P10046 GROOT SUPER GREEN 10.000 
+ 
+05 Jun 2012  10:48:48           Trim =   0.000 m 
+ 
+Draught     Displacement     Immer-   Moment   LCB      LCF      KM 
+from        S.W. [t/m3]      sion     change   from     from     transv. 
+US keel  1.0000    1.0250             trim     APP      APP 
+ m        ton       ton      ton/cm   Tonm/cm   m        m        m 
+ 
+ 
+ 6.300  10329.38  10587.62    19.25   155.50   60.749   56.924    7.540 
+ 6.350  10423.33  10683.91    19.29   156.23   60.715   56.833    7.538 
+ 6.400  10517.46  10780.40    19.31   157.02   60.680   56.824    7.538 
+ 6.450  10611.72  10877.02    19.34   157.77   60.645   56.714    7.537 
+ 6.500  10706.17  10973.82    19.38   158.56   60.610   56.620    7.536 
+ 
+ 6.550  10800.77  11070.79    19.43   159.35   60.575   56.477    7.538 
+ 6.600  10895.56  11167.95    19.45   160.14   60.539   56.455    7.538 
+ 6.650  10990.53  11265.29    19.48   161.00   60.504   56.412    7.539 
+ 6.700  11085.64  11362.79    19.50   161.81   60.468   56.357    7.541 
+ 6.750  11180.94  11460.46    19.57   162.63   60.432   56.168    7.542 
+ 
+ 6.800  11276.41  11558.32    19.61   163.48   60.396   56.080    7.545 
+ 6.850  11372.07  11656.37    19.62   164.33   60.360   56.083    7.548 
+ 6.900  11467.90  11754.60    19.66   165.20   60.324   55.978    7.550 
+ 6.950  11563.91  11853.01    19.72   166.08   60.287   55.813    7.555 
+ 7.000  11660.11  11951.61    19.76   166.96   60.250   55.717    7.558 
+ 
+ 7.050  11756.53  12050.44    19.78   167.92   60.213   55.682    7.562 
+ 7.100  11853.10  12149.43    19.81   168.85   60.176   55.604    7.568 
+ 7.150  11949.86  12248.61    19.85   169.80   60.138   55.510    7.572 
+ 7.200  12046.83  12348.00    19.91   170.77   60.100   55.359    7.578 
+ 7.250  12143.98  12447.58    19.95   171.75   60.062   55.248    7.584 
+ 
+ 7.300  12241.32  12547.35    19.97   172.73   60.024   55.208    7.589 
+ 7.350  12338.80  12647.27    19.99   173.65   59.986   55.164    7.596 
+ 7.400  12436.41  12747.32    20.03   174.46   59.947   55.080    7.602 
+ 7.450  12534.13  12847.48    20.05   175.16   59.909   55.016    7.608 
+ 7.500  12631.95  12947.75    20.05   175.78   59.872   55.058    7.614 
+ 
+ 7.550  12729.84  13048.09    20.08   176.26   59.834   54.995    7.619 
+ 7.600  12827.81  13148.50    20.09   176.71   59.797   54.967    7.624 
+ 7.650  12925.84  13248.99    20.12   177.09   59.761   54.937    7.631 
+ 7.700  13023.96  13349.56    20.11   177.51   59.724   54.949    7.636 
+ 7.750  13122.12  13450.17    20.12   177.85   59.688   54.931    7.642 
+ 
+ 7.800  13220.34  13550.85    20.15   178.15   59.653   54.882    7.648 
+ 7.850  13318.63  13651.60    20.17   178.45   59.618   54.841    7.653 
+ 7.900  13416.98  13752.41    20.17   178.81   59.583   54.878    7.660 
+ 7.950  13515.39  13853.27    20.18   179.15   59.549   54.887    7.666 
+ 8.000  13613.84  13954.18    20.18   179.44   59.515   54.897    7.673 
+ 
+ 8.011  13635.50  13976.39    20.20   179.46   59.507   54.854    7.674 
+ 8.050  13712.34  14055.15    20.21   179.64   59.481   54.811    7.679 
+ 8.100  13810.91  14156.18    20.21   179.96   59.448   54.841    7.685 

@@ -1,0 +1,24 @@
+
+> umcsshipstabilityapp@0.1.0-beta.2-rc.1 test:release
+> node --test scripts/release-tools.test.mjs
+
+✔ release requires exact reviewed revision, tag and all three gates (0.993833ms)
+✔ artifact detects changed, added and removed files; excludes source documents and symlinks (22.119834ms)
+✔ approval evidence must exist, be nonempty and stay inside repository docs without symlinks (3.639833ms)
+✔ artifact identity is checked independently of valid file hashes (2.40675ms)
+✔ malformed acceptance records fail closed (0.291792ms)
+✔ release CLI reads evidence from the explicit approval checkout and refuses pending approval (158.446042ms)
+✔ website inventory rejects test fixtures and source archives (10.331ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 271.005083
+npm notice
+npm notice New major version of npm available! 11.19.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

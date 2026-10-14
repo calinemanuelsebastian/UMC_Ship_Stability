@@ -1,0 +1,3610 @@
+{
+  "source": "004_STABILITY_LOADING_MANUAL.pdf",
+  "sha256": "09d7f09f314b764345d4c3e464d77a1c44d77d75953e85c3228880b55bb6cbd3",
+  "windRowsCompared": 375,
+  "rowsCompared": 720,
+  "uprightRowsCompared": 120,
+  "method": "pypdf and pdfplumber token agreement; exact packaged displacement/LCB/LCF/KMt and upright TPC; MCT not used by the LCB balance solver. No source tables written.",
+  "records": [
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 2.5
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 2.55
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 2.6
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 2.65
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 2.7
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 2.75
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 2.8
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 2.85
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 2.9
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 2.95
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.0
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.05
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.1
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.15
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.2
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.25
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.3
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.35
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.4
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.45
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.5
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.55
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.6
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.65
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.7
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.75
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.8
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.85
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.9
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 3.95
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 4.0
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 4.05
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 4.1
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 4.15
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 4.2
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 4.25
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 4.3
+    },
+    {
+      "pdfPage": 35,
+      "trimMetres": -2.0,
+      "draft": 4.35
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 4.4
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 4.45
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 4.5
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 4.55
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 4.6
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 4.65
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 4.7
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 4.75
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 4.8
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 4.85
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 4.9
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 4.95
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.0
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.05
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.1
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.15
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.2
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.25
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.3
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.35
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.4
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.45
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.5
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.55
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.6
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.65
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.7
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.75
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.8
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.85
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.9
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 5.95
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 6.0
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 6.05
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 6.1
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 6.15
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 6.2
+    },
+    {
+      "pdfPage": 36,
+      "trimMetres": -2.0,
+      "draft": 6.25
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 6.3
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 6.35
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 6.4
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 6.45
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 6.5
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 6.55
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 6.6
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 6.65
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 6.7
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 6.75
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 6.8
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 6.85
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 6.9
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 6.95
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.0
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.05
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.1
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.15
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.2
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.25
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.3
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.35
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.4
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.45
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.5
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.55
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.6
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.65
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.7
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.75
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.8
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.85
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.9
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 7.95
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 8.0
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 8.011
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 8.05
+    },
+    {
+      "pdfPage": 37,
+      "trimMetres": -2.0,
+      "draft": 8.1
+    },
+    {
+      "pdfPage": 38,
+      "trimMetres": -2.0,
+      "draft": 8.15
+    },
+    {
+      "pdfPage": 38,
+      "trimMetres": -2.0,
+      "draft": 8.2
+    },
+    {
+      "pdfPage": 38,
+      "trimMetres": -2.0,
+      "draft": 8.25
+    },
+    {
+      "pdfPage": 38,
+      "trimMetres": -2.0,
+      "draft": 8.3
+    },
+    {
+      "pdfPage": 38,
+      "trimMetres": -2.0,
+      "draft": 8.35
+    },
+    {
+      "pdfPage": 38,
+      "trimMetres": -2.0,
+      "draft": 8.4
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 2.5
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 2.55
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 2.6
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 2.65
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 2.7
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 2.75
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 2.8
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 2.85
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 2.9
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 2.95
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.0
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.05
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.1
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.15
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.2
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.25
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.3
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.35
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.4
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.45
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.5
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.55
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.6
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.65
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.7
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.75
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.8
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.85
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.9
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 3.95
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 4.0
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 4.05
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 4.1
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 4.15
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 4.2
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 4.25
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 4.3
+    },
+    {
+      "pdfPage": 39,
+      "trimMetres": -1.5,
+      "draft": 4.35
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 4.4
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 4.45
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 4.5
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 4.55
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 4.6
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 4.65
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 4.7
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 4.75
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 4.8
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 4.85
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 4.9
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 4.95
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.0
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.05
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.1
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.15
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.2
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.25
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.3
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.35
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.4
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.45
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.5
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.55
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.6
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.65
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.7
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.75
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.8
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.85
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.9
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 5.95
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 6.0
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 6.05
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 6.1
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 6.15
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 6.2
+    },
+    {
+      "pdfPage": 40,
+      "trimMetres": -1.5,
+      "draft": 6.25
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 6.3
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 6.35
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 6.4
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 6.45
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 6.5
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 6.55
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 6.6
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 6.65
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 6.7
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 6.75
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 6.8
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 6.85
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 6.9
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 6.95
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.0
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.05
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.1
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.15
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.2
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.25
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.3
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.35
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.4
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.45
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.5
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.55
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.6
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.65
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.7
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.75
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.8
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.85
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.9
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 7.95
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 8.0
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 8.011
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 8.05
+    },
+    {
+      "pdfPage": 41,
+      "trimMetres": -1.5,
+      "draft": 8.1
+    },
+    {
+      "pdfPage": 42,
+      "trimMetres": -1.5,
+      "draft": 8.15
+    },
+    {
+      "pdfPage": 42,
+      "trimMetres": -1.5,
+      "draft": 8.2
+    },
+    {
+      "pdfPage": 42,
+      "trimMetres": -1.5,
+      "draft": 8.25
+    },
+    {
+      "pdfPage": 42,
+      "trimMetres": -1.5,
+      "draft": 8.3
+    },
+    {
+      "pdfPage": 42,
+      "trimMetres": -1.5,
+      "draft": 8.35
+    },
+    {
+      "pdfPage": 42,
+      "trimMetres": -1.5,
+      "draft": 8.4
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 2.5
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 2.55
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 2.6
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 2.65
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 2.7
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 2.75
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 2.8
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 2.85
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 2.9
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 2.95
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.0
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.05
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.1
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.15
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.2
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.25
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.3
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.35
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.4
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.45
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.5
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.55
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.6
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.65
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.7
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.75
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.8
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.85
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.9
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 3.95
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 4.0
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 4.05
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 4.1
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 4.15
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 4.2
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 4.25
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 4.3
+    },
+    {
+      "pdfPage": 43,
+      "trimMetres": -1.0,
+      "draft": 4.35
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 4.4
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 4.45
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 4.5
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 4.55
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 4.6
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 4.65
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 4.7
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 4.75
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 4.8
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 4.85
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 4.9
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 4.95
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.0
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.05
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.1
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.15
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.2
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.25
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.3
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.35
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.4
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.45
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.5
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.55
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.6
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.65
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.7
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.75
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.8
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.85
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.9
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 5.95
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 6.0
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 6.05
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 6.1
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 6.15
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 6.2
+    },
+    {
+      "pdfPage": 44,
+      "trimMetres": -1.0,
+      "draft": 6.25
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 6.3
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 6.35
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 6.4
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 6.45
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 6.5
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 6.55
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 6.6
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 6.65
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 6.7
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 6.75
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 6.8
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 6.85
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 6.9
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 6.95
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.0
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.05
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.1
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.15
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.2
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.25
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.3
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.35
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.4
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.45
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.5
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.55
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.6
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.65
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.7
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.75
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.8
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.85
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.9
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 7.95
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 8.0
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 8.011
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 8.05
+    },
+    {
+      "pdfPage": 45,
+      "trimMetres": -1.0,
+      "draft": 8.1
+    },
+    {
+      "pdfPage": 46,
+      "trimMetres": -1.0,
+      "draft": 8.15
+    },
+    {
+      "pdfPage": 46,
+      "trimMetres": -1.0,
+      "draft": 8.2
+    },
+    {
+      "pdfPage": 46,
+      "trimMetres": -1.0,
+      "draft": 8.25
+    },
+    {
+      "pdfPage": 46,
+      "trimMetres": -1.0,
+      "draft": 8.3
+    },
+    {
+      "pdfPage": 46,
+      "trimMetres": -1.0,
+      "draft": 8.35
+    },
+    {
+      "pdfPage": 46,
+      "trimMetres": -1.0,
+      "draft": 8.4
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 2.5
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 2.55
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 2.6
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 2.65
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 2.7
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 2.75
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 2.8
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 2.85
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 2.9
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 2.95
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.0
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.05
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.1
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.15
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.2
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.25
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.3
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.35
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.4
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.45
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.5
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.55
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.6
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.65
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.7
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.75
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.8
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.85
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.9
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 3.95
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 4.0
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 4.05
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 4.1
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 4.15
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 4.2
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 4.25
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 4.3
+    },
+    {
+      "pdfPage": 47,
+      "trimMetres": -0.5,
+      "draft": 4.35
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 4.4
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 4.45
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 4.5
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 4.55
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 4.6
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 4.65
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 4.7
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 4.75
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 4.8
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 4.85
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 4.9
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 4.95
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.0
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.05
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.1
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.15
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.2
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.25
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.3
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.35
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.4
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.45
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.5
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.55
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.6
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.65
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.7
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.75
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.8
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.85
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.9
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 5.95
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 6.0
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 6.05
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 6.1
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 6.15
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 6.2
+    },
+    {
+      "pdfPage": 48,
+      "trimMetres": -0.5,
+      "draft": 6.25
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 6.3
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 6.35
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 6.4
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 6.45
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 6.5
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 6.55
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 6.6
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 6.65
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 6.7
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 6.75
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 6.8
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 6.85
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 6.9
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 6.95
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.0
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.05
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.1
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.15
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.2
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.25
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.3
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.35
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.4
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.45
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.5
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.55
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.6
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.65
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.7
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.75
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.8
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.85
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.9
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 7.95
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 8.0
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 8.011
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 8.05
+    },
+    {
+      "pdfPage": 49,
+      "trimMetres": -0.5,
+      "draft": 8.1
+    },
+    {
+      "pdfPage": 50,
+      "trimMetres": -0.5,
+      "draft": 8.15
+    },
+    {
+      "pdfPage": 50,
+      "trimMetres": -0.5,
+      "draft": 8.2
+    },
+    {
+      "pdfPage": 50,
+      "trimMetres": -0.5,
+      "draft": 8.25
+    },
+    {
+      "pdfPage": 50,
+      "trimMetres": -0.5,
+      "draft": 8.3
+    },
+    {
+      "pdfPage": 50,
+      "trimMetres": -0.5,
+      "draft": 8.35
+    },
+    {
+      "pdfPage": 50,
+      "trimMetres": -0.5,
+      "draft": 8.4
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 2.5
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 2.55
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 2.6
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 2.65
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 2.7
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 2.75
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 2.8
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 2.85
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 2.9
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 2.95
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.0
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.05
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.1
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.15
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.2
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.25
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.3
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.35
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.4
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.45
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.5
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.55
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.6
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.65
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.7
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.75
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.8
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.85
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.9
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 3.95
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 4.0
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 4.05
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 4.1
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 4.15
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 4.2
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 4.25
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 4.3
+    },
+    {
+      "pdfPage": 51,
+      "trimMetres": 0.0,
+      "draft": 4.35
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 4.4
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 4.45
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 4.5
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 4.55
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 4.6
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 4.65
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 4.7
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 4.75
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 4.8
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 4.85
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 4.9
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 4.95
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.0
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.05
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.1
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.15
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.2
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.25
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.3
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.35
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.4
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.45
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.5
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.55
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.6
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.65
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.7
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.75
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.8
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.85
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.9
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 5.95
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 6.0
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 6.05
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 6.1
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 6.15
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 6.2
+    },
+    {
+      "pdfPage": 52,
+      "trimMetres": 0.0,
+      "draft": 6.25
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 6.3
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 6.35
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 6.4
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 6.45
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 6.5
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 6.55
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 6.6
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 6.65
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 6.7
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 6.75
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 6.8
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 6.85
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 6.9
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 6.95
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.0
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.05
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.1
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.15
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.2
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.25
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.3
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.35
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.4
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.45
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.5
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.55
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.6
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.65
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.7
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.75
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.8
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.85
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.9
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 7.95
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 8.0
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 8.011
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 8.05
+    },
+    {
+      "pdfPage": 53,
+      "trimMetres": 0.0,
+      "draft": 8.1
+    },
+    {
+      "pdfPage": 54,
+      "trimMetres": 0.0,
+      "draft": 8.15
+    },
+    {
+      "pdfPage": 54,
+      "trimMetres": 0.0,
+      "draft": 8.2
+    },
+    {
+      "pdfPage": 54,
+      "trimMetres": 0.0,
+      "draft": 8.25
+    },
+    {
+      "pdfPage": 54,
+      "trimMetres": 0.0,
+      "draft": 8.3
+    },
+    {
+      "pdfPage": 54,
+      "trimMetres": 0.0,
+      "draft": 8.35
+    },
+    {
+      "pdfPage": 54,
+      "trimMetres": 0.0,
+      "draft": 8.4
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 2.5
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 2.55
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 2.6
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 2.65
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 2.7
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 2.75
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 2.8
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 2.85
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 2.9
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 2.95
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.0
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.05
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.1
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.15
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.2
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.25
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.3
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.35
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.4
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.45
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.5
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.55
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.6
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.65
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.7
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.75
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.8
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.85
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.9
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 3.95
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 4.0
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 4.05
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 4.1
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 4.15
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 4.2
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 4.25
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 4.3
+    },
+    {
+      "pdfPage": 55,
+      "trimMetres": 0.62,
+      "draft": 4.35
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 4.4
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 4.45
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 4.5
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 4.55
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 4.6
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 4.65
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 4.7
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 4.75
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 4.8
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 4.85
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 4.9
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 4.95
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.0
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.05
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.1
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.15
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.2
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.25
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.3
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.35
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.4
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.45
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.5
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.55
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.6
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.65
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.7
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.75
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.8
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.85
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.9
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 5.95
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 6.0
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 6.05
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 6.1
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 6.15
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 6.2
+    },
+    {
+      "pdfPage": 56,
+      "trimMetres": 0.62,
+      "draft": 6.25
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 6.3
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 6.35
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 6.4
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 6.45
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 6.5
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 6.55
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 6.6
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 6.65
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 6.7
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 6.75
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 6.8
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 6.85
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 6.9
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 6.95
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.0
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.05
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.1
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.15
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.2
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.25
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.3
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.35
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.4
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.45
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.5
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.55
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.6
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.65
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.7
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.75
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.8
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.85
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.9
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 7.95
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 8.0
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 8.011
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 8.05
+    },
+    {
+      "pdfPage": 57,
+      "trimMetres": 0.62,
+      "draft": 8.1
+    },
+    {
+      "pdfPage": 58,
+      "trimMetres": 0.62,
+      "draft": 8.15
+    },
+    {
+      "pdfPage": 58,
+      "trimMetres": 0.62,
+      "draft": 8.2
+    },
+    {
+      "pdfPage": 58,
+      "trimMetres": 0.62,
+      "draft": 8.25
+    },
+    {
+      "pdfPage": 58,
+      "trimMetres": 0.62,
+      "draft": 8.3
+    },
+    {
+      "pdfPage": 58,
+      "trimMetres": 0.62,
+      "draft": 8.35
+    },
+    {
+      "pdfPage": 58,
+      "trimMetres": 0.62,
+      "draft": 8.4
+    }
+  ]
+}

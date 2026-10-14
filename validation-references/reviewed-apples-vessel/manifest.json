@@ -1661,8 +1661,17 @@
       "description": "Documented starboard ordinates; interpolate displacement and initial trim, allowing source constant-LCB trim changes during heel. No heeled draft or trim path is supplied.",
       "config": {
         "referenceWaterDensity": 1.025,
-        "referenceWaterDensitySource": "Manual seawater convention, PDF page 7; no density rescaling.",
-        "portSymmetryEvidence": "vectis-source-audit-v1"
+        "referenceWaterDensitySource": "Manual seawater convention, PDF pages 31, 34 and 53; cross-curve worked example PDF 12–13; no density rescaling.",
+        "portSymmetryEvidence": "vectis-source-audit-v1",
+        "sourceCorrections": [
+          {
+            "date": "2026-10-10",
+            "field": "referenceWaterDensitySource",
+            "original": "Manual seawater convention, PDF page 7; no density rescaling.",
+            "corrected": "Manual seawater convention, PDF pages 31, 34 and 53; cross-curve worked example PDF 12–13; no density rescaling.",
+            "reason": "PDF 7 describes PIAS software, not density. PDF 31/34/53 explicitly identify seawater as 1.025 t/m³. Numerical values unchanged; review provenance when checking calculations."
+          }
+        ]
       }
     },
     {
@@ -1713,6 +1722,20 @@
       "kind": "documentation.port-symmetry-audit",
       "path": "port-symmetry-audit.json",
       "label": "Port symmetry comparison — original source cases"
+    },
+    {
+      "id": "capacity-planning-reference",
+      "kind": "loading.capacity",
+      "config": {
+        "draftLimit": {
+          "label": "Summer draught reference",
+          "draft": 8.011,
+          "datum": "Underside of keel; 8.000 m moulded",
+          "source": "004_STABILITY_LOADING_MANUAL.pdf · PDF 5, 31 (§9.1); upright table PDF 53",
+          "applicability": "Zero-trim summer reference. Fixed-draught planning only; seasonal limits, fresh-water allowances, end draughts and strength require separate assessment.",
+          "resourceId": "reviewed-upright"
+        }
+      }
     }
   ],
   "reviewNotes": {

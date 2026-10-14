@@ -1,5 +1,5 @@
 import type {DunnageFit} from './boundary-dunnage';
-export type DunnageArrangement={arrangement?:'solid'|'frame';solidLimit?:number;memberWidth?:number;bearerSpacing?:number};
+export type DunnageArrangement={boundarySource?:string;arrangement?:'solid'|'frame';solidLimit?:number;memberWidth?:number;bearerSpacing?:number};
 /** Open rectangular frame with butt-jointed perimeter rails and intermediate cross-bearers.
  * Geometry only: no joint capacity, buckling or securing-force design is implied.
  */

@@ -6,7 +6,7 @@ import { createServer } from './test-server.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const folder = `${root}validation-references/`;
 const source = JSON.parse(execFileSync(process.env.PYTHON ?? 'python3', [
-  `${root}scripts/extract-excel-case.py`, `${folder}apples-calculations-reviewed.xlsx`,
+  `${root}scripts/extract-excel-case.py`, process.argv[2] ?? process.env.WORKBOOK_PATH ?? `${folder}apples-calculations-reviewed.xlsx`,
 ], { encoding: 'utf8', maxBuffer: 4 * 1024 * 1024 }));
 const cell = (sheet, address) => source.cells[sheet][address].value;
 const server = await createServer({ root, server: { middlewareMode: true }, appType: 'custom' });
@@ -84,10 +84,10 @@ try {
     `The upright lookup uses Calc_Trim B54:D56, B60:B62 and F60:F62. It is not the final trimmed draft. Table and calculation density are equal for this mass-based comparison; no volume or density-dependent result is validated.\n\n` +
     `Existing regression fixture agrees with current workbook inputs: ${fixtureMatches}. J78 retains SUM(J67,J77): ${correctionRetained}.\n\n` +
     `## Not yet comparable\n\n` +
-    `- Final trim: Excel uses interpolation between nonzero-trim hydrostatic tables; the current simulator uses a different, small-angle solver.\n` +
+    `- Final trim is not exercised by this legacy comparison. The application now has a trimmed-table solver; see the workbook replacement audit.\n` +
     `- Aft and forward drafts: Excel D119:D120 still say REVIEW DATUM.\n` +
-    `- Actual heel and GZ: this load has nonzero TCG, while the workbook's GZ is explicitly a centreline reference; matching signed, trim-dependent vessel data is needed.\n` +
-    `- The public 3D ship is a synthetic pontoon. This case is retained privately as a repeatable calculation scenario, not imported as a pontoon scenario.\n\n` +
+    `- Actual heel and GZ: this load has nonzero TCG, while the workbook's GZ is explicitly a centreline reference. This script does not exercise the installed Vectis cross curves.\n` +
+    `- Vectis Castle is included in production. This script validates a numerical fixture, not placement of its aggregate weights in the cargo planner.\n\n` +
     `## Repeat the comparison\n\nRun \`npm run compare:excel\` from the project directory (requires Python 3 and installed project dependencies). It reads the reviewed workbook afresh, writes this report and a full-precision JSON report, and exits nonzero on a mismatch. Use \`PYTHON=/path/to/python3\` if needed.\n\n` +
     `Workbook SHA-256: \`${source.sha256}\`.\n`;
   await writeFile(`${folder}excel-simulator-comparison.md`, markdown);

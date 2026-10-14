@@ -1,0 +1,71 @@
+Window: "Pending-save crash check", App: Brave Browser.
+0 standard window Pending-save crash check - Brave, URL: 127.0.0.1:5202/scripts/recovery-crash-browser.html, Secondary Actions: Raise
+	1 container Pending-save crash check - Brave, URL: 127.0.0.1:5202/scripts/recovery-crash-browser.html
+		2 container
+			3 toolbar
+				4 button (disabled) Back
+				5 button (disabled) Forward
+				6 button Reload
+				7 button Bookmark this tab
+				8 container
+					9 pop-up button View site information
+					10 text field (settable) Address and search bar, Value: 127.0.0.1:5202/scripts/recovery-crash-browser.html, Placeholder: Search Google or type a URL
+					11 splitter Separator
+					12 pop-up button Brave Shields
+					13 pop-up button Brave Rewards
+				14 button Show Sidebar
+				15 pop-up button Brave Wallet
+				16 button Leo AI
+				17 pop-up button VPN
+				18 pop-up button Brave
+			19 container
+				20 scroll area
+					21 HTML content Pending-save crash check, URL: 127.0.0.1:5202/scripts/recovery-crash-browser.html
+						22 container
+							23 heading Pending-save crash check, Value: 1
+								24 text Pending-save crash check
+							25 text Disposable synthetic record; no operational vessel data. Keep this exact origin for restart.
+							26 button Start pending write
+							27 button Verify after crash
+							28 text PASS: old database revision 1 survived.
+PASS: pending revision 2 journal survived abrupt termination.
+PASS: production parser/merge recovered the exact latest full record (density 1.011, longitudinal FSM 123).
+PASS: recovered revision committed through production storage.
+PASS: journal cleaned only after commit.
+Scope: blocked pending database write after journaling; not pre-journal debounce or power loss.
+			29 container Infobar Container
+				30 container Infobar
+					31 container
+						32 text Brave uses privacy-preserving product analytics to estimate the overall usage of certain features
+						33 button Got it
+						34 button Disable
+					35 container
+						36 link Learn more
+						37 button Close
+			38 pop-up button Tab search
+			39 container
+				40 tab group
+					41 tab (settable, boolean) UMC · Ship Stability, Value: off
+					42 tab (settable, boolean) UMC · Ship Stability, Value: off
+					43 tab (settable, boolean) Pending-save crash check, Value: off
+					44 tab (selected, settable, boolean) Pending-save crash check - Memory usage - 51.6 MB, Value: on
+						45 button Close
+			46 button New tab
+			47 container
+				48 splitter
+	49 close button
+	50 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	51 minimise button
+52 menu bar
+	53 Brave
+	54 File
+	55 Edit
+	56 View
+	57 History
+	58 Bookmarks
+	59 Profiles
+	60 Tab
+	61 Window
+	62 Help
+
+The focused UI element is 21 HTML content Pending-save crash check, URL: 127.0.0.1:5202/scripts/recovery-crash-browser.html

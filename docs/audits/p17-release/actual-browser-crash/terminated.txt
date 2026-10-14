@@ -1,0 +1,2 @@
+There has been no change in the accessibility tree for Window: "Brave Browser (209) (Terminated)".
+The focused UI element is 15 text entry area /Applications/Brave Browser.app/Contents/MacOS/Brave Browser

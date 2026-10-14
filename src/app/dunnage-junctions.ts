@@ -1,17 +1,24 @@
+import {CargoNeighbours} from './cargo-neighbours';
 import type {DunnageFit} from './boundary-dunnage';
 const eps=1e-8;
 const bounds=(f:DunnageFit)=>({x0:f.x-f.length/2,x1:f.x+f.length/2,y0:f.y-f.width/2,y1:f.y+f.width/2});
+export function indexDunnageFits(fits:DunnageFit[]){
+ const index=new CargoNeighbours(fits.map((f,i)=>({id:String(i),name:'',category:'cargo',massTonnes:'0',freeSurfaceMomentTransverse:'0',lcg:String(f.x),tcg:String(f.y),vcg:String(f.z),footprint:{length:f.length,width:f.width,height:.001,rotation:0,deckZ:f.z}})));
+ return (f:DunnageFit,expand=0)=>index.query({xMin:f.x-f.length/2-expand,xMax:f.x+f.length/2+expand,yMin:f.y-f.width/2-expand,yMax:f.y+f.width/2+expand}).map(w=>Number(w.id)).sort((a,b)=>a-b);
+}
 /** Fill only closed four-sided junctions, never extend strips into open space. */
 export function dunnageJunctions(fits:DunnageFit[],maxGap:number):DunnageFit[]{
+ const query=indexDunnageFits(fits);
  const boxes=fits.map(bounds),result:DunnageFit[]=[],seen=new Set<string>();
 
- for(let i=0;i<fits.length;i++)for(let j=i+1;j<fits.length;j++){
+ for(let i=0;i<fits.length;i++)for(const j of query(fits[i],maxGap)){
+  if(j<=i)continue;
   if(Math.abs(fits[i].z-fits[j].z)>eps)continue;
   const a=boxes[i],b=boxes[j];let x0=Math.max(a.x0,b.x0),x1=Math.min(a.x1,b.x1),y0=Math.min(a.y1,b.y1),y1=Math.max(a.y0,b.y0);
   if(x1-x0<=eps||y1-y0<=eps){x0=Math.min(a.x1,b.x1);x1=Math.max(a.x0,b.x0);y0=Math.max(a.y0,b.y0);y1=Math.min(a.y1,b.y1);}
   if(x1-x0<=eps||y1-y0<=eps||x1-x0>maxGap+eps||y1-y0>maxGap+eps)continue;
   const candidate={length:x1-x0,width:y1-y0,x:(x0+x1)/2,y:(y0+y1)/2,z:fits[i].z};
-  if(!isClosedDunnageJunction(candidate,fits))continue;
+  if(!isClosedDunnageJunction(candidate,query(candidate).map(k=>fits[k])))continue;
   const f={length:x1-x0,width:y1-y0,x:(x0+x1)/2,y:(y0+y1)/2,z:fits[i].z};const key=Object.values(f).map(v=>v.toFixed(8)).join(':');if(!seen.has(key)){seen.add(key);result.push(f);}
  }
  return result;

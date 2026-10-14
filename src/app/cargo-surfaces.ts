@@ -15,3 +15,12 @@ export function cargoOnSurface(w:WeightDraft,area:CargoArea):boolean {
   return w.footprint.deckZ===area.deckZ && !!b && b.xMax>area.xMin && b.xMin<area.xMax && b.yMax>area.yMin && b.yMin<area.yMax;
 }
 
+
+/** Older/portable plans may omit the editor selection. Restore documented geometry,
+ * retaining explicit custom areas when no documented id was supplied. */
+export function restoredCargoArea(ship:ShipModelPackage,mode:'installed'|'stored'|'ashore',saved?:CargoArea):CargoArea|undefined {
+  const areas=cargoSurfaces(ship,mode);
+  if(!saved)return areas[0];
+  if(!saved.id)return saved;
+  return areas.find(a=>a.id===saved.id||a.sourceIds?.includes(saved.id!)||a.id?.startsWith(saved.id+'-lower'))??areas[0];
+}

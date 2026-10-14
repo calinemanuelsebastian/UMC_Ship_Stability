@@ -1,0 +1,1939 @@
+{
+  "sha256": "56ffd96aa635d761d41a56836e66bb42d0cb49b027918b1efa40a9f6d9cc510a",
+  "sheets": [
+    {
+      "name": "Calc_ideal_SF",
+      "state": "visible",
+      "populatedCells": 68,
+      "formulaCells": 11,
+      "cachedErrors": [],
+      "missingFormulaCaches": [],
+      "formulaInventory": {
+        "F5": "=C3-C4",
+        "K5": "=I5*L4",
+        "K6": "=I6*L4",
+        "I12": "=SUM(I10:I11)",
+        "J12": "=SUM(J10:J11)",
+        "L13": "=J13/L4",
+        "I14": "=I13-J13",
+        "C17": "=SUM(C9:C16)",
+        "I18": "=J13/C19",
+        "C19": "=C5-C17",
+        "I20": "=IF(I18<=I19,\"LOAD FULL\",\"LOAD DOWN\")"
+      }
+    },
+    {
+      "name": "Calc_G_Cargo",
+      "state": "visible",
+      "populatedCells": 608,
+      "formulaCells": 302,
+      "cachedErrors": [],
+      "missingFormulaCaches": [],
+      "formulaInventory": {
+        "D4": "=C4+60.85",
+        "D5": "=C5+60.85",
+        "F5": "=D5+E5",
+        "D6": "=C6+60.85",
+        "F6": "=D6+E6",
+        "D7": "=C7+60.85",
+        "F7": "=D7+E7",
+        "D8": "=C8+60.85",
+        "F8": "=D8+E8",
+        "I9": "=I5+I7+I8",
+        "L9": "=K9/2",
+        "M9": "=L9+I9",
+        "I10": "= I5",
+        "L10": "= K10/2",
+        "M10": "= I10 + L10",
+        "F11": "= D7 - 0.15 - 1.4",
+        "F12": "=F11",
+        "K12": "= 2.388",
+        "L12": "=K12 / 2",
+        "M12": "= I10 + L12",
+        "F13": "= D8 - 1.2",
+        "K13": "= 0.1",
+        "L13": "=K13 / 2",
+        "M13": "= 2.144 + L13",
+        "F14": "= D8 + ((155-141) * 0.7) - 0.9",
+        "K14": "= K9",
+        "L14": "=K14 / 2",
+        "M14": "= M10",
+        "F15": "= F5",
+        "K15": "=K12",
+        "L15": "=K15 / 2",
+        "M15": "= I10 + L15",
+        "F16": "=F6",
+        "K16": "=K13",
+        "L16": "=K16 / 2",
+        "M16": "= M13",
+        "F17": "=F7",
+        "K17": "= K9",
+        "L17": "=K17 / 2",
+        "M17": "= M10",
+        "F18": "= F8",
+        "K18": "= K12",
+        "L18": "=K18 / 2",
+        "M18": "= I9 + L18",
+        "K19": "= K16",
+        "L19": "=K19 / 2",
+        "M19": "= I9 + 2.144 + L19",
+        "K20": "= K9",
+        "L20": "=K20 / 2",
+        "M20": "= M9",
+        "K21": "= K12",
+        "L21": "=K21 / 2",
+        "M21": "= M18",
+        "C22": "=C4*2",
+        "K22": "= K13",
+        "L22": "=K22 / 2",
+        "M22": "= M19",
+        "C23": "=ABS(C4*2)",
+        "K23": "= K9",
+        "L23": "=K23 / 2",
+        "M23": "= M9",
+        "K24": "= K12",
+        "L24": "=K24 / 2",
+        "M24": "= I10 + L24",
+        "K25": "= K13",
+        "L25": "=K25 / 2",
+        "M25": "= M13",
+        "C26": "= Calc_ideal_SF!I19",
+        "K26": "= K9",
+        "L26": "=K26 / 2",
+        "M26": "= M10",
+        "C27": "= 2 * 1.2 * 1",
+        "K27": "= K12",
+        "L27": "=K27 / 2",
+        "M27": "= M18",
+        "C28": "= C27 / Calc_ideal_SF!I19",
+        "K28": "= K13",
+        "L28": "=K28 / 2",
+        "M28": "= M21",
+        "K29": "= K9",
+        "L29": "=K29 / 2",
+        "M29": "= M9",
+        "C31": "=2 * (2 + 0.144 + 0.1 + 0.144) * 0.1 * 0.1",
+        "C32": "= (1.3 + 1.3 + 1.15) * 0.1 * 0.1",
+        "C40": "= 68 * 2",
+        "D40": "=C40 * C28",
+        "E40": "= F8",
+        "F40": "= M10",
+        "H40": "=D40*E40",
+        "I40": "=D40*F40",
+        "J40": "=D40*G40",
+        "C41": "= 139 * 2",
+        "D41": "=C41 * C28",
+        "E41": "= F7",
+        "F41": "=M10",
+        "H41": "=D41*E41",
+        "I41": "=D41*F41",
+        "J41": "=D41*G41",
+        "C42": "=68 * 2",
+        "D42": "=C42 * C28",
+        "E42": "= F8",
+        "F42": "=M9",
+        "H42": "=D42*E42",
+        "I42": "=D42*F42",
+        "J42": "=D42*G42",
+        "C43": "= 139 * 2",
+        "D43": "=C43 * C28",
+        "E43": "= F7",
+        "F43": "=M9",
+        "H43": "=D43*E43",
+        "I43": "=D43*F43",
+        "J43": "=D43*G43",
+        "C44": "= 637 * 2",
+        "D44": "=C44 * C28",
+        "E44": "= F6",
+        "F44": "=M10",
+        "H44": "=D44*E44",
+        "I44": "=D44*F44",
+        "J44": "=D44*G44",
+        "C45": "= 637 * 2",
+        "D45": "=C45 * C28",
+        "E45": "= F5",
+        "F45": "=M9",
+        "H45": "=D45*E45",
+        "I45": "=D45*F45",
+        "J45": "=D45*G45",
+        "C46": "=SUM(C40:C45)",
+        "D46": "=SUM(D40:D45)",
+        "E46": "=ROUND(H46/D46, 2)",
+        "F46": "=ROUND(I46/D46, 2)",
+        "G46": "=ROUND(J46/D46, 2)",
+        "H46": "=SUM(H40:H45)",
+        "I46": "=SUM(I40:I45)",
+        "J46": "=SUM(J40:J45)",
+        "C48": "= C31 * C40",
+        "D48": "= C30 * C48",
+        "E48": "=F18",
+        "F48": "=M12",
+        "H48": "= D48 * E48",
+        "I48": "= D48 * F48",
+        "C49": "= C32 * C40",
+        "D49": "= C30 * C49",
+        "E49": "=F18",
+        "F49": "=M13",
+        "H49": "= D49 * E49",
+        "I49": "= D49 * F49",
+        "C50": "=C33",
+        "D50": "= C30 * C50",
+        "E50": "=F14",
+        "F50": "=M14",
+        "H50": "= D50 *E50",
+        "I50": "= D50 * F50",
+        "C51": "= C31 * C41",
+        "D51": "= C30 * C51",
+        "E51": "=F17",
+        "F51": "=M15",
+        "H51": "= D51 * E51",
+        "I51": "= D51 * F51",
+        "C52": "= C32 * C41",
+        "D52": "= C30 * C52",
+        "E52": "=F17",
+        "F52": "=M16",
+        "H52": "= D52 * E52",
+        "I52": "= D52 * F52",
+        "C53": "= 0.5",
+        "D53": "= C30 * C53",
+        "E53": "=F13",
+        "F53": "=M17",
+        "H53": "= D53 *E53",
+        "I53": "=D53 * F53",
+        "C54": "= C31 * C42",
+        "D54": "= C30 * C54",
+        "E54": "=F18",
+        "F54": "=M18",
+        "H54": "= D54 * E54",
+        "I54": "=D54 * F54",
+        "C55": "= C32 * C42",
+        "D55": "= C30 * C55",
+        "E55": "=F18",
+        "F55": "=M19",
+        "H55": "= D55 * E55",
+        "I55": "=D55 * F55",
+        "C56": "= C33",
+        "D56": "= C30* C56",
+        "E56": "=F14",
+        "F56": "=M20",
+        "H56": "= D56 *E56",
+        "I56": "=D56 * F56",
+        "C57": "= C31 * C43",
+        "D57": "= C30 * C57",
+        "E57": "=F17",
+        "F57": "=M21",
+        "H57": "= D57 * E57",
+        "I57": "=D57 * F57",
+        "C58": "= C32 * C43",
+        "D58": "= C30 * C58",
+        "E58": "=F17",
+        "F58": "=M22",
+        "H58": "= D58 * E58",
+        "I58": "=D58 * F58",
+        "C59": "= 0.5",
+        "D59": "= C30 * C59",
+        "E59": "=F13",
+        "F59": "=M23",
+        "H59": "= D59 *E59",
+        "I59": "=D59 * F59",
+        "C60": "= C31 * C44",
+        "D60": "= C30 * C60",
+        "E60": "=F16",
+        "F60": "=M24",
+        "H60": "= D60 * E60",
+        "I60": "=D60 * F60",
+        "C61": "= C32 * C44",
+        "D61": "= C30 * C61",
+        "E61": "=F16",
+        "F61": "=M25",
+        "H61": "= D61 * E61",
+        "I61": "=D61 * F61",
+        "C62": "= C33",
+        "D62": "= C30 * C62",
+        "E62": "=F12",
+        "F62": "=M26",
+        "H62": "= D62 *E62",
+        "I62": "=D62 * F62",
+        "C63": "= C31 * C45",
+        "D63": "= C30 * C63",
+        "E63": "=F15",
+        "F63": "=M27",
+        "H63": "= D63 * E63",
+        "I63": "=D63 * F63",
+        "C64": "= C32 * C45",
+        "D64": "= C30 * C64",
+        "E64": "=F15",
+        "F64": "=M28",
+        "H64": "= D64 * E64",
+        "I64": "= D64 * F64",
+        "C65": "= C33",
+        "D65": "= C30 * C65",
+        "E65": "= F11",
+        "F65": "=M29",
+        "H65": "= D65 *E65",
+        "I65": "= D65 * F65",
+        "C66": "= ROUND(SUM(C48:C65) + 0.1 * SUM(C48:C65),0)",
+        "D66": "= C30 * C66",
+        "E66": "=ROUND(H66/D66,2)",
+        "F66": "= ROUND(I66 / D66, 2)",
+        "G66": "=J66/D66",
+        "H66": "=SUM(H48:H65)*D66/SUM(D48:D65)",
+        "I66": "=SUM(I48:I65)*D66/SUM(D48:D65)",
+        "J66": "=SUM(J48:J65)*D66/SUM(D48:D65)",
+        "D67": "= SUM(D46, D66)",
+        "E67": "=(ROUND(H67/D67, 2))",
+        "F67": "=ROUND(I67/D67, 2)",
+        "G67": "= ROUND(J67/D67, 2)",
+        "H67": "= SUM(H46, H66)",
+        "I67": "= SUM(I46, I66)",
+        "J67": "= SUM(J46, J66)",
+        "H68": "= PRODUCT(D68, E68)",
+        "I68": "= PRODUCT(D68,F68)",
+        "J68": "=PRODUCT(D68,G68)",
+        "H69": "= PRODUCT(D69, E69)",
+        "I69": "=PRODUCT(D69,F69)",
+        "J69": "=PRODUCT(D69,G69)",
+        "H70": "= PRODUCT(D70, E70)",
+        "I70": "=PRODUCT(D70,F70)",
+        "J70": "=PRODUCT(D70,G70)",
+        "H71": "=PRODUCT(D71, E71)",
+        "I71": "=PRODUCT(D71,F71)",
+        "J71": "=PRODUCT(D71,G71)",
+        "H72": "=PRODUCT(D72, E72)",
+        "I72": "=PRODUCT(D72,F72)",
+        "J72": "=PRODUCT(D72,G72)",
+        "H73": "=PRODUCT(D73, E73)",
+        "I73": "=PRODUCT(D73,F73)",
+        "J73": "=PRODUCT(D73,G73)",
+        "H74": "=PRODUCT(D74, E74)",
+        "I74": "=PRODUCT(D74,F74)",
+        "J74": "=PRODUCT(D74,G74)",
+        "H75": "=PRODUCT(D75, E75)",
+        "I75": "=PRODUCT(D75,F75)",
+        "J75": "=PRODUCT(D75,G75)",
+        "H76": "=PRODUCT(D76, E76)",
+        "I76": "=PRODUCT(D76,F76)",
+        "J76": "=PRODUCT(D76,G76)",
+        "D77": "=SUM(D68:D76)",
+        "E77": "= ROUND(H77/D77, 2)",
+        "F77": "= ROUND(I77/D77, 2)",
+        "G77": "= ROUND(J77/D77, 2)",
+        "H77": "= ROUND(SUM(H68:H76), 2)",
+        "I77": "= ROUND(SUM(I68:I76), 2)",
+        "J77": "= ROUND(SUM(J68:J76), 2)",
+        "K77": "= SUM(K69:K76)",
+        "D78": "= SUM(D67,D77)",
+        "E78": "=ROUND(H78/D78, 2)",
+        "F78": "= ROUND(I78/D78, 2)",
+        "G78": "= ROUND(J78/D78, 2)",
+        "H78": "= SUM(H67,H77)",
+        "I78": "=SUM(I67, I77)",
+        "J78": "=SUM(J67,J77)",
+        "C85": "= Calc_ideal_SF!C3",
+        "C86": "= D78",
+        "B87": "=IF(C86<=C85,\"WITHIN DISPLACEMENT LIMIT\",\"DISPLACEMENT LIMIT EXCEEDED\")"
+      }
+    },
+    {
+      "name": "Calc_List",
+      "state": "visible",
+      "populatedCells": 82,
+      "formulaCells": 28,
+      "cachedErrors": [],
+      "missingFormulaCaches": [],
+      "formulaInventory": {
+        "B5": "= Calc_G_Cargo!D78",
+        "C5": "= Calc_G_Cargo!E78",
+        "D5": "=Calc_G_Cargo!F78",
+        "E5": "= Calc_G_Cargo!G78",
+        "F5": "= Calc_G_Cargo!H78",
+        "G5": "= Calc_G_Cargo!I78",
+        "H5": "= Calc_G_Cargo!J78",
+        "G13": "= C13 * D13",
+        "H13": "= C13 * E13",
+        "I13": "= C13 * F13",
+        "G14": "= C14 * D14",
+        "H14": "= C14 * E14",
+        "I14": "= C14 * F14",
+        "J14": "= 5.39",
+        "G15": "= C15 * D15",
+        "H15": "= C15 * E15",
+        "I15": "= C15 * F15",
+        "C18": "= SUM(C13:C15)",
+        "C19": "=B5 + SUM(C13:C16)",
+        "D19": "=G19/C19",
+        "E19": "=H19/C19",
+        "F19": "=I19/C19",
+        "G19": "=F5 + SUM(G13:G16)",
+        "H19": "=G5 + SUM(H13:H16)",
+        "I19": "=H5 + SUM(I13:I16)",
+        "B23": "= Calc_ideal_SF!C3",
+        "B24": "= C19",
+        "A25": "=IF(B24<=B23,\"WITHIN DISPLACEMENT LIMIT\",\"DISPLACEMENT LIMIT EXCEEDED\")"
+      }
+    },
+    {
+      "name": "Calc_Trim",
+      "state": "visible",
+      "populatedCells": 549,
+      "formulaCells": 150,
+      "cachedErrors": [],
+      "missingFormulaCaches": [],
+      "formulaInventory": {
+        "B4": "= Calc_List!C19",
+        "C4": "= Calc_List!D19",
+        "D4": "= Calc_List!E19",
+        "E4": "= Calc_List!F19",
+        "F4": "= Calc_List!G19",
+        "G4": "= Calc_List!H19",
+        "H4": "= Calc_List!I19",
+        "F13": "= B14",
+        "H13": "= H14 + H15 * 0.01",
+        "B14": "=B4",
+        "D14": "= (B14 - B13) * (D15 - D13) / (B15 - B13) + D13",
+        "F14": "= B13",
+        "H15": "= (F13 - F14) / F15",
+        "B20": "= B13",
+        "D20": "= 61.524",
+        "F20": "= B13",
+        "H20": "= 138.2",
+        "B21": "= B14",
+        "D21": "= (B21 - B20) * (D22 - D20) / (B22 - B20) + D20",
+        "F21": "=  B14",
+        "H21": "= (F21 - F20) * (H22 - H20) / (F22 - F20) + H20",
+        "B22": "= B15",
+        "D22": "= 61.491",
+        "F22": "= B15",
+        "H22": "= 139.42",
+        "B27": "= ((C4 - D21) * B4 )/ (100 * H21)",
+        "G30": "=C30 * D30",
+        "H30": "=C30 * E30",
+        "I30": "=C30 * F30",
+        "G31": "=C31 * D31",
+        "H31": "=C31 * E31",
+        "I31": "=C31 * F31",
+        "J31": "= 5.39",
+        "G32": "=C32 * D32",
+        "H32": "=C32 * E32",
+        "I32": "=C32 * F32",
+        "G33": "=C33 * D33",
+        "H33": "=C33 * E33",
+        "I33": "=C33 * F33",
+        "N33": "= Calc_ideal_SF!C3",
+        "G34": "=C34 * D34",
+        "H34": "=C34 * E34",
+        "I34": "=C34 * F34",
+        "N34": "= C46",
+        "G35": "=C35 * D35",
+        "H35": "=C35 * E35",
+        "I35": "=C35 * F35",
+        "M35": "=IF(N34<=N33,\"WITHIN DISPLACEMENT LIMIT\",\"DISPLACEMENT LIMIT EXCEEDED\")",
+        "G36": "=C36 * D36",
+        "H36": "=C36 * E36",
+        "I36": "=C36 * F36",
+        "G37": "=C37 * D37",
+        "H37": "=C37 * E37",
+        "I37": "=C37 * F37",
+        "G38": "=C38 * D38",
+        "H38": "=C38 * E38",
+        "I38": "=C38 * F38",
+        "G39": "=C39 * D39",
+        "H39": "=C39 * E39",
+        "I39": "=C39 * F39",
+        "G40": "=C40 * D40",
+        "H40": "=C40 * E40",
+        "I40": "=C40 * F40",
+        "G41": "=C41 * D41",
+        "H41": "=C41 * E41",
+        "I41": "=C41 * F41",
+        "G42": "=C42 * D42",
+        "H42": "=C42 * E42",
+        "I42": "=C42 * F42",
+        "G43": "=C43 * D43",
+        "H43": "=C43 * E43",
+        "I43": "=C43 * F43",
+        "C45": "= SUM(C30:C43)",
+        "C46": "=SUM(C30:C43) + Calc_List!B5",
+        "D46": "=G46/C46",
+        "E46": "=H46/C46",
+        "F46": "=I46/C46",
+        "G46": "=SUM(G30:G45) + Calc_List!F5",
+        "H46": "= SUM(H30:H45) + Calc_List!G5",
+        "I46": "= SUM(I30:I45) + Calc_List!H5",
+        "J50": "= ((D46 - B61) * C46) / (100 * D61)",
+        "L50": "= J50",
+        "J52": "= B55 * (D46-B61)",
+        "F54": "= B55",
+        "H54": "= H55 + H56 * 0.01",
+        "B55": "= C46",
+        "D55": "= (B55 - B54) * (D56 - D54) / (B56 - B54) + D54",
+        "F55": "= B54",
+        "H55": "= D54",
+        "H56": "= (F54 - F55) / F56",
+        "B61": "= (B55 - B54) * (B62 - B60) / (B56 - B54) + B60",
+        "D61": "= (B55 - B54) * (D62 - D60) / (B56 - B54) + D60",
+        "F61": "= (B55 - B54) * (F62 - F60) / (B56 - B54) + F60",
+        "J65": "= ((D46 - B76) * C46) / (100 * D76)",
+        "L65": "= -1 + J65",
+        "J67": "= B70 * (D46-B76)",
+        "F69": "= B70",
+        "H69": "= H70 + H71 * 0.01",
+        "B70": "= C46",
+        "D70": "= (B70 - B69) * (D71 - D69) / (B71 - B69) + D69",
+        "F70": "= B69",
+        "H70": "= D69",
+        "H71": "= (F69 - F70) / F71",
+        "B76": "= (B70 - B69) * (B77 - B75) / (B71 - B69) + B75",
+        "D76": "= (B70 - B69) * (D77 - D75) / (B71 - B69) + D75",
+        "F76": "= ((B70 - B69) * (F77 - F75)) / (B71 - B69) + F75",
+        "J80": "=((D46-B91)*C46)/(100*D91)",
+        "L80": "= -1.5 + J80",
+        "J82": "= B85 * (D46-B91)",
+        "F84": "= B85",
+        "H84": "= H85 + H86 * 0.01",
+        "B85": "= C46",
+        "D85": "= (B85 - B84) * (D86 - D84) / (B86 - B84) + D84",
+        "F85": "= B84",
+        "H85": "= D84",
+        "H86": "= (F84 - F85) / F86",
+        "B91": "= (B85 - B84) * (B92 - B90) / (B86 - B84) + B90",
+        "D91": "= (B85 - B84) * (D92 - D90) / (B86 - B84) + D90",
+        "F91": "= (B85 - B84) * (F92 - F90) / (B86 - B84) + F90",
+        "J95": "=((D46-B106)*C46)/(100*D106)",
+        "L95": "= -2 + J95",
+        "J97": "= B100 * (D46-B106)",
+        "F99": "= B100",
+        "H99": "= H100 + H101 * 0.01",
+        "B100": "= C46",
+        "D100": "= (B100 - B99) * (D101 - D99) / (B101 - B99) + D99",
+        "F100": "= B99",
+        "H100": "= D99",
+        "H101": "= (F99 - F100) / F101",
+        "B106": "= (B100 - B99) * (B107 - B105) / (B101 - B99) + B105",
+        "D106": "= (B100 - B99) * (D107 - D105) / (B101 - B99) + D105",
+        "F106": "= (B100 - B99) * (F107 - F105) / (B101 - B99) + F105",
+        "L110": "= ((D46-F114) * C46)/(100*H114)",
+        "N110": "=-B114+L110",
+        "L112": "=C46 * ( D46-F114 )",
+        "D113": "= D70",
+        "F113": "= B76",
+        "H113": "= D76",
+        "J113": "= F76",
+        "B114": "=B113+(D46-F113)*(B115-B113)/(F115-F113)",
+        "D114": "= (B114-B113)*(D115-D113) / (B115-B113) + D113",
+        "F114": "= (D114-D113)*(F115-F113) / (D115 - D113) + F113",
+        "H114": "= (D114-D113)*(H115-H113) / (D115-D113) + H113",
+        "J114": "= (D114 - D113) * (J115 - J113) / (D115 - D113) + J113",
+        "D115": "= D85",
+        "F115": "= B91",
+        "H115": "= D91",
+        "J115": "= F91",
+        "B119": "= D114",
+        "B120": "=N110"
+      }
+    },
+    {
+      "name": "Calc_Stability",
+      "state": "visible",
+      "populatedCells": 398,
+      "formulaCells": 193,
+      "cachedErrors": [],
+      "missingFormulaCaches": [],
+      "formulaInventory": {
+        "C4": "= Calc_Trim!C46",
+        "C5": "= Calc_Trim!E46",
+        "C6": "= Calc_G_Cargo!K77",
+        "C7": "= C6/C4",
+        "C8": "=C5+C7",
+        "J12": "= Calc_Trim!B113",
+        "L12": "= D13",
+        "O12": "= L13",
+        "B13": "= C4",
+        "D13": "= (B13 - B12) * (D14 - D12) / (B14 - B12) + D12",
+        "F13": "= C4",
+        "H13": "= (F13 - F12) * (H14 - H12) / (F14 - F12) + H12",
+        "J13": "= Calc_Trim!B114",
+        "L13": "= (J13 - J12) * (L14 - L12) / (J14 - J12) + L12",
+        "O13": "= C8",
+        "J14": "= Calc_Trim!B115",
+        "L14": "= H13",
+        "N14": "=IF(ABS(Calc_Trim!F46)>0.000001,\"REVIEW TCG\",IF(O13 < O12, \"Actual VCG' is GOOD\", \"Actual VCG' is BAD\"))",
+        "F17": "= B18",
+        "B18": "= (Calc_Trim!B70 - Calc_Trim!B69) * (Calc_Stability!B19 - Calc_Stability!B17) / (Calc_Trim!B71 - Calc_Trim!B69) + Calc_Stability!B17",
+        "D18": "= (Calc_Trim!B85 - Calc_Trim!B84) * (Calc_Stability!D19 - Calc_Stability!D17) / (Calc_Trim!B86 - Calc_Trim!B84) + D17",
+        "F18": "= (J13 - J12) * (F19 - F17) / (J14 - J12) + F17",
+        "F19": "= D18",
+        "C21": "= F18",
+        "C22": "=C5",
+        "C23": "= C21 - C22",
+        "C24": "=C7",
+        "C25": "=C23-C24",
+        "C26": "=IF(ABS(Calc_Trim!F46)>0.000001,\"REVIEW TCG\",IF(C25 > 0.15, \"GOOD\", \"BAD\"))",
+        "G31": "=RADIANS(F31)",
+        "G32": "=RADIANS(F32)",
+        "G33": "=RADIANS(F33)",
+        "G34": "=RADIANS(F34)",
+        "G35": "=RADIANS(F35)",
+        "H35": "=G35*0.8/2",
+        "C40": "=0",
+        "B41": "=C4",
+        "C41": "=C40+($B41-$B40)*(C42-C40)/($B42-$B40)",
+        "D41": "=D40+($B41-$B40)*(D42-D40)/($B42-$B40)",
+        "E41": "=E40+($B41-$B40)*(E42-E40)/($B42-$B40)",
+        "F41": "=F40+($B41-$B40)*(F42-F40)/($B42-$B40)",
+        "G41": "=G40+($B41-$B40)*(G42-G40)/($B42-$B40)",
+        "H41": "=H40+($B41-$B40)*(H42-H40)/($B42-$B40)",
+        "I41": "=I40+($B41-$B40)*(I42-I40)/($B42-$B40)",
+        "J41": "=J40+($B41-$B40)*(J42-J40)/($B42-$B40)",
+        "K41": "=K40+($B41-$B40)*(K42-K40)/($B42-$B40)",
+        "L41": "=L40+($B41-$B40)*(L42-L40)/($B42-$B40)",
+        "M41": "=M40+($B41-$B40)*(M42-M40)/($B42-$B40)",
+        "N41": "=N40+($B41-$B40)*(N42-N40)/($B42-$B40)",
+        "O41": "=O40+($B41-$B40)*(O42-O40)/($B42-$B40)",
+        "B45": "= B41",
+        "C45": "=C44+($B45-$B44)*(C46-C44)/($B46-$B44)",
+        "D45": "=D44+($B45-$B44)*(D46-D44)/($B46-$B44)",
+        "E45": "=E44+($B45-$B44)*(E46-E44)/($B46-$B44)",
+        "F45": "=F44+($B45-$B44)*(F46-F44)/($B46-$B44)",
+        "G45": "=G44+($B45-$B44)*(G46-G44)/($B46-$B44)",
+        "H45": "=H44+($B45-$B44)*(H46-H44)/($B46-$B44)",
+        "I45": "=I44+($B45-$B44)*(I46-I44)/($B46-$B44)",
+        "J45": "=J44+($B45-$B44)*(J46-J44)/($B46-$B44)",
+        "K45": "=K44+($B45-$B44)*(K46-K44)/($B46-$B44)",
+        "L45": "=L44+($B45-$B44)*(L46-L44)/($B46-$B44)",
+        "M45": "=M44+($B45-$B44)*(M46-M44)/($B46-$B44)",
+        "N45": "=N44+($B45-$B44)*(N46-N44)/($B46-$B44)",
+        "O45": "=O44+($B45-$B44)*(O46-O44)/($B46-$B44)",
+        "D46": "=D44",
+        "C48": "=C41",
+        "D48": "=D41",
+        "E48": "=E41",
+        "F48": "=F41",
+        "G48": "=G41",
+        "H48": "=H41",
+        "I48": "=I41",
+        "J48": "=J41",
+        "K48": "=K41",
+        "L48": "=L41",
+        "M48": "=M41",
+        "N48": "=N41",
+        "O48": "=O41",
+        "B49": "=-Calc_Trim!B114",
+        "C49": "=C48+($B49-$B48)*(C50-C48)/($B50-$B48)",
+        "D49": "=D48+($B49-$B48)*(D50-D48)/($B50-$B48)",
+        "E49": "=E48+($B49-$B48)*(E50-E48)/($B50-$B48)",
+        "F49": "=F48+($B49-$B48)*(F50-F48)/($B50-$B48)",
+        "G49": "=G48+($B49-$B48)*(G50-G48)/($B50-$B48)",
+        "H49": "=H48+($B49-$B48)*(H50-H48)/($B50-$B48)",
+        "I49": "=I48+($B49-$B48)*(I50-I48)/($B50-$B48)",
+        "J49": "=J48+($B49-$B48)*(J50-J48)/($B50-$B48)",
+        "K49": "=K48+($B49-$B48)*(K50-K48)/($B50-$B48)",
+        "L49": "=L48+($B49-$B48)*(L50-L48)/($B50-$B48)",
+        "M49": "=M48+($B49-$B48)*(M50-M48)/($B50-$B48)",
+        "N49": "=N48+($B49-$B48)*(N50-N48)/($B50-$B48)",
+        "O49": "=O48+($B49-$B48)*(O50-O48)/($B50-$B48)",
+        "C50": "=C45",
+        "D50": "=D45",
+        "E50": "=E45",
+        "F50": "=F45",
+        "G50": "=G45",
+        "H50": "=H45",
+        "I50": "=I45",
+        "J50": "=J45",
+        "K50": "=K45",
+        "L50": "=L45",
+        "M50": "=M45",
+        "N50": "=N45",
+        "O50": "=O45",
+        "B54": "=C49",
+        "C54": "=D49",
+        "D54": "=E49",
+        "E54": "=F49",
+        "F54": "=G49",
+        "G54": "=H49",
+        "H54": "=I49",
+        "I54": "=J49",
+        "J54": "=K49",
+        "K54": "=L49",
+        "L54": "=M49",
+        "M54": "=N49",
+        "N54": "=O49",
+        "B55": "=$C$8",
+        "C55": "=$C$8",
+        "D55": "=$C$8",
+        "E55": "=$C$8",
+        "F55": "=$C$8",
+        "G55": "=$C$8",
+        "H55": "=$C$8",
+        "I55": "=$C$8",
+        "J55": "=$C$8",
+        "K55": "=$C$8",
+        "L55": "=$C$8",
+        "M55": "=$C$8",
+        "N55": "=$C$8",
+        "B56": "=SIN(RADIANS(B53))",
+        "C56": "=SIN(RADIANS(C53))",
+        "D56": "=SIN(RADIANS(D53))",
+        "E56": "=SIN(RADIANS(E53))",
+        "F56": "=SIN(RADIANS(F53))",
+        "G56": "=SIN(RADIANS(G53))",
+        "H56": "=SIN(RADIANS(H53))",
+        "I56": "=SIN(RADIANS(I53))",
+        "J56": "=SIN(RADIANS(J53))",
+        "K56": "=SIN(RADIANS(K53))",
+        "L56": "=SIN(RADIANS(L53))",
+        "M56": "=SIN(RADIANS(M53))",
+        "N56": "=SIN(RADIANS(N53))",
+        "O56": "=SIN(RADIANS(O53))",
+        "B57": "=B55*B56",
+        "C57": "=C55*C56",
+        "D57": "=D55*D56",
+        "E57": "=E55*E56",
+        "F57": "=F55*F56",
+        "G57": "=G55*G56",
+        "H57": "=H55*H56",
+        "I57": "=I55*I56",
+        "J57": "=J55*J56",
+        "K57": "=K55*K56",
+        "L57": "=L55*L56",
+        "M57": "=M55*M56",
+        "N57": "=N55*N56",
+        "B58": "=B54-B57",
+        "C58": "=C54-C57",
+        "D58": "=D54-D57",
+        "E58": "=E54-E57",
+        "F58": "=F54-F57",
+        "G58": "=G54-G57",
+        "H58": "=H54-H57",
+        "I58": "=I54-I57",
+        "J58": "=J54-J57",
+        "K58": "=K54-K57",
+        "L58": "=L54-L57",
+        "M58": "=M54-M57",
+        "N58": "=N54-N57",
+        "L61": "=SUM(I62:I69)",
+        "I62": "= (SUM(B58:C58) / 2) * RADIANS(C53 - B53)",
+        "L62": "=IF(ABS(Calc_Trim!F46)>0.000001,\"REVIEW TCG\", IF(L61 > 0.055, \"GOOD\", \"BAD\"))",
+        "I63": "= (SUM(C58:D58) / 2) * RADIANS(D53 - C53)",
+        "L63": "= SUM(I62:I71)",
+        "I64": "= (SUM(D58:E58) / 2) * RADIANS(E53 - D53)",
+        "L64": "=IF(ABS(Calc_Trim!F46)>0.000001,\"REVIEW TCG\", IF(L63 > 0.09, \"GOOD\", \"BAD\"))",
+        "I65": "= (SUM(E58:F58) / 2) * RADIANS(F53 - E53)",
+        "L65": "= SUM(I70:I71)",
+        "I66": "= (SUM(F58:G58) / 2) * RADIANS(G53 - F53)",
+        "L66": "=IF(ABS(Calc_Trim!F46)>0.000001,\"REVIEW TCG\", IF(L65 > 0.03, \"GOOD\", \"BAD\"))",
+        "I67": "= (SUM(G58:H58) / 2) * RADIANS(H53 - G53)",
+        "I68": "= (SUM(H58:I58) / 2) * RADIANS(I53 - H53)",
+        "I69": "= (SUM(I58:J58) / 2) * RADIANS(J53 - I53)",
+        "L69": "=IF(ABS(Calc_Trim!F46)>0.000001,\"REVIEW TCG\",IF(AND((J58 >= 0.2),(K58 >=  0.2), (L58 >=  0.2), (M58 >=  0.2), (N58 >= 0.2)), \"GOOD\", \"BAD\"))",
+        "I70": "= (SUM(J58:K58) / 2) * RADIANS(K53 - J53)",
+        "L70": "=INDEX(B53:N53,1,MATCH(MAX(B58:N58),B58:N58,0))",
+        "I71": "= (SUM(K58:L58) / 2) * RADIANS(L53 - K53)",
+        "L71": "=IF(ABS(Calc_Trim!F46)>0.000001,\"REVIEW TCG\", IF(L70 > 25, \"GOOD\", \"BAD\"))",
+        "I72": "= (SUM(L58:M58) / 2) * RADIANS(M53 - L53)",
+        "I73": "= (SUM(M58:N58) / 2) * RADIANS(N53 - M53)",
+        "C86": "= C25"
+      }
+    },
+    {
+      "name": "Calc_Wind",
+      "state": "visible",
+      "populatedCells": 111,
+      "formulaCells": 50,
+      "cachedErrors": [],
+      "missingFormulaCaches": [],
+      "formulaInventory": {
+        "B4": "= - P4",
+        "C4": "= - O4",
+        "D4": "=- N4",
+        "E4": "= - M4",
+        "F4": "= -L4",
+        "G4": "= -K4",
+        "H4": "= - J4",
+        "I4": "= Calc_Stability!B58",
+        "J4": "= Calc_Stability!C58",
+        "K4": "= Calc_Stability!D58",
+        "L4": "= Calc_Stability!E58",
+        "M4": "= Calc_Stability!F58",
+        "N4": "= Calc_Stability!G58",
+        "O4": "= Calc_Stability!H58",
+        "P4": "= Calc_Stability!I58",
+        "Q4": "= Calc_Stability!J58",
+        "R4": "= Calc_Stability!K58",
+        "S4": "= Calc_Stability!L58",
+        "T4": "= Calc_Stability!M58",
+        "U4": "= Calc_Stability!N58",
+        "C9": "= 0.072 - (Calc_Stability!C4 - 9469.49) * (0.072-0.07) / (9658.51 - 9469.49)",
+        "C10": "= 1.5 * C9",
+        "C12": "= (Calc_Stability!C4 - 9469.49) * (1327-1340) / (9658.51 - 9469.49) + 1340",
+        "C15": "= J3 + (C9 - J4) / (K4 - J4) * (K3 - J3)",
+        "C16": "=IF(ABS(Calc_Trim!F46)>0.000001,\"REVIEW TCG\", IF(C15 < 16, \"GOOD\", \"BAD\"))",
+        "C19": "= 17.4",
+        "C20": "= Calc_Trim!D114",
+        "C21": "= C19 / C20",
+        "C23": "= Calc_G_Cargo!C23",
+        "C24": "= Calc_List!B10",
+        "C25": "= Calc_Trim!C46",
+        "C26": "= C25 / (C24 * C19 * C23 * C20)",
+        "C27": "= 1",
+        "C28": "= 1",
+        "C29": "= 0.73 + 0.6 * ((Calc_Stability!C22 - Calc_Trim!D114)/Calc_Trim!D114)",
+        "C30": "= 0.373 + (0.023 * C21) - 0.043 * (C23/100)",
+        "C31": "= (2 * C30 * C19) / SQRT(Calc_Stability!C25)",
+        "C32": "= (C31 - 12) * (0.053 - 0.065) / (14 - 12) + 0.065",
+        "C33": "= 109 * C28 * C22 * C27 * SQRT(C29 * C32)",
+        "B61": "= (- C33) + C15",
+        "C61": "= B61",
+        "E61": "= C9",
+        "F61": "= C9",
+        "B62": "= C15",
+        "C62": "= B62",
+        "E62": "= C10",
+        "F62": "= C10",
+        "B63": "= C34",
+        "C63": "= B63",
+        "B64": "= (B61 - D3) * (C4 - D4) / (C3 - D3) + D4"
+      }
+    },
+    {
+      "name": "Calc_Lashing",
+      "state": "visible",
+      "populatedCells": 61,
+      "formulaCells": 14,
+      "cachedErrors": [],
+      "missingFormulaCaches": [],
+      "formulaInventory": {
+        "C3": "= Calc_G_Cargo!C28 * 10",
+        "C8": "=IF(D8 <= 1.338, \"GM ≤ 1.338m\", \"GM = 2.00m\")",
+        "D8": "= Calc_Stability!C25",
+        "C12": "= 2.144 / 2",
+        "C17": "= 5.1",
+        "C22": "= (C16 * C3) + (C13 * C5 * C6) + (C14 * C5 * C6)",
+        "C23": "= (C17 * C3) + (C13 * C4 * C6) + (C14 * C4 * C6)",
+        "C24": "=C18*C3",
+        "C28": "= (C26 * (C27 * 0.01)) / 1.5",
+        "C30": "=IF(C23<=(C9*C3*Calc_Wind!C13+8*0.5*C28*C31),\"GOOD\",\"BAD\")",
+        "C33": "=IF((C23*C34)<=(C35*C3*Calc_Wind!C13+(8*Calc_Lashing!C28*Calc_Lashing!C36)),\"GOOD\",\"BAD\")",
+        "C34": "= C12",
+        "C35": "=C5/2",
+        "C38": "=IF(C22<=(C9*(C3*Calc_Wind!C13-C24)+10*0.5*C28*C31),\"GOOD\",\"BAD\")"
+      }
+    },
+    {
+      "name": "Review_Notes",
+      "state": "visible",
+      "populatedCells": 224,
+      "formulaCells": 0,
+      "cachedErrors": [],
+      "missingFormulaCaches": [],
+      "formulaInventory": {}
+    }
+  ],
+  "original": {
+    "file": "Emanuel-Sebastian CĂLIN - TTTM1 Project - Apples - Excel.xlsx",
+    "sha256": "8af43ae4bd1821f57604427985fc4dd0cdba54cbfe15f6904fd8a364fbf29077",
+    "sheetNames": [
+      "Calc_ideal_SF",
+      "Calc_G_Cargo",
+      "Calc_List",
+      "Calc_Trim",
+      "Calc_Stability",
+      "Calc_Wind",
+      "Calc_Lashing"
+    ]
+  },
+  "changedCellsFromOriginal": [
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L12",
+      "original": "= K12 / 2",
+      "reviewed": "=K12 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L13",
+      "original": "= K13 / 2",
+      "reviewed": "=K13 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L14",
+      "original": "= K14 / 2",
+      "reviewed": "=K14 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L15",
+      "original": "= K15 / 2",
+      "reviewed": "=K15 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L16",
+      "original": "= K16 / 2",
+      "reviewed": "=K16 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L17",
+      "original": "= K17 / 2",
+      "reviewed": "=K17 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L18",
+      "original": "= K18 / 2",
+      "reviewed": "=K18 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L19",
+      "original": "= K19 / 2",
+      "reviewed": "=K19 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L20",
+      "original": "= K20 / 2",
+      "reviewed": "=K20 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L21",
+      "original": "= K21 / 2",
+      "reviewed": "=K21 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L22",
+      "original": "= K22 / 2",
+      "reviewed": "=K22 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L23",
+      "original": "= K23 / 2",
+      "reviewed": "=K23 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L24",
+      "original": "= K24 / 2",
+      "reviewed": "=K24 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L25",
+      "original": "= K25 / 2",
+      "reviewed": "=K25 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L26",
+      "original": "= K26 / 2",
+      "reviewed": "=K26 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L27",
+      "original": "= K27 / 2",
+      "reviewed": "=K27 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L28",
+      "original": "= K28 / 2",
+      "reviewed": "=K28 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "L29",
+      "original": "= K29 / 2",
+      "reviewed": "=K29 / 2"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I53",
+      "original": "= D53 * F53",
+      "reviewed": "=D53 * F53"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I54",
+      "original": "= D54 * F54",
+      "reviewed": "=D54 * F54"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I55",
+      "original": "= D55 * F55",
+      "reviewed": "=D55 * F55"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I56",
+      "original": "= D56 * F56",
+      "reviewed": "=D56 * F56"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I57",
+      "original": "= D57 * F57",
+      "reviewed": "=D57 * F57"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I58",
+      "original": "= D58 * F58",
+      "reviewed": "=D58 * F58"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I59",
+      "original": "= D59 * F59",
+      "reviewed": "=D59 * F59"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I60",
+      "original": "= D60 * F60",
+      "reviewed": "=D60 * F60"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I61",
+      "original": "= D61 * F61",
+      "reviewed": "=D61 * F61"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I62",
+      "original": "= D62 * F62",
+      "reviewed": "=D62 * F62"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I63",
+      "original": "= D63 * F63",
+      "reviewed": "=D63 * F63"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "G66",
+      "original": "=ROUND(J66/C66, 2)",
+      "reviewed": "=J66/D66"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "H66",
+      "original": "= ROUND(SUM(H48:H65), 2)",
+      "reviewed": "=SUM(H48:H65)*D66/SUM(D48:D65)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I66",
+      "original": "= ROUND(SUM(I48:I65), 2)",
+      "reviewed": "=SUM(I48:I65)*D66/SUM(D48:D65)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "J66",
+      "original": 0,
+      "reviewed": "=SUM(J48:J65)*D66/SUM(D48:D65)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I69",
+      "original": "= PRODUCT(D69,F69)",
+      "reviewed": "=PRODUCT(D69,F69)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I70",
+      "original": "= PRODUCT(D70,F70)",
+      "reviewed": "=PRODUCT(D70,F70)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "H71",
+      "original": "= PRODUCT(D71, E71)",
+      "reviewed": "=PRODUCT(D71, E71)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I71",
+      "original": "= PRODUCT(D71,F71)",
+      "reviewed": "=PRODUCT(D71,F71)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "H72",
+      "original": "= PRODUCT(D72, E72)",
+      "reviewed": "=PRODUCT(D72, E72)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I72",
+      "original": "= PRODUCT(D72,F72)",
+      "reviewed": "=PRODUCT(D72,F72)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "H73",
+      "original": "= PRODUCT(D73, E73)",
+      "reviewed": "=PRODUCT(D73, E73)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I73",
+      "original": "= PRODUCT(D73,F73)",
+      "reviewed": "=PRODUCT(D73,F73)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "H74",
+      "original": "= PRODUCT(D74, E74)",
+      "reviewed": "=PRODUCT(D74, E74)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I74",
+      "original": "= PRODUCT(D74,F74)",
+      "reviewed": "=PRODUCT(D74,F74)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "H75",
+      "original": "= PRODUCT(D75, E75)",
+      "reviewed": "=PRODUCT(D75, E75)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I75",
+      "original": "= PRODUCT(D75,F75)",
+      "reviewed": "=PRODUCT(D75,F75)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "H76",
+      "original": "= PRODUCT(D76, E76)",
+      "reviewed": "=PRODUCT(D76, E76)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "I76",
+      "original": "= PRODUCT(D76,F76)",
+      "reviewed": "=PRODUCT(D76,F76)"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "J79",
+      "original": null,
+      "reviewed": "SumMomCL"
+    },
+    {
+      "sheet": "Calc_G_Cargo",
+      "cell": "B87",
+      "original": "= IF(C85 > C86, \"SHIP FLOATS\", \"SHIP SINKS\" )",
+      "reviewed": "=IF(C86<=C85,\"WITHIN DISPLACEMENT LIMIT\",\"DISPLACEMENT LIMIT EXCEEDED\")"
+    },
+    {
+      "sheet": "Calc_List",
+      "cell": "A25",
+      "original": "= IF(B23 > B24, \"SHIP FLOATS\", \"SHIP SINKS\" )",
+      "reviewed": "=IF(B24<=B23,\"WITHIN DISPLACEMENT LIMIT\",\"DISPLACEMENT LIMIT EXCEEDED\")"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "B14",
+      "original": 8458.77,
+      "reviewed": "=B4"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "G19",
+      "original": "MCT [t/cm]",
+      "reviewed": "MCT [t·m/cm]"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "G30",
+      "original": "= C30 * D30",
+      "reviewed": "=C30 * D30"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "H30",
+      "original": "= C30 * E30",
+      "reviewed": "=C30 * E30"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "I30",
+      "original": "= C30 * F30",
+      "reviewed": "=C30 * F30"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "G31",
+      "original": "= C31 * D31",
+      "reviewed": "=C31 * D31"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "H31",
+      "original": "= C31 * E31",
+      "reviewed": "=C31 * E31"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "I31",
+      "original": "= C31 * F31",
+      "reviewed": "=C31 * F31"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "G32",
+      "original": "= C32 * D32",
+      "reviewed": "=C32 * D32"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "H32",
+      "original": "= C32 * E32",
+      "reviewed": "=C32 * E32"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "I32",
+      "original": "= C32 * F32",
+      "reviewed": "=C32 * F32"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "G33",
+      "original": "= C33 * D33",
+      "reviewed": "=C33 * D33"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "H33",
+      "original": "= C33 * E33",
+      "reviewed": "=C33 * E33"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "I33",
+      "original": "= C33 * F33",
+      "reviewed": "=C33 * F33"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "G34",
+      "original": "= C34 * D34",
+      "reviewed": "=C34 * D34"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "H34",
+      "original": "= C34 * E34",
+      "reviewed": "=C34 * E34"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "I34",
+      "original": "= C34 * F34",
+      "reviewed": "=C34 * F34"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "G35",
+      "original": "= C35 * D35",
+      "reviewed": "=C35 * D35"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "H35",
+      "original": "= C35 * E35",
+      "reviewed": "=C35 * E35"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "I35",
+      "original": "= C35 * F35",
+      "reviewed": "=C35 * F35"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "M35",
+      "original": "= IF(N33 > N34, \"SHIP FLOATS\", \"SHIP SINKS\" )",
+      "reviewed": "=IF(N34<=N33,\"WITHIN DISPLACEMENT LIMIT\",\"DISPLACEMENT LIMIT EXCEEDED\")"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "G36",
+      "original": "= C36 * D36",
+      "reviewed": "=C36 * D36"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "H36",
+      "original": "= C36 * E36",
+      "reviewed": "=C36 * E36"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "I36",
+      "original": "= C36 * F36",
+      "reviewed": "=C36 * F36"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "G37",
+      "original": "= C37 * D37",
+      "reviewed": "=C37 * D37"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "H37",
+      "original": "= C37 * E37",
+      "reviewed": "=C37 * E37"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "I37",
+      "original": "= C37 * F37",
+      "reviewed": "=C37 * F37"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "G38",
+      "original": "= C38 * D38",
+      "reviewed": "=C38 * D38"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "H38",
+      "original": "= C38 * E38",
+      "reviewed": "=C38 * E38"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "I38",
+      "original": "= C38 * F38",
+      "reviewed": "=C38 * F38"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "G39",
+      "original": "= C39 * D39",
+      "reviewed": "=C39 * D39"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "H39",
+      "original": "= C39 * E39",
+      "reviewed": "=C39 * E39"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "I39",
+      "original": "= C39 * F39",
+      "reviewed": "=C39 * F39"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "G40",
+      "original": "= C40 * D40",
+      "reviewed": "=C40 * D40"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "H40",
+      "original": "= C40 * E40",
+      "reviewed": "=C40 * E40"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "I40",
+      "original": "= C40 * F40",
+      "reviewed": "=C40 * F40"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "G41",
+      "original": "= C41 * D41",
+      "reviewed": "=C41 * D41"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "H41",
+      "original": "= C41 * E41",
+      "reviewed": "=C41 * E41"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "I41",
+      "original": "= C41 * F41",
+      "reviewed": "=C41 * F41"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "G42",
+      "original": "= C42 * D42",
+      "reviewed": "=C42 * D42"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "H42",
+      "original": "= C42 * E42",
+      "reviewed": "=C42 * E42"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "I42",
+      "original": "= C42 * F42",
+      "reviewed": "=C42 * F42"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "G43",
+      "original": "= C43 * D43",
+      "reviewed": "=C43 * D43"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "H43",
+      "original": "= C43 * E43",
+      "reviewed": "=C43 * E43"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "I43",
+      "original": "= C43 * F43",
+      "reviewed": "=C43 * F43"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "C59",
+      "original": "MCT [t/cm]",
+      "reviewed": "MCT [t·m/cm]"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "C74",
+      "original": "MCT [t/cm]",
+      "reviewed": "MCT [t·m/cm]"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "C89",
+      "original": "MCT [t/cm]",
+      "reviewed": "MCT [t·m/cm]"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "J95",
+      "original": "= ((D46 - B61) * C46) / (100 * D61)",
+      "reviewed": "=((D46-B106)*C46)/(100*D106)"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "C104",
+      "original": "MCT [t/cm]",
+      "reviewed": "MCT [t·m/cm]"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "A110",
+      "original": "Hydro Trim = -1.402 m",
+      "reviewed": "Interpolated trim: see B114 (magnitude)"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "K110",
+      "original": "Trim [m] (-1.402 m)",
+      "reviewed": "Residual trim correction [m]"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "M110",
+      "original": "Eq. Trim (0.000 m)",
+      "reviewed": "Total trim [m]"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "N110",
+      "original": "= -1.402 + L110",
+      "reviewed": "=-B114+L110"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "G112",
+      "original": "MCT [t/cm]",
+      "reviewed": "MCT [t·m/cm]"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "B114",
+      "original": 1.402,
+      "reviewed": "=B113+(D46-F113)*(B115-B113)/(F115-F113)"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "A117",
+      "original": "Aft and fore draughts (using Hydro Trim = -1.402 m values)",
+      "reviewed": "Aft/fore drafts withheld pending hydrostatic draft datum"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "D119",
+      "original": "= B119 + (B120 * J114) / Calc_G_Cargo!C23",
+      "reviewed": "REVIEW DATUM"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "B120",
+      "original": "= L110",
+      "reviewed": "=N110"
+    },
+    {
+      "sheet": "Calc_Trim",
+      "cell": "D120",
+      "original": "=  D119 - B120",
+      "reviewed": "REVIEW DATUM"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "A1",
+      "original": "Stability calculation",
+      "reviewed": "Stability calculation — centreline reference; see Review_Notes"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "B4",
+      "original": "Displacement [m]",
+      "reviewed": "Displacement [t]"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "N14",
+      "original": "=IF(O13 < O12, \"Actual VCG' is GOOD\", \"Actual VCG' is BAD\")",
+      "reviewed": "=IF(ABS(Calc_Trim!F46)>0.000001,\"REVIEW TCG\",IF(O13 < O12, \"Actual VCG' is GOOD\", \"Actual VCG' is BAD\"))"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "E16",
+      "original": "Trim = 1.4 m",
+      "reviewed": "Selected trim magnitude (B114)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "C26",
+      "original": "=IF(C25 > 0.15, \"GOOD\", \"BAD\")",
+      "reviewed": "=IF(ABS(Calc_Trim!F46)>0.000001,\"REVIEW TCG\",IF(C25 > 0.15, \"GOOD\", \"BAD\"))"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "B41",
+      "original": "= ROUND(C4, 0)",
+      "reviewed": "=C4"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "C41",
+      "original": 0,
+      "reviewed": "=C40+($B41-$B40)*(C42-C40)/($B42-$B40)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "D41",
+      "original": "=(D40+D42)/2",
+      "reviewed": "=D40+($B41-$B40)*(D42-D40)/($B42-$B40)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "E41",
+      "original": "=(E40+E42)/2",
+      "reviewed": "=E40+($B41-$B40)*(E42-E40)/($B42-$B40)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "F41",
+      "original": "=(F40+F42)/2",
+      "reviewed": "=F40+($B41-$B40)*(F42-F40)/($B42-$B40)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "G41",
+      "original": "=(G40+G42)/2",
+      "reviewed": "=G40+($B41-$B40)*(G42-G40)/($B42-$B40)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "H41",
+      "original": "=(H40+H42)/2",
+      "reviewed": "=H40+($B41-$B40)*(H42-H40)/($B42-$B40)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "I41",
+      "original": "=(I40+I42)/2",
+      "reviewed": "=I40+($B41-$B40)*(I42-I40)/($B42-$B40)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "J41",
+      "original": "=(J40+J42)/2",
+      "reviewed": "=J40+($B41-$B40)*(J42-J40)/($B42-$B40)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "K41",
+      "original": "=(K40+K42)/2",
+      "reviewed": "=K40+($B41-$B40)*(K42-K40)/($B42-$B40)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "L41",
+      "original": "=(L40+L42)/2",
+      "reviewed": "=L40+($B41-$B40)*(L42-L40)/($B42-$B40)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "M41",
+      "original": "=(M40+M42)/2",
+      "reviewed": "=M40+($B41-$B40)*(M42-M40)/($B42-$B40)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "N41",
+      "original": "=(N40+N42)/2",
+      "reviewed": "=N40+($B41-$B40)*(N42-N40)/($B42-$B40)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "O41",
+      "original": "=(O40+O42)/2",
+      "reviewed": "=O40+($B41-$B40)*(O42-O40)/($B42-$B40)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "C45",
+      "original": 0,
+      "reviewed": "=C44+($B45-$B44)*(C46-C44)/($B46-$B44)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "D45",
+      "original": "=(D44+D46)/2",
+      "reviewed": "=D44+($B45-$B44)*(D46-D44)/($B46-$B44)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "E45",
+      "original": "=(E44+E46)/2",
+      "reviewed": "=E44+($B45-$B44)*(E46-E44)/($B46-$B44)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "F45",
+      "original": "=(F44+F46)/2",
+      "reviewed": "=F44+($B45-$B44)*(F46-F44)/($B46-$B44)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "G45",
+      "original": "=(G44+G46)/2",
+      "reviewed": "=G44+($B45-$B44)*(G46-G44)/($B46-$B44)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "H45",
+      "original": "=(H44+H46)/2",
+      "reviewed": "=H44+($B45-$B44)*(H46-H44)/($B46-$B44)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "I45",
+      "original": "=(I44+I46)/2",
+      "reviewed": "=I44+($B45-$B44)*(I46-I44)/($B46-$B44)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "J45",
+      "original": "=(J44+J46)/2",
+      "reviewed": "=J44+($B45-$B44)*(J46-J44)/($B46-$B44)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "K45",
+      "original": "=(K44+K46)/2",
+      "reviewed": "=K44+($B45-$B44)*(K46-K44)/($B46-$B44)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "L45",
+      "original": "=(L44+L46)/2",
+      "reviewed": "=L44+($B45-$B44)*(L46-L44)/($B46-$B44)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "M45",
+      "original": "=(M44+M46)/2",
+      "reviewed": "=M44+($B45-$B44)*(M46-M44)/($B46-$B44)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "N45",
+      "original": "=(N44+N46)/2",
+      "reviewed": "=N44+($B45-$B44)*(N46-N44)/($B46-$B44)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "O45",
+      "original": "=(O44+O46)/2",
+      "reviewed": "=O44+($B45-$B44)*(O46-O44)/($B46-$B44)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "B49",
+      "original": -1.4,
+      "reviewed": "=-Calc_Trim!B114"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "C49",
+      "original": "=(C48+C50)/2",
+      "reviewed": "=C48+($B49-$B48)*(C50-C48)/($B50-$B48)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "D49",
+      "original": "=(D48+D50)/2",
+      "reviewed": "=D48+($B49-$B48)*(D50-D48)/($B50-$B48)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "E49",
+      "original": "=(E48+E50)/2",
+      "reviewed": "=E48+($B49-$B48)*(E50-E48)/($B50-$B48)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "F49",
+      "original": "=(F48+F50)/2",
+      "reviewed": "=F48+($B49-$B48)*(F50-F48)/($B50-$B48)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "G49",
+      "original": "=(G48+G50)/2",
+      "reviewed": "=G48+($B49-$B48)*(G50-G48)/($B50-$B48)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "H49",
+      "original": "=(H48+H50)/2",
+      "reviewed": "=H48+($B49-$B48)*(H50-H48)/($B50-$B48)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "I49",
+      "original": "=(I48+I50)/2",
+      "reviewed": "=I48+($B49-$B48)*(I50-I48)/($B50-$B48)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "J49",
+      "original": "=(J48+J50)/2",
+      "reviewed": "=J48+($B49-$B48)*(J50-J48)/($B50-$B48)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "K49",
+      "original": "=(K48+K50)/2",
+      "reviewed": "=K48+($B49-$B48)*(K50-K48)/($B50-$B48)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "L49",
+      "original": "=(L48+L50)/2",
+      "reviewed": "=L48+($B49-$B48)*(L50-L48)/($B50-$B48)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "M49",
+      "original": "=(M48+M50)/2",
+      "reviewed": "=M48+($B49-$B48)*(M50-M48)/($B50-$B48)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "N49",
+      "original": "=(N48+N50)/2",
+      "reviewed": "=N48+($B49-$B48)*(N50-N48)/($B50-$B48)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "O49",
+      "original": "=(O48+O50)/2",
+      "reviewed": "=O48+($B49-$B48)*(O50-O48)/($B50-$B48)"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "A55",
+      "original": "KG (= VCG) [m]",
+      "reviewed": "KG virtual = VCG + FSM / displacement [m]"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "B55",
+      "original": "= C5",
+      "reviewed": "=$C$8"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "C55",
+      "original": "=C5",
+      "reviewed": "=$C$8"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "D55",
+      "original": "= C5",
+      "reviewed": "=$C$8"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "E55",
+      "original": "= C5",
+      "reviewed": "=$C$8"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "F55",
+      "original": "=C5",
+      "reviewed": "=$C$8"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "G55",
+      "original": "= C5",
+      "reviewed": "=$C$8"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "H55",
+      "original": "= C5",
+      "reviewed": "=$C$8"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "I55",
+      "original": "=C5",
+      "reviewed": "=$C$8"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "J55",
+      "original": "= C5",
+      "reviewed": "=$C$8"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "K55",
+      "original": "= C5",
+      "reviewed": "=$C$8"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "L55",
+      "original": "=C5",
+      "reviewed": "=$C$8"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "M55",
+      "original": "= C5",
+      "reviewed": "=$C$8"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "N55",
+      "original": "= C5",
+      "reviewed": "=$C$8"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "A58",
+      "original": "GZ (= KN - KG · sin θ) [m]",
+      "reviewed": "GZ, TCG=0 reference [m]"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "L62",
+      "original": "= IF(L61 > 0.055, \"GOOD\", \"BAD\")",
+      "reviewed": "=IF(ABS(Calc_Trim!F46)>0.000001,\"REVIEW TCG\", IF(L61 > 0.055, \"GOOD\", \"BAD\"))"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "L64",
+      "original": "= IF(L63 > 0.09, \"GOOD\", \"BAD\")",
+      "reviewed": "=IF(ABS(Calc_Trim!F46)>0.000001,\"REVIEW TCG\", IF(L63 > 0.09, \"GOOD\", \"BAD\"))"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "L66",
+      "original": "= IF(L65 > 0.03, \"GOOD\", \"BAD\")",
+      "reviewed": "=IF(ABS(Calc_Trim!F46)>0.000001,\"REVIEW TCG\", IF(L65 > 0.03, \"GOOD\", \"BAD\"))"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "L69",
+      "original": "=IF(AND((J58 >= 0.2),(K58 >=  0.2), (L58 >=  0.2), (M58 >=  0.2), (N58 >= 0.2)), \"GOOD\", \"BAD\")",
+      "reviewed": "=IF(ABS(Calc_Trim!F46)>0.000001,\"REVIEW TCG\",IF(AND((J58 >= 0.2),(K58 >=  0.2), (L58 >=  0.2), (M58 >=  0.2), (N58 >= 0.2)), \"GOOD\", \"BAD\"))"
+    },
+    {
+      "sheet": "Calc_Stability",
+      "cell": "L71",
+      "original": "= IF(L70 > 25, \"GOOD\", \"BAD\")",
+      "reviewed": "=IF(ABS(Calc_Trim!F46)>0.000001,\"REVIEW TCG\", IF(L70 > 25, \"GOOD\", \"BAD\"))"
+    },
+    {
+      "sheet": "Calc_Wind",
+      "cell": "A1",
+      "original": "Severe wind and rolling criterion calculation",
+      "reviewed": "Wind/rolling — centreline reference; actual condition requires review"
+    },
+    {
+      "sheet": "Calc_Wind",
+      "cell": "C16",
+      "original": "= IF(C15 < 16, \"GOOD\", \"BAD\")",
+      "reviewed": "=IF(ABS(Calc_Trim!F46)>0.000001,\"REVIEW TCG\", IF(C15 < 16, \"GOOD\", \"BAD\"))"
+    },
+    {
+      "sheet": "Calc_Lashing",
+      "cell": "C24",
+      "original": "= 0",
+      "reviewed": "=C18*C3"
+    },
+    {
+      "sheet": "Calc_Lashing",
+      "cell": "C30",
+      "original": "=IF(C23 < (C9 * C3 * Calc_Wind!C13 * (8 * (C28 * 0.5) *C31)), \"GOOD\", \"BAD\")",
+      "reviewed": "=IF(C23<=(C9*C3*Calc_Wind!C13+8*0.5*C28*C31),\"GOOD\",\"BAD\")"
+    },
+    {
+      "sheet": "Calc_Lashing",
+      "cell": "C35",
+      "original": "= C4 / 2",
+      "reviewed": "=C5/2"
+    },
+    {
+      "sheet": "Calc_Lashing",
+      "cell": "C38",
+      "original": "= IF(C22 <= (C9 * (C3 * Calc_Lashing!C13 - Calc_Lashing!C24) + (10 * 0.5 * C28 * C31)), \"GOOD\", \"BAD\")",
+      "reviewed": "=IF(C22<=(C9*(C3*Calc_Wind!C13-C24)+10*0.5*C28*C31),\"GOOD\",\"BAD\")"
+    }
+  ]
+}

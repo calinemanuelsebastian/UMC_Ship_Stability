@@ -15,12 +15,13 @@ export function rollFactor(table:number[][],value:number) {
  for(let i=1;i<table.length;i++)if(value<=table[i][0]){const [x,y]=table[i-1],[xx,yy]=table[i];return y+(yy-y)*(value-x)/(xx-x);}
  return table.at(-1)![1];
 }
-export function weatherRoll(i:{beam:number;draft:number;lwl:number;cb:number;kg:number;gm:number;bilgeArea:number}) {
- if(!Object.values(i).every(Number.isFinite)||i.beam<=0||i.draft<=0||i.lwl<=0||i.cb<=0||i.cb>1||i.gm<=0||i.bilgeArea<0)throw new Error('Valid dimensions, block coefficient and positive corrected GM are required.');
+export function weatherRoll(i:{beam:number;draft:number;lwl:number;cb:number;kg:number;gm:number;bilgeArea:number;bilgeType?:'keels'|'round'|'sharp'}) {
+ if(![i.beam,i.draft,i.lwl,i.cb,i.kg,i.gm,i.bilgeArea].every(Number.isFinite)||i.beam<=0||i.draft<=0||i.lwl<=0||i.cb<=0||i.cb>1||i.gm<=0||i.bilgeArea<0)throw new Error('Valid dimensions, block coefficient and positive corrected GM are required.');
+ if(i.bilgeType!==undefined&&!['round','sharp','keels'].includes(i.bilgeType))throw new Error('Invalid bilge configuration.');
  const bd=i.beam/i.draft,og=i.kg/i.draft-1;
  const c=.373+.023*bd-.043*i.lwl/100,period=2*c*i.beam/Math.sqrt(i.gm);
- if(bd>=3.5||og<-.3||og>.5||period<=0||period>=20)throw new Error('Outside the empirical roll method: B/d < 3.5, −0.3 ≤ KG/d − 1 ≤ 0.5 and T < 20 s are required.');
- const x1=rollFactor(rollTables.x1,bd),x2=rollFactor(rollTables.x2,i.cb),k=rollFactor(rollTables.k,100*i.bilgeArea/(i.lwl*i.beam)),s=rollFactor(rollTables.s,period),r=.73+.6*og;
+ if(bd>=3.5||og<-.3-1e-12||og>.5+1e-12||period<=0||period>=20)throw new Error('Outside the empirical roll method: B/d < 3.5, −0.3 ≤ KG/d − 1 ≤ 0.5 and T < 20 s are required.');
+ const x1=rollFactor(rollTables.x1,bd),x2=rollFactor(rollTables.x2,i.cb),k=i.bilgeType==='sharp'?.7:i.bilgeType==='round'?1:rollFactor(rollTables.k,100*i.bilgeArea/(i.lwl*i.beam)),s=rollFactor(rollTables.s,period),r=.73+.6*og;
  return {period,x1,x2,k,s,r,angle:109*k*x1*x2*Math.sqrt(r*s)};
 }
 export function gustLever(steady:number){if(!Number.isFinite(steady)||steady<0)throw new Error('Invalid steady wind lever.');return 1.5*steady;}

@@ -65,7 +65,7 @@ export function queueRecoveryWrite(previous: Promise<void>, storage: Pick<Storag
     await persist(record);
     try {
       const raw=storage.getItem(recoveryPrefix+record.key);
-      if(raw && Date.parse(JSON.parse(raw).plan.savedAt)<=Date.parse(record.plan.savedAt)) storage.removeItem(recoveryPrefix+record.key);
+      if(raw === JSON.stringify(record)) storage.removeItem(recoveryPrefix+record.key);
     } catch { /* A committed database write remains successful if cleanup fails. */ }
   });
 }

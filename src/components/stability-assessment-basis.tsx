@@ -31,8 +31,8 @@ export function StabilityAssessmentBasis({ship,inputs}: {ship: ShipModelPackage;
         <p>{t(data.notice)}</p>
         {data.intactCriteria==='msc267-general-source-v1'&&inputs&&<IntactAssessmentResults ship={ship} inputs={inputs}/>}
         {data.trimLimits&&inputs&&<TrimAssessmentResults key={JSON.stringify([ship.manifest.id,inputs])} ship={ship} limits={data.trimLimits} inputs={inputs}/>}
-        {inputs&&<WindAssessment key={ship.manifest.id} ship={ship} inputs={inputs}/>}
-        {data.weatherEvidence&&<WeatherReferenceCases key={ship.manifest.id} ship={ship} data={data.weatherEvidence} downloadUrl={shipResourceUrl(ship,resource.path!)}/>}
+        {inputs&&<WindAssessment key={`wind-${ship.manifest.id}`} ship={ship} inputs={inputs}/>}
+        {data.weatherEvidence&&<WeatherReferenceCases key={`references-${ship.manifest.id}`} ship={ship} data={data.weatherEvidence} downloadUrl={shipResourceUrl(ship,resource.path!)}/>}
         <details><summary>{t('Documented requirements and limits')}</summary>
           <p>{data.vesselName} · IMO {data.imoNumber} · {data.source.documentNumber} · {t(data.source.date)}</p>
           <div className="assessment-requirements">{data.requirements.map(row => <article key={row.id}>

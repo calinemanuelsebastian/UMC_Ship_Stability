@@ -1,0 +1,4 @@
+- main:
+  - heading "Isolated browser storage checks" [level=1]
+  - button "Run disposable storage checks"
+  - status: "PASS: real IndexedDB save/read PASS: pending journal wins over old database record PASS: journal removed only after database commit PASS: injected database failure retains real localStorage journal PASS: injected journal quota still permits real IndexedDB commit PASS: corrupt journal does not hide valid database draft PASS: stale expected revision rejects overwrite in real IndexedDB No browser process crash, physical quota exhaustion or competing-tab scheduling was simulated."

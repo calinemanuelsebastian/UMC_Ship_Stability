@@ -1,5 +1,7 @@
 # Local ship packages (version 1)
 
+> Historical implementation notes below describe several successive versions. Claims that Vectis lacks cross curves are superseded by the final constant-LCB section and current manifest. See docs/audits/p01-baseline/acceptance-contract.md for current baseline and open qualifications.
+
 Open **Ship library** in the header. Import a `.ship.json` file, review the dimensions, draft coverage, tanks and warnings, choose a library name, then **Save locally**. Saving does not switch the active vessel. Save the current loading condition before choosing **Use ship**.
 
 Ships are stored in IndexedDB on the current browser and website origin. Clearing site data removes them; a different hostname or port has a separate library. Download packages as backups. No account or upload server is required. Library names can differ from canonical model names/IDs; those remain unchanged for calculation references and cargo-plan compatibility.
@@ -86,3 +88,11 @@ Choose **Imposed heel (visual only)** in the 3D displayed-condition selector. Th
 Vectis's documented source is now registered as `stability.constant-lcb-cross-curves`, using the original JSON ordinates. Stability Curves uses the shared LCG to derive initial trim, interpolates displacement and initial trim, then computes GZ with physical KG, TCG and the virtual-KG transverse free-surface correction. Manual LCG is editable on that page. A solver-level explicit initial trim is reserved for reproducible reference validation.
 
 Choose **Calculated heel (constant LCB)** in 3D for a supported, isolated starboard equilibrium. The view defaults to Bow view. Its pitch and vertical placement remain illustrative: the source supplies ordinates, not the heeled draft/trim path. Unbracketed trim, unsupported density and nonzero longitudinal FSM are rejected. Port equilibria and two-sided classification of a zero-degree boundary root are not inferred from starboard-only data. The worked-example validation report is in `validation-references/reviewed-apples-vessel/cross-curves-worked-example.json`; it records source inconsistencies and rounding differences.
+
+### P11 optional numerical wind silhouette
+
+A `stability.wind-profiles` JSON profile may include `baselineSilhouette` with a nonempty `source` and `rectangles: [{xMin,xMax,zMin,zMax}, ...]`. Coordinates are metres in **the same longitudinal/baseline convention as the cargo layout**. This is a documented complete lateral ship profile without cargo, not hull mesh bounds. Each rectangle must have finite increasing bounds. Supply an explicitly justified rectangle approximation and identify its source; do not convert the reconstructed visualization into purported verified geometry.
+
+For linked loading conditions, the app projects cargo/support dimensions into the same plane, clips at moulded draught, and computes the union with the supplied ship profile. Overlap is counted once, including cargo hidden behind the baseline profile. Projected boxes are geometric envelopes, not aerodynamic drag models. The operator must confirm applicability (including enclosure/trim assumptions). Unplaced cargo without dimensions blocks this path. The existing draft-table coverage remains required. The sweep uses O(n log n) operations and allows up to 50,000 combined rectangles.
+
+Without this optional profile, documented complete-condition wind tables remain usable, with explicit confirmation that the chosen profile includes the current exposed cargo. Vectis Castle's supplied area/moment tables do not contain a spatial baseline outline: the app therefore does not subtract guessed shielding or silently add cargo to those tables. Confirmation is tied to source profile and cargo geometry as well as the loading condition. A geometry change invalidates it even if mass and CG are unchanged.

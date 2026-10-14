@@ -1,0 +1,206 @@
+{
+  "format": "umc-reference-assembly",
+  "version": 1,
+  "id": "apples-two-tier-support-bay-v1",
+  "status": "Reference definition; timber schedule and ship placement unresolved",
+  "source": {
+    "file": "Emanuel-Sebastian CA\u0306LIN - TTTM1 Project - EUR2 apples pallet arrangement with wood structure - AutoCAD.dxf",
+    "sha256": "d23159c73e8b550a3ac9fea144d30de1fa1a0a2ed50ddf9ae675e5092516e421",
+    "unitsOverride": "mm",
+    "basis": "User-confirmed millimetres"
+  },
+  "units": {
+    "length": "m",
+    "mass": "t",
+    "density": "t/m3"
+  },
+  "coordinates": {
+    "origin": "centre of lower pallet footprint at local supporting floor",
+    "u": "along 1.2 m pallet edge",
+    "v": "along 1.0 m pallet edge",
+    "w": "up",
+    "shipTransform": null
+  },
+  "cargoEnvelope": {
+    "u": 1.2,
+    "v": 1.0,
+    "w": 4.388,
+    "basis": "DXF footprint and vertical detail; excludes external posts, bracing and clearances"
+  },
+  "layers": [
+    {
+      "id": "lower-pallet",
+      "kind": "integral-pallet",
+      "bottom": 0,
+      "top": 0.144,
+      "sourceHandles": [
+        "1371E"
+      ],
+      "separateMass": false,
+      "massAccounting": "Included by user-agreed gross-package assumption"
+    },
+    {
+      "id": "lower-body",
+      "kind": "cargo-body",
+      "bottom": 0.144,
+      "top": 2.144,
+      "sourceHandles": [
+        "13690"
+      ],
+      "separateMass": false
+    },
+    {
+      "id": "intermediate-support-zone",
+      "kind": "support-envelope",
+      "bottom": 2.144,
+      "top": 2.244,
+      "sourceHandles": [
+        "15122"
+      ],
+      "separateMass": false,
+      "note": "Not a solid slab or bill-of-materials item; member layout must be resolved"
+    },
+    {
+      "id": "upper-pallet",
+      "kind": "integral-pallet",
+      "bottom": 2.244,
+      "top": 2.388,
+      "sourceHandles": [
+        "15138"
+      ],
+      "separateMass": false,
+      "massAccounting": "Included by user-agreed gross-package assumption"
+    },
+    {
+      "id": "upper-body",
+      "kind": "cargo-body",
+      "bottom": 2.388,
+      "top": 4.388,
+      "sourceHandles": [
+        "15134"
+      ],
+      "separateMass": false
+    }
+  ],
+  "cargoUnits": [
+    {
+      "id": "lower-package",
+      "baseW": 0,
+      "height": 2.144,
+      "massTonnes": 1,
+      "massBasis": "User-agreed 1 t gross package including pallet tare; original workbook inclusion not verified",
+      "localCg": null,
+      "directTopLoading": "not-assessed"
+    },
+    {
+      "id": "upper-package",
+      "baseW": 2.244,
+      "height": 2.144,
+      "massTonnes": 1,
+      "massBasis": "User-agreed 1 t gross package including pallet tare; original workbook inclusion not verified",
+      "localCg": null,
+      "supportedBy": "independent-frame-pending-resolution"
+    }
+  ],
+  "supportDefinition": {
+    "intendedLoadPath": [
+      "upper package",
+      "intermediate members",
+      "posts",
+      "ship supporting surface"
+    ],
+    "loadPathStatus": "Required design intent; contacts and capacity not verified",
+    "material": {
+      "name": "timber",
+      "densityTonnesPerM3": 0.55,
+      "basis": "Workbook reference assumption; editable, not a strength property"
+    },
+    "physicalMembers": [],
+    "unresolvedMemberFamilies": [
+      {
+        "id": "posts",
+        "quantity": null,
+        "section": null,
+        "length": null,
+        "endpoints": null,
+        "evidence": "100 x 100 mm projected details; workbook post length 2.388 m does not establish endpoint or section mapping"
+      },
+      {
+        "id": "intermediate-members",
+        "quantity": null,
+        "section": null,
+        "length": null,
+        "endpoints": null,
+        "evidence": "100 mm vertical support zone; third dimension and member arrangement unresolved"
+      },
+      {
+        "id": "lateral-blocking-and-bracing",
+        "quantity": null,
+        "section": null,
+        "length": null,
+        "endpoints": null,
+        "evidence": "300 x 25 mm projected details; physical function, third dimension and repetition unresolved"
+      }
+    ],
+    "totalMassTonnes": null,
+    "centreOfGravity": null,
+    "memberContract": {
+      "required": [
+        "physicalMemberId",
+        "family",
+        "sectionWidth",
+        "sectionDepth",
+        "start",
+        "end",
+        "densityTonnesPerM3",
+        "sourceEvidence",
+        "contactIds"
+      ],
+      "sharedMembers": "One physicalMemberId may be referenced by several bays; accumulate mass once",
+      "volumeFormula": "sectionWidth * sectionDepth * distance(start,end)",
+      "massFormula": "densityTonnesPerM3 * volume",
+      "cgFormula": "(start + end) / 2 for uniform straight prismatic members"
+    },
+    "capacityStatus": "not-assessed"
+  },
+  "repetition": {
+    "bayCount": 1688,
+    "cargoUnitsPerBay": 2,
+    "cargoUnitsTotal": 3376,
+    "hold1Bays": 414,
+    "hold2Bays": 1274,
+    "sourceFootprints": "apples-dxf-arrangement.json",
+    "bayIdRule": "bay-{view}-{handle}",
+    "physicalSupportCount": null,
+    "note": "Bay count is a cargo count, not a count of independent four-post frames",
+    "referenceCargoMassTonnes": 3376
+  },
+  "referenceElevationExamples": {
+    "floorDatumBasis": "Workbook assumptions, not yet independently mapped to DXF views",
+    "lowerFloor": 1.2,
+    "upperFloor": 7.2,
+    "interlayerLocalGeometricCentre": 2.194,
+    "lowerInterlayerGeometricCentre": 3.394,
+    "upperInterlayerGeometricCentre": 9.394,
+    "note": "Geometric centre of zone is not automatically the complete support or package mass CG"
+  },
+  "accounting": {
+    "legacySupportAllowanceTonnes": 188.1,
+    "mode": "legacy-aggregate-reference",
+    "physicalModeReady": false,
+    "rule": "Use either legacy support weights or resolved physical support members for the same support scope; never both. Any extra allowance must have its own mass and position."
+  },
+  "unresolved": [
+    "Post endpoints and 2.388 m length reconciliation",
+    "Complete physical member quantities, dimensions and shared ownership",
+    "Cargo package mass CG including pallet",
+    "Mapping each plan to ship surface, AP, centreline and baseline",
+    "Contact, joint and structural/securing capacity"
+  ],
+  "scope": "Definition for reference reconstruction; not a production cargo-plan import or verified structural design",
+  "packageMassAssumption": {
+    "tareIncluded": true,
+    "basis": "User instruction on 10 October 2026: assume pallet tare included in 1 t; original coursework treatment uncertain",
+    "verifiedOriginalTreatment": false
+  }
+}

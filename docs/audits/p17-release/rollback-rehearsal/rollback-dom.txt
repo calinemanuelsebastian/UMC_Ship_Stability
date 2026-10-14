@@ -1,0 +1,94 @@
+- note:
+  - text: Rollback compatibility build · Older functionality. Newer plans may be refused to protect their inputs. Keep original backups and return to the current version for unsupported plans.
+  - text: Versiune de revenire · Funcții mai vechi. Planurile noi pot fi refuzate pentru a proteja datele. Păstrați copiile originale.
+- banner:
+  - generic: UMC / Ship Stability
+  - generic: Teaching simulator · Ship stability
+  - generic "Reference system · Model source"
+  - option "Model source" [selected]
+  - option "Custom"
+  - option "UK — AP / forward"
+  - option "Russian — amidships / forward"
+  - option "Nautical symbols" [selected]
+  - option "Coordinate symbols"
+  - button "Ship library"
+  - combobox "Interface language":
+    - option "EN" [selected]
+    - option "RO"
+- navigation "Simulator sections":
+  - button "Overview"
+  - button "Loading"
+  - button "3D inspection"
+  - button "Assessment"
+  - generic: Supporting tools
+  - combobox "Supporting tools":
+    - option "Supporting tools" [disabled] [selected]
+    - option "Hydrostatic Sandbox"
+    - option "Roll Simulation"
+    - option "Validation"
+    - option "Theory"
+- main:
+  - region "Current condition":
+    - strong: Rectangular Pontoon
+    - generic: Weight-based loading
+    - term: Displacement
+    - definition: 4,000 t
+    - term: VCG / KG
+    - definition: 4 m
+    - term: Water density
+    - definition: 1.025 t/m³
+    - term: Total transverse FSM
+    - definition: 0 t·m
+  - status:
+    - text: A recovery draft is available. Review it or keep the current condition to resume automatic saving.
+    - button "Review recovery draft"
+  - generic "▸ Condition settings"
+  - option "Rectangular Pontoon" [selected]
+  - option "Vectis Castle"
+  - option "Weight-based loading" [selected]
+  - option "Manual scenario"
+  - generic "▸ Save and export"
+  - option "Choose a scenario" [selected]
+  - status: All calculation tabs use the current condition.
+  - generic "Start a loading condition"
+  - option "Choose a condition" [selected]
+  - option "Empty cargo plan — empty tanks"
+  - option "Original loading reference"
+  - heading "Loading" [level=1]
+  - navigation "Loading sections":
+    - button "Cargo layout"
+    - button "Ballast"
+    - button "Tanks and liquids"
+    - button "Weights and totals"
+    - button "Saved cargo plans"
+  - text: ▾
+  - heading "Cargo Plans" [level=1]
+  - paragraph: Create a loading plan below. Save named plans in this browser or download a JSON backup to transfer them. Browser storage is local to this device and website address; clearing browser data removes it.
+  - text: Plan name
+  - textbox "Plan name"
+  - text: Voyage / notes
+  - textbox "Voyage / notes"
+  - button "New plan (fixed weights only)"
+  - button "Save as new plan" [disabled]
+  - button "Update selected plan" [disabled]
+  - button "Download backup"
+  - text: Saved cargo plans
+  - combobox "Saved cargo plans":
+    - option "Choose a plan" [selected]
+    - option "Rehearsal legacy 4000t · 14/10/2026, 14:34:51"
+  - button "Preview selected plan" [disabled]
+  - button "Delete named plan" [disabled]
+  - button "Undo plan application" [disabled]
+  - text: Import cargo plan (JSON)
+  - button "Import cargo plan (JSON)"
+  - button "Reload saved plans"
+  - text: Recovery draft
+  - combobox "Recovery draft":
+    - option "Rehearsal legacy 4000t · 14/10/2026, 14:34:51" [selected]
+  - paragraph: A recovery draft is available. Review it or keep the current condition to resume automatic saving.
+  - button "Review recovery draft"
+  - button "Keep current condition"
+  - button "Discard recovery draft"
+  - paragraph: Incomplete plans can be saved. Coordinates must be entered explicitly; hold names do not supply positions. Quantity is descriptive; Mass (t) is the total mass of the row.
+  - status: Some saved records require a newer simulator or could not be read. They remain unchanged in storage. Return to the current version to open them.
+- contentinfo: UMCsShipStabilityApp · Hydrostatics learning workspace

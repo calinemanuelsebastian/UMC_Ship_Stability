@@ -3,7 +3,8 @@ const server=await createServer({server:{middlewareMode:true},appType:'custom'})
 const {autoDunnageBatch}=await server.ssrLoadModule('/src/app/auto-dunnage.ts');
 const area=id=>({id,name:id,xMin:id==='hold-2'?10:0,xMax:id==='hold-2'?20:10,yMin:0,yMax:10,deckZ:0,clearHeight:8});
 const cargo=(id,x,areaId='hold-1')=>({id,name:'Cargo',category:'cargo',massTonnes:'1',lcg:String(x),tcg:'5',vcg:'.5',footprint:{length:1,width:1,height:1,rotation:0,deckZ:0,bottomZ:0,areaId,dunnageProfile:'boxed'}});
-const settings={length:1,width:1,thickness:.05,mass:1,material:'Pine timber',densityKgM3:470,massMode:'calculated',count:1,gap:0,direction:'x'};
+// Fixture boundary bearing is explicitly declared; production defaults do not assume it.
+const settings={boundarySource:'Test fixture bearing wall',length:1,width:1,thickness:.05,mass:1,material:'Pine timber',densityKgM3:470,massMode:'calculated',count:1,gap:0,direction:'x'};
 let n=0;const batch=(cargo,selection=[],extra={})=>autoDunnageBatch({cargo,selection,areas:[area('hold-1'),area('hold-2')],settings,maxGap:.2,walls:false,id:()=>`d${++n}`,...extra});
 test('no selection fills eligible gaps across all loading areas',()=>{
  const result=batch([cargo('a',2),cargo('b',3.1),cargo('c',12,'hold-2'),cargo('d',13.1,'hold-2')]);

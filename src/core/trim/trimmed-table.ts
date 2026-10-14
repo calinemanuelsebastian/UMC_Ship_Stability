@@ -47,9 +47,9 @@ function calculateTableTrim(data: TrimmedTable, inputs: { displacementTonnes: nu
   const samples = data.tables.map(table => {
     const rows = table.rows;
     if (mass < rows[0].displacementTonnes || mass > rows.at(-1)!.displacementTonnes) return undefined;
-    const index = Math.max(1, rows.findIndex(row => row.displacementTonnes >= mass));
-    const a = rows[index - 1], b = rows[index];
-    const fraction = (mass - a.displacementTonnes) / (b.displacementTonnes - a.displacementTonnes);
+    const index = rows.findIndex(row => row.displacementTonnes >= mass);
+    const b = rows[index], a = b.displacementTonnes === mass ? b : rows[index - 1];
+    const fraction = a === b ? 0 : (mass - a.displacementTonnes) / (b.displacementTonnes - a.displacementTonnes);
     return { trimMetres: table.trimMetres, draft: blend(a.draft, b.draft, fraction), lcb: blend(a.lcb, b.lcb, fraction),
       lcf: a.lcf !== undefined && b.lcf !== undefined ? blend(a.lcf, b.lcf, fraction) : undefined };
   });
@@ -64,7 +64,7 @@ function calculateTableTrim(data: TrimmedTable, inputs: { displacementTonnes: nu
     const trimMetres = blend(a.trimMetres, b.trimMetres, fraction);
     if (candidates.some(c => Math.abs(c.trimMetres - trimMetres) < 1e-10)) continue;
     candidates.push({ trimMetres, draft: blend(a.draft, b.draft, fraction), lcb: blend(a.lcb, b.lcb, fraction),
-      lcf: a.lcf !== undefined && b.lcf !== undefined ? blend(a.lcf, b.lcf, fraction) : undefined,
+      lcf: fraction === 0 ? a.lcf : fraction === 1 ? b.lcf : a.lcf !== undefined && b.lcf !== undefined ? blend(a.lcf, b.lcf, fraction) : undefined,
       bracket: [a.trimMetres, b.trimMetres], fraction });
   }
   if (candidates.length !== 1) throw new Error(candidates.length ? 'Multiple trim balances exist in these tables.' : 'No trim balance is bracketed by the available tables.');

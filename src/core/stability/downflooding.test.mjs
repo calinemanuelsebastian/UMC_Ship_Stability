@@ -21,7 +21,7 @@ test('malformed or mismatched grids are rejected',()=>{
  for(const mutate of [d=>d.sets[0].openings[0].samples[0].floodingDisplacementTonnes=0,d=>d.sets[1].openings[0].samples.pop(),d=>d.sets[1].openings[0].name='other']){const d=structuredClone(data);mutate(d);assert.throws(()=>parseFloodData(d));}
 });
 test('a root at or beyond flooding evidence cannot drive the 3D attitude',()=>{
- const points=[0,20,40,60].map(heelDeg=>({heelDeg,gzCorrected:heelDeg-55}));
+ const points=Array.from({length:61},(_,i)=>i).map(heelDeg=>({heelDeg,gzCorrected:heelDeg-55}));
  assert.equal(heelEquilibrium({points}).equilibrium.heelDeg,55);
  const blocked=heelEquilibrium({points,downflooding:{firstReachedAngle:50}});
  assert.equal(blocked.equilibrium,undefined);assert.match(blocked.message,/threshold/);

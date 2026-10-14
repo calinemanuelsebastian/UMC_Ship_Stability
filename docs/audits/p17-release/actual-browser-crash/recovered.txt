@@ -1,0 +1,146 @@
+Window: "UMC · Ship Stability", App: Brave Browser.
+0 standard window UMC · Ship Stability - Brave, URL: 127.0.0.1:4201/UMC_Ship_Stability/?page=loading&vessel=reviewed-apples-vessel&section=plans, Secondary Actions: Raise
+	1 container UMC · Ship Stability - Brave, URL: 127.0.0.1:4201/UMC_Ship_Stability/?page=loading&vessel=reviewed-apples-vessel&section=plans
+		2 container
+			3 toolbar
+				4 button Back
+				5 button (disabled) Forward
+				6 button Reload
+				7 button Bookmark this tab
+				8 container
+					9 pop-up button View site information
+					10 text field (settable) Address and search bar, Value: 127.0.0.1:4201/UMC_Ship_Stability/?page=loading&vessel=reviewed-apples-vessel&section=plans, Placeholder: Search Google or type a URL
+					11 splitter Separator
+					12 pop-up button Brave Shields
+					13 pop-up button Brave Rewards
+				14 button Show Sidebar
+				15 pop-up button Brave Wallet
+				16 button Leo AI
+				17 pop-up button VPN
+				18 pop-up button Brave
+			19 container
+				20 scroll area
+					21 HTML content UMC · Ship Stability, URL: 127.0.0.1:4201/UMC_Ship_Stability/?page=loading&vessel=reviewed-apples-vessel&section=plans
+						22 container
+							23 text UMC  / Ship Stability Teaching simulator · Ship stability
+							24 container
+								25 disclosure triangle Reference system · Model source
+									26 text Reference system
+									27 text  · 
+									28 text Model source
+							29 button Ship library
+							30 pop-up button Interface language, Value: EN
+								31 (selected) EN
+							32 container Simulator sections
+								33 button Overview
+								34 button Loading
+								35 button 3D inspection
+								36 button Assessment
+								37 container
+									38 text Supporting tools
+									39 pop-up button Supporting tools
+							40 container Current condition
+								41 text Vectis Castle
+								42 text Weight-based loading
+								43 definition list
+									44 container Displacement
+										45 text Displacement
+									46 container
+										47 text 4,061.16 t
+									48 container VCG / KG
+										49 text VCG / KG
+									50 container
+										51 text 8.426 m
+									52 container Water density
+										53 text Water density
+									54 container
+										55 text 1.025 t/m³
+									56 container Total transverse FSM
+										57 text Total transverse FSM
+									58 container
+										59 text 57.226 t·m
+							60 disclosure triangle ▸ Condition settings
+								61 text ▸
+								62 text Condition settings
+							63 disclosure triangle ▸ Save and export
+								64 text ▸
+								65 text Save and export
+							66 text All calculation tabs use the current condition.
+							67 disclosure triangle Hydrostatic table corrections — calculation review required
+								68 text Hydrostatic table corrections — calculation review required
+							69 heading Loading, Value: 1
+								70 text Loading
+							71 container Loading sections
+								72 button Onboard condition
+								73 button Cargo capacity
+								74 button Cargo layout
+								75 button Ballast
+								76 button Review totals
+								77 button Saved cargo plans
+							78 container
+								79 heading Cargo Plans, Value: 1
+									80 text Cargo Plans
+								81 text Create a loading plan below. Save named plans in this browser or download a JSON backup to transfer them. Browser storage is local to this device and website address; clearing browser data removes it. Plan name
+								82 text field (settable) Plan name, Value: Brave crash baseline
+								83 text Voyage / notes
+								84 text field (settable) Voyage / notes, Value: Synthetic persistence test; not an approved loading condition
+								85 button New plan (fixed weights only)
+								86 button Save as new plan
+								87 button Update selected plan
+								88 button Download backup
+								89 text Saved cargo plans
+								90 pop-up button Saved cargo plans, Value: Brave crash baseline · 14/10/2026, 18:59:56
+									91 (selected) Brave crash baseline · 14/10/2026, 18:59:56
+								92 button Preview selected plan
+								93 button Delete named plan
+								94 button Undo plan application
+								95 text Import cargo plan (JSON)
+								96 button Import cargo plan (JSON): No file chosen
+								97 button Reload saved plans
+								98 container Cargo plan preview
+									99 heading Brave crash baseline, Value: 2
+										100 text Brave crash baseline
+									101 text Synthetic persistence test; not an approved loading condition
+									102 container
+										103 text Vectis Castle  ·  74 loading items  ·  4061.160 t
+									104 text Applying replaces the current weight list, water density and longitudinal FSM. Fixed vessel weights are checked. No weights are appended.
+									105 disclosure triangle Review loading items
+										106 text Review loading items
+									107 button Apply cargo plan
+									108 button Cancel preview
+								109 text Incomplete plans can be saved. Coordinates must be entered explicitly; hold names do not supply positions. Quantity is descriptive; Mass (t) is the total mass of the row. Cargo plan applied. Recovery draft saved locally.
+							110 text UMCsShipStabilityApp · Hydrostatics learning workspace
+			111 container Infobar Container
+				112 container Infobar
+					113 container
+						114 text Brave uses privacy-preserving product analytics to estimate the overall usage of certain features
+						115 button Got it
+						116 button Disable
+					117 container
+						118 link Learn more
+						119 button Close
+			120 pop-up button Tab search
+			121 container
+				122 tab group
+					123 tab (settable, boolean) UMC · Ship Stability, Value: off
+					124 tab (selected, settable, boolean) UMC · Ship Stability - Memory usage - 120 MB, Value: on
+						125 button Close
+			126 button New tab
+			127 container
+				128 splitter
+	129 close button
+	130 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	131 minimise button
+132 menu bar
+	133 Brave
+	134 File
+	135 Edit
+	136 View
+	137 History
+	138 Bookmarks
+	139 Profiles
+	140 Tab
+	141 Window
+	142 Help
+
+The focused UI element is 92 button Preview selected plan

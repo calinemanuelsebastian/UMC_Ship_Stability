@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Gross package mass (t)",
+    "value": "0.75"
+  },
+  {
+    "label": "Package length (m)",
+    "value": "1.2"
+  },
+  {
+    "label": "Package width (m)",
+    "value": "0.8"
+  },
+  {
+    "label": "Package height (m)",
+    "value": "1.6"
+  },
+  {
+    "label": "Additional packages requested",
+    "value": "137"
+  }
+]

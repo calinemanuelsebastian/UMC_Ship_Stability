@@ -20,11 +20,11 @@ export function parseCargoMarkings(raw:unknown):CargoMarkings{
 }
 export function cloneMarkings(m:CargoMarkings|undefined){if(!m)return undefined;const {sscc:_,container:__,...rest}=m;return {...rest,scheme:'internal' as const};}
 export function validateUniqueIdentifiers(weights:{footprint?:{markings?:CargoMarkings}}[]){for(const key of ['sscc','container'] as const){const seen=new Set<string>();for(const w of weights){const v=w.footprint?.markings?.[key];if(v){if(seen.has(v))throw new Error('External cargo identifiers must be unique within this condition.');seen.add(v);}}}}
-export function markingLines(w:{id:string;name:string;footprint?:{stackability?:string;markings?:CargoMarkings}}){const m=w.footprint?.markings;if(!m)return [w.name];const lines:string[]=[];
+export function markingLines(w:{id:string;name:string;footprint?:{keepGapsClear?:boolean;stackability?:string;markings?:CargoMarkings}}){const m=w.footprint?.markings;if(!m)return [w.name,...(w.footprint?.keepGapsClear?['KEEP GAPS CLEAR']:[])];const lines:string[]=[];
  if(m.layers.identity)lines.push(w.name,m.scheme==='sscc'?`SSCC (00) ${m.sscc}`:m.scheme==='iso6346'?`ISO 6346 ${m.container}`:`ID ${w.id.slice(0,8)}`);
  if(m.layers.destination&&m.port)lines.push(m.port);
  if(m.layers.company&&m.company)lines.push(m.company);
- if(m.layers.handling){if(m.handling)lines.push(m.handling);if(w.footprint?.stackability==='unstackable')lines.push('NO STACK');}
+ if(m.layers.handling){if(w.footprint?.keepGapsClear)lines.push('KEEP GAPS CLEAR');if(m.handling)lines.push(m.handling);if(w.footprint?.stackability==='unstackable')lines.push('NO STACK');}
  if(m.layers.dangerous&&(m.hazard||m.unNumber))lines.push(`DG ${m.hazard??'?'}${m.unNumber?' · UN '+m.unNumber:''}`,m.shippingName??'');
  return lines.filter(Boolean);
 }

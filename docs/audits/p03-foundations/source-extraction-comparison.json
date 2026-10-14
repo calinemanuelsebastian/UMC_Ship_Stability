@@ -1,0 +1,14 @@
+[
+  {
+    "file": "cross-curves-constant-lcb.json",
+    "matchesFreshExtraction": true
+  },
+  {
+    "file": "annotated-kg-limits.json",
+    "matchesFreshExtraction": true
+  },
+  {
+    "file": "downflooding-samples.json",
+    "matchesFreshExtraction": true
+  }
+]

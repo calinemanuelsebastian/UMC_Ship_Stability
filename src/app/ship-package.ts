@@ -61,8 +61,8 @@ export function parseShipBundle(raw:unknown):ShipBundle{
   if(r.kind==='documentation.annotated-kg'){if(!r.path)throw new Error('Missing KG limits path.');parseKgLimits(JSON.parse(fileText(b,r.path)));}
   if(r.kind==='stability.wind-profiles'){if(!r.path)throw new Error('Missing wind resource path.');parseWindData(JSON.parse(fileText(b,r.path)));}
   if(r.kind==='stability.assessment-basis'){if(!r.path)throw new Error('Assessment basis path is missing.');parseAssessmentBasis(JSON.parse(fileText(b,r.path)));}
-  if(r.kind==='stability.constant-lcb-cross-curves'){if(!r.path)throw new Error('Constant-LCB path is missing.');parseConstantLcb(JSON.parse(fileText(b,r.path)));}
-  if(r.kind==='stability.cross-curves')parseCrossCurvesCsv(fileText(b,r.path!));
+  if(r.kind==='stability.constant-lcb-cross-curves'){if(!finite(r.config?.referenceWaterDensity)||r.config!.referenceWaterDensity<=0)throw new Error('Constant-LCB curves require a positive reference water density.');if(!r.path)throw new Error('Constant-LCB path is missing.');parseConstantLcb(JSON.parse(fileText(b,r.path)));}
+  if(r.kind==='stability.cross-curves'){if(r.config?.trimDeg!==0||r.config?.heelPositive!=='starboard'||r.config?.knReference!=='baseline')throw new Error('Cross curves must declare zero trim, starboard-positive heel and baseline KN.');parseCrossCurvesCsv(fileText(b,r.path!));}
   if(r.kind==='hydrostatics.trimmed-table'){const t=parseTrimmedTable(JSON.parse(fileText(b,r.path!)));if(t.modelId!==m.id||t.longitudinalOriginFromAP!==0||t.xPositive!=='forward')throw new Error('Trim table model ID or coordinates differ from manifest.');}
   if(r.kind==='visualization.gltf')gltfJson(b,r.path!);
   for(const key of ['surfaces','hatchSurfaces'])if(r.config?.[key]!==undefined){if(!Array.isArray(r.config[key]))throw new Error(`Invalid ${key}.`);(r.config[key] as unknown[]).forEach(parseArea);}

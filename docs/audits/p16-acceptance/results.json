@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-14",
+  "stage": "P16",
+  "status": "acceptance-open",
+  "automated": {
+    "tests": 529,
+    "failures": 0,
+    "build": "passed",
+    "lint": "passed",
+    "hosting": "passed"
+  },
+  "browser": [
+    "production pontoon placement / undo / redo / save / reload / apply / report",
+    "EN / RO and 390x844 portrait review",
+    "Vectis onboard and 3D inspection",
+    "HTTP 503 disabled-save and retry",
+    "WebGL context loss / 2D fallback / retry with retained cargo"
+  ],
+  "remaining": [
+    "P05 production large-layout drag performance and long-session memory",
+    "P15 actual browser-process crash and clean-profile transfer",
+    "complete browser journeys for three vessels and libraries",
+    "physical touch / trackpad / keyboard-only / screen reader and contrast audit",
+    "uncoached new-user observation",
+    "coordinator numerical/source review"
+  ],
+  "deployment": "not performed"
+}

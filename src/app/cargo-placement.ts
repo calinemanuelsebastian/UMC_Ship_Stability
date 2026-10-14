@@ -1,3 +1,4 @@
+import {cargoNeighbours} from './cargo-neighbours';
 import {cargoBounds,fitsArea,fitsFloor,sameLoadingSurface,placeCargo,type CargoArea} from './cargo-layout';
 import type {WeightDraft} from './loading-state';
 export const cargoBottom=(w:WeightDraft)=>w.footprint?.bottomZ??w.footprint?.deckZ??0;
@@ -23,16 +24,23 @@ export function hasGeometricSupport(w:WeightDraft,others:WeightDraft[]){
  const hull=[...chain(points),...chain([...points].reverse())],cg=[Number(w.lcg),Number(w.tcg)];
  return hull.length>=3&&hull.every((p,i)=>cross(p,hull[(i+1)%hull.length],cg)>1e-8);
 }
-export function carriesCargo(w:WeightDraft,others:WeightDraft[]){return !!w.footprint&&others.some(o=>o.id!==w.id&&o.footprint&&Math.abs(cargoBottom(o)-(cargoBottom(w)+w.footprint!.height))<1e-8&&horizontalContact(w,o));}
+export function carriesCargo(w:WeightDraft,others:WeightDraft[]){const bounds=cargoBounds(w);return !!w.footprint&&!!bounds&&cargoNeighbours(others).query(bounds).some(o=>o.id!==w.id&&o.footprint&&Math.abs(cargoBottom(o)-(cargoBottom(w)+w.footprint!.height))<1e-8&&horizontalContact(w,o));}
 /** One accepted placement updates geometry and physical CG together; no free-floating drops. */
 export function placeSupportedCargo(w:WeightDraft,areas:CargoArea[],others:WeightDraft[],position:{x:number;y:number;z:number},stacking:boolean,snap:boolean|number):WeightDraft{
  if(!w.footprint)throw new Error('Select cargo with dimensions first.');
  const original=others.find(o=>o.id===w.id);
  if(original&&carriesCargo(original,others))throw new Error('Move the cargo supported by this item first.');
- const supports=areas.flatMap(area=>[
-  {area,z:area.deckZ,support:undefined as WeightDraft|undefined},
-  ...(stacking?others.filter(o=>o.id!==w.id&&o.footprint&&sameLoadingSurface(o.footprint.areaId,area.id)).map(o=>({area,z:cargoBottom(o)+o.footprint!.height,support:o})):[])
- ]).sort((a,b)=>Math.abs(a.z-position.z)-Math.abs(b.z-position.z));
+ const supports=areas.flatMap(area=>{
+  const floor={area,z:area.deckZ,support:undefined as WeightDraft|undefined};
+  if(!stacking)return [floor];
+  // A remote pile must not capture the elevation of a drop elsewhere in the hold.
+  // Use the same contained/grid-snapped footprint as the eventual placement.
+  let target:WeightDraft;try{target={...w,...placeCargo(area,w.footprint!,position.x,position.y, snap)};}catch{return [floor];}
+  const bounds=cargoBounds(target)!;
+  const nearby=cargoNeighbours(others).query(bounds).filter(o=>o.id!==w.id&&o.footprint&&sameLoadingSurface(o.footprint.areaId,area.id)&&horizontalContact(o,target));
+  const levels=new Map<number,WeightDraft>();for(const o of nearby)levels.set(cargoBottom(o)+o.footprint!.height,o);
+  return [floor,...[...levels].map(([z,support])=>({area,z,support}))];
+ }).sort((a,b)=>Math.abs(a.z-position.z)-Math.abs(b.z-position.z));
  // Select the nearest support level. Never jump to a distant deck to evade a collision.
  const distance=supports.length?Math.abs(supports[0].z-position.z):Infinity;
  let reason='No supporting surface is available.';
@@ -45,7 +53,7 @@ export function placeSupportedCargo(w:WeightDraft,areas:CargoArea[],others:Weigh
    if(!fitsArea(area,cargoBounds(next)!))throw new Error('Cargo is outside the hold.');
    if(!support&&!fitsFloor(area,cargoBounds(next)!))throw new Error('A gap is not a supporting surface. Place cargo on explicit supports above it.');
    if(support&&!hasGeometricSupport(next,others))throw new Error('The cargo footprint must be fully supported.');
-   if(others.some(o=>o.id!==w.id&&intersectsCargo(next,o)))throw new Error('Cargo would intersect another item.');
+   if(cargoNeighbours(others).query(cargoBounds(next)!).some(o=>o.id!==w.id&&intersectsCargo(next,o)))throw new Error('Cargo would intersect another item.');
    return next;
   }catch(error){reason=(error as Error).message;}
  }
@@ -68,7 +76,7 @@ export function translateCargoGroup(group:WeightDraft[],anchor:WeightDraft,next:
 export function placeCargoGroup(group:WeightDraft[],id:string,areas:CargoArea[],others:WeightDraft[],position:{x:number;y:number;z:number},stacking:boolean,snap:boolean|number){
  const anchor=group.find(w=>w.id===id)!;
  if(group.length===1)return [placeSupportedCargo(anchor,areas,others,position,stacking,snap)];
- const external=others.filter(w=>!group.some(g=>g.id===w.id));
+ const groupIds=new Set(group.map(w=>w.id));const external=others.filter(w=>!groupIds.has(w.id));
  if(group.some(w=>carriesCargo(w,external)))throw new Error('Select the supported cargo as well before moving this structure.');
  const base=group.reduce((a,b)=>cargoBottom(a)<=cargoBottom(b)?a:b);
  const target={x:Number(base.lcg)+position.x-Number(anchor.lcg),y:Number(base.tcg)+position.y-Number(anchor.tcg),z:cargoBottom(base)+position.z-cargoBottom(anchor)};
@@ -84,7 +92,7 @@ export function placeCargoGroup(group:WeightDraft[],id:string,areas:CargoArea[],
 /** Quarter turn in plan around the selected envelope centre. */
 export function rotateCargoGroup(group:WeightDraft[],areas:CargoArea[],others:WeightDraft[]){
  if(!group.length||group.some(w=>!w.footprint))throw new Error('Select cargo with dimensions first.');
- const external=others.filter(w=>!group.some(g=>g.id===w.id));
+ const groupIds=new Set(group.map(w=>w.id));const external=others.filter(w=>!groupIds.has(w.id));
  if(group.some(w=>carriesCargo(w,external)))throw new Error('Select the supported cargo as well before moving this structure.');
  const rotated=rotateCargoPreview(group);
  return rotated.map(w=>{const next=placeSupportedCargo(w,areas,[...external,...rotated.filter(v=>v.id!==w.id)],{x:Number(w.lcg),y:Number(w.tcg),z:cargoBottom(w)},true,false);if(Math.abs(Number(next.lcg)-Number(w.lcg))>1e-8||Math.abs(Number(next.tcg)-Number(w.tcg))>1e-8||Math.abs(cargoBottom(next)-cargoBottom(w))>1e-8)throw new Error('The rotated selection does not fit at this position.');return next;});

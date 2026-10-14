@@ -301,3 +301,7 @@ Cargo plans remain in browser storage. Export plans from localhost and import th
 ## License
 
 Original application code is licensed under GPL-3.0-only; see LICENSE. Third-party dependencies retain their own licenses. Referenced ship documents and third-party source material are not relicensed by this code license.
+
+## Release operations
+
+The next release is gated on acceptance, redistribution review and rollback evidence; ordinary pushes no longer publish to Pages. See [release runbook](docs/releases/release-runbook.md), [full-workflow quick-start](docs/releases/quick-start.md), [redistribution inventory](docs/releases/redistribution.md) and [current capabilities](docs/supported-capabilities.md). The version above remains the historical release, not acceptance of the current working tree.

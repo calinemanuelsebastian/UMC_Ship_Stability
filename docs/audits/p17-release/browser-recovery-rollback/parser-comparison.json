@@ -1,0 +1,8 @@
+{
+  "previousRevision": "5f68b82",
+  "forwardLegacyPlan": "accepted",
+  "rollbackCapacity": "silently omitted",
+  "rollbackVoyageStage": "silently omitted",
+  "rollback10001Weights": "rejected",
+  "scope": "Production parsers from actual source revisions; not browser storage rollback"
+}

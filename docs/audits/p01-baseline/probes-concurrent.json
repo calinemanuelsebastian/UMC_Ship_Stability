@@ -1,0 +1,50 @@
+{
+  "node": "v26.7.0",
+  "findings": [
+    {
+      "id": "B01",
+      "description": "Exact package count at documented pontoon limit",
+      "expected": 1075,
+      "actual": 1074,
+      "limit": 6149.999999999999,
+      "remainingMass": 2149.999999999999
+    },
+    {
+      "id": "B02",
+      "description": "Two-tier lateral gap arrangement",
+      "levels": [
+        0
+      ],
+      "parts": 4,
+      "skipped": 1,
+      "reasons": [
+        "The cargo footprint must be fully supported."
+      ],
+      "interpretation": "Review whether the intended upper gap has support; do not assume full-height restraint from one thin spacer."
+    }
+  ],
+  "timings": [
+    {
+      "cargo": 100,
+      "milliseconds": 790.059542,
+      "parts": 720,
+      "massTonnes": 1.0997999999999901,
+      "skipped": 0
+    },
+    {
+      "cargo": 1000,
+      "milliseconds": 19760.780875,
+      "parts": 7744,
+      "massTonnes": 11.828959999999382,
+      "skipped": 0
+    },
+    {
+      "cargo": 3376,
+      "milliseconds": 30209.971042,
+      "parts": 26540,
+      "massTonnes": 40.53985000000751,
+      "skipped": 0
+    }
+  ],
+  "note": "Single cold call per size; synthetic flat hold, no walls. Not browser frame-rate or structural verification."
+}

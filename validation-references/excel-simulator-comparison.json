@@ -1,7 +1,7 @@
 {
   "workbook": "apples-calculations-reviewed.xlsx",
-  "sha256": "a5d9c6bd7c30d3519929bcceadfe6507dc6abe31341f983193b7a13395ef3250",
-  "generatedAt": "2026-09-11T12:11:16.826Z",
+  "sha256": "56ffd96aa635d761d41a56836e66bb42d0cb49b027918b1efa40a9f6d9cc510a",
+  "generatedAt": "2026-10-10T16:23:44.268Z",
   "basis": "Saved Excel values; workbook not recalculated or modified by this run",
   "weightCount": 47,
   "fixtureMatches": true,

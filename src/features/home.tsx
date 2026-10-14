@@ -12,8 +12,8 @@ export function Home({onTabChange,onLoadingSection}: {
       <section className="home-feature home-loading">
         <WorkspaceDrawing kind="loading"/>
         <div className="home-feature-body"><p className="eyebrow">{t('01 · Prepare')}</p><h2>{t('Loading')}</h2><p>{t('Arrange cargo in the holds, adjust tank contents and review onboard weights.')}</p>
-          <button onClick={()=>onLoadingSection('layout')}>{t('Open cargo planning')} <span aria-hidden="true">→</span></button>
-          <div className="home-shortcuts"><button onClick={()=>onLoadingSection('ballast')}>{t('Ballast')}</button><button onClick={()=>onLoadingSection('tanks')}>{t('Tanks and liquids')}</button><button onClick={()=>onLoadingSection('plans')}>{t('Saved cargo plans')}</button><button onClick={()=>onLoadingSection('weights')}>{t('Weights and totals')}</button></div>
+          <button onClick={()=>onLoadingSection('onboard')}>{t('Prepare onboard condition')} <span aria-hidden="true">→</span></button>
+          <div className="home-shortcuts"><button onClick={()=>onLoadingSection('ballast')}>{t('Ballast')}</button><button onClick={()=>onLoadingSection('layout')}>{t('Cargo layout')}</button><button onClick={()=>onLoadingSection('plans')}>{t('Saved cargo plans')}</button><button onClick={()=>onLoadingSection('weights')}>{t('Review totals')}</button></div>
         </div>
       </section>
       <section className="home-feature home-visual">

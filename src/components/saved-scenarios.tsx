@@ -1,16 +1,20 @@
+import {decodeVoyageBackup,parseVoyageBackup,importVoyageBackup,type VoyageBackup} from '../app/voyage-backup';
+import {conditionTransaction,canUndoCondition,type ConditionTransaction} from '../app/condition-transaction';
+import {VoyageReview} from './voyage-review';
+import type {TankCatalog} from '../app/tank-operations';
 import {useState,useRef,useEffect} from 'react';
 import type {ShipModelPackage} from '../core/domain/ship-model';
 import {modelSignature,parseScenario,readScenarioRecords,mutateScenarioLibrary,type SavedScenario,type ScenarioState} from '../app/saved-scenarios';
 import {useLanguage} from '../app/language-context';
-export function SavedScenarios({ship,state,ready,onRestore,saveRequest}:{ship:ShipModelPackage;state:ScenarioState;ready:boolean;onRestore:(state:ScenarioState)=>void;saveRequest?:{name:string;id:number}}){
+export function SavedScenarios({ship,state,ready,onRestore,saveRequest,catalog}:{ship:ShipModelPackage;state:ScenarioState;ready:boolean;onRestore:(state:ScenarioState)=>void;saveRequest?:{name:string;id:number};catalog?:TankCatalog}){
  const {t}=useLanguage();const panelRef=useRef<HTMLDetailsElement>(null);const nameRef=useRef<HTMLInputElement>(null);const model=modelSignature(ship);const storageKey=`umc-scenarios-v1:${ship.manifest.id}`;
  const [initial]=useState(()=>{try{const result=readScenarioRecords(localStorage,storageKey,model);return {items:result.items,error:result.damaged?'Some saved records could not be read. They were retained; other plans and recovery remain available.':'',blocked:false};}catch{return {items:[] as SavedScenario[],blocked:true,error:'Saved scenarios could not be read. Export your current inputs as a backup.'};}});
  const [items,setItems]=useState(initial.items),[selected,setSelected]=useState(''),[name,setName]=useState('');
  useEffect(()=>{if(saveRequest){setName(saveRequest.name);if(panelRef.current)panelRef.current.open=true;nameRef.current?.focus();panelRef.current?.scrollIntoView({block:'start',behavior:'smooth'});}},[saveRequest]);
  const [message,setMessage]=useState(initial.error);const [storageBlocked]=useState(!!initial.blocked);
- const previous=useRef<ScenarioState|undefined>(undefined);const [canUndoLoad,setCanUndoLoad]=useState(false);
+ const previous=useRef<ConditionTransaction|undefined>(undefined);const [canUndoLoad,setCanUndoLoad]=useState(false);
  const snapshot=():SavedScenario=>parseScenario({version:1,id:crypto.randomUUID(),name:name.trim()||'Untitled scenario',model,savedAt:new Date().toISOString(),state},model);
- const [busy,setBusy]=useState(false);
+ const [busy,setBusy]=useState(false);const [backup,setBackup]=useState<VoyageBackup>();
  async function persist(change:{add:SavedScenario}|{remove:string}){
   if(storageBlocked)throw new Error('Local saving is unavailable. Export a scenario file instead.');
   if(!navigator.locks)throw new Error('Safe local saving is unavailable in this browser. Export a scenario file instead.');
@@ -18,7 +22,7 @@ export function SavedScenarios({ship,state,ready,onRestore,saveRequest}:{ship:Sh
  }
  async function action(work:()=>void|Promise<void>){setBusy(true);try{await work();}catch(error){setMessage(error instanceof Error?error.message:'Scenario operation failed.');}finally{setBusy(false);}}
  useEffect(()=>{const refresh=(e:StorageEvent)=>{if(e.key===storageKey){try{setItems(readScenarioRecords(localStorage,storageKey,model).items);}catch{setMessage('Saved scenarios could not be read. Export your current inputs as a backup.');}}};window.addEventListener('storage',refresh);return()=>window.removeEventListener('storage',refresh);},[storageKey,model]);
- function restore(value:ScenarioState){const before=structuredClone(state);onRestore(structuredClone(value));previous.current=before;setCanUndoLoad(true);}
+ function restore(value:ScenarioState){const before=structuredClone(state);onRestore(structuredClone(value));previous.current=conditionTransaction(before,value);setCanUndoLoad(true);}
  return <details ref={panelRef} className="panel saved-scenarios"><summary>{t('Saved scenarios')}</summary>
  <p>{t('Save named input snapshots in this browser. Export a JSON file for backup or sharing. Incomplete inputs may be saved; results are recalculated when loaded.')}</p>
  <label>{t('Scenario name')} <input ref={nameRef} aria-label={t('Scenario name')} placeholder={t('e.g. Departure condition or Arrival condition')} maxLength={120} value={name} onChange={e=>setName(e.target.value)}/></label>
@@ -27,7 +31,14 @@ export function SavedScenarios({ship,state,ready,onRestore,saveRequest}:{ship:Sh
  <label>{t('Saved condition')} <select aria-label={t('Saved condition')} value={selected} onChange={e=>setSelected(e.target.value)}><option value="">{t('Choose a scenario')}</option>{items.map(item=><option key={item.id} value={item.id}>{item.name} · {new Date(item.savedAt).toLocaleString()}</option>)}</select></label>
  <div className="scene-toolbar"><button disabled={!ready||!selected} onClick={()=>action(()=>{const entry=items.find(i=>i.id===selected);if(entry){restore(entry.state);setName(entry.name);setMessage('Scenario loaded.');}})}>{t('Load selected scenario')}</button>
  <button disabled={!selected||storageBlocked||busy} onClick={()=>action(async()=>{await persist({remove:selected});setSelected('');setMessage('Saved scenario deleted.');})}>{t('Delete saved scenario')}</button>
- <button disabled={!canUndoLoad} onClick={()=>action(()=>{if(previous.current){onRestore(previous.current);previous.current=undefined;setCanUndoLoad(false);setMessage('Previous inputs restored.');}})}>{t('Undo scenario load')}</button></div>
+ <button disabled={!canUndoLoad||!canUndoCondition(previous.current,state)} onClick={()=>action(()=>{if(previous.current&&canUndoCondition(previous.current,state)){onRestore(previous.current.before);previous.current=undefined;setCanUndoLoad(false);setMessage('Previous inputs restored.');}})}>{t('Undo scenario load')}</button></div>
  <label>{t('Import scenario file')} <input aria-label={t('Import scenario file')} type="file" accept=".json,application/json" disabled={!ready} onChange={async e=>{const file=e.target.files?.[0];e.target.value='';if(!file)return;try{if(file.size>25_000_000)throw new Error('Scenario file is too large.');const entry=parseScenario(JSON.parse(await file.text()),model);restore(entry.state);setName(entry.name);setMessage('Scenario imported. Use Save new scenario to keep it in this browser.');}catch(error){setMessage(error instanceof Error?error.message:'Scenario import failed.');}}}/></label>
+ <details><summary>{t('Voyage backup and transfer')}</summary>
+ <p>{t('Local saves belong to this browser and website address. Download backups before clearing browser data or moving devices. Export the vessel separately from the Ship library; cargo and support libraries have their own export controls. Material properties are included in support templates and placed supports.')}</p>
+ <button disabled={busy||!items.length} onClick={()=>action(()=>{const value=parseVoyageBackup({format:'umc-voyage-inputs',version:1,model,exportedAt:new Date().toISOString(),conditions:items},model);const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='voyage-inputs.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);setMessage('All readable saved conditions exported. Export current inputs separately if they are not saved.');})}>{t('Export saved conditions and voyages')}</button>
+ <label>{t('Import voyage backup')}<input type="file" accept=".json,application/json" disabled={busy} onChange={e=>{const file=e.target.files?.[0];e.target.value='';setBackup(undefined);if(file)void action(async()=>{if(file.size>25_000_000)throw new Error('Voyage backup exceeds 25 MB.');setBackup(decodeVoyageBackup(await file.text(),model));});}}/></label>
+ {backup&&<div><p>{backup.conditions.length} {t('conditions ready to import. Existing conditions and the active layout will be preserved.')}</p><button disabled={busy||storageBlocked} onClick={()=>action(async()=>{if(!navigator.locks)throw new Error('Safe local saving is unavailable in this browser.');await navigator.locks.request(storageKey,async()=>{setItems(importVoyageBackup(localStorage,storageKey,model,backup).items);});setBackup(undefined);setMessage('Voyage inputs imported. Select a saved condition to load it. Results will be recalculated.');})}>{t('Add imported conditions')}</button><button onClick={()=>setBackup(undefined)}>{t('Cancel')}</button></div>}
+ </details>
+ <VoyageReview ship={ship} catalog={catalog} state={state} items={items} ready={ready&&!storageBlocked&&!busy} onLoad={restore} onSave={async(name,next,voyage)=>{const entry=parseScenario({version:1,id:crypto.randomUUID(),name,model,savedAt:new Date().toISOString(),state:next,voyageStage:voyage},model);await persist({add:entry});setSelected(entry.id);}}/>
  <p role="status">{t(message)}</p></details>;
 }

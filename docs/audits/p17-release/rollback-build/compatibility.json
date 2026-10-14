@@ -1,0 +1,11 @@
+{
+  "legacy": "accepted",
+  "capacity": "rejected",
+  "voyageStage": "rejected",
+  "intactAssessment": "rejected",
+  "cargoPlanAndRecovery": "rejected before loading",
+  "nestedUnknownFields": "rejected",
+  "largePlan": "explicit rejection",
+  "storedUnsupportedRecords": "retained after supported save",
+  "scope": "production-module tests; browser rehearsal still required"
+}

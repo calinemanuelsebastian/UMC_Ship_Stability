@@ -4,6 +4,12 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+    inputs:
+      deploy:
+        description: Publish the selected accepted release tag
+        required: true
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -21,28 +27,54 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
+      - name: Check dependency advisories
+        run: npm audit --audit-level=high
       - run: npm run lint
       - run: npm test
+      - run: node --test scripts/release-tools.test.mjs
+      - name: Read acceptance record from default branch
+        if: github.event_name == 'workflow_dispatch' && inputs.deploy
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          path: release-approval
+          sparse-checkout: docs
+          sparse-checkout-cone-mode: false
+      - name: Require accepted release tag
+        if: github.event_name == 'workflow_dispatch' && inputs.deploy
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+          RELEASE_SHA: ${{ github.sha }}
+        run: node scripts/release-tools.mjs gate release-approval/docs/releases/release-gate.json "$RELEASE_SHA" "$RELEASE_TAG" release-approval
       - name: Read Pages destination
         id: pages
-        if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        if: github.event_name == 'workflow_dispatch' && inputs.deploy && startsWith(github.ref, 'refs/tags/v')
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
       - name: Build for hosting path
         env:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
-          IS_RELEASE: ${{ github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
+          IS_RELEASE: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy && startsWith(github.ref, 'refs/tags/v') }}
         run: |
           if [ "$IS_RELEASE" != "true" ]; then PAGES_BASE_PATH=/hosting-check; fi
           npm run build -- --base "${PAGES_BASE_PATH}/"
           node scripts/verify-hosting.mjs dist "${PAGES_BASE_PATH}/"
+      - name: Include licence and verify artifact inventory
+        env:
+          RELEASE_SHA: ${{ github.sha }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          node scripts/release-notices.mjs dist
+          cp docs/releases/redistribution.md dist/REDISTRIBUTION.txt
+          node scripts/release-tools.mjs manifest dist "$RELEASE_SHA" "$RELEASE_TAG"
+          node scripts/release-tools.mjs verify dist "$RELEASE_SHA" "$RELEASE_TAG"
       - name: Upload website only
-        if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        if: github.event_name == 'workflow_dispatch' && inputs.deploy && startsWith(github.ref, 'refs/tags/v')
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with:
           path: dist
 
   deploy:
-    if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    if: github.event_name == 'workflow_dispatch' && inputs.deploy && startsWith(github.ref, 'refs/tags/v')
     needs: build
     runs-on: ubuntu-latest
     permissions:

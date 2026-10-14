@@ -1,0 +1,27 @@
+{
+  "stage": "P01",
+  "status": "accepted-baseline-only",
+  "applicationChanged": false,
+  "releaseAccepted": false,
+  "tests": {
+    "total": 405,
+    "passed": 404,
+    "failed": 1,
+    "failure": "src/app/cargo-surfaces.test.mjs:19 saved-plan signature expectation"
+  },
+  "build": "passed with chunk-size warnings",
+  "lint": "passed",
+  "hostingRoot": "passed",
+  "browser": "isolated production Overview and Cargo layout smoke passed; existing tab timed out",
+  "resources": 29,
+  "testFiles": 86,
+  "next": "P02",
+  "openFindings": [
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06"
+  ]
+}
