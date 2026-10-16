@@ -1,0 +1,59 @@
+[
+  {
+    "file": "001_GENERAL_ARRANGEMENT.pdf",
+    "embeddedFiles": [],
+    "annotationMatches": []
+  },
+  {
+    "file": "002_TANK_ARRANGEMENT.pdf",
+    "embeddedFiles": [],
+    "annotationMatches": []
+  },
+  {
+    "file": "003_CARGO_SECURING_MANUAL.pdf",
+    "embeddedFiles": [],
+    "annotationMatches": []
+  },
+  {
+    "file": "004_STABILITY_LOADING_MANUAL.pdf",
+    "embeddedFiles": [],
+    "annotationMatches": [
+      {
+        "page": 1,
+        "text": "For all trims and arbitrary deckload the limiting curve on pages 13.82 and 13.83 to be used."
+      },
+      {
+        "page": 94,
+        "text": "For all trims and arbitrary deckload the limiting curve on pages 13.82 and 13.83 to be used.\r\rSome of the loading conditions do not comply with this limiting curve by a small margin which is OK for a prel. booklet."
+      },
+      {
+        "page": 234,
+        "text": "This trim is outside the permitted range. For a draft of 4.97m the permitted range is from -0.85 to -2.41m."
+      }
+    ]
+  },
+  {
+    "file": "005_TANKS_CAPACITY_TABLE.pdf",
+    "embeddedFiles": [],
+    "annotationMatches": []
+  },
+  {
+    "file": "006_STRENGHT_LOADING_MANUAL.pdf",
+    "embeddedFiles": [],
+    "annotationMatches": []
+  },
+  {
+    "file": "007_BALLAST_MANAGEMENT.pdf",
+    "embeddedFiles": [],
+    "annotationMatches": [
+      {
+        "page": 4,
+        "text": "Pages 3-3 to 3-510 NOT ACCEPTED, see remark on page 3-1."
+      },
+      {
+        "page": 28,
+        "text": "Example conditions on pages 3-3 to 3-510 NOT ACCEPTED for two reasons:\r- They already have been not accepted in our letter 12-088907 dated 2012-08-07 for sister ship 116644, hull no. YZJ2011-997.\r- For ships having a treatment system installed such exchange sequences are not required to be included in the BWM Plan."
+      }
+    ]
+  }
+]

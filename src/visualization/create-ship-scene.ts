@@ -155,9 +155,16 @@ export function createShipScene(host: HTMLElement, hull: BoxHull, onSelect: () =
   resize(); view('perspective');
   return {
     view,
+    focusWeight(id:string){
+      const marker=weightMarkers.get(id)?.marker;if(!marker)return;
+      body.updateWorldMatrix(true,true);const point=marker.getWorldPosition(new THREE.Vector3());
+      const offset=camera.position.clone().sub(controls.target).setLength(Math.max(hull.beam*1.5,controls.minDistance));
+      controls.target.copy(point);camera.position.copy(point).add(offset);controls.update();render();
+    },
     zoom(factor: number) { const delta = camera.position.clone().sub(controls.target); delta.setLength(THREE.MathUtils.clamp(delta.length() * factor, controls.minDistance, controls.maxDistance)); camera.position.copy(controls.target).add(delta); controls.update(); render(); },
     update(data: SceneCondition, options: SceneOptions) {
       appearance = options;
+      paintLabel(referenceLabels.buoyancy,data.equilibriumPose?'B · equilibrium':'B · upright','#167e96');
       for(const key of ['buoyancy','metacentre'] as const){const p=data[key];referenceLabels[key].visible=!!p;if(p)referenceLabels[key].position.set(p.x,p.y,p.z);}
 
       const cargoIds=new Set(options.weights.filter(w=>w.footprint).map(w=>w.id));
@@ -204,10 +211,11 @@ export function createShipScene(host: HTMLElement, hull: BoxHull, onSelect: () =
       const pose = hullPose(hull, data); body.rotation.z = pose.pitch; body.rotation.x = 0; body.position.y = pose.heave;
       const pitchSection = hull.schematic || data.teachingTrimDeg === undefined ? undefined : heeledBox({...hull,beam:hull.length},data.draftAft,data.teachingTrimDeg);
       const visualHeel = hull.schematic && data.heelDeg !== undefined ? illustrativeAttitudePose(hull,data) : undefined;
-      const heel = pitchSection || data.heelDeg === undefined || visualHeel ? undefined : heeledBox(hull,data.draftAft,data.heelDeg);
+      const heel = data.equilibriumPose || pitchSection || data.heelDeg === undefined || visualHeel ? undefined : heeledBox(hull,data.draftAft,data.heelDeg);
       if(visualHeel){body.rotation.z=visualHeel.pitch;body.rotation.x=visualHeel.angle;body.position.y=visualHeel.heave;}
       if (heel) { body.rotation.z=0; body.rotation.x=heel.angle; body.position.y=heel.heave; }
       if (pitchSection) { body.rotation.x=0; body.rotation.z=-pitchSection.angle; body.position.y=pitchSection.heave; }
+      if(data.equilibriumPose){body.rotation.z=data.equilibriumPose.pitch;body.rotation.x=data.equilibriumPose.heel;body.position.y=data.equilibriumPose.heave;}
       const waterNormal=new THREE.Vector3(0,1,0).applyQuaternion(body.quaternion.clone().invert());
       modelLayer?.update({panelMode:options.panelMode??'installed',exterior:options.exterior,panels:options.panels,hullOpacity:1-options.hullTransparency/100,panelOpacity:1-options.panelTransparency/100,plane:[waterNormal.x,waterNormal.y,waterNormal.z,body.position.y],lineWidth:options.waterlineWidth});
       gravity.position.set(data.gravity.x, data.gravity.y, data.gravity.z); gLabel.position.copy(gravity.position).add(new THREE.Vector3(0, span * .035, 0));
@@ -220,16 +228,18 @@ export function createShipScene(host: HTMLElement, hull: BoxHull, onSelect: () =
       for (const { axis, arrow, text } of arrows) { const d = data.directions[axis]; const vector = new THREE.Vector3(d.x, d.y, d.z); arrow.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), vector); arrow.scale.y = options.axisLength; text.position.copy(vector.multiplyScalar(axisLength * options.axisLength + span * .035)); }
       dimensions.visible = options.measurements; aft.visible = !options.measurements; bow.visible = !options.measurements;
       for (const { sign, line, text } of rulers) {
-        const x = sign * hull.length / 2, z = hull.beam / 2 + span * .025;
+        const x = sign * hull.length / 2, z = data.equilibriumPose ? 0 : hull.beam / 2 + span * .025;
         const draft = sign < 0 ? data.draftAft : data.draftForward;
         const cap = span * .018;
         line.geometry.dispose();
-        line.geometry = new LineGeometry().setPositions([x-cap,0,z, x+cap,0,z, x,0,z, x,draft,z, x-cap,draft,z, x+cap,draft,z]);
+        const verticalDraft=data.equilibriumPose?(sign<0?data.equilibriumPose.verticalDraftAft:data.equilibriumPose.verticalDraftForward):undefined;
+        const end=verticalDraft===undefined?new THREE.Vector3(x,draft,z):new THREE.Vector3(x,0,z).addScaledVector(waterNormal,verticalDraft);
+        line.geometry = new LineGeometry().setPositions([x-cap,0,z, x+cap,0,z, x,0,z, end.x,end.y,end.z, end.x-cap,end.y,end.z, end.x+cap,end.y,end.z]);
         text.position.set(x + sign * span * .09, -span * .085, z);
         paintLabel(text, sign < 0 ? options.draftLabels.aft : options.draftLabels.forward, '#653c88');
       }
       waterline.visible=waterlineHalo.visible=!hull.model&&!visualHeel;
-      const waterlinePoints = hull.schematic ? schematicOutline(hull).map(([x,z])=>new THREE.Vector3(x,data.draftAft+(x/hull.length+.5)*(data.draftForward-data.draftAft),z)) : pitchSection ? [
+      const waterlinePoints = data.equilibriumPose ? data.equilibriumPose.waterline.map(p=>new THREE.Vector3(...p)) : hull.schematic ? schematicOutline(hull).map(([x,z])=>new THREE.Vector3(x,data.draftAft+(x/hull.length+.5)*(data.draftForward-data.draftAft),z)) : pitchSection ? [
         new THREE.Vector3(pitchSection.ends[0][1],pitchSection.ends[0][0],-hull.beam/2),new THREE.Vector3(pitchSection.ends[1][1],pitchSection.ends[1][0],-hull.beam/2),new THREE.Vector3(pitchSection.ends[1][1],pitchSection.ends[1][0],hull.beam/2),new THREE.Vector3(pitchSection.ends[0][1],pitchSection.ends[0][0],hull.beam/2),
       ] : heel ? [
         new THREE.Vector3(-hull.length/2,...heel.ends[0] as [number,number]), new THREE.Vector3(hull.length/2,...heel.ends[0] as [number,number]), new THREE.Vector3(hull.length/2,...heel.ends[1] as [number,number]), new THREE.Vector3(-hull.length/2,...heel.ends[1] as [number,number]),

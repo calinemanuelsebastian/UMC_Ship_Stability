@@ -61,3 +61,9 @@ test('Vectis schematic is available without enabling rectangular buoyancy',async
  const outline=schematicOutline(h);assert.equal(Math.max(...outline.map(p=>p[0])),h.length/2);
  assert.deepEqual(bodyPoint(model,{x:60.85,y:0,z:5}),{x:0,y:5,z:0});
 });
+
+test('calculated conditions cannot be visually exaggerated',()=>{
+ const data={...sceneCondition(ship,sourceReference(source),{x:51,y:0,z:5},2.8,3.2),calculated:true};
+ assert.equal(exaggerateTrim(hull,data,1),data);
+ for(const factor of [5,10])assert.equal(exaggerateTrim(hull,data,factor),undefined);
+});

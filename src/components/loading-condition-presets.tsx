@@ -5,7 +5,7 @@ import {cleanLoadingPlan,type TankCatalog} from '../app/tank-operations';
 import {evaluateWeights,type WeightDraft} from '../app/loading-state';
 import type {ShipModelPackage} from '../core/domain/ship-model';
 import type {TweenDeckMode} from '../app/tween-deck';
-export function LoadingConditionPresets({ship,catalog,reference,onApply,onUndo,canUndo}:{ship:ShipModelPackage;catalog:TankCatalog;reference:WeightDraft[];onApply:(weights:WeightDraft[],mode:TweenDeckMode,density:number)=>void;onUndo:()=>void;canUndo:boolean}){
+export function LoadingConditionPresets({onStudy,ship,catalog,reference,onApply,onUndo,canUndo}:{onStudy?:()=>void;ship:ShipModelPackage;catalog:TankCatalog;reference:WeightDraft[];onApply:(weights:WeightDraft[],mode:TweenDeckMode,density:number)=>void;onUndo:()=>void;canUndo:boolean}){
  const {t,language}=useLanguage();const [choice,setChoice]=useState('');const [applied,setApplied]=useState('');
  const preset=catalog.conditions?.items.find(p=>p.id===choice);
  const preview=useMemo(()=>{try{
@@ -16,6 +16,7 @@ export function LoadingConditionPresets({ship,catalog,reference,onApply,onUndo,c
  }catch(e){return {error:(e as Error).message};}},[preset,choice,ship,reference,catalog]);
  const fmt=(n:number)=>new Intl.NumberFormat(language,{maximumFractionDigits:3}).format(n);
  return <details className="loading-plan-start"><summary>{t('Start a loading condition')}</summary>
+ {onStudy&&ship.manifest.resources.some(r=>r.kind==='documentation.study-cases')&&<p><button onClick={onStudy}>{t('Study documented cases')}</button> {t('Read source loading tables, arrangements and attitude samples without replacing your plan.')}</p>}
  <p>{t('Choose a condition, review its totals, then apply it. Applying replaces the current cargo, tanks and onboard weights; Undo restores the previous plan.')}</p>
  <div className="scene-toolbar"><label>{t('Loading condition')}<select value={choice} onChange={e=>{setChoice(e.target.value);setApplied('');}}><option value="">{t('Choose a condition')}</option><option value="empty">{t('Empty cargo plan — empty tanks')}</option>{catalog.conditions?.items.map(p=><option key={p.id} value={p.id}>{t(p.name)}</option>)}<option value="reference">{t('Original loading reference')}</option></select></label>
  <button disabled={!preview.weights||!!preview.error} onClick={()=>{if(preview.weights){onApply(preview.weights,preset?.tweenDeck??'installed',preset?.waterDensity??ship.manifest.defaultCondition.waterDensity);setApplied(t('Condition applied. Further edits update the shared calculations.'));}}}>{t('Apply condition')}</button>

@@ -1,0 +1,9 @@
+{
+  "independentEngine": "pypdf",
+  "primaryEngine": "pypdfium2",
+  "weightRowsCompared": 5847,
+  "weightPages": 181,
+  "numericDisagreements": 0,
+  "massToleranceTonnes": 0.08,
+  "centreToleranceMetres": 0.003
+}

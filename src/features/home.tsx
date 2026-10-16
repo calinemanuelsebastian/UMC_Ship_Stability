@@ -1,3 +1,4 @@
+import {CapabilitiesSummary} from '../app/site-information';
 import { useLanguage } from '../app/language-context';
 import type { TabId } from '../app/tabs';
 import type { LoadingSection } from '../app/navigation';
@@ -8,6 +9,7 @@ export function Home({onTabChange,onLoadingSection}: {
   const {t}=useLanguage();
   return <div className="home-workspace">
     <div className="page-heading"><p className="eyebrow">{t('Your ship workspace')}</p><h1>{t('Plan the load. Explore the ship.')}</h1><p>{t('Start with cargo and tanks, then inspect the same condition in 3D.')}</p></div>
+    <CapabilitiesSummary/>
     <div className="home-primary">
       <section className="home-feature home-loading">
         <WorkspaceDrawing kind="loading"/>

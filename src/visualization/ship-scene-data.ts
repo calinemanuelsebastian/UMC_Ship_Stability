@@ -4,7 +4,8 @@ import {parseArea,type CargoArea} from '../app/cargo-layout';
 import type { ShipModelPackage, Point3 } from '../core/domain/ship-model';
 import type { ReferenceSettings } from '../core/reference/reference-system';
 export type BoxHull = { length: number; beam: number; depth: number; schematic?: boolean; model?: { url: string; exteriorGroup: string; panelGroup: string; hatchSurfaces?:CargoArea[]; waterlineMeshes: string[]; storedPanels?:StoredPanel[] } };
-export type SceneCondition = { buoyancy?:Point3; metacentre?:Point3; teachingTrimDeg?: number; didactic?: boolean; heelDeg?: number; draftAft: number; draftForward: number; gravity: Point3; origin: Point3; directions: { x: Point3; y: Point3; z: Point3 } };
+export type EquilibriumPose = {pitch:number;heel:number;heave:number;verticalDraftAft:number;verticalDraftForward:number;waterline:[number,number,number][]};
+export type SceneCondition = { calculated?:boolean; equilibriumPose?:EquilibriumPose; buoyancy?:Point3; metacentre?:Point3; teachingTrimDeg?: number; didactic?: boolean; heelDeg?: number; draftAft: number; draftForward: number; gravity: Point3; origin: Point3; directions: { x: Point3; y: Point3; z: Point3 } };
 /** Only an explicitly declared rectangular hull may be drawn as a box. */
 export function boxHullFor(ship: ShipModelPackage): BoxHull {
   if (!ship.manifest.resources.some(item => item.kind === 'visualization.box-hull')) throw new Error('This model does not yet provide supported 3D hull geometry.');
@@ -44,6 +45,7 @@ export function sceneCondition(ship: ShipModelPackage, reference: ReferenceSetti
 }
 /** Rigid pitch of the hull; every point on z=T_AP + x_AP*slope reaches world water level Y=0. */
 export function hullPose(hull: BoxHull, data: SceneCondition) {
+  if(data.equilibriumPose)return data.equilibriumPose;
   const pitch = -Math.atan((data.draftForward - data.draftAft) / hull.length);
   return { pitch, heave: -(data.draftAft + data.draftForward) / 2 * Math.cos(pitch) };
 }
@@ -52,6 +54,7 @@ export function hullPose(hull: BoxHull, data: SceneCondition) {
 export function exaggerateTrim(hull: BoxHull, data: SceneCondition, factor: number): SceneCondition | undefined {
   if (![1, 5, 10].includes(factor)) return undefined;
   if (factor === 1) return data;
+  if(data.equilibriumPose||data.calculated)return undefined;
   const angle = Math.atan((data.draftForward - data.draftAft) / hull.length) * factor;
   if (Math.abs(angle) >= Math.PI / 2) return undefined;
   const mean = (data.draftForward + data.draftAft) / 2;

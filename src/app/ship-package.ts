@@ -1,3 +1,4 @@
+import {parseStudyLibrary} from '../visualization/documented-studies';
 import {parseWindData} from '../core/stability/wind-profile';
 import {parseKgLimits} from '../core/stability/kg-limit';
 import {parseFloodData} from '../core/stability/downflooding';
@@ -56,6 +57,7 @@ export function parseShipBundle(raw:unknown):ShipBundle{
   if(r.path&&(!safeShipPath(r.path)||!b.files[r.path]))throw new Error(`Missing resource file: ${r.path}`);
   const pathKinds=['hydrostatics.upright-table','stability.cross-curves','hydrostatics.trimmed-table','loading.weights','loading.operational-weights','loading.tank-catalog','validation.reference-cases','visualization.gltf'];
   if(pathKinds.includes(r.kind)&&!r.path)throw new Error(`Missing path for ${r.kind}.`);
+  if(r.kind==='documentation.study-cases'){if(!r.path)throw new Error('Missing study cases path.');parseStudyLibrary(JSON.parse(fileText(b,r.path)),String(r.config?.sourceModelId??m.id));}
   if(r.kind==='hydrostatics.upright-table')parseHydrostaticTableCsv(fileText(b,r.path!));
   if(r.kind==='stability.downflooding-samples'){if(!r.path)throw new Error('Missing downflooding path.');parseFloodData(JSON.parse(fileText(b,r.path)));}
   if(r.kind==='documentation.annotated-kg'){if(!r.path)throw new Error('Missing KG limits path.');parseKgLimits(JSON.parse(fileText(b,r.path)));}

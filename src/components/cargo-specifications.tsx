@@ -2,10 +2,10 @@ import type {WeightDraft} from '../app/loading-state';
 import {cargoBottom} from '../app/cargo-placement';
 import {useLanguage} from '../app/language-context';
 /** Read-only selection card: display specifications without changing the active editing tool. */
-export function CargoSpecifications({item}:{item?:WeightDraft}){
+export function CargoSpecifications({item,categoryLabel}:{item?:WeightDraft;categoryLabel?:string}){
  const {t,language}=useLanguage();if(!item)return null;const p=item.footprint;
  const format=(value:string|number|undefined)=>value===undefined||typeof value==='string'&&!value.trim()||!Number.isFinite(Number(value))?'—':new Intl.NumberFormat(language,{maximumFractionDigits:6}).format(Number(value));
- const category=p?.kind==='dunnage'?'Dunnage / support':item.tank?'Tank / liquid':item.category??'Cargo';
+ const category=categoryLabel??(p?.kind==='dunnage'?'Dunnage / support':item.tank?'Tank / liquid':item.category??'Cargo');
  return <section className="panel" aria-label={t('Selected object specifications')}><h3>{item.name}</h3><dl className="summary-grid">
  <div><dt>{t('Category')}</dt><dd>{t(category)}</dd></div><div><dt>{t('Mass')}</dt><dd>{format(item.massTonnes)} t</dd></div>
  <div><dt>{t('Loading surface')}</dt><dd>{item.hold??p?.areaId??'—'}</dd></div>

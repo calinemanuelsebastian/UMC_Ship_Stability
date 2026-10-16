@@ -42,3 +42,10 @@ test('trim view deduplicates immutable results and matches shared upright baseli
  const [result,h]=await Promise.all([a,computeUprightHydrostatics(ship,c)]);assert.ok(Object.isFrozen(result));assert.equal(result.draftAft,h.draft);assert.equal(result.draftForward,h.draft);
  const corrected=await computeUprightHydrostatics(ship,{...c,freeSurfaceMomentTransverse:600});assert.equal(corrected.virtualVcgTransverse,3.1);assert.equal(corrected.condition.vcg,3);assert.ok(Math.abs(corrected.gmTransverse-corrected.gmTransverseCorrected-.1)<1e-10);
 });
+
+test('specification card accepts the vessel-derived fixed-weight category',async()=>{
+ const {createElement}=await import('react');const {renderToStaticMarkup}=await import('react-dom/server');
+ const {CargoSpecifications}=await server.ssrLoadModule('/src/components/cargo-specifications.tsx');
+ const html=renderToStaticMarkup(createElement(CargoSpecifications,{item:{...item,name:'Lightship'},categoryLabel:'Fixed weights'}));
+ assert.match(html,/<dd>Fixed weights<\/dd>/);assert.doesNotMatch(html,/<dd>Cargo<\/dd>/);
+});

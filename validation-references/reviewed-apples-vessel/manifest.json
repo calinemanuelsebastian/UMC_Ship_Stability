@@ -247,7 +247,7 @@
             "001_GENERAL_ARRANGEMENT.pdf",
             "004_STABILITY_LOADING_MANUAL.pdf, PDF page 18 (opening coordinates)"
           ],
-          "qualification": "Conservative planning footprints within hatch openings. 12.53 m is the documented opening elevation, used provisionally for cover-top placement; cover thickness and load limits are unverified. Forward taper represented conservatively by two rectangles. Stored tween-deck panels exclude x=17.1–23.4 m from Hatch 2. No approved exterior cargo height inferred.",
+          "qualification": "Conservative planning footprints within hatch openings. 12.53 m is the documented opening elevation, used provisionally for cover-top placement; cover thickness and load limits are unverified. Forward taper represented conservatively by two rectangles. Stored tween-deck panels exclude x=17.1\u201323.4 m from Hatch 2. No approved exterior cargo height inferred.",
           "panelSeams": "Schematic only: ten equal divisions of Hatch 2 and four of Hatch 1, following the apparent arrangement. Not dimensioned panel boundaries, manufacturer IDs, or a basis for allowable panel reactions."
         }
       }
@@ -348,7 +348,7 @@
             ],
             "uniformLoad": {
               "tonnesPerM2": 18,
-              "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+              "source": "006_STRENGHT_LOADING_MANUAL.pdf \u00b7 PDF 12 / printed 4.1 \u00b7 uniform loading only",
               "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
             }
           },
@@ -402,7 +402,7 @@
             ],
             "uniformLoad": {
               "tonnesPerM2": 3.5,
-              "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+              "source": "006_STRENGHT_LOADING_MANUAL.pdf \u00b7 PDF 12 / printed 4.1 \u00b7 uniform loading only",
               "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
             }
           },
@@ -428,7 +428,7 @@
             ],
             "uniformLoad": {
               "tonnesPerM2": 18,
-              "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+              "source": "006_STRENGHT_LOADING_MANUAL.pdf \u00b7 PDF 12 / printed 4.1 \u00b7 uniform loading only",
               "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
             }
           },
@@ -517,7 +517,7 @@
             ],
             "uniformLoad": {
               "tonnesPerM2": 3.5,
-              "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+              "source": "006_STRENGHT_LOADING_MANUAL.pdf \u00b7 PDF 12 / printed 4.1 \u00b7 uniform loading only",
               "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
             }
           },
@@ -682,7 +682,7 @@
             ],
             "uniformLoad": {
               "tonnesPerM2": 2.5,
-              "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+              "source": "006_STRENGHT_LOADING_MANUAL.pdf \u00b7 PDF 12 / printed 4.1 \u00b7 uniform loading only",
               "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
             }
           }
@@ -719,7 +719,7 @@
               ],
               "uniformLoad": {
                 "tonnesPerM2": 18,
-                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf \u00b7 PDF 12 / printed 4.1 \u00b7 uniform loading only",
                 "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
               }
             },
@@ -773,7 +773,7 @@
               ],
               "uniformLoad": {
                 "tonnesPerM2": 3.5,
-                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf \u00b7 PDF 12 / printed 4.1 \u00b7 uniform loading only",
                 "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
               }
             },
@@ -799,7 +799,7 @@
               ],
               "uniformLoad": {
                 "tonnesPerM2": 18,
-                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf \u00b7 PDF 12 / printed 4.1 \u00b7 uniform loading only",
                 "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
               }
             },
@@ -888,7 +888,7 @@
               ],
               "uniformLoad": {
                 "tonnesPerM2": 3.5,
-                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf \u00b7 PDF 12 / printed 4.1 \u00b7 uniform loading only",
                 "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
               }
             },
@@ -1053,7 +1053,7 @@
               ],
               "uniformLoad": {
                 "tonnesPerM2": 2.5,
-                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf \u00b7 PDF 12 / printed 4.1 \u00b7 uniform loading only",
                 "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
               }
             }
@@ -1089,7 +1089,7 @@
               ],
               "uniformLoad": {
                 "tonnesPerM2": 18,
-                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf \u00b7 PDF 12 / printed 4.1 \u00b7 uniform loading only",
                 "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
               }
             },
@@ -1115,7 +1115,7 @@
               ],
               "uniformLoad": {
                 "tonnesPerM2": 18,
-                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf \u00b7 PDF 12 / printed 4.1 \u00b7 uniform loading only",
                 "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
               }
             },
@@ -1280,7 +1280,7 @@
               ],
               "uniformLoad": {
                 "tonnesPerM2": 2.5,
-                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf \u00b7 PDF 12 / printed 4.1 \u00b7 uniform loading only",
                 "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
               }
             }
@@ -1316,7 +1316,7 @@
               ],
               "uniformLoad": {
                 "tonnesPerM2": 18,
-                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf \u00b7 PDF 12 / printed 4.1 \u00b7 uniform loading only",
                 "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
               }
             },
@@ -1342,7 +1342,7 @@
               ],
               "uniformLoad": {
                 "tonnesPerM2": 18,
-                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf \u00b7 PDF 12 / printed 4.1 \u00b7 uniform loading only",
                 "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
               }
             },
@@ -1507,7 +1507,7 @@
               ],
               "uniformLoad": {
                 "tonnesPerM2": 2.5,
-                "source": "006_STRENGHT_LOADING_MANUAL.pdf · PDF 12 / printed 4.1 · uniform loading only",
+                "source": "006_STRENGHT_LOADING_MANUAL.pdf \u00b7 PDF 12 / printed 4.1 \u00b7 uniform loading only",
                 "sha256": "efdf617fc249a9863c0a09353a2f2edb6712993d53c757d199d88d98700aa601"
               }
             }
@@ -1515,7 +1515,7 @@
         },
         "deck": {
           "source": "004_STABILITY_LOADING_MANUAL.pdf PDF p30 (printed 8.5), Store Position 4; documented panel aggregate centres.",
-          "storedLabel": "Stored onboard — position 4",
+          "storedLabel": "Stored onboard \u2014 position 4",
           "weights": [
             {
               "id": "Calc_G_Cargo-74",
@@ -1661,15 +1661,15 @@
       "description": "Documented starboard ordinates; interpolate displacement and initial trim, allowing source constant-LCB trim changes during heel. No heeled draft or trim path is supplied.",
       "config": {
         "referenceWaterDensity": 1.025,
-        "referenceWaterDensitySource": "Manual seawater convention, PDF pages 31, 34 and 53; cross-curve worked example PDF 12–13; no density rescaling.",
+        "referenceWaterDensitySource": "Manual seawater convention, PDF pages 31, 34 and 53; cross-curve worked example PDF 12\u201313; no density rescaling.",
         "portSymmetryEvidence": "vectis-source-audit-v1",
         "sourceCorrections": [
           {
             "date": "2026-10-10",
             "field": "referenceWaterDensitySource",
             "original": "Manual seawater convention, PDF page 7; no density rescaling.",
-            "corrected": "Manual seawater convention, PDF pages 31, 34 and 53; cross-curve worked example PDF 12–13; no density rescaling.",
-            "reason": "PDF 7 describes PIAS software, not density. PDF 31/34/53 explicitly identify seawater as 1.025 t/m³. Numerical values unchanged; review provenance when checking calculations."
+            "corrected": "Manual seawater convention, PDF pages 31, 34 and 53; cross-curve worked example PDF 12\u201313; no density rescaling.",
+            "reason": "PDF 7 describes PIAS software, not density. PDF 31/34/53 explicitly identify seawater as 1.025 t/m\u00b3. Numerical values unchanged; review provenance when checking calculations."
           }
         ]
       }
@@ -1721,7 +1721,7 @@
       "id": "port-symmetry-audit",
       "kind": "documentation.port-symmetry-audit",
       "path": "port-symmetry-audit.json",
-      "label": "Port symmetry comparison — original source cases"
+      "label": "Port symmetry comparison \u2014 original source cases"
     },
     {
       "id": "capacity-planning-reference",
@@ -1731,10 +1731,18 @@
           "label": "Summer draught reference",
           "draft": 8.011,
           "datum": "Underside of keel; 8.000 m moulded",
-          "source": "004_STABILITY_LOADING_MANUAL.pdf · PDF 5, 31 (§9.1); upright table PDF 53",
+          "source": "004_STABILITY_LOADING_MANUAL.pdf \u00b7 PDF 5, 31 (\u00a79.1); upright table PDF 53",
           "applicability": "Zero-trim summer reference. Fixed-draught planning only; seasonal limits, fresh-water allowances, end draughts and strength require separate assessment.",
           "resourceId": "reviewed-upright"
         }
+      }
+    },
+    {
+      "id": "documented-studies",
+      "kind": "documentation.study-cases",
+      "path": "documented-studies.json",
+      "config": {
+        "sourceModelId": "reviewed-apples-vessel"
       }
     }
   ],

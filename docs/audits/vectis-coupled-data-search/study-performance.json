@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-16T16:28:48.410Z",
+  "hardware": "Apple M2",
+  "node": "v24.21.0",
+  "bytes": 4349769,
+  "cases": 77,
+  "parseAndValidate": {
+    "iterations": 25,
+    "medianMs": 29.224917000000005,
+    "p95Ms": 33.709749999999985,
+    "maxMs": 34.40954199999999
+  },
+  "groupAndSample": {
+    "samples": 100100,
+    "totalMs": 109.61775000000011
+  },
+  "scope": "Local Node data pipeline only. Excludes network transfer, browser rendering, GPU frame rate and mobile hardware."
+}
