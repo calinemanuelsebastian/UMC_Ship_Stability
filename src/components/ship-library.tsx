@@ -1,3 +1,4 @@
+import {FieldLabel} from './field-label';
 import {ShipEditor} from './ship-editor';
 import {useState} from 'react';
 import {useLanguage} from '../app/language-context';
@@ -41,7 +42,7 @@ export function ShipLibrary({records,activeId,onRefresh,onUse,onClose}:{records:
  {preview.foundation.upright.screening.findings.length>0&&<ul>{preview.foundation.upright.screening.findings.map((f,i)=><li key={i}>{l('Row','Rând')} {f.row}: {f.check} — {f.message}</li>)}</ul>}
  </details>
  <ul>{preview.warnings.map(w=><li key={w}>{w}</li>)}</ul>
- <label>{l('Library name (optional)','Nume în bibliotecă (opțional)')}<input value={name} maxLength={120} onChange={e=>setName(e.target.value)}/></label>
+ <label><FieldLabel label="Library name" help="Optional: leave blank to use the ship package name."/><input value={name} maxLength={120} onChange={e=>setName(e.target.value)}/></label>
  <button disabled={busy} onClick={()=>void run(async()=>{await shipLibrary('add',{id:`local-${crypto.randomUUID()}`,name:name.trim()||preview.bundle.manifest.name,savedAt:new Date().toISOString(),bundle:preview.bundle});await onRefresh();setPreview(undefined);setMessage(l('Ship saved locally. Choose Use ship when you are ready.','Nava a fost salvată local. Alege Folosește nava când ești pregătit.'));})}>{l('Save locally','Salvează local')}</button></div>}
  <h3>{l('Your ships','Navele tale')}</h3><p>{l('Save your current loading condition before switching ships.','Salvează condiția de încărcare curentă înainte de a schimba nava.')}</p>
  {!records.length&&<p>{l('No imported ships yet.','Nu există încă nave importate.')}</p>}

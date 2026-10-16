@@ -1,3 +1,4 @@
+import {FieldLabel} from './field-label';
 import {conditionRevision} from '../app/condition-transaction';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import type { ShipModelPackage } from '../core/domain/ship-model';
@@ -97,7 +98,7 @@ export function CargoPlans({ ship, state, fixed, ready, onRestore, onRecoveryAva
   const summary = preview && evaluateWeights(preview.state.weights);
   return <section className="panel cargo-plans"><h1>{t('Cargo Plans')}</h1>
     <p>{t('Create a loading plan below. Save named plans in this browser or download a JSON backup to transfer them. Browser storage is local to this device and website address; clearing browser data removes it.')}</p>
-    <div className="curve-inputs"><label>{t('Plan name (optional)')}<input maxLength={120} value={name} onChange={e => setName(e.target.value)}/></label><label>{t('Voyage / notes (optional)')}<input maxLength={200} value={voyage} onChange={e => setVoyage(e.target.value)}/></label></div>
+    <div className="curve-inputs"><label><FieldLabel label="Plan name" help="Optional: leave blank to use an automatically generated name."/><input maxLength={120} value={name} onChange={e => setName(e.target.value)}/></label><label><FieldLabel label="Voyage / notes" help="Optional: add a voyage reference or notes for your own records."/><input maxLength={200} value={voyage} onChange={e => setVoyage(e.target.value)}/></label></div>
  <p className="muted">{t('Leave the name blank to use a default name.')}</p>
     {state.scenario !== 'loading' && <p>{t('Manual mode is active. Plans contain the weight list; applying a plan selects weight-based loading.')}</p>}
     <div className="scene-toolbar">

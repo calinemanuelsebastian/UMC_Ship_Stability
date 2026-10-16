@@ -1,4 +1,12 @@
 export const romanian: Record<string, string> = {
+"Library name":"Nume în bibliotecă",
+"Packages to add":"Colete de adăugat",
+"Optional: leave blank to use the ship package name.":"Opțional: lasă gol pentru a folosi numele din pachetul navei.",
+"Optional field information":"Informații despre câmpul opțional",
+"Optional when using a stowage factor: capacity in tonnes uses m³/t directly. Enter gross mass per package, including packaging and pallet tare, to calculate package counts or send cargo to Cargo layout.":"Opțional când folosești factorul de stivuire: capacitatea în tone utilizează direct m³/t. Introdu masa brută pe colet, inclusiv ambalajul și tara paletului, pentru numărul de colete sau transferul în planul de marfă.",
+"Optional: leave blank to estimate maximum capacity. Enter a quantity to check whether that many additional packages fit.":"Opțional: lasă gol pentru estimarea capacității maxime. Introdu o cantitate pentru a verifica dacă încap atâtea colete suplimentare.",
+"Optional: leave blank to use an automatically generated name.":"Opțional: lasă gol pentru un nume generat automat.",
+"Optional: add a voyage reference or notes for your own records.":"Opțional: adaugă referința voiajului sau note pentru evidența proprie.",
 "Condition name (optional)":"Numele condiției (opțional)",
 "Enter a voyage name to group these conditions.":"Introdu numele voiajului pentru a grupa aceste condiții.",
 "Plan name (optional)":"Numele planului (opțional)",

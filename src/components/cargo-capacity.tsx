@@ -1,3 +1,4 @@
+import {FieldLabel} from './field-label';
 import {vesselCapacityLimit,resolveCapacityLimit} from '../app/capacity-limit';
 import {NumberInput} from './number-input';
 import {useMemo,useState,useEffect} from 'react';
@@ -19,7 +20,7 @@ export function CargoCapacity({ship,weights,deck,density,onDensityChange,setting
  const result=useMemo(()=>cargoCapacity(ship,weights,areas,effective,density),[ship,weights,areas,effective,density]);
  const fmt=(n:number|undefined)=>n===undefined?'—':new Intl.NumberFormat(language,{maximumFractionDigits:3}).format(n);
  const change=(patch:Partial<CapacitySettings>)=>{try{onChange(parseCapacitySettings({...settings,...patch}));setError('');}catch(e){setError((e as Error).message);}};
- const number=(key:'limit'|'reserve'|'supportAllowance'|'unitMass'|'length'|'width'|'height'|'stowageFactor'|'quantity',label:string)=><label>{t(label)}<input type="number" min={['reserve','supportAllowance','quantity'].includes(key)?0:0.000001} step={key==='quantity'?1:'any'} value={settings[key]??''} onChange={e=>change({[key]:e.target.value===''?(key==='reserve'||key==='supportAllowance'?0:undefined):Number(e.target.value),...(key==='limit'?{limitDensity:density}:{})})}/></label>;
+ const number=(key:'limit'|'reserve'|'supportAllowance'|'unitMass'|'length'|'width'|'height'|'stowageFactor'|'quantity',label:string,help?:string)=><label>{help?<FieldLabel label={label} help={help}/>:t(label)}<input aria-label={t(label)} type="number" min={['reserve','supportAllowance','quantity'].includes(key)?0:0.000001} step={key==='quantity'?1:'any'} value={settings[key]??''} onChange={e=>change({[key]:e.target.value===''?(key==='reserve'||key==='supportAllowance'?0:undefined):Number(e.target.value),...(key==='limit'?{limitDensity:density}:{})})}/></label>;
  const template=capacityCargoTemplate(settings,areas);
  return <section className="panel capacity-panel"><div className="section-actions"><h2>{t('Cargo capacity')}</h2><button onClick={onLayout}>{t('Open cargo layout')}</button></div>
  <p>{t('Plan additional cargo against the current loading condition. Supports, tanks and other onboard weights are included once.')}</p>
@@ -30,7 +31,7 @@ export function CargoCapacity({ship,weights,deck,density,onDensityChange,setting
  <div><dt>{t('Limiting factor')}</dt><dd>{t(ready&&result.limiting!=='Incomplete'?result.limiting:'Enter cargo details to compare weight and space')}</dd></div>
  </dl>
  <p className="planner-note">{t('Space is a geometric estimate. Verify fit, access and ventilation in Cargo layout.')}</p>
- <h3>{t('Cargo to add')}</h3><div className="curve-inputs"><label>{t('Loading area')}<select value={settings.areaId} onChange={e=>change({areaId:e.target.value})}><option value="">{t('All holds')}</option>{areas.map((a,i)=><option key={a.id??i} value={a.id??a.name}>{t(a.name)}</option>)}</select></label><label>{t('Volume basis')}<select value={settings.method} onChange={e=>change({method:e.target.value as 'package'|'sf'})}><option value="package">{t('Package dimensions')}</option><option value="sf">{t('Stowage factor')}</option></select></label>{number('unitMass',settings.method==='sf'?'Gross package mass (t, optional for capacity)':'Gross package mass (t)')}{settings.method==='package'?<>{number('length','Package length (m)')}{number('width','Package width (m)')}{number('height','Package height (m)')}</>:number('stowageFactor','Stowage factor (m³/t)')}</div>
+ <h3>{t('Cargo to add')}</h3><div className="curve-inputs"><label>{t('Loading area')}<select value={settings.areaId} onChange={e=>change({areaId:e.target.value})}><option value="">{t('All holds')}</option>{areas.map((a,i)=><option key={a.id??i} value={a.id??a.name}>{t(a.name)}</option>)}</select></label><label>{t('Volume basis')}<select value={settings.method} onChange={e=>change({method:e.target.value as 'package'|'sf'})}><option value="package">{t('Package dimensions')}</option><option value="sf">{t('Stowage factor')}</option></select></label>{number('unitMass','Gross package mass (t)',settings.method==='sf'?'Optional when using a stowage factor: capacity in tonnes uses m³/t directly. Enter gross mass per package, including packaging and pallet tare, to calculate package counts or send cargo to Cargo layout.':undefined)}{settings.method==='package'?<>{number('length','Package length (m)')}{number('width','Package width (m)')}{number('height','Package height (m)')}</>:number('stowageFactor','Stowage factor (m³/t)')}</div>
  {settings.method==='sf'&&<details><summary>{t('Package dimensions for Cargo layout (optional for capacity)')}</summary><p>{t('A stowage factor estimates volume but does not define a cargo shape.')}</p><div className="curve-inputs">{number('length','Package length (m)')}{number('width','Package width (m)')}{number('height','Package height (m)')}</div></details>}
  <section aria-label={t('Full and Down planning')}><h3>{t('Full and Down planning')}</h3>
  <dl className="curve-inputs">
@@ -46,7 +47,7 @@ export function CargoCapacity({ship,weights,deck,density,onDensityChange,setting
  <details><summary>{t('Stowage factor basis')}</summary><p>{t('Cargo SF = stowed volume / cargo mass. Critical SF = remaining volume / remaining cargo mass allowance. Package dimensions give an envelope estimate; allow for packing gaps, ventilation and supports in the layout. An entered stowage factor should already account for the intended stowage losses. Whole packages may leave unused capacity.')}</p></details>
  </section>
  <details open={settings.quantity!==undefined||undefined}><summary>{t('Check a requested quantity (optional)')}</summary>
- {number('quantity','Packages to add (optional)')}
+ {number('quantity','Packages to add','Optional: leave blank to estimate maximum capacity. Enter a quantity to check whether that many additional packages fit.')}
  <p>{t('Leave blank to calculate maximum capacity. A requested quantity does not add cargo or restrict the planner.')}</p>
  </details>
  <p><strong>{t('Estimated additional packages')}: {ready&&result.additionalUnits!==undefined?fmt(result.additionalUnits):t(settings.method==='sf'&&!settings.unitMass?'Add package mass only if you need a package count.':'Enter cargo details to compare weight and space')}</strong></p>

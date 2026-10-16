@@ -1,3 +1,4 @@
+import {FieldLabel} from './field-label';
 import {decodeVoyageBackup,parseVoyageBackup,importVoyageBackup,type VoyageBackup} from '../app/voyage-backup';
 import {conditionTransaction,canUndoCondition,type ConditionTransaction} from '../app/condition-transaction';
 import {VoyageReview} from './voyage-review';
@@ -25,7 +26,7 @@ export function SavedScenarios({ship,state,ready,onRestore,saveRequest,catalog}:
  function restore(value:ScenarioState){const before=structuredClone(state);onRestore(structuredClone(value));previous.current=conditionTransaction(before,value);setCanUndoLoad(true);}
  return <details ref={panelRef} className="panel saved-scenarios"><summary>{t('Saved scenarios')}</summary>
  <p>{t('Save named input snapshots in this browser. Export a JSON file for backup or sharing. Incomplete inputs may be saved; results are recalculated when loaded.')}</p>
- <label>{t('Scenario name (optional)')} <input ref={nameRef} aria-label={t('Scenario name (optional)')} placeholder={t('e.g. Departure condition or Arrival condition')} maxLength={120} value={name} onChange={e=>setName(e.target.value)}/></label>
+ <label><FieldLabel label="Scenario name" help="Optional: leave blank to use an automatically generated name."/> <input ref={nameRef} aria-label={t('Scenario name (optional)')} placeholder={t('e.g. Departure condition or Arrival condition')} maxLength={120} value={name} onChange={e=>setName(e.target.value)}/></label>
  <p className="muted">{t('Leave the name blank to use a default name.')}</p>
  <div className="scene-toolbar"><button disabled={!ready||storageBlocked||busy} onClick={()=>action(async()=>{const entry=snapshot();await persist({add:entry});setSelected(entry.id);setMessage('Scenario saved.');})}>{t('Save new scenario')}</button>
  <button disabled={!ready} onClick={()=>action(()=>{const entry=snapshot();const url=URL.createObjectURL(new Blob([JSON.stringify(entry,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='ship-stability-scenario.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);setMessage('Scenario file exported.');})}>{t('Export current inputs')}</button></div>
