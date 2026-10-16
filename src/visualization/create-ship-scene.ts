@@ -10,8 +10,8 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { schematicOutline, heeledBox, hullPose, illustrativeAttitudePose, type BoxHull, type SceneCondition } from './ship-scene-data';
 export type CameraView = 'perspective' | 'side' | 'top' | 'bow';
-export type SceneWeight = { markerColor?:string; tankBox?:{length:number;width:number;height:number;fill:number;point:{x:number;y:number;z:number}}; name?:string; footprint?: Footprint; cargoPoint?: {x:number;y:number;z:number}; id: string; label: string; point: { x: number; y: number; z: number } };
-export type SceneOptions = { panelMode?:'installed'|'stored'|'ashore'; exterior: boolean; panels: boolean; cargo: boolean; allWeightLabels: boolean; weights: SceneWeight[]; selectedWeight: string; axes: boolean; water: boolean; hullTransparency: number; panelTransparency: number; cargoTransparency: number; selected: boolean; axisLength: number; axisThickness: number; labelSize: number; waterlineWidth: number; measurements: boolean; draftLabels: { aft: string; forward: string } };
+export type SceneWeight = { tankMarker?:boolean; markerColor?:string; tankBox?:{length:number;width:number;height:number;fill:number;point:{x:number;y:number;z:number}}; name?:string; footprint?: Footprint; cargoPoint?: {x:number;y:number;z:number}; id: string; label: string; point: { x: number; y: number; z: number } };
+export type SceneOptions = { tankMarkers?:boolean; panelMode?:'installed'|'stored'|'ashore'; exterior: boolean; panels: boolean; cargo: boolean; allWeightLabels: boolean; weights: SceneWeight[]; selectedWeight: string; axes: boolean; water: boolean; hullTransparency: number; panelTransparency: number; cargoTransparency: number; selected: boolean; axisLength: number; axisThickness: number; labelSize: number; waterlineWidth: number; measurements: boolean; draftLabels: { aft: string; forward: string } };
 export function createShipScene(host: HTMLElement, hull: BoxHull, onSelect: () => void, onError: () => void, onSelectWeight: (id: string) => void) {
   const scene = new THREE.Scene(); scene.background = new THREE.Color('#e9f1f6');
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
@@ -201,9 +201,9 @@ export function createShipScene(host: HTMLElement, hull: BoxHull, onSelect: () =
         }
         entry.marker.position.set(weight.point.x,weight.point.y,weight.point.z);
         entry.marker.scale.setScalar(1);
-        entry.marker.visible = options.cargo && (!weight.footprint || weight.id === options.selectedWeight);
+        entry.marker.visible = options.cargo && (!weight.tankMarker || options.tankMarkers === true || weight.id === options.selectedWeight) && (!weight.footprint || weight.id === options.selectedWeight);
         entry.marker.material.color.set(weight.id === options.selectedWeight ? '#bf1674' : weight.markerColor??'#6b3997');
-        entry.text.visible = options.cargo && (options.allWeightLabels || weight.id === options.selectedWeight);
+        entry.text.visible = options.cargo && (!weight.tankMarker || options.tankMarkers === true || weight.id === options.selectedWeight) && (options.allWeightLabels || weight.id === options.selectedWeight);
         entry.text.position.copy(entry.marker.position).add(new THREE.Vector3(0,span*(.055 + (index%3)*.03),0));
         paintLabel(entry.text,options.allWeightLabels || weight.id === options.selectedWeight ? weight.label : String(index+1),'#6b3997');
       });

@@ -107,6 +107,7 @@ export const romanian: Record<string, string> = {
 "Initial trim and draughts":"Asietă și pescaje inițiale",
 "Heel from stability curves":"Înclinare din curbele de stabilitate",
 "Calculation basis":"Baza calculului",
+"Tank centre-of-gravity markers":"Marcajele centrelor de greutate ale tancurilor",
 "Formula basis and scope":"Formule și domeniu de aplicare",
 "Attitude results":"Poziția navei",
 "Current calculation":"Calcul curent",

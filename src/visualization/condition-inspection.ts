@@ -18,7 +18,7 @@ export function inspectionMarkers(ship:ShipModelPackage,weights:WeightDraft[],ca
   const tank=catalog?.tanks.find(t=>t.id===w.tank?.id);
   const box=tank?.box;
   const tankBox=box&&w.tank&&w.tank.volumeM3>=0&&w.tank.volumeM3<=tank.capacityM3?{length:box.length,width:box.width,height:box.height,fill:w.tank.volumeM3/tank.capacityM3,point:bodyPoint(ship,{x:tank.fullCentre[0],y:tank.fullCentre[1],z:box.bottomZ+box.height/2})}:undefined;
-  return {markerColor:w.tank?'#167e96':inspectionCategory(ship,w)==='Fixed weights'?'#59636e':w.footprint?.kind==='dunnage'?'#a66b30':'#6b3997',id:w.id,name:w.name,label:`${w.name}\n${inspectionCategory(ship,w)}${w.tank&&!tankBox?' · CG only':''}`,point,tankBox,...(!w.tank&&w.footprint?{footprint:w.footprint,cargoPoint:bodyPoint(ship,{x:Number(w.lcg),y:Number(w.tcg),z:(w.footprint.bottomZ??w.footprint.deckZ)+w.footprint.height/2})}:{})};
+  return {tankMarker:!!w.tank,markerColor:w.tank?'#167e96':inspectionCategory(ship,w)==='Fixed weights'?'#59636e':w.footprint?.kind==='dunnage'?'#a66b30':'#6b3997',id:w.id,name:w.name,label:`${w.name}\n${inspectionCategory(ship,w)}${w.tank&&!tankBox?' · CG only':''}`,point,tankBox,...(!w.tank&&w.footprint?{footprint:w.footprint,cargoPoint:bodyPoint(ship,{x:Number(w.lcg),y:Number(w.tcg),z:(w.footprint.bottomZ??w.footprint.deckZ)+w.footprint.height/2})}:{})};
  });
 }
 export function draftMeasurements(result:{draftAft:number;draftForward:number;illustrativeDrafts?:boolean},mode:string){
