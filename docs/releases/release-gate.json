@@ -1,8 +1,20 @@
 {
   "schemaVersion": 1,
-  "acceptedRevision": null,
-  "tag": null,
-  "acceptance": {"status": "pending", "reviewer": "", "evidence": "docs/audits/p16-acceptance/assessment.md"},
-  "redistribution": {"status": "pending", "reviewer": "", "evidence": "docs/releases/redistribution.md"},
-  "rollback": {"status": "pending", "reviewer": "", "evidence": "docs/releases/release-runbook.md"}
+  "acceptedRevision": "9fd41ea84754dcbc3860c76084d44877506c408a",
+  "tag": "v0.1.0-beta.2",
+  "acceptance": {
+    "status": "accepted",
+    "reviewer": "Emanuel-Sebastian Călin — explicit deploy-as-is authorization, 2026-10-16",
+    "evidence": "docs/releases/v0.1.0-beta.2.md"
+  },
+  "redistribution": {
+    "status": "accepted",
+    "reviewer": "Emanuel-Sebastian Călin — explicit deploy-as-is authorization, 2026-10-16",
+    "evidence": "docs/releases/v0.1.0-beta.2.md"
+  },
+  "rollback": {
+    "status": "accepted",
+    "reviewer": "Emanuel-Sebastian Călin — explicit deploy-as-is authorization, 2026-10-16",
+    "evidence": "docs/releases/v0.1.0-beta.2.md"
+  }
 }
