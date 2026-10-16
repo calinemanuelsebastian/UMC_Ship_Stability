@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "acceptedRevision": "c0bbcc1eb8a0f9b864e70eee30f0610b488be311",
-  "tag": "v0.1.0-beta.4",
+  "acceptedRevision": "b0f64cec6b2b9a8a0e936582e77202d40aa51e82",
+  "tag": "v0.1.0-beta.5",
   "acceptance": {
     "status": "accepted",
     "reviewer": "Emanuel-Sebastian Călin — explicit deployment authorization, 2026-10-16; existing disclosed limitations retained",
-    "evidence": "docs/releases/v0.1.0-beta.4.md"
+    "evidence": "docs/releases/v0.1.0-beta.5.md"
   },
   "redistribution": {
     "status": "accepted",
     "reviewer": "Emanuel-Sebastian Călin — explicit deployment authorization, 2026-10-16; existing disclosed limitations retained",
-    "evidence": "docs/releases/v0.1.0-beta.4.md"
+    "evidence": "docs/releases/v0.1.0-beta.5.md"
   },
   "rollback": {
     "status": "accepted",
     "reviewer": "Emanuel-Sebastian Călin — explicit deployment authorization, 2026-10-16; existing disclosed limitations retained",
-    "evidence": "docs/releases/v0.1.0-beta.4.md"
+    "evidence": "docs/releases/v0.1.0-beta.5.md"
   }
 }
