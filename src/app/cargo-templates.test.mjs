@@ -87,3 +87,13 @@ test('reused support assemblies and cargo metadata survive a complete cargo-plan
  const restored=parseCargoPlan(JSON.parse(JSON.stringify(plan)),'test-vessel',[]);
  assert.deepEqual(restored.state.weights[0].footprint.dunnage.properties,support.footprint.dunnage.properties);assert.deepEqual(restored.state.weights[1].footprint.catalogue,cargo.footprint.catalogue);
 });
+
+test('planned quantity is optional and survives library roundtrip without inventing a target',()=>{
+ const value=raw();delete value.quantity;
+ const template=c.parseCargoTemplate(value);
+ assert.equal(template.quantity,undefined);
+ const library=c.decodeCargoLibrary(JSON.stringify({...c.emptyCargoLibrary(),templates:[template]}));
+ assert.equal(library.templates[0].quantity,undefined);
+ assert.equal(c.grossTemplateMass(template.mass),1);
+ for(const quantity of [0,-1,1.5,40001])assert.throws(()=>c.parseCargoTemplate({...value,quantity}));
+});

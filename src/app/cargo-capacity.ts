@@ -32,6 +32,16 @@ export function wholeCapacityUnits(available:number,perUnit:number):number|undef
  // Do not round a positive sub-unit capacity up when integer precision is coarse.
  return Math.abs(quotient-nearest)<=Math.min(tolerance,1e-7)?nearest:Math.floor(quotient);
 }
+/** Continuous single-cargo intake; whole-package rounding is reported separately. */
+export function stowageComparison(mass:number|undefined,volume:number|undefined,sf:number|undefined){
+ const valid=(n:number|undefined):n is number=>n!==undefined&&Number.isFinite(n)&&n>0;
+ const criticalStowageFactor=valid(mass)&&valid(volume)?volume/mass:undefined;
+ if(!valid(mass)||!valid(volume)||!valid(sf))return {criticalStowageFactor,loadingOutcome:mass!==undefined&&mass<=0||volume!==undefined&&volume<=0?'No remaining capacity':'Incomplete'};
+ const volumeMass=volume/sf;
+ const equal=Math.abs(volumeMass-mass)<=1e-9*Math.max(mass,volumeMass);
+ const maximumCargoMass=Math.min(mass,volumeMass);
+ return {criticalStowageFactor,maximumCargoMass,unusedMass:Math.max(0,mass-maximumCargoMass),unusedVolume:Math.max(0,volume-maximumCargoMass*sf),loadingOutcome:equal?'Full and Down':volumeMass<mass?'Full':'Down'};
+}
 export function cargoCapacity(ship:ShipModelPackage,weights:WeightDraft[],areas:CargoArea[],settings:CapacitySettings,density?:number){
  const s=parseCapacitySettings(settings);let cargo=0,supports=0,other=0;let massesComplete=true;let unlocated=0;
  const used=new Map<CargoArea,number>();const unknown=new Set<CargoArea>();
@@ -56,8 +66,10 @@ export function cargoCapacity(ship:ShipModelPackage,weights:WeightDraft[],areas:
  const weightUnits=remainingMass!==undefined&&s.unitMass?wholeCapacityUnits(remainingMass,s.unitMass):undefined;
  const volumeUnits=remainingVolume!==undefined&&volumePerUnit?wholeCapacityUnits(remainingVolume,volumePerUnit):undefined;
  const additionalUnits=weightUnits!==undefined&&volumeUnits!==undefined?Math.min(weightUnits,volumeUnits):undefined;
- return {cargo,supports,other,currentMass,massesComplete,unlocated,rows,remainingVolume,remainingMass,limitCurrent,weightUnits,volumeUnits,additionalUnits,
-  limiting:weightUnits===undefined||volumeUnits===undefined?'Incomplete':weightUnits===volumeUnits?'Weight and volume':weightUnits<volumeUnits?'Weight':'Volume',
+ const cargoStowageFactor=s.method==='sf'?s.stowageFactor:volumePerUnit!==undefined&&s.unitMass?volumePerUnit/s.unitMass:undefined;
+ const comparison=stowageComparison(remainingMass,remainingVolume,cargoStowageFactor);
+ return {...comparison,cargoStowageFactor,cargo,supports,other,currentMass,massesComplete,unlocated,rows,remainingVolume,remainingMass,limitCurrent,weightUnits,volumeUnits,additionalUnits,
+  limiting:comparison.loadingOutcome==='Full'?'Volume':comparison.loadingOutcome==='Down'?'Weight':comparison.loadingOutcome==='Full and Down'?'Weight and volume':comparison.loadingOutcome==='No remaining capacity'?'No remaining capacity':'Incomplete',
   requiredMass:s.quantity!==undefined&&s.unitMass?s.quantity*s.unitMass:undefined,requiredVolume:s.quantity!==undefined&&volumePerUnit?s.quantity*volumePerUnit:undefined};
 }
 

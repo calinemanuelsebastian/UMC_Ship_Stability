@@ -97,14 +97,15 @@ export function CargoPlans({ ship, state, fixed, ready, onRestore, onRecoveryAva
   const summary = preview && evaluateWeights(preview.state.weights);
   return <section className="panel cargo-plans"><h1>{t('Cargo Plans')}</h1>
     <p>{t('Create a loading plan below. Save named plans in this browser or download a JSON backup to transfer them. Browser storage is local to this device and website address; clearing browser data removes it.')}</p>
-    <div className="curve-inputs"><label>{t('Plan name')}<input maxLength={120} value={name} onChange={e => setName(e.target.value)}/></label><label>{t('Voyage / notes')}<input maxLength={200} value={voyage} onChange={e => setVoyage(e.target.value)}/></label></div>
+    <div className="curve-inputs"><label>{t('Plan name (optional)')}<input maxLength={120} value={name} onChange={e => setName(e.target.value)}/></label><label>{t('Voyage / notes (optional)')}<input maxLength={200} value={voyage} onChange={e => setVoyage(e.target.value)}/></label></div>
+ <p className="muted">{t('Leave the name blank to use a default name.')}</p>
     {state.scenario !== 'loading' && <p>{t('Manual mode is active. Plans contain the weight list; applying a plan selects weight-based loading.')}</p>}
     <div className="scene-toolbar">
       <button disabled={!ready || busy} onClick={() => { const plan = { kind: 'cargo-plan' as const, version: 1 as const, model, savedAt: new Date().toISOString(), id: crypto.randomUUID(), name: 'Untitled cargo plan', voyage: '', state: { scenario: 'loading' as const, cargoArea:state.cargoArea, weights: structuredClone(fixed), density: ship.manifest.defaultCondition.waterDensity, longitudinalFsm: 0, manual: {}, manualMode: 'displacement' as const } }; apply(plan); }}>{t('New plan (fixed weights only)')}</button>
-      <button disabled={!ready || busy || !hydrated || !name.trim()} onClick={() => action(async () => {
+      <button disabled={!ready || busy || !hydrated} onClick={() => action(async () => {
         const plan = snapshot(); await planStorage('put', { key: `plan:${plan.id}`, model, plan }, undefined, null); setItems([...items, plan]); setSelected(plan.id); setMessage('Cargo plan saved.');
       })}>{t('Save as new plan')}</button>
-      <button disabled={!ready || busy || !hydrated || !selected || !name.trim()} onClick={() => action(async () => {
+      <button disabled={!ready || busy || !hydrated || !selected} onClick={() => action(async () => {
         const plan = snapshot(selected); await planStorage('put', { key: `plan:${plan.id}`, model, plan }, undefined, items.find(p=>p.id===selected)?.savedAt ?? null); setItems(items.map(p => p.id === selected ? plan : p)); setMessage('Cargo plan saved.');
       })}>{t('Update selected plan')}</button>
       <button disabled={!ready || busy} onClick={() => action(async () => {

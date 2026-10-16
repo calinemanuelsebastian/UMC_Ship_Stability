@@ -59,3 +59,24 @@ test('whole package boundaries absorb only floating-point noise, not genuine ove
  assert.equal(cargoCapacity(ship,[],[{...tiny,xMax:.3-1e-9}],{...base,length:.1,width:1,height:1},1.025).volumeUnits,2);
  assert.equal(cargoCapacity(ship,[],[area],{...base,unitMass:Number.MIN_VALUE},1.025).additionalUnits,undefined);
 });
+
+test('optional quantity and package geometry do not block SF-based capacity',()=>{
+ const s={...settings,method:'sf',stowageFactor:2,unitMass:undefined,length:undefined,width:undefined,height:undefined,quantity:undefined};
+ const r=cargoCapacity(ship,[],[area],s,1.025);
+ assert.equal(r.cargoStowageFactor,2);assert.equal(r.criticalStowageFactor,400/92);
+ assert.equal(r.loadingOutcome,'Down');assert.equal(r.maximumCargoMass,92);
+ assert.equal(r.additionalUnits,undefined);assert.equal(r.requiredMass,undefined);
+ const q=cargoCapacity(ship,[],[area],{...settings,quantity:undefined},1.025);
+ assert.ok(q.additionalUnits>0);assert.ok(capacityCargoTemplate({...settings,areaId:'hold',quantity:undefined},[area]));
+});
+test('Full, Down and Full and Down use continuous capacities, not rounded packages',async()=>{
+ const {stowageComparison}=await server.ssrLoadModule('/src/app/cargo-capacity.ts');
+ assert.equal(stowageComparison(100,200,3).loadingOutcome,'Full');
+ assert.equal(stowageComparison(100,200,1).loadingOutcome,'Down');
+ assert.equal(stowageComparison(100,200,2).loadingOutcome,'Full and Down');
+ assert.equal(stowageComparison(100,200,2.00001).loadingOutcome,'Full');
+ assert.equal(stowageComparison(0,200,2).loadingOutcome,'No remaining capacity');
+ assert.equal(stowageComparison(-1,200,2).maximumCargoMass,undefined);
+ assert.equal(stowageComparison(100,undefined,2).criticalStowageFactor,undefined);
+ assert.equal(stowageComparison(100,200,undefined).loadingOutcome,'Incomplete');
+});

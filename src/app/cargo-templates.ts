@@ -5,7 +5,7 @@ export const cargoFamilies=[
  ['boxed','Pallets / boxes','boxed'],['perishable','Ventilated perishables','ventilated'],['crate','Crates / cases','boxed'],['drum','Drums / barrels','drums'],['bale','Bags / bales','unspecified'],['reel','Rolls / reels','rolls'],['coil','Coils','rolls'],['pipe','Pipes / bundles','unspecified'],['project','Custom / project cargo','unspecified'],['container','ISO containers','unspecified'],
 ] as const;
 export type CargoFamily=typeof cargoFamilies[number][0];
-export type CargoTemplate={id:string;name:string;family:CargoFamily;footprint:Footprint;mass:{mode:'gross'|'net-plus-tare';value:number;tare:number};quantity:number;cgAboveBase?:number;contact:string;source:string};
+export type CargoTemplate={id:string;name:string;family:CargoFamily;footprint:Footprint;mass:{mode:'gross'|'net-plus-tare';value:number;tare:number};quantity?:number;cgAboveBase?:number;contact:string;source:string};
 export type CargoAssembly={id:string;name:string;items:WeightDraft[]};
 export type CargoLibrary={format:'umc-cargo-library';version:1;templates:CargoTemplate[];assemblies:CargoAssembly[]};
 export const libraryKey='umc-cargo-library-v1';
@@ -18,7 +18,7 @@ export function grossTemplateMass(m:CargoTemplate['mass']){
 }
 export function parseCargoTemplate(raw:unknown):CargoTemplate{
  const r=raw as CargoTemplate;
- if(!r||!text(r.id,120)||!r.id||!text(r.name,120)||!r.name.trim()||!cargoFamilies.some(f=>f[0]===r.family)||!Number.isInteger(r.quantity)||r.quantity<1||r.quantity>40000||!text(r.contact)||!text(r.source))throw new Error('Invalid cargo template.');
+ if(!r||!text(r.id,120)||!r.id||!text(r.name,120)||!r.name.trim()||!cargoFamilies.some(f=>f[0]===r.family)||(r.quantity!==undefined&&(!Number.isInteger(r.quantity)||r.quantity<1||r.quantity>40000))||!text(r.contact)||!text(r.source))throw new Error('Invalid cargo template.');
  grossTemplateMass(r.mass);
  const p=parseFootprint(r.footprint);if(p.kind)throw new Error('Save support members as an assembly.');
  if(r.cgAboveBase!==undefined&&(!Number.isFinite(r.cgAboveBase)||r.cgAboveBase<0||r.cgAboveBase>p.height))throw new Error('Cargo CG must lie within the unit height.');
