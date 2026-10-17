@@ -49,5 +49,5 @@ test('loading completion leads to inspection and plans are outside the sequence'
  assert.deepEqual(nextLoadingStep('weights'),{page:'view3d',label:'Continue to 3D inspection'});
  assert.equal(nextLoadingStep('plans'),undefined);
  assert.equal(nextLoadingStep('ballast').section,'weights');
- assert.equal(nextLoadingStep('tanks').section,'capacity');
+ assert.equal(nextLoadingStep('tanks').section,'layout');
 });

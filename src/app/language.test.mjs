@@ -26,7 +26,7 @@ test('dynamic messages retain exact values and variable names',()=>{
 test('all navigation labels render in both languages',()=>{
  const en=render(createElement(TabBar,{activeTab:'loading',onChange:()=>{}}),'en');
  const ro=render(createElement(TabBar,{activeTab:'loading',onChange:()=>{}}),'ro');
- assert.equal((ro.match(/<button/g)||[]).length,4);assert.match(en,/Overview/);assert.match(ro,/Privire de ansamblu/);assert.match(en,/Loading/);assert.match(ro,/Încărcare/);assert.match(ro,/Simularea ruliului/);
+ assert.equal((ro.match(/<button/g)||[]).length,5);assert.match(en,/Overview/);assert.match(ro,/Privire de ansamblu/);assert.match(en,/Loading/);assert.match(ro,/Încărcare/);assert.match(ro,/Simularea ruliului/);
 });
 test('theory retains sections, equations and action buttons after translation',()=>{
  const element=createElement(Theory,{ship:{manifest,baseUrl:'/'},onTabChange:()=>{}});
@@ -48,7 +48,7 @@ test('saved Romanian selection and storage failure both render safely',()=>{
 
 test('assessment navigation keeps the trim route in its primary group',()=>{
  const html=render(createElement(TabBar,{activeTab:'trim',onChange:()=>{}}),'en');
- assert.match(html,/<button aria-current="page">Assessment<\/button>/);
+ assert.match(html,/<button aria-current="page">Assess<\/button>/);
  assert.equal((html.match(/aria-current="page"/g)||[]).length,1);
 });
 test('supporting routes remain available in the tool selector',()=>{
@@ -60,7 +60,7 @@ test('supporting routes remain available in the tool selector',()=>{
 test('portrait workspace selector keeps trim under Assessment',()=>{
  const html=render(createElement(TabBar,{activeTab:'trim',onChange:()=>{}}),'en');
  assert.match(html,/class="mobile-workspace-nav"/);
- assert.match(html,/<option value="stability" selected="">Assessment<\/option>/);
+ assert.match(html,/<option value="stability" selected="">Assess<\/option>/);
  for(const id of ['home','loading','view3d','stability','hydrostatics','roll','validation','theory'])assert.ok(html.includes(`value="${id}"`));
 });
 test('portrait condition summary supports incomplete values and translated disclosure',async()=>{

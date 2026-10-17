@@ -542,3 +542,14 @@ main{max-width:1600px;padding:18px 3vw}.page-heading{margin-bottom:18px}.page-he
 
 .app-header .guide-link { color: #e2f3ff; }
 .app-header .guide-link:hover { color: white; }
+
+/* Condition entry: one choice before exposing the relevant controls. */
+.condition-entry-actions{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.condition-entry-actions button{padding:12px 16px}
+.condition-entry-actions button[aria-pressed="true"]{background:#155d77;color:white;border-color:#155d77}
+.workspace-utilities>.shared-condition-drawer:first-child>summary{font-weight:700}
+@media(max-width:600px){.condition-entry-actions{display:grid;grid-template-columns:1fr}.condition-entry-actions button{width:100%}}
+
+.active-context{position:sticky;top:0;z-index:30;background:#eaf4f6;border:1px solid #b2ced4;border-left:4px solid #17647b;border-radius:6px;padding:10px 14px;display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px;font-size:.85rem}
+.active-context>div{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.active-context[data-study="true"]{background:#fff4df;border-color:#bd8f35}.active-context strong{display:block}.cargo-task-nav{font-size:.9rem}.assessment-graph{border-top:1px solid #d2dce5;padding:16px 0}.assessment-graph>summary{font-size:1.1rem;font-weight:650;cursor:pointer}.scene-model-controls{position:relative}.scene-model-controls>label{padding:8px 0}
+@media(max-width:600px){.active-context{flex-direction:column;align-items:stretch;padding:6px 10px;font-size:.75rem}.active-context>div{gap:6px}.active-context span{overflow-wrap:anywhere}}

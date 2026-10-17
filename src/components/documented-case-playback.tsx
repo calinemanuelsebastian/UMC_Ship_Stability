@@ -1,4 +1,4 @@
-import {useEffect,useMemo,useState} from 'react';
+import {useEffect,useMemo,useRef,useState} from 'react';
 import type {ShipModelPackage} from '../core/domain/ship-model';
 import {useLanguage} from '../app/language-context';
 import {useReference} from '../app/reference-context';
@@ -8,6 +8,8 @@ import {Ship3DCanvas} from './ship-3d-canvas';
 const colors=['#7651ad','#177b91','#bd6b2e','#456db4','#7d6d25','#914a67'];
 export function DocumentedCasePlayback({ship,onBack}:{ship:ShipModelPackage;onBack:()=>void}){
  const {t,language}=useLanguage();const ref=useReference();
+ const heading=useRef<HTMLHeadingElement>(null);
+
  const [loaded,setLoaded]=useState<{library?:StudyLibrary;error?:string}>({});const [retry,setRetry]=useState(0);
  const [id,setId]=useState('004-269'),[family,setFamily]=useState(''),[search,setSearch]=useState('');
  const [step,setStep]=useState(0),[playing,setPlaying]=useState(false),[selected,setSelected]=useState(''),[showG,setShowG]=useState(false);
@@ -17,6 +19,8 @@ export function DocumentedCasePlayback({ship,onBack}:{ship:ShipModelPackage;onBa
  const [settingsTarget,setSettingsTarget]=useState<HTMLDivElement|null>(null);
  useEffect(()=>{let active=true;setLoaded({});loadStudyLibrary(ship).then(library=>{if(active)setLoaded({library});},e=>{if(active)setLoaded({error:String(e)});});return()=>{active=false;};},[ship,retry]);
  const library=loaded.library;
+ // Repeat after the asynchronous case content gives the page its full height.
+ useEffect(()=>{heading.current?.focus({preventScroll:true});heading.current?.scrollIntoView({block:'start'});},[library]);
  const c=library?.cases.find(c=>c.id===id)??library?.cases[0];
  useEffect(()=>{setStep(0);setPlaying(false);setSelected('');setCategory('');},[c?.id]);
  useEffect(()=>{
@@ -44,9 +48,9 @@ export function DocumentedCasePlayback({ship,onBack}:{ship:ShipModelPackage;onBa
  const selectedRow=c?.items.find(r=>r.id===selected);
  const filtered=library?.cases.filter(c=>(!family||c.family===family)&&`${c.name} ${c.source} ${c.id}`.toLowerCase().includes(search.toLowerCase()))??[];
  const choose=(next:string)=>{setId(next);setStep(0);setPlaying(false);setSelected('');};
- return <section className="documented-study" aria-label={t('Documented-case study')}>
- <div className="scene-toolbar"><h2>{t('Documented-case study')}</h2><button onClick={onBack}>{t('Return to current condition')}</button></div>
- <p className="scene-model-summary"><strong>{t('Source case — separate from your current loading')}</strong><br/>{t('Playback never changes your cargo plan, tanks or assessment. Published weights and attitude samples are retained, including source rounding.')}</p>
+ return <section className="documented-study" aria-label={t('Documented simulation')}>
+ <div className="scene-toolbar"><h2 ref={heading} tabIndex={-1}>{t('Documented simulation')}</h2><button onClick={onBack}>{t('Return to current condition')}</button></div>
+ <p className="scene-model-summary"><strong>{t('READ-ONLY DOCUMENTED PLAYBACK — active condition unchanged')}</strong><br/>{t('Playback never changes your cargo plan, tanks or assessment. Published weights and attitude samples are retained, including source rounding.')}</p>
  {loaded.error?<p role="alert">{loaded.error} <button onClick={()=>setRetry(n=>n+1)}>{t('Retry')}</button></p>:!c?<p role="status">{t('Loading documented cases…')}</p>:<>
  <div className="study-picker"><label>{t('Find study case')}<input type="search" value={search} onChange={e=>setSearch(e.target.value)}/></label><label>{t('Study group')}<select value={family} onChange={e=>setFamily(e.target.value)}><option value="">{t('All groups')}</option>{[...new Set(library!.cases.map(c=>c.family))].map(f=><option key={f} value={f}>{t(f)}</option>)}</select></label><label>{t('Documented condition')}<select value={filtered.some(x=>x.id===c.id)?c.id:''} onChange={e=>choose(e.target.value)}>{!filtered.some(x=>x.id===c.id)&&<option value="">{t('Choose a condition')}</option>}{filtered.map(x=><option key={x.id} value={x.id}>{x.name} · {x.source.slice(0,3)} p{x.trajectoryPage}</option>)}</select></label></div>
  {!filtered.length&&<p role="status">{t('No matching study cases. The current study remains displayed.')}</p>}

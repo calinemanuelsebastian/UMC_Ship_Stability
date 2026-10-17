@@ -1,8 +1,8 @@
 import {GuideLink} from '../app/user-guide';
 import { useLanguage } from '../app/language-context';
 import { tabs, type TabId } from '../app/tabs';
-const primary = [ ['home', 'Overview'], ['loading', 'Loading'], ['view3d', '3D inspection'], ['stability', 'Assessment'] ] as const;
-const groups = [{label:'Calculation tools', ids:['hydrostatics','roll']}, {label:'Learning', ids:['theory','validation']}];
+const primary = [ ['home', 'Overview'], ['loading', 'Loading'], ['view3d', 'Inspect'], ['stability', 'Assess'], ['theory', 'Learn'] ] as const;
+const groups = [{label:'Advanced tools', ids:['hydrostatics','roll','validation']}];
 const help = {hydrostatics:'hydrostatics',roll:'roll',validation:'validation',theory:'theory',stability:'assessment',trim:'assessment'} as const;
 export function TabBar({ activeTab, onChange }: { activeTab: TabId; onChange: (id: TabId) => void }) {
   const { t } = useLanguage();

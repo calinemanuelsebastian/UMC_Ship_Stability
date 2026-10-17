@@ -10,6 +10,6 @@ export function onboardTankCatalog(ship:ShipModelPackage,catalog:TankCatalog,sco
 /** Saving is a utility, not a required loading stage. */
 export function nextLoadingStep(section:string){
  const index=loadingSteps.findIndex(([id])=>id===(section==='tanks'?'onboard':section));
- const next=loadingSteps[index+1];
+ const next=section==='onboard'||section==='tanks'?loadingSteps.find(([id])=>id==='layout'):loadingSteps[index+1];
  return section==='weights'?{page:'view3d' as const,label:'Continue to 3D inspection'}:index>=0&&next?{page:'loading' as const,section:next[0],label:next[1]}:undefined;
 }
