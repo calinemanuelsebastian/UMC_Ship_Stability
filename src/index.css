@@ -462,3 +462,30 @@ main{max-width:1600px;padding:18px 3vw}.page-heading{margin-bottom:18px}.page-he
 .capacity-panel .curve-inputs { align-items:end; }
 .capacity-panel .curve-inputs > .field { margin-bottom:8px; }
 .capacity-panel .curve-inputs > .field > input { height:44px; box-sizing:border-box; }
+
+/* Keep navigation with the drawing, including narrow/touch layouts. */
+.planner-navigation{display:flex;align-items:center;flex-wrap:wrap;gap:6px;position:sticky;top:0;z-index:5;background:#fff;padding:8px 0;border-bottom:1px solid #d7e1e6;margin-bottom:8px}
+.planner-navigation button{min-height:44px}
+.planner-navigation button[aria-pressed="true"]{background:#235669;color:#fff}
+.planner-navigation span{font-size:.8rem;color:#536a7c}
+
+.cargo-pointer-status{position:absolute;bottom:8px;left:8px;right:8px;margin:0;pointer-events:none;color:#153e50;background:#ffffffeb;border-radius:5px;padding:6px 10px;font-size:.85rem;z-index:2}
+.cargo-pointer-status:empty{display:none}
+
+/* Reference help has a quiet visual treatment; working tools retain their buttons. */
+.workspace-help {display:flex;gap:1rem;flex-wrap:wrap;padding:.6rem 0;font-size:.875rem;}
+.guide-link {font-size:.875rem;text-underline-offset:.2em;color:var(--muted,#405f6b);}
+.workspace-library {border-top:1px solid #d3dfe4;margin-top:1rem;padding-top:.75rem;}
+.guide-layout {display:grid;grid-template-columns:minmax(12rem,17rem) minmax(0,1fr);gap:2rem;align-items:start;}
+.guide-layout nav {display:flex;flex-direction:column;gap:.3rem;}
+.guide-layout nav a {padding:.5rem .7rem;border-radius:.3rem;}
+.guide-layout [aria-current="page"] {font-weight:700;color:#123f50;}
+.guide-layout article {max-width:48rem;line-height:1.8;}
+.guide-layout h2:focus {outline:2px solid #39849b;outline-offset:4px;}
+@media(max-width:700px){.guide-layout{grid-template-columns:1fr;gap:1rem}.guide-layout nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));font-size:.85rem}.guide-layout article{min-width:0}.tab-bar>.guide-link{margin-left:auto;padding:.5rem}.header-controls>.guide-link{display:none}}
+.guide-topic-select {display:none;}
+@media(max-width:700px){.guide-topic-select{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem}.guide-topic-select select{width:100%;min-width:0}.guide-layout nav{display:none}}
+/* Keep edit recovery next to the viewport's interaction mode at every breakpoint. */
+.planner-navigation {scroll-margin-top:12px;}
+.planner-navigation .navigation-hint {flex-basis:100%;}
+@media(max-width:700px){.planner-navigation{padding:6px 0;gap:4px}.planner-navigation button{flex:1 0 auto;min-height:44px;padding:8px}.planner-navigation .navigation-hint{display:none}}

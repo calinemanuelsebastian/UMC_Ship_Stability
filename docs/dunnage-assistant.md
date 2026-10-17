@@ -45,3 +45,19 @@ Local computation benchmark: 300 cargo units in a 20 × 15 grid, 0.5 m gaps, ope
 Add support offers Fill gaps automatically, Place individual pieces, and Support stacked cargo. Only the active workflow is shown. Selecting cargo in the drawing retains the support workflow. Automatic filling keeps material, maximum gap, scope and the mass estimate visible; member dimensions and detailed guidance are expandable. Manual fitting to selected edges is an advanced section of Fill gaps. Stacking separates interlayer pieces from an independent rack; rack fields identify post width and platform thickness, and no misleading unfitted rack mass is displayed.
 
 Automatic open frames are offered only for timber presets. Other material density presets remain available for solid geometry and manual pieces; these presets do not constitute material-specific securing models. No arbitrary safety factor is applied: a margin must belong to a defined load/capacity calculation and applicable design method, which remains future work.
+
+## Shape-aware support workflow (local implementation, October 2026)
+
+Add support → Automatic supports now separates three purposes:
+
+- **Spacers between flat faces:** the existing facing-gap and documented-boundary workflow. Curved side surfaces are excluded with an explicit explanation; enclosing boxes are not treated as physical bearing faces.
+- **Fitted separators above cargo:** one separator per eligible cargo top in scope. Boxes receive rectangular separators; upright cylinders receive elliptical/circular caps. Volume and mass use the actual cap area (πLW/4), rather than its rectangular envelope. Unknown stackability, missing top-load limits, overload, occupied contact, curved crowns and protected cargo produce diagnostics. Separators do not bypass cargo load limits.
+- **Independent racks around cargo:** one five-member floor-supported rack per unit, including horizontal rolls and ellipsoids. Clearance, post width, platform thickness and timber preset are editable. Existing geometry, headroom and placement constraints are checked atomically for each rack. A failed rack contributes no posts or mass. These racks do not restrain the cargo inside, and their structural capacity remains unknown; they do not automatically copy another cargo layer.
+
+No selection scopes proposals to all cargo; a selection scopes proposals to those cargo units. Proposals run in the cancellable worker, use a spatial index for nearby obstructions, and are applied only against the unchanged condition. Repeating the operation does not duplicate existing pieces. Every committed member contributes mass and CG. Undo/Redo applies to the whole change.
+
+For a single separator, use Support stacked cargo → Separate cargo layers → Fit separator to the actual top face. Independent racks around a whole selection remain available in the manual stacking workflow. Removal scoped to a cargo unit now also finds touching separators above/below it; loaded supports cannot be removed. Racks stand clear of cargo: select their members or clear selection to remove dunnage across the plan.
+
+These are geometric support proposals, not structural designs. Fitted curved cradles, wedges and concave contact surfaces remain unimplemented. Material density is not a strength rating. Contact polygons are approximated as described in cargo-shapes.md.
+
+Verification: fitted cap mass/contact and parsing; rotation/elevated layers; selection scope; duplicate prevention; rejected curved crowns; unknown, non-stackable and overloaded cargo; independent rack geometry; atomic obstruction failure; protected cargo; cap removal and loaded-support protection. Browser rehearsal verified rack preview/apply and condition mass, followed by Undo/Redo.

@@ -1,3 +1,4 @@
+import {GuideLink} from '../app/user-guide';
 import {referencePreview} from '../visualization/reference-preview';
 import {DocumentedCasePlayback} from '../components/documented-case-playback';
 import {WeightInspectionList} from '../components/weight-inspection-list';
@@ -93,7 +94,7 @@ export default function Ship3DView({ initialStudy=false,onStudyClosed,tweenDeck,
   const previewOnly=!data;
   const fmt = (value: number | undefined) => value === undefined ? '—' : new Intl.NumberFormat(language, { maximumFractionDigits: 4 }).format(Math.abs(value)<0.00005?0:value);
   if(study)return <DocumentedCasePlayback ship={ship} onBack={()=>{setStudy(false);onStudyClosed?.();}}/>;
-  return <><div className="page-heading"><p className="eyebrow">{t('UMC · Spatial learning')}</p><h1>{t('3D View')}</h1></div>
+  return <><div className="page-heading"><p className="eyebrow">{t('UMC · Spatial learning')}</p><h1>{t('3D View')}</h1><GuideLink topic="view3d"/></div>
 
     <div className="scene-toolbar"><label>{t('Simulation mode')}<select aria-label={t('Simulation mode')} value={isCalculatedMode(mode)?'calculated':'exploration'} onChange={e=>{setMode(e.target.value==='calculated'?defaultCalculatedMode(ship):'teaching');setInspectorTab(e.target.value==='calculated'?'condition':'inspect');setInspectorOpen(true);}}><option value="calculated">{t('Calculated condition')}</option><option value="exploration">{t('Teaching / exploration')}</option></select></label>
     <label>{t(isCalculatedMode(mode)?'Calculation model':'Displayed condition')}<select aria-label={t(isCalculatedMode(mode)?'Calculation model':'Displayed condition')} value={mode} onChange={e=>{setMode(e.target.value as AttitudeMode);setInspectorTab(e.target.value==='teaching'?'inspect':'condition');}}>{isCalculatedMode(mode)?<><option value="equilibrium">{t('Coupled heel, trim and immersion')}</option><option disabled={!hasTrimView(ship)} value="trim">{t('Initial trim and draughts')}</option><option disabled={!ship.manifest.resources.some(r=>['stability.cross-curves','stability.constant-lcb-cross-curves'].includes(r.kind))||!!geometry.hull?.schematic&&!geometry.hull.model} value="heel">{t('Heel from stability curves')}</option></>:<><option value="teaching">{t('Imposed heel and trim')}</option><option value="upright">{t('Upright reference')}</option></>}</select></label>

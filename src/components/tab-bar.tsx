@@ -1,3 +1,4 @@
+import {GuideLink} from '../app/user-guide';
 import { useLanguage } from '../app/language-context';
 import { tabs, type TabId } from '../app/tabs';
 const primary = [ ['home', 'Overview'], ['loading', 'Loading'], ['view3d', '3D inspection'], ['stability', 'Assessment'] ] as const;
@@ -10,5 +11,5 @@ export function TabBar({ activeTab, onChange }: { activeTab: TabId; onChange: (i
     <label className="support-tools"><span className="visually-hidden">{t('Supporting tools')}</span><select aria-label={t('Supporting tools')} value={tools.some(tab=>tab.id===activeTab)?activeTab:''} onChange={event=>onChange(event.target.value as TabId)}>
       <option value="" disabled>{t('Supporting tools')}</option>{tools.map(tab=><option key={tab.id} value={tab.id}>{t(tab.label)}</option>)}
     </select></label>
-  </nav>;
+    {!['home','loading','view3d'].includes(activeTab)&&<GuideLink topic="assessment"/>}</nav>;
 }

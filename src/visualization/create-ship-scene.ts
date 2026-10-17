@@ -1,3 +1,5 @@
+import {unitCargoGeometry} from './cargo-geometry';
+import {worldShape} from '../app/cargo-shape';
 import {CargoMarkingTextures} from './cargo-marking-textures';
 import {addCargoOutline,disposeCargoOutline} from './cargo-outline';
 import { setSurfaceOpacity } from './material-opacity';
@@ -125,7 +127,7 @@ export function createShipScene(host: HTMLElement, hull: BoxHull, onSelect: () =
     renderer.render(scene, camera);
   };
   const modelLayer=hull.model?gltfLayer(body,hull,render,onError):undefined;
-  const cargoMeshes=new Map<string,THREE.Mesh<THREE.BoxGeometry,THREE.MeshPhongMaterial>>();
+  const cargoMeshes=new Map<string,THREE.Mesh<THREE.BufferGeometry,THREE.MeshPhongMaterial>>();
   controls.addEventListener('change', render);
   const resize = () => { if (disposed) return; const width = host.clientWidth, height = host.clientHeight; if (!width || !height) return; renderer.setSize(width, height); camera.aspect = width / height; camera.updateProjectionMatrix(); render(); };
   const observer = new ResizeObserver(resize); observer.observe(host);
@@ -181,8 +183,8 @@ export function createShipScene(host: HTMLElement, hull: BoxHull, onSelect: () =
       art.begin();
       for(const w of options.weights)if(w.footprint&&w.cargoPoint){
         let cube=cargoMeshes.get(w.id);
-        if(!cube){cube=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshPhongMaterial({color:'#527cbd'}));cube.userData.weightId=w.id;addCargoOutline(cube);body.add(cube);cargoMeshes.set(w.id,cube);}
-        const f=w.footprint;const map=art.get(w.name??w.label,f.markings,f.stackability,render);if(cube.material.map!==map){cube.material.map=map;cube.material.needsUpdate=true;}cube.scale.set(f.rotation===0?f.length:f.width,f.height,f.rotation===0?f.width:f.length);cube.position.set(w.cargoPoint.x,w.cargoPoint.y,w.cargoPoint.z);cube.visible=options.cargo;cube.material.color.set(w.id===options.selectedWeight?'#bf1674':f.kind==='dunnage'?'#a66b30':cube.material.map?'#ffffff':'#527cbd');setSurfaceOpacity(cube.material,1-options.cargoTransparency/100);cube.visible=options.cargo&&cube.material.opacity>0;for(const child of cube.children)if(child.userData.cargoOutline)(child as THREE.LineSegments<THREE.EdgesGeometry,THREE.LineBasicMaterial>).material.opacity=cube.material.opacity;
+        if(!cube){cube=new THREE.Mesh(unitCargoGeometry(worldShape(w.footprint)),new THREE.MeshPhongMaterial({color:'#527cbd'}));cube.userData.weightId=w.id;addCargoOutline(cube);body.add(cube);cargoMeshes.set(w.id,cube);}
+        const f=w.footprint;if(cube.userData.shape!==worldShape(f)){disposeCargoOutline(cube);cube.geometry.dispose();cube.geometry=unitCargoGeometry(worldShape(f));addCargoOutline(cube);cube.userData.shape=worldShape(f);}const map=art.get(w.name??w.label,f.markings,f.stackability,render);if(cube.material.map!==map){cube.material.map=map;cube.material.needsUpdate=true;}cube.scale.set(f.rotation===0?f.length:f.width,f.height,f.rotation===0?f.width:f.length);cube.position.set(w.cargoPoint.x,w.cargoPoint.y,w.cargoPoint.z);cube.visible=options.cargo;cube.material.color.set(w.id===options.selectedWeight?'#bf1674':f.kind==='dunnage'?'#a66b30':cube.material.map?'#ffffff':'#527cbd');setSurfaceOpacity(cube.material,1-options.cargoTransparency/100);cube.visible=options.cargo&&cube.material.opacity>0;for(const child of cube.children)if(child.userData.cargoOutline)(child as THREE.LineSegments<THREE.EdgesGeometry,THREE.LineBasicMaterial>).material.opacity=cube.material.opacity;
       }
 
       art.end();

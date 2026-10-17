@@ -1,3 +1,5 @@
+import {fittedSeparator} from './fitted-support';
+import {supportFrame,supportFrameGeometry} from './support-frame';
 import {cargoBounds} from './cargo-layout';
 import {CargoNeighbours} from './cargo-neighbours';
 import {dunnageMembers} from './dunnage-arrangement';
@@ -16,10 +18,27 @@ export function autoDunnageBatch({cargo,selection,areas,settings,maxGap,walls,id
  if(cargo.length>40000)throw new Error('This plan exceeds the 40,000-item limit, including support members.');
  const units=cargo.filter(w=>w.footprint&&w.footprint.kind!=='dunnage');
  const selected=new Set(selection),targeted=selection.length?units.filter(w=>selected.has(w.id)):units;
+ if(settings.supportMode==='separators'||settings.supportMode==='racks'){
+  const parts:WeightDraft[]=[],diagnostics:DunnageDiagnostic[]=[],affectedIds:string[]=[];
+  const index=new CargoNeighbours(cargo);
+  for(const w of targeted){try{
+   if(w.footprint!.keepGapsClear||w.footprint!.markings?.hazard||w.footprint!.markings?.unNumber)throw new Error('Protected or dangerous cargo requires manual support review.');
+   const area=areas.find(a=>a.id===w.footprint!.areaId);if(!area)throw new Error('No planning surface is available for this unit.');
+   let region=cargoBounds(w)!;
+   if(settings.supportMode==='racks'){const g=supportFrameGeometry([w],area,settings);region={xMin:g.x0,xMax:g.x1,yMin:g.y0,yMax:g.y1};}
+   const near=index.query(region);
+   const next=settings.supportMode==='separators'?[fittedSeparator(w,area,near,settings,id)]:supportFrame([w],area,near,{...settings,frameCopyCargo:false},id);
+   if(cargo.length+parts.length+next.length>40000)throw new RangeError('This plan exceeds the 40,000-item limit, including support members.');
+   parts.push(...next);for(const part of next)index.add(part);affectedIds.push(w.id);
+  }catch(error){if(error instanceof RangeError)throw error;diagnostics.push({ids:[w.id],areaId:w.footprint!.areaId,reason:(error as Error).message});}}
+  const massTonnes=parts.reduce((sum,w)=>sum+Number(w.massTonnes),0);
+  const cg=massTonnes?{lcg:parts.reduce((s,w)=>s+Number(w.massTonnes)*Number(w.lcg),0)/massTonnes,tcg:parts.reduce((s,w)=>s+Number(w.massTonnes)*Number(w.tcg),0)/massTonnes,vcg:parts.reduce((s,w)=>s+Number(w.massTonnes)*Number(w.vcg),0)/massTonnes}:undefined;
+  return {parts,diagnostics,affectedIds,massTonnes,solidMassTonnes:massTonnes,cg,skipped:diagnostics.length,reasons:[...new Set(diagnostics.map(d=>d.reason))],excluded:diagnostics.length,targetCount:targeted.length,eligibleCount:targeted.length};
+ }
  const eligible=units.filter(permitsAutoDunnage),targets=targeted.filter(permitsAutoDunnage),targetIds=new Set(targets.map(w=>w.id));
  const diagnostics:DunnageDiagnostic[]=[];
  const candidates:{fit:DunnageFit;area:CargoArea;ids:string[];ceiling?:number}[]=[];
- for(const w of targeted.filter(w=>!permitsAutoDunnage(w)))diagnostics.push({ids:[w.id],areaId:w.footprint?.areaId,reason:w.footprint?.keepGapsClear?'Protected clearance: surrounding gaps remain open.':'Ventilation or specialist cargo: manual support review required.'});
+ for(const w of targeted.filter(w=>!permitsAutoDunnage(w)))diagnostics.push({ids:[w.id],areaId:w.footprint?.areaId,reason:w.footprint?.shape&&w.footprint.shape!=='box'?'Curved side contact needs a reviewed cradle or restraint. Use fitted separators only on flat top faces, or an independent rack.':w.footprint?.keepGapsClear?'Protected clearance: surrounding gaps remain open.':'Ventilation or specialist cargo: manual support review required.'});
  const touched=new Set<string>();
 
  const surface=(w:WeightDraft)=>areas.find(a=>a.id===w.footprint?.areaId);

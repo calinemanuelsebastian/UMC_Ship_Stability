@@ -39,7 +39,7 @@ test('capacity inputs survive plan export/import; old plans remain supported',()
 
 test('planner handoff preserves one-unit mass and explicit surface without changing settings',()=>{
  const proposal={...settings,areaId:'hold',quantity:50};const before=structuredClone(proposal);
- assert.deepEqual(capacityCargoTemplate(proposal,[area]),{area,mass:2,length:2,width:1,height:1,quantity:50});
+ const {definition,...handoff}=capacityCargoTemplate(proposal,[area]);assert.deepEqual(handoff,{area,mass:2,length:2,width:1,height:1,quantity:50});assert.equal(definition.family,'boxed');assert.equal(definition.mass.value,2);
  assert.deepEqual(proposal,before);
  assert.equal(capacityCargoTemplate({...proposal,length:undefined},[area]),undefined);
  assert.equal(capacityCargoTemplate({...proposal,areaId:'removed'},[area]),undefined);
@@ -79,4 +79,30 @@ test('Full, Down and Full and Down use continuous capacities, not rounded packag
  assert.equal(stowageComparison(-1,200,2).maximumCargoMass,undefined);
  assert.equal(stowageComparison(100,undefined,2).criticalStowageFactor,undefined);
  assert.equal(stowageComparison(100,200,undefined).loadingOutcome,'Incomplete');
+});
+
+test('shared cargo definition survives capacity editing, JSON persistence and planner handoff',async()=>{
+ const {capacitySettingsFromCargo}=await server.ssrLoadModule('/src/app/cargo-capacity.ts');
+ const {cargoTemplateFromWeight}=await server.ssrLoadModule('/src/app/cargo-templates.ts');
+ const definition={id:'roll',name:'Paper rolls',family:'reel',footprint:{length:2,width:1.5,height:1,rotation:90,deckZ:0,dunnageProfile:'rolls',stackability:'unstackable'},mass:{mode:'net-plus-tare',value:1.8,tare:.2},cgAboveBase:.4,stowageFactor:1.7,contact:'Cradle required',source:'Supplier packing list'};
+ const proposal=capacitySettingsFromCargo({...settings,areaId:'hold'},definition);
+ assert.equal(proposal.unitMass,2);assert.equal(proposal.method,'sf');assert.equal(proposal.quantity,undefined);
+ const restored=parseCapacitySettings(JSON.parse(JSON.stringify({...proposal,quantity:12})));
+ const handoff=capacityCargoTemplate(restored,[area]);
+ assert.equal(handoff.definition.family,'reel');assert.equal(handoff.definition.name,'Paper rolls');assert.equal(handoff.definition.footprint.rotation,90);
+ assert.equal(handoff.definition.footprint.stackability,'unstackable');assert.equal(handoff.definition.footprint.dunnageProfile,'rolls');
+ assert.deepEqual(handoff.definition.mass,definition.mass);assert.equal(handoff.definition.contact,definition.contact);assert.equal(handoff.definition.cgAboveBase,.4);assert.equal(handoff.definition.stowageFactor,1.7);
+ const edited=capacityCargoTemplate({...restored,unitMass:3,length:2.5},[area]);assert.equal(edited.definition.mass.mode,'gross');assert.equal(edited.definition.mass.value,3);assert.equal(edited.definition.footprint.length,2.5);assert.equal(edited.definition.family,'reel');
+ assert.equal(definition.mass.value,1.8);assert.equal(definition.footprint.length,2);
+ const placed={...weight('roll-unit',2),name:'Paper rolls',vcg:'.4',footprint:{...handoff.definition.footprint,deckZ:0,areaId:'hold'}};
+ const reused=cargoTemplateFromWeight(placed);assert.equal(reused.family,'reel');assert.equal(reused.stowageFactor,1.7);assert.equal(reused.cgAboveBase,.4);assert.equal(reused.footprint.areaId,undefined);
+ assert.equal(cargoTemplateFromWeight(weight('support',1,'cargo','dunnage')),undefined);
+ assert.equal(capacityCargoTemplate({...restored,height:.2},[area]),undefined);
+ assert.throws(()=>parseCapacitySettings({...restored,cargoFamily:'invalid'}));
+ assert.throws(()=>parseCapacitySettings({...restored,cargoDefinition:{...definition,stowageFactor:-1}}));
+});
+
+test('custom cargo families hand off without reverting to boxed cargo',async()=>{
+ const {cargoFamilies}=await server.ssrLoadModule('/src/app/cargo-templates.ts');
+ for(const [family,,profile] of cargoFamilies){const value=capacityCargoTemplate({...settings,areaId:'hold',cargoFamily:family,cargoName:'Custom package'},[area]);assert.equal(value.definition.family,family);assert.equal(value.definition.name,'Custom package');assert.equal(value.definition.footprint.dunnageProfile,profile);}
 });

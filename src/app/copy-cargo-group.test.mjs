@@ -20,3 +20,22 @@ test('preserves horizontal spacing and refuses overlaps or unsupported incomplet
  assert.throws(()=>pasteCargoGroup([a],{...area,clearHeight:.5},[],ids,true),/No free/);
  assert.throws(()=>pasteCargoGroup([a,{...b,footprint:{...b.footprint,deckZ:7}}],area,[],ids,true),/one loading/);
 });
+
+test('pointer paste preview and commit agree, repeat independently, and reject occupied positions',()=>{
+ const source=[box('a',1),{...box('b',1),lcg:'6'}];
+ const snapping={grid:.1,cargo:{gap:0,range:.3}};
+ const normalize=items=>items.map(({id:_id,...w})=>w);
+ const original=JSON.stringify(source);
+ const point={x:8,y:3};
+ const preview=pasteCargoGroup(source,area,[],()=>`preview-${n++}`,false,0,point,snapping);
+ const first=pasteCargoGroup(source,area,[],ids,false,0,point,snapping);
+ assert.deepEqual(normalize(first),normalize(preview));
+ const before=JSON.stringify(first);
+ assert.throws(()=>pasteCargoGroup(source,area,first,ids,false,0,point,snapping),/intersect|overlap/i);
+ assert.equal(JSON.stringify(first),before);
+ const second=pasteCargoGroup(source,area,first,ids,false,0,{x:8,y:6},snapping);
+ assert.equal(new Set([...first,...second].map(w=>w.id)).size,4);
+ assert.equal(JSON.stringify(source),original);
+ assert.equal(second.reduce((sum,w)=>sum+Number(w.massTonnes),0),4);
+ assert.equal(Number(second[1].lcg)-Number(second[0].lcg),3);
+});

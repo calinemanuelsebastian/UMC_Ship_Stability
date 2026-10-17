@@ -1,15 +1,17 @@
+import {cargoShapes,type CargoShape} from './cargo-shape';
 import type {WeightDraft} from './loading-state';
 import {parseFootprint,type CargoArea} from './cargo-layout';
 import {cargoBottom,placeSupportedCargo} from './cargo-placement';
 export function sameCargoType(a:WeightDraft,b:WeightDraft){
  const x=a.footprint,y=b.footprint;
- return !!x&&!!y&&x.catalogue?.family===y.catalogue?.family&&x.kind!=='dunnage'&&y.kind!=='dunnage'&&a.name.trim().toLowerCase()===b.name.trim().toLowerCase()&&x.length===y.length&&x.width===y.width&&x.height===y.height;
+ return !!x&&!!y&&(x.shape??'box')===(y.shape??'box')&&x.catalogue?.family===y.catalogue?.family&&x.kind!=='dunnage'&&y.kind!=='dunnage'&&a.name.trim().toLowerCase()===b.name.trim().toLowerCase()&&x.length===y.length&&x.width===y.width&&x.height===y.height;
 }
-export type CargoBatchPatch={name?:string;massTonnes?:number;length?:number;width?:number;height?:number;stackability?:'unknown'|'stackable'|'unstackable';maxTopLoadTonnes?:number|null};
+export type CargoBatchPatch={shape?:CargoShape;name?:string;massTonnes?:number;length?:number;width?:number;height?:number;stackability?:'unknown'|'stackable'|'unstackable';maxTopLoadTonnes?:number|null};
 export function editCargoBatch(weights:WeightDraft[],ids:string[],patch:CargoBatchPatch,areas:CargoArea[]){
  if(!ids.length)throw new Error('Select cargo with dimensions first.');
  for(const [key,value] of Object.entries(patch)){
-  if(key==='stackability'){if(!['unknown','stackable','unstackable'].includes(String(value)))throw new Error('Invalid stackability setting.');}
+  if(key==='shape'){if(!cargoShapes.includes(value as CargoShape))throw new Error('Invalid cargo shape.');}
+  else if(key==='stackability'){if(!['unknown','stackable','unstackable'].includes(String(value)))throw new Error('Invalid stackability setting.');}
   else if(key==='maxTopLoadTonnes'){if(value!==null&&(typeof value!=='number'||!Number.isFinite(value)||value<0))throw new Error('Invalid top-load limit.');}
   else if(key==='name'?typeof value!=='string'||!value.trim():typeof value!=='number'||!Number.isFinite(value)||value<=0)throw new Error('Enter positive values and a non-empty cargo name.');
  }
@@ -18,11 +20,11 @@ export function editCargoBatch(weights:WeightDraft[],ids:string[],patch:CargoBat
  const next=weights.map(w=>{
   if(!ids.includes(w.id))return w;
   const p=w.footprint!;
-  const footprint=parseFootprint({...p,...(patch.stackability?{stackability:patch.stackability}:{}),...('maxTopLoadTonnes' in patch?{maxTopLoadTonnes:patch.maxTopLoadTonnes??undefined}:{}),length:patch.length??p.length,width:patch.width??p.width,height:patch.height??p.height});
+  const footprint=parseFootprint({...p,...(patch.shape?{shape:patch.shape}:{}),...(patch.stackability?{stackability:patch.stackability}:{}),...('maxTopLoadTonnes' in patch?{maxTopLoadTonnes:patch.maxTopLoadTonnes??undefined}:{}),length:patch.length??p.length,width:patch.width??p.width,height:patch.height??p.height});
   if(p.catalogue?.cgDeclared&&(Number(w.vcg)-cargoBottom(w)<0||Number(w.vcg)-cargoBottom(w)>footprint.height))throw new Error('Edited height excludes the declared cargo CG.');
   return {...w,name:patch.name?.trim()??w.name,massTonnes:patch.massTonnes===undefined?w.massTonnes:String(patch.massTonnes),footprint,vcg:String(Number(w.vcg)+(p.catalogue?.cgDeclared?0:(footprint.height-p.height)/2))};
  });
- if(['length','width','height'].some(k=>k in patch)){
+ if(['shape','length','width','height'].some(k=>k in patch)){
   for(const w of next.filter(w=>w.footprint)){
    const placed=placeSupportedCargo(w,areas,next.filter(v=>v.id!==w.id),{x:Number(w.lcg),y:Number(w.tcg),z:cargoBottom(w)},true,false);
    if(Math.abs(Number(placed.lcg)-Number(w.lcg))>1e-8||Math.abs(Number(placed.tcg)-Number(w.tcg))>1e-8||Math.abs(cargoBottom(placed)-cargoBottom(w))>1e-8)throw new Error('Edited dimensions do not fit at the current cargo positions.');

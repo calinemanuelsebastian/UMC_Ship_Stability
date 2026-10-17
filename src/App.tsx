@@ -1,3 +1,4 @@
+import {UserGuide,GuideLink} from './app/user-guide';
 import {InformationFooter,InformationPageView} from './app/site-information';
 import {useInformationPage,showInformation} from './app/site-information-state';
 import {OnboardEquipment} from './components/onboard-equipment';
@@ -82,11 +83,11 @@ function App() {
     },[models]);
     const changeTab=(page:TabId)=>{if(informationPage)showInformation(null);writeNavigation({page,vessel:modelId});setActiveTab(page);};
     const changeModel=(vessel:string)=>{writeNavigation({page:activeTab,vessel});setModelId(vessel);};
-    return <><header className="app-header"><span className="brand">{t("UMC")}<span>{t(" / Ship Stability")}</span></span><span className="version">{t("Teaching simulator \u00B7 Ship stability")}</span><div className="header-controls"><div ref={setReferenceTarget}/><button onClick={()=>setLibraryOpen(v=>!v)}>{t("Ship library")}</button><LanguageSwitch /></div></header><TabBar activeTab={activeTab} onChange={changeTab}/><main hidden={!!informationPage} data-page={activeTab}>
+    return <><header className="app-header"><span className="brand">{t("UMC")}<span>{t(" / Ship Stability")}</span></span><span className="version">{t("Teaching simulator \u00B7 Ship stability")}</span><div className="header-controls"><div ref={setReferenceTarget}/><button onClick={()=>setLibraryOpen(v=>!v)}>{t("Ship library")}</button><GuideLink>{t("User guide")}</GuideLink><LanguageSwitch /></div></header><TabBar activeTab={activeTab} onChange={changeTab}/><main hidden={!!informationPage} data-page={activeTab}>
     {t(error && <p role="alert" className="error">{t(error)}</p>)}
     {libraryOpen&&<ShipLibrary records={localShips} activeId={modelId} onRefresh={refreshLibrary} onUse={changeModel} onClose={()=>setLibraryOpen(false)}/>}
     {t(modelId && <ModelWorkspace modelPicker={<SelectInput label={t("Ship model")} value={modelId} options={models.map(model => ({ value: model.id, label: model.name }))} onChange={changeModel}/>} referenceTarget={referenceTarget} key={modelId} modelId={modelId} activeTab={activeTab} onTabChange={changeTab}/>)}
-  </main>{informationPage&&<InformationPageView page={informationPage}/>}<footer><InformationFooter/>{t("UMCsShipStabilityApp \u00B7 Hydrostatics learning workspace")}</footer></>;
+  </main>{informationPage&&(informationPage==='guide'?<UserGuide/>:<InformationPageView page={informationPage}/>)}<footer><InformationFooter/>{t("UMCsShipStabilityApp \u00B7 Hydrostatics learning workspace")}</footer></>;
 }
 function ModelWorkspace({ modelPicker, modelId, activeTab, onTabChange, referenceTarget }: {
     modelPicker: ReactNode;
@@ -241,7 +242,7 @@ function Simulator({ modelPicker, ship, activeTab, onTabChange }: {
       {activeTab === 'home' && <Home onTabChange={onTabChange} onLoadingSection={section=>{writeNavigation({page:'loading',section});setLoadingSection(section);onTabChange('loading');}}/>}
       <div hidden={activeTab !== 'hydrostatics'}><HydrostaticSandbox {...shared} {...editable} waterDensity={density} draft={draft} onDraftChange={setDraft} mode={mode} onModeChange={value => { setManualMode(value); if (value === 'displacement' && manual.displacementTonnes === undefined) setManual(previous => ({ ...previous, displacementTonnes: current?.mass })); }} centres={{ lcg, tcg }}/></div>
       <div hidden={activeTab !== 'loading'}>
-        <div className="page-heading compact-heading"><h1>{t('Loading')}</h1></div>{!fromWeights&&<p role="status">{t('Manual scenario is active. Loading edits are saved but do not drive the assessment.')} <button onClick={()=>setScenario('loading')}>{t('Use weight-based loading')}</button></p>}
+        <div className="page-heading compact-heading"><h1>{t('Loading')}</h1><GuideLink topic={loadingSection==='onboard'||loadingSection==='tanks'?'onboard':loadingSection==='capacity'?'capacity':loadingSection==='layout'?'layout':loadingSection==='ballast'?'ballast':loadingSection==='plans'?'save':'assessment'}/></div>{!fromWeights&&<p role="status">{t('Manual scenario is active. Loading edits are saved but do not drive the assessment.')} <button onClick={()=>setScenario('loading')}>{t('Use weight-based loading')}</button></p>}
 
         <nav className="workspace-nav" aria-label={t('Loading sections')}>
           {loadingSteps.map(([id,label])=><button key={id} aria-current={loadingSection===id?'page':undefined} onClick={()=>{writeNavigation({page:'loading',section:id});setLoadingSection(id);}}>{t(label)}</button>)}

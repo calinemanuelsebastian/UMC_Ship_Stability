@@ -1,7 +1,8 @@
+import {flatContactPolygon,polygonArea} from './cargo-shape';
 import {CargoNeighbours} from './cargo-neighbours';
 import {cargoBounds,fitsArea,fitsFloor,layoutIssues,sameLoadingSurface,type CargoArea,type PlanRegion} from './cargo-layout';
 import {cargoOnSurface} from './cargo-surfaces';
-import {cargoBottom} from './cargo-placement';
+import {cargoBottom,horizontalContact} from './cargo-placement';
 import type {WeightDraft} from './loading-state';
 /** Exact union area of axis-aligned source regions; gaps and overlaps do not count twice. */
 export function surfaceArea(regions:PlanRegion[]) {
@@ -23,7 +24,7 @@ export function cargoLoadChecks(weights:WeightDraft[],areas:CargoArea[],storedDe
   const geometryIssues=layoutIssues(items,area);
   const bounds=new Map(items.map(w=>[w.id,cargoBounds(w)]));
   const index=new CargoNeighbours(items),byId=new Map(items.map(w=>[w.id,w]));
-  const upper=new Map(items.map(base=>[base.id,(bounds.get(base.id)?index.query(bounds.get(base.id)!):[]).filter(w=>w.id!==base.id&&bounds.get(w.id)&&bounds.get(base.id)&&sameLoadingSurface(base.footprint?.areaId,w.footprint?.areaId)&&Math.abs(cargoBottom(w)-cargoBottom(base)-base.footprint!.height)<1e-7&&overlap(bounds.get(w.id)!,bounds.get(base.id)!))]));
+  const upper=new Map(items.map(base=>[base.id,(bounds.get(base.id)?index.query(bounds.get(base.id)!):[]).filter(w=>w.id!==base.id&&bounds.get(w.id)&&bounds.get(base.id)&&sameLoadingSurface(base.footprint?.areaId,w.footprint?.areaId)&&Math.abs(cargoBottom(w)-cargoBottom(base)-base.footprint!.height)<1e-7&&horizontalContact(base,w))]));
   const supportCounts=new Map<string,number>();for(const list of upper.values())for(const w of list)supportCounts.set(w.id,(supportCounts.get(w.id)??0)+1);
   const unsupported=items.filter(w=>cargoBottom(w)>area.deckZ+1e-7&&!supportCounts.has(w.id)).map(w=>w.id);
   const ambiguous=[...supportCounts.values()].some(n=>n>1);
@@ -32,12 +33,12 @@ export function cargoLoadChecks(weights:WeightDraft[],areas:CargoArea[],storedDe
    const seen=new Set<string>();const pending=[base];
    while(pending.length){const w=pending.pop()!;if(seen.has(w.id))continue;seen.add(w.id);pending.push(...upper.get(w.id)!);}
    const carried=[...seen].reduce((s,id)=>s+(+byId.get(id)!.massTonnes),0),b=bounds.get(base.id);
-   const footprintArea=b?(b.xMax-b.xMin)*(b.yMax-b.yMin):0;
+   const footprintArea=b?polygonArea(flatContactPolygon(base)):0;
    return {id:base.id,name:base.name,carriedTonnes:invalid?undefined:carried,footprintM2:footprintArea,pressure:!invalid&&footprintArea>0?carried/footprintArea:undefined,panels:area.panels?.filter(p=>b&&overlap(b,p)).map(p=>p.id)??[],supported:!!b&&fitsFloor(area,b),sharedSupport:ambiguous};
   });
   const mass=invalid?undefined:items.reduce((s,w)=>s+(+w.massTonnes),0),average=mass===undefined?undefined:mass/size;
   const storedUnresolved=storedDecks&&!area.id?.startsWith('hatch');
-  const incomplete=invalid||geometryIssues.length>0||unsupported.length>0||storedUnresolved||unlocated.length>0||items.some(w=>!bounds.get(w.id)||!fitsArea(area,bounds.get(w.id)!));
+  const incomplete=roots.some(w=>!flatContactPolygon(w).length)||invalid||geometryIssues.length>0||unsupported.length>0||storedUnresolved||unlocated.length>0||items.some(w=>!bounds.get(w.id)||!fitsArea(area,bounds.get(w.id)!));
   const limit=area.uniformLoad?.tonnesPerM2;
   const status=average!==undefined&&limit!==undefined&&average>limit?'Average exceeds uniform limit':incomplete?'Incomplete load assessment':limit===undefined?'No documented uniform limit':'Average within limit — local checks required';
   return {id:area.id,name:area.name,mass,areaM2:size,average,limit,status,source:area.uniformLoad,contacts,unsupported,geometryIssueCount:geometryIssues.length,storedUnresolved};

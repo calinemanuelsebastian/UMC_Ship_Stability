@@ -11,7 +11,7 @@ export function createDunnage({id,area,areas,weights,support,length,width,thickn
  return support?stackCargoOn(w,support,areas,weights):placeSupportedCargo(w,[area],weights,{x:position?.x??Number(w.lcg),y:position?.y??Number(w.tcg),z:area.deckZ},false,false);
 }
 
-export type DunnagePattern=DunnageArrangement & {properties?:MaterialProperties;length:number;width:number;thickness:number;mass:number;material:string;densityKgM3:number;massMode:'calculated'|'manual';count:number;gap:number;frameClearance?:number;frameMaxTopLoadTonnes?:number;frameCopyCargo?:boolean;direction:'x'|'y'};
+export type DunnagePattern=DunnageArrangement & {supportMode?:'gaps'|'separators'|'racks';fitTop?:boolean;properties?:MaterialProperties;length:number;width:number;thickness:number;mass:number;material:string;densityKgM3:number;massMode:'calculated'|'manual';count:number;gap:number;frameClearance?:number;frameMaxTopLoadTonnes?:number;frameCopyCargo?:boolean;direction:'x'|'y'};
 /** Build the complete pattern before committing it, so a failed piece leaves no partial load. */
 export function createDunnagePattern(options:{area:CargoArea;areas:CargoArea[];weights:WeightDraft[];settings:DunnagePattern;position:{x:number;y:number};support?:WeightDraft;id:()=>string}){
  const {area,areas,weights,settings:s,position,support,id}=options;
@@ -31,6 +31,7 @@ export function createDunnagePattern(options:{area:CargoArea;areas:CargoArea[];w
 
 /** A separate rectangular spacer in the clear horizontal gap between two units. */
 export function dunnageGap(a:WeightDraft,b:WeightDraft){
+ if([a,b].some(w=>w.footprint?.shape&&w.footprint.shape!=='box'))throw new Error('Curved cargo needs a reviewed cradle or shaped support; envelope gaps do not establish contact.');
  if(!a.footprint||!b.footprint||a.footprint.kind==='dunnage'||b.footprint.kind==='dunnage'||a.footprint.areaId!==b.footprint.areaId||Math.min(cargoBottom(a)+a.footprint.height,cargoBottom(b)+b.footprint.height)<=Math.max(cargoBottom(a),cargoBottom(b))+1e-8)throw new Error('Select two cargo units on the same surface with overlapping heights.');
  const bounds=(w:WeightDraft)=>{const p=w.footprint!,l=p.rotation===0?p.length:p.width,d=p.rotation===0?p.width:p.length;return {x0:+w.lcg-l/2,x1:+w.lcg+l/2,y0:+w.tcg-d/2,y1:+w.tcg+d/2};};
  const x=bounds(a),y=bounds(b),ox0=Math.max(x.x0,y.x0),ox1=Math.min(x.x1,y.x1),oy0=Math.max(x.y0,y.y0),oy1=Math.min(x.y1,y.y1);

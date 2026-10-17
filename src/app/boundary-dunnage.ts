@@ -4,6 +4,7 @@ import type {WeightDraft} from './loading-state';
 export type DunnageFit={length:number;width:number;x:number;y:number;z:number};
 /** Exposed edges of the documented rectangular-region union; internal seams are not walls. */
 export function boundaryDunnageFits(w:WeightDraft,area:CargoArea,maxGap:number):DunnageFit[]{
+ if(w.footprint?.shape&&w.footprint.shape!=='box')return [];
  if(!Number.isFinite(maxGap)||maxGap<=0)throw new Error('Enter a positive maximum gap.');
  const b=cargoBounds(w);if(!b||w.footprint?.kind==='dunnage'||area.id?.startsWith('hatch-')||area.supportRegions||Math.abs(cargoBottom(w)-area.deckZ)>1e-8)return [];
  const regions=area.regions??[area],fits:DunnageFit[]=[],seen=new Set<string>();
@@ -25,7 +26,7 @@ export function boundaryDunnageFits(w:WeightDraft,area:CargoArea,maxGap:number):
  return fits;
 }
 /** Generic geometric spacers are the default; explicit specialist requirements stay protected. */
-export function permitsAutoDunnage(w:WeightDraft){
+export function permitsAutoDunnage(w:WeightDraft){if(w.footprint?.shape&&w.footprint.shape!=='box')return false;
  const fp=w.footprint;
  return !!fp&&!fp.keepGapsClear&&(!fp.catalogue||['boxed','crate'].includes(fp.catalogue.family))&&fp.kind!=='dunnage'&&(!fp.dunnageProfile||fp.dunnageProfile==='unspecified'||fp.dunnageProfile==='boxed')&&!fp.markings?.hazard&&!fp.markings?.unNumber;
 }

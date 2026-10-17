@@ -1,24 +1,23 @@
+import {shapeIntersects,flatContactPolygon,contactPatch,polygonCovered} from './cargo-shape';
 import {cargoNeighbours} from './cargo-neighbours';
 import {cargoBounds,fitsArea,fitsFloor,sameLoadingSurface,placeCargo,type CargoArea} from './cargo-layout';
 import type {WeightDraft} from './loading-state';
 export const cargoBottom=(w:WeightDraft)=>w.footprint?.bottomZ??w.footprint?.deckZ??0;
 export function intersectsCargo(a:WeightDraft,b:WeightDraft){
  const x=cargoBounds(a),y=cargoBounds(b);if(!x||!y||!a.footprint||!b.footprint)return false;
- return Math.min(x.xMax,y.xMax)-Math.max(x.xMin,y.xMin)>1e-8&&Math.min(x.yMax,y.yMax)-Math.max(x.yMin,y.yMin)>1e-8&&Math.min(cargoBottom(a)+a.footprint.height,cargoBottom(b)+b.footprint.height)-Math.max(cargoBottom(a),cargoBottom(b))>1e-8;
+ return Math.min(x.xMax,y.xMax)-Math.max(x.xMin,y.xMin)>1e-8&&Math.min(x.yMax,y.yMax)-Math.max(x.yMin,y.yMin)>1e-8&&Math.min(cargoBottom(a)+a.footprint.height,cargoBottom(b)+b.footprint.height)-Math.max(cargoBottom(a),cargoBottom(b))>1e-8&&shapeIntersects(a,b);
 }
-function covers(a:WeightDraft,b:WeightDraft){const x=cargoBounds(a),y=cargoBounds(b);return !!x&&!!y&&x.xMin<=y.xMin+1e-8&&x.xMax>=y.xMax-1e-8&&x.yMin<=y.yMin+1e-8&&x.yMax>=y.yMax-1e-8;}
-function horizontalContact(a:WeightDraft,b:WeightDraft){const x=cargoBounds(a),y=cargoBounds(b);return !!x&&!!y&&Math.min(x.xMax,y.xMax)-Math.max(x.xMin,y.xMin)>1e-8&&Math.min(x.yMax,y.yMax)-Math.max(x.yMin,y.yMin)>1e-8;}
+export function horizontalContact(a:WeightDraft,b:WeightDraft){if((a.footprint?.shape??'box')==='box'&&(b.footprint?.shape??'box')==='box'){const x=cargoBounds(a),y=cargoBounds(b);return !!x&&!!y&&Math.min(x.xMax,y.xMax)-Math.max(x.xMin,y.xMin)>1e-8&&Math.min(x.yMax,y.yMax)-Math.max(x.yMin,y.yMin)>1e-8;}return contactPatch(a,b).length>0;}
 /** Contact polygon only: this does not establish bending strength or allowable bearing loads. */
 export function hasGeometricSupport(w:WeightDraft,others:WeightDraft[]){
  const contacts=others.filter(o=>o.id!==w.id&&o.footprint&&sameLoadingSurface(o.footprint.areaId,w.footprint?.areaId)&&Math.abs(cargoBottom(o)+o.footprint.height-cargoBottom(w))<1e-8&&horizontalContact(o,w));
- if(contacts.some(o=>covers(o,w)))return true;
+ if(polygonCovered(flatContactPolygon(w),contacts.map(flatContactPolygon)))return true;
  const b=cargoBounds(w);if(!b)return false;
- const regions=contacts.map(o=>cargoBounds(o)!);
- if(regions.length&&fitsArea({...b,id:'support',name:'Support',deckZ:cargoBottom(w),regions},b))return true;
+
  // Spanning is permitted over two or more dunnage contacts. The projected CG must
  // lie strictly inside their convex contact hull; arbitrary cargo cannot bridge voids.
  const bearers=contacts.filter(o=>o.footprint?.kind==='dunnage');if(bearers.length<2)return false;
- const points=bearers.flatMap(o=>{const r=cargoBounds(o)!;const x0=Math.max(r.xMin,b.xMin),x1=Math.min(r.xMax,b.xMax),y0=Math.max(r.yMin,b.yMin),y1=Math.min(r.yMax,b.yMax);return [[x0,y0],[x0,y1],[x1,y0],[x1,y1]];}).sort((a,b)=>a[0]-b[0]||a[1]-b[1]);
+ const points=bearers.flatMap(o=>contactPatch(o,w)).sort((a,b)=>a[0]-b[0]||a[1]-b[1]);
  const cross=(a:number[],b:number[],c:number[])=>(b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]);
  const chain=(list:number[][])=>{const h:number[][]=[];for(const p of list){while(h.length>1&&cross(h[h.length-2],h[h.length-1],p)<=0)h.pop();h.push(p);}return h.slice(0,-1);};
  const hull=[...chain(points),...chain([...points].reverse())],cg=[Number(w.lcg),Number(w.tcg)];

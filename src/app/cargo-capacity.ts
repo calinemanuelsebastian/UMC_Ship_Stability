@@ -1,9 +1,11 @@
+import {defaultCargoShape} from './cargo-shape';
+import {cargoFamilies,parseCargoTemplate,grossTemplateMass,type CargoTemplate,type CargoFamily} from './cargo-templates';
 import type {ShipModelPackage} from '../core/domain/ship-model';
 import type {WeightDraft} from './loading-state';
 import {isCargo} from './tank-operations';
 import {cargoOnSurface} from './cargo-surfaces';
 import type {CargoArea,PlanRegion} from './cargo-layout';
-export type CapacitySettings={limitMode?:'documented'|'manual';limit?:number;limitSource:string;limitDensity?:number;reserve:number;supportAllowance:number;areaId:string;method:'package'|'sf';unitMass?:number;length?:number;width?:number;height?:number;stowageFactor?:number;quantity?:number};
+export type CapacitySettings={cargoName?:string;cargoFamily?:CargoFamily;cargoDefinition?:CargoTemplate;limitMode?:'documented'|'manual';limit?:number;limitSource:string;limitDensity?:number;reserve:number;supportAllowance:number;areaId:string;method:'package'|'sf';unitMass?:number;length?:number;width?:number;height?:number;stowageFactor?:number;quantity?:number};
 export const defaultCapacitySettings:CapacitySettings={limitSource:'',reserve:0,supportAllowance:0,areaId:'',method:'package'};
 export function parseCapacitySettings(raw:unknown):CapacitySettings{
  const s=raw as CapacitySettings;
@@ -12,7 +14,10 @@ export function parseCapacitySettings(raw:unknown):CapacitySettings{
  for(const k of ['reserve','supportAllowance'] as const)if(!Number.isFinite(s[k])||s[k]<0)throw new Error('Invalid capacity allowance.');
  for(const k of ['limit','limitDensity','unitMass','length','width','height','stowageFactor'] as const)if(s[k]!==undefined&&(!Number.isFinite(s[k])||s[k]!<=0))throw new Error('Capacity inputs must be positive.');
  if(s.quantity!==undefined&&(!Number.isSafeInteger(s.quantity)||s.quantity<0))throw new Error('Quantity must be a non-negative whole number.');
- return {...(s.limitMode?{limitMode:s.limitMode}:{}),limitSource:s.limitSource,areaId:s.areaId,method:s.method,reserve:s.reserve,supportAllowance:s.supportAllowance,...Object.fromEntries(['limit','limitDensity','unitMass','length','width','height','stowageFactor','quantity'].filter(k=>s[k as keyof CapacitySettings]!==undefined).map(k=>[k,s[k as keyof CapacitySettings]]))};
+ if(s.cargoName!==undefined&&(typeof s.cargoName!=='string'||s.cargoName.length>120))throw new Error('Invalid cargo name.');
+ if(s.cargoFamily!==undefined&&!cargoFamilies.some(f=>f[0]===s.cargoFamily))throw new Error('Invalid cargo family.');
+ const cargoDefinition=s.cargoDefinition===undefined?undefined:parseCargoTemplate(s.cargoDefinition);
+ return {...(s.cargoName===undefined?{}:{cargoName:s.cargoName}),...(s.cargoFamily===undefined?{}:{cargoFamily:s.cargoFamily}),...(cargoDefinition?{cargoDefinition}:{}),...(s.limitMode?{limitMode:s.limitMode}:{}),limitSource:s.limitSource,areaId:s.areaId,method:s.method,reserve:s.reserve,supportAllowance:s.supportAllowance,...Object.fromEntries(['limit','limitDensity','unitMass','length','width','height','stowageFactor','quantity'].filter(k=>s[k as keyof CapacitySettings]!==undefined).map(k=>[k,s[k as keyof CapacitySettings]]))};
 }
 /** Area of a union, so stepped/overlapping planning regions are never counted twice. */
 export function regionArea(regions:PlanRegion[]){
@@ -73,10 +78,25 @@ export function cargoCapacity(ship:ShipModelPackage,weights:WeightDraft[],areas:
   requiredMass:s.quantity!==undefined&&s.unitMass?s.quantity*s.unitMass:undefined,requiredVolume:s.quantity!==undefined&&volumePerUnit?s.quantity*volumePerUnit:undefined};
 }
 
-export type CapacityCargoTemplate={area:CargoArea;mass:number;length:number;width:number;height:number;quantity?:number};
+export type CapacityCargoTemplate={definition:CargoTemplate;area:CargoArea;mass:number;length:number;width:number;height:number;quantity?:number};
 export function capacityCargoTemplate(settings:CapacitySettings,areas:CargoArea[]):CapacityCargoTemplate|undefined{
  const area=areas.find(a=>(a.id??a.name)===settings.areaId)??(!settings.areaId&&areas.length===1?areas[0]:undefined);
  const {unitMass:mass,length,width,height,quantity}=settings;
  if(!area||[mass,length,width,height].some(n=>n===undefined||!Number.isFinite(n)||n<=0))return;
- return {area,mass:mass!,length:length!,width:width!,height:height!,quantity};
+ const saved=settings.cargoDefinition;
+ const family=settings.cargoFamily??saved?.family??'boxed',preset=cargoFamilies.find(f=>f[0]===family)!;
+ try{
+ const definition=parseCargoTemplate({id:saved?.id??'capacity-cargo',name:settings.cargoName?.trim()||saved?.name||preset[1],family,
+ footprint:{...saved?.footprint,shape:saved?(saved.footprint.shape??'box'):defaultCargoShape(family),length,width,height,rotation:saved?.footprint.rotation??0,deckZ:0,dunnageProfile:saved?.footprint.dunnageProfile??preset[2],stackability:saved?.footprint.stackability??(family==='perishable'?'unstackable':'unknown')},
+ mass:saved&&grossTemplateMass(saved.mass)===mass?saved.mass:{mode:'gross',value:mass,tare:0},quantity:quantity&&quantity<=40000?quantity:undefined,
+ cgAboveBase:saved?.cgAboveBase,contact:saved?.contact??'',source:saved?.source??'',stowageFactor:settings.stowageFactor});
+ return {area,mass:mass!,length:length!,width:width!,height:height!,quantity,definition};
+ }catch{return;}
+
+}
+
+/** Capacity fields are an editable proposal; the same validated definition is handed to layout. */
+export function capacitySettingsFromCargo(settings:CapacitySettings,raw:CargoTemplate):CapacitySettings{
+ const cargoDefinition=parseCargoTemplate(raw),p=cargoDefinition.footprint;
+ return parseCapacitySettings({...settings,cargoDefinition,cargoName:cargoDefinition.name,cargoFamily:cargoDefinition.family,unitMass:grossTemplateMass(cargoDefinition.mass),length:p.length,width:p.width,height:p.height,stowageFactor:cargoDefinition.stowageFactor,method:cargoDefinition.stowageFactor?'sf':'package',quantity:undefined});
 }

@@ -1,10 +1,11 @@
+import {cargoGeometry} from './cargo-geometry';
 import {CargoMarkingTextures} from './cargo-marking-textures';
 import {markingLines} from '../app/cargo-identification';
 import * as THREE from 'three';
 import type {WeightDraft} from '../app/loading-state';
 import {cargoBottom} from '../app/cargo-placement';
 import {addCargoOutline,disposeCargoOutline} from './cargo-outline';
-export type CargoMesh=THREE.Mesh<THREE.BoxGeometry,THREE.MeshStandardMaterial>;
+export type CargoMesh=THREE.Mesh<THREE.BufferGeometry,THREE.MeshStandardMaterial>;
 export function syncCargoMeshes(group:THREE.Group,meshes:Map<string,CargoMesh>,weights:WeightDraft[],selection:ReadonlySet<string>,invalidate:()=>void=()=>{}){
  const art:CargoMarkingTextures=group.userData.cargoArt??=new CargoMarkingTextures();art.begin();
  const live=new Set<string>();const names=new Set<string>();
@@ -12,8 +13,9 @@ export function syncCargoMeshes(group:THREE.Group,meshes:Map<string,CargoMesh>,w
   const p=w.footprint;if(!p||![Number(w.lcg),Number(w.tcg)].every(Number.isFinite))continue;
   live.add(w.id);const width=p.rotation===0?p.length:p.width,depth=p.rotation===0?p.width:p.length;
   let mesh=meshes.get(w.id);
-  if(!mesh){mesh=new THREE.Mesh(new THREE.BoxGeometry(width,p.height,depth),new THREE.MeshStandardMaterial());mesh.userData.id=w.id;addCargoOutline(mesh);group.add(mesh);meshes.set(w.id,mesh);}
-  else {const old=mesh.geometry.parameters;if(old.width!==width||old.height!==p.height||old.depth!==depth){disposeCargoOutline(mesh);mesh.geometry.dispose();mesh.geometry=new THREE.BoxGeometry(width,p.height,depth);addCargoOutline(mesh);}}
+  if(!mesh){mesh=new THREE.Mesh(cargoGeometry(p),new THREE.MeshStandardMaterial());mesh.userData.id=w.id;addCargoOutline(mesh);group.add(mesh);meshes.set(w.id,mesh);}
+  else {if(mesh.userData.geometryKey!==JSON.stringify([p.shape??'box',width,p.height,depth,p.rotation])){disposeCargoOutline(mesh);mesh.geometry.dispose();mesh.geometry=cargoGeometry(p);addCargoOutline(mesh);}}
+  mesh.userData.geometryKey=JSON.stringify([p.shape??'box',width,p.height,depth,p.rotation]);
   const label=selection.has(w.id)?markingLines(w).join(' · '):w.footprint?.markings?.layers.identity===false?'':w.name;
   names.add(label);mesh.name=w.name;syncNameLabel(group,mesh,label,Math.min(width,depth),p.height);
   const map=art.get(w.name,p.markings,p.stackability,invalidate);if(mesh.material.map!==map){mesh.material.map=map;mesh.material.needsUpdate=true;}

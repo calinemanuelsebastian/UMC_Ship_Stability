@@ -1,3 +1,4 @@
+import {CargoProjection} from './cargo-projection';
 import {useCargoDragCancellation} from './use-cargo-drag-cancellation';
 import {CargoElevationItems} from './cargo-elevation-items';
 import type {CargoTopActions} from './cargo-top-items';
@@ -39,7 +40,7 @@ export function CargoElevations({onZoom,panMode=false,onSelectWindow,zoom=1,view
    {related.filter(s=>s.deckZ>floor).map(s=><line key={s.id} x1={min} x2={max} y1={ceiling-s.deckZ} y2={ceiling-s.deckZ} stroke="#8b6914" strokeDasharray="3 2" vectorEffect="non-scaling-stroke"/>)}
    {view==='side'&&area.supportRegions?.map((r,i)=><line key={'floor'+i} x1={r.xMin} x2={r.xMax} y1={height} y2={height} stroke="#527c60" strokeWidth="5" vectorEffect="non-scaling-stroke"/>)}
    <CargoElevationItems weights={visible} selected={selectedSet} view={view} ceiling={ceiling} dragId={ghost?.w.id} actions={actions} zoom={zoom}/>
-   {ghost&&translateCargoGroup(visible.filter(w=>selectedSet.has(ghost.w.id)?selectedSet.has(w.id):w.id===ghost.w.id),originals.get(ghost.w.id)!,ghost.w).map(w=>{const p=w.footprint!,width=view==='side'?(p.rotation===0?p.length:p.width):(p.rotation===0?p.width:p.length),centre=Number(view==='side'?w.lcg:w.tcg);return <rect key={w.id} pointerEvents="none" x={centre-width/2} y={ceiling-cargoBottom(w)-p.height} width={width} height={p.height} fill={ghost.valid?'#16a34a':'#dc2626'} fillOpacity=".5" stroke="#075985" vectorEffect="non-scaling-stroke"/>;})}
+   {ghost&&translateCargoGroup(visible.filter(w=>selectedSet.has(ghost.w.id)?selectedSet.has(w.id):w.id===ghost.w.id),originals.get(ghost.w.id)!,ghost.w).map(w=>{const p=w.footprint!,width=view==='side'?(p.rotation===0?p.length:p.width):(p.rotation===0?p.width:p.length),centre=Number(view==='side'?w.lcg:w.tcg);return <CargoProjection footprint={p} view={view} key={w.id} pointerEvents="none" x={centre-width/2} y={ceiling-cargoBottom(w)-p.height} width={width} height={p.height} fill={ghost.valid?'#16a34a':'#dc2626'} fillOpacity=".5" stroke="#075985" vectorEffect="non-scaling-stroke"/>;})}
 
   {windowSelection.overlay}</svg><figcaption><p>{t('Drag upward to stack on a supported surface. Green previews are valid; red previews cannot be placed. Height marks are measured above the hold floor.')}</p>{t(area.clearHeight===undefined?'View height':'Full hold height')}: {height.toFixed(2)} m · {t('Deck elevation')}: {area.deckZ} m · {t('Available clear height')}: {area.clearHeight??'—'} m. {t('Projection only; cargo behind other items may overlap in this view.')}</figcaption></figure>;
  })}</div>;

@@ -1,3 +1,4 @@
+import {shapeLabels} from '../app/cargo-shape';
 import type {WeightDraft} from '../app/loading-state';
 import {cargoBottom} from '../app/cargo-placement';
 import {useLanguage} from '../app/language-context';
@@ -9,7 +10,7 @@ export function CargoSpecifications({item,categoryLabel}:{item?:WeightDraft;cate
  return <section className="panel" aria-label={t('Selected object specifications')}><h3>{item.name}</h3><dl className="summary-grid">
  <div><dt>{t('Category')}</dt><dd>{t(category)}</dd></div><div><dt>{t('Mass')}</dt><dd>{format(item.massTonnes)} t</dd></div>
  <div><dt>{t('Loading surface')}</dt><dd>{item.hold??p?.areaId??'—'}</dd></div>
- {p&&<><div><dt>{t('Dimensions (L × W × H)')}</dt><dd>{format(p.length)} × {format(p.width)} × {format(p.height)} m</dd></div><div><dt>{t('Orientation')}</dt><dd>{format(p.rotation)}°</dd></div><div><dt>{t('Bottom elevation')}</dt><dd>{format(cargoBottom(item))} m</dd></div><div><dt>{t('Stackability')}</dt><dd>{t(p.stackability??'unknown')}{p.maxTopLoadTonnes!==undefined?` · ${p.maxTopLoadTonnes} t`:''}</dd></div></>}
+ {p&&<><div><dt>{t('Transported shape')}</dt><dd>{t(shapeLabels[p.shape??'box'])}</dd></div><div><dt>{t('Dimensions (L × W × H)')}</dt><dd>{format(p.length)} × {format(p.width)} × {format(p.height)} m</dd></div><div><dt>{t('Orientation')}</dt><dd>{format(p.rotation)}°</dd></div><div><dt>{t('Bottom elevation')}</dt><dd>{format(cargoBottom(item))} m</dd></div><div><dt>{t('Stackability')}</dt><dd>{t(p.stackability??'unknown')}{p.maxTopLoadTonnes!==undefined?` · ${p.maxTopLoadTonnes} t`:''}</dd></div></>}
  <div><dt>{t('Source coordinates (LCG / TCG / VCG)')}</dt><dd>{format(item.lcg)} / {format(item.tcg)} / {format(item.vcg)} m</dd></div>
  {p?.keepGapsClear&&<p>{t('Protected clearance: surrounding gaps remain open.')}</p>}
  {p?.catalogue&&<div><dt>{t('Cargo family')}</dt><dd>{p.catalogue.family} · {p.catalogue.contact} {p.catalogue.source}</dd></div>}
