@@ -15,12 +15,12 @@ export function Home({onTabChange,onLoadingSection}: {
         <WorkspaceDrawing kind="loading"/>
         <div className="home-feature-body"><p className="eyebrow">{t('01 · Prepare')}</p><h2>{t('Loading')}</h2><p>{t('Arrange cargo in the holds, adjust tank contents and review onboard weights.')}</p>
           <button onClick={()=>onLoadingSection('onboard')}>{t('Prepare onboard condition')} <span aria-hidden="true">→</span></button>
-          <div className="home-shortcuts"><button onClick={()=>onLoadingSection('ballast')}>{t('Ballast')}</button><button onClick={()=>onLoadingSection('layout')}>{t('Cargo layout')}</button><button onClick={()=>onLoadingSection('plans')}>{t('Saved cargo plans')}</button><button onClick={()=>onLoadingSection('weights')}>{t('Review totals')}</button></div>
+          <div className="home-shortcuts"><button onClick={()=>onLoadingSection('ballast')}>{t('Ballast')}</button><button onClick={()=>onLoadingSection('layout')}>{t('Cargo layout')}</button><button onClick={()=>onLoadingSection('plans')}>{t('Loading plans and recovery')}</button><button onClick={()=>onLoadingSection('weights')}>{t('Review totals')}</button></div>
         </div>
       </section>
       <section className="home-feature home-visual">
         <WorkspaceDrawing kind="view3d"/>
-        <div className="home-feature-body"><p className="eyebrow">{t('02 · Explore')}</p><h2>{t('3D View')}</h2><p>{t('Inspect the hull and cargo, adjust visibility and explore heel and trim in Teaching mode.')}</p>
+        <div className="home-feature-body"><p className="eyebrow">{t('02 · Explore')}</p><h2>{t('3D inspection')}</h2><p>{t('Inspect the hull and cargo, adjust visibility and explore heel and trim in Teaching mode.')}</p>
           <button onClick={()=>onTabChange('view3d')}>{t('Open 3D workspace')} <span aria-hidden="true">→</span></button>
           <p className="home-feature-note">{t('The viewer uses the selected vessel and current condition. Available simulations depend on the vessel data.')}</p>
         </div>
@@ -70,18 +70,5 @@ function ShipBanner() {
     <polygon points={polygon([[15,10,30],[65,10,30],[65,54,30],[15,54,30]])} fill="#f8fbfd"/>
     {[23,37,51].map(x=><polygon key={x} points={polygon([[x,54,16],[x+9,54,16],[x+9,54,23],[x,54,23]])} fill="#42647d" stroke="none"/>)}
     <path d={`M${point(8,58,-16)} L${point(282,58,-16)} L${point(327,32,-16)}`} fill="none" stroke="#327d96" strokeWidth="3"/>
-    {/* Decorative orientation triad follows the same projection as the vessel. */}
-    <g transform="translate(25 0)">
-    <g fill="none" strokeWidth="2">
-      <path d="M385 155H429M423 151L429 155 423 159" stroke="#b34b4b"/>
-      <path d="M385 155L411 170M404 170L411 170 408 164" stroke="#408568"/>
-      <path d="M385 155V123M381 129L385 123 389 129" stroke="#427caf"/>
-    </g>
-    <g stroke="none" fontSize="13" fontWeight="600">
-      <text x="435" y="159" fill="#b34b4b">x</text>
-      <text x="416" y="179" fill="#408568">y</text>
-      <text x="381" y="117" fill="#427caf">z</text>
-    </g>
-    </g>
   </g>;
 }

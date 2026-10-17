@@ -7,7 +7,7 @@ import type {ShipModelPackage} from '../core/domain/ship-model';
 import {useLanguage} from '../app/language-context';
 const emptyPlan:{groups:SecuringGroup[]}={groups:[]};
 const labels:Record<keyof SecuringValues,string>={ax:'Longitudinal acceleration (m/s²)',ay:'Transverse acceleration (m/s²)',az:'Vertical acceleration amplitude (m/s²)',friction:'Documented friction coefficient',forceX:'Additional longitudinal force (kN)',forceY:'Additional transverse force (kN)',forceHeight:'Additional force height above contact (m)',x:'Contact centre LCG (m)',y:'Contact centre TCG (m)',z:'Contact elevation (m)',length:'Contact length (m)',width:'Contact width (m)',bearingKPa:'Allowable contact pressure (kPa)'};
-export function SecuringAssessment({ship,weights,areas,selection=[]}:{selection?:string[];ship:ShipModelPackage;weights:WeightDraft[];areas:CargoArea[]}){
+export function SecuringAssessment({ship,weights,areas,selection=[],id="securing-assessment"}:{id?:string;selection?:string[];ship:ShipModelPackage;weights:WeightDraft[];areas:CargoArea[]}){
  const {t}=useLanguage(),{settings,setSettings,conditionKey,weights:activeWeights}=useAssessmentSettings();
  const [open,setOpen]=useState(false),[selected,setSelected]=useState(''),[search,setSearch]=useState(''),[removed,setRemoved]=useState<SecuringGroup>();
  const plan=settings.securing??emptyPlan;const group=plan.groups.find(g=>g.id===selected)??plan.groups[0];
@@ -18,7 +18,7 @@ export function SecuringAssessment({ship,weights,areas,selection=[]}:{selection?
  const input=(label:string,value:string,onChange:(v:string)=>void,type='number')=><label>{t(label)}<input type={type} step={type==='number'?'any':undefined} value={value} onChange={e=>onChange(e.target.value)}/></label>;
  const filtered=(open?weights:[]).filter(w=>`${w.name} ${w.id}`.toLowerCase().includes(search.toLowerCase()));
  function download(){const blob=new Blob([JSON.stringify({settings:plan,assessment:results},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='cargo-securing-assessment.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
- return <details id="securing-assessment" className="securing-assessment" onToggle={e=>setOpen(e.currentTarget.open)}><summary>{t('Supports and securing')}</summary>{open&&<>
+ return <details id={id} className="securing-assessment" onToggle={e=>setOpen(e.currentTarget.open)}><summary>{t('Supports and securing')}</summary>{open&&<>
  <p>{t('Assess a cargo unit or a documented rigid assembly. Calculations use the selected cargo masses and centres of gravity. Save the condition to retain groups and references.')}</p>
  {ship.manifest.id==='reviewed-apples-vessel'&&<p role="note">{t('The supplied securing manual identifies Vectis Isle, not Vectis Castle. No ratings are imported from it. Superseded hull-strength limits are not used.')}</p>}
  {activeWeights===undefined&&<p role="status">{t('Manual scenario: securing results do not represent the active condition.')}</p>}

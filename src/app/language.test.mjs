@@ -53,14 +53,14 @@ test('assessment navigation keeps the trim route in its primary group',()=>{
 });
 test('supporting routes remain available in the tool selector',()=>{
  const html=render(createElement(TabBar,{activeTab:'validation',onChange:()=>{}}),'en');
- assert.match(html,/<option value="validation" selected="">Validation<\/option>/);
+ assert.match(html,/<option value="validation" selected="">Reference checks<\/option>/);
  for(const id of ['hydrostatics','roll','validation','theory'])assert.ok(html.includes(`value="${id}"`));
 });
 
-test('portrait workspace selector exposes every existing route',()=>{
+test('portrait workspace selector keeps trim under Assessment',()=>{
  const html=render(createElement(TabBar,{activeTab:'trim',onChange:()=>{}}),'en');
  assert.match(html,/class="mobile-workspace-nav"/);
- assert.match(html,/<option value="trim" selected="">Trim &amp; Drafts<\/option>/);
+ assert.match(html,/<option value="stability" selected="">Assessment<\/option>/);
  for(const id of ['home','loading','view3d','stability','hydrostatics','roll','validation','theory'])assert.ok(html.includes(`value="${id}"`));
 });
 test('portrait condition summary supports incomplete values and translated disclosure',async()=>{
@@ -79,4 +79,21 @@ test('cargo planner starts in selection and keeps creation fields contextual',as
  assert.match(html,/aria-label="Cargo properties"/);
  assert.doesNotMatch(html,/>Cargo name</);
  assert.match(html,/Back to drawing/);
+});
+
+test('supporting destinations link to their own help topics in both languages',()=>{
+ for(const language of ['en','ro'])for(const id of ['hydrostatics','roll','validation','theory']){
+  const html=render(createElement(TabBar,{activeTab:id,onChange:()=>{}}),language);
+  assert.ok(html.includes(`topic=${id}`));
+ }
+});
+test('capabilities has one guide chapter and is absent from footer navigation',async()=>{
+ const {InformationFooter}=await server.ssrLoadModule('/src/app/site-information.tsx');
+ const {guideTopics}=await server.ssrLoadModule('/src/app/user-guide-content.ts');
+ assert.equal(guideTopics[0][0],'capabilities');
+ for(const language of ['en','ro']){
+  const html=render(createElement(InformationFooter),language);
+  assert.ok(!html.includes('info=capabilities'));
+  for(const page of ['guide','privacy','terms','licenses'])assert.ok(html.includes(`info=${page}`));
+ }
 });

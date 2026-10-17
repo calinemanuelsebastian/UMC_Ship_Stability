@@ -48,7 +48,7 @@ export function Validation({ ship }: {
     }, [ship, run]);
     const current = state.run === run ? state : { results: [], done: false, suite: undefined, error: undefined };
     const passed = current.results.filter(result => result.passed).length;
-    return <><HydrostaticAudit ship={ship}/><div className="page-heading"><p className="eyebrow">{t("UMC \u00B7 Calculation checks")}</p><h1>{t("Validation")}</h1><p>{t("Compare the selected model\u2019s reference cases with the current calculation engine.")}</p></div>
+    return <><HydrostaticAudit ship={ship}/><div className="page-heading"><p className="eyebrow">{t("UMC \u00B7 Calculation checks")}</p><h1>{t("Reference checks")}</h1><p>{t("Compare the selected model\u2019s reference cases with the current calculation engine.")}</p></div>
     <section className="panel"><div className="section-actions"><h2>{t(ship.manifest.name)}</h2><button className="action-button" disabled={!current.done} onClick={() => setRun(value => value + 1)}>{t("Run checks again")}</button></div>
       <p role="status">{t(!current.done ? `Running reference checks… ${current.results.length} completed.` : current.error ? 'Validation could not run.' : !current.suite ? 'This model does not provide validation reference cases.' : `${passed} of ${current.results.length} cases passed${passed === current.results.length ? '.' : `; ${current.results.length - passed} failed.`}`)}</p>
       {t(current.error && <p role="alert" className="error">{t(current.error)}</p>)}

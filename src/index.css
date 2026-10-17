@@ -524,3 +524,21 @@ main{max-width:1600px;padding:18px 3vw}.page-heading{margin-bottom:18px}.page-he
 .assessment-snapshot-values{display:flex;flex-wrap:wrap;gap:24px}.assessment-snapshot-values dd{margin:4px 0;font-weight:700}#securing-assessment{scroll-margin-top:20px}
 
 .curve-angle-help{display:block;color:#536a7c;margin:4px 0 8px}.stability-chart>output{display:block}
+
+.trim-equations { display: grid; gap: 16px; overflow-x: auto; overflow-wrap: normal; }
+.trim-equations > div { white-space: nowrap; }
+.equation-fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; line-height: 1.5; margin-inline: .2em; }
+.equation-fraction > span { padding-inline: .3em; }
+.equation-fraction > span:first-child { border-bottom: 1px solid currentColor; }
+
+.shared-condition-drawer > .loading-plan-start { padding: 0 14px 14px; border-top: 1px solid #dce4ea; }
+
+.tab-bar .support-tools + .support-tools { margin-left: 8px; }
+.advanced-condition-settings { flex: 1; min-width: 0; }
+.workspace-nav a { padding: 10px 14px; color: #006c83; }
+.assessment-graphs > section { scroll-margin-top: 24px; }
+
+.shared-condition-drawer > .advanced-condition-settings { margin: 0 14px 14px; }
+
+.app-header .guide-link { color: #e2f3ff; }
+.app-header .guide-link:hover { color: white; }

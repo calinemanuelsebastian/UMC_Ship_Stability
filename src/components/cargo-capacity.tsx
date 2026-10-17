@@ -1,3 +1,4 @@
+import {GuideLink} from '../app/user-guide';
 import {CapacityCargoPicker} from './capacity-cargo-picker';
 import {CapacityNumber} from './capacity-number';
 import {FieldLabel} from './field-label';
@@ -46,7 +47,7 @@ export function CargoCapacity({ship,weights,deck,density,onDensityChange,setting
  </dl>
  <p>{t('Full: space runs out first. Down: weight capacity runs out first. Full and Down: both limits are reached together.')}</p>
  <p className="muted">{t('For the selected space and remaining ship weight capacity, assuming only this additional cargo. This is a planning estimate, not a prediction of actual draught or approved loading.')}</p>
- <details><summary>{t('Stowage factor basis')}</summary><p>{t('Cargo SF = stowed volume / cargo mass. Critical SF = remaining volume / remaining cargo mass allowance. Package dimensions give an envelope estimate; allow for packing gaps, ventilation and supports in the layout. An entered stowage factor should already account for the intended stowage losses. Whole packages may leave unused capacity.')}</p></details>
+ <p><GuideLink topic="capacity">{t('Stowage factor basis')}</GuideLink></p>
  </section>
  <details open={settings.quantity!==undefined||undefined}><summary>{t('Check a requested quantity (optional)')}</summary>
  {number('quantity','Packages to add','Optional: leave blank to estimate maximum capacity. Enter a quantity to check whether that many additional packages fit.')}

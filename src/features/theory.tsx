@@ -6,7 +6,7 @@ const stabilityReference = 'https://www.usna.edu/NAOE/_files/documents/Courses/E
 const topics = [
     ['cargo', 'Cargo types and packaging'], ['coordinates', 'Coordinates & units'], ['hydrostatics', 'Hydrostatics'],
     ['loading', 'Loading & free surface'], ['trim', 'Trim & Drafts'], ['stability', 'GZ curves'],
-    ['roll', 'Free roll'], ['validation', 'Validation'],
+    ['roll', 'Free roll'], ['validation', 'Reference checks'],
 ] as const;
 export function Theory({ ship, onTabChange }: {
     ship: ShipModelPackage;
@@ -55,7 +55,14 @@ export function Theory({ ship, onTabChange }: {
       {t(open('stability', 'Open Stability Curves'))}
     </section>
     <section id="theory-trim" className="panel theory-section"><h2>{t('Trim & Drafts')}</h2>
-      <p className="theory-equation">GM_L = KM_L − KG − FSM_L / Δ<br/>MCT 1 cm = Δ GM_L / (100 LBP)<br/>s = (LCG − LCB) / GM_L · trim = s LBP<br/>T_AP = T₀ − s LCF_AP · T_FP = T₀ + s (LBP − LCF_AP)</p>
+      <div className="theory-equation trim-equations">
+        <div>GM<sub>L</sub> = KM<sub>L</sub> − KG − <span className="equation-fraction"><span>FSM<sub>L</sub></span><span>Δ</span></span></div>
+        <div>MCT<sub>1 cm</sub> = <span className="equation-fraction"><span>Δ · GM<sub>L</sub></span><span>100 · LBP</span></span></div>
+        <div>s = <span className="equation-fraction"><span>LCG − LCB</span><span>GM<sub>L</sub></span></span></div>
+        <div>trim = s · LBP</div>
+        <div>T<sub>AP</sub> = T<sub>0</sub> − s · LCF<sub>AP</sub></div>
+        <div>T<sub>FP</sub> = T<sub>0</sub> + s · (LBP − LCF<sub>AP</sub>)</div>
+      </div>
       <p>{t('These equations use positions forward of AP and bow-positive trim (T_FP − T_AP). The app converts source coordinates before evaluating the longitudinal lever. Display reference changes affect labels and signed trim, not the physical end drafts.')}</p>
       <p>{t('At the displacement-derived even-keel draft T₀, the model supplies LCB, LCF and KMl. The first-order waterline rotates about LCF. MCT 1 cm is the moment required to change the difference between perpendicular drafts by one centimetre. Physical KG and longitudinal FSM are used separately.')}</p>
       <p>{t('This is an initial longitudinal equilibrium approximation. The package must opt in with a trim limit no greater than 1 degree; this is an app limit, not a universal accuracy guarantee. Both end drafts must remain within the table range and hull depth. TCG must be zero and corrected transverse and longitudinal GM positive. List, hull-form trim corrections, deflection and draft-mark offsets are excluded.')}</p>
@@ -73,7 +80,7 @@ export function Theory({ ship, onTabChange }: {
       <p>{t("The Validation tab runs the selected package's fixed reference cases, independently of current editor values. Each comparison passes when its absolute difference is at most the declared tolerance. Missing values and calculation errors fail the case.")}</p>
       <p>{t("The training package includes loading, upright hydrostatics, signed GZ and free-roll reference cases. GZ comparisons identify a heel angle; roll response comparisons identify a sample time. The local development tests additionally cover malformed data and failure handling.")}</p>
       <p>{t("Inspect the expected value, its source and tolerance together. Passing reference cases demonstrates agreement for those cases. It does not validate every possible loading condition, certify input data or establish regulatory compliance.")}</p>
-      {t(open('validation', 'Open Validation'))}
+      {t(open('validation', 'Reference checks'))}
     </section>
   </article>;
 }

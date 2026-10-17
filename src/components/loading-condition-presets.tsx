@@ -15,7 +15,7 @@ export function LoadingConditionPresets({onStudy,ship,catalog,reference,onApply,
   return {weights,result:evaluated?.result};
  }catch(e){return {error:(e as Error).message};}},[preset,choice,ship,reference,catalog]);
  const fmt=(n:number)=>new Intl.NumberFormat(language,{maximumFractionDigits:3}).format(n);
- return <details className="loading-plan-start"><summary>{t('Start a loading condition')}</summary>
+ return <section className="loading-plan-start" aria-label={t('Start a loading condition')}><h3>{t('Start a loading condition')}</h3>
  {onStudy&&ship.manifest.resources.some(r=>r.kind==='documentation.study-cases')&&<p><button onClick={onStudy}>{t('Study documented cases')}</button> {t('Read source loading tables, arrangements and attitude samples without replacing your plan.')}</p>}
  <p>{t('Choose a condition, review its totals, then apply it. Applying replaces the current cargo, tanks and onboard weights; Undo restores the previous plan.')}</p>
  <div className="scene-toolbar"><label>{t('Loading condition')}<select value={choice} onChange={e=>{setChoice(e.target.value);setApplied('');}}><option value="">{t('Choose a condition')}</option><option value="empty">{t('Empty cargo plan — empty tanks')}</option>{catalog.conditions?.items.map(p=><option key={p.id} value={p.id}>{t(p.name)}</option>)}<option value="reference">{t('Original loading reference')}</option></select></label>
@@ -28,5 +28,5 @@ export function LoadingConditionPresets({onStudy,ship,catalog,reference,onApply,
  <details><summary>{t('Source and differences')}</summary><p>{catalog.conditions?.source} · {t('PDF pages')}: {preset.sourcePages.join(', ')}</p><p>{t('These starters recalculate tank contents using the current tank tables and use the current deck-storage arrangement. Mass, centres and free-surface moments can differ from the documented case. They are not approved operating conditions.')}</p><p>{t('Documented displacement')}: {fmt(preset.reference.displacementTonnes)} t{preview.result&&<> · Δ {fmt(preview.result.displacementTonnes-preset.reference.displacementTonnes)} t</>}</p></details></>}
  {choice==='empty'&&<p>{t('Empty tanks do not constitute a ballast departure condition. Calculated trim may be outside the available tables.')}</p>}
  {applied&&<p role="status">{applied}</p>}
- </details>;
+ </section>;
 }
