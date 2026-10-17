@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "acceptedRevision": "58ffec04416e6667478a7a4b082d718f89ac5f5e",
-  "tag": "v0.1.0-beta.9",
+  "acceptedRevision": "4aea90931f442a018239b88bc73be5ccf8fb076f",
+  "tag": "v0.1.0-beta.10",
   "acceptance": {
     "status": "accepted",
-    "reviewer": "Emanuel-Sebastian Călin — explicit GitHub upload and public publication request, 2026-10-17; disclosed verification and rollback limits retained",
-    "evidence": "docs/releases/v0.1.0-beta.9.md"
+    "reviewer": "Emanuel-Sebastian Călin — explicit upload and publication request, 2026-10-17; disclosed verification and rollback limits retained",
+    "evidence": "docs/releases/v0.1.0-beta.10.md"
   },
   "redistribution": {
     "status": "accepted",
-    "reviewer": "Emanuel-Sebastian Călin — explicit GitHub upload and public publication request, 2026-10-17; disclosed verification and rollback limits retained",
-    "evidence": "docs/releases/v0.1.0-beta.9.md"
+    "reviewer": "Emanuel-Sebastian Călin — explicit upload and publication request, 2026-10-17; disclosed verification and rollback limits retained",
+    "evidence": "docs/releases/v0.1.0-beta.10.md"
   },
   "rollback": {
     "status": "accepted",
-    "reviewer": "Emanuel-Sebastian Călin — explicit GitHub upload and public publication request, 2026-10-17; disclosed verification and rollback limits retained",
-    "evidence": "docs/releases/v0.1.0-beta.9.md"
+    "reviewer": "Emanuel-Sebastian Călin — explicit upload and publication request, 2026-10-17; disclosed verification and rollback limits retained",
+    "evidence": "docs/releases/v0.1.0-beta.10.md"
   }
 }
