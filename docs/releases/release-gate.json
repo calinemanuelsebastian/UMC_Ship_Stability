@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "acceptedRevision": "76643d9ed6041389349310c8efb50b82b3e91536",
-  "tag": "v0.1.0-beta.7",
+  "acceptedRevision": "397db3ef3942fdb0b2120962adb4af00077f0233",
+  "tag": "v0.1.0-beta.8",
   "acceptance": {
     "status": "accepted",
-    "reviewer": "Emanuel-Sebastian Călin — explicit deployment and release naming authorization, 2026-10-17; existing disclosed limitations retained",
-    "evidence": "docs/releases/v0.1.0-beta.7.md"
+    "reviewer": "Emanuel-Sebastian C\u0103lin \u2014 explicit public website update authorization, 2026-10-17; disclosed verification and backward-compatibility limits retained",
+    "evidence": "docs/releases/v0.1.0-beta.8.md"
   },
   "redistribution": {
     "status": "accepted",
-    "reviewer": "Emanuel-Sebastian Călin — explicit deployment and release naming authorization, 2026-10-17; existing disclosed limitations retained",
-    "evidence": "docs/releases/v0.1.0-beta.7.md"
+    "reviewer": "Emanuel-Sebastian C\u0103lin \u2014 explicit public website update authorization, 2026-10-17; disclosed verification and backward-compatibility limits retained",
+    "evidence": "docs/releases/v0.1.0-beta.8.md"
   },
   "rollback": {
     "status": "accepted",
-    "reviewer": "Emanuel-Sebastian Călin — explicit deployment and release naming authorization, 2026-10-17; existing disclosed limitations retained",
-    "evidence": "docs/releases/v0.1.0-beta.7.md"
+    "reviewer": "Emanuel-Sebastian C\u0103lin \u2014 explicit public website update authorization, 2026-10-17; disclosed verification and backward-compatibility limits retained",
+    "evidence": "docs/releases/v0.1.0-beta.8.md"
   }
 }
