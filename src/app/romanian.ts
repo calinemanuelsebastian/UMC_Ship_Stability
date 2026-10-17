@@ -1,4 +1,10 @@
 export const romanian: Record<string, string> = {
+"Top-load limit source (optional for placement)":"Sursa limitei de încărcare deasupra (opțională pentru amplasare)",
+"Top-load limit is an unverified user assumption. Deck placement is allowed; verify the limit before using it to plan stacking.":"Limita de încărcare deasupra este o ipoteză neverificată a utilizatorului. Amplasarea pe punte este permisă; verifică limita înainte de a o folosi pentru planificarea stivuirii.",
+"Optional":"Opțional",
+"Field information":"Informații despre câmp",
+"Optional: extra mass kept available when planning cargo. Leave blank for zero; this does not add a weight to the ship.":"Opțional: masă suplimentară rezervată la planificarea mărfii. Lasă gol pentru zero; aceasta nu adaugă o greutate la navă.",
+"Optional: reserve mass for supports not yet placed in the layout. Leave blank for zero. Reduce this allowance as supports are modelled to avoid reserving their mass twice.":"Opțional: rezervă de masă pentru suporturi care nu sunt încă în plan. Lasă gol pentru zero. Redu rezerva pe măsură ce modelezi suporturile, pentru a evita rezervarea dublă a masei lor.",
 "Library name":"Nume în bibliotecă",
 "Packages to add":"Colete de adăugat",
 "Optional: leave blank to use the ship package name.":"Opțional: lasă gol pentru a folosi numele din pachetul navei.",

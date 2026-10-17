@@ -456,3 +456,9 @@ main{max-width:1600px;padding:18px 3vw}.page-heading{margin-bottom:18px}.page-he
 .home-assessment .home-illustration { background: #eeeaf5; color: #705387; }
 .home-feature-body { display: flex; flex-direction: column; }
 @media (max-width: 1000px) { .home-primary { grid-template-columns: minmax(0, 1fr); } }
+
+.field-optional { font-size:.65rem; font-weight:500; color:#526775; background:#edf2f5; border:1px solid #ccd7df; border-radius:3px; padding:.05rem .2rem; white-space:nowrap; }
+.input-help-popover { position:fixed; z-index:10000; width:320px; max-width:calc(100vw - 16px); box-sizing:border-box; padding:8px 10px; border:1px solid #b9cbd6; border-radius:6px; background:#f8fbfd; color:#243c4b; font-size:.8rem; line-height:1.35; box-shadow:0 3px 12px #16384a24; pointer-events:none; }
+.capacity-panel .curve-inputs { align-items:end; }
+.capacity-panel .curve-inputs > .field { margin-bottom:8px; }
+.capacity-panel .curve-inputs > .field > input { height:44px; box-sizing:border-box; }
