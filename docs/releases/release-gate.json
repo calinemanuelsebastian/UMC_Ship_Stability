@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "acceptedRevision": "c18c50687ab71104a58b6aa607018b395cc72669",
-  "tag": "v0.1.0-beta.6",
+  "acceptedRevision": "76643d9ed6041389349310c8efb50b82b3e91536",
+  "tag": "v0.1.0-beta.7",
   "acceptance": {
     "status": "accepted",
-    "reviewer": "Emanuel-Sebastian Călin — explicit deployment authorization, 2026-10-16; existing disclosed limitations retained",
-    "evidence": "docs/releases/v0.1.0-beta.6.md"
+    "reviewer": "Emanuel-Sebastian Călin — explicit deployment and release naming authorization, 2026-10-17; existing disclosed limitations retained",
+    "evidence": "docs/releases/v0.1.0-beta.7.md"
   },
   "redistribution": {
     "status": "accepted",
-    "reviewer": "Emanuel-Sebastian Călin — explicit deployment authorization, 2026-10-16; existing disclosed limitations retained",
-    "evidence": "docs/releases/v0.1.0-beta.6.md"
+    "reviewer": "Emanuel-Sebastian Călin — explicit deployment and release naming authorization, 2026-10-17; existing disclosed limitations retained",
+    "evidence": "docs/releases/v0.1.0-beta.7.md"
   },
   "rollback": {
     "status": "accepted",
-    "reviewer": "Emanuel-Sebastian Călin — explicit deployment authorization, 2026-10-16; existing disclosed limitations retained",
-    "evidence": "docs/releases/v0.1.0-beta.6.md"
+    "reviewer": "Emanuel-Sebastian Călin — explicit deployment and release naming authorization, 2026-10-17; existing disclosed limitations retained",
+    "evidence": "docs/releases/v0.1.0-beta.7.md"
   }
 }
