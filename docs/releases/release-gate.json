@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "acceptedRevision": "4aea90931f442a018239b88bc73be5ccf8fb076f",
-  "tag": "v0.1.0-beta.10",
+  "acceptedRevision": "2a354d5d1b4fc71c681bca91aea7b8da5624a359",
+  "tag": "v0.1.0-beta.11",
   "acceptance": {
     "status": "accepted",
-    "reviewer": "Emanuel-Sebastian Călin — explicit upload and publication request, 2026-10-17; disclosed verification and rollback limits retained",
-    "evidence": "docs/releases/v0.1.0-beta.10.md"
+    "reviewer": "Emanuel-Sebastian Călin — explicit release request, 2026-10-17; disclosed beta verification and rollback qualifications retained",
+    "evidence": "docs/releases/v0.1.0-beta.11.md"
   },
   "redistribution": {
     "status": "accepted",
-    "reviewer": "Emanuel-Sebastian Călin — explicit upload and publication request, 2026-10-17; disclosed verification and rollback limits retained",
-    "evidence": "docs/releases/v0.1.0-beta.10.md"
+    "reviewer": "Emanuel-Sebastian Călin — explicit release request, 2026-10-17; disclosed beta verification and rollback qualifications retained",
+    "evidence": "docs/releases/v0.1.0-beta.11.md"
   },
   "rollback": {
     "status": "accepted",
-    "reviewer": "Emanuel-Sebastian Călin — explicit upload and publication request, 2026-10-17; disclosed verification and rollback limits retained",
-    "evidence": "docs/releases/v0.1.0-beta.10.md"
+    "reviewer": "Emanuel-Sebastian Călin — explicit release request, 2026-10-17; disclosed beta verification and rollback qualifications retained",
+    "evidence": "docs/releases/v0.1.0-beta.11.md"
   }
 }
