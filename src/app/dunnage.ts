@@ -4,14 +4,14 @@ import type {CargoArea} from './cargo-layout';
 import type {WeightDraft} from './loading-state';
 import {parseFootprint} from './cargo-layout';
 import {cargoBottom,placeSupportedCargo,stackCargoOn} from './cargo-placement';
-export function createDunnage({id,area,areas,weights,support,length,width,thickness,mass,material,densityKgM3,massMode,properties,position}:{id:string;area:CargoArea;areas:CargoArea[];weights:WeightDraft[];support?:WeightDraft;length:number;width:number;thickness:number;mass:number;material?:string;densityKgM3?:number;massMode?:'calculated'|'manual';properties?:MaterialProperties;position?:{x:number;y:number}}){
+export function createDunnage({id,area,areas,weights,support,length,width,thickness,mass,material,densityKgM3,massMode,properties,shape='box',position}:{id:string;area:CargoArea;areas:CargoArea[];weights:WeightDraft[];support?:WeightDraft;length:number;width:number;thickness:number;mass:number;material?:string;densityKgM3?:number;massMode?:'calculated'|'manual';properties?:MaterialProperties;shape?:'box'|'cylinder-z';position?:{x:number;y:number}}){
  if(!Number.isFinite(mass)||mass<=0)throw new Error('Enter a positive dunnage mass.');
- const footprint=parseFootprint({kind:'dunnage',...(material?{dunnage:{material,densityKgM3,massMode,...(properties?{properties}:{})}}:{}),length:length,width:width,height:thickness,rotation:0,deckZ:area.deckZ,areaId:area.id});
+ const footprint=parseFootprint({kind:'dunnage',shape,...(material?{dunnage:{material,densityKgM3,massMode,...(properties?{properties}:{})}}:{}),length:length,width:width,height:thickness,rotation:0,deckZ:area.deckZ,areaId:area.id});
  const w:WeightDraft={id,name:material?`${material} · Dunnage layer`:'Dunnage layer',category:'cargo',quantity:'1',hold:area.name,massTonnes:String(mass),lcg:String((area.xMin+area.xMax)/2),tcg:String((area.yMin+area.yMax)/2),vcg:String(area.deckZ+thickness/2),freeSurfaceMomentTransverse:'0',footprint};
  return support?stackCargoOn(w,support,areas,weights):placeSupportedCargo(w,[area],weights,{x:position?.x??Number(w.lcg),y:position?.y??Number(w.tcg),z:area.deckZ},false,false);
 }
 
-export type DunnagePattern=DunnageArrangement & {supportMode?:'gaps'|'separators'|'racks';fitTop?:boolean;properties?:MaterialProperties;length:number;width:number;thickness:number;mass:number;material:string;densityKgM3:number;massMode:'calculated'|'manual';count:number;gap:number;frameClearance?:number;frameMaxTopLoadTonnes?:number;frameCopyCargo?:boolean;direction:'x'|'y'};
+export type DunnagePattern=DunnageArrangement & {drawBetweenPoints?:boolean;shape?:'box'|'cylinder-z';supportMode?:'gaps'|'separators'|'racks';fitTop?:boolean;properties?:MaterialProperties;length:number;width:number;thickness:number;mass:number;material:string;densityKgM3:number;massMode:'calculated'|'manual';count:number;gap:number;frameClearance?:number;frameMaxTopLoadTonnes?:number;frameCopyCargo?:boolean;direction:'x'|'y'};
 /** Build the complete pattern before committing it, so a failed piece leaves no partial load. */
 export function createDunnagePattern(options:{area:CargoArea;areas:CargoArea[];weights:WeightDraft[];settings:DunnagePattern;position:{x:number;y:number};support?:WeightDraft;id:()=>string}){
  const {area,areas,weights,settings:s,position,support,id}=options;

@@ -1,3 +1,4 @@
+import {weatherContext,weatherCurve,rectangularWeather} from './weather-context';
 import {cargoCapacity} from './cargo-capacity';
 import {vesselCapacityLimit,resolveCapacityLimit} from './capacity-limit';
 import {computeTrimEquilibrium} from '../core/trim/compute-trim-equilibrium';
@@ -18,7 +19,6 @@ import {loadTrimmedTable} from '../core/trim/shared-trim-table';
 import {computeTableTrim} from '../core/trim/trimmed-table';
 import {assessTrim} from '../core/stability/trim-assessment';
 import {compareKg,parseKgLimits} from '../core/stability/kg-limit';
-import {parseWindData} from '../core/stability/wind-profile';
 import {conditionWind} from './weather-wind';
 import {assessWeatherDirections} from '../core/stability/weather-assessment';
 import {derivePortEstimate} from '../core/stability/derived-stability-data';
@@ -49,11 +49,13 @@ export async function buildAssessmentReport(ship:ShipModelPackage,state:Scenario
  await section('permissibleTrim',()=>{if(!basis?.trimLimits||!trim||draft===undefined)throw new Error('Trim limits, solved trim or compatible moulded draft unavailable.');return assessTrim(basis.trimLimits,draft,trim.trimMetres);});
  await section('limitingKg',async()=>{if(!valid||draft===undefined)throw new Error('Compatible draft/condition unavailable.');return {status:'Convention unresolved',comparison:compareKg(parseKgLimits(await json('documentation.annotated-kg')),draft,inputs.vcg!,inputs.freeSurfaceMomentTransverse!/inputs.displacementTonnes!)};});
  await section('weather',async()=>{
-  const saved=state.assessment?.weather;if(!saved||saved.conditionKey!==key)throw new Error('Weather inputs are missing or belong to a different condition.');if(!curve||draft===undefined)throw new Error('GZ curve or moulded draft unavailable.');
-  const data=parseWindData(await json('stability.wind-profiles')),wind=conditionWind(data,saved,draft,inputs.displacementTonnes!,state.scenario==='loading'?state.weights:undefined);
+  const saved=state.assessment?.weather;if(!saved||saved.conditionKey!==key)throw new Error('Weather inputs are missing or belong to a different condition.');if(!curve)throw new Error('GZ curve unavailable.');
+  const context=await weatherContext(ship,condition,inputs.longitudinalFsm),weatherDraft=context.draft;datasets[context.sourcePath]=context.data;
+  const data=context.data,wind=conditionWind(data,saved,weatherDraft,inputs.displacementTonnes!,state.scenario==='loading'?state.weights:rectangularWeather(ship)?[]:undefined);
+  const compatibleCurve=weatherCurve(curve,context);
   if(saved.estimatePort&&!manifest.resources.some(r=>r.config?.portSymmetryEvidence==='vectis-source-audit-v1'))throw new Error('No port-estimation basis is supplied.');
   const n=(k:keyof typeof saved.values)=>saved.values[k].trim()===''?undefined:Number(saved.values[k]);
-  const overview=assessWeatherDirections(saved.estimatePort?derivePortEstimate(curve):curve,{steady:wind.steadyLever,draft,beam:manifest.principalDimensions.beam,lwl:n('lwl'),cb:n('cb'),bilgeArea:n('bilge'),deckAngle:n('deck'),floodAngle:n('flood'),bilgeType:saved.bilgeType},{deckAngle:saved.portDeck?.trim()?Number(saved.portDeck):undefined,floodAngle:saved.portFlood?.trim()?Number(saved.portFlood):undefined},{profileConfirmed:wind.profileConfirmed,source:saved.inputSource});
+  const overview=assessWeatherDirections(saved.estimatePort?derivePortEstimate(compatibleCurve):compatibleCurve,{steady:wind.steadyLever,draft:weatherDraft,beam:manifest.principalDimensions.beam,lwl:n('lwl'),cb:n('cb'),bilgeArea:n('bilge'),deckAngle:n('deck'),floodAngle:n('flood'),bilgeType:saved.bilgeType},{deckAngle:saved.portDeck?.trim()?Number(saved.portDeck):undefined,floodAngle:saved.portFlood?.trim()?Number(saved.portFlood):undefined},{profileConfirmed:wind.profileConfirmed,source:saved.inputSource});
   return {profile:saved.profile,pressureKgPerM2:data.pressureKgPerM2,operatorInputSource:saved.inputSource||'Unspecified',wind,assessment:overview[saved.direction??'starboard'],directionalAssessment:overview};
  });
  await section('securing',()=>{if(state.scenario!=='loading')throw new Error('Securing groups require weight-based loading.');return assessSecuringPlan(state.assessment?.securing??{groups:[]},state.weights.filter(w=>isCargo(ship,w)),cargoSurfaces(ship,state.tweenDeck),manifest.id,key);});

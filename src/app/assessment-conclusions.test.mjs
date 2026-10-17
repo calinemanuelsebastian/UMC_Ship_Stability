@@ -1,0 +1,10 @@
+import {test,after} from 'node:test';
+import assert from 'node:assert/strict';
+import {createServer} from '../../scripts/test-server.mjs';
+const server=await createServer({server:{middlewareMode:true},appType:'custom'});after(()=>server.close());
+const {conclude,assessmentConclusions}=await server.ssrLoadModule('/src/app/assessment-conclusions.ts');
+test('empty, missing, and unknown verdicts never pass',()=>{for(const v of [undefined,{},[],{status:'new unknown status'},{value:42}])assert.equal(conclude('test',v).status,'unresolved');});
+test('failures dominate incomplete evidence in every subsystem',()=>{for(const status of ['Below numerical minimum','Outside numerical limit','Exceeds declared limit','Outside documented limits','Average exceeds uniform limit'])assert.equal(conclude('test',{rows:[{status},{status:'Insufficient data'}]}).status,'failed');});
+test('qualifications and uncovered cargo prevent a passing summary',()=>{for(const v of [{status:'Within declared limit',issues:['Review applicability']},{status:'Both directions meet numerical limits',qualifications:['Derived port estimate']},{groups:[{status:'Screened within declared limits'}],unassigned:['cargo']}])assert.equal(conclude('test',v).status,'unresolved');});
+test('all numerical passes aggregate but do not create voyage clearance',()=>{assert.equal(conclude('test',[{status:'Meets numerical minimum'},{status:'Within documented limits'}]).status,'passed');const rows=assessmentConclusions({});assert.ok(rows.every(r=>r.status==='unresolved'));assert.ok(rows.some(r=>r.label.includes('Damage')));});
+test('actual displacement comparison does not depend on optional package quantity',()=>{const sections={capacity:{settings:{limit:5000,limitSource:'test'},result:{currentMass:5100,limitCurrent:true,massesComplete:true}}};assert.equal(assessmentConclusions(sections)[0].status,'failed');sections.capacity.result.currentMass=4900;assert.equal(assessmentConclusions(sections)[0].status,'passed');sections.capacity.result.limitCurrent=false;assert.equal(assessmentConclusions(sections)[0].status,'unresolved');});

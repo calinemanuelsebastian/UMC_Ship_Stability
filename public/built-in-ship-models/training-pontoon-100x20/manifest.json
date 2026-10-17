@@ -68,7 +68,8 @@
       "config": {
         "trimDeg": 0,
         "heelPositive": "starboard",
-        "knReference": "baseline"
+        "knReference": "baseline",
+        "weatherGeometry": "sealed-rectangular-prism"
       }
     },
     {

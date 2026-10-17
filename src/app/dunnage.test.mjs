@@ -19,3 +19,15 @@ test('floor layer uses chosen dimensions and invalid or intersecting dunnage is 
 });
 
 test('above placement never silently substitutes cargo dimensions',()=>{const d=createDunnage({...options,length:1,width:.2});assert.equal(d.footprint.length,1);assert.equal(d.footprint.width,.2);assert.throws(()=>createDunnage({...options,length:4}),/supported/);});
+
+test('round pads retain shape through placement and serialization',()=>{
+ const d=createDunnage({...options,support:undefined,weights:[],shape:'cylinder-z'});
+ assert.equal(d.footprint.shape,'cylinder-z');assert.equal(parseFootprint(JSON.parse(JSON.stringify(d.footprint))).shape,'cylinder-z');
+});
+test('two-point bearers constrain to the dominant axis and calculate actual mass',async()=>{
+ const {drawnSupport}=await server.ssrLoadModule('/src/app/drawn-support.ts');
+ const s={width:.1,thickness:.05,densityKgM3:500,count:3,mass:10,massMode:'manual'};
+ const x=drawnSupport(s,{x:1,y:2},{x:5,y:2.2});assert.equal(x.settings.length,4);assert.equal(x.settings.width,.1);assert.ok(Math.abs(x.settings.mass-.01)<1e-12);assert.deepEqual(x.position,{x:3,y:2});assert.equal(x.settings.count,1);
+ const y=drawnSupport(s,{x:1,y:5},{x:1.2,y:1});assert.equal(y.settings.width,4);assert.equal(y.settings.length,.1);assert.deepEqual(y.position,{x:1,y:3});
+ assert.throws(()=>drawnSupport(s,{x:1,y:1},{x:1,y:1}));assert.throws(()=>drawnSupport(s,{x:NaN,y:1},{x:2,y:1}));
+});

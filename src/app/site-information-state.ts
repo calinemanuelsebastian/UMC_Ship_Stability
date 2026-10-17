@@ -1,5 +1,5 @@
 import {useEffect,useState} from 'react';
-export const informationPages={guide:['User guide','Ghid de utilizare'],capabilities:['Capabilities and limitations','Capabilități și limitări'],privacy:['Privacy and storage','Confidențialitate și stocare'],terms:['Terms of use','Condiții de utilizare'],licenses:['Licenses and attribution','Licențe și atribuiri']} as const satisfies Record<string,readonly [string,string]>;
+export const informationPages={guide:['Help & documentation','Ajutor și documentație'],capabilities:['Capabilities and limitations','Capabilități și limitări'],privacy:['Privacy and storage','Confidențialitate și stocare'],terms:['Terms of use','Condiții de utilizare'],licenses:['Licenses and attribution','Licențe și atribuiri']} as const satisfies Record<string,readonly [string,string]>;
 export type InformationPage=keyof typeof informationPages;
 export const readInformationPage=(url:URL):InformationPage|null=>{const id=url.searchParams.get('info');return id&&Object.hasOwn(informationPages,id)?id as InformationPage:null;};
 export function informationUrl(current:URL,page:InformationPage|null){const url=new URL(current);if(page)url.searchParams.set('info',page);else url.searchParams.delete('info');if(page!=='guide')url.searchParams.delete('topic');url.hash='';return url;}

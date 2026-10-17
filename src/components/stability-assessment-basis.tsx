@@ -31,7 +31,6 @@ export function StabilityAssessmentBasis({ship,inputs}: {ship: ShipModelPackage;
         <p>{t(data.notice)}</p>
         {data.intactCriteria==='msc267-general-source-v1'&&inputs&&<IntactAssessmentResults ship={ship} inputs={inputs}/>}
         {data.trimLimits&&inputs&&<TrimAssessmentResults key={JSON.stringify([ship.manifest.id,inputs])} ship={ship} limits={data.trimLimits} inputs={inputs}/>}
-        {inputs&&<WindAssessment key={`wind-${ship.manifest.id}`} ship={ship} inputs={inputs}/>}
         {data.weatherEvidence&&<WeatherReferenceCases key={`references-${ship.manifest.id}`} ship={ship} data={data.weatherEvidence} downloadUrl={shipResourceUrl(ship,resource.path!)}/>}
         <details><summary>{t('Documented requirements and limits')}</summary>
           <p>{data.vesselName} · IMO {data.imoNumber} · {data.source.documentNumber} · {t(data.source.date)}</p>
@@ -44,5 +43,6 @@ export function StabilityAssessmentBasis({ship,inputs}: {ship: ShipModelPackage;
           <p className="muted">{data.source.file}</p><details><summary>{t('Source fingerprint')}</summary><code className="assessment-fingerprint">SHA-256: {data.source.sha256}</code></details>
         </details>
       </>}
+    {inputs&&<WindAssessment key={`wind-${ship.manifest.id}`} ship={ship} inputs={inputs}/>}
   </section>;
 }

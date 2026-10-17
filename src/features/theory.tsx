@@ -1,9 +1,10 @@
+import {CargoTheory} from './cargo-theory';
 import { useLanguage } from '../app/language-context';
 import type { TabId } from '../app/tabs';
 import type { ShipModelPackage } from '../core/domain/ship-model';
 const stabilityReference = 'https://www.usna.edu/NAOE/_files/documents/Courses/EN400/EN400_Course_Notes_Fall_AY2021_July2020.pdf';
 const topics = [
-    ['coordinates', 'Coordinates & units'], ['hydrostatics', 'Hydrostatics'],
+    ['cargo', 'Cargo types and packaging'], ['coordinates', 'Coordinates & units'], ['hydrostatics', 'Hydrostatics'],
     ['loading', 'Loading & free surface'], ['trim', 'Trim & Drafts'], ['stability', 'GZ curves'],
     ['roll', 'Free roll'], ['validation', 'Validation'],
 ] as const;
@@ -22,6 +23,7 @@ export function Theory({ ship, onTabChange }: {
       <p>{t("Valid loading edits automatically share displacement, physical centres and free-surface moment across calculation tabs. Stability Curves uses KN data; Roll Simulation uses corrected initial GM and entered inertia and damping. The roll model does not integrate the GZ curve.")}</p>
       <p className="muted">{t("Manual draft edits affect the sandbox only; they do not update the shared displacement used by Stability Curves and Roll Simulation. Display rounding does not change the values used in calculations.")}</p>
     </section>
+    <CargoTheory/>
     <section id="theory-coordinates" className="panel theory-section"><h2>{t("Coordinates and units")}</h2>
       <p><strong>{t("Selected model: ")}{t(manifest.name)}{t(".")}</strong>{t(" Origin: ")}{t(manifest.coordinateSystem.origin)}{t(". Positive axes: x ")}{t(manifest.coordinateSystem.xPositive)}{t(", y ")}{t(manifest.coordinateSystem.yPositive)}{t(", z ")}{t(manifest.coordinateSystem.zPositive)}{t(". Declared units: ")}{t(manifest.units.length)}{t(", ")}{t(manifest.units.mass)}{t(", ")}{t(manifest.units.density)}{t(", ")}{t(manifest.units.angle)}{t(".")}</p>
       <p>{t("The current solvers require metres, tonnes, t/m\u00B3 and degrees, with positive-up vertical coordinates. Stability Curves and Roll Simulation require starboard-positive transverse coordinates. KG and KN must use the same baseline datum. A package with another convention needs conversion before use.")}</p>

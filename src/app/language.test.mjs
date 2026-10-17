@@ -31,7 +31,7 @@ test('all navigation labels render in both languages',()=>{
 test('theory retains sections, equations and action buttons after translation',()=>{
  const element=createElement(Theory,{ship:{manifest,baseUrl:'/'},onTabChange:()=>{}});
  for(const language of ['en','ro']){
-  const html=render(element,language);assert.equal((html.match(/<section/g)||[]).length,8);assert.equal((html.match(/<button/g)||[]).length,6);assert.match(html,/GZ = KN/);assert.match(html,/theory-validation/);
+  const html=render(element,language);assert.equal((html.match(/<section/g)||[]).length,9);assert.equal((html.match(/<button/g)||[]).length,6);assert.match(html,/GZ = KN/);assert.match(html,/theory-validation/);
   assert.match(html,language==='ro'?/Ruliu liber la unghiuri mici/:/Small-angle free roll/);assert.doesNotMatch(html,/&amp;lt;/);
  }
 });

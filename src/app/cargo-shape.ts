@@ -1,10 +1,11 @@
+import {cargoTypeInfo,type CargoTypeId} from './cargo-types';
 import type {Footprint} from './cargo-layout';
 import type {WeightDraft} from './loading-state';
 export const cargoShapes=['box','cylinder-x','cylinder-y','cylinder-z','ellipsoid'] as const;
 export type CargoShape=typeof cargoShapes[number];
 export const shapeLabels:Record<CargoShape,string>={box:'Box / packaged envelope','cylinder-x':'Cylinder — length axis','cylinder-y':'Cylinder — width axis','cylinder-z':'Cylinder — upright',ellipsoid:'Ellipsoid / oval package'};
-export function worldShape(p:Footprint):CargoShape{const s=p.shape??'box';return p.rotation===90?s==='cylinder-x'?'cylinder-y':s==='cylinder-y'?'cylinder-x':s:s;}
-export function defaultCargoShape(family:string):CargoShape{return family==='drum'?'cylinder-z':['reel','coil','pipe'].includes(family)?'cylinder-x':'box';}
+export function worldShape(p:Pick<Footprint,'shape'|'rotation'>):CargoShape{const s=p.shape??'box';return p.rotation===90?s==='cylinder-x'?'cylinder-y':s==='cylinder-y'?'cylinder-x':s:s;}
+export function defaultCargoShape(family:string):CargoShape{return cargoTypeInfo[family as CargoTypeId]?.shape??'box';}
 type V=[number,number,number];
 const dot=(a:V,b:V)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2];
 const sub=(a:V,b:V):V=>[a[0]-b[0],a[1]-b[1],a[2]-b[2]];
@@ -48,7 +49,7 @@ export function shapeIntersects(a:WeightDraft,b:WeightDraft){
  return true;
 }
 export type P=[number,number];
-export function projectionEllipse(p:Footprint,view:'top'|'side'|'end'){
+export function projectionEllipse(p:Pick<Footprint,'shape'|'rotation'>,view:'top'|'side'|'end'){
  const s=worldShape(p);return s==='ellipsoid'||s===(view==='top'?'cylinder-z':view==='side'?'cylinder-y':'cylinder-x');
 }
 /** Horizontal extreme contact faces. Curved crowns/keels have no finite planar patch. */

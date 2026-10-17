@@ -1,3 +1,4 @@
+import {cargoFamilies} from './cargo-types';
 import {cargoShapes,shapeIntersects,type CargoShape} from './cargo-shape';
 import {parseMaterialProperties,type MaterialProperties} from './material-properties';
 import {CargoNeighbours} from './cargo-neighbours';
@@ -34,7 +35,7 @@ export function parseFootprint(v: unknown): Footprint {
   if(p.stackability!==undefined&&!['unknown','stackable','unstackable'].includes(p.stackability))throw new Error('Invalid stackability setting.');
   if(p.maxTopLoadTonnes!==undefined&&(!finite(p.maxTopLoadTonnes)||p.maxTopLoadTonnes<0))throw new Error('Invalid top-load limit.');
   if(p.catalogue&&p.catalogue.stowageFactor!==undefined&&(!Number.isFinite(p.catalogue.stowageFactor)||p.catalogue.stowageFactor<=0))throw new Error('Invalid stowage factor.');
-  if(p.catalogue&&((p.catalogue.cgDeclared!==undefined&&typeof p.catalogue.cgDeclared!=='boolean')||!['boxed','perishable','crate','drum','bale','reel','coil','pipe','project','container'].includes(p.catalogue.family)||typeof p.catalogue.contact!=='string'||p.catalogue.contact.length>500||typeof p.catalogue.source!=='string'||p.catalogue.source.length>500))throw new Error('Invalid cargo catalogue details.');
+  if(p.catalogue&&((p.catalogue.cgDeclared!==undefined&&typeof p.catalogue.cgDeclared!=='boolean')||!cargoFamilies.some(f=>f[0]===p.catalogue!.family)||typeof p.catalogue.contact!=='string'||p.catalogue.contact.length>500||typeof p.catalogue.source!=='string'||p.catalogue.source.length>500))throw new Error('Invalid cargo catalogue details.');
   if(p.keepGapsClear!==undefined&&typeof p.keepGapsClear!=='boolean')throw new Error('Invalid protected-gap setting.');
   return {...(p.shape?{shape:p.shape}:{}),...(p.keepGapsClear===undefined?{}:{keepGapsClear:p.keepGapsClear}),...(p.catalogue?{catalogue:{...(p.catalogue.stowageFactor===undefined?{}:{stowageFactor:p.catalogue.stowageFactor}),family:p.catalogue.family,contact:p.catalogue.contact,source:p.catalogue.source,...(p.catalogue.cgDeclared===undefined?{}:{cgDeclared:p.catalogue.cgDeclared})}}:{}),...(p.dunnageProfile?{dunnageProfile:p.dunnageProfile}:{}),...(p.markings?{markings:parseCargoMarkings(p.markings)}:{}),...(p.stackability?{stackability:p.stackability}:{}),...(p.maxTopLoadTonnes===undefined?{}:{maxTopLoadTonnes:p.maxTopLoadTonnes}),...(p.dunnage?{dunnage:{...(p.dunnage.properties?{properties:parseMaterialProperties(p.dunnage.properties)}:{}),material:p.dunnage.material,densityKgM3:p.dunnage.densityKgM3,massMode:p.dunnage.massMode}}:{}),...(p.kind?{kind:p.kind}:{}),...(p.bottomZ===undefined?{}:{bottomZ:p.bottomZ}),...(p.areaId?{areaId:p.areaId}:{}),length:p.length,width:p.width,height:p.height,rotation:p.rotation,deckZ:p.deckZ};
 }

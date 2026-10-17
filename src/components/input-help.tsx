@@ -11,6 +11,7 @@ export function InputHelp(){
   const show=(event:Event)=>{
    const el=event.target;
    if(!(el instanceof HTMLInputElement||el instanceof HTMLSelectElement||el instanceof HTMLTextAreaElement)||el.type==='hidden')return;
+   if(el.dataset.helpInline==='true'){hide();return;}
    if(active===el)return;
    hide();active=el;
    el.setAttribute('aria-describedby',[el.getAttribute('aria-describedby'),'app-input-help'].filter(Boolean).join(' '));

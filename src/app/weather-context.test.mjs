@@ -1,0 +1,18 @@
+import {test,after} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createElement} from 'react';import {renderToStaticMarkup} from 'react-dom/server';
+import {createServer} from '../../scripts/test-server.mjs';
+const server=await createServer({server:{middlewareMode:true},appType:'custom'});after(()=>server.close());
+const {mountShipBundle}=await server.ssrLoadModule('/src/app/ship-package.ts');
+const {weatherContext,weatherCurve}=await server.ssrLoadModule('/src/app/weather-context.ts');
+const {computeStabilityCurves}=await server.ssrLoadModule('/src/core/stability/compute-stability-curves.ts');
+const {conditionWind}=await server.ssrLoadModule('/src/app/weather-wind.ts');
+const {buildAssessmentReport}=await server.ssrLoadModule('/src/app/assessment-report.ts');
+const {assessmentKey}=await server.ssrLoadModule('/src/app/assessment-settings.ts');
+const {WeatherGraph}=await server.ssrLoadModule('/src/components/final-assessment.tsx');
+const root='public/built-in-ship-models/training-pontoon-100x20/',manifest=JSON.parse(await readFile(root+'manifest.json','utf8')),files={};
+for(const r of manifest.resources)if(r.path)files[r.path]={encoding:'utf8',data:await readFile(root+r.path,'utf8')};
+const i={pending:false,displacementTonnes:6150,waterDensity:1.025,lcg:50,vcg:5,tcg:0,freeSurfaceMomentTransverse:0,longitudinalFsm:0};
+test('rectangular weather uses shared draught and corrected GM; altered LCG fails closed',async()=>{const ship=mountShipBundle({manifest,files});try{const c=await weatherContext(ship,i);assert.equal(c.draft,3);assert.equal(c.defaults.cb,'1');const curve=weatherCurve(await computeStabilityCurves(ship,i),c);assert.ok(Math.abs(curve.gmAtTrim.correctedGm-(1.5+400/36-5))<1e-8);const w=conditionWind(c.data,{profile:c.data.profiles[0].id},3,6150,[]);assert.equal(w.areaM2,500);assert.ok(Math.abs(w.steadyLever-504*500*4/(1000*9.81*6150))<1e-10);await assert.rejects(()=>weatherContext(ship,{...i,lcg:51}),/zero longitudinal trim/);await assert.rejects(()=>weatherContext(ship,i,1),/Longitudinal/);}finally{ship.release();}});
+test('Pontoon report and graph remain available outside roll applicability without invented energy areas',async()=>{const ship=mountShipBundle({manifest,files});try{const c=await weatherContext(ship,i);const weather={conditionKey:assessmentKey(i),profile:c.data.profiles[0].id,values:c.defaults,bilgeType:'sharp',estimatePort:false,inputSource:'Synthetic geometry'};const report=await buildAssessmentReport(ship,{scenario:'manual',weights:[],manual:{},manualMode:'displacement',assessment:{weather}},i);const a=report.sections.weather.directionalAssessment.starboard;assert.match(a.rollError,/B\/d < 3.5/);assert.equal(a.areas,undefined);const html=renderToStaticMarkup(createElement(WeatherGraph,{result:a}));assert.match(html,/<svg/);assert.doesNotMatch(html,/<polygon|NaN|Infinity/);const stale=await buildAssessmentReport(ship,{scenario:'manual',weights:[],manual:{},assessment:{weather}}, {...i,vcg:4});assert.match(stale.sections.weather.reason,/different condition/);}finally{ship.release();}});

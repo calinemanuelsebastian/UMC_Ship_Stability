@@ -13,7 +13,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { schematicOutline, heeledBox, hullPose, illustrativeAttitudePose, type BoxHull, type SceneCondition } from './ship-scene-data';
 export type CameraView = 'perspective' | 'side' | 'top' | 'bow';
 export type SceneWeight = { tankMarker?:boolean; markerColor?:string; tankBox?:{length:number;width:number;height:number;fill:number;point:{x:number;y:number;z:number}}; name?:string; footprint?: Footprint; cargoPoint?: {x:number;y:number;z:number}; id: string; label: string; point: { x: number; y: number; z: number } };
-export type SceneOptions = { tankMarkers?:boolean; panelMode?:'installed'|'stored'|'ashore'; exterior: boolean; panels: boolean; cargo: boolean; allWeightLabels: boolean; weights: SceneWeight[]; selectedWeight: string; axes: boolean; water: boolean; hullTransparency: number; panelTransparency: number; cargoTransparency: number; selected: boolean; axisLength: number; axisThickness: number; labelSize: number; waterlineWidth: number; measurements: boolean; draftLabels: { aft: string; forward: string } };
+export type SceneOptions = { tankMarkers?:boolean; panelMode?:'installed'|'stored'|'ashore'; exterior: boolean; panels: boolean; cargo: boolean; allWeightLabels: boolean; weights: SceneWeight[]; selectedWeight: string; axes: boolean; extendedAxes?:boolean; water: boolean; hullTransparency: number; panelTransparency: number; cargoTransparency: number; selected: boolean; axisLength: number; axisThickness: number; labelSize: number; waterlineWidth: number; measurements: boolean; draftLabels: { aft: string; forward: string } };
 export function createShipScene(host: HTMLElement, hull: BoxHull, onSelect: () => void, onError: () => void, onSelectWeight: (id: string) => void) {
   const scene = new THREE.Scene(); scene.background = new THREE.Color('#e9f1f6');
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
@@ -97,6 +97,11 @@ export function createShipScene(host: HTMLElement, hull: BoxHull, onSelect: () =
     const text = label(`+${axis}`, colors[index]); text.userData.labelPixels = 32;
     axes.add(text); return { axis, arrow, text };
   });
+  const extendedLines = arrows.map(({arrow},i)=>{
+    const geometry=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,-1,0),new THREE.Vector3(0,1,0)]);
+    const line=new THREE.Line(geometry,new THREE.LineDashedMaterial({color:['#c52235','#087b48','#244bce'][i],transparent:true,opacity:.35,depthWrite:false,depthTest:false,dashSize:.015,gapSize:.009}));
+    line.computeLineDistances();line.visible=false;line.renderOrder=14;axes.add(line);return {line,arrow};
+  });
   const aft = label('AP', '#29465a'); aft.position.set(-hull.length / 2 - span * .07, hull.depth / 2, 0); body.add(aft);
   const bow = label('FP', '#29465a'); bow.position.set(hull.length / 2, hull.depth + span * .035, 0); body.add(bow);
   const dimensions = new THREE.Group(); body.add(dimensions);
@@ -115,6 +120,11 @@ export function createShipScene(host: HTMLElement, hull: BoxHull, onSelect: () =
       const distance = camera.position.distanceTo(sprite.getWorldPosition(new THREE.Vector3()));
       const height = (sprite.userData.labelPixels ?? 22) * appearance.labelSize * 2 * distance * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) / Math.max(1, host.clientHeight);
       sprite.scale.set(height * sprite.userData.aspect, height, 1);
+    }
+    for(const {line,arrow} of extendedLines){
+      line.quaternion.copy(arrow.quaternion);
+      const extent=Math.max(span,camera.position.distanceTo(controls.target)*3);
+      line.scale.setScalar(extent);
     }
     const axisDistance = camera.position.distanceTo(axes.getWorldPosition(new THREE.Vector3()));
     const pixelSize = 2 * axisDistance * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) / Math.max(1, host.clientHeight);
@@ -226,6 +236,7 @@ export function createShipScene(host: HTMLElement, hull: BoxHull, onSelect: () =
       if(!hull.model){mesh.visible=material.opacity>0;outline.visible=material.opacity>0;setSurfaceOpacity(outline.material,material.opacity);}
       water.visible = options.water; grid.visible = options.water;
       axes.visible = options.axes && Math.abs(data.origin.x) <= hull.length * 2;
+      extendedLines.forEach(({line})=>{line.visible=!!options.extendedAxes;});
       axes.position.set(data.origin.x, data.origin.y, data.origin.z); oLabel.position.set(-span * .025, -span * .025, 0);
       for (const { axis, arrow, text } of arrows) { const d = data.directions[axis]; const vector = new THREE.Vector3(d.x, d.y, d.z); arrow.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), vector); arrow.scale.y = options.axisLength; text.position.copy(vector.multiplyScalar(axisLength * options.axisLength + span * .035)); }
       dimensions.visible = options.measurements; aft.visible = !options.measurements; bow.visible = !options.measurements;

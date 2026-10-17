@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useId,useState} from 'react';
 import { useReference } from '../app/reference-context';
 import { useLanguage } from '../app/language-context';
 import type { StabilityPoint } from '../core/domain/stability-result';
@@ -6,6 +6,7 @@ export function StabilityChart({ points }: {
     points: StabilityPoint[];
 }) {
     const [angle,setAngle]=useState(0);
+    const helpId=useId();
     const { t } = useLanguage();
     const reference = useReference();
     const left = 72, top = 28, width = 700, height = 290;
@@ -30,5 +31,5 @@ export function StabilityChart({ points }: {
     <text x={left} y={17}>{t("GZ (m)")}</text><text x={left + width / 2} y={378} textAnchor="middle">{t(reference.heelSign === 1 ? "Heel angle · port − / starboard +" : "Heel angle · starboard − / port +")}</text>
     <line x1={x(selectedAngle)} x2={x(selectedAngle)} y1={top} y2={top+height} stroke="#bf1674" strokeDasharray="3 3"/>
     <circle cx={x(selectedAngle)} cy={y(ordinate('gzCorrected'))} r="4" fill="#bf1674"/>
-  </svg><label>{t('Inspect curve angle')}<input aria-label={t('Inspect curve angle')} type="range" min={xMin} max={xMax} step="0.1" value={selectedAngle} onChange={e=>setAngle(Number(e.target.value))}/></label><output>{selectedAngle.toFixed(2)}° · KN {ordinate('kn').toFixed(6)} m · GZ {ordinate('gz').toFixed(6)} m · {t('Corrected GZ (m)')} {ordinate('gzCorrected').toFixed(6)}</output><figcaption>{t("Solid teal: corrected GZ \u00B7 Dashed grey: uncorrected GZ. Straight segments join tabulated angles; they do not resolve extrema between samples.")}</figcaption></figure>;
+  </svg><label>{t('Inspect curve angle')}<input data-help-inline="true" aria-describedby={helpId} aria-valuetext={`${selectedAngle.toFixed(2)}°`} aria-label={t('Inspect curve angle')} type="range" min={xMin} max={xMax} step="0.1" value={selectedAngle} onChange={e=>setAngle(Number(e.target.value))}/></label><small id={helpId} className="curve-angle-help">{t('Drag the slider or use the arrow keys to inspect an angle.')}</small><output>{selectedAngle.toFixed(2)}° · KN {ordinate('kn').toFixed(6)} m · GZ {ordinate('gz').toFixed(6)} m · {t('Corrected GZ (m)')} {ordinate('gzCorrected').toFixed(6)}</output><figcaption>{t("Solid teal: corrected GZ \u00B7 Dashed grey: uncorrected GZ. Straight segments join tabulated angles; they do not resolve extrema between samples.")}</figcaption></figure>;
 }

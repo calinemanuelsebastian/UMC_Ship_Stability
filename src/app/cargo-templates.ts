@@ -1,9 +1,8 @@
 import {parseFootprint,type Footprint} from './cargo-layout';
 import {cloneMarkings} from './cargo-identification';
 import type {WeightDraft} from './loading-state';
-export const cargoFamilies=[
- ['boxed','Pallets / boxes','boxed'],['perishable','Ventilated perishables','ventilated'],['crate','Crates / cases','boxed'],['drum','Drums / barrels','drums'],['bale','Bags / bales','unspecified'],['reel','Rolls / reels','rolls'],['coil','Coils','rolls'],['pipe','Pipes / bundles','unspecified'],['project','Custom / project cargo','unspecified'],['container','ISO containers','unspecified'],
-] as const;
+import {cargoFamilies} from './cargo-types';
+export {cargoFamilies} from './cargo-types';
 export type CargoFamily=typeof cargoFamilies[number][0];
 export type CargoTemplate={id:string;name:string;family:CargoFamily;footprint:Footprint;mass:{mode:'gross'|'net-plus-tare';value:number;tare:number};stowageFactor?:number;quantity?:number;cgAboveBase?:number;contact:string;source:string};
 export type CargoAssembly={id:string;name:string;items:WeightDraft[]};

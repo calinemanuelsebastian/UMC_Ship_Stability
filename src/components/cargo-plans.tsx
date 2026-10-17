@@ -8,8 +8,10 @@ import { parseRecovery, queueRecoveryWrite, readPlanRecords, readRecoveryJournal
 import { evaluateWeights, type WeightDraft } from '../app/loading-state';
 import { useLanguage } from '../app/language-context';
 
-export function CargoPlans({ ship, state, fixed, ready, onRestore, onRecoveryAvailable }: { ship: ShipModelPackage; state: ScenarioState; fixed: WeightDraft[]; ready: boolean; onRestore: (value: ScenarioState) => void; onRecoveryAvailable?: (available:boolean)=>void }) {
+export function CargoPlans({ intent, ship, state, fixed, ready, onRestore, onRecoveryAvailable }: { intent?:{mode:'save'|'open';id:number}; ship: ShipModelPackage; state: ScenarioState; fixed: WeightDraft[]; ready: boolean; onRestore: (value: ScenarioState) => void; onRecoveryAvailable?: (available:boolean)=>void }) {
   const { t } = useLanguage();
+  const nameInput=useRef<HTMLInputElement>(null),planSelect=useRef<HTMLSelectElement>(null);
+  useEffect(()=>{if(!intent)return;const target=intent.mode==='save'?nameInput.current:planSelect.current;target?.focus();target?.scrollIntoView({block:'center',behavior:'auto'});},[intent]);
   const [writer] = useState(() => crypto.randomUUID());
   const model = modelSignature(ship), draftKey = `draft:${model}:${writer}`;
   const [items, setItems] = useState<CargoPlan[]>([]), [selected, setSelected] = useState('');
@@ -98,7 +100,7 @@ export function CargoPlans({ ship, state, fixed, ready, onRestore, onRecoveryAva
   const summary = preview && evaluateWeights(preview.state.weights);
   return <section className="panel cargo-plans"><h1>{t('Cargo Plans')}</h1>
     <p>{t('Create a loading plan below. Save named plans in this browser or download a JSON backup to transfer them. Browser storage is local to this device and website address; clearing browser data removes it.')}</p>
-    <div className="curve-inputs"><label><FieldLabel label="Plan name" help="Optional: leave blank to use an automatically generated name."/><input maxLength={120} value={name} onChange={e => setName(e.target.value)}/></label><label><FieldLabel label="Voyage / notes" help="Optional: add a voyage reference or notes for your own records."/><input maxLength={200} value={voyage} onChange={e => setVoyage(e.target.value)}/></label></div>
+    <div className="curve-inputs"><label><FieldLabel label="Plan name" help="Optional: leave blank to use an automatically generated name."/><input ref={nameInput} maxLength={120} value={name} onChange={e => setName(e.target.value)}/></label><label><FieldLabel label="Voyage / notes" help="Optional: add a voyage reference or notes for your own records."/><input maxLength={200} value={voyage} onChange={e => setVoyage(e.target.value)}/></label></div>
  <p className="muted">{t('Leave the name blank to use a default name.')}</p>
     {state.scenario !== 'loading' && <p>{t('Manual mode is active. Plans contain the weight list; applying a plan selects weight-based loading.')}</p>}
     <div className="scene-toolbar">
@@ -116,7 +118,7 @@ export function CargoPlans({ ship, state, fixed, ready, onRestore, onRecoveryAva
       })}>{t('Download backup')}</button>
       {backup?.source===encoded&&<a href={backup.url} download="cargo-plan.json">{t('Download prepared backup')}</a>}
     </div>
-    <label>{t('Saved cargo plans')} <select value={selected} onChange={e => setSelected(e.target.value)}><option value="">{t('Choose a plan')}</option>{items.map(p => <option key={p.id} value={p.id}>{p.name} · {new Date(p.savedAt).toLocaleString()}</option>)}</select></label>
+    <label>{t('Saved cargo plans')} <select ref={planSelect} value={selected} onChange={e => setSelected(e.target.value)}><option value="">{t('Choose a plan')}</option>{items.map(p => <option key={p.id} value={p.id}>{p.name} · {new Date(p.savedAt).toLocaleString()}</option>)}</select></label>
     <div className="scene-toolbar"><button disabled={!selected || !ready || busy} onClick={() => setPreview(items.find(p => p.id === selected))}>{t('Preview selected plan')}</button>
       <button disabled={!selected || busy} onClick={() => action(async () => { await planStorage('delete', undefined, `plan:${selected}`, items.find(p=>p.id===selected)?.savedAt ?? null); setItems(items.filter(p => p.id !== selected)); setSelected(''); setMessage('Named plan deleted. Current loading is unchanged.'); })}>{t('Delete named plan')}</button>
       <button disabled={!previous || busy || appliedRevision!==conditionRevision(state)} onClick={() => { if (previous && appliedRevision===conditionRevision(state)) { onRestore(previous.state); setName(previous.name); setVoyage(previous.voyage); setPrevious(undefined); setSelected(''); } }}>{t('Undo plan application')}</button></div>

@@ -33,7 +33,7 @@ export function assessWeather(curve:StabilityResult,i:WeatherInputs){
   {id:'heel',label:'Steady-wind heel',unit:'°',value:angle===undefined?undefined:Math.abs(angle),limit,margin:heelMargin,status:status(heelMargin),reason:flooded?'Steady-wind equilibrium reaches a declared flooding limit.':angle===undefined?equilibriumError||eq?.message||'Steady-wind equilibrium unavailable.':limit===undefined?'Enter a valid deck-edge immersion angle for the current condition.':'|φ₀| ≤ min(16°, 0.8 × deck-edge immersion angle).'},
   {id:'energy',label:'Gust and rolling energy balance',unit:'m·rad',value:areas?.b,limit:areas?.a,margin:areas?.margin,status:status(areas?.margin),reason:areas?'Area b ≥ area a over the fully covered integration interval.':areaError},
  ];
- return {checks,missing,eq,roll,areas,gust,limit,rollError,areaError,
+ return {checks,missing,eq,roll,areas,gust,limit,rollError,areaError,points:curve.points,steady:i.steady,
   numericalStatus:checks.some(c=>c.status==='Outside numerical limit')?'Outside numerical limit':checks.some(c=>c.status==='Insufficient data')?'Insufficient data':'Meets numerical limit',
   basis:curve.derivedPort?'Includes symmetry-based port estimate':'Supplied GZ curve',
   scope:'Numerical weather checks for the selected profile and operator-supplied condition inputs. Profile applicability, input provenance and port flooding remain separate qualifications. No overall compliance verdict.'};

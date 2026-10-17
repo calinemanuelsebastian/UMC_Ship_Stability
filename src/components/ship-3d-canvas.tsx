@@ -13,6 +13,7 @@ export function Ship3DCanvas({ draftsUnavailable=false, settingsTarget, referenc
   const [error, setError] = useState(false);
   const [detail, setDetail] = useState('');
   const [retry, setRetry] = useState(0);
+  const [extendedAxes,setExtendedAxes]=useState(false);
   const [axes, setAxes] = useState(true), [water, setWater] = useState(true);
   const [exterior,setExterior]=useState(true),[panels,setPanels]=useState(true),[cargo,setCargo]=useState(true);
   const [tankMarkers, setTankMarkers] = useState(false);
@@ -31,7 +32,7 @@ export function Ship3DCanvas({ draftsUnavailable=false, settingsTarget, referenc
     catch { setError(true); }
     return () => { scene.current?.dispose(); scene.current = null; };
   }, [hull, retry]);
-  useEffect(() => { try { scene.current?.update(visualData, { exterior, panelMode, panels:panels&&panelMode!=='ashore', cargo, tankMarkers, allWeightLabels, weights, selectedWeight, axes, water, selected, ...appearance, measurements: measurements && !draftsUnavailable && (data.heelDeg === undefined || !!data.equilibriumPose), draftLabels: { aft: `AP ${fmt(data.equilibriumPose?.verticalDraftAft??data.draftAft)} m`, forward: `FP ${fmt(data.equilibriumPose?.verticalDraftForward??data.draftForward)} m` } }); } catch (cause) { setError(true); setDetail(cause instanceof Error ? cause.message : String(cause)); } }, [draftsUnavailable, panelMode, exterior, panels, cargo, tankMarkers, allWeightLabels, weights, selectedWeight, visualData, data, hull, axes, water, selected, appearance, measurements, fmt, retry]);
+  useEffect(() => { try { scene.current?.update(visualData, { exterior, panelMode, panels:panels&&panelMode!=='ashore', cargo, tankMarkers, allWeightLabels, weights, selectedWeight, axes, extendedAxes, water, selected, ...appearance, measurements: measurements && !draftsUnavailable && (data.heelDeg === undefined || !!data.equilibriumPose), draftLabels: { aft: `AP ${fmt(data.equilibriumPose?.verticalDraftAft??data.draftAft)} m`, forward: `FP ${fmt(data.equilibriumPose?.verticalDraftForward??data.draftForward)} m` } }); } catch (cause) { setError(true); setDetail(cause instanceof Error ? cause.message : String(cause)); } }, [draftsUnavailable, panelMode, exterior, panels, cargo, tankMarkers, allWeightLabels, weights, selectedWeight, visualData, data, hull, axes, extendedAxes, water, selected, appearance, measurements, fmt, retry]);
   // Brief presentation fade on a new numerical condition, never a physical-motion simulation.
   useEffect(()=>{if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){const animation=host.current?.animate([{opacity:.65},{opacity:1}],{duration:180});return()=>animation?.cancel();}},[data]);
   const teachingView = data.equilibriumPose ? undefined : data.didactic ? data.teachingTrimDeg === undefined ? 'bow' : 'side' : data.heelDeg!==undefined?'bow':undefined;
@@ -43,6 +44,7 @@ export function Ship3DCanvas({ draftsUnavailable=false, settingsTarget, referenc
     {axes && <div className="scene-axis-key" aria-label={t('Axis colour key')}><span className="scene-axis-x">+x · {t('Longitudinal')}</span><span className="scene-axis-y">+y · {t('Transverse')}</span><span className="scene-axis-z">+z · {t('Vertical')}</span><span>O · {t('Origin')}</span></div>}
     <p className="scene-waterline-key"><span aria-hidden="true"/>{t(effectiveFactor > 1 ? "Highlighted waterline · exaggerated display" : "Highlighted waterline · display hull intersection")}</p>
     <div className="scene-toggles">{([['Tank centre-of-gravity markers', tankMarkers, setTankMarkers], ['All weight labels', allWeightLabels, setAllWeightLabels], ['Reference axes', axes, setAxes], ['Water surface', water, setWater], ['Draft measurements', measurements, setMeasurements]] as const).map(([label, value, change]) => <label key={label}><input type="checkbox" disabled={label === 'Draft measurements' && (draftsUnavailable || data.heelDeg !== undefined && !data.equilibriumPose)} checked={label === 'Draft measurements' && (draftsUnavailable || data.heelDeg !== undefined && !data.equilibriumPose) ? false : value} onChange={event => change(event.target.checked)}/>{t(label)}</label>)}</div>
+    <label><input type="checkbox" disabled={!axes} checked={extendedAxes} onChange={e=>setExtendedAxes(e.target.checked)}/>{t('Extend axes across view')}</label><p className="muted">{t('Ship-fixed axes rotate with the vessel; the water grid remains level.')}</p>
     <div className="scene-display-settings">
       <div className="scene-sliders">{([
         ['hullTransparency','Hull transparency',true],

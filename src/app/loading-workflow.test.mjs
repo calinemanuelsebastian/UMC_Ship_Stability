@@ -24,7 +24,7 @@ test('fuel and service presets change only their own tank groups',()=>{
  assert.equal(fuel.find(w=>w.tank.id==='f').massTonnes,'5');assert.deepEqual(fuel.find(w=>w.tank.id==='s'),initial[1]);assert.deepEqual(fuel.find(w=>w.tank.id==='b'),initial[2]);
  const service=applyTankPreset(ship,onboardTankCatalog(ship,catalog,'service'),fuel,'empty');
  assert.equal(service.find(w=>w.tank.id==='s').massTonnes,'0');assert.equal(service.find(w=>w.tank.id==='f').massTonnes,'5');assert.deepEqual(service.find(w=>w.tank.id==='b'),initial[2]);
- assert.deepEqual(loadingSteps.map(([id])=>id),['onboard','capacity','layout','ballast','weights','plans']);
+ assert.deepEqual(loadingSteps.map(([id])=>id),['onboard','capacity','layout','ballast','weights']);
 });
 test('whole-condition undo cannot overwrite later edits and owns immutable before snapshot',()=>{
  const before={scenario:'loading',weights:[],manual:{},manualMode:'displacement',density:1.025};
@@ -42,4 +42,12 @@ test('scoped real-vessel departure preserves reference liquids and matches combi
  const combined=applyTankPreset(ship,onboardTankCatalog(ship,catalog,'service'),fuel,'departure');
  const ordered=ws=>[...ws].sort((a,b)=>a.id.localeCompare(b.id));assert.deepEqual(ordered(combined),ordered(full));
  assert.equal(combined.filter(w=>w.id==='departure-winch-oil-65').length,1);
+});
+
+test('loading completion leads to inspection and plans are outside the sequence',async()=>{
+ const {nextLoadingStep}=await server.ssrLoadModule('/src/app/loading-workflow.ts');
+ assert.deepEqual(nextLoadingStep('weights'),{page:'view3d',label:'Continue to 3D inspection'});
+ assert.equal(nextLoadingStep('plans'),undefined);
+ assert.equal(nextLoadingStep('ballast').section,'weights');
+ assert.equal(nextLoadingStep('tanks').section,'capacity');
 });
