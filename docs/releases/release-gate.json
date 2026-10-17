@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "acceptedRevision": "397db3ef3942fdb0b2120962adb4af00077f0233",
-  "tag": "v0.1.0-beta.8",
+  "acceptedRevision": "58ffec04416e6667478a7a4b082d718f89ac5f5e",
+  "tag": "v0.1.0-beta.9",
   "acceptance": {
     "status": "accepted",
-    "reviewer": "Emanuel-Sebastian C\u0103lin \u2014 explicit public website update authorization, 2026-10-17; disclosed verification and backward-compatibility limits retained",
-    "evidence": "docs/releases/v0.1.0-beta.8.md"
+    "reviewer": "Emanuel-Sebastian Călin — explicit GitHub upload and public publication request, 2026-10-17; disclosed verification and rollback limits retained",
+    "evidence": "docs/releases/v0.1.0-beta.9.md"
   },
   "redistribution": {
     "status": "accepted",
-    "reviewer": "Emanuel-Sebastian C\u0103lin \u2014 explicit public website update authorization, 2026-10-17; disclosed verification and backward-compatibility limits retained",
-    "evidence": "docs/releases/v0.1.0-beta.8.md"
+    "reviewer": "Emanuel-Sebastian Călin — explicit GitHub upload and public publication request, 2026-10-17; disclosed verification and rollback limits retained",
+    "evidence": "docs/releases/v0.1.0-beta.9.md"
   },
   "rollback": {
     "status": "accepted",
-    "reviewer": "Emanuel-Sebastian C\u0103lin \u2014 explicit public website update authorization, 2026-10-17; disclosed verification and backward-compatibility limits retained",
-    "evidence": "docs/releases/v0.1.0-beta.8.md"
+    "reviewer": "Emanuel-Sebastian Călin — explicit GitHub upload and public publication request, 2026-10-17; disclosed verification and rollback limits retained",
+    "evidence": "docs/releases/v0.1.0-beta.9.md"
   }
 }
